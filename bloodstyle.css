@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+bodY{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.logo a{
+    text-decoration: none;
+margin-top: -18px;
+    position: absolute;
+    left: 50%;
+    font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+ #topbar1 {
+    background: #022a2d;
+    height: 50px;
+    font-size: 14px;
+    transition: all 0.5s;
+    z-index: 996;
+  }
+  
+  #topbar1.topbar-scrolled {
+    top: -40px;
+  }
+  
+  #topbar1 .contact-info a {
+    margin-top: -40px;
+    line-height: 1;
+    color: #fff;
+    transition: 0.3s;
+  }
+  
+  #topbar1 .contact-info a:hover {
+    color: #3fbbc0;
+  }
+  #topbar1 .contact-info i {
+    color: #3fbbc0;
+    margin-top: -40px;
+    padding-right: 4px;
+    margin-left: 15px;
+    line-height: 0;
+  }
+  #topbar1 .contact-info i:first-child {
+    margin-left: 0;
+  }
+  
+  #topbar1 .social-links a {
+    margin-top: -40px;
+    color: #3fbbc0;
+    padding-left: 15px;
+    display: inline-block;
+    line-height: 1px;
+    transition: 0.3s;
+    
+  }
+  #topbar1 .social-links a:hover {
+    color: #fff;
+  }
+.container{
+    margin-top: 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    gap: 40px 60px;
+}
+.container .drop{
+    position: relative;
+    background: #e9e8e8;
+    width: 280px;
+    height: 280px;
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.07),
+    25px 35px 20px rgba(0, 0, 0, 0.07),
+    25px 30px 30px rgba(0, 0, 0, 0.07),
+    inset -20px -20px 25px rgba(255, 255, 255, 1);
+    transition: 0.5s ease-in-out;
+}
+.container .drop:nth-child(1){
+    border-radius: 56% 44% 33% 67% / 43% 35% 65% 57% ;
+}
+.container .drop:nth-child(2){
+    border-radius: 35% 65% 33% 67% / 44% 44% 56% 56%  ;
+}
+.container .drop:nth-child(3){
+    border-radius: 63% 37% 33% 67% / 63% 44% 56% 37%   ;
+}
+.container .drop:nth-child(4){
+    border-radius: 35% 65% 33% 67% / 44% 21% 79% 56%  ;
+}
+.container .drop:nth-child(5){
+    border-radius: 30% 70% 45% 55% / 30% 25% 75% 70%  ;
+}
+.container .drop:nth-child(6){
+    border-radius: 35% 65% 33% 67% / 44% 21% 79% 56%  ;
+}
+.container .drop:nth-child(7){
+    border-radius: 35% 65% 33% 67% / 44% 21% 79% 56%  ;
+}
+.container .drop:nth-child(8){
+border-radius: 56% 44% 33% 67% / 43% 35% 65% 57%  ;
+}
+.container .drop:hover{
+    border-radius: 50%;
+}
+.container .drop::before{
+    content: '';
+    position: absolute;
+    top: 42px;
+    left: 65px;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+.container .drop::after{
+    content: '';
+    position: absolute;
+    top: 75px;
+    left: 105px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+@media (max-width: 992px){
+    .container{
+        display: grid;
+    }
+    .container .drop:nth-child(1){
+        position: relative;
+        left: 30%;
+        height: 500px;
+        width: 500px;
+    }
+    .container .drop:nth-child(2){
+        position: relative;
+        left: -29%;
+        height: 500px;
+        width: 500px;
+    }
+    .container .drop:nth-child(3){
+        position: relative;
+        left: 32%;
+        height: 500px;
+        width: 500px;
+    }
+    .container .drop:nth-child(4){
+        position: relative;
+        left: -20%;
+        height: 500px;
+        width: 500px;
+    }
+    .container .drop:nth-child(5){
+        position: relative;
+        left: 10%;
+        height: 500px;
+        width: 500px;
+    }
+    .container .drop:nth-child(6){
+        position: relative;
+        left: -40%;
+        height: 500px;
+        width: 500px;
+    }
+    .container .drop:nth-child(7){
+        position: relative;
+        left: 35%;
+        height: 500px;
+        width: 500px;
+    }
+    .container .drop:nth-child(8){
+        position: relative;
+        left: -40%;
+        height: 500px;
+        width: 500px;
+    }
+  
+    .container .drop::before{
+        content: '';
+        position: absolute;
+        top: 130px;
+        left: 65px;
+        width: 35px;
+        height: 35px;
+        background: #fff;
+        border-radius: 50%;
+        opacity: 0.9;
+    }
+    .container .drop::after{
+        content: '';
+        position: absolute;
+        top: 160px;
+        left: 115px;
+        width: 15px;
+        height: 15px;
+        background: #fff;
+        border-radius: 50%;
+        opacity: 0.9;
+    }
+}
+.container .drop .content{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+gap: 15px
+}
+
+.container .drop .content h2{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #eff0f4;
+    border-radius: 50%;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.1),
+    inset -2px -5px 10px rgba(255, 255, 255, 1),
+    15px 15px 10px rgba(0, 0, 0, 0.05),
+    15px 10px 15px rgba(0, 0, 0, 0.025);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: var(--clr);
+}
+.container .drop .content a{
+    position: relative;
+    padding: 10px 25px;
+    background: var(--clr);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    opacity: 0.75;
+    transition: 0.5s;
+}
+container .drop .content a:hover{
+    opacity: 1;
+}
+container .drop .content a::before{
+    content: '';
+    position: absolute;
+    width: 65%;
+    top: 8px;
+    transform: translateX(-50%);
+    height: 5px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 992px){
+    #topbar1 {
+        background: #022a2d;
+        height: 100px;
+        font-size: 14px;
+        transition: all 0.5s;
+        z-index: 996;
+      }
+      .logo a{
+        font-size: 28px;
+    line-height: 36px;
+      }
+}

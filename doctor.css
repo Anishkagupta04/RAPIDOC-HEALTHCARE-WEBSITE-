@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+.slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    background-color: #001c1e;
+    border-radius: 25px;
+}
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    background-color: #001c1e;
+    padding: 40px 0;
+    border-radius: 20px;
+}
+.card{
+    border-radius: 25px;
+    background-color: #FFf;
+}
+.image-content,.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+.overlay{
+    border-radius: 25px 25px 0 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #3fbcc0a4;
+}
+.overlay::before,.overlay::after{
+    content: '';
+    right: 0;
+    bottom: -40px;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #3fbcc0a4;
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #fff;
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070F4;
+    
+}
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    columns: #333;
+}
+.description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+.button{
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+    background-color: #007074d5;
+    border-radius: 8px;
+    margin: 14px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+.button:hover{
+    background: #265df2;
+}
+.swiper-navBtn{
+    color: white;
+}
+.swiper-navBtn:hover{
+    color: #007074d5;
+}
+.swiper-pagination-bullet{
+    opacity: 0;
+}
