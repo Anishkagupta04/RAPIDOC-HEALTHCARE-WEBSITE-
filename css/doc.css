@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #000;
+    color: #FFFFFF;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.card {
+    text-align: center;
+}
+.slide-container {
+    margin: 50px;
+    padding: 20px;
+}
+.content {
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid #2F7F83;
+    border-radius: 1.523rem;
+    text-align: center;
+}
+.get-list {
+    color: #2F7F83;
+    text-decoration: none;
+}

@@ -6,20 +6,16 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>RapiDoc</title>
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1b35b069f8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Galada&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Workbench&display=swap" rel="stylesheet">
 
   <!-- CSS Files -->
-  <link href="animate.css/animate.min.css" rel="stylesheet">
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="remixicon/remixicon.css" rel="stylesheet">
-  <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
 
 </head>
 
@@ -28,62 +24,71 @@
 
 
   <!-- ############### Top Bar ############### -->
-  
-  
-  
-  <div id="topbar" class="d-flex align-items-center fixed-top">
-    <div class="container d-flex justify-content-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a>
-        <i class="bi bi-phone"></i> +91 1234567890
-      </div>
-      <div class="d-none d-lg-flex social-links align-items-center">
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+  <section class="nav">
+    <div id="topbar" class="d-flex">
+      <div class="container d-flex justify-content-between">
+        <div class="contact-info d-flex align-items-center">
+          <a href="mailto:rapidoc@mail.com" class="mail">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+          </a>
+          <a href="tel:+1234567890" class="phone">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+          </a>
+
+        </div>
+        <div class="d-none">
+          <a href="#" class="facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-
-  <!-- ############# Header ############# -->
-  
-  
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="index.html">RapiDoc</a></h1>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#home">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">EMERGENCY</span></a>
-
+    <div class="logo">
+      <h1 class="logo"><a href="index.html" style="text-decoration: none; color:#2F7F83;">RapiDoc</a></h1>
     </div>
-  </header><!-- End Header -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center">
+  
+        
+  
+        <nav id="navbar" class="navbar">
+          <a href="" class="nav-content">Home</a>
+          <a href="" class="nav-content">About</a>
+          <a href="" class="nav-content">Services</a>
+          <a href="" class="nav-content">Doctor</a>
+          <a href="" class="nav-content">Contact</a>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+  
+        <a href="#appointment" class="emg"><span class="d-none ">EMERGENCY</span></a>
+  
+      </div>
+    </header>
+  </section>
 
 
   <!-- ======= Home Section ======= -->
   
   
   <section id="home" class="d-flex align-items-center">
-    <div class="container">
-      <h1>Welcome to RapiDoc</h1>
-      <h2>Your One-stop digital healthcare destination.<br>Get details about <span class="multiple-text"></span></h2>
+    <div class="container-home">
+      <h1 class="welcome">Welcome to <span class="logo">RapiDoc</span></h1>
+      <h2 class="p">Your One-stop digital healthcare destination.<br>Get details about <span class="multiple-text"></span></h2>
       <a href="#about" class="btn-get-started scrollto">Download App</a>
     </div>
     <div class="wall"><video autoplay loop muted plays-inline><source src="2.mp4"></video></div>
   </section>
   <!-- End Home -->
-  <br><br><br><br><br><br><br><br>
   <main id="main">
 
    
@@ -95,44 +100,61 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon1"><i class="fas fa-heartbeat"></i></div>
-              <h4 class="title"><a href=""> Normal checkup</a></h4>
-              <p class="description">Detect medical issues, identify risk factors and illnesses before they start to
-                cause problems.</p>
+          <div class="box1">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon1"><i class="fas fa-heartbeat"></i></div>
+                <div class="content">
+                  <h4 class="title"><a href="" style="color: #72773d;"> Normal checkup</a></h4>
+                  <p class="description">Detect medical issues, identify risk factors and illnesses before they start to
+                    cause problems.</p>
+                </div>
+                
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box " data-aos="fade-up" data-aos-delay="400">
+                <div class="icon2"><i class="fas fa-dna"></i></div>
+                <div class="content">
+                  <h4 class="title"><a href="" style="color: #72773d;">Blood Test</a></h4>
+                  <p class="description"> Get your tests done to look for signs of disease or agents that cause disease.</p>
+                </div>
+                
+              </div>
             </div>
           </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon2"><i class="fas fa-dna"></i></div>
-              <h4 class="title"><a href="">Blood Test</a></h4>
-              <p class="description"> Get your tests done to look for signs of disease or agents that cause disease.</p>
+          
+          <div class="box2">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon3"><i class="fas fa-temperature-high"></i></div>
+                <div class="content">
+                  <h4 class="title"><a href="" style="color: #72773d;">Body temperature</a></h4>
+                <p class="description">Body temperature can be anywhere from 97 F to 99 F. Babies and children have a
+                  little higher range: 97.9 F to 100.4 F.</p>
+                </div>
+                
+              </div>
             </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon3"><i class="fas fa-temperature-high"></i></div>
-              <h4 class="title"><a href="">Body temperature</a></h4>
-              <p class="description">Body temperature can be anywhere from 97 F to 99 F. Babies and children have a
-                little higher range: 97.9 F to 100.4 F.</p>
+  
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon4"><i class="fas fa-hand-holding-medical"></i></div>
+                <div class="content">
+                  <h4 class="title"><a href="" style="color: #72773d;">Medicine use</a></h4>
+                <p class="description">Know what to use when to use and how to use.
+                </p>
+                </div>
+                
+              </div>
             </div>
+  
           </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon4"><i class="fas fa-hand-holding-medical"></i></div>
-              <h4 class="title"><a href="">Medicine use</a></h4>
-              <p class="description">Know what to use when to use and how to use.
-              </p>
-            </div>
-          </div>
-
+  
         </div>
-
-      </div>
+          </div>
+          
     </section><!-- End Featured Services Section -->
 
    
@@ -142,38 +164,37 @@
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>About Us</h2>
-          <p>RapiDoc is an online platform which enables you to get information about your nearest hospitals and
+          <h1 class="title-box">About Us</h1>
+          <p class="p" style="font-size: 30px;">RapiDoc is an online platform which enables you to get information about your nearest hospitals and
             healthcare facilities. It aims to address health-related issues. It is a one-stop destination for all your
             medical needs.</p>
         </div>
 
-        <div class="row">
+        <div class="row flex-content">
           <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center
      align-items-stretch position-relative">
-            <a href="https://youtu.be/ImQqQ9_s38k" class="glightbox play-btn mb-4"></a>
+     
+            <iframe src="https://www.youtube.com/watch?v=ImQqQ9_s38k" frameborder="0" width="560" height="315"></iframe>
           </div>
-
-          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch
-     justify-content-center py-5 px-lg-5">
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-heart"></i></div>
-              <h4 class="title"><a href="">HEALTH CHECKUPS</a></h4>
+        </div>
+      </div>
+      <div >
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <div class="icon-box yt-content">
+              <!-- <div class="icon"><i class="bx bx-heart"></i></div> -->
+              <h4 class="title"><a href="" style="color: #72773d;">HEALTH CHECKUPS</a></h4>
               <p class="description">Bootcamps, personalised check-ups, newsletters, it’s all here.</p>
             </div>
 
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-health"></i></div>
-              <h4 class="title"><a href="">EMERGENCY WARDS</a></h4>
+            <div class="icon-box yt-content">
+              <h4 class="title"><a href="" style="color: #72773d;">EMERGENCY WARDS</a></h4>
               <p class="description">Avoid rush and get immediate medical assistance, know the
                 wards and vacancies.
               </p>
             </div>
 
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-help-circle"></i></div>
-              <h4 class="title"><a href="">SERVICES</a></h4>
+            <div class="icon-box yt-content">
+              <h4 class="title"><a href="" style="color: #72773d;">SERVICES</a></h4>
               <p class="description">An apple a day won’t keep RapiDoc away. We are always here at your service,
                 bringing to you the best facilities.</p>
             </div>
@@ -189,47 +210,51 @@
    
    
     <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up" style="display: block;">
 
         <div class="row no-gutters">
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="fas fa-user-md"></i>
+            <div class="count-box white-box">
+              <div class="symbol"><i class="fas fa-user-md"></i><h1 style="font-size: 2.953rem;">95</h1></div>
+              
               <span data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="1"
                 class="purecounter"></span>
               <p><strong>Doctors Available</strong> <br>Doctors listed on our website.</p><br>
-              <a href="">Find out more &raquo;</a>
+              <a href=""  class="a-box">Find out more &raquo;</a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="fas fa-bed"></i>
+            <div class="count-box white-box">
+              <div class="symbol"><i class="fas fa-bed"></i><h1 style="font-size: 2.953rem;">36</h1></div>
+              
               <span data-purecounter-start="0" data-purecounter-end="36" data-purecounter-duration="1"
                 class="purecounter"></span>
               <p><strong>Beds Available</strong> <br> Beds available at your nearest emergency centers.</p>
-              <a href="">Find out more &raquo;</a>
+              <a href=""  class="a-box">Find out more &raquo;</a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="fas fa-location-arrow"></i>
+            <div class="count-box white-box">
+              <div class="symbol">
+                <i class="fas fa-location-arrow"></i><h1 style="font-size: 2.953rem;">23</h1></div>
               <span data-purecounter-start="0" data-purecounter-end="23" data-purecounter-duration="1"
                 class="purecounter"></span>
               <p><strong>Nearest Labs</strong> <br>Test labs and clinics near you.</p><br>
-              <a href="">Find out more &raquo;</a>
+              <a href="" class="a-box">Find out more &raquo;</a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="fas fa-trophy"></i>
+            <div class="count-box white-box">
+              <div class="symbol">
+                <i class="fas fa-trophy"></i><h1 style="font-size: 2.953rem;">1250</h1></div>
               <span data-purecounter-start="0" data-purecounter-end="1250" data-purecounter-duration="1"
                 class="purecounter"></span>
               <p><strong>User Reviews</strong> <br>Over 1K positive reviews.</p><br>
-              <a href="">Find out more &raquo;</a>
+              <a href=""  class="a-box">Find out more &raquo;</a>
             </div>
           </div>
 
@@ -241,64 +266,73 @@
    
     <!-- #################### Services Section #################### -->
    
-   
+    <hr class="line">
     <section id="services" class="services">
-      <div class="container">
+      <div class="container-1 " >
 
         <div class="section-title">
-          <h2>Services</h2>
-          <p>Our services are for your good health. We are with you at every digital step.</p>
+          <h1 class="title-box">Services</h1>
+          <p class="p">Our services are for your good health. We are with you at every digital step.</p>
         </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-heartbeat"></i></div>
-              <h4><a href="">Clinics/Labs</a></h4>
-              <p>Locate the best healthcare facilities around you hassle-free.</p>
+        <div class="first-line">
+          <div class="row row-content">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="boxes">
+                <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                <div class="content">
+                  <h4><a href="" class="a-content">Clinics/Labs</a></h4>
+                <p>Locate the best healthcare facilities around you hassle-free.</p>
+                </div>
+                
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+              <div class="boxes">
+                <div class="icon "><i class="fas fa-pills"></i></div>
+                <h4><a href="https://www.1mg.com" class="a-content">Pharmacy</a></h4>
+                <p>Get your prescribed medicins delivered at your doorstep.</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+              <div class="boxes">
+                <div class="icon"><i class="fas fa-hospital-user"></i></div>
+                <h4><a href="" class="a-content">Daily Feed</a></h4>
+                <p>Access to heath benefits like bootcamps, vaccination drives and much more
+                  . </p>
+              </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-pills"></i></div>
-              <h4><a href="https://www.1mg.com">Pharmacy</a></h4>
-              <p>Get your prescribed medicins delivered at your doorstep.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-hospital-user"></i></div>
-              <h4><a href="">Daily Feed</a></h4>
-              <p>Access to heath benefits like bootcamps, vaccination drives and much more
-                . </p>
-            </div>
-          </div>
-
+        </div>
+        <div class="second-line">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
+            <div class="boxes">
               <div class="icon"><i class="fas fa-dna"></i></div>
-              <h4><a href="blood.html">Blood Bank</a></h4>
+              <h4><a href="blood.html" class="a-content">Blood Bank</a></h4>
               <p>Know the blood banks and blood groups available around you. No one should suffer ỉn emergencies.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
+            <div class="boxes">
               <div class="icon"><i class="fas fa-wheelchair"></i></div>
-              <h4><a href="">Disabled Person</a></h4>
+              <h4><a href="" class="a-content">Disabled Person</a></h4>
               <p>Convenient medical care is here. Wheelchair accessible hospitals and clinics, find all in one go.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
+            <div class="boxes">
               <div class="icon"><i class="fas fa-notes-medical"></i></div>
-              <h4><a href="">Health Post</a></h4>
+              <h4><a href="" class="a-content">Health Post</a></h4>
               <p>Weekly, monthly, yearly or each day, however you like it!</p>
             </div>
           </div>
+        </div>
+        
+
+          
 
         </div>
 
@@ -313,11 +347,11 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Make an Appointment</h2>
-          <p>We listed the docs, we made you a form. You make us an appointment.</p>
+          <h2 class="title-box">Make an Appointment</h2>
+          <p class="p">We listed the docs, we made you a form. You make us an appointment.</p>
         </div>
         <form accept="" role="form" class="php-email-form">
-          <div class="row">
+          <div class="row form-row" style="margin: 0;">
             <div class="col-md-4 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
             </div>
@@ -330,7 +364,7 @@
 
             </div>
           </div>
-          <div class="row">
+          <div class="row" style="margin: 0;">
             <div class="col-md-4 form-group mt-3">
               <input type="datetime" name="date" class="form-control datepicker" id="date"
                 placeholder="Appointment Date">
@@ -359,7 +393,7 @@
             <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
 
           </div>
-          <div class="text-center"><button type="submit">Make an Appointment</button></div>
+          <div class="text-center"><button type="submit" class="button">Make an Appointment</button></div>
         </form>
 
       </div>
@@ -369,16 +403,16 @@
 
     <!-- ################# Doctors Section ################# -->
   
-  
+    <hr class="line">
     <section id="doctors" class="doctors">
-      <div class="container">
+      <div class="container-1">
 
         <div class="section-title">
-          <h2>Doctors</h2>
-          <p>Don’t compromise your health when we have listed the best doctors for you!</p>
+          <h2 class="title-box">Doctors</h2>
+          <p class="p">Don’t compromise your health when we have listed the best doctors for you!</p>
         </div>
 
-        <div class="row">
+        <div class="row col-6">
 
           <div class="col-lg-6">
             <div class="member d-flex align-items-start">
@@ -430,22 +464,22 @@
 
      <!-- ################# Contact Section ################# -->
     
-    
+      <hr class="line">
      <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
-          <h2>Contact</h2>
-          <p>Located your appointment. Feel free to give us feedback and help us improve our digital med care.</p>
+          <h2 class="title-box">Contact</h2>
+          <p class="p">Located your appointment. Feel free to give us feedback and help us improve our digital med care.</p>
         </div>
       </div>
 
       <!--Google map-->
       <div class="mapouter">
-        <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
+        <div class="gmap_canvas"><iframe class="gmap_iframe" width="80%" frameborder="0" scrolling="no"
             marginheight="0" marginwidth="0"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"></iframe><a
-            href="https://www.fnfgo.com/">FNF Mods</a></div>
+            href="https://www.fnfgo.com/"></a></div>
         <style>
           .mapouter {
             position: relative;
@@ -468,33 +502,33 @@
       </div>
 
       <div class="container">
-        <div class="row mt-5">
+        <div class="row mt-5" >
 
           <div class="col-lg-4">
             <div class="info">
               <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>IGDTUW, Delhi</p>
+                
+                <i class="fa-solid fa-location-dot">
+                  
+                </i><h2>Location: </h2>
+                
+                <p> IGDTUW, Delhi</p>
               </div>
 
               <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>rapidoc@mail.com</p>
-              </div>
+                <i class="fa-solid fa-envelope"></i><h2>Email: </h2><p>rapidoc@mail.com</p>
+              </div> 
 
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+91 1234567890</p>
+              <div class="phone" style="padding:0px;">
+                <i class="fa-solid fa-phone"></i>
+                <h2>Call: </h2><p > +91 1234567890</>
               </div>
             </div>
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
             <form action="" role="form" class="php-email-form">
-              <div class="row">
+              <div class="row" style="margin: 0;">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
@@ -524,75 +558,28 @@
   <!-- ############### Footer ############### -->
  
  
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
+  
+  
 
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>RapiDoc</h3>
-              <p>
-                Address<br>
-                Delhi, India<br><br>
-                <strong>Phone:</strong> +91 1234567890<br>
-                <strong>Email:</strong> rapidoc@mail.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#doctor">Doctors</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Location Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Online OPDs</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Availability Status</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Pharmacy Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">User Benefits</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Daily Newsletter</h4>
-            <p>Get your medical insights! Subscribe to our newsletters now!</p>
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="Email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div>
-
+      <footer class="footer">
+        <div class="footer__addr">
+          <h1 class="footer__logo">RapiDoc</h1>
+              
+          <h2>Contact</h2>
+          
+          <address>
+            Delhi, India. The World +91 1234567890<br>
+                
+            <a class="footer__btn" href="mailto:rapidoc@mail.com">rapidoc@mail.com</a>
+          </address>
         </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>RapiDoc</span></strong>. All Rights Reserved
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+        <div class="container">
+          <div class="copyright">
+            &copy; Copyright <strong><span>RapiDoc</span></strong>. All Rights Reserved
+          </div>
+        </div>
+        
+      </footer>
 
   <!-- JS Files -->
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>

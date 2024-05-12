@@ -2,111 +2,253 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link href="animate.css/animate.min.css" rel="stylesheet">
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="remixicon/remixicon.css" rel="stylesheet">
-  <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-<link rel="stylesheet" href="bloodstyle.css">
+    <script src="https://kit.fontawesome.com/1b35b069f8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Galada&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Workbench&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/doc.css">
 <title>
 Blood Bank
 </title>
 </head>
 <body>
-    <div id="topbar1" class="d-flex align-items-center fixed-top">
-        <div class="logo">
-            <h1><a href="#">RapiDoc</a></h1>
-        </div>
-        <div class="container d-flex justify-content-between">
-          <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">rapidoc@mail.com</a>
-          </div>
-          <div class="d-none d-lg-flex social-links align-items-center">
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-          </div>
-        </div>
-      </div>
+    <section class="nav">
+        <div id="topbar" class="d-flex">
+          <div class="container d-flex justify-content-between">
+            <div class="contact-info d-flex align-items-center">
+              <a href="mailto:rapidoc@mail.com" class="mail">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+              </a>
+              <a href="tel:+1234567890" class="phone">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+              </a>
     
-<div class="container">
-    <div class="drop" style="--clr:#ff0f5b;">
-    <div class="content">
-        <h2>A+</h2>
-        <span data-purecounter-start="0" data-purecounter-end="125" data-purecounter-duration="1"
-                class="purecounter"></span><p class="ltr">liters</p>
-        <a href="">Get List</a>
+            </div>
+            <div class="d-none">
+              <a href="#" class="facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="logo">
+          <h1 class="logo"><a href="index.html" style="text-decoration: none; color:#2F7F83;">RapiDoc</a></h1>
+        </div>
+        <header id="header" class="fixed-top">
+          <div class="container d-flex align-items-center">
+      
+            
+      
+            
+      
+            <a href="/index.html" class="emg"><span class="d-none ">EMERGENCY</span></a>
+      
+          </div>
+        </header>
+      </section>
+        
+    <div class="container">
+        <div class="drop" style="--clr:#ff0f5b;" >
+        <div class="content">
+            <h2>A+</h2>
+            <span data-purecounter-start="0" data-purecounter-end="125" data-purecounter-duration="1"
+                    class="purecounter"></span><p class="ltr">liters</p>
+            <a href="" class="get-list">Get List</a>
+        </div>
+        </div>
+        <div class="drop" style="--clr:#be01fe;">
+        <div class="content">
+            <h2>O+</h2>
+            <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                    <p class="ltr">liters</p>
+            <a href="" class="get-list">Get List</a>
+        </div>
+        </div>
+        <div class="drop" style="--clr:#01b4ff;">
+        <div class="content">
+            <h2>B+</h2>
+            <span data-purecounter-start="0" data-purecounter-end="78" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                    <p class="ltr">liters</p>
+            <a href="" class="get-list">Get List</a>
+        </div>
+        </div>
+        <div class="drop" style="--clr:#fc7200;">
+        <div class="content">
+            <h2>AB+</h2>
+            <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                    <p class="ltr">liters</p>
+            <a href="" class="get-list">Get List</a>
+        </div>
+        </div>
+        <div class="drop" style="--clr:#010efe;">
+        <div class="content">
+            <h2>A-</h2>
+            <span data-purecounter-start="0" data-purecounter-end="72" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                    <p class="ltr">liters</p>
+            <a href="" class="get-list">Get List</a>
+        </div>
+        </div>
+        <div class="drop" style="--clr:#01d0ff;">
+        <div class="content">
+            <h2>O-</h2>
+            <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                    <p class="ltr">liters</p>
+            <a href="" class="get-list">Get List</a>
+        </div>
+        </div>
+        <div class="drop" style="--clr:#00fe11;">
+        <div class="content">
+            <h2>B-</h2>
+            <span data-purecounter-start="0" data-purecounter-end="62" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                    <p class="ltr">liters</p>
+            <a href="" class="get-list">Get List</a>
+        </div>
+        </div>
+        <div class="drop" style="--clr:#fe0101;">
+        <div class="content">
+            <h2>AB-</h2>
+            <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                    <p class="ltr">liters</p>
+            <a href="" class="get-list">Get List</a>
+        </div>
+        </div>
     </div>
-    </div>
-    <div class="drop" style="--clr:#be01fe;">
-    <div class="content">
-        <h2>O+</h2>
-        <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"
-                class="purecounter"></span>
-                <p class="ltr">liters</p>
-        <a href="">Get List</a>
-    </div>
-    </div>
-    <div class="drop" style="--clr:#01b4ff;">
-    <div class="content">
-        <h2>B+</h2>
-        <span data-purecounter-start="0" data-purecounter-end="78" data-purecounter-duration="1"
-                class="purecounter"></span>
-                <p class="ltr">liters</p>
-        <a href="">Get List</a>
-    </div>
-    </div>
-    <div class="drop" style="--clr:#fc7200;">
-    <div class="content">
-        <h2>AB+</h2>
-        <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1"
-                class="purecounter"></span>
-                <p class="ltr">liters</p>
-        <a href="">Get List</a>
-    </div>
-    </div>
-    <div class="drop" style="--clr:#010efe;">
-    <div class="content">
-        <h2>A-</h2>
-        <span data-purecounter-start="0" data-purecounter-end="72" data-purecounter-duration="1"
-                class="purecounter"></span>
-                <p class="ltr">liters</p>
-        <a href="">Get List</a>
-    </div>
-    </div>
-    <div class="drop" style="--clr:#01d0ff;">
-    <div class="content">
-        <h2>O-</h2>
-        <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
-                class="purecounter"></span>
-                <p class="ltr">liters</p>
-        <a href="">Get List</a>
-    </div>
-    </div>
-    <div class="drop" style="--clr:#00fe11;">
-    <div class="content">
-        <h2>B-</h2>
-        <span data-purecounter-start="0" data-purecounter-end="62" data-purecounter-duration="1"
-                class="purecounter"></span>
-                <p class="ltr">liters</p>
-        <a href="">Get List</a>
-    </div>
-    </div>
-    <div class="drop" style="--clr:#fe0101;">
-    <div class="content">
-        <h2>AB-</h2>
-        <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1"
-                class="purecounter"></span>
-                <p class="ltr">liters</p>
-        <a href="">Get List</a>
-    </div>
-    </div>
-</div>
+    
+       <!-- ################# Contact Section ################# -->
+      
+        <hr class="line">
+       <section id="contact" class="contact">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2 class="title-box">Contact</h2>
+            <p class="p">Located your appointment. Feel free to give us feedback and help us improve our digital med care.</p>
+          </div>
+        </div>
+  
+        <!--Google map-->
+        <div class="mapouter">
+          <div class="gmap_canvas"><iframe class="gmap_iframe" width="80%" frameborder="0" scrolling="no"
+              marginheight="0" marginwidth="0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"></iframe><a
+              href="https://www.fnfgo.com/"></a></div>
+          <style>
+            .mapouter {
+              position: relative;
+              text-align: right;
+              width: 100%;
+              height: 363px;
+            }
+  
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              width: 100%;
+              height: 363px;
+            }
+  
+            .gmap_iframe {
+              height: 363px !important;
+            }
+          </style>
+        </div>
+  
+        <div class="container">
+          <div class="row mt-5" >
+  
+            <div class="col-lg-4">
+              <div class="info">
+                <div class="address">
+                  
+                  <i class="fa-solid fa-location-dot">
+                    
+                  </i><h2>Location: </h2>
+                  
+                  <p> IGDTUW, Delhi</p>
+                </div>
+  
+                <div class="email">
+                  <i class="fa-solid fa-envelope"></i><h2>Email: </h2><p>rapidoc@mail.com</p>
+                </div> 
+  
+                <div class="phone" style="padding:0px;">
+                  <i class="fa-solid fa-phone"></i>
+                  <h2>Call: </h2><p > +91 1234567890</>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-8 mt-5 mt-lg-0">
+              <form action="" role="form" class="php-email-form">
+                <div class="row" style="margin: 0;">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Contact Section -->
+  
+    </main><!-- End #main -->
+  
+   
+    <!-- ############### Footer ############### -->
+   
+   
+    
+    
+  
+        <footer class="footer">
+          <div class="footer__addr">
+            <h1 class="footer__logo">RapiDoc</h1>
+                
+            <h2>Contact</h2>
+            
+            <address>
+              Delhi, India. The World +91 1234567890<br>
+                  
+              <a class="footer__btn" href="mailto:rapidoc@mail.com">rapidoc@mail.com</a>
+            </address>
+          </div>
+          <div class="container">
+            <div class="copyright">
+              &copy; Copyright <strong><span>RapiDoc</span></strong>. All Rights Reserved
+            </div>
+          </div>
+          
+        </footer>
+  
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="glightbox/js/glightbox.min.js"></script>
 <script src="php-email-form/validate.js"></script>

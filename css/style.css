@@ -1,0 +1,383 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #000;
+    color: #fff; 
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+.nav {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    text-decoration: none;
+}
+.mail {
+  background-color: #100F10;
+  padding: 10px;
+  padding-right: 15px;
+  border-radius: 1.553rem;
+}
+.phone {
+    padding: 8px;
+}
+.contact-info {
+    gap: 5px;
+    background-color: #2F7F83;
+    border-radius: 1.553rem;
+    /* padding: 15px; */
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+svg {
+    color: #2F7F83;
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+.d-none  {
+    margin: 10px;
+    background-color: #2F7F83;
+    padding: 15px;
+    border-radius: 1.553rem;
+}
+.instagram,
+.facebook,
+.twitter {
+    margin-right: 15px;
+}
+.instagram,
+.facebook,
+.twitter,
+.linkedin {
+    color: #fff;
+}
+.logo {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-size: 2.5rem;
+    font-style: normal; 
+    color: #2F7F83;
+}
+.nav-content {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: larger;
+    color: #fff;
+}
+.nav-content:hover {
+    color: #2F7F83;
+}
+.navbar {
+    display: flex;
+    background-color: #100F10;
+    border-radius: 1.553rem;
+    padding: 15px;
+}
+.emg {
+    text-decoration: none;
+    color: #fff;
+}
+@media (min-width: 800px) {
+    ul {
+        display: none;
+    }
+}
+li {
+    list-style-type: none;
+}
+
+#home {
+    margin: 50px;
+}
+.welcome {
+    font-size: 7rex;
+    font-weight: 600;
+}
+.align-items-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.container-home {
+    display: flex;
+    flex-direction: column;
+}
+.wall {
+    width: 45%;
+}
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.p {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-size: 6.5rex;
+    margin: 10px;
+}
+.scrollto {
+    background-color: #2F7F83;
+    width: max-content;
+    padding: 15px;
+    border-radius: 1.532rem;
+    text-decoration: none;
+    color: #fff;
+}
+.row {
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.icon-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #100F10;
+    margin: 20px;
+    border-radius: 1.553rem;
+    /* width: 50%; */
+}
+.fas {
+    font-size: 2.5rem;
+    color: #2F7F83;
+    margin: 15px;
+}
+.box1,
+.box2 {
+    flex: 50%;
+}
+.icon1,
+.icon2,
+.icon3,
+.icon4 {
+    margin: 20px;
+    border: 1px solid #100F10;
+    border-radius: 1.253rem;
+    background-color: #000;
+}
+.title {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-size: 1.5rem;
+    margin: 10px;
+    color: #2F7F83;
+}
+.line {
+    margin: 50px;
+    border: 3px solid #2F7F83;
+    border-radius: 0.596rem;
+}
+.about {
+    margin: 50px;
+}
+.section-title {
+    flex: 60%;
+    text-align: center;
+}
+.title-box {
+    font-size: 6.523rex;
+}
+.flex-column {
+    display: flex;
+    flex-direction: row;
+}
+.yt-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+}
+.counts {
+    text-align: center;
+}
+.no-gutters {
+    display: flex;
+    justify-content: space-evenly;
+}
+.container {
+    justify-content: center;
+    gap: 20px;
+}
+.a-box {
+    color: #2F7F83;
+    font-size: larger;
+    text-decoration: none;
+    margin: 10px;
+}
+.a-box:hover {
+    text-decoration: underline;
+}
+.services {
+    margin: 50px;
+}
+.white-box {
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    border-radius: 1.553rem;
+    width: 250px;
+}
+.symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boxes {
+    border: 1px solid #2F7F83;
+    background-color: #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 1.253rem;
+    align-items: center;
+    width: 350px;
+    text-align: center;
+    height: 150px;
+}
+.second-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.a-content {
+    text-decoration: none;
+    font-size: larger;
+    color: #2F7F83;
+}
+
+
+.appointment {
+    margin: 50px;
+    padding: 30px;
+}
+.form-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;''
+
+}
+.php-email-form {
+    text-align: start;
+    background-color: #100F10;
+    padding: 20px;
+    border-radius: 2.523rem;
+}
+input,
+.form-select,
+.form-control,
+.button,
+button{
+    margin: 10px;
+    border-radius: 1.253rem;
+    border: 2px solid #000;
+    padding: 10px;
+    color: #100F10;
+    justify-content: space-between;
+}
+.mt-3 {
+    width: 100%;
+}
+.button {
+    background-color: #2F7F83;
+}
+.button:hover {
+    background-color: #100F10;
+    color: #2F7F83;
+}
+.img-fluid {
+    width: 250px;
+}
+.col-6 {
+    text-align: center;
+}
+.col-lg-6 {
+    margin: 20px;
+}
+.mapouter {
+    margin-top: 50px;
+    text-align: center;
+}
+.gmap_canvas {
+    text-align: center;
+}
+.gmap_iframe {
+    border-radius: 1.853rem;
+}
+.info {
+    margin: 30px;
+    gap: 30px;
+}
+.address,
+.email,
+.phone{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: start;
+    justify-content: flex-start;
+    font-size: larger;
+}
+.mt-5 {
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/* footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .footer > * {
+    flex:  1 100%;
+  }
+  
+  .footer__addr {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+  }
+  
+  .footer__logo {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+  }
+  
+  .footer__addr h2 {
+    margin-top: 1.3em;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .footer address {
+    font-style: normal;
+    color: #999;
+  }
+.footer__btn {
+    text-decoration: none;
+    color: #2F7F83;
+    font-size: larger;
+}
