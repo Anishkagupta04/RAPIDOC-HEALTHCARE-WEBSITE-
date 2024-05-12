@@ -11,15 +11,16 @@
     rel="stylesheet">
 
   <!-- CSS Files -->
-  <link href="animate.css/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="animate.min.css" rel="stylesheet">
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="glightbox.min.css" rel="stylesheet">
   <link href="remixicon/remixicon.css" rel="stylesheet">
   <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 
 </head>
 
@@ -61,6 +62,7 @@
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link" href="#feedback">Feedback</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -518,7 +520,45 @@
       </div>
     </section><!-- End Contact Section -->
 
+
+    <!-- Feedback System-->
+  <section id="feedback" class="feed">
+    <div class="feedback">
+      <h1>Give Us Your Valuable Feedback.</h1>
+      <p>Your feedback is very important for Rapidoc.</p>
+      <div class="emoji">
+          <button class="btn normal">&#128578;</button>
+          <button class="btn normal">&#128515;</button>
+          <button class="btn normal">&#128519;</button>
+          <button class="btn normal">&#128531;</button>
+          <button class="btn normal">&#128532;</button>
+          <button class="btn normal">&#128545;</button>
+      </div>
+      <p class="ques">What you want to say?</p>
+      <textarea id="textarea" cols="20" rows="5"></textarea>
+      <p class="ques">Are you satisfied with rapidoc?</p>
+      <div class="radiobtn">
+          <div class="one">
+            <input class="input"  type="radio" name="one" id="Yes" />
+            <label class="label" for="Yes">Yes</label>
+          </div>
+          <div class="one">
+            <input class="input"  type="radio" name="one" id="No" />
+            <label class="label" for="No">No</label>
+          </div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="center">
+          <button class="btn button">Submit</button>
+      </div>
+      
+    </div>
+  </section>
+
   </main><!-- End #main -->
+
+  
 
  
   <!-- ############### Footer ############### -->
@@ -529,45 +569,53 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>RapiDoc</h3>
-              <p>
-                Address<br>
-                Delhi, India<br><br>
-                <strong>Phone:</strong> +91 1234567890<br>
-                <strong>Email:</strong> rapidoc@mail.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <div class="foot">
+            <div class="footer1">
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-info">
+                  <h3>RapiDoc</h3>
+                  <p>
+                    Address<br>
+                    Delhi, India<br><br>
+                    <strong>Phone:</strong> +91 1234567890<br>
+                    <strong>Email:</strong> rapidoc@mail.com<br>
+                  </p>
+                  <div class="social-links mt-3">
+                    <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="google-plus"><i class="fa-brands fa-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#doctor">Doctors</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Location Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Online OPDs</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Availability Status</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Pharmacy Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">User Benefits</a></li>
-            </ul>
+  
+            <div class="footer1">
+              <div class="col-lg-2 col-md-6 footer-links">
+                <h4>Links</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#doctor">Doctors</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="footer1">
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Location Services</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Online OPDs</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Availability Status</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Pharmacy Services</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">User Benefits</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
@@ -595,6 +643,7 @@
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- JS Files -->
+  <script src="script.js"></script>
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="glightbox/js/glightbox.min.js"></script>
   <script src="php-email-form/validate.js"></script>

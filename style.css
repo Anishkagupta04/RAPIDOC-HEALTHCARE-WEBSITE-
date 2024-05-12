@@ -1029,7 +1029,133 @@ section {
 }
 
 
+/*################--blog###############*/
 
+.feedback{
+  border-radius: 1rem;
+  background-color: #fff;
+  padding: 2rem 4rem;
+  box-shadow: rgba(50,50,93,0.25) 0px 2px 5px -1px,rgba(0, 0,0,0.3) 0px 1px 3px -1px;
+  margin: 50px;
+  width: 60%;
+  margin-left: 250px;
+  padding: 20px;
+}
+.feedback h1{
+  color: black;
+  font-size: 2.0rem;
+  margin-bottom: 0.3rem;
+  font-family: "Poppins", sans-serif;
+}
+.feedback p{
+  color: black;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+}
+.emoji{
+  padding: 1rem 0;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+.btn{
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+.ques{
+  margin: 0.5rem 0;
+}
+.feedback #textarea{
+  padding: 1rem;
+  width: 80%;
+  background-color: transparent;
+  border: 0.1rem solid black;
+  border-radius: 0.5rem;
+  color: black;
+  margin-bottom: 0.6rem;
+  &:active{
+    box-shadow: rgba(50, 50, 93,0.25) 0px 2px 5px -1px,rgba(0,0,0,0.3) 0px 1px 3px -1px;
+  }
+}
+
+.radiobtn{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.one{
+  display: flex;
+}
+.input{
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border: 0.1rem solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before{
+    content: " ";
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    transition: 0.2s;
+  }
+  &:checked::before{
+    background-color: #1977cc;
+
+  } 
+}
+.label{
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  margin-left: 1rem;
+}
+.info{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+.center{
+  margin-top: 2rem;
+  text-align: center;
+  
+  .button{
+    width: 15%;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.4rem;
+    font-family: "Poppins", sans-serif;
+    padding:1rem 4rem;
+    cursor: pointer;
+    color: #000;
+  }
+  .button:active{
+    background-color: white;
+    transform: scale(1.0);
+
+  }
+  .button:hover{
+    background-color:rgb(63, 155, 124) ;
+  }
+}
 
 
 /*################----Footer----################*/
@@ -1056,7 +1182,15 @@ section {
   line-height: 1;
   font-weight: 700;
 }
-
+.foot{
+  display: flex;
+  flex-direction: row;
+  
+}
+.footer1{
+ padding:60px;
+ padding-left: 180px;
+}
 #footer .footer-top .footer-info p {
   font-size: 14px;
   line-height: 24px;
@@ -1067,15 +1201,16 @@ section {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #3fbcc0a4;
-  color: #fff;
+  background: #eaececa4;
+  color: #0e0e0e;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
+  margin-top: 10px;
   border-radius: 4px;
   text-align: center;
   width: 36px;
-  height: 36px;
+  height: 22px;
   transition: 0.3s;
 }
 
@@ -1089,16 +1224,20 @@ section {
   font-weight: 600;
   position: relative;
   padding-bottom: 12px;
+  
 }
+
 
 #footer .footer-top .footer-links {
   margin-bottom: 30px;
+ 
 }
 
 #footer .footer-top .footer-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
+ 
 }
 
 #footer .footer-top .footer-links ul i {
@@ -1129,12 +1268,17 @@ section {
   color: #3fbbc0;
 }
 
+.footer-newsletter{
+  margin-left: 40px;
+}
 #footer .footer-top .footer-newsletter form {
   margin-top: 30px;
   background: #fff;
   padding: 6px 10px;
   position: relative;
   border-radius: 4px;
+  width: 80%;
+  padding-left: 180px;
 }
 
 #footer .footer-top .footer-newsletter form input[type="email"] {
