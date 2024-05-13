@@ -1,0 +1,15 @@
+name: Greetings
+
+on: [pull_request_target, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: "Thank you for raising a issue, Hope you enjoing the open source. we try to reply or assign as soon possibe. Connect with mentor [GitHub](https://github.com/Anishkagupta04)"

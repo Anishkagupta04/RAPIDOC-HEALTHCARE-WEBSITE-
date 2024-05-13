@@ -11,8 +11,7 @@
     rel="stylesheet">
 
   <!-- CSS Files -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="animate.min.css" rel="stylesheet">
+
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -60,6 +59,7 @@
           <li><a class="nav-link scrollto active" href="#home">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#patient-portal">Patient Portal</a></li>
           <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="nav-link" href="#feedback">Feedback</a></li>
@@ -67,8 +67,10 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">EMERGENCY</span></a>
-
+      <a href="#appointment" class="appointment-btn scrollto" style="padding: 10px 20px; min-width: 150px;">
+        <span class="d-none d-md-inline">EMERGENCY</span>
+    </a>
+    
     </div>
   </header><!-- End Header -->
 
@@ -281,7 +283,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-dna"></i></div>
-              <h4><a href="blood.html">Blood Bank</a></h4>
+              <h4><a href="Html-Files/blood.html">Blood Bank</a></h4>
               <p>Know the blood banks and blood groups available around you. No one should suffer ỉn emergencies.</p>
             </div>
           </div>
@@ -307,6 +309,35 @@
       </div>
     </section><!-- End Services Section -->
 
+    <!-- Add Patient Portal Section -->
+  <section id="patient-portal" class="patient-portal">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Patient Portal</h2>
+        <p>Access your medical records, lab results, and prescription history securely.</p>
+      </div>
+
+      <!-- Add Login Form for Patient Portal -->
+      <div class="login-form">
+        <form action="login.php" method="post">
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Your Password" required>
+          </div>
+          <div class="text-center"><button type="submit">Login</button></div>
+        </form>
+      </div>
+
+      <!-- Add Forgot Password Link -->
+      <div class="forgot-password">
+        <a href="forgot-password.php">Forgot Your Password?</a>
+      </div>
+
+    </div>
+  </section><!-- End Patient Portal Section -->
    
     <!-- ############# Appointment Section ############# -->
    
@@ -388,7 +419,7 @@
               <div class="member-info">
                 <h4>Dermatologist</h4>
                 <br>
-                <div class="nxt-pg"><a href="doc.html"><button type="">Appoint a Doctor</button></a></div>
+                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
               </div>
             </div>
           </div>
@@ -399,7 +430,7 @@
               <div class="member-info">
                 <h4>Gynecologist</h4>
                 <br>
-                <div class="nxt-pg"><a href="doc.html"><button type="">Appoint a Doctor</button></a></div>
+                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
               </div>
             </div>
           </div>
@@ -410,7 +441,7 @@
               <div class="member-info">
                 <h4>Cardiologist</h4>
                 <br>
-                <div class="nxt-pg"><a href="doc.html"><button type="">Appoint a Doctor</button></a></div>
+                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
               </div>
             </div>
           </div>
@@ -421,7 +452,7 @@
               <div class="member-info">
                 <h4>ENT</h4>
                 <br>
-                <div class="nxt-pg"><a href="doc.html"><button type="">Appoint a Doctor</button></a></div>
+                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
               </div>
             </div>
           </div>
@@ -651,6 +682,7 @@
   <script src="swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
+  <script src="patient-portal.js"></script>
 
 </body>
 
