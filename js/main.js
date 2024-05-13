@@ -164,3 +164,12 @@ const typed = new Typed('.multiple-text',{
   backDelay: 1000,
   loop:true,
 })
+
+//parallax effect after about section(for enhancement)
+window.addEventListener("scroll", function() {
+  var scrollTop = window.scrollY;
+  var parallaxOffset = scrollTop * 0.5;
+  var iconBoxes = document.querySelector(".icon-boxes");
+  iconBoxes.style.transform = "translateY(" + parallaxOffset + "px)";
+});
+
