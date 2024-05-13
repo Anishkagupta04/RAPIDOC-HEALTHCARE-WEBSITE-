@@ -22,6 +22,26 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="patient-portal.css" rel="stylesheet">
 
+  <style>
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.button{
+  height: 35px;
+  width: 65px;
+  background-color: rgb(133, 133, 255);
+  color: rgb(249, 245, 245);
+  border-radius: 8px;
+}
+</style>
 </head>
 
 <body>
@@ -31,7 +51,8 @@
   <!-- ############### Top Bar ############### -->
   
   
-  
+  <button class="button" onclick="myFunction()">Toggle</button>
+
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
@@ -638,5 +659,10 @@
   <script src="patient-portal.js"></script>
 
 </body>
-
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
 </html>
