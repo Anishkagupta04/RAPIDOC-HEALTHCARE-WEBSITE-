@@ -20,6 +20,7 @@
   <link href="remixicon/remixicon.css" rel="stylesheet">
   <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="patient-portal.css" rel="stylesheet">
 
 </head>
 
@@ -59,6 +60,7 @@
           <li><a class="nav-link scrollto active" href="#home">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#patient-portal">Patient Portal</a></li>
           <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
@@ -307,6 +309,35 @@
       </div>
     </section><!-- End Services Section -->
 
+    <!-- Add Patient Portal Section -->
+  <section id="patient-portal" class="patient-portal">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Patient Portal</h2>
+        <p>Access your medical records, lab results, and prescription history securely.</p>
+      </div>
+
+      <!-- Add Login Form for Patient Portal -->
+      <div class="login-form">
+        <form action="login.php" method="post">
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Your Password" required>
+          </div>
+          <div class="text-center"><button type="submit">Login</button></div>
+        </form>
+      </div>
+
+      <!-- Add Forgot Password Link -->
+      <div class="forgot-password">
+        <a href="forgot-password.php">Forgot Your Password?</a>
+      </div>
+
+    </div>
+  </section><!-- End Patient Portal Section -->
    
     <!-- ############# Appointment Section ############# -->
    
@@ -604,6 +635,7 @@
   <script src="swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
+  <script src="patient-portal.js"></script>
 
 </body>
 
