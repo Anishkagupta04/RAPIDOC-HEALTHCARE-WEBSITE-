@@ -1,13 +1,14 @@
 * {
     margin: 0px;
     padding: 0px;
+    
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
 }
 
 body {
     background-color: #000;
     color: #fff; 
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
 }
 .nav {
     margin: 10px;
@@ -64,8 +65,6 @@ svg {
     color: #fff;
 }
 .logo {
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
     font-size: 2.5rem;
     font-style: normal; 
     color: #2F7F83;
@@ -124,9 +123,7 @@ video {
     object-fit: cover;
 }
 .p {
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-size: 6.5rex;
+    font-size: 4.5rex;
     margin: 10px;
 }
 .scrollto {
@@ -171,8 +168,6 @@ video {
     background-color: #000;
 }
 .title {
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
     font-size: 1.5rem;
     margin: 10px;
     color: #2F7F83;
@@ -360,7 +355,6 @@ button{
   }
   
   .footer__logo {
-    font-family: 'Pacifico', cursive;
     font-weight: 400;
     text-transform: lowercase;
     font-size: 1.5rem;
