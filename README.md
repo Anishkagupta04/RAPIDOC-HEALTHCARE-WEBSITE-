@@ -3,6 +3,7 @@
 
 
 ## RapiDoc 
+[💬 Join the community on Slack](https://join.slack.com/t/newworkspace-ley5153/shared_invite/zt-2isvflg78-tMexsn50mxdwY4BEJ_W11g)<br>
 
 It is an online platform which enables you to get information about your nearest hospitals and healthcare facilities including important information like blood availablity in emergency, Opds and beds availability in your nearest/desired hospitals. It aims to address health-related issues. It is a one-stop destination for all your medical needs.
 
@@ -89,7 +90,5 @@ We love your input! We want to make contributing to this project as easy and tra
 - Proposing new features
   #### HAPPY CONTRIBUTING ❤
 
-### Connect to Us
- [<img src="https://github.com/Arpcoder/RAPIDOC-HEALTHCARE-WEBSITE-/assets/100352419/38c440e6-a460-4285-b995-95485c4eb9b3" alt="image" height="60">](https://join.slack.com/t/newworkspace-ley5153/shared_invite/zt-2isvflg78-tMexsn50mxdwY4BEJ_W11g)
 
 
