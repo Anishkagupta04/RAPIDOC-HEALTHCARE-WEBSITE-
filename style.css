@@ -20,7 +20,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
 /*################----Top Bar----################*/
 #topbar {
   background: #000;
@@ -337,7 +336,7 @@ section {
 }
 #home .container {
   position: relative;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 #home h1 {
@@ -369,9 +368,9 @@ section {
   background: #3fbcc0a4;
 }
 #home video{
-  margin-top: -70px;
-  margin-left: 50PX;
-  height: 900px;
+  margin-top: -50px;
+  margin-left: 250PX;
+  height: 500px;
   position: absolute;
   top: 200px;
   left: 550px;
