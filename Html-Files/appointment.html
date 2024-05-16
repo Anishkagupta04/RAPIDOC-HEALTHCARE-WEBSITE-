@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="./Css-Files/appointStyle.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Doctor's Clinic</div>
+    </header>
+
+    <main>
+        <h1>Book an Appointment</h1>
+        <p>Schedule your visit with our expert doctors easily.</p>
+
+        <form id="appointment-form">
+            <div class="form-section">
+                <label for="doctor-select">Select a Doctor:</label>
+                <select id="doctor-select" name="doctor">
+                    <option value="doctor1">Dr. Vikas Chopra - Cardiologist</option>
+                    <option value="doctor2">Dr. Ajay Aggarwal - Cardiologist</option>
+                    <option value="doctor3">Dr. Soni Gupta - Dermatologist</option>
+                    <option value="doctor4">Dr. Jayant Jaswal - ENT Specialist</option>
+
+                </select>
+            </div>
+
+            <div class="form-section">
+                <label for="appointment-date">Choose a Date:</label>
+                <input type="date" id="appointment-date" name="date" required>
+            </div>
+
+            <div class="form-section">
+                <label for="time-slot">Select a Time:</label>
+                <select id="time-slot" name="time-slot" required>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="01:00 PM">01:00 PM</option>
+                    <option value="04:00 PM">04:00 PM</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="reason">Reason for Visit:</label>
+                <textarea id="reason" name="reason"></textarea>
+
+                <label>
+                    <input type="checkbox" name="existing-patient" id="existing-patient">
+                    Existing Patient
+                </label>
+                <input type="text" id="patient-id" name="patient-id" placeholder="Patient ID" style="display:none;">
+            </div>
+
+            <button type="button" onclick="previewAppointment()">Preview Appointment</button>
+        </form>
+
+        <div id="preview-section" style="display:none;">
+            <h2>Preview Appointment Details</h2>
+            <p id="preview-details"></p>
+            <button type="button" onclick="confirmAppointment()">Submit</button>
+            <button type="button" onclick="editAppointment()">Edit</button>
+        </div>
+    </main>
+
+    <div class="contact-info-doc">
+        <h2>Doctor's Contact Information</h2>
+        <p>123 Clinic Street, MediCity</p>
+        <p>Phone: +91 1234567890</p>
+        <p>Email: contact@clinic.com</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Doctor's Clinic</p>
+        <p>Opening Hours: Mon-Fri 10:00am - 5:00pm</p>
+    </footer>
+
+    <script src="appointScript.js"></script>
+</body>
+</html>
