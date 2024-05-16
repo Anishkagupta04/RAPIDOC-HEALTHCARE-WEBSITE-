@@ -355,6 +355,9 @@ section {
 #home .container {
   position: relative;
   margin-top: 150px;
+  margin-left: 150px;
+  line-height: 40px;
+  
 }
 
 #home h1 {
@@ -386,12 +389,12 @@ section {
   background: #3fbcc0a4;
 }
 #home video{
-  margin-top: -70px;
-  margin-left: 50PX;
-  height: 900px;
+  margin-top: 50px;
+  margin-left: 400PX;
+  height: 600px;
   position: absolute;
   top: 200px;
-  left: 550px;
+  left: 450px;
 }
 
 #home .btn-get-started:hover {
@@ -624,8 +627,8 @@ section {
   border-radius: 50%;
   display: block;
   position: absolute;
-  left: calc(50% - 47px);
-  top: calc(50% - 47px);
+  left: calc(50% - -40px);
+  top: calc(50% - -350px);
   overflow: hidden;
 }
 
