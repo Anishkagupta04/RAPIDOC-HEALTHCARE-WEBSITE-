@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
   <title>RapiDoc</title>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
@@ -97,7 +98,7 @@ body {
   
   <section id="home" class="d-flex align-items-center">
     <div class="container">
-      <h1>Welcome to RapiDoc</h1>
+      <h1 class="wel">Welcome to RapiDoc</h1>
       <h2>Your One-stop digital healthcare destination.<br>Get details about <span class="multiple-text"></span></h2>
       <a href="#about" class="btn-get-started scrollto">Download App</a>
     </div>
@@ -611,7 +612,7 @@ body {
   <!-- ############### Footer ############### -->
  
  
-  <footer id="footer">
+  <footer id="footer" class="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -690,7 +691,20 @@ body {
   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
   <script src="patient-portal.js"></script>
-
+  <script>
+    ScrollReveal({ 
+        //reset: true ,
+        distance : '60px' ,
+        duration:2500,
+        delay:400
+    });
+    ScrollReveal().reveal('.d-flex,#home', { delay: 500 , origin:'top' });
+    ScrollReveal().reveal('.logo , .navbar', { delay: 500 , origin:'left' });
+    ScrollReveal().reveal('.col-md-6', { delay: 600 , origin:'left' });
+    ScrollReveal().reveal('.col-lg-3', { delay: 500 , origin:'left' });
+    ScrollReveal().reveal('.feedback', { delay: 400 , origin:'left' });
+    ScrollReveal().reveal('.footer , .container', { delay: 1000 , origin:'bottom' });
+  </script>
 </body>
 
 </html>
