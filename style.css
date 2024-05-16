@@ -79,6 +79,23 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
 }
 
+.container-head{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 13fr 3fr;
+  margin-top: 0px;
+}
+
+.container-head > div{
+  text-align: center;
+  font-size: 15px;
+}
+
+img{
+  max-width: 130%;
+  max-height: 130%;
+}
+
 #header.header-scrolled {
   top: 0;
 }
