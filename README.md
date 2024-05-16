@@ -34,7 +34,7 @@
              <td><img alt="Forks" src="https://img.shields.io/github/forks/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&logo=github"/></td>
             <td><img alt="Issues" src="https://img.shields.io/github/issues/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&logo=github"/></td>
             <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&logo=github"/></td>
-           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&color=critical&logo=github"/></td>
+           <td><img alt="Merged Pull Requests" src="https://img.shields.io/github/issues-pr-merged/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&color=critical&logo=github"/></td>
         </tr>
     </tbody>
 </table>
