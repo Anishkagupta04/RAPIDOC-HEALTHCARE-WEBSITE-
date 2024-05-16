@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+  <link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+  <style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+  <style lang="en" type="text/css" id="dark-mode-native-style"></style>
+  <style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="./style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+
   <title>RapiDoc</title>
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- CSS Files -->
   <link href="Css-Files/animate.min.css" rel="stylesheet">
+  <link href="Css-Files/animate.css" rel="stylesheet">
+  <link href="Css-Files/animate.compat.css" rel="stylesheet">
+  <link href="Css-Files/animations.css" rel="stylesheet">
+  <link href="Css-Files/glightbox.css" rel="stylesheet">
+
+  <link href="Css-Files/glightbox.min.css" rel="stylesheet">
+  <link href="Css-Files/transformations.css" rel="stylesheet">
+  <link href="Css-Files/boxicons.css" rel="stylesheet">
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="Css-Files/boxicons.min.css" rel="stylesheet">
+  
+  <link href="style.css" rel="stylesheet"><link href="fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="Css-Files/glightbox.min.css" rel="stylesheet">
   <link href="remixicon/remixicon.css" rel="stylesheet">
   <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <link href="patient-portal.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+
+</head>
   <style>
 body {
   padding: 25px;
@@ -34,7 +43,7 @@ body {
 }
 
 
-</style
+</style>
 </head>
 
 <body>
@@ -686,12 +695,31 @@ body {
   <!-- JS Files -->
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="glightbox/js/glightbox.min.js"></script>
-  <script src="php-email-form/validate.js"></script>
-  <script src="purecounter/purecounter.js"></script>
-  <script src="swiper/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/purecounter.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
   <script src="patient-portal.js"></script>
+  <style type="text/css" data-typed-js-css="true">
+    .typed-cursor{
+      opacity: 1;
+    }
+    .typed-cursor.typed-cursor--blink{
+      animation: typedjsBlink 0.7s infinite;
+      -webkit-animation: typedjsBlink 0.7s infinite;
+              animation: typedjsBlink 0.7s infinite;
+    }
+    @keyframes typedjsBlink{
+      50% { opacity: 0.0; }
+    }
+    @-webkit-keyframes typedjsBlink{
+      0% { opacity: 1; }
+      50% { opacity: 0.0; }
+      100% { opacity: 1; }
+    }
+  </style>
 
 </body>
 
