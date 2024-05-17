@@ -19,6 +19,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* For Firefox */
+/* width */
+.scrollbar {
+  scrollbar-width: thin;
+}
+/* Track */
+.scrollbar {
+  scrollbar-track-color: #333;
+}
+/* Handle */
+.scrollbar {
+  scrollbar-thumb-color: #666;
+}
+
+/* For Webkit browsers (such as Chrome/Safari) */
+/* width */
+::-webkit-scrollbar {
+  width: 10px; /* width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333; /* color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #666; /* color of the thumb */
+}
 
 
 /*################----Top Bar----################*/
