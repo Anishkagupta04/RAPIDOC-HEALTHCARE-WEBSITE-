@@ -19,10 +19,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.nav_link {
-  list-style: none;
-}
-
 .nav_link li {
   padding: 5px 20px;
   display: inline-block;
@@ -60,13 +56,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 80px;
 }
 
-.container a {
-  display: flex;
-  flex-direction: column;
-  font-family: sans-serif;
-  color: #f9a826;
-  font-size: 20px;
-}
 
 .container a:hover {
   text-decoration: underline 2px;
@@ -873,6 +862,7 @@ section {
   background: #badaf7;
   border-radius: 10px;
   padding: 10px !important;
+  color: #6c757d;
 }
 
 .appointment .php-email-form input:focus, .appointment .php-email-form textarea:focus, .appointment .php-email-form select:focus {
