@@ -914,6 +914,7 @@ section {
   background: #badaf7;
   border-radius: 10px;
   padding: 10px !important;
+  color: #6c757d;
 }
 
 .appointment .php-email-form input:focus, .appointment .php-email-form textarea:focus, .appointment .php-email-form select:focus {
