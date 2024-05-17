@@ -4,56 +4,7 @@
 
 ## RapiDoc 
 [💬 Join the community on Slack](https://join.slack.com/t/newworkspace-ley5153/shared_invite/zt-2isvflg78-tMexsn50mxdwY4BEJ_W11g)<br>
-<div align = "center">
 
-<div align="center">
-
-# RapiDoc.com
-
-<i>An online platform providing comprehensive information on nearby hospitals and healthcare facilities!</i>
-
-</div>
-
-
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-<table align="center">
-    <thead align="center">
-        <tr border: 1px;>
-            <td><b>🌟 Stars</b></td>
-            <td><b>🍴 Forks</b></td>
-            <td><b>🐛 Issues</b></td>
-            <td><b>🔔 Open PRs</b></td>
-            <td><b>🔕 Close PRs</b></td>
-        </tr>
-     </thead>
-    <tbody>
-         <tr>
-            <td><img alt="Stars" src="https://img.shields.io/github/stars/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&logo=github"/></td>
-             <td><img alt="Forks" src="https://img.shields.io/github/forks/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&logo=github"/></td>
-            <td><img alt="Issues" src="https://img.shields.io/github/issues/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&logo=github"/></td>
-            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&logo=github"/></td>
-           <td><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&color=critical&logo=github"/></td>
-        </tr>
-    </tbody>
-</table>
-</div>
-<h3> Featured In</h3>
-
-<table>
-
-   <tr>
-      <th>Event Name</th>
-      <th>Event Description</th>
-   </tr>
-   <tr>
-      <td>GirlScript Summer of Code 2024</td>
-      <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
-   </tr>
-
-</table>
-<h3>Project Overview</h3>
 It is an online platform which enables you to get information about your nearest hospitals and healthcare facilities including important information like blood availablity in emergency, Opds and beds availability in your nearest/desired hospitals. It aims to address health-related issues. It is a one-stop destination for all your medical needs.
 
 ## Technology Stack
@@ -137,18 +88,7 @@ We love your input! We want to make contributing to this project as easy and tra
 - Discussing the current state of the code
 - Submitting a fix
 - Proposing new features
+  #### HAPPY CONTRIBUTING ❤
 
-<div>
- 
-<h2 align = "center">Our Contributors ❤️</h2>
-<div align = "center">
- <h3>Thank you for contributing to our repository</h3>
 
-![Contributors](https://contrib.rocks/image?repo=Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-)
-
-### Show some ❤️ by starring this awesome repository!
-
-</div>
-
-  
 

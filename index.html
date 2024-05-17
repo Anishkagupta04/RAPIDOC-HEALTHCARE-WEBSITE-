@@ -8,9 +8,8 @@
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
-  
   <title>RapiDoc</title>
-  <link
+  <link rel="icon" type="image/x-icon" href="/favicon.png"
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
@@ -28,9 +27,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
 body {
-  padding: 25px;
+  padding: 0;
   background-color: white;
-  color: black;
+  color: rgb(168, 81, 81);
   font-size: 20px;
 }
 
@@ -40,7 +39,24 @@ body {
 
 <body>
 
- 
+  <!-- ############### Top Bar ############### -->
+  
+  
+
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a>
+        <i class="bi bi-phone"></i> +91 1234567890
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -48,31 +64,25 @@ body {
   
   
   <header id="header" class="fixed-top">
-    <div class="container-head d-flex">
-      <div class="img">
-      <img id="rd-logo"  style="width: 90px; height: auto;" src="images/rd.png"> 
-    </div>
-    <div class="text">
+    <div class="container d-flex align-items-center">
+
       <h1 class="logo me-auto"><a href="index.html">RapiDoc</a></h1>
-    </div>
-    </div>
+
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
-          <li><a class="nav-link scrollto" href="#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
-          <li><a class="nav-link scrollto active" href="Html-Files/news.html"><i class="fa-solid fa-house"></i> News</a></li>
-          <li><a class="nav-link scrollto" href="#services"><i class="fa-solid fa-wrench"></i> Services</a></li>
-          <li><a class="nav-link scrollto" href="#patient-portal"><i class="fa-solid fa-bed-pulse"></i> Patient Portal</a></li>
-          <li><a class="nav-link scrollto" href="#doctors"><i class="fa-solid fa-user-doctor"></i> Doctors</a></li>
-          <li><a class="nav-link scrollto" href="Html-Files/contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li>
-          <li><a class="nav-link scrollto active" href="Html-Files/news.html"><i class="fa-solid fa-house"></i> News</a></li>
+          <li><a class="nav-link scrollto active" href="#home"><i class="fa-solid fa-house"></i>&nbsp;Home</a></li>
+          <li><a class="nav-link scrollto" href="#about"><i class="fa-solid fa-circle-info"></i>&nbsp; About</a></li>
+          <li><a class="nav-link scrollto" href="#services"><i class="fa-solid fa-wrench"></i> &nbsp;Services</a></li>
+          <li><a class="nav-link scrollto" href="#patient-portal"><i class="fa-solid fa-bed-pulse"></i>&nbsp; Patient Portal</a></li>
+          <li><a class="nav-link scrollto" href="#doctors"><i class="fa-solid fa-user-doctor"></i> &nbsp;Doctors</a></li>
+          <li><a class="nav-link scrollto" href="#contact"><i class="fa-solid fa-phone"></i>&nbsp; Contact</a></li>
           
-          <li><a class="nav-link" href="#feedback"><i class="fa-solid fa-comment"></i> Feedback</a></li>
+          <li><a class="nav-link" href="#feedback"><i class="fa-solid fa-comment"></i>&nbsp; Feedback</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#appointment" class="appointment-btn scrollto" style="padding: 10px 20px; min-width: 150px; display: inline-block; text-align: center;">
+      <a href="#appointment" class="appointment-btn scrollto" style="padding: 8px 8px; min-width: 4px; display: inline-block; text-align: center;">
     <span class="d-none d-md-inline"><i class="fa-solid fa-hospital"></i> EMERGENCY</span>
     <span class="d-md-none"><i class="fa-solid fa-hospital"></i></span>
 </a>
@@ -84,14 +94,34 @@ body {
 
   <!-- ======= Home Section ======= -->
   
-  
   <section id="home" class="d-flex align-items-center">
     <div class="container">
-      <h1>Welcome to RapiDoc</h1>
+      <h1 >Welcome to RapiDoc</h1>
       <h2>Your One-stop digital healthcare destination.<br>Get details about <span class="multiple-text"></span></h2>
       <a href="#about" class="btn-get-started scrollto">Download App</a>
     </div>
-    <div class="wall"><video autoplay loop muted plays-inline><source src="2.mp4"></video></div>
+    <style>
+      /* h1 {
+  position: absolute;
+  left: 100px;
+  top: 200px;
+} */
+.wall {
+    position: absolute; /* or relative, fixed, sticky depending on your needs */
+    top: 75px; /* adjust as needed */
+    left: 220px; /* adjust as needed */
+    width: 300px; /* optional: set a width for the div */
+    height: 100px; /* optional: set a height for the div */
+}
+
+</style>
+
+<div class="wall">
+    <video autoplay loop muted playsinline>
+        <source src="2.mp4" type="video/mp4">
+    </video>
+</div>
+
   </section>
   <!-- End Home -->
   <br><br><br><br><br><br><br><br>
@@ -422,7 +452,7 @@ body {
 
           <div class="col-lg-6">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/1.png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+              <div class="pic"><img src="img/doctors/1.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Dermatologist</h4>
                 <br>
@@ -444,7 +474,7 @@ body {
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/3.png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+              <div class="pic"><img src="img/doctors/3.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Cardiologist</h4>
                 <br>
@@ -455,7 +485,7 @@ body {
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/4.png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+              <div class="pic"><img src="img/doctors/4.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>ENT</h4>
                 <br>
@@ -527,7 +557,7 @@ body {
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p> <i class="bi bi-phone"></i><a href="tel:+91 1234567890">+91 1234567890</a></p>
+                <p>+91 1234567890</p>
               </div>
             </div>
           </div><br><br>
@@ -612,7 +642,7 @@ body {
               <p>
                 Address<br>
                 Delhi, India<br><br>
-                <strong>Phone:</strong> <i class="bi bi-phone"></i><a href="tel:+91 1234567890">+91 1234567890</a><br>
+                <strong>Phone:</strong> +91 1234567890<br>
                 <strong>Email:</strong> rapidoc@mail.com<br>
               </p>
               <div class="social-links mt-3">
@@ -632,7 +662,7 @@ body {
               <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#doctor">Doctors</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="Html-Files/contact.html">Contact</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
             </ul>
           </div>
 
@@ -680,8 +710,7 @@ body {
   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
   <script src="patient-portal.js"></script>
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-  <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
+
 </body>
 
 </html>
