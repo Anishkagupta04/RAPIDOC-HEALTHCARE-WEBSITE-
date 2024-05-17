@@ -109,6 +109,25 @@ To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository, follow these steps:
 9. **Create a Pull Request:-**
    Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
 
+To run the project locally in your System
+1. **Fork the Repository**
+   Click on the "Fork" button on the repository's GitHub page to create a copy of the repository in your GitHub account.
+
+2. **Clone the repository**
+   Clone the forked repository to your local machine using the following command in your terminal:
+   ```bash
+   git clone https://github.com/<your-github-username>/RAPIDOC-HEALTHCARE-WEBSITE
+
+3. **Open the project in VS Code**
+   click on the open with vs code button , to make changes to the code using the text editor
+
+4. **Clearly read the contribution guidelines**
+   Make sure to follow the guidelines to contribute to this project 
+
+5. **Find the Index.html file**
+   Right click the file mentioned and click on "Open with Live Server"
+   This will redirect to the web-browser and load the landing page of the project
+
 To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository using GitHub Desktop, follow these steps:
 1. **Clone the repository**
    Open GitHub Desktop and log in to your GitHub account. Go to the "File" menu and select "Clone Repository." Select the RAPIDOC-HEALTHCARE-WEBSITE repository from the list and choose a local path to clone the repository.
