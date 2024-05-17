@@ -99,6 +99,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*################----Header----################*/
+.container{
+  display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.scrollto{
+  gap: 4px;
+}
 #header {
   background: #022a2d;
   transition: all 0.5s;
