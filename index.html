@@ -48,26 +48,20 @@ body {
   
   
   <header id="header" class="fixed-top">
-    <div class="container-head d-flex">
-      <div class="img">
-      <img id="rd-logo"  style="width: 90px; height: auto;" src="images/rd.png"> 
-    </div>
-    <div class="text">
+    <div class="container d-flex align-items-center">
+
       <h1 class="logo me-auto"><a href="index.html">RapiDoc</a></h1>
-    </div>
-    </div>
+
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
           <li><a class="nav-link scrollto" href="#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
-          <li><a class="nav-link scrollto active" href="Html-Files/news.html"><i class="fa-solid fa-house"></i> News</a></li>
           <li><a class="nav-link scrollto" href="#services"><i class="fa-solid fa-wrench"></i> Services</a></li>
           <li><a class="nav-link scrollto" href="#patient-portal"><i class="fa-solid fa-bed-pulse"></i> Patient Portal</a></li>
           <li><a class="nav-link scrollto" href="#doctors"><i class="fa-solid fa-user-doctor"></i> Doctors</a></li>
-          <li><a class="nav-link scrollto" href="Html-Files/contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li>
-          <li><a class="nav-link scrollto active" href="Html-Files/news.html"><i class="fa-solid fa-house"></i> News</a></li>
+          <li><a class="nav-link scrollto" href="#contact"><i class="fa-solid fa-phone"></i> Contact</a></li>
           
-          <li><a class="nav-link" href="#feedback"><i class="fa-solid fa-comment"></i> Feedback</a></li>
+          <li><a class="nav-link scrollto" href="#feedback"><i class="fa-solid fa-comment"></i> Feedback</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -80,6 +74,7 @@ body {
     
     </div>
   </header><!-- End Header -->
+
 
 
   <!-- ======= Home Section ======= -->
@@ -272,7 +267,7 @@ body {
             <div class="icon-box">
               <div class="icon"><i class="fas fa-pills"></i></div>
               <h4><a href="https://www.1mg.com">Pharmacy</a></h4>
-              <p>Get your prescribed medicins delivered at your doorstep.</p>
+              <p>Get your prescribed medicines delivered at your doorstep.</p>
             </div>
           </div>
 
@@ -355,51 +350,95 @@ body {
           <p>We listed the docs, we made you a form. You make us an appointment.</p><br><br>
         </div>
         <div class="layout">
-        <form accept="" role="form" class="php-email-form">
-          <div class="row">
-            <div class="col-md-4 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
-            </div>
-            <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+          <form accept="" role="form" class="php-email-form">
+  <div class="row">
+    <div class="col-md-4 form-group">
+      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
+    </div>
+    <div class="col-md-4 form-group mt-3 mt-md-0">
+      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+    </div>
+    <div class="col-md-4 form-group mt-3 mt-md-0">
+      <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 form-group mt-3">
+      <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date">
+    </div>
+    <div class="col-md-4 form-group mt-3">
+      <select name="age" id="age" class="form-select">
+        <option value="">Select Age</option>
+        <option value="Department 1">18 or below</option>
+        <option value="Department 2">18 to 55</option>
+        <option value="Department 3">55 above</option>
+      </select>
+    </div>
+    <div class="col-md-4 form-group mt-3">
+      <select name="doctor" id="doctor" class="form-select">
+        <option value="">Your Location</option>
+        <option value="Doctor 1">Mumbai</option>
+        <option value="Doctor 2">Delhi</option>
+        <option value="Doctor 3">Chennai</option>
+        <!-- Add more locations as needed -->
+      </select>
+    </div>
+  </div>
 
-            </div>
-            <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone">
+  <!-- Time Slot Section -->
+  <div class="row">
+    <div class="col-md-12 form-group mt-3">
+     
+      <select name="time-slot" id="time-slot" class="form-select">
+        <option value="">Select Time Slot</option>
+        <!-- Populate with available time slots -->
+        <option value="9:00 AM">9:00 AM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <option value="2:00 PM">2:00 PM</option>
+        <!-- Add more time slots as needed -->
+      </select>
+    </div>
+  </div>
 
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 form-group mt-3">
-              <input type="datetime" name="date" class="form-control datepicker" id="date"
-                placeholder="Appointment Date">
+  <!-- Hospital Selection Section -->
+  <div class="row">
+    <div class="col-md-12 form-group mt-3">
+     
+      <select name="hospital" id="hospital" class="form-select">
+        <option value="">Select Hospital</option>
+        <!-- Populate with available hospitals -->
+        <option value="Hospital 1">Hospital 1</option>
+        <option value="Hospital 2">Hospital 2</option>
+        <option value="Hospital 3">Hospital 3</option>
+        <!-- Add more hospitals as needed -->
+      </select>
+    </div>
+  </div>
 
-            </div>
-            <div class="col-md-4 form-group mt-3">
-              <select name="age" id="age" class="form-select">
-                <option value="">Select Age</option>
-                <option value="Department 1">18 or below</option>
-                <option value="Department 2">18 to 55</option>
-                <option value="Department 3">55 above</option>
-              </select>
+  <!-- OPD Section -->
+  <div class="row">
+    <div class="col-md-12 form-group mt-3">
+      
+      <select name="opd-section" id="opd-section" class="form-select">
+        <option value="">Select OPD Section</option>
+        <!-- Populate with available OPD sections -->
+        <option value="ENT">ENT</option>
+        <option value="Gynecologist">Gynecologist</option>
+        <!-- Add more OPD sections as needed -->
+      </select>
+    </div>
+  </div>
 
-            </div>
-            <div class="col-md-4 form-group mt-3">
-              <select name="doctor" id="doctor" class="form-select">
-                <option value="">Your Location</option>
-                <option value="Doctor 1">1</option>
-                <option value="Doctor 2">2</option>
-                <option value="Doctor 3">3</option>
-              </select>
-            </div>
-          </div>
+  <div class="form-group mt-3">
+    <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+  </div>
+  <div class="text-center">
+    <a href="successful_appointment.html" style="text-decoration: none;">
+      <button type="submit">Make an Appointment</button>
+    </a>
+  </div>
+</form>
 
-          <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-
-          </div>
-          <div class="text-center"><a href="successful_appointment.html" style="text-decoration: none;"><button type="submit">Make an Appointment</button></a></div>
-        </form>
         </div>
 
       </div>
@@ -515,19 +554,19 @@ body {
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>IGDTUW, Delhi</p>
+                <p><a href="https://www.google.com/maps/search/?api=1&query=IGDTUW,Delhi" target="_blank">IGDTUW, Delhi</a></p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>rapidoc@mail.com</p>
+                <p><a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a></p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p> <i class="bi bi-phone"></i><a href="tel:+91 1234567890">+91 1234567890</a></p>
+                <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
               </div>
             </div>
           </div><br><br>
@@ -613,7 +652,8 @@ body {
                 Address<br>
                 Delhi, India<br><br>
                 <strong>Phone:</strong> <i class="bi bi-phone"></i><a href="tel:+91 1234567890">+91 1234567890</a><br>
-                <strong>Email:</strong> rapidoc@mail.com<br>
+                <strong>Email:</strong> <a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a>
+                <br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
