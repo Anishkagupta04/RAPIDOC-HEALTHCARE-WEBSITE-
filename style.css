@@ -19,65 +19,81 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
-/*################----Top Bar----################*/
-#topbar {
-  background: #000;
-  height: 40px;
-  font-size: 14px;
-  transition: all 0.5s;
-  z-index: 996;
-}
-
-#topbar.topbar-scrolled {
-  top: -40px;
-}
-
-#topbar .contact-info a {
-  line-height: 1;
-  color: #fff;
-  transition: 0.3s;
-}
-
-#topbar .contact-info a:hover {
-  color: #3fbbc0;
-}
-#topbar .contact-info i {
-  color: #3fbbc0;
-  padding-right: 4px;
-  margin-left: 15px;
-  line-height: 0;
-}
-#topbar .contact-info i:first-child {
-  margin-left: 0;
-}
-
-#topbar .social-links a {
-  color: #3fbbc0;
-  padding-left: 15px;
+.nav_link li {
+  padding: 5px 20px;
   display: inline-block;
-  line-height: 1px;
-  transition: 0.3s;
+  color: white;
 }
 
-#topbar .social-links a:hover {
-  color: #fff;
+.nav_link li a {
+  transition: all 0.3s ease 0s;
+  color: white;
 }
 
-#topbar .social-links a:first-child {
-  border-left: 0;
+.nav_link li a:hover {
+  color: #55a5ea;
+
+  text-decoration: underline 2.5px rgb(3, 3, 94);
 }
 
-/*################----Header----################*/
-#header {
-  background: #022a2d;
-  transition: all 0.5s;
-  z-index: 997;
-  padding: 15px 0;
-  top: 40px;
-  box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+.header_container {
+  /* background-color: #d9d9d9; */
+  background-color: #022a2d;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin: auto;
 }
+
+.container {
+  display: flex;
+  font-family: sans-serif;
+
+  padding-top: 80px;
+}
+
+
+.container a:hover {
+  text-decoration: underline 2px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.content h1 {
+  font-size: 80px;
+  color: #d9d9d9;
+}
+
+.content h1 span {
+  color: #f9a826;
+}
+
+.content h4 {
+  font-size: 20px;
+  margin-top: 30px;
+  padding-right: 40px;
+  line-height: 1.5;
+  color: #d9d9d9;
+}
+
+.content h4 a {
+  display: inline;
+  color: #f9a826;
+}
+
+
+
+
 
 .container-head{
   display: grid;
@@ -86,37 +102,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
 }
 
-.container-head > div{
-  text-align: center;
-  font-size: 15px;
-}
 
-img{
-  max-width: 130%;
-  max-height: 130%;
-}
-
-#header.header-scrolled {
-  top: 0;
-}
-
-#header .logo{
-  font-size: 30px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-family: "Poppins", sans-serif;
-}
-
-#header .logo a {
-  color: #fff;
-}
-
-#header .logo img {
-  max-height: 40px;
-}
 
 /*---------------------parallax effect after about------------*/
 .parallax-container {
@@ -876,6 +862,7 @@ section {
   background: #badaf7;
   border-radius: 10px;
   padding: 10px !important;
+  color: #6c757d;
 }
 
 .appointment .php-email-form input:focus, .appointment .php-email-form textarea:focus, .appointment .php-email-form select:focus {
