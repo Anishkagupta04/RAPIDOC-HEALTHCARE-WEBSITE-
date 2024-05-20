@@ -1,4 +1,4 @@
-body {
+body{
   font-family: "Open Sans", sans-serif;
   color: #fff;
   background-color: #000;
@@ -19,87 +19,112 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
-/*################----Top Bar----################*/
-#topbar {
-  background: #000;
-  height: 40px;
-  font-size: 14px;
-  transition: all 0.5s;
-  z-index: 996;
-}
-
-#topbar.topbar-scrolled {
-  top: -40px;
-}
-
-#topbar .contact-info a {
-  line-height: 1;
-  color: #fff;
-  transition: 0.3s;
-}
-
-#topbar .contact-info a:hover {
-  color: #3fbbc0;
-}
-#topbar .contact-info i {
-  color: #3fbbc0;
-  padding-right: 4px;
-  margin-left: 15px;
-  line-height: 0;
-}
-#topbar .contact-info i:first-child {
-  margin-left: 0;
-}
-
-#topbar .social-links a {
-  color: #3fbbc0;
-  padding-left: 15px;
+.nav_link li {
+  padding: 5px 20px;
   display: inline-block;
-  line-height: 1px;
-  transition: 0.3s;
+  color: white;
 }
 
-#topbar .social-links a:hover {
-  color: #fff;
+.nav_link li a {
+  transition: all 0.3s ease 0s;
+  color: white;
 }
 
-#topbar .social-links a:first-child {
-  border-left: 0;
+.nav_link li a:hover {
+  color: #55a5ea;
+
+  text-decoration: underline 2.5px rgb(3, 3, 94);
 }
 
-/*################----Header----################*/
-#header {
-  background: #022a2d;
-  transition: all 0.5s;
-  z-index: 997;
-  padding: 15px 0;
-  top: 40px;
-  box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+.header_container {
+  /* background-color: #d9d9d9; */
+  background-color: #022a2d;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin: auto;
 }
 
-#header.header-scrolled {
-  top: 0;
+.container {
+  display: flex;
+  font-family: sans-serif;
+
+  padding-top: 80px;
 }
 
-#header .logo{
-  font-size: 30px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-family: "Poppins", sans-serif;
+
+.container a:hover {
+  text-decoration: underline 2px;
 }
 
-#header .logo a {
-  color: #fff;
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  /* justify-content: center;
+  align-items: center; */
 }
 
-#header .logo img {
-  max-height: 40px;
+.content h1 {
+  font-size: 80px;
+  color: #d9d9d9;
 }
+
+.content h1 span {
+  color: #f9a826;
+}
+
+.content h4 {
+  font-size: 20px;
+  margin-top: 30px;
+  padding-right: 40px;
+  line-height: 1.5;
+  color: #d9d9d9;
+}
+
+.content h4 a {
+  display: inline;
+  color: #f9a826;
+}
+
+
+
+
+
+.container-head{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 13fr 3fr;
+  margin-top: 0px;
+}
+
+
+
+/*---------------------parallax effect after about------------*/
+.parallax-container {
+  height: 100vh;
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+}
+
+.icon-boxes {
+  position: relative;
+  z-index: 1;
+}
+
+.icon-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+
 
 /**
 * Appointment Button *
@@ -402,6 +427,8 @@ section {
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
 }
 
 .featured-services .icon-box::before {
@@ -412,14 +439,14 @@ section {
   left: 0;
   bottom: 0;
   top: 100%;
-  transition: all 0.3s;
+  transition: all 0.5s;
   z-index: -1;
 }
 
 .featured-services .icon-box:hover::before {
   background: #3fbcc051;
-  top: 0;
-  border-radius: 0px;
+  top: 50px;
+  border-radius: 70px;
 }
 
 .featured-services .icon1 {
@@ -480,7 +507,7 @@ section {
 }
 
 .featured-services .icon-box:hover .title a, .featured-services .icon-box:hover .description {
-  color: #fff;
+  color: #f7f4f4;
 }
 
 .featured-services .icon-box:hover .icon1 i{
@@ -515,7 +542,7 @@ section {
 .about .icon-box {
   background: #111111;
   border-radius: 10px;
-  margin-top: 40px;
+  margin-top: 35px;
 }
 
 .about .icon-box .icon {
@@ -527,7 +554,7 @@ section {
   height: 64px;
   border: 2px solid #3fbcc0a4;
   border-radius: 50px;
-  transition: 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 
 .about .icon-box .icon i {
@@ -672,7 +699,7 @@ section {
   box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 100%;
-  background: #fff;
+  background:#1c413b;
   border-radius: 15px;
   margin-top: 10px;
 }
@@ -680,7 +707,7 @@ section {
 .counts .count-box i {
   display: block;
   font-size: 30px;
-  color: #000;
+  color: #fcfcfc;
   float: left;
 }
 
@@ -689,7 +716,7 @@ section {
   line-height: 24px;
   display: block;
   font-weight: 700;
-  color: #000;
+  color: #f9f4f4;
   margin-left: 50px;
 }
 .container .drop .content span{
@@ -697,28 +724,28 @@ section {
   line-height: 24px;
   display: block;
   font-weight: 700;
-  color: #000;
+  color: #faf8f8;
 }
 .container .drop .content p{
   font-size: 30px;
   line-height: 24px;
   display: block;
   font-weight: 700;
-  color: #000;
+  color: #f8f8f8;
 }
 .counts .count-box p {
   padding: 30px 0 0 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  color: #000;
+  color: #fffcfc;
 }
 
 .counts .count-box a {
   font-weight: 600;
   display: block;
   margin-top: 10px;
-  color: #000;
+  color: #faf8f8;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   transition: ease-in-out 0.3s;
@@ -733,9 +760,10 @@ section {
 /*################----Services----################*/
 .services .icon-box {
   text-align: center;
-  border: 1px solid #d5e1ed;
+  border: 1px solid #0a0a0a;
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
+  background-color: #1c413b;
 }
 
 .services .icon-box .icon {
@@ -753,7 +781,7 @@ section {
 }
 
 .services .icon-box .icon i {
-  color: #fff;
+  color: #060606;
   font-size: 28px;
 }
 
@@ -784,6 +812,7 @@ section {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  
 }
 .services .icon-box:hover {
   background: #3fbcc0a4;
@@ -791,7 +820,7 @@ section {
 }
 
 .services .icon-box:hover .icon {
-  background: #fff;
+  background: #0f0f0f;
 }
 
 .services .icon-box:hover .icon i {
@@ -803,12 +832,20 @@ section {
 }
 
 .services .icon-box:hover h4 a, .services .icon-box:hover p {
-  color: #fff;
+  color: #111111;
 }
 
 
 
 /*################----Appointments----################*/
+.layout{
+  /*border: 2px solid #ccc; */
+  background-color: #3fbcc051;
+  border-radius: 30px;
+  padding: 50px;
+  width: 700px; 
+  margin: 0 auto; 
+}
 .appointment .php-email-form {
   width: 100%;
 }
@@ -817,14 +854,15 @@ section {
   padding-bottom: 8px;
 }
 
-
 .appointment .php-email-form input, .appointment .php-email-form textarea, .appointment .php-email-form select {
+  margin-left: 250px;
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
-  background: white;
+  background: #badaf7;
   border-radius: 10px;
   padding: 10px !important;
+  color: #6c757d;
 }
 
 .appointment .php-email-form input:focus, .appointment .php-email-form textarea:focus, .appointment .php-email-form select:focus {
@@ -842,6 +880,7 @@ section {
 }
 
 .appointment .php-email-form button[type="submit"] {
+  margin-left: 250px;
   background: #3fbcc0a6;
   border: 0;
   padding: 10px 35px;
@@ -941,12 +980,13 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: #d6e9fa;
+  background: #0a0a0a;
+  border: 2px solid #3fbcc0a4;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .contact .info h4 {
@@ -969,8 +1009,8 @@ section {
 }
 
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #000;
-  color: #fff;
+  background: #3fbcc0a4;
+  
 }
 
 .contact .php-email-form {
