@@ -1335,32 +1335,42 @@ footer {
 
 
 /*################----Back to top----################*/
-.back-to-top {
+footer {
+  position: relative;
+  padding: 50px 0;
+}
+
+#back-to-top-container {
   position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 996;
-  background: #3fbcc0a4;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  transition: all 0.4s;
+  bottom: 20px;
+  right: 20px; 
+  cursor: pointer;
+  z-index: 1000;
 }
 
-.back-to-top i {
-  font-size: 28px;
-  color: #fff;
-  line-height: 0;
+.circle1 {
+  background-color: #3fbcc0a4; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
 }
 
-.back-to-top:hover {
-  background: #3fbcc0cd;
-  color: #fff;
+#back-to-top {
+  width: 35px; 
+  height: 35px; 
+  fill:  #3fbcc0a4;
+  transition: fill 0.3s;
 }
 
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
+.circle1:hover {
+  background-color: #3fbcc0cd;
 }
+
+#back-to-top:hover {
+  fill: #3fbcc0cd; 
+}
+/* 
+#3fbcc0a4
+#3fbcc0cd */
