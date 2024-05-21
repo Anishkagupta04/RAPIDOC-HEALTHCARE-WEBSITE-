@@ -1,15 +1,15 @@
 
 .container-patientportal {
     width: 100%;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     background: rgba(255, 255, 255, 0.8);
     background: linear-gradient(to bottom right, black, black, black);
-    padding: 20px;
+    padding: 5px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
+    /* position: relative; */
 }
 
 .login-box {
@@ -98,6 +98,10 @@
 }
 
 #section-patientportal{
-    margin: 0 auto auto auto;
     width: 40%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 2%;
 }
