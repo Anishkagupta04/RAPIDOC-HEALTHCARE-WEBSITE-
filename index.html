@@ -701,12 +701,12 @@
     </div>
 
     <!-- Copyright -->
-    <div id="copyright" style="text-align: center;">
-      <p style="align-items: center;">
-        © Copyright &nbsp; <span> RapiDoc </span> &nbsp; | All Rights
+    <div id="copyright" style="text-align: center">
+      <p style="align-items: center">
+        © <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
         Reserved
       </p>
-      <p>Designed by RapiDoc</p>
+      <p>Made with ❤️ by RapiDoc</p>
     </div>
   </footer>
 
@@ -716,6 +716,10 @@
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- JS Files -->
+  <script>
+    var currentYear = new Date().getFullYear();
+    document.getElementById('year').textContent = currentYear;
+  </script>
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="glightbox/js/glightbox.min.js"></script>
   <script src="php-email-form/validate.js"></script>
