@@ -1335,32 +1335,39 @@ footer {
 
 
 /*################----Back to top----################*/
-.back-to-top {
+/* styles.css */
+
+footer {
+  position: relative;
+  padding: 50px 0;
+}
+
+#back-to-top-container {
   position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 996;
-  background: #3fbcc0a4;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  transition: all 0.4s;
+  bottom: 35px; 
+  left: 30px; 
+  cursor: pointer;
+  z-index: 1000;
 }
 
-.back-to-top i {
-  font-size: 28px;
-  color: #fff;
-  line-height: 0;
+.circle {
+
+  border-radius: 50%;
+  width: 50px; 
+  height: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
 }
 
-.back-to-top:hover {
-  background: #3fbcc0cd;
-  color: #fff;
+#back-to-top {
+  width: 35px;
+  height: 35px; 
+  fill: #3fbcc0c4; 
+  transition: fill 0.3s;
 }
 
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
+#back-to-top:hover {
+  fill: #3fbcc0a4; 
 }
