@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h3>Find Nearby Hospitals</h3>
+    <input id="location-input" type="text" placeholder="Enter your location">
+    <button onclick="findHospitals()">Search</button> -->
+    <!-- <div id="map"></div> -->
+    <div class="map">
+        <div id="text">
+            Enter Your Location
+        </div>
+        <div class="map-input">
+            <input id="location-input" type="text" placeholder="Enter the data">
+            <button onclick="getCoordinates()">Get the nearby clinics</button>
+        </div>
+    </div>
+   
+</body>
+    <script>
+         async function getCoordinates() {
+            const locationInput = document.getElementById('location-input').value;
+            const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${locationInput}`);
+            const data = await response.json();
+
+            if (data.length > 0) {
+                const { lat, lon, display_name } = data[0];
+                window.location.href = `map.html?lat=${lat}&lon=${lon}&display_name=${encodeURIComponent(display_name)}`;
+            } else {
+                alert(`No input received. \nPlease enter your location`);
+            }
+        }
+    </script>
+   
+
+</html>
