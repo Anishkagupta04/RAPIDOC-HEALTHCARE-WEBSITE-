@@ -1364,3 +1364,40 @@ footer {
   visibility: visible;
   opacity: 1;
 }
+
+.patient-portal-form{
+  background-color: #3fbcc051;
+  border-radius: 30px;
+  padding: 50px;
+  width: 700px; 
+  display: flex;
+  justify-content:space-around;
+  margin: 0 auto; 
+}
+.patient-portal-form button{
+  padding: 0.7rem 1.5rem;
+  margin: 0.3rem;
+ background: #3fbcc0a4;
+ color: white;
+  border-radius: 0.5rem;
+}
+.patient-portal-form button:hover{
+  background-color: rgb(52, 153, 144);
+
+}
+.patient-portal-form input{
+  padding: 0.7rem 1.5rem;
+  margin: 0.3rem;
+  border-radius: 0.5rem;
+  background: #cdddfacd;
+}
+.forgot-password{
+margin-top: 3rem;
+}
+.patient-portal-form img{
+  height: 15rem;
+}
+
+.patient-portal-form input:hover{
+box-shadow: 1px 1px 2px 1px rgb(116, 151, 162);
+}

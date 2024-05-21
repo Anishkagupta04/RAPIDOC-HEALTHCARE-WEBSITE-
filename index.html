@@ -298,7 +298,7 @@
       </div>
 
       <!-- Add Login Form for Patient Portal -->
-      <div class="login-form">
+      <!-- <div class="login-form">
         <form action="login.php" method="post">
           <div class="form-group">
             <input type="email" class="form-control" name="email" placeholder="Your Email" required>
@@ -308,12 +308,30 @@
           </div>
           <div class="text-center"><button type="submit">Login</button></div>
         </form>
+      </div> -->
+      <div  class="patient-portal-form">
+        <form action="login.php" method="post">
+          <div>
+            <div class="form-group">
+              <input  type="email" class="form-control" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input   type="password" class="form-control" name="password" placeholder="Your Password" required>
+            </div>
+            <div  class="text-center"><button type="submit">Login</button></div>
+          </form>
+          <div class="forgot-password">
+            <a style="color: #3fbcc0a4;" href="forgot-password.php">Forgot Your Password?</a>
+          </div>
+          </div>
+          
+        <div>
+          <img src="./images/12.png" alt="">
+        </div>
       </div>
-
+      
       <!-- Add Forgot Password Link -->
-      <div class="forgot-password">
-        <a href="forgot-password.php">Forgot Your Password?</a>
-      </div>
+      
 
     </div>
   </section><!-- End Patient Portal Section -->
