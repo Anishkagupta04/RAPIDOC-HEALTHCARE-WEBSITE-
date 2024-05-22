@@ -1401,3 +1401,6 @@ margin-top: 3rem;
 .patient-portal-form input:hover{
 box-shadow: 1px 1px 2px 1px rgb(116, 151, 162);
 }
+#pcontain{
+  display: block;
+}
