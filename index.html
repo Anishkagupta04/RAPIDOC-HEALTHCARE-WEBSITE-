@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
- <link rel="shortcut icon" href="images/Screenshot 2024-05-18 at 10.12.21 PM.png" type="image/x-icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+ 
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
@@ -721,12 +722,12 @@
     </div>
 
     <!-- Copyright -->
-    <div id="copyright" style="text-align: center;">
-      <p style="align-items: center;">
-        © Copyright &nbsp; <span> RapiDoc </span> &nbsp; | All Rights
+    <div id="copyright" style="text-align: center">
+      <p style="align-items: center">
+        © <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
         Reserved
       </p>
-      <p>Designed by RapiDoc</p>
+      <p>Made with ❤️ by RapiDoc</p>
     </div>
   </footer>
 
@@ -736,6 +737,10 @@
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- JS Files -->
+  <script>
+    var currentYear = new Date().getFullYear();
+    document.getElementById('year').textContent = currentYear;
+  </script>
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="glightbox/js/glightbox.min.js"></script>
   <script src="php-email-form/validate.js"></script>
