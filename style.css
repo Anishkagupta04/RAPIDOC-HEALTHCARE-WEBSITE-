@@ -1335,8 +1335,6 @@ footer {
 
 
 /*################----Back to top----################*/
-/* styles.css */
-
 footer {
   position: relative;
   padding: 50px 0;
@@ -1344,17 +1342,17 @@ footer {
 
 #back-to-top-container {
   position: fixed;
-  bottom: 35px; 
-  left: 30px; 
+  bottom: 100px; 
+  right: 47px; 
   cursor: pointer;
   z-index: 1000;
 }
 
 .circle {
-
+  background-color: #00093d;
   border-radius: 50%;
-  width: 50px; 
-  height: 50px; 
+  width: 35px; 
+  height: 35px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1362,12 +1360,13 @@ footer {
 }
 
 #back-to-top {
-  width: 35px;
-  height: 35px; 
-  fill: #3fbcc0c4; 
+  width: 40px;
+  height: 40px; 
+  fill: #4178c0; 
+  color: #00093d;
   transition: fill 0.3s;
 }
 
 #back-to-top:hover {
-  fill: #3fbcc0a4; 
+  fill: hsl(214, 50%, 60%); 
 }
