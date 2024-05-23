@@ -277,7 +277,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /*################----Sections General----################*/
 section {
-  padding: 60px 0;
+  padding: 60px 0px;
   overflow: hidden;
 }
 
@@ -322,8 +322,15 @@ section {
 }
 
 .section-title p {
-  margin-bottom: 0;
+  padding-left: 0px;
 }
+
+.icon-box{
+  width: 500px;
+  height: 200px;
+}
+
+
 
 
 
@@ -835,6 +842,29 @@ section {
   color: #111111;
 }
 
+
+
+/*################----Patient-Portal----################*/
+.form-group{
+  height: 50px;
+  width: 250px;
+  border-radius: 30px;
+  background-color: white;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#forgot{
+  margin-top: 110px;
+  margin-left: -200px;
+}
+
+#login{
+  margin-left: 25px;
+}
 
 
 /*################----Appointments----################*/
