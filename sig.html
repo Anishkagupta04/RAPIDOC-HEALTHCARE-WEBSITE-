@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Tracker</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.task:last-child {
+  border-bottom: none;
+}
+
+.task .tick {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.task.done .tick {
+  color: green;
+}
+
+.task.done .text {
+  text-decoration: line-through;
+  color: #999;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="task" onclick="toggleTask(this)">
+    <span class="tick">&#x2705;</span>
+    <span class="text">Done</span>
+  </div>
+</div>
+
+<a id="redirectLink" href="index.html" style="display: none;"></a>
+
+<script>
+function toggleTask(task) {
+  task.classList.toggle('done');
+  setTimeout(function() {
+    document.getElementById('redirectLink').click();
+  }, 700); // Redirect after 1 second
+}
+</script>
+
+</body>
+</html>

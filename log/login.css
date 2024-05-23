@@ -6,7 +6,8 @@
 }
 body {
   image-rendering: pixelated;
-  background: url(rd.png);
+  background:black;
+  background-size: auto; /* Maintain original size */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,8 +15,9 @@ body {
   height: 100vh;
   margin: 0 auto;
 }
+
 .container {
-  background-color: rgb(99, 122, 143, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   width: 768px;
   max-width: 100%;
@@ -76,7 +78,7 @@ h1 {
   text-decoration: none;
 }
 #gm {
-  color: rgb(231, 172, 172);
+  color: rgba(0, 255, 13, 0.438);
   font-size: 25px;
 }
 #tw {
@@ -97,8 +99,8 @@ input {
 button {
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  background-color: rgba(35, 144, 211, 0.5);
-  color: aqua;
+  background-color: rgb(0, 255, 55);
+  color: rgb(255, 255, 255);
   font-size: 12px;
   padding: 12px 45px;
   letter-spacing: 1px;
@@ -121,7 +123,7 @@ button {
 }
 .overlay {
   background-color: chartreuse;
-  background: linear-gradient(to right, rgb(245, 178, 55), pink);
+  background: linear-gradient(to right, rgba(0, 255, 13, 0.651), rgba(30, 255, 0, 0.616));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -159,12 +161,12 @@ button:active {
 }
 button.press {
   background-color: transparent;
-  border-color: rgb(20, 169, 119);
+  border-color: rgb(0, 0, 0);
   border-width: 2px;
 }
 p {
   font-family: "Courier New", Courier, monospace;
-  color: rgb(6, 81, 56);
+  color: rgb(255, 255, 255);
   font-size: 14px;
   font-weight: 100;
   line-height: 20px;
@@ -205,7 +207,7 @@ p {
   transform: translateX(20%);
 }
 #vit {
-  font-family: Copperplate, Papyrus, fantasy;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 #signIn {
   color: rgb(7, 64, 64);
