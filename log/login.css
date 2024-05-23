@@ -1,0 +1,212 @@
+@import url("https://fonts.googlepis.com/css?family=Montserrat:400,800");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  image-rendering: pixelated;
+  background: url(rd.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  margin: 0 auto;
+}
+.container {
+  background-color: rgb(99, 122, 143, 0.8);
+  border-radius: 10px;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 14px 28px black;
+}
+.form-container {
+  position: absolute;
+  top: 0%;
+  height: 100%;
+  transition: all 0.6 ease-in-out;
+}
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  z-index: 1;
+  opacity: 0;
+}
+form {
+  background-color: rgb(55, 85, 106);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+h1 {
+  color: rgb(56, 189, 189);
+  font-weight: bold;
+  margin: 0;
+}
+.social-container {
+  margin: 20px 0;
+}
+.social-container a {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+}
+
+#fb {
+  color: rgb(79, 79, 250);
+  font-size: 25px;
+  text-decoration: none;
+}
+
+#ins {
+  color: rgb(245, 24, 61);
+  font-size: 25px;
+  text-decoration: none;
+}
+#gm {
+  color: rgb(231, 172, 172);
+  font-size: 25px;
+}
+#tw {
+  color: rgb(94, 94, 249);
+  font-size: 25px;
+  text-decoration: none;
+}
+input {
+  background-color: rgb(215, 210, 210);
+  border: none;
+  text-decoration: none;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px 15px;
+
+  border-radius: 10px;
+}
+button {
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(35, 144, 211, 0.5);
+  color: aqua;
+  font-size: 12px;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  transition: 0.8s ease-in;
+}
+.sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+  transition: 0.6s ease-in-out;
+}
+.overlay {
+  background-color: chartreuse;
+  background: linear-gradient(to right, rgb(245, 178, 55), pink);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: white;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: 0.6s ease-in-out;
+}
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  flex-direction: column;
+  transition: 0.6s ease-in-out;
+}
+.overlay-left {
+  transform: translateX(-20%);
+}
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+button:active {
+  transform: scale(0.95);
+}
+button.press {
+  background-color: transparent;
+  border-color: rgb(20, 169, 119);
+  border-width: 2px;
+}
+p {
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(6, 81, 56);
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: slide 0.6s;
+}
+@keyframes slide {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 5;
+  }
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+.container.right-panel-active .overlay-left {
+  transform: translateX(0%);
+}
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+#vit {
+  font-family: Copperplate, Papyrus, fantasy;
+}
+#signIn {
+  color: rgb(7, 64, 64);
+}
