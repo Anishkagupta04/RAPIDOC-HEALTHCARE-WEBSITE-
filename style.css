@@ -1413,33 +1413,28 @@ button {
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
-}
-button:hover {
-  background-color: #1c413b; /* Darker blue on hover */
+  z-index: 1000;
 }
 
-/* Forgot password link styling */
-.forgot-password {
-  text-align: center; /* Center-aligns the forgot password link */
-  margin-top: 10px;
-}
-.forgot-password a {
-  color: #29888a;
-  text-decoration: none;
-}
-.forgot-password a:hover {
-  text-decoration: underline;
-}
-/* Text centering */
-.text-center {
-  text-align: center; /* Centers the login button */
-}
-.login-form {
-  width: 100%;
-  margin: auto 0 ;
-  text-align: center;
+.circle {
+  background-color: #00093d;
+  border-radius: 50%;
+  width: 35px; 
+  height: 35px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
 }
 
-/* -----***************************************-----  */
+#back-to-top {
+  width: 40px;
+  height: 40px; 
+  fill: #4178c0; 
+  color: #00093d;
+  transition: fill 0.3s;
+}
 
-
+#back-to-top:hover {
+  fill: hsl(214, 50%, 60%); 
+}
