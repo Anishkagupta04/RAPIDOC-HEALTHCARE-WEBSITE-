@@ -99,7 +99,7 @@ cursor: pointer;
 transition: all 0.3s ease;
 }
 .button:hover{
-    background: #265df2;
+    background: #02969bd5;
 }
 .swiper-navBtn{
     color: white;
