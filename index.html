@@ -9,6 +9,9 @@
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   
   <title>RapiDoc</title>
   <link
@@ -39,7 +42,7 @@
       </div>
       <div class="text" style="margin-left: -33rem;">
   
-        <h1 class="logo me-auto"><a style="text-decoration: none; color: #55a5ea;" href="index.html">RapiDoc</a></h1>
+        <h1 class="logo me-auto" style="margin:2px 0 0 260px; position:sticky;"><a style="text-decoration: none; color: #55a5ea;" href="index.html">RapiDoc</a></h1>
       </div>
       <nav class="nav_menu">
 
@@ -78,10 +81,10 @@
     
     
     <section id="featured-services" class="featured-services">
-      <div class="container" data-aos="fade-up">
-
+      <!-- <div class="container"> -->
         <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="col-lg-6">
+          <div class="member d-flex align-items-start">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon1"><i class="fas fa-heartbeat"></i></div>
               <h4 class="title"><a href=""> Normal checkup</a></h4>
@@ -89,16 +92,20 @@
                 cause problems.</p>
             </div>
           </div>
+          </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="col-lg-6 mt-4 mt-lg-0">
+          <div class="member d-flex align-items-start">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <div class="icon2"><i class="fas fa-dna"></i></div>
               <h4 class="title"><a href="">Blood Test</a></h4>
               <p class="description"> Get your tests done to look for signs of disease or agents that cause disease.</p>
             </div>
           </div>
+          </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="col-lg-6 mt-4 ">
+          <div class="member d-flex align-items-start">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <div class="icon3"><i class="fas fa-temperature-high"></i></div>
               <h4 class="title"><a href="">Body temperature</a></h4>
@@ -106,18 +113,20 @@
                 little higher range: 97.9 F to 100.4 F.</p>
             </div>
           </div>
+          </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon4"><i class="fas fa-hand-holding-medical"></i></div>
               <h4 class="title"><a href="">Medicine use</a></h4>
-              <p class="description">Know what to use when to use and how to use.
+              <p class="description">Know what to use when to use and how to use.<br>.....
               </p>
+             </div>
             </div>
           </div>
 
         </div>
-
       </div>
     </section><!-- End Featured Services Section -->
 
@@ -126,29 +135,25 @@
    
    
     <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+      <div></div>
         <div class="section-title">
           <h2>About Us</h2>
-          <p>RapiDoc is an online platform which enables you to get information about your nearest hospitals and
+          <p style="margin: 0 70px 0 70px;">RapiDoc is an online platform which enables you to get information about your nearest hospitals and
             healthcare facilities. It aims to address health-related issues. It is a one-stop destination for all your
             medical needs.</p>
         </div>
 
-        <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center
-     align-items-stretch position-relative">
-            <!-- <a href="https://youtu.be/ImQqQ9_s38k" class="glightbox play-btn mb-4"></a> -->
-          </div>
- <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch
-     justify-content-center py-5 px-lg-5">
+        <div class="row align-items-center">
+          <div class="col-md-10 mb-6" style="margin-left: 100px;">
 
-            <div class="icon-box">
+            <div class="icon-box col-lg-12 mt-4">
               <div class="icon"><i class="bx bx-heart"></i></div>
               <h4 class="title"><a href="">HEALTH CHECKUPS</a></h4>
-              <p class="description">Bootcamps, personalised check-ups, newsletters, it’s all here.</p>
+              <p class="description">Bootcamps, personalised check-ups, newsletters, it’s all here.<br></p>
             </div>
+            
                    
-            <div class="icon-box">
+            <div class="icon-box col-lg-12 mt-4 mt-lg-0">
               <div class="icon"><i class="bx bx-health"></i></div>
               <h4 class="title"><a href="">EMERGENCY WARDS</a></h4>
               <p class="description">Avoid rush and get immediate medical assistance, know the
@@ -156,15 +161,15 @@
               </p>
             </div>
 
-            <div class="icon-box">
+            <div class="icon-box col-lg-12 mt-4 mt-lg-0">
               <div class="icon"><i class="bx bx-help-circle"></i></div>
               <h4 class="title"><a href="">SERVICES</a></h4>
               <p class="description">An apple a day won’t keep RapiDoc away. We are always here at your service,
-                bringing to you the best facilities.</p>
+                bringing to you the best facilities.<br></p>
             </div>
           </div>
         </div>
-
+        </div>
       </div>
     </section><!-- End About Section -->
 
@@ -174,20 +179,22 @@
    
     <section id="counts" class="counts">
       <div class="container" data-aos="fade-up">
+        <div class="row">
 
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="col-lg-4">
+          <div class="member d-flex align-items-start">
             <div class="count-box">
               <i class="fas fa-user-md"></i>
               <span data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="1"
                 class="purecounter"></span>
-              <p><strong>Doctors Available</strong> <br><br>Doctors listed on our website.</p><br>
+              <p><strong>Doctors Available</strong> <br><br>Doctors listed on our website.<br><br></p><br>
               <a href="">Find out more &raquo;</a>
             </div>
           </div>
+          </div>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="member d-flex align-items-start">
             <div class="count-box">
               <i class="fas fa-bed"></i>
               <span data-purecounter-start="0" data-purecounter-end="36" data-purecounter-duration="1"
@@ -196,25 +203,30 @@
               <a href="">Find out more &raquo;</a>
             </div>
           </div>
+          </div>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="col-lg-4">
+          <div class="member d-flex align-items-start">
             <div class="count-box">
               <i class="fas fa-location-arrow"></i>
               <span data-purecounter-start="0" data-purecounter-end="23" data-purecounter-duration="1"
                 class="purecounter"></span>
-              <p><strong>Nearest Labs</strong> <br><br>Test labs and clinics near you.</p><br>
+              <p><strong>Nearest Labs</strong> <br><br>Test labs and clinics near you.<br><br></p><br>
               <a href="">Find out more &raquo;</a>
             </div>
           </div>
+          </div>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="col-lg-4">
+          <div class="member d-flex align-items-start">
             <div class="count-box">
               <i class="fas fa-trophy"></i>
               <span data-purecounter-start="0" data-purecounter-end="1250" data-purecounter-duration="1"
                 class="purecounter"></span>
-              <p><strong>User Reviews</strong><br> <br>Over 1K positive reviews.</p><br>
+              <p><strong>User Reviews</strong><br> <br>Over 1K positive reviews<br><br>.</p><br>
               <a href="">Find out more &raquo;</a>
             </div>
+          </div>
           </div>
 
         </div>
@@ -227,201 +239,215 @@
    
    
     <section id="services" class="services">
-      <div class="container">
+      <!-- <div class="container"> -->
 
         <div class="section-title">
           <h2>Services</h2>
-          <p>Our services are for your good health. We are with you at every digital step.</p>
+          <p>Our services are for your good health. We are with you at every digital step....</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="row" style="margin-right:-35px;">
+
+          <div class="col-lg-6 mt-5">
+            <div class="member align-items-center">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-heartbeat"></i></div>
               <h4><a href="">Clinics/Labs</a></h4>
               <p>Locate the best healthcare facilities around you hassle-free.</p>
             </div>
-          </div>
+            </div>
+          </div>  
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="col-lg-6 mt-5">
+            <div class="member align-items-start">  
             <div class="icon-box">
               <div class="icon"><i class="fas fa-pills"></i></div>
               <h4><a href="https://www.1mg.com">Pharmacy</a></h4>
               <p>Get your prescribed medicines delivered at your doorstep.</p>
             </div>
-          </div>
+            </div>
+          </div>  
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+          <div class="col-lg-6 mt-5 mb-5">
+            <div class="member d-flex align-items-start">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-hospital-user"></i></div>
               <h4><a href="">Daily Feed</a></h4>
               <p>Access to heath benefits like bootcamps, vaccination drives and much more
-                . </p>
+                .<br><br> </p>
             </div>
-          </div>
+            </div>
+          </div>  
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="col-lg-6 mt-5 mb-5">
+            <div class="member d-flex align-items-start">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-dna"></i></div>
               <h4><a href="Html-Files/blood.html">Blood Bank</a></h4>
-              <p>Know the blood banks and blood groups available around you. No one should suffer ỉn emergencies.</p>
+              <p>Know the blood banks and blood groups available around you. No one should suffer ỉn emergencies.<br><br></p>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            </div>
+          </div>  
+    
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-wheelchair"></i></div>
               <h4><a href="">Disabled Person</a></h4>
-              <p>Convenient medical care is here. Wheelchair accessible hospitals and clinics, find all in one go.</p>
+              <p>Convenient medical care is here. Wheelchair accessible hospitals and clinics, find all in one go.<br><br></p>
             </div>
-          </div>
+            </div>
+          </div>  
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-notes-medical"></i></div>
               <h4><a href="https://www.medicalnewstoday.com/">Health Post</a></h4>
-              <p>Weekly, monthly, yearly or each day, however you like it!</p>
+              <p>Weekly, monthly, yearly or each day, however you like it!<br><br></p>
             </div>
-          </div>
-
+            </div>
+          </div>  
+       
         </div>
 
-      </div>
+  
     </section><!-- End Services Section -->
 
     <!-- Add Patient Portal Section -->
   <section id="patient-portal" class="patient-portal">
-    <div class="container">
-
       <div class="section-title">
         <h2>Patient Portal</h2>
         <p>Access your medical records, lab results, and prescription history securely.</p>
       </div>
 
       <!-- Add Login Form for Patient Portal -->
-      <div class="login-form">
+
+      <div class="col-8 offset-2">
+      <div class="login-form" style="align-items: center; justify-content: center; display: flex;">
         <form action="login.php" method="post">
-          <div class="form-group">
-            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Your Password" required>
-          </div>
-          <div class="text-center"><button type="submit">Login</button></div>
+
+          <div class="mb-3 col-6">
+            <input type="email" class="form-control" name="email" placeholder="Your Email" required style="width: 500px;height: 40px; text-decoration: none;">
+          </div><br>
+
+          <div class="mb-3">
+            <input type="password" class="form-control" name="password" placeholder="Your Password" required  style="width: 500px;height: 40px; text-decoration: none;">
+          </div><br>
+          <div class="text-center"><button type="submit" class="loginbtn">Login</button></div>
         </form>
       </div>
-
+      </div>
+  
+      <br>
       <!-- Add Forgot Password Link -->
-      <div class="forgot-password">
+      <div class="forgot-password" style="display: flex;justify-content: center;align-items: center;">
         <a href="forgot-password.php">Forgot Your Password?</a>
       </div>
-
     </div>
+
   </section><!-- End Patient Portal Section -->
    
     <!-- ############# Appointment Section ############# -->
    
    
+
     <section id="appointment" class="appointment section-bg">
-      <div class="container">
 
         <div class="section-title">
           <h2>Make an Appointment</h2>
           <p>We listed the docs, we made you a form. You make us an appointment.</p><br><br>
         </div>
-        <div class="layout">
-          <form accept="" role="form" class="php-email-form">
-  <div class="row">
-    <div class="col-md-4 form-group">
-      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
-    </div>
-    <div class="col-md-4 form-group mt-3 mt-md-0">
-      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
-    </div>
-    <div class="col-md-4 form-group mt-3 mt-md-0">
-      <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 form-group mt-3">
-      <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date">
-    </div>
-    <div class="col-md-4 form-group mt-3">
-      <select name="age" id="age" class="form-select">
-        <option value="">Select Age</option>
-        <option value="Department 1">18 or below</option>
-        <option value="Department 2">18 to 55</option>
-        <option value="Department 3">55 above</option>
-      </select>
-    </div>
-    <div class="col-md-4 form-group mt-3">
-      <select name="doctor" id="doctor" class="form-select">
-        <option value="">Your Location</option>
-        <option value="Doctor 1">Mumbai</option>
-        <option value="Doctor 2">Delhi</option>
-        <option value="Doctor 3">Chennai</option>
-        <!-- Add more locations as needed -->
-      </select>
-    </div>
-  </div>
 
-  <!-- Time Slot Section -->
-  <div class="row">
-    <div class="col-md-12 form-group mt-3">
-     
-      <select name="time-slot" id="time-slot" class="form-select">
-        <option value="">Select Time Slot</option>
+        <form  accept="" role="form" class="row g-3">
+          <div class="col-md-4">
+            <label for="name" class="form-label">Your name</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="col-md-4">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="col-md-4">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone">
+          </div>
+          <div class="col-4">
+            <label for="date" class="form-label">Appointment date</label>
+            <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment date">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Select Age</label>
+            <select id="inputState" class="form-select">
+              <option value="">Select Age</option>
+              <option value="Department 1">18 or below</option>
+              <option value="Department 2">18 to 55</option>
+              <option value="Department 3">55 above</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Location</label>
+              <select name="doctor" id="doctor" class="form-select">
+                <option value="">Your Location</option>
+                <option value="Doctor 1">Mumbai</option>
+                <option value="Doctor 2">Delhi</option>
+                <option value="Doctor 3">Chennai</option>
+                <!-- Add more locations as needed -->
+              </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Select time slot</label>
+              <select name="doctor" id="doctor" class="form-select">
+                <option value="">Select Time Slot</option>
         <!-- Populate with available time slots -->
         <option value="9:00 AM">9:00 AM</option>
         <option value="11:00 AM">11:00 AM</option>
         <option value="2:00 PM">2:00 PM</option>
-        <!-- Add more time slots as needed -->
-      </select>
-    </div>
-  </div>
+    
+          </select>
+          </div>
 
-  <!-- Hospital Selection Section -->
-  <div class="row">
-    <div class="col-md-12 form-group mt-3">
-     
-      <select name="hospital" id="hospital" class="form-select">
-        <option value="">Select Hospital</option>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Select hospital</label>
+              <select name="doctor" id="doctor" class="form-select">
+                <option value="">Select Hospital</option>
         <!-- Populate with available hospitals -->
         <option value="Hospital 1">Hospital 1</option>
         <option value="Hospital 2">Hospital 2</option>
         <option value="Hospital 3">Hospital 3</option>
-        <!-- Add more hospitals as needed -->
-      </select>
-    </div>
-  </div>
+          </select>
+          </div>
 
-  <!-- OPD Section -->
-  <div class="row">
-    <div class="col-md-12 form-group mt-3">
-      
-      <select name="opd-section" id="opd-section" class="form-select">
-        <option value="">Select OPD Section</option>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Select OPD</label>
+              <select name="doctor" id="doctor" class="form-select">
+                <option value="">Select OPD Section</option>
         <!-- Populate with available OPD sections -->
         <option value="ENT">ENT</option>
         <option value="Gynecologist">Gynecologist</option>
-        <!-- Add more OPD sections as needed -->
-      </select>
-    </div>
-  </div>
-
-  <div class="form-group mt-3">
-    <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-  </div>
-  <div class="text-center">
-    <a href="successful_appointment.html" style="text-decoration: none;">
-      <button type="submit">Make an Appointment</button>
-    </a>
-  </div>
-</form>
-
+          </select>
         </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
 
-      </div>
+          <div class="col-md-12">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Check me out
+              </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <button type="submit" class="btn btn-outline-primary">Take Appointment</button>
+          </div>
+        </form>
     </section><!-- End Appointment Section -->
 
 
@@ -430,8 +456,6 @@
   
   
     <section id="doctors" class="doctors">
-      <div class="container">
-
         <div class="section-title">
           <h2>Doctors</h2>
           <p>Don’t compromise your health when we have listed the best doctors for you!</p>
@@ -501,8 +525,6 @@
     
     
      <section id="contact" class="contact">
-      <div class="container">
-
         <div class="section-title">
           <h2>Contact</h2>
           <p>Located your appointment. Feel free to give us feedback and help us improve our digital med care.</p>
@@ -617,7 +639,7 @@
     </div>
     <div class="info">
       <div class="center">
-          <button class="btn button">Submit</button>
+        <button class="btn button">Submit</button>
       </div>
       
     </div>

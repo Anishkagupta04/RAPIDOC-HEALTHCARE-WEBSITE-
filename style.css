@@ -1,7 +1,9 @@
+
 body{
   font-family: "Open Sans", sans-serif;
   color: #fff;
   background-color: #000;
+
 }
 
 a {
@@ -28,12 +30,13 @@ h1, h2, h3, h4, h5, h6 {
 .nav_link li a {
   transition: all 0.3s ease 0s;
   color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .nav_link li a:hover {
   color: #55a5ea;
-
-  text-decoration: underline 2.5px rgb(3, 3, 94);
 }
 
 .header_container {
@@ -52,7 +55,6 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   display: flex;
   font-family: sans-serif;
-
   padding-top: 80px;
 }
 
@@ -291,7 +293,7 @@ section {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 38px;
   font-weight: bold;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -323,9 +325,20 @@ section {
 
 .section-title p {
   margin-bottom: 0;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0 20px 0 20px;
+  justify-content: center;
+  align-items: center;
 }
-
-
+.cardes{
+  display: flex;
+  flex-direction: col;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:space-around;
+  padding-left: 20px;
+}
 
 /*################----Home Section----################*/
 #home {
@@ -526,6 +539,9 @@ section {
 
 
 /*################----About----################*/
+.about{
+  margin-bottom: -6rem;
+}
 .about .icon-boxes h4 {
   font-size: 18px;
   color: #3fbcc0a4;
@@ -693,6 +709,8 @@ section {
 /*################----Counts----################*/
 .counts {
   padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .counts .count-box {
@@ -701,7 +719,7 @@ section {
   width: 100%;
   background:#1c413b;
   border-radius: 15px;
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .counts .count-box i {
@@ -758,12 +776,24 @@ section {
 
 
 /*################----Services----################*/
+
+.service-cardes{
+  display: flex;
+  flex-direction: col;
+  flex-wrap: wrap;
+  align-items: center;
+  right: -4rem;
+}
+
 .services .icon-box {
   text-align: center;
+  margin: 15px;
   border: 1px solid #0a0a0a;
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   background-color: #1c413b;
+  height: 200px;
+  width: 300px;
 }
 
 .services .icon-box .icon {
@@ -891,6 +921,15 @@ section {
 
 .appointment .php-email-form button[type="submit"]:hover {
   background: #3fbcc0bd;
+}
+.loginbtn{
+  height:40px;
+  width:100px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.loginbtn:hover{
+  box-shadow: 2px 6px 4px #1977cc;
 }
 
 
