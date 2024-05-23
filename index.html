@@ -4,7 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
+   <meta
+      name="keywords"
+      content="Rapidoc healthcare, hospital information, OPD appointments, blood group availability, online healthcare platform, prebook hospital appointments, hospital services"
+    />
+   <meta
+      name="description"
+      content="An online platform providing comprehensive information on nearby hospitals and healthcare facilities!"
+    />
+    <meta name="author" content="Anishka Gupta" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+ 
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
@@ -26,75 +36,49 @@
   <link href="style.css" rel="stylesheet">
   <link href="patient-portal.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-body {
-  padding: 25px;
-  background-color: white;
-  color: black;
-  font-size: 20px;
-}
 
-
-</style
 </head>
 
 <body>
-
- 
-
-
-
-  <!-- ############# Header ############# -->
+      <!-- ############# Header ############# -->
   
+      <header class="header_container">
+        <div class="img">
+        <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
+      </div>
+      <div class="text" style="margin-left: -33rem;">
   
-  <header id="header" class="fixed-top">
-    <div class="container-head d-flex">
-      <div class="img">
-      <img id="rd-logo"  style="width: 90px; height: auto;" src="images/rd.png"> 
-    </div>
-    <div class="text">
-      <h1 class="logo me-auto"><a href="index.html">RapiDoc</a></h1>
-    </div>
-    </div>
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
-          <li><a class="nav-link scrollto" href="#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
-          <li><a class="nav-link scrollto active" href="Html-Files/news.html"><i class="fa-solid fa-house"></i> News</a></li>
-          <li><a class="nav-link scrollto" href="#services"><i class="fa-solid fa-wrench"></i> Services</a></li>
-          <li><a class="nav-link scrollto" href="#patient-portal"><i class="fa-solid fa-bed-pulse"></i> Patient Portal</a></li>
-          <li><a class="nav-link scrollto" href="#doctors"><i class="fa-solid fa-user-doctor"></i> Doctors</a></li>
-          <li><a class="nav-link scrollto" href="Html-Files/contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li>
-          <li><a class="nav-link scrollto active" href="Html-Files/news.html"><i class="fa-solid fa-house"></i> News</a></li>
-          
-          <li><a class="nav-link" href="#feedback"><i class="fa-solid fa-comment"></i> Feedback</a></li>
+        <h1 class="logo me-auto"><a style="text-decoration: none; color: #55a5ea;" href="index.html">RapiDoc</a></h1>
+      </div>
+      <nav class="nav_menu">
+
+        <ul class="nav_link">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Html-Files/news.html">News</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#patient-portal">patient Portal</a></li>
+          <li><a href="#doctors">Doctor</a></li>
+          <li><a href="Html-Files/contact.html">Contact us</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <a href="#appointment" class="appointment-btn scrollto" style="padding: 10px 20px; min-width: 150px; display: inline-block; text-align: center;">
-    <span class="d-none d-md-inline"><i class="fa-solid fa-hospital"></i> EMERGENCY</span>
-    <span class="d-md-none"><i class="fa-solid fa-hospital"></i></span>
-</a>
-
-    
-    </div>
-  </header><!-- End Header -->
+      </nav>
+      </div>
+    </header>
 
 
-  <!-- ======= Home Section ======= -->
-  
-  
-  <section id="home" class="d-flex align-items-center">
-    <div class="container">
-      <h1>Welcome to RapiDoc</h1>
-      <h2>Your One-stop digital healthcare destination.<br>Get details about <span class="multiple-text"></span></h2>
-      <a href="#about" class="btn-get-started scrollto">Download App</a>
-    </div>
-    <div class="wall"><video autoplay loop muted plays-inline><source src="2.mp4"></video></div>
-  </section>
+  <div class="container">
+    <div class="content">
+      <h1 style="font-size: 65px;">
+        Welcome to <span style="color: #55a5ea;">RapiDoc!</span> <br /> Your one-stop digital <br> healthcare destination
+      </h1>
+      <h4>
+        <!-- <a href="#about" class="btn-get-started scrollto">Download App</a> -->
+      </h4>
+    </div>    
+    <img style="position: relative; top: -60px; right: -10rem;" class="sec-img" src="images/rd.png" alt="" />
+  </div>
+  <br><br><br><br><br>
   <!-- End Home -->
-  <br><br><br><br><br><br><br><br>
   <main id="main">
 
    
@@ -162,7 +146,7 @@ body {
         <div class="row">
           <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center
      align-items-stretch position-relative">
-            <a href="https://youtu.be/ImQqQ9_s38k" class="glightbox play-btn mb-4"></a>
+            <!-- <a href="https://youtu.be/ImQqQ9_s38k" class="glightbox play-btn mb-4"></a> -->
           </div>
  <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch
      justify-content-center py-5 px-lg-5">
@@ -272,7 +256,7 @@ body {
             <div class="icon-box">
               <div class="icon"><i class="fas fa-pills"></i></div>
               <h4><a href="https://www.1mg.com">Pharmacy</a></h4>
-              <p>Get your prescribed medicins delivered at your doorstep.</p>
+              <p>Get your prescribed medicines delivered at your doorstep.</p>
             </div>
           </div>
 
@@ -319,7 +303,7 @@ body {
     <div class="container">
 
       <div class="section-title">
-        <h2>Patient Portal</h2>
+        <h1>Patient Portal</h1>
         <p>Access your medical records, lab results, and prescription history securely.</p>
       </div>
 
@@ -327,10 +311,10 @@ body {
       <div class="login-form">
         <form action="login.php" method="post">
           <div class="form-group">
-            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+            <input type="email" class="form-control2" name="email" placeholder="Your Email" required>
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Your Password" required>
+            <input type="password" class="form-control2" name="password" placeholder="Your Password" required>
           </div>
           <div class="text-center"><button type="submit">Login</button></div>
         </form>
@@ -355,51 +339,95 @@ body {
           <p>We listed the docs, we made you a form. You make us an appointment.</p><br><br>
         </div>
         <div class="layout">
-        <form accept="" role="form" class="php-email-form">
-          <div class="row">
-            <div class="col-md-4 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
-            </div>
-            <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+          <form accept="" role="form" class="php-email-form">
+  <div class="row">
+    <div class="col-md-4 form-group">
+      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
+    </div>
+    <div class="col-md-4 form-group mt-3 mt-md-0">
+      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+    </div>
+    <div class="col-md-4 form-group mt-3 mt-md-0">
+      <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 form-group mt-3">
+      <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date">
+    </div>
+    <div class="col-md-4 form-group mt-3">
+      <select name="age" id="age" class="form-select">
+        <option value="">Select Age</option>
+        <option value="Department 1">18 or below</option>
+        <option value="Department 2">18 to 55</option>
+        <option value="Department 3">55 above</option>
+      </select>
+    </div>
+    <div class="col-md-4 form-group mt-3">
+      <select name="doctor" id="doctor" class="form-select">
+        <option value="">Your Location</option>
+        <option value="Doctor 1">Mumbai</option>
+        <option value="Doctor 2">Delhi</option>
+        <option value="Doctor 3">Chennai</option>
+        <!-- Add more locations as needed -->
+      </select>
+    </div>
+  </div>
 
-            </div>
-            <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone">
+  <!-- Time Slot Section -->
+  <div class="row">
+    <div class="col-md-12 form-group mt-3">
+     
+      <select name="time-slot" id="time-slot" class="form-select">
+        <option value="">Select Time Slot</option>
+        <!-- Populate with available time slots -->
+        <option value="9:00 AM">9:00 AM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <option value="2:00 PM">2:00 PM</option>
+        <!-- Add more time slots as needed -->
+      </select>
+    </div>
+  </div>
 
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 form-group mt-3">
-              <input type="datetime" name="date" class="form-control datepicker" id="date"
-                placeholder="Appointment Date">
+  <!-- Hospital Selection Section -->
+  <div class="row">
+    <div class="col-md-12 form-group mt-3">
+     
+      <select name="hospital" id="hospital" class="form-select">
+        <option value="">Select Hospital</option>
+        <!-- Populate with available hospitals -->
+        <option value="Hospital 1">Hospital 1</option>
+        <option value="Hospital 2">Hospital 2</option>
+        <option value="Hospital 3">Hospital 3</option>
+        <!-- Add more hospitals as needed -->
+      </select>
+    </div>
+  </div>
 
-            </div>
-            <div class="col-md-4 form-group mt-3">
-              <select name="age" id="age" class="form-select">
-                <option value="">Select Age</option>
-                <option value="Department 1">18 or below</option>
-                <option value="Department 2">18 to 55</option>
-                <option value="Department 3">55 above</option>
-              </select>
+  <!-- OPD Section -->
+  <div class="row">
+    <div class="col-md-12 form-group mt-3">
+      
+      <select name="opd-section" id="opd-section" class="form-select">
+        <option value="">Select OPD Section</option>
+        <!-- Populate with available OPD sections -->
+        <option value="ENT">ENT</option>
+        <option value="Gynecologist">Gynecologist</option>
+        <!-- Add more OPD sections as needed -->
+      </select>
+    </div>
+  </div>
 
-            </div>
-            <div class="col-md-4 form-group mt-3">
-              <select name="doctor" id="doctor" class="form-select">
-                <option value="">Your Location</option>
-                <option value="Doctor 1">1</option>
-                <option value="Doctor 2">2</option>
-                <option value="Doctor 3">3</option>
-              </select>
-            </div>
-          </div>
+  <div class="form-group mt-3">
+    <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+  </div>
+  <div class="text-center">
+    <a href="successful_appointment.html" style="text-decoration: none;">
+      <button type="submit">Make an Appointment</button>
+    </a>
+  </div>
+</form>
 
-          <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-
-          </div>
-          <div class="text-center"><a href="successful_appointment.html" style="text-decoration: none;"><button type="submit">Make an Appointment</button></a></div>
-        </form>
         </div>
 
       </div>
@@ -463,6 +491,16 @@ body {
               </div>
             </div>
           </div>
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="img/doctors/Image(13).png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+              <div class="member-info">
+                <h4>Pediatrician</h4>
+                <br>
+                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section><!-- End Doctors Section -->
@@ -515,19 +553,19 @@ body {
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>IGDTUW, Delhi</p>
+                <p><a href="https://www.google.com/maps/search/?api=1&query=IGDTUW,Delhi" target="_blank">IGDTUW, Delhi</a></p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>rapidoc@mail.com</p>
+                <p><a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a></p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p> <i class="bi bi-phone"></i><a href="tel:+91 1234567890">+91 1234567890</a></p>
+                <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
               </div>
             </div>
           </div><br><br>
@@ -598,7 +636,8 @@ body {
   </main><!-- End #main -->
 
  
-  <!-- ############### Footer ############### -->
+ 
+<!-- ############### Footer ############### -->
  
  <!-- =========== footer start ============ -->
 <footer class="section footer">
@@ -689,79 +728,21 @@ body {
     </p>
   </div>
 </footer>
-<!-- =========== footer end ============ -->
 
-  <!-- <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
+ 
 
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>RapiDoc</h3>
-              <p>
-                Address<br>
-                Delhi, India<br><br>
-                <strong>Phone:</strong> <i class="bi bi-phone"></i><a href="tel:+91 1234567890">+91 1234567890</a><br>
-                <strong>Email:</strong> rapidoc@mail.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" class="google-plus"><i class="fa-brands fa-skype"></i></a>
-                <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#doctor">Doctors</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="Html-Files/contact.html">Contact</a></li>
-            </ul>
-          </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Location Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Online OPDs</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Availability Status</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Pharmacy Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">User Benefits</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Daily Newsletter</h4>
-            <p>Get your medical insights! Subscribe to our newsletters now!</p>
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="Email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>RapiDoc</span></strong>. All Rights Reserved
-      </div>
-    </div>
-  </footer>End Footer -->
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- JS Files -->
+  <script>
+    var currentYear = new Date().getFullYear();
+    document.getElementById('year').textContent = currentYear;
+  </script>
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="glightbox/js/glightbox.min.js"></script>
   <script src="php-email-form/validate.js"></script>

@@ -25,7 +25,7 @@
             <td><b>🍴 Forks</b></td>
             <td><b>🐛 Issues</b></td>
             <td><b>🔔 Open PRs</b></td>
-            <td><b>🔕 Close PRs</b></td>
+            <td><b>🔕 Closed PRs</b></td>
         </tr>
      </thead>
     <tbody>
@@ -67,65 +67,102 @@ It is an online platform which enables you to get information about your nearest
 ### Setup and Installation
 
 To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository, follow these steps:
-1. **Fork the Repository**
+1. **Fork the Repository:**
    Click on the "Fork" button on the repository's GitHub page to create a copy of the repository in your GitHub account.
 
-2. **Clone the repository**
-   Clone the forked repository to your local machine using the following command in your terminal:
+2. **Clone the repository:**
+   Clone the forked repository to your local machine using the following command in your terminal.
    ```bash
    git clone https://github.com/<your-github-username>/RAPIDOC-HEALTHCARE-WEBSITE
    ```
-3. **Add a remote upstream**
+3. **Add a remote upstream:**
    ```bash
    git remote add upstream https://github.com/original-owner-username/RAPIDOC-HEALTHCARE-WEBSITE
    ```
-4. **Create a new branch**
-       Create a new branch for your changes. Run the following command in your terminal:
+4. **Create a new branch:**
+       Create a new branch for your changes. Run the following command in your terminal.
    ```bash
    git checkout -b <your-branch-name>
    ```
    
-5. **Make the desired changes**
+5. **Make the desired changes:**
    Make the desired changes to the source code.
 
-6. **Add your changes**
-   Add your changes to the staging area. Run the following command in your terminal:
+6. **Add your changes:**
+   Add your changes to the staging area. Run the following command in your terminal.
    ```bash
    git add <File1 changed> <File2 changed> ...
    ```
    
-7. **Commit your changes**
-   Commit your changes with a meaningful commit message. Run the following command in your terminal:
+7. **Commit your changes:**
+   Commit your changes with a meaningful commit message. Run the following command in your terminal.
    ```bash
    git commit -m "<your-commit-message>"
    ```
    
-8. **Push your changes**
-   Push your changes to your forked repository. Run the following command in your terminal:
+8. **Push your changes:**
+   Push your changes to your forked repository. Run the following command in your terminal
    ```bash
    git push origin <your-branch-name>
    ```
    
-9. **Create a Pull Request:-**
+9. **Create a Pull Request:**
    Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
 
+
+To run the project locally in your System
+1. *Fork the Repository:*
+   Click on the "Fork" button on the repository's GitHub page to create a copy of the repository in your GitHub account.
+
+   ![Screenshot (127)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/164ba1a7-d42e-4e4d-acbd-4bc81cf387d5)
+
+   ![Screenshot (128)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/21a47905-69ee-448f-a5c0-71ceb3c694d5)
+
+2. *Clone the repository:*
+   Clone the forked repository to your local machine using the following command in your terminal.
+   ```bash
+   git clone https://github.com/<your-github-username>/RAPIDOC-HEALTHCARE-WEBSITE
+
+   ![Screenshot (129)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/88249cc4-5849-4472-b190-9d9bad2bb236)
+
+
+3. *Open the project in VS Code:*
+   Click on the open with vs code button , to make changes to the code using the text editor.
+
+   ![Screenshot (130)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/10644887-eb4b-4471-98bb-26e0b1bb4f07)
+
+
+4. *Clearly read the contribution guidelines:*
+   Make sure to follow the guidelines to contribute to this project. 
+
+   ![Screenshot (131)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/342c364a-d908-48a4-9d12-2552298d87bd)
+
+
+5. *Find the Index.html file:*
+   Right click the file mentioned and click on "Open with Live Server"
+   This will redirect to the web-browser and load the landing page of the project
+
+   ![Screenshot (133)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/62044e1a-a644-467d-98ac-eabfac970ed9)
+
+
+
 To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository using GitHub Desktop, follow these steps:
-1. **Clone the repository**
+1. **Clone the repository:**
    Open GitHub Desktop and log in to your GitHub account. Go to the "File" menu and select "Clone Repository." Select the RAPIDOC-HEALTHCARE-WEBSITE repository from the list and choose a local path to clone the repository.
 
-2. **Switch to the correct branch**
+2. **Switch to the correct branch:**
    Once the repository is cloned, make sure you are on the correct branch where you want to make your changes. You can switch branches using the "Branch" menu in GitHub Desktop.
 
-3. **Make and commit changes**
+3. **Make and commit changes:**
    Make the desired changes to the code in your local repository. After making changes, stage them by clicking the "+" button next to the changed files. Enter a commit message describing your changes and click the "Commit" button.
 
-4. **Push changes to GitHub**
+4. **Push changes to GitHub:**
    After committing your changes, push them to your fork of the repository on GitHub. Click the "Push origin" button in GitHub Desktop to push your changes.
 
-5. **Create a pull request**
+5. **Create a pull request:**
    Go to your fork of the RAPIDOC-HEALTHCARE-WEBSITE repository on the GitHub website. You should see a notification that your branch is ahead of the original repository. Click on the "Compare & pull request" button to create a pull request for your changes.
 
-6. **Review and submit the pull request**
+6. **Review and submit the pull request:**
    On the pull request page, review your changes and add a title and description for your pull request. Once you're satisfied with your changes, click the "Create pull request" button to submit your pull request.
 
 If you find this project helpful, please consider giving it a star! ⭐️
