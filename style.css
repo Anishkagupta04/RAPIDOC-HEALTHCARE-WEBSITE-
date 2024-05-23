@@ -1363,4 +1363,76 @@ footer {
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
+
+
+
+/* Style for pateint portal  */
+/* -----***************************************-----  */
+ .patient-portal {
+  width: 90%;
+  max-width: 600px; /* Maximum width of the container */
+  margin: 0 auto; /* Centers the container */
+   padding: 20px; 
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);  
+   background-color: white;
+   text-align: center; 
+   margin-bottom: 7%;
+} 
+/* Section title styling */
+.section-title h1 {
+  color: #29888a; /* Sets a blue color for the heading */
+  text-align: center;
 }
+.section-title p {
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+}
+/* Form styling */
+.form-group {
+  margin-bottom: 15px; /* Adds bottom margin for form-group */
+}
+.form-control2 {
+  width: 60%; /* Full width */
+  padding: 10px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  text-align: center;
+}
+button {
+  background-color: #29888a; /* Blue background for the button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #1c413b; /* Darker blue on hover */
+}
+
+/* Forgot password link styling */
+.forgot-password {
+  text-align: center; /* Center-aligns the forgot password link */
+  margin-top: 10px;
+}
+.forgot-password a {
+  color: #29888a;
+  text-decoration: none;
+}
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+/* Text centering */
+.text-center {
+  text-align: center; /* Centers the login button */
+}
+.login-form {
+  width: 100%;
+  margin: auto 0 ;
+  text-align: center;
+}
+
+/* -----***************************************-----  */
+
+
