@@ -339,12 +339,22 @@
       <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
     </div>
     <div class="col-md-4 form-group mt-3 mt-md-0">
-      <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone">
+      <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" maxlength="10" minlength="10" pattern="[0-9]*">
     </div>
   </div>
   <div class="row">
     <div class="col-md-4 form-group mt-3">
-      <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date">
+      <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date">
+
+      <script>   //To set value of minimum date in calender 
+          var currentDate = new Date();
+          var year = currentDate.getFullYear();
+          var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+          var day = currentDate.getDate().toString().padStart(2, '0');
+          var formattedDate = `${year}-${month}-${day}`;
+  
+          document.getElementById('date').setAttribute('min', formattedDate);
+      </script>
     </div>
     <div class="col-md-4 form-group mt-3">
       <select name="age" id="age" class="form-select">
