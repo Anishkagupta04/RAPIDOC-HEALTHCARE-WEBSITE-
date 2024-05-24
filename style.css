@@ -449,8 +449,8 @@ section {
 
 .featured-services .icon-box:hover::before {
   background: #3fbcc051;
-  top: 50px;
-  border-radius: 70px;
+  top: 0px;
+  border-radius: 50px;
 }
 
 .featured-services .icon1 {
