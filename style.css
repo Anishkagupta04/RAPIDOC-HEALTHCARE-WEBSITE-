@@ -29,6 +29,20 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease 0s;
   color: white;
 }
+button {
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #4bb6b7;
+  background-color: #4bb6b7;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 8px;
+  padding: 8px 50px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  transition: 0.3s ease-in-out;
+}
 
 .nav_link li a:hover {
   color: #55a5ea;
