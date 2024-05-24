@@ -19,81 +19,65 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.nav_link li {
-  padding: 5px 20px;
+
+
+/*################----Top Bar----################*/
+#topbar {
+  background: #000;
+  height: 40px;
+  font-size: 14px;
+  transition: all 0.5s;
+  z-index: 996;
+}
+
+#topbar.topbar-scrolled {
+  top: -40px;
+}
+
+#topbar .contact-info a {
+  line-height: 1;
+  color: #fff;
+  transition: 0.3s;
+}
+
+#topbar .contact-info a:hover {
+  color: #3fbbc0;
+}
+#topbar .contact-info i {
+  color: #3fbbc0;
+  padding-right: 4px;
+  margin-left: 15px;
+  line-height: 0;
+}
+#topbar .contact-info i:first-child {
+  margin-left: 0;
+}
+
+#topbar .social-links a {
+  color: #3fbbc0;
+  padding-left: 15px;
   display: inline-block;
-  color: white;
+  line-height: 1px;
+  transition: 0.3s;
 }
 
-.nav_link li a {
-  transition: all 0.3s ease 0s;
-  color: white;
+#topbar .social-links a:hover {
+  color: #fff;
 }
 
-.nav_link li a:hover {
-  color: #55a5ea;
-
-  text-decoration: underline 2.5px rgb(3, 3, 94);
+#topbar .social-links a:first-child {
+  border-left: 0;
 }
 
-.header_container {
-  /* background-color: #d9d9d9; */
-  background-color: #022a2d;
-  opacity: 0.9;
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-evenly; */
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  margin: auto;
+/*################----Header----################*/
+#header {
+  background: #022a2d;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+  top: 40px;
+  box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
 }
-
-.container {
-  display: flex;
-  font-family: sans-serif;
-
-  padding-top: 80px;
-}
-
-
-.container a:hover {
-  text-decoration: underline 2px;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  padding-left: 20px;
-  /* justify-content: center;
-  align-items: center; */
-}
-
-.content h1 {
-  font-size: 80px;
-  color: #d9d9d9;
-}
-
-.content h1 span {
-  color: #f9a826;
-}
-
-.content h4 {
-  font-size: 20px;
-  margin-top: 30px;
-  padding-right: 40px;
-  line-height: 1.5;
-  color: #d9d9d9;
-}
-
-.content h4 a {
-  display: inline;
-  color: #f9a826;
-}
-
-
-
-
 
 .container-head{
   display: grid;
@@ -102,7 +86,37 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
 }
 
+.container-head > div{
+  text-align: center;
+  font-size: 15px;
+}
 
+img{
+  max-width: 130%;
+  max-height: 130%;
+}
+
+#header.header-scrolled {
+  top: 0;
+}
+
+#header .logo{
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+  color: #fff;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
 
 /*---------------------parallax effect after about------------*/
 .parallax-container {
@@ -545,7 +559,7 @@ alc(50% - 60px);
 .about .icon-box {
   background: #111111;
   border-radius: 10px;
-  margin-top: 35px;
+  margin-top: 40px;
 }
 
 .about .icon-box .icon {
@@ -865,7 +879,6 @@ alc(50% - 60px);
   background: #badaf7;
   border-radius: 10px;
   padding: 10px !important;
-  color: #6c757d;
 }
 
 .appointment .php-email-form input:focus, .appointment .php-email-form textarea:focus, .appointment .php-email-form select:focus {
@@ -1201,6 +1214,7 @@ alc(50% - 60px);
 }
 
 
+
 /*################----Footer----################*/
 /* =========== footer start ============ */
 .section.footer {
@@ -1327,11 +1341,6 @@ alc(50% - 60px);
 
 
 
-
-
-
-
-
 /*################----Back to top----################*/
 .back-to-top {
   position: fixed;
@@ -1361,76 +1370,4 @@ alc(50% - 60px);
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
-
-
-
-/* Style for pateint portal  */
-/* -----***************************************-----  */
- .patient-portal {
-  width: 90%;
-  max-width: 600px; /* Maximum width of the container */
-  margin: 0 auto; /* Centers the container */
-   padding: 20px; 
-   box-shadow: 0 4px 8px rgba(0,0,0,0.1);  
-   background-color: white;
-   text-align: center; 
-   margin-bottom: 7%;
-} 
-/* Section title styling */
-.section-title h1 {
-  color: #29888a; /* Sets a blue color for the heading */
-  text-align: center;
 }
-.section-title p {
-  text-align: center;
-  color: #000;
-  font-size: 16px;
-}
-/* Form styling */
-.form-group {
-  margin-bottom: 15px; /* Adds bottom margin for form-group */
-}
-.form-control2 {
-  width: 60%; /* Full width */
-  padding: 10px;
-  border: 1px solid #ccc; /* Light gray border */
-  border-radius: 4px; /* Rounded corners */
-  text-align: center;
-}
-button {
-  background-color: #29888a; /* Blue background for the button */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #1c413b; /* Darker blue on hover */
-}
-
-/* Forgot password link styling */
-.forgot-password {
-  text-align: center; /* Center-aligns the forgot password link */
-  margin-top: 10px;
-}
-.forgot-password a {
-  color: #29888a;
-  text-decoration: none;
-}
-.forgot-password a:hover {
-  text-decoration: underline;
-}
-/* Text centering */
-.text-center {
-  text-align: center; /* Centers the login button */
-}
-.login-form {
-  width: 100%;
-  margin: auto 0 ;
-  text-align: center;
-}
-
-/* -----***************************************-----  */
-
-
