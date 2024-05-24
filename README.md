@@ -49,12 +49,12 @@
    </tr>
    <tr>
       <td>GirlScript Summer of Code 2024</td>
-      <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
+      <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to introduce more beginners to Open-Source Software Development.</td>
    </tr>
 
 </table>
 <h3>Project Overview</h3>
-It is an online platform which enables you to get information about your nearest hospitals and healthcare facilities including important information like blood availablity in emergency, Opds and beds availability in your nearest/desired hospitals. It aims to address health-related issues. It is a one-stop destination for all your medical needs.
+It is an online platform that enables you to get information about your nearest hospitals and healthcare facilities, including important information like blood availability in emergencies, ODs, and bed availability in your nearest or most desired hospitals. It aims to address health-related issues. It is a one-stop destination for all your medical needs.
 
 ## Technology Stack
 
@@ -110,7 +110,7 @@ To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository, follow these steps:
    Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
 
 
-To run the project locally in your System
+To run the project locally in your system
 1. *Fork the Repository:*
    Click on the "Fork" button on the repository's GitHub page to create a copy of the repository in your GitHub account.
 
@@ -140,7 +140,7 @@ To run the project locally in your System
 
 5. *Find the Index.html file:*
    Right click the file mentioned and click on "Open with Live Server"
-   This will redirect to the web-browser and load the landing page of the project
+   This will redirect to the web-browser and load the landing page for the project.
 
    ![Screenshot (133)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/62044e1a-a644-467d-98ac-eabfac970ed9)
 
@@ -157,10 +157,10 @@ To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository using GitHub Desktop,
    Make the desired changes to the code in your local repository. After making changes, stage them by clicking the "+" button next to the changed files. Enter a commit message describing your changes and click the "Commit" button.
 
 4. **Push changes to GitHub:**
-   After committing your changes, push them to your fork of the repository on GitHub. Click the "Push origin" button in GitHub Desktop to push your changes.
+   After committing your changes, push them to your fork of the repository on GitHub. Click the "Push Origin" button in GitHub Desktop to push your changes.
 
 5. **Create a pull request:**
-   Go to your fork of the RAPIDOC-HEALTHCARE-WEBSITE repository on the GitHub website. You should see a notification that your branch is ahead of the original repository. Click on the "Compare & pull request" button to create a pull request for your changes.
+   Go to your fork of the RAPIDOC-HEALTHCARE-WEBSITE repository on the GitHub website. You should see a notification that your branch is ahead of the original repository. Click on the "Compare & Pull Request" button to create a pull Request for your changes.
 
 6. **Review and submit the pull request:**
    On the pull request page, review your changes and add a title and description for your pull request. Once you're satisfied with your changes, click the "Create pull request" button to submit your pull request.
@@ -179,11 +179,11 @@ We love your input! We want to make contributing to this project as easy and tra
  
 <h2 align = "center">Our Contributors ❤️</h2>
 <div align = "center">
- <h3>Thank you for contributing to our repository</h3>
+ <h3>Thank you for contributing to our repository.</h3>
 
 ![Contributors](https://contrib.rocks/image?repo=Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-)
 
-### Show some ❤️ by starring this awesome repository!
+### Show some ❤️ by starring in this awesome repository!
 
 </div>
 
