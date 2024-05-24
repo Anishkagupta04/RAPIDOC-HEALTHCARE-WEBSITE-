@@ -859,6 +859,11 @@ section {
   width: 700px; 
   margin: 0 auto; 
 }
+
+#appointment .container {
+  box-shadow: 1px 1px 1px #cbced1, -4px -4px 0px white;
+  padding: 40px;
+}
 .appointment .php-email-form {
   width: 100%;
 }
@@ -879,12 +884,29 @@ section {
 }
 
 .appointment .php-email-form input:focus, .appointment .php-email-form textarea:focus, .appointment .php-email-form select:focus {
-  border-color: #3fbcc0a6;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  background: white;
+  padding: 10px !important;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  width: 100%;
+  padding: 8px 0 5px 0;
+  font-size: 16px;
+  color: #fff;
 
 }
 
 .appointment .php-email-form input, .appointment .php-email-form select {
   height: 44px;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  width: 100%;
+  font-size: 16px;
+  color: #828282;
 
 }
 
