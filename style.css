@@ -284,11 +284,9 @@ section {
 
 .section-title {
   /* text-align: left; */
-  padding-left:50px;
-  padding-right:50px;
-  margin-left:15%;
-  margin-right:15%;
-  text-align: center;
+  margin-left: 15%;
+    margin-right: 4%;
+    text-align: center;
   /* text-align: left; */
 }
 
@@ -854,10 +852,10 @@ section {
 .layout{
   /*border: 2px solid #ccc; */
   background-color: #3fbcc051;
-  border-radius: 30px;
-  padding: 50px;
-  width: 700px; 
-  margin: 0 auto; 
+    border-radius: 30px;
+    padding: 50px 150px 50px 0px;
+    width: 700px;
+    margin: 0px 140px 0px 0px
 }
 .appointment .php-email-form {
   width: 100%;
@@ -868,7 +866,7 @@ section {
 }
 
 .appointment .php-email-form input, .appointment .php-email-form textarea, .appointment .php-email-form select {
-  margin-left: 250px;
+ 
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
@@ -885,11 +883,15 @@ section {
 
 .appointment .php-email-form input, .appointment .php-email-form select {
   height: 44px;
+  width: 100%;
+  margin-left: 59px;
 
 }
 
 .appointment .php-email-form textarea {
-  padding: 10px 12px;
+  height: 92px;
+    width: 100%;
+    margin-left: 59px;
 }
 
 .appointment .php-email-form button[type="submit"] {
@@ -904,6 +906,12 @@ section {
 
 .appointment .php-email-form button[type="submit"]:hover {
   background: #3fbcc0bd;
+}
+
+.width-change{
+  height: 58px!important;
+    width: 104%!important;
+  
 }
 
 
@@ -1404,7 +1412,7 @@ footer {
 }
 .section-title p {
   text-align: center;
-  color: #000;
+  
   font-size: 16px;
 }
 /* Form styling */
