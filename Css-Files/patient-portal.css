@@ -100,8 +100,9 @@
 #section-patientportal{
     width: 40%;
     padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-    margin-bottom: 2%;
+    margin: auto;
+    padding: 10%;
+}
+#patient-portal{
+    padding: 0px;
 }
