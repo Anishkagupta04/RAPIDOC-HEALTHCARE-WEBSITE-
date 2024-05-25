@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  display: flex;
+  /* display: ; */
   font-family: sans-serif;
   padding-top: 80px;
 }
@@ -703,18 +703,21 @@ section {
 
 .counts .count-box {
   box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
-  padding: 50px;
+  padding: 50px 80px ;
   margin: 5%;
-  width: calc(100%-15px);
+  width: calc(100%-5px);
+  height: 100%;
   background:#1c413b;
-  align-content: center;
+  align-content:space-evenly;
   border-radius: 15px;
   /* margin-top: 10px; */
 }
 .row-d{
   display: flex;
-  /* margin:10px 20px 10px 20px; */
+  margin:0px 20px 0px 20px;
   align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
 
 }
 .counts .count-box i {
@@ -726,7 +729,7 @@ section {
 .counts .count-box span{
   font-size: 42px;
   line-height: 24px;
-  display: block;
+  display: inline-block;
   font-weight: 700;
   color: #f9f4f4;
   margin-left: 50px;
@@ -734,21 +737,21 @@ section {
 .container .drop .content span{
   font-size: 42px;
   line-height: 24px;
-  display: block;
+  display: inline-block;
   font-weight: 700;
   color: #faf8f8;
 }
 .container .drop .content p{
   font-size: 30px;
   line-height: 24px;
-  display: block;
+  display: inline-block;
   justify-content: center;
   font-weight: 700;
   color: #f8f8f8;
 }
 .counts .count-box p {
-  padding: 30px 0 0 0;
-  margin: 0;
+  padding: 30px 0 0 0;  
+  /* margin: 0; */
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #fffcfc;
@@ -757,7 +760,7 @@ section {
 .counts .count-box a {
   font-weight: 600;
   display: block;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   color: #faf8f8;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
@@ -773,8 +776,14 @@ section {
 /*################----Services----################*/
 .services .icon-box {
   text-align: center;
+  margin-left: 80px;
+  margin-right: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #0a0a0a;
-  padding: 80px 20px;
+  padding: 30px 20px;
   transition: all ease-in-out 0.3s;
   background-color: #1c413b;
 }
@@ -826,6 +835,7 @@ section {
   font-size: 14px;
   margin-bottom: 0;
   
+  
 }
 .services .icon-box:hover {
   background: #55a5ea;
@@ -857,7 +867,7 @@ section {
   border-radius: 30px;
   padding: 50px;
   width: 700px; 
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 .appointment .php-email-form {
   width: 100%;
@@ -868,7 +878,7 @@ section {
 }
 
 .appointment .php-email-form input, .appointment .php-email-form textarea, .appointment .php-email-form select {
-  margin-left: 250px;
+  margin-left: 175px;
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
@@ -885,7 +895,7 @@ section {
 
 .appointment .php-email-form input, .appointment .php-email-form select {
   height: 44px;
-
+  width: 50%;
 }
 
 .appointment .php-email-form textarea {
@@ -912,6 +922,7 @@ section {
 /*################----Doctors----################*/
 .doctors {
   background: #000;
+  /* display: flex; */
 }
 
 .doctors .member {
@@ -919,11 +930,18 @@ section {
   position: relative;
   border-radius: 10px;
   padding: 30px;
+  margin: 10px 500px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .doctors .member .pic {
   overflow: hidden;
   width: 180px;
+  /* margin: 0 130px; */
   border-radius: 50%;
 }
 
@@ -984,7 +1002,10 @@ section {
 /*################----Contact----################*/
 .contact .info {
   width: 100%;
-  background: #000;
+  background:#0a0a0a;
+  border-radius: 15px;
+  padding: 15px;
+  /* border: 2px; */
 }
 
 .contact .info i {
@@ -993,7 +1014,7 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: #0a0a0a;
+  background:#0a0a0a;
   border: 2px solid #55a5ea;
   display: flex;
   justify-content: center;
@@ -1044,6 +1065,7 @@ section {
 
 .contact .php-email-form input {
   height: 44px;
+  width: 100%;
 }
 
 .contact .php-email-form textarea {
@@ -1209,7 +1231,7 @@ section {
     background-color:rgb(63, 155, 124) ;
   }
 }
-
+/* 
 
 #footer {
   background: #000;
@@ -1344,7 +1366,7 @@ section {
   padding-top: 10px;
   margin:auto;
 }
-
+ */
 
 /*################----Back to top----################*/
 footer {
@@ -1389,13 +1411,14 @@ footer {
 /* -----***************************************-----  */
  .patient-portal {
   width: 90%;
-  max-width: 600px; /* Maximum width of the container */
+  max-width: 900px; /* Maximum width of the container */
   margin: 0 auto; /* Centers the container */
-   padding: 20px; 
-   box-shadow: 0 4px 8px rgba(0,0,0,0.1);  
-   background-color: white;
+  padding: 20px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);  
+   background-color:#3fbcc051;
    text-align: center; 
    margin-bottom: 7%;
+   border-radius: 20px;
 } 
 /* Section title styling */
 .section-title h1 {
@@ -1403,20 +1426,24 @@ footer {
   text-align: center;
 }
 .section-title p {
-  text-align: center;
-  color: #000;
-  font-size: 16px;
+  text-align:center;
+  color: white;
+  font-size: 20px;
 }
 /* Form styling */
 .form-group {
+  margin-top: 15px;
   margin-bottom: 15px; /* Adds bottom margin for form-group */
 }
-.form-control2 {
-  width: 60%; /* Full width */
+.forgot-password{
+  margin-top: 20px;
+}
+.form-control {
+  width: 50%; /* Full width */
   padding: 10px;
   border: 1px solid #ccc; /* Light gray border */
   border-radius: 4px; /* Rounded corners */
-  text-align: center;
+  /* text-align: center; */
 }
 button {
   background-color: #29888a; /* Blue background for the button */
