@@ -24,10 +24,12 @@
   <link href="remixicon/remixicon.css" rel="stylesheet">
   <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+
   <link href="patient-portal.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 </head>
 
@@ -291,33 +293,46 @@
     </section><!-- End Services Section -->
 
     <!-- Add Patient Portal Section -->
-    <section id="patient-portal" class="patient-portal">
-      <div class="section-title">
+
+  <section id="patient-portal" class="patient-portal">
+      <div class="container-patientportal">
+      <div class="section-title" id="section-patientportal">
+
         <h2>Patient Portal</h2>
         <p>Access your medical records, lab results, and prescription history securely.</p>
+        <!-- <p>The Patient Portal is your personalized online gateway to your health information. Whether you need to check your recent lab results, review your prescription history, or update your personal details, the Patient Portal provides a convenient and secure platform for managing your healthcare needs.</p> -->
       </div>
       <div class="container">
 
-        <!-- Add Login Form for Patient Portal -->
-        <div class="login-form">
-          <form action="login.php" method="post">
-            <div class="form-group">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" name="password" placeholder="Your Password" required>
-            </div>
-            <div class="text-center"><button type="submit">Login</button></div>
-          </form>
-        </div>
 
-        <!-- Add Forgot Password Link -->
-        <div class="forgot-password">
-          <a href="forgot-password.php">Forgot Your Password?</a>
-        </div>
+      <!-- Add Login Form for Patient Portal -->
+      
+          <div class="login-box">
+              <div class="avatar">
+                  <img src="img\avatar.png" alt="Avatar">
+              </div>
+              <form>
+                  <div class="textbox">
+                      <i class="fas fa-user"></i>
+                      <input type="text" placeholder="Username" name="username" required>
+                  </div>
+                  <div class="textbox">
+                      <i class="fas fa-lock"></i>
+                      <input type="password" placeholder="Password" name="password" required>
+                  </div>
+                  <input type="submit" class="btn" value="SUBMIT">
+                  <div class="register-link">
+                      <a href="#">Not registered yet? Register Here</a>
+                  </div>
+                  <div class="forgot-password" id="forgot-password-patient-portal">
+                    <a href="forgot-password.php">Forgot Your Password?</a>
+                  </div>
+              </form>
+          </div>
 
-      </div>
-    </section><!-- End Patient Portal Section -->
+
+      <!-- Add Forgot Password Link -->
+
 
     <!-- ############# Appointment Section ############# -->
 
