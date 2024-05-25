@@ -462,8 +462,8 @@ alc(50% - 60px);
 
 .featured-services .icon-box:hover::before {
   background: #3fbcc051;
-  top: 50px;
-  border-radius: 70px;
+  top: 0px;
+  border-radius: 50px;
 }
 
 .featured-services .icon1 {
@@ -1342,32 +1342,113 @@ alc(50% - 60px);
 
 
 /*################----Back to top----################*/
-.back-to-top {
+footer {
+  position: relative;
+  padding: 50px 0;
+}
+
+#back-to-top-container {
   position: fixed;
   visibility: hidden;
   opacity: 0;
   right: 15px;
-  bottom: 15px;
   z-index: 996;
   background: #3fbcc0a4;
+  bottom: 15px; 
+  cursor: pointer;
+}
+
+.circle {
+  background-color: #00093d;
+  border-radius: 50%;
+  width: 35px; 
+  height: 35px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+#back-to-top {
   width: 40px;
-  height: 40px;
+  height: 40px; 
+  fill: #4178c0; 
+  color: #00093d;
+  transition: fill 0.3s;
+}
+
+#back-to-top:hover {
+  fill: hsl(214, 50%, 60%); 
+}
+
+
+
+/* Style for pateint portal  */
+/* -----***************************************-----  */
+ .patient-portal {
+  width: 90%;
+  max-width: 600px; /* Maximum width of the container */
+  margin: 0 auto; /* Centers the container */
+   padding: 20px; 
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);  
+   background-color: white;
+   text-align: center; 
+   margin-bottom: 7%;
+} 
+/* Section title styling */
+.section-title h1 {
+  color: #29888a; /* Sets a blue color for the heading */
+  text-align: center;
+}
+.section-title p {
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+}
+/* Form styling */
+.form-group {
+  margin-bottom: 15px; /* Adds bottom margin for form-group */
+}
+.form-control2 {
+  width: 60%; /* Full width */
+  padding: 10px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  text-align: center;
+}
+button {
+  background-color: #29888a; /* Blue background for the button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
   border-radius: 4px;
-  transition: all 0.4s;
+  cursor: pointer;
+  z-index: 1000;
 }
 
-.back-to-top i {
-  font-size: 28px;
-  color: #fff;
-  line-height: 0;
+.circle {
+  background-color: #00093d;
+  border-radius: 50%;
+  width: 35px; 
+  height: 35px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
 }
 
-.back-to-top:hover {
-  background: #3fbcc0cd;
-  color: #fff;
+#back-to-top {
+  width: 40px;
+  height: 40px; 
+  fill: #4178c0; 
+  color: #00093d;
+  transition: fill 0.3s;
 }
 
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
+}
+#back-to-top:hover {
+  fill: hsl(214, 50%, 60%); 
 }
