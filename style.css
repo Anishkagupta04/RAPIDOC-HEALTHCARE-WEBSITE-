@@ -1482,6 +1482,16 @@ footer {
   fill: hsl(214, 50%, 60%);
 }
 
+.back-to-top:hover {
+  background: #3fbcc0cd;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 
 /* Style for pateint portal  */
@@ -1520,6 +1530,7 @@ footer {
   /* Adds bottom margin for form-group */
 }
 
+
 .forgot-password {
   margin-top: 20px;
 }
@@ -1527,6 +1538,7 @@ footer {
 .form-control {
   width: 50%;
   /* Full width */
+
   padding: 10px;
   border: 1px solid #ccc;
   /* Light gray border */
