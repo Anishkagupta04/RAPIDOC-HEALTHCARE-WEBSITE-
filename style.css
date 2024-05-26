@@ -983,7 +983,6 @@ section {
 
 /*################----Contact----################*/
 .contact .info {
-  width: 100%;
   background: #000;
 }
 
@@ -1027,8 +1026,8 @@ section {
 }
 
 .contact .php-email-form {
-  width: 100%;
   background: #000;
+  
 }
 
 .contact .php-email-form .form-group {
