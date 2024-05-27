@@ -41,8 +41,54 @@
         .iti.iti--allow-dropdown{
           margin-left: 250px;
         }
-       
+        .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
 
+    .content {
+        text-align: left;
+        flex: 1;
+        padding: 20px;
+    }
+
+    .sec-video {
+        flex: 1;
+        width: 20px;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .btn-get-started {
+        display: inline-block;
+        background-color: #55a5ea;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+
+        .content {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .sec-video {
+            margin-top: 20px;
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+        }
+    }
     </style>
 </head>
 
@@ -76,18 +122,20 @@
 
   <div class="container">
     <div class="content">
-      <h1 style="font-size: 65px;">
-        Welcome to <span style="color: #55a5ea;">RapiDoc!</span> <br /> Your one-stop digital <br> healthcare
-        destination
-      </h1>
-      <h4>
-        <!-- <a href="#about" class="btn-get-started scrollto">Download App</a> -->
-      </h4>
+        <h1 style="font-size: 65px;">
+            Welcome to <span style="color: #55a5ea;">RapiDoc!</span> <br /> Your one-stop digital <br> healthcare
+            destination
+        </h1>
+        <h4>
+            <a href="#download" class="btn-get-started scrollto">Download Now</a>
+        </h4>
     </div>
-    <img style="position: relative; top: -60px; right: -10rem;" class="sec-img" src="images/rd.png" alt="" />
-  </div>
-  <br><br><br><br><br>
-  <!-- End Home -->
+    <video class="sec-video" src="2.mp4" controls></video>
+</div>
+<br><br><br><br><br>
+<!-- End Home -->
+
+
   <main id="main">
 
 
