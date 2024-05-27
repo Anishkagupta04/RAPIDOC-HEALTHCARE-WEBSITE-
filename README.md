@@ -174,8 +174,11 @@ We love your input! We want to make contributing to this project as easy and tra
   <h2>Our Contributors ❤️</h2>
   <h3>Thank you for contributing to our repository</h3>
 
-  <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/graphs/contributors">
-    <img src="https://contributors-img.web.app/image?repo=Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" />
+<a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/graphs/contributors">
+<!-- it links to the "contributors" page of the RAPIDOC-HEALTHCARE-WEBSITE- repository. This page shows a graph of contributors and their contributions to the repository. -->
+<img src="https://contributors-img.web.app/image?repo=Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" />
+<!-- This takes a repository name as a query parameter (?repo=Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-) and returns an image representing the contributors to that repository. -->
+
   </a>
 
 ### Show some ❤️ by starring this awesome repository!
