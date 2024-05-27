@@ -171,7 +171,9 @@ We love your input! We want to make contributing to this project as easy and tra
 - Proposing new features
 
 <div align="center">
+  <h2>Our Contributors ❤️</h2>
   <h3>Thank you for contributing to our repository</h3>
+
   <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/graphs/contributors">
     <img src="https://contributors-img.web.app/image?repo=Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" />
   </a>
