@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <meta
       name="keywords"
       content="Rapidoc healthcare, hospital information, OPD appointments, blood group availability, online healthcare platform, prebook hospital appointments, hospital services"
@@ -17,6 +18,12 @@
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+
   <title>RapiDoc</title>
   <script src="https://unpkg.com/scrollreveal"></script>
   <link
@@ -44,29 +51,10 @@ body {
 }
 
 
-</style
-</head>
+  </style>
+  </head>
 
 <body>
-
-  <!-- ############### Top Bar ############### -->
-  
-  
-
-  <div id="topbar" class="d-flex align-items-center fixed-top">
-    <div class="container d-flex justify-content-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a>
-        <i class="bi bi-phone"></i><a href="tel:+91 1234567890">+91 1234567890</a>
-      </div>
-      <div class="d-none d-lg-flex social-links align-items-center">
-        <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -117,11 +105,11 @@ body {
   <br><br><br><br><br><br><br><br>
   <main id="main">
 
-   
-   
+
+
     <!-- ############ Featured Services Section ############ -->
-    
-    
+
+
     <section id="featured-services" class="featured-services">
       <div class="container" data-aos="fade-up">
 
@@ -166,10 +154,10 @@ body {
       </div>
     </section><!-- End Featured Services Section -->
 
-   
+
     <!-- ################### About Section ################### -->
-   
-   
+
+
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
@@ -184,7 +172,7 @@ body {
      align-items-stretch position-relative">
             <a href="https://youtu.be/ImQqQ9_s38k" class="glightbox play-btn mb-4"></a>
           </div>
- <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch
      justify-content-center py-5 px-lg-5">
 
             <div class="icon-box">
@@ -192,7 +180,7 @@ body {
               <h4 class="title"><a href="">HEALTH CHECKUPS</a></h4>
               <p class="description">Bootcamps, personalised check-ups, newsletters, it’s all here.</p>
             </div>
-                   
+
             <div class="icon-box">
               <div class="icon"><i class="bx bx-health"></i></div>
               <h4 class="title"><a href="">EMERGENCY WARDS</a></h4>
@@ -213,10 +201,10 @@ body {
       </div>
     </section><!-- End About Section -->
 
-   
+
     <!-- ################## Counts Section ################## -->
-   
-   
+
+
     <section id="counts" class="counts">
       <div class="container" data-aos="fade-up">
 
@@ -267,10 +255,10 @@ body {
       </div>
     </section><!-- End Counts Section -->
 
-   
+
     <!-- #################### Services Section #################### -->
-   
-   
+
+
     <section id="services" class="services">
       <div class="container">
 
@@ -336,14 +324,16 @@ body {
 
     <!-- Add Patient Portal Section -->
   <section id="patient-portal" class="patient-portal">
-    <div class="container">
 
-      <div class="section-title">
+      <div class="container-patientportal">
+      <div class="section-title" id="section-patientportal">
         <h2>Patient Portal</h2>
         <p>Access your medical records, lab results, and prescription history securely.</p>
+        <!-- <p>The Patient Portal is your personalized online gateway to your health information. Whether you need to check your recent lab results, review your prescription history, or update your personal details, the Patient Portal provides a convenient and secure platform for managing your healthcare needs.</p> -->
       </div>
 
       <!-- Add Login Form for Patient Portal -->
+
       <div class="login-form">
         <form action="login.php" method="post">
           <div class="form-group">
@@ -351,22 +341,37 @@ body {
           </div>
           <div class="form-group">
             <input type="password" class="form-control" name="password" placeholder="Your Password" required>
+      
+          <div class="login-box">
+              <div class="avatar">
+                  <img src="img\avatar.png" alt="Avatar">
+              </div>
+              <form>
+                  <div class="textbox">
+                      <i class="fas fa-user"></i>
+                      <input type="text" placeholder="Username" name="username" required>
+                  </div>
+                  <div class="textbox">
+                      <i class="fas fa-lock"></i>
+                      <input type="password" placeholder="Password" name="password" required>
+                  </div>
+                  <input type="submit" class="btn" value="SUBMIT">
+                  <div class="register-link">
+                      <a href="#">Not registered yet? Register Here</a>
+                  </div>
+                  <div class="forgot-password" id="forgot-password-patient-portal">
+                    <a href="forgot-password.php">Forgot Your Password?</a>
+                  </div>
+              </form>
           </div>
-          <div class="text-center"><button type="submit">Login</button></div>
-        </form>
-      </div>
+
 
       <!-- Add Forgot Password Link -->
-      <div class="forgot-password">
-        <a href="forgot-password.php">Forgot Your Password?</a>
-      </div>
 
-    </div>
-  </section><!-- End Patient Portal Section -->
-   
+
     <!-- ############# Appointment Section ############# -->
-   
-   
+
+
     <section id="appointment" class="appointment section-bg">
       <div class="container">
 
@@ -413,6 +418,105 @@ body {
               </select>
             </div>
           </div>
+          <form accept="" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-4 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
+              </div>
+              <div class="col-md-4 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+              </div>
+              <div class="col-md-4 form-group mt-3 mt-md-0">
+                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" maxlength="10"
+                  minlength="10" pattern="[0-9]*" style="width: 100%;">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 form-group mt-3">
+                <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date">
+
+                <script>   //To set value of minimum date in calender 
+                  var currentDate = new Date();
+                  var year = currentDate.getFullYear();
+                  var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+                  var day = currentDate.getDate().toString().padStart(2, '0');
+                  var formattedDate = `${year}-${month}-${day}`;
+
+                  document.getElementById('date').setAttribute('min', formattedDate);
+                </script>
+              </div>
+              <div class="col-md-4 form-group mt-3">
+                <select name="age" id="age" class="form-select">
+                  <option value="">Select Age</option>
+                  <option value="Department 1">18 or below</option>
+                  <option value="Department 2">18 to 55</option>
+                  <option value="Department 3">55 above</option>
+                </select>
+              </div>
+              <div class="col-md-4 form-group mt-3">
+                <select name="doctor" id="doctor" class="form-select">
+                  <option value="">Your Location</option>
+                  <option value="Doctor 1">Mumbai</option>
+                  <option value="Doctor 2">Delhi</option>
+                  <option value="Doctor 3">Chennai</option>
+                  <!-- Add more locations as needed -->
+                </select>
+              </div>
+            </div>
+
+            <!-- Time Slot Section -->
+            <div class="row">
+              <div class="col-md-12 form-group mt-3">
+
+                <select name="time-slot" id="time-slot" class="form-select">
+                  <option value="">Select Time Slot</option>
+                  <!-- Populate with available time slots -->
+                  <option value="9:00 AM">9:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="2:00 PM">2:00 PM</option>
+                  <!-- Add more time slots as needed -->
+                </select>
+              </div>
+            </div>
+
+            <!-- Hospital Selection Section -->
+            <div class="row">
+              <div class="col-md-12 form-group mt-3">
+
+                <select name="hospital" id="hospital" class="form-select">
+                  <option value="">Select Hospital</option>
+                  <!-- Populate with available hospitals -->
+                  <option value="Hospital 1">Hospital 1</option>
+                  <option value="Hospital 2">Hospital 2</option>
+                  <option value="Hospital 3">Hospital 3</option>
+                  <!-- Add more hospitals as needed -->
+                </select>
+              </div>
+            </div>
+
+            <!-- OPD Section -->
+            <div class="row">
+              <div class="col-md-12 form-group mt-3">
+
+                <select name="opd-section" id="opd-section" class="form-select">
+                  <option value="">Select OPD Section</option>
+                  <!-- Populate with available OPD sections -->
+                  <option value="ENT">ENT</option>
+                  <option value="Gynecologist">Gynecologist</option>
+                  <!-- Add more OPD sections as needed -->
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+            </div>
+            <div class="text-center">
+              <a href="successful_appointment.html" style="text-decoration: none;">
+                <button type="submit">Make an Appointment</button>
+              </a>
+            </div>
+          </form>
 
           <div class="form-group mt-3">
             <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
@@ -428,8 +532,8 @@ body {
 
 
     <!-- ################# Doctors Section ################# -->
-  
-  
+
+
     <section id="doctors" class="doctors">
       <div class="container">
 
@@ -442,7 +546,8 @@ body {
 
           <div class="col-lg-6">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/1.png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+              <div class="pic"><img src="img/doctors/1.png" class="img-fluid" alt=""
+                  style="width: 188px; height: 188px;"></div>
               <div class="member-info">
                 <h4>Dermatologist</h4>
                 <br>
@@ -464,7 +569,8 @@ body {
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/3.png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+              <div class="pic"><img src="img/doctors/3.png" class="img-fluid" alt=""
+                  style="width: 188px; height: 188px;"></div>
               <div class="member-info">
                 <h4>Cardiologist</h4>
                 <br>
@@ -475,9 +581,21 @@ body {
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/4.png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+              <div class="pic"><img src="img/doctors/4.png" class="img-fluid" alt=""
+                  style="width: 188px; height: 188px;"></div>
               <div class="member-info">
                 <h4>ENT</h4>
+                <br>
+                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="img/doctors/Image(13).png" class="img-fluid" alt=""
+                  style="width: 188px; height: 188px;"></div>
+              <div class="member-info">
+                <h4>Pediatrician</h4>
                 <br>
                 <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
               </div>
@@ -488,10 +606,10 @@ body {
     </section><!-- End Doctors Section -->
 
 
-     <!-- ################# Contact Section ################# -->
-    
-    
-     <section id="contact" class="contact">
+    <!-- ################# Contact Section ################# -->
+
+
+    <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
@@ -536,6 +654,9 @@ body {
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
                 <p>IGDTUW, Delhi</p>
+
+                <p><a href="https://www.google.com/maps/search/?api=1&query=IGDTUW,Delhi" target="_blank">IGDTUW,
+                    Delhi</a></p>
               </div>
 
               <div class="email">
@@ -580,44 +701,44 @@ body {
 
 
     <!-- Feedback System-->
-  <section id="feedback" class="feed">
-    <div class="feedback">
-      <h1>Give Us Your Valuable Feedback.</h1>
-      <p>Your feedback is very important for Rapidoc.</p>
-      <div class="emoji">
+    <section id="feedback" class="feed">
+      <div class="feedback">
+        <h1>Give Us Your Valuable Feedback.</h1>
+        <p>Your feedback is very important for Rapidoc.</p>
+        <div class="emoji">
           <button class="btn normal">&#128578;</button>
           <button class="btn normal">&#128515;</button>
           <button class="btn normal">&#128519;</button>
           <button class="btn normal">&#128531;</button>
           <button class="btn normal">&#128532;</button>
           <button class="btn normal">&#128545;</button>
-      </div>
-      <p class="ques">What you want to say?</p>
-      <textarea id="textarea" cols="20" rows="5"></textarea>
-      <p class="ques">Are you satisfied with rapidoc?</p>
-      <div class="radiobtn">
+        </div>
+        <p class="ques">What you want to say?</p>
+        <textarea id="textarea" cols="20" rows="5"></textarea>
+        <p class="ques">Are you satisfied with rapidoc?</p>
+        <div class="radiobtn">
           <div class="one">
-            <input class="input"  type="radio" name="one" id="Yes" />
+            <input class="input" type="radio" name="one" id="Yes" />
             <label class="label" for="Yes">Yes</label>
           </div>
           <div class="one">
-            <input class="input"  type="radio" name="one" id="No" />
+            <input class="input" type="radio" name="one" id="No" />
             <label class="label" for="No">No</label>
           </div>
+        </div>
       </div>
-    </div>
-    <div class="info">
-      <div class="center">
+      <div class="info">
+        <div class="center">
           <button class="btn button">Submit</button>
+        </div>
+
       </div>
-      
-    </div>
-  </section>
+    </section>
 
 
   </main><!-- End #main -->
 
- 
+
   <!-- ############### Footer ############### -->
  
  
@@ -644,7 +765,6 @@ body {
               </div>
             </div>
           </div>
-
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Links</h4>
             <ul>
@@ -675,7 +795,29 @@ body {
             </form>
 
           </div>
+        </div>
+      </div>
+      <!-- links -->
 
+      <div class="col" id="col4">
+        <h3>
+          SOCIAL
+          <div class="underline"><span></span></div>
+        </h3>
+        <div class="social-icons">
+
+          <div class="social">
+            <a href="#" target="_blank"><img src="#" alt="">Instagram</a>
+
+          </div>
+          <div class="social">
+            <a href="#" target="_blank"><img src="" alt="">LinkedIn</a>
+
+          </div>
+          <div class="social">
+            <a href="#"><img src="" alt=""> Facebook</a>
+
+          </div>
         </div>
       </div>
     </div>
@@ -692,6 +834,34 @@ body {
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- JS Files -->
+  <script>
+    var currentYear = new Date().getFullYear();
+    document.getElementById('year').textContent = currentYear;
+  </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+   <script>
+       document.addEventListener("DOMContentLoaded", function() {
+           const phoneInputField = document.getElementById('phone');
+           const iti = window.intlTelInput(phoneInputField, {
+               initialCountry: "auto",
+               geoIpLookup: function(callback) {
+                   fetch('https://ipinfo.io/json?token=YOUR_TOKEN')
+                       .then(response => response.json())
+                       .then(data => callback(data.country))
+                       .catch(() => callback('us'));
+               },
+               utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+           });
+
+           document.getElementById('phone-form').addEventListener('submit', function(event) {
+               event.preventDefault();
+               const phoneNumber = iti.getNumber();
+               console.log('Full Phone Number:', phoneNumber);
+
+               // You can now send this phone number to your server or process it as needed
+           });
+       });
+   </script>
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="glightbox/js/glightbox.min.js"></script>
   <script src="php-email-form/validate.js"></script>
