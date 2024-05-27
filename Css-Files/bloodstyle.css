@@ -4,8 +4,9 @@
     box-sizing: border-box;
     font-family: 'poppins',sans-serif;
 }
-bodY{
+body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -16,7 +17,7 @@ bodY{
     text-decoration: none;
 margin-top: -18px;
     position: absolute;
-    left: 50%;
+    left: 45%;
     font-size: 30px;
   justify-content: center;
   align-items: center;
@@ -28,7 +29,6 @@ margin-top: -18px;
   color: #fff;
 }
  #topbar1 {
-    background: #022a2d;
     height: 50px;
     font-size: 14px;
     transition: all 0.5s;
@@ -39,26 +39,9 @@ margin-top: -18px;
     top: -40px;
   }
   
-  #topbar1 .contact-info a {
-    margin-top: -40px;
-    line-height: 1;
-    color: #fff;
-    transition: 0.3s;
-  }
   
-  #topbar1 .contact-info a:hover {
-    color: #3fbbc0;
-  }
-  #topbar1 .contact-info i {
-    color: #3fbbc0;
-    margin-top: -40px;
-    padding-right: 4px;
-    margin-left: 15px;
-    line-height: 0;
-  }
-  #topbar1 .contact-info i:first-child {
-    margin-left: 0;
-  }
+  
+  
   
   #topbar1 .social-links a {
     margin-top: -40px;
@@ -67,6 +50,8 @@ margin-top: -18px;
     display: inline-block;
     line-height: 1px;
     transition: 0.3s;
+    transform: translateY(400px);
+
     
   }
   #topbar1 .social-links a:hover {

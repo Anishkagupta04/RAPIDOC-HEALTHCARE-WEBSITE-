@@ -323,11 +323,6 @@ section {
   left: calc(50% - 20px);
 }
 
-.section-title p {
-  margin-bottom: 0;
-}
-
-
 
 /*################----Home Section----################*/
 #home {
@@ -501,7 +496,7 @@ section {
 }
 
 .featured-services .title a {
-  color: #111;
+  color: #eee;
 }
 
 .featured-services .description {
@@ -1414,8 +1409,9 @@ footer {
 }
 .section-title p {
   text-align: center;
-  color: #000;
+  color: #fff;
   font-size: 16px;
+  margin-bottom: 0;
 }
 /* Form styling */
 .form-group {
