@@ -1,9 +1,9 @@
-
 ![RapidDoc](https://camo.githubusercontent.com/dd5e3080a7adc2ead8f86cbbd6577cee0a38439c0ebf195021ce41587b0a405f/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313430302f312a633459675258595161794f5657785633376f757272772e706e67)
 
+## RapiDoc
 
-## RapiDoc 
 [💬 Join the community on Slack](https://join.slack.com/t/newworkspace-ley5153/shared_invite/zt-2isvflg78-tMexsn50mxdwY4BEJ_W11g)<br>
+
 <div align = "center">
 
 <div align="center">
@@ -13,8 +13,6 @@
 <i>An online platform providing comprehensive information on nearby hospitals and healthcare facilities!</i>
 
 </div>
-
-
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -67,6 +65,7 @@ It is an online platform which enables you to get information about your nearest
 ### Setup and Installation
 
 To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository, follow these steps:
+
 1. **Fork the Repository:**
    Click on the "Fork" button on the repository's GitHub page to create a copy of the repository in your GitHub account.
 
@@ -80,11 +79,10 @@ To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository, follow these steps:
    git remote add upstream https://github.com/original-owner-username/RAPIDOC-HEALTHCARE-WEBSITE
    ```
 4. **Create a new branch:**
-       Create a new branch for your changes. Run the following command in your terminal.
+   Create a new branch for your changes. Run the following command in your terminal.
    ```bash
    git checkout -b <your-branch-name>
    ```
-   
 5. **Make the desired changes:**
    Make the desired changes to the source code.
 
@@ -93,60 +91,56 @@ To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository, follow these steps:
    ```bash
    git add <File1 changed> <File2 changed> ...
    ```
-   
 7. **Commit your changes:**
    Commit your changes with a meaningful commit message. Run the following command in your terminal.
    ```bash
    git commit -m "<your-commit-message>"
    ```
-   
 8. **Push your changes:**
    Push your changes to your forked repository. Run the following command in your terminal
    ```bash
    git push origin <your-branch-name>
    ```
-   
 9. **Create a Pull Request:**
    Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
 
-
 To run the project locally in your System
-1. *Fork the Repository:*
+
+1. _Fork the Repository:_
    Click on the "Fork" button on the repository's GitHub page to create a copy of the repository in your GitHub account.
 
    ![Screenshot (127)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/164ba1a7-d42e-4e4d-acbd-4bc81cf387d5)
 
    ![Screenshot (128)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/21a47905-69ee-448f-a5c0-71ceb3c694d5)
 
-2. *Clone the repository:*
+2. _Clone the repository:_
    Clone the forked repository to your local machine using the following command in your terminal.
+
    ```bash
    git clone https://github.com/<your-github-username>/RAPIDOC-HEALTHCARE-WEBSITE
 
    ![Screenshot (129)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/88249cc4-5849-4472-b190-9d9bad2bb236)
 
+   ```
 
-3. *Open the project in VS Code:*
+3. _Open the project in VS Code:_
    Click on the open with vs code button , to make changes to the code using the text editor.
 
    ![Screenshot (130)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/10644887-eb4b-4471-98bb-26e0b1bb4f07)
 
-
-4. *Clearly read the contribution guidelines:*
-   Make sure to follow the guidelines to contribute to this project. 
+4. _Clearly read the contribution guidelines:_
+   Make sure to follow the guidelines to contribute to this project.
 
    ![Screenshot (131)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/342c364a-d908-48a4-9d12-2552298d87bd)
 
-
-5. *Find the Index.html file:*
+5. _Find the Index.html file:_
    Right click the file mentioned and click on "Open with Live Server"
    This will redirect to the web-browser and load the landing page of the project
 
    ![Screenshot (133)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/62044e1a-a644-467d-98ac-eabfac970ed9)
 
-
-
 To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository using GitHub Desktop, follow these steps:
+
 1. **Clone the repository:**
    Open GitHub Desktop and log in to your GitHub account. Go to the "File" menu and select "Clone Repository." Select the RAPIDOC-HEALTHCARE-WEBSITE repository from the list and choose a local path to clone the repository.
 
@@ -170,22 +164,18 @@ If you find this project helpful, please consider giving it a star! ⭐️
 ### Contributing
 
 We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
+
 - Reporting a bug
 - Discussing the current state of the code
 - Submitting a fix
 - Proposing new features
 
-<div>
- 
-<h2 align = "center">Our Contributors ❤️</h2>
-<div align = "center">
- <h3>Thank you for contributing to our repository</h3>
-
-![Contributors](https://contrib.rocks/image?repo=Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-)
+<div align="center">
+  <h3>Thank you for contributing to our repository</h3>
+  <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/graphs/contributors">
+    <img src="https://contributors-img.web.app/image?repo=Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" />
+  </a>
 
 ### Show some ❤️ by starring this awesome repository!
 
 </div>
-
-  
-
