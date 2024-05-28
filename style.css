@@ -1408,13 +1408,16 @@ footer {
 .form-group {
   margin-bottom: 15px; /* Adds bottom margin for form-group */
 }
+
 .form-control {
   width: 50%; 
   /* Full width */
   padding: 10px;
-  border: 1px solid #ccc; /* Light gray border */
-  border-radius: 4px; /* Rounded corners */
-  text-align: center;
+  border: 1px solid #ccc; 
+  /* Light gray border */
+  border-radius: 4px; 
+  /* Rounded corners */
+  /* text-align: center; */
 }
 button {
   background-color: #29888a; /* Blue background for the button */
