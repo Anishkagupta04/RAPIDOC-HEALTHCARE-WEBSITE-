@@ -1411,9 +1411,12 @@ footer {
 .form-control {
   width: 50%; 
   /* Full width */
+
   padding: 10px;
-  border: 1px solid #ccc; /* Light gray border */
-  border-radius: 4px; /* Rounded corners */
+  border: 1px solid #ccc; 
+  /* Light gray border */
+  border-radius: 4px; 
+  /* Rounded corners */
   /* text-align: center; */
 }
 button {
