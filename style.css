@@ -1310,146 +1310,130 @@ section {
 
 
 
-#footer {
+.section.footer {
   background: #000;
-  padding: 0 0 30px 0;
-color: #fff;
-font-size: 14px;
+  padding: 60px 0 30px;
+  color: #fff;
+  font-size: 14px;
 }
 
-#footer .footer-top {
-  background: #000;
-  padding: 60px 0 30px 0;
+.footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-#footer .footer-top .footer-info {
+.footer__logo {
+  flex: 1;
   margin-bottom: 30px;
 }
 
-#footer .footer-top .footer-info h3 {
-  font-size: 50px;
-  margin: 0 0 20px 0;
-  color: #57a6ea;
-  padding: 2px 0 2px 0;
+.footer__logo .logo h1 {
+  font-size: 24px;
+  margin: 0 0 20px;
   line-height: 1;
+  font-weight: 700;
 }
 
-#footer .footer-top .footer-info p {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Roboto", sans-serif;
+.footer__logo p {
+  margin-bottom: 10px;
 }
 
-#footer .footer-top .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #57a6ea;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 4px;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
+.subscribe__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  width: 90%;
 }
 
-#footer .footer-top .social-links a:hover {
-  background: #57a6ea;
-  text-decoration: none;
+.subscribe__box input {
+  padding: 15px 7px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 0.9rem;
 }
 
-#footer .footer-top h4 {
+.subscribe__box input::placeholder {
+  color: #acb2b2;
+}
+
+.subscribe__btn {
+  padding: 15px 25px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.subscribe__btn:hover {
+  background-color: #3fbcc0c1;
+}
+
+.footer__box {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.footer__link-title {
   font-size: 16px;
   font-weight: 600;
-  position: relative;
-  padding-bottom: 12px;
+  margin-bottom: 20px;
+  color:#3291e6
 }
 
-#footer .footer-top .footer-links {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-links ul {
+.footer__menu {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-#footer .footer-top .footer-links ul i {
-  padding-right: 2px;
-  color: #57a6ea;
-  ;
-  font-size: 18px;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul li {
-  padding: 10px 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  row-gap: 1rem;
 }
 
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
+.footer__menu-item {
+  margin-bottom: 10px;
 }
 
-#footer .footer-top .footer-links ul a {
+.footer__link {
   color: #fff;
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-#footer .footer-top .footer-links ul a:hover {
-  color: #57a6ea;
+.footer__link:hover {
+  color: #3fbbc0;
 }
 
-#footer .footer-top .footer-newsletter form {
+.footer__copyright {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 14px;
+  color: #fff;
+  border-top: 1px solid #3fbcc0a4;
   margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 4px;
+  padding-top: 20px;
 }
 
-#footer .footer-top .footer-newsletter form input[type="email"] {
-  border: 0;
-  padding: 4px;
-  width: calc(100% - 110px);
+/* Social Links */
+.footer__menu-item .footer__link i {
+  margin-right: 10px;
+  color: #3fbcc0a4;
+  font-size: 18px;
+  vertical-align: middle;
 }
 
-#footer .footer-top .footer-newsletter form input[type="submit"] {
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: #57a6ea;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 0 4px 4px 0;
-}
 
-#footer .footer-top .footer-newsletter form input[type="submit"]:hover {
-  background: #57a6ea;
-  ;
-}
-
-#footer .copyright {
-  justify-content: center;
-  /* padding-top: 10px; */
-}
 
 /*################----Back to top----################*/
-footer {
-  position: relative;
-  padding: 50px 0;
-}
+
 
 #back-to-top-container {
   position: fixed;
