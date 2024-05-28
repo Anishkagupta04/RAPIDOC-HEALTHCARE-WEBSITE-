@@ -324,6 +324,8 @@ section {
 }
 
 
+
+
 /*################----Home Section----################*/
 #home {
   width: 100%;
@@ -1378,16 +1380,6 @@ footer {
   fill: hsl(214, 50%, 60%); 
 }
 
-.back-to-top:hover {
-  background: #3fbcc0cd;
-  color: #fff;
-}
-
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
-}
-
 
 
 /* Style for pateint portal  */
@@ -1409,15 +1401,14 @@ footer {
 }
 .section-title p {
   text-align: center;
-  color: #fff;
-  font-size: 16px;
-  margin-bottom: 0;
+  color: white;
+  font-size: 20px;
 }
 /* Form styling */
 .form-group {
   margin-bottom: 15px; /* Adds bottom margin for form-group */
 }
-.form-control{
+.form-control2 {
   width: 60%; /* Full width */
   padding: 10px;
   border: 1px solid #ccc; /* Light gray border */
