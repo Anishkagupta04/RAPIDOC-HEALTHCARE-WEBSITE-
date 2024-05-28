@@ -1414,7 +1414,7 @@ footer {
   padding: 10px;
   border: 1px solid #ccc; /* Light gray border */
   border-radius: 4px; /* Rounded corners */
-  text-align: center;
+  /* text-align: center; */
 }
 button {
   background-color: #29888a; /* Blue background for the button */
