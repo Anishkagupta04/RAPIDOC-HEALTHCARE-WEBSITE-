@@ -5,30 +5,25 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-
+ <link rel="shortcut icon" href="images/Screenshot 2024-05-18 at 10.12.21 PM.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
-
+  
   <title>RapiDoc</title>
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
   <!-- CSS Files -->
-  <link href="Css-Files/animate.min.css" rel="stylesheet">
+  <link href="animate.css/animate.min.css" rel="stylesheet">
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="remixicon/remixicon.css" rel="stylesheet">
-  <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
-
-
-                         
+  <link href="swiper/swiper-bundle.min.css" rel="stylesheet">                     
   <link href="patient-portal.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -70,12 +65,9 @@
 
       <a href="#appointment" class="appointment-btn scrollto">
         <span class="d-md-inline">EMERGENCY</span></a>
-
     </div>
   </header>
 
-
-  
 
   <div class="container" style="display:flex ;">
     <div class="content">
@@ -91,7 +83,47 @@
     <img style="position: relative; top: -60px; right: -10rem;" class="sec-img" src="images/rd.png" alt="" />
 
   </div>
+
+
+  <!-- ############# Header ############# -->
+  
+  
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">RapiDoc</a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#home">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">EMERGENCY</span></a>
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <!-- ======= Home Section ======= -->
+  
+  
+  <section id="home" class="d-flex align-items-center">
+    <div class="container">
+      <h1>Welcome to RapiDoc</h1>
+      <h2>Your One-stop digital healthcare destination.<br>Get details about <span class="multiple-text"></span></h2>
+      <a href="#about" class="btn-get-started scrollto">Download App</a>
+    </div>
+    <div class="wall"><video autoplay loop muted plays-inline><source src="2.mp4"></video></div>
+  </section>
+
   <br><br><br><br><br>
+
   <!-- End Home -->
   <main id="main">
 
@@ -286,7 +318,7 @@
           <div class="col-lg-4  col-md-6 d-flex align-items-stretch ">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-dna"></i></div>
-              <h4><a href="Html-Files/blood.html">Blood Bank</a></h4>
+              <h4><a href="blood.html">Blood Bank</a></h4>
               <p>Know the blood banks and blood groups available around you. No one should suffer ỉn emergencies.</p>
             </div>
           </div>
@@ -302,7 +334,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-notes-medical"></i></div>
-              <h4><a href="https://www.medicalnewstoday.com/">Health Post</a></h4>
+              <h4><a href="">Health Post</a></h4>
               <p>Weekly, monthly, yearly or each day, however you like it!</p>
             </div>
           </div>
@@ -312,7 +344,7 @@
       </div>
     </section><!-- End Services Section -->
 
-    <!-- Add Patient Portal Section -->
+       <!-- Add Patient Portal Section -->
 
   <section id="patient-portal" class="patient-portal">
       <div class="container-patientportal">
@@ -352,7 +384,6 @@
 
 
       <!-- Add Forgot Password Link -->
-
 
     <!-- ############# Appointment Section ############# -->
 
@@ -497,7 +528,7 @@
               <div class="member-info">
                 <h4>Dermatologist</h4>
                 <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
+                <div class="nxt-pg"><a href="doc.html"><button type="">Appoint a Doctor</button></a></div>
               </div>
             </div>
           </div>
@@ -508,7 +539,7 @@
               <div class="member-info">
                 <h4>Gynecologist</h4>
                 <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
+                <div class="nxt-pg"><a href="doc.html"><button type="">Appoint a Doctor</button></a></div>
               </div>
             </div>
           </div>
@@ -520,7 +551,7 @@
               <div class="member-info">
                 <h4>Cardiologist</h4>
                 <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
+                <div class="nxt-pg"><a href="doc.html"><button type="">Appoint a Doctor</button></a></div>
               </div>
             </div>
           </div>
@@ -532,7 +563,7 @@
               <div class="member-info">
                 <h4>ENT</h4>
                 <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
+                <div class="nxt-pg"><a href="doc.html"><button type="">Appoint a Doctor</button></a></div>
               </div>
             </div>
           </div>
@@ -674,7 +705,6 @@
         </div>
     </section><!-- End Contact Section -->
 
-
     <!-- Feedback System-->
     <section id="feedback" class="feed">
       <div class="feedback">
@@ -710,7 +740,6 @@
       </div>
     </section>
 
-
   </main><!-- End #main -->
 
   <hr>
@@ -723,8 +752,25 @@
         <div class="row-d" >
 
 
-
-
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>RapiDoc</h3>
+              <p>
+                Address<br>
+                Delhi, India<br><br>
+                <strong>Phone:</strong> <i class="bi bi-phone"></i><a href="tel:+91 1234567890">+91 1234567890</a><br>
+                <strong>Email:</strong> <a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a>
+                <br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
 
 
   <div class="col-lg-3 col-md-6">
@@ -916,9 +962,14 @@
   <script src="swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
+
   <script src="patient-portal.js"></script>
   <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
   <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
-</body>
-
+  </body>
 </html>
