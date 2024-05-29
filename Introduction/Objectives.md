@@ -1,0 +1,12 @@
+# **2.  OBJECTIVES:**
+- Provide a comprehensive online destination for essential healthcare services.
+- Enable users to easily locate nearby clinics, labs, and pharmacies for their medical needs.
+- Keep users informed about blood bank statuses and provide regular health updates through a daily feed.
+- Cater to the accessibility needs of disabled individuals by listing wheelchair-accessible hospitals and clinics.
+- Offer booking services for appointments with top-rated doctors across various specialties.
+- Facilitate normal checkups, and blood tests, and provide crucial information about body temperature ranges and medicine usage.
+- Extend health benefits like boot camps, vaccination drives, and personalized check-ups.
+- Streamline emergency services to help users avoid the rush and get immediate assistance, with real-time updates on bed availability at emergency centers.
+- Provide users with the latest medical insights and health tips through newsletters.
+- Ensure seamless integration of digital solutions for a reliable healthcare experience.
+- Commit to providing a seamless and efficient healthcare experience for all users.
