@@ -15,7 +15,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const { context, github } = require('@actions/github');
+            const github = require('@actions/github');
+            const context = github.context;
             const pr_number = context.payload.pull_request.number;
             const comment = "Thank you for your contribution! 🎉 Your pull request has been successfully merged.";
             await github.rest.issues.createComment({
