@@ -6,72 +6,147 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>News RapiDoc</title>
   <!-- favicon -->
-  <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32" />
-  <!-- Bootsratp CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
   <!-- Local CSS -->
-  <link rel="stylesheet" href="Css-Files/style.css" />
+  <link rel="stylesheet" href="../Css-Files/news.css" />
 </head>
 
 <body>
   <!-- This is Bootsratp Nav bar -->
-  <nav id="navbar">
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-              <div class="form-check form-switch">
-                <input type="checkbox" id="darkModeToggle">
-                <label class="form-check-label" for="darkModeToggle">
-                  <svg class="moon"  xmlns="http://www.w3.org/2000/svg"
-                  width="16" height="16"
-                    viewBox="0 0 512 512">
-                    <path fill="#fff"
-                      d="M268.279,496c-67.574,0-130.978-26.191-178.534-73.745S16,311.293,16,243.718A252.252,252.252,0,0,1,154.183,18.676a24.44,24.44,0,0,1,34.46,28.958,220.12,220.12,0,0,0,54.8,220.923A218.746,218.746,0,0,0,399.085,333.2h0a220.2,220.2,0,0,0,65.277-9.846,24.439,24.439,0,0,1,28.959,34.461A252.256,252.256,0,0,1,268.279,496ZM153.31,55.781A219.3,219.3,0,0,0,48,243.718C48,365.181,146.816,464,268.279,464a219.3,219.3,0,0,0,187.938-105.31,252.912,252.912,0,0,1-57.13,6.513h0a250.539,250.539,0,0,1-178.268-74.016,252.147,252.147,0,0,1-67.509-235.4Z"
-                      class="ci-primary"></path>
-                  </svg>
-                  <svg class="sun"  xmlns="http://www.w3.org/2000/svg" width="16"
-                    height="16" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16">
-                    <path
-                      d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-                      fill="#fff9e5"></path>
-                  </svg>
-                </label>
-        </div>
-      </div>
+  <header class="header_container">
+    <div class="img">
+      <img id="rd-logo" style="width: 90px; height: auto;" src="/images/rd.png">
+    </div>
+    <div class="text" style="margin-left: -28rem; padding-top: 28px;">
+
+      <h1 class="logo me-auto"><a style="text-decoration: none; color: #55a5ea;" href="index.html">RapiDoc</a></h1>
+    </div>
+    <nav class="nav_menu">
+
+      <ul class="nav_link">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="Html-Files/news.html">News</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#patient-portal">patient Portal</a></li>
+        <li><a href="#doctors">Doctor</a></li>
+        <li><a href="Html-Files/contact.html">Contact us</a></li>
+      </ul>
     </nav>
-  </nav>
+    </div>
+  </header>
   <!-- This is basic header of website -->
+
+
   <div class="head container">
     <h3>
       Top News <span class="badge text-bg-secondary">by RapiDoc</span>
     </h3>
     <span class="line"></span>
   </div>
-  <!-- This is div where all the News are Fetched from API -->
-  <div id="newsBox"></div>
-  <div id="spinner" class="mySpin spinner-border text-warning"></div>
+
+  <!-- news System-->
+  <section id="news" class="feed">
+    <div class="news">
+      <h1>Top News by RapiDoc is Coming soon.</h1>
+      <p>Your Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum alias culpa earum dicta ullam atque doloribus
+        quisquam, tempora eos maxime sint. Labore porro deserunt dignissimos est optio. Modi, alias doloremque!.</p>
+      <p class="ques">.......</p>
+      <p class="ques">......</p>
+    </div>
+  </section>
+
+
   <!-- This is Basic Dark Fotter -->
-  <footer id="sticky-footer" class="flex-shrink-0 py-2 bg-dark text-white-50">
-    <div class="container text-center">
-      <small>Copyright &copy;2024 &nbsp; RapiDoc</small>
+  <footer>
+    <div class="row">
+      <!-- map -->
+      <div class="col" id="col1">
+        <div class="contact-location">
+          <!-- <img style="height: 100%;;" src="img/home icon.webp" alt="" class="logo"> -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"
+            width="100%" height="200px" style="border: 0; padding: 2rem 2em 0 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <!-- map -->
+
+      <!-- contact -->
+      <div class="col" id="col2">
+        <h3>
+          Contact
+          <div class="underline"><span></span></div>
+        </h3>
+
+        <p><a href="">contact@rapidoc.com</a></p>
+        <p><a href="">+91 1234567890</a></p>
+      </div>
+      <!-- contact -->
+
+      <!-- Links -->
+      <div class="col" id="col3">
+        <h3>
+          Quick Links
+          <div class="underline"><span></span></div>
+        </h3>
+        <div class="quick-links" id="bottom">
+          <!-- <div class="footer-title">
+                        QUICK LINKS
+                    </div> -->
+          <div class="quick-links-info">
+            <div><a href="./index.html">Home</a></div>
+            <div><a href="#about">About us</a></div>
+            <div><a href="./Html-Files/contact.html">Contact us</a></div>
+            <div><a href="#services">Services</a></div>
+            <div><a href="#doctors">Doctors</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- links -->
+
+      <div class="col" id="col4">
+        <h3>
+          SOCIAL
+          <div class="underline"><span></span></div>
+        </h3>
+        <div class="social-icons">
+
+          <div class="social">
+            <a href="#" target="_blank"><img src="#" alt="">Instagram</a>
+
+          </div>
+          <div class="social">
+            <a href="#" target="_blank"><img src="" alt="">LinkedIn</a>
+
+          </div>
+          <div class="social">
+            <a href="#"><img src="" alt="">Facebook</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div id="copyright" style="text-align: center">
+      <p style="align-items: center">
+        © <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+        Reserved
+      </p>
+      <p>Made with ❤️ by RapiDoc</p>
     </div>
   </footer>
 
-  <!-- Bootsratp js -->
-  <script src="app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-    crossorigin="anonymous"></script>
 </body>
+<!-- Bootsratp js -->
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+  integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 
 </html>
