@@ -1427,7 +1427,8 @@ section {
   padding-top: 30px;
   font-size: 14px;
   color: #fff;
-  border-top: 1px solid #3fbcc0a4;
+/*   removed lines above copy right section */
+/*   border-top: 1px solid #3fbcc0a4; */
   margin-top: 30px;
   padding-top: 20px;
 }
