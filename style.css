@@ -209,6 +209,16 @@ h6 {
   border-color: #55a5ea;
 }
 
+#navbar li a{ 
+  color: white;
+}
+
+#navbar a:hover{
+  color:  #3fbcc0a4;
+  text-decoration: underline;
+  text-decoration-color: #3fbcc0a4;
+}
+
 /*################----Mobile Navigation----################*/
 
 .mobile-nav-toggle {
