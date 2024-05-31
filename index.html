@@ -36,14 +36,85 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <style>
       /* Ensure the input takes up full width */
-        .iti--allow-dropdown input {
-            padding-left: 50px;
-            background-color: black; /*Adjust padding to prevent overlap*/
-        }
-        .iti.iti--allow-dropdown{
-          margin-left: 250px;
-        }
-       
+       /* Ensure the input takes up full width */
+/* Ensure the input takes up full width */
+.iti--allow-dropdown input {
+    padding-left: 50px;
+    background-color: black; /* Adjust padding to prevent overlap */
+}
+
+.iti.iti--allow-dropdown {
+    margin-left: 250px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    text-align: left;
+    flex: 1;
+    padding: 20px;
+}
+
+.sec-img {
+    max-width: 50%;
+    width: 600px;
+    height: 600px;
+    margin-left: auto;
+}
+
+.btn-get-started {
+    display: inline-block;
+    background-color: #55a5ea;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sec-img {
+        max-width: 100%;
+        margin: 20px 0;
+        position: relative;
+        top: 0;
+        right: 0;
+        
+    }
+
+    .content {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .sec-img {
+        max-width: 100%;
+        margin: 20px 0;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+}
 
     </style>
 </head>
@@ -79,20 +150,21 @@
 
   <div class="container" style="display:flex ;">
     <div class="content">
-      <h1 style="font-size: 65px;">
-        Welcome to <span style="color: #55a5ea;">RapiDoc!</span> <br /> Your one-stop digital <br> healthcare
-        destination
-      </h1>
 
-      <h4>
-        <!-- <a href="#about" class="btn-get-started scrollto">Download App</a> -->
-      </h4>
+        <h1 style="font-size: 65px;">
+            Welcome to <span style="color: #55a5ea;">RapiDoc!</span> <br /> Your one-stop digital <br> healthcare
+            destination
+        </h1>
+        <h4>
+            <a href="#about" class="btn-get-started scrollto">Download Now</a>
+        </h4>
+      </div>
+      <img class="sec-img" src="images/rd.png" alt="" />
+  
     </div>
-    <img style="position: relative; top: -60px; right: -10rem;" class="sec-img" src="images/rd.png" alt="" />
+<br><br><br><br><br>
+<!-- End Home -->
 
-  </div>
-  <br><br><br><br><br>
-  <!-- End Home -->
   <main id="main">
 
 
