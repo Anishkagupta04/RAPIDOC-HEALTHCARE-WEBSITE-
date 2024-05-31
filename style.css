@@ -2,6 +2,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
   background-color: #000;
+  overflow-x: hidden;
 }
 
 a {
@@ -22,7 +23,6 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
-
 
 .nav_link li {
   padding: 5px 20px;
@@ -60,7 +60,6 @@ h6 {
   padding-top: 80px;
 }
 
-
 /* .container a:hover {
   text-decoration: underline 2px;
 } */
@@ -94,7 +93,6 @@ h6 {
   display: inline;
   font-size: xx-large;
   color: #55a5ea;
-
 }
 
 .container-head {
@@ -103,8 +101,6 @@ h6 {
   grid-template-columns: 1fr 2fr 13fr 3fr;
   margin-top: 0px;
 }
-
-
 
 /*---------------------parallax effect after about------------*/
 .parallax-container {
@@ -125,8 +121,6 @@ h6 {
   margin-bottom: 20px;
   border-radius: 10px;
 }
-
-
 
 /**
 * Appointment Button *
@@ -158,14 +152,23 @@ h6 {
 
 /*################----Navigation----################*/
 
-
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: 0;
+  background-color: black;
+  width: 100vw;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 2px solid white;
 }
 
-.navbar ul {
+.navbar nav ul {
   margin: 0;
-  padding: 0;
+  padding-right: 2rem;
   display: flex;
   list-style: none;
   align-items: center;
@@ -173,9 +176,10 @@ h6 {
 
 .navbar li {
   position: relative;
+  margin-right: 2rem;
 }
 
-.navbar>ul>li {
+.navbar > ul > li {
   position: relative;
   white-space: nowrap;
   padding: 8px 0 8px 20px;
@@ -204,17 +208,17 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #55a5ea;
   border-color: #55a5ea;
 }
 
-#navbar li a{ 
+#navbar li a {
   color: white;
 }
 
-#navbar a:hover{
-  color:  #3fbcc0a4;
+#navbar a:hover {
+  color: #3fbcc0a4;
   text-decoration: underline;
   text-decoration-color: #3fbcc0a4;
 }
@@ -237,9 +241,10 @@ h6 {
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
+    font-size: 1rem;
   }
 
-  .navbar ul {
+  .navbar nav ul {
     display: none;
   }
 }
@@ -249,8 +254,6 @@ h6 {
   overflow: hidden;
   top: 0;
   right: 0;
-  left: 0;
-  bottom: 0;
   background: rgba(28, 47, 65, 0.9);
   transition: 0.3s;
   z-index: 999;
@@ -275,7 +278,7 @@ h6 {
   transition: 0.3s;
 }
 
-.navbar-mobile>ul>li {
+.navbar-mobile > ul > li {
   padding: 0;
 }
 
@@ -288,7 +291,7 @@ h6 {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
   color: #3fbcc0c6;
 }
 
@@ -326,7 +329,7 @@ section {
 }
 
 .section-title h2::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 120px;
@@ -337,7 +340,7 @@ section {
 }
 
 .section-title h2::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 40px;
@@ -350,8 +353,6 @@ section {
 .section-title p {
   margin-bottom: 0;
 }
-
-
 
 /*################----Home Section----################*/
 #home {
@@ -447,11 +448,9 @@ section {
   }
 }
 
-
-
 /*################----Featured----################*/
 
-.row{
+.row {
   display: flex;
   justify-content: center;
   /* border: 2px solid red; */
@@ -476,7 +475,7 @@ section {
 }
 
 .featured-services .icon-box::before {
-  content: '';
+  content: "";
   position: absolute;
   background: #000;
   right: 0;
@@ -574,8 +573,6 @@ section {
   color: greenyellow;
 }
 
-
-
 /*################----About----################*/
 .about .icon-boxes h4 {
   font-size: 18px;
@@ -669,7 +666,7 @@ section {
 }
 
 .about .play-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 50%;
@@ -680,11 +677,11 @@ section {
   border-bottom: 10px solid transparent;
   border-left: 15px solid #fff;
   z-index: 100;
-  transition: all .5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: all 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .about .play-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 120px;
   height: 120px;
@@ -702,7 +699,7 @@ section {
 }
 
 .about .play-btn:hover::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 50%;
@@ -743,8 +740,6 @@ section {
   }
 }
 
-
-
 /*################----Counts----################*/
 .counts {
   /* padding-top: 30px; */
@@ -778,7 +773,6 @@ section {
   align-items: center;
   justify-content: space-between;
   /* flex-wrap: wrap; */
-
 }
 
 .counts .count-box i {
@@ -835,33 +829,39 @@ section {
   color: #55a5ea;
 }
 
-
-
 /*################----Services----################*/
-.services .icon-box {
+.services .container {
+  display: block;
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.services .container .row {
+  display: flex;
+  justify-content: flex-start;
+}
+.services .container .row .col-lg-4 {
+  margin-right: 2rem;
   text-align: center;
-  margin-left: 80px;
-  margin-right: 80px;
+  min-width: 25rem;
+}
+
+.services .container .row .col-lg-4 .icon-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   border: 1px solid #0a0a0a;
-  padding: 30px 20px;
   transition: all ease-in-out 0.3s;
   background-color: #1c413b;
 }
 
 .services .icon-box .icon {
   margin: 0 auto;
-  width: 64px;
-  height: 64px;
   background: #1977cc;
-  border-radius: 5px;
-  transition: all .3s ease-out 0s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 150px;
+  transition: all 0.3s ease-out 0s;
   margin-bottom: 20px;
   transform-style: preserve-3d;
 }
@@ -873,14 +873,14 @@ section {
 
 .services .icon-box .icon::before {
   position: absolute;
-  content: '';
+  content: "";
   left: -8px;
   top: -8px;
   height: 100%;
   width: 100%;
   background: #badaf7;
   border-radius: 5px;
-  transition: all .3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
 }
 
@@ -898,8 +898,6 @@ section {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
-
-
 }
 
 .services .icon-box:hover {
@@ -923,8 +921,6 @@ section {
 .services .icon-box:hover p {
   color: #111111;
 }
-
-
 
 /*################----Appointments----################*/
 .layout {
@@ -961,7 +957,6 @@ section {
 .appointment .php-email-form textarea:focus,
 .appointment .php-email-form select:focus {
   border-color: #3fbcc0a6;
-
 }
 
 .appointment .php-email-form input,
@@ -987,9 +982,6 @@ section {
 .appointment .php-email-form button[type="submit"]:hover {
   background: #3fbcc0bd;
 }
-
-
-
 
 /*################----Doctors----################*/
 .doctors {
@@ -1045,7 +1037,7 @@ section {
 }
 
 .doctors .member span::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 50px;
@@ -1067,11 +1059,8 @@ section {
 }
 
 .doctors .nxt-pg button:hover {
-
   background: #55a5ea;
 }
-
-
 
 /*################----Contact----################*/
 .contact .info {
@@ -1121,7 +1110,6 @@ section {
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
   background: #55a5ea;
-
 }
 
 .contact .php-email-form {
@@ -1138,7 +1126,6 @@ section {
   border-radius: 10px;
   box-shadow: none;
   font-size: 14px;
-
 }
 
 .contact .php-email-form input {
@@ -1183,14 +1170,14 @@ section {
   }
 }
 
-
 /*################--feedback###############*/
 
 .feedback {
   border-radius: 1rem;
   background-color: #fff;
   padding: 2rem 4rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   margin: 50px;
   width: 60%;
   margin-left: 250px;
@@ -1199,7 +1186,7 @@ section {
 
 .feedback h1 {
   color: black;
-  font-size: 2.0rem;
+  font-size: 2rem;
   margin-bottom: 0.3rem;
   font-family: "Poppins", sans-serif;
 }
@@ -1244,7 +1231,8 @@ section {
   margin-bottom: 0.6rem;
 
   &:active {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   }
 }
 
@@ -1252,7 +1240,6 @@ section {
   width: 40%;
   display: flex;
   justify-content: space-between;
-
 }
 
 .one {
@@ -1282,7 +1269,6 @@ section {
 
   &:checked::before {
     background-color: #1977cc;
-
   }
 }
 
@@ -1319,8 +1305,7 @@ section {
 
   .button:active {
     background-color: white;
-    transform: scale(1.0);
-
+    transform: scale(1);
   }
 
   .button:hover {
@@ -1328,13 +1313,11 @@ section {
   }
 }
 
-
-
 #footer {
   background: #000;
   padding: 0 0 30px 0;
-color: #fff;
-font-size: 14px;
+  color: #fff;
+  font-size: 14px;
 }
 
 #footer .footer-top {
@@ -1376,13 +1359,13 @@ font-size: 14px;
   transition: 0.3s;
 }
 /* Importing Google font - Open Sans */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .footer {
@@ -1445,7 +1428,7 @@ font-size: 14px;
   background: none;
   width: 100%;
   outline: none;
-  border: 1px solid #7489C6 ;
+  border: 1px solid #7489c6;
   caret-color: #fff;
   color: #fff;
   padding-left: 10px;
@@ -1455,7 +1438,7 @@ font-size: 14px;
   color: #ccc;
 }
 
- .footer-col form button {
+.footer-col form button {
   background: #fff;
   border: none;
   color: #08434551;
@@ -1481,7 +1464,7 @@ font-size: 14px;
   color: #afb6c7;
 }
 
-.footer-col .icons i:hover  {
+.footer-col .icons i:hover {
   color: #fff;
 }
 
@@ -1593,7 +1576,6 @@ font-size: 14px;
 
 #footer .footer-top .footer-newsletter form input[type="submit"]:hover {
   background: #57a6ea;
-  ;
 }
 
 #footer .copyright {
@@ -1648,8 +1630,6 @@ footer {
   opacity: 1;
 }
 
-
-
 /* Style for pateint portal  */
 /* -----***************************************-----  */
 .patient-portal {
@@ -1685,7 +1665,6 @@ footer {
   margin-bottom: 15px;
   /* Adds bottom margin for form-group */
 }
-
 
 .forgot-password {
   margin-top: 20px;
