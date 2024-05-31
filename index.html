@@ -34,61 +34,84 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <style>
       /* Ensure the input takes up full width */
-        .iti--allow-dropdown input {
-            padding-left: 50px;
-            background-color: black; /*Adjust padding to prevent overlap*/
-        }
-        .iti.iti--allow-dropdown{
-          margin-left: 250px;
-        }
-        .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+       /* Ensure the input takes up full width */
+/* Ensure the input takes up full width */
+.iti--allow-dropdown input {
+    padding-left: 50px;
+    background-color: black; /* Adjust padding to prevent overlap */
+}
+
+.iti.iti--allow-dropdown {
+    margin-left: 250px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    text-align: left;
+    flex: 1;
+    padding: 20px;
+}
+
+.sec-img {
+    max-width: 50%;
+    height: auto;
+    margin-left: auto;
+}
+
+.btn-get-started {
+    display: inline-block;
+    background-color: #55a5ea;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
         flex-wrap: wrap;
-        width: 100%;
-        margin: 0;
-        padding: 0;
+        justify-content: center;
+    }
+
+    .sec-img {
+        max-width: 100%;
+        margin: 20px 0;
+        position: relative;
+        top: 0;
+        right: 0;
     }
 
     .content {
-        text-align: left;
-        flex: 1;
-        padding: 20px;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        text-align: center;
+        padding: 10px;
     }
 
-    .sec-video {
-        flex: 1;
-        width: 20px;
-        height: auto; /* Maintain aspect ratio */
+    .sec-img {
+        max-width: 100%;
+        margin: 20px 0;
+        position: relative;
+        top: 0;
+        right: 0;
     }
+}
 
-    .btn-get-started {
-        display: inline-block;
-        background-color: #55a5ea;
-        color: #fff;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-top: 20px;
-    }
-
-    @media screen and (max-width: 768px) {
-        .container {
-            flex-direction: column;
-        }
-
-        .content {
-            text-align: center;
-            padding: 10px;
-        }
-
-        .sec-video {
-            margin-top: 20px;
-            width: 100%;
-            height: auto; /* Maintain aspect ratio */
-        }
-    }
     </style>
 </head>
 
@@ -126,11 +149,12 @@
             destination
         </h1>
         <h4>
-            <a href="#download" class="btn-get-started scrollto">Download Now</a>
+            <a href="#about" class="btn-get-started scrollto">Download Now</a>
         </h4>
+      </div>
+      <img class="sec-img" src="images/rd.png" alt="" />
+  
     </div>
-    <video class="sec-video" src="2.mp4" controls></video>
-</div>
 <br><br><br><br><br>
 <!-- End Home -->
 
