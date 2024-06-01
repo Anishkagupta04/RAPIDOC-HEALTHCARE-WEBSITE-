@@ -761,16 +761,14 @@ section {
   align-content: space-evenly;
   border-radius: 15px;
   /* margin-top: 10px; */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-/* .row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(var(--bs-gutter-y)* -1);
-  margin-right: calc(var(--bs-gutter-x) / -2);
-  margin-left: calc(var(--bs-gutter-x) / -2);
-} */
+
+.counts .count-box:hover {
+  transform: translateY(-10px);
+  box-shadow: -10px -5px 50px 0 rgba(0, 0, 0, 0.2);
+  background-color: #3fbcc0a4;
+}
 
 .row-d {
   display: flex;
@@ -778,7 +776,6 @@ section {
   align-items: center;
   justify-content: space-between;
   /* flex-wrap: wrap; */
-
 }
 
 .counts .count-box i {
