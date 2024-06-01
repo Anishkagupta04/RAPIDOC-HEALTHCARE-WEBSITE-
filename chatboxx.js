@@ -8,7 +8,7 @@ let userMessage = null; // Variable to store user's message
 let appointmentStep = 0; // Variable to track the appointment scheduling steps
 let selectedDoctor = null; // Variable to store the selected doctor
 let appointmentDetails = {}; // Object to store appointment details
-const API_KEY = "PASTE-YOUR-API-KEY"; // Paste your API key here
+
 const inputInitHeight = chatInput.scrollHeight;
 
 const predefinedQA = {
