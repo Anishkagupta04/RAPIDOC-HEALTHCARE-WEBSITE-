@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
-
+  <script src="https://unpkg.com/scrollreveal"></script>
   <title>RapiDoc</title>
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -971,6 +971,22 @@
   <script src="patient-portal.js"></script>
  
   <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
+  
+  <script>
+    ScrollReveal({ 
+        //reset: true ,
+        distance : '60px' ,
+        duration:2500,
+        delay:400
+    });
+    ScrollReveal().reveal('.d-flex,#home', { delay: 500 , origin:'top' });
+    ScrollReveal().reveal('.logo , .navbar,.content', { delay: 500 , origin:'left' });
+    ScrollReveal().reveal('.sec-img', { delay: 500 , origin:'right' });
+    ScrollReveal().reveal('.col-md-6,.about', { delay: 600 , origin:'left' });
+    ScrollReveal().reveal('.col-lg-3', { delay: 500 , origin:'left' });
+    ScrollReveal().reveal('.feedback', { delay: 400 , origin:'left' });
+    ScrollReveal().reveal('.footer', { delay: 400 , origin:'bottom' });
+  </script>
 </body>
 
 </html>
