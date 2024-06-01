@@ -13,13 +13,7 @@ body{
 }
 .logo {
     cursor: pointer;
-    transition: transform 0.3s ease;
 }
-
-.logo:hover {
-    transform: scale(1.05);
-}
-
 .slide-content{
     margin: 0 40px;
     overflow: hidden;
