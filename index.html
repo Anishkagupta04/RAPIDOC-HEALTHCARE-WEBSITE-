@@ -27,7 +27,11 @@
   <link href="remixicon/remixicon.css" rel="stylesheet">
   <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
 
-
+  <link rel="stylesheet" href="chatbox.css">
+  <!-- Google Fonts Link For Icons chatboxx -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <script src="chatboxx.js" defer></script>
                          
   <link href="patient-portal.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -116,7 +120,80 @@
     }
 }
 
-    </style>
+      /*Preloader CSS*/
+.pre{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s ease-out, visibility 2s ease-out;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999; 
+}
+
+.pre--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #55a5ea;
+  animation: spin 3s linear infinite;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3fbcc0c6;
+  animation: spin 3s linear infinite;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+.loader--hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+</style>
+    
     <link rel="stylesheet" href="chatbox.css">
      <!-- Google Fonts Link For Icons chatboxx -->
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -125,66 +202,58 @@
 </head>
 
 <body>
+  <div class="pre">
+    <div class="loader"></div>
+  </div>
       <!-- ############# Header ############# -->
   
-      <header class="header_container">
-        <div class="img">
-        <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
-      </div>
-      
-      </div>
-      <nav class="nav_menu">
 
-        <ul class="nav_link">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="Html-Files/news.html">News</a></li>
-          <a href="dex.html"><button>Service</button></a>
-          <li><a href="#patient-portal">patient Portal</a></li>
-          <li><a href="#doctors">Doctor</a></li>
-          <li><a href="Html-Files/contact.html">Contact us</a></li>
-          <a href="login.html"><button>Sign in/Sign up</button></a>
-        </ul>
-      </nav>
+    <button class="chatbot-toggler">
+      <span class="material-symbols-rounded">mode_comment</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h2>Chatbot</h2>
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Hi there 👋<br>How can I help you today?</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
       </div>
-    </header>
-    <ul class="chatbox">
-      <li class="chat incoming">
-        <span class="material-symbols-outlined">smart_toy</span>
-        <p>Hi there 👋<br>How can I help you today?</p>
-      </li>
-    </ul>
-    <div class="chat-input">
-      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-      <span id="send-btn" class="material-symbols-rounded">send</span>
     </div>
-  </div>
-
-
   <!-- ############# Header ############# -->
 
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
+  <header class="header_container">
+    <div class="img">
+    <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
+  </div>
 
-      <h1 class="logo me-auto"><a href="index.html">RapiDoc</a></h1>
+  </div>
+  <nav class="nav_menu">
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#home">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+    <ul class="nav_link">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="Html-Files/news.html">News</a></li>
+      <a href="dex.html"><button>Service</button></a>
+      <li><a href="#patient-portal">patient Portal</a></li>
+      <li><a href="#doctors">Doctor</a></li>
+      <li><a href="Html-Files/contact.html">Contact us</a></li>
+      <a href="login.html"><button>Sign in/Sign up</button></a>
+    </ul>
+  </nav>
+  </div>
+</header>
 
-      <a href="#appointment" class="appointment-btn scrollto">
-        <span class="d-md-inline">EMERGENCY</span></a>
 
-    </div>
-  </header>
-
+  
 
   <div class="container" style="display:flex ;">
     <div class="content">
@@ -204,6 +273,7 @@
 <!-- End Home -->
 
   <main id="main">
+
 
 
     <!-- ############ Featured Services Section ############ -->
@@ -837,7 +907,7 @@
           <ul class="links">
             <li><a href="./index.html">Home</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="./Html-Files/contact.html">Contact Us</a></li>
+            <li><a href="./Html-Files/contact.html">Contaact Us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#doctors">Doctors</a></li>
           </ul>
@@ -978,9 +1048,9 @@
   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
   <script src="patient-portal.js"></script>
- 
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
   <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
-  
+
   <script>
     ScrollReveal({ 
         //reset: true ,
@@ -995,6 +1065,28 @@
     ScrollReveal().reveal('.col-lg-3', { delay: 500 , origin:'left' });
     ScrollReveal().reveal('.feedback', { delay: 400 , origin:'left' });
     ScrollReveal().reveal('.footer', { delay: 400 , origin:'bottom' });
+  </script>
+  <script>
+
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".pre");
+
+  loader.classList.add("pre--hidden");
+
+  loader.addEventListener("transitionend", () => {
+  document.body.removeChild(loader);
+  });
+  });
+
+  window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+  document.body.removeChild(loader);
+  });
+  });
   </script>
 </body>
 
