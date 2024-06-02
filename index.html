@@ -115,7 +115,78 @@
         right: 0;
     }
 }
+/*Preloader CSS*/
+.pre{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s ease-out, visibility 2s ease-out;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999; 
+}
 
+.pre--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #55a5ea;
+  animation: spin 3s linear infinite;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3fbcc0c6;
+  animation: spin 3s linear infinite;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+.loader--hidden{
+  opacity: 0;
+  visibility: hidden;
+}
     </style>
     <link rel="stylesheet" href="chatbox.css">
      <!-- Google Fonts Link For Icons chatboxx -->
@@ -125,6 +196,9 @@
 </head>
 
 <body>
+  <div class="pre">
+    <div class="loader"></div>
+  </div>
       <!-- ############# Header ############# -->
   
       <header class="header_container">
@@ -332,7 +406,7 @@
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <i class="fas fa-location-arrow"></i>
+              <i class="fas fa-flask-vial"></i>
               <span data-purecounter-start="0" data-purecounter-end="23" data-purecounter-duration="1"
                 class="purecounter"></span>
               <p><strong>Nearest Labs</strong> <br><br>Test labs and clinics near you.</p><br>
@@ -995,6 +1069,28 @@
     ScrollReveal().reveal('.col-lg-3', { delay: 500 , origin:'left' });
     ScrollReveal().reveal('.feedback', { delay: 400 , origin:'left' });
     ScrollReveal().reveal('.footer', { delay: 400 , origin:'bottom' });
+  </script>
+          <script>
+
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".pre");
+
+  loader.classList.add("pre--hidden");
+
+  loader.addEventListener("transitionend", () => {
+  document.body.removeChild(loader);
+  });
+  });
+
+  window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+  document.body.removeChild(loader);
+  });
+  });
   </script>
 </body>
 
