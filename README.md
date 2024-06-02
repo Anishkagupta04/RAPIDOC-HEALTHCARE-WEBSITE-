@@ -1,29 +1,38 @@
+<center>
+
 ![RapidDoc](https://camo.githubusercontent.com/dd5e3080a7adc2ead8f86cbbd6577cee0a38439c0ebf195021ce41587b0a405f/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313430302f312a633459675258595161794f5657785633376f757272772e706e67)
-
-## RapiDoc
-
-[💬 Join the community on Slack](https://join.slack.com/t/newworkspace-ley5153/shared_invite/zt-2isvflg78-tMexsn50mxdwY4BEJ_W11g)<br>
+</center>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+   :root{
+            --ff-philosopher: "Philosopher", sans-serif;
+            --ff-poppins: "Poppins", sans-serif;
+        }
+</style>
 
 <div align = "center">
 
 <div align="center">
 
-# RapiDoc.com
+# <p style="font-family:var(--ff-philosopher);">RapiDoc.com</p>
+[💬 Join the community on Slack](https://join.slack.com/t/newworkspace-ley5153/shared_invite/zt-2isvflg78-tMexsn50mxdwY4BEJ_W11g)<br>
 
-<i>An online platform providing comprehensive information on nearby hospitals and healthcare facilities!</i>
+<i><p style="font-family:var(--ff-philosopher);">An online platform providing comprehensive information on nearby hospitals and healthcare facilities!</p></i>
 
 </div>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<table align="center">
+<table align="center" style="font-family:var(--ff-philosopher);">
     <thead align="center">
         <tr border: 1px;>
-            <td><b>🌟 Stars</b></td>
+            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="20" height="20"> Stars</b></td>
             <td><b>🍴 Forks</b></td>
-            <td><b>🐛 Issues</b></td>
-            <td><b>🔔 Open PRs</b></td>
-            <td><b>🔕 Closed PRs</b></td>
+            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Lady%20Beetle.png" width="20" height="20"> Issues</b></td>
+            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Check%20Mark%20Button.png" width="20" height="20"> Open PRs</b></td>
+            <td><b><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Cross%20Mark.png" width="20" height="20"> Closed PRs</b></td>
         </tr>
      </thead>
     <tbody>
@@ -37,9 +46,9 @@
     </tbody>
 </table>
 </div>
-<h3> Featured In</h3>
+<h3 style="font-family:var(--ff-philosopher);"> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Featured In</h3>
 
-<table>
+<table style="font-family:var(--ff-philosopher);">
 
    <tr>
       <th>Event Name</th>
@@ -51,20 +60,23 @@
    </tr>
 
 </table>
-<h3>Project Overview</h3>
-It is an online platform which enables you to get information about your nearest hospitals and healthcare facilities including important information like blood availablity in emergency, Opds and beds availability in your nearest/desired hospitals. It aims to address health-related issues. It is a one-stop destination for all your medical needs.
+<h3 style="font-family:var(--ff-philosopher);"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Writing%20Hand%20Light%20Skin%20Tone.png" alt="Rocket" width="40" height="40" />Project Overview</h3>
+<p style="font-family:var(--ff-philosopher);">
+It is an online platform which enables you to get information about your nearest hospitals and healthcare facilities including important information like blood availablity in emergency, Opds and beds availability in your nearest/desired hospitals. It aims to address health-related issues. It is a one-stop destination for all your medical needs.</p>
 
-## Technology Stack
+## <p style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High%20Voltage.png" alt="High Voltage" width="40" height="40" />Tech Stack</p>
+<center><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white"></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black"></a>
+<a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/Bootstrap-7952B3.svg?style=for-the-badge&logo=Bootstrap&logoColor=black"></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=black"></a></center>
 
-- **Frontend**: HTML5, CSS, JavaScript, BootStrap
-- **IDE**: VS Code/Google IDX
-- **Version Control**: Git and GitHub
+<br><br>
 
-## Get Started
+## <p style="font-family:var(--ff-philosopher);font-size:3rem;"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Get Started</p>
 
 ### Setup and Installation
 
-To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository, follow these steps:
+<p style="font-family:var(--ff-philosopher);">To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository, follow these steps:</p>
 
 1. **Fork the Repository:**
    Click on the "Fork" button on the repository's GitHub page to create a copy of the repository in your GitHub account.
@@ -104,83 +116,28 @@ To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository, follow these steps:
 9. **Create a Pull Request:**
    Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
 
-To run the project locally in your System
+<p style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><b>Contributing
 
-1. _Fork the Repository:_
-   Click on the "Fork" button on the repository's GitHub page to create a copy of the repository in your GitHub account.
-
-   ![Screenshot (127)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/164ba1a7-d42e-4e4d-acbd-4bc81cf387d5)
-
-   ![Screenshot (128)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/21a47905-69ee-448f-a5c0-71ceb3c694d5)
-
-2. _Clone the repository:_
-   Clone the forked repository to your local machine using the following command in your terminal.
-
-   ```bash
-   git clone https://github.com/<your-github-username>/RAPIDOC-HEALTHCARE-WEBSITE
-
-   ![Screenshot (129)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/88249cc4-5849-4472-b190-9d9bad2bb236)
-
-   ```
-
-3. _Open the project in VS Code:_
-   Click on the open with vs code button , to make changes to the code using the text editor.
-
-   ![Screenshot (130)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/10644887-eb4b-4471-98bb-26e0b1bb4f07)
-
-4. _Clearly read the contribution guidelines:_
-   Make sure to follow the guidelines to contribute to this project.
-
-   ![Screenshot (131)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/342c364a-d908-48a4-9d12-2552298d87bd)
-
-5. _Find the Index.html file:_
-   Right click the file mentioned and click on "Open with Live Server"
-   This will redirect to the web-browser and load the landing page of the project
-
-   ![Screenshot (133)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/62044e1a-a644-467d-98ac-eabfac970ed9)
+<p style="font-family:var(--ff-philosopher);font-size:2rem;">We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's.
 
 To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository using GitHub Desktop, follow these steps:
 
-1. **Clone the repository:**
-   Open GitHub Desktop and log in to your GitHub account. Go to the "File" menu and select "Clone Repository." Select the RAPIDOC-HEALTHCARE-WEBSITE repository from the list and choose a local path to clone the repository.
-
-2. **Switch to the correct branch:**
-   Once the repository is cloned, make sure you are on the correct branch where you want to make your changes. You can switch branches using the "Branch" menu in GitHub Desktop.
-
-3. **Make and commit changes:**
-   Make the desired changes to the code in your local repository. After making changes, stage them by clicking the "+" button next to the changed files. Enter a commit message describing your changes and click the "Commit" button.
-
-4. **Push changes to GitHub:**
-   After committing your changes, push them to your fork of the repository on GitHub. Click the "Push origin" button in GitHub Desktop to push your changes.
-
-5. **Create a pull request:**
-   Go to your fork of the RAPIDOC-HEALTHCARE-WEBSITE repository on the GitHub website. You should see a notification that your branch is ahead of the original repository. Click on the "Compare & pull request" button to create a pull request for your changes.
-
-6. **Review and submit the pull request:**
-   On the pull request page, review your changes and add a title and description for your pull request. Once you're satisfied with your changes, click the "Create pull request" button to submit your pull request.
-
-If you find this project helpful, please consider giving it a star! ⭐️
-
-### Contributing
-
-We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
-
-- Reporting a bug
-- Discussing the current state of the code
-- Submitting a fix
-- Proposing new features
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Lady%20Beetle.png" width="20" height="20"> Reporting a bug<br>
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Man%20Technologist%20Light%20Skin%20Tone.png" width="20" height="20" >Discussing the current state of the code<br>
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Axe.png" width="20" height="20" >Submitting a fix<br>
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Rocket.png" width="20" height="20" >Proposing new features
 
 <div align="center">
-  <h2>Our Contributors ❤️</h2>
-  <h3>Thank you for contributing to our repository</h3>
+  <h2 style="font-family:var(--ff-philosopher);font-size:3rem;">Our Contributors <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /></h2>
+  <h3 style="font-family:var(--ff-philosopher);">Thank you for contributing to our repository</h3>
 
 <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/graphs/contributors">
-<!-- it links to the "contributors" page of the RAPIDOC-HEALTHCARE-WEBSITE- repository. This page shows a graph of contributors and their contributions to the repository. -->
-<img src="https://contributors-img.web.app/image?repo=Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" />
-<!-- This takes a repository name as a query parameter (?repo=Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-) and returns an image representing the contributors to that repository. -->
+<img src="https://contributors-img.web.app/image?repo=Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-"/>
 
   </a>
 
-### Show some ❤️ by starring this awesome repository!
+<p style="font-family:var(--ff-philosopher);font-size:3rem;"><b> Show some <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /> by starring this awesome repository!
 
 </div>
+<h3 style="font-family:var(--ff-philosopher);text-align:center;font-size:2rem;">
+If you find this project helpful, please consider giving it a star! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="30" height="30"></p>
