@@ -346,14 +346,24 @@ section {
   color: #fff;
   background: #3fbcc0a4;
 }
-#home video{
-  margin-top: -70px;
-  margin-left: 50PX;
-  height: 900px;
-  position: absolute;
-  top: 200px;
-  left: 550px;
+
+@media(min-width: 868px){
+  #home .wall{
+    height: 100%;
+  }
+  #home video{
+    height: 750px;
+    position: absolute;
+    top: 150px;
+    left: 570px;
+    max-width:90%;
+  }
+
 }
+
+
+
+
 
 #home .btn-get-started:hover {
   background: #3fbcc0c6;
@@ -389,7 +399,30 @@ section {
     height: 110vh;
   }
 }
+@media (max-width: 867px) {
 
+  #home{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1100px;
+  }
+  #home .video{
+    height: 500px;
+    width: 700px;
+  }
+
+  #home .container{
+    text-align: center;
+    max-width: 90%;
+    
+  }
+  #home .wall{
+    position: static;
+    min-width: 90%;
+    max-height: 650px;
+  }
+}
 
 
 /*################----Featured----################*/
@@ -516,6 +549,8 @@ section {
   background: #111111;
   border-radius: 10px;
   margin-top: 40px;
+  padding:20px;
+  max-width: 950px;
 }
 
 .about .icon-box .icon {
@@ -571,9 +606,8 @@ section {
 
 .about .video-box {
   background: url("../img/about.png") center center no-repeat;  
-  background-size: cover;
-  height: 300px;
-  top: 50px;
+  background-size: 500px 450px;
+  top: 20px;
 }
 
 .about .play-btn {
