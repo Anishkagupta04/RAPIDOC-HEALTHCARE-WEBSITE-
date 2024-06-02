@@ -2,16 +2,12 @@
 
 ![RapidDoc](https://camo.githubusercontent.com/dd5e3080a7adc2ead8f86cbbd6577cee0a38439c0ebf195021ce41587b0a405f/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313430302f312a633459675258595161794f5657785633376f757272772e706e67)
 </center>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
 
 <div align = "center">
 
 <div align="center">
 
-# <p style="font-family:var(--ff-philosopher);">RapiDoc.com</p>
+# <p>RapiDoc.com</p>
 [💬 Join the community on Slack](https://join.slack.com/t/newworkspace-ley5153/shared_invite/zt-2isvflg78-tMexsn50mxdwY4BEJ_W11g)<br>
 
 <i><p style="font-family:var(--ff-philosopher);">An online platform providing comprehensive information on nearby hospitals and healthcare facilities!</p></i>
