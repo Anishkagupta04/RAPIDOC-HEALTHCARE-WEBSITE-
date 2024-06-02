@@ -115,7 +115,78 @@
         right: 0;
     }
 }
+/*Preloader CSS*/
+.pre{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s ease-out, visibility 2s ease-out;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999; 
+}
 
+.pre--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #55a5ea;
+  animation: spin 3s linear infinite;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3fbcc0c6;
+  animation: spin 3s linear infinite;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+.loader--hidden{
+  opacity: 0;
+  visibility: hidden;
+}
     </style>
     <link rel="stylesheet" href="chatbox.css">
      <!-- Google Fonts Link For Icons chatboxx -->
@@ -125,16 +196,31 @@
 </head>
 
 <body>
+  <div class="pre">
+    <div class="loader"></div>
+  </div>
+      <!-- ############# Header ############# -->
+  
+      <header class="header_container">
+        <div class="img">
+        <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
+      </div>
+      
+      </div>
+      <nav class="nav_menu">
 
-
-  <button class="chatbot-toggler">
-    <span class="material-symbols-rounded">mode_comment</span>
-    <span class="material-symbols-outlined">close</span>
-  </button>
-  <div class="chatbot">
-    <header>
-      <h2>Chatbot</h2>
-      <span class="close-btn material-symbols-outlined">close</span>
+        <ul class="nav_link">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Html-Files/news.html">News</a></li>
+          <a href="dex.html"><button>Service</button></a>
+          <li><a href="#patient-portal">patient Portal</a></li>
+          <li><a href="#doctors">Doctor</a></li>
+          <li><a href="Html-Files/contact.html">Contact us</a></li>
+          <a href="login.html"><button>Sign in/Sign up</button></a>
+        </ul>
+      </nav>
+      </div>
     </header>
     <ul class="chatbox">
       <li class="chat incoming">
@@ -172,9 +258,6 @@
 
     </div>
   </header>
-
-
-  
 
 
   <div class="container" style="display:flex ;">
@@ -323,7 +406,7 @@
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <i class="fas fa-location-arrow"></i>
+              <i class="fas fa-flask-vial"></i>
               <span data-purecounter-start="0" data-purecounter-end="23" data-purecounter-duration="1"
                 class="purecounter"></span>
               <p><strong>Nearest Labs</strong> <br><br>Test labs and clinics near you.</p><br>
@@ -357,8 +440,7 @@
         <p>Our services are for your good health. We are with you at every digital step.</p>
       </div>
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-3 d-flex align-items-stretch ">
+          <div class="align-items-stretch ">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-heartbeat"></i></div>
               <h4><a href="">Clinics/Labs</a></h4>
@@ -366,7 +448,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch ">
+          <div class="align-items-stretch ">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-pills"></i></div>
               <h4><a href="https://www.1mg.com">Pharmacy</a></h4>
@@ -374,7 +456,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch ">
+          <div class="align-items-stretch ">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-hospital-user"></i></div>
               <h4><a href="">Daily Feed</a></h4>
@@ -383,7 +465,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4  col-md-6 d-flex align-items-stretch ">
+          <div class="align-items-stretch ">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-dna"></i></div>
               <h4><a href="Html-Files/blood.html">Blood Bank</a></h4>
@@ -391,7 +473,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch ">
+          <div class="align-items-stretch ">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-wheelchair"></i></div>
               <h4><a href="">Disabled Person</a></h4>
@@ -399,17 +481,14 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="align-items-stretch">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-notes-medical"></i></div>
               <h4><a href="https://www.medicalnewstoday.com/">Health Post</a></h4>
               <p>Weekly, monthly, yearly or each day, however you like it!</p>
             </div>
           </div>
-
         </div>
-
-      </div>
     </section><!-- End Services Section -->
 
     <!-- Add Patient Portal Section -->
@@ -828,7 +907,7 @@
           <ul class="links">
             <li><a href="./index.html">Home</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="./Html-Files/contact.html">Contaact Us</a></li>
+            <li><a href="./Html-Files/contact.html">Contact Us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#doctors">Doctors</a></li>
           </ul>
@@ -986,6 +1065,28 @@
     ScrollReveal().reveal('.col-lg-3', { delay: 500 , origin:'left' });
     ScrollReveal().reveal('.feedback', { delay: 400 , origin:'left' });
     ScrollReveal().reveal('.footer', { delay: 400 , origin:'bottom' });
+  </script>
+          <script>
+
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".pre");
+
+  loader.classList.add("pre--hidden");
+
+  loader.addEventListener("transitionend", () => {
+  document.body.removeChild(loader);
+  });
+  });
+
+  window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+  document.body.removeChild(loader);
+  });
+  });
   </script>
 </body>
 
