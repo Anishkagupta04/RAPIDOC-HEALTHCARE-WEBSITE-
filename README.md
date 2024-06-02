@@ -137,13 +137,3 @@ To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository using GitHub Desktop,
 <h3 style="font-family:var(--ff-philosopher);text-align:center;font-size:2rem;">
 If you find this project helpful, please consider giving it a star! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="30" height="30"></p>
 
-###Fonts Used
-
-`
-<style>
-   :root{
-            --ff-philosopher: "Philosopher", sans-serif;
-            --ff-poppins: "Poppins", sans-serif;
-        }
-</style>
-`
