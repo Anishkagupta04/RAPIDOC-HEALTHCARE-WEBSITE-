@@ -165,5 +165,7 @@ To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository using GitHub Desktop,
 <p style="font-family:var(--ff-philosopher);font-size:3rem;"><b> Show some <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /> by starring this awesome repository!
 
 </div>
-<h3 style="text-align:center;font-size:2rem;">
+<center>
+<h3 style="font-size:2rem;">
 If you find this project helpful, please consider giving it a star! <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Star.png" width="30" height="30"></p>
+</center>
