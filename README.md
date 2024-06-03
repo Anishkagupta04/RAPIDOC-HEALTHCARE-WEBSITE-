@@ -122,10 +122,9 @@ It is an online platform which enables you to get information about your nearest
 
    ```bash
    git clone https://github.com/<your-github-username>/RAPIDOC-HEALTHCARE-WEBSITE
-
+   ```
    ![Screenshot (129)](https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/assets/105973197/88249cc4-5849-4472-b190-9d9bad2bb236)
 
-   ```
 
 3. _Open the project in VS Code:_
    Click on the open with vs code button , to make changes to the code using the text editor.
