@@ -34,6 +34,20 @@ h6 {
   transition: all 0.3s ease 0s;
   color: white;
 }
+button {
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #4bb6b7;
+  background-color: #4bb6b7;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 8px;
+  padding: 8px 50px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  transition: 0.3s ease-in-out;
+}
 
 .nav_link li a:hover {
   color: #55a5ea;
@@ -872,7 +886,6 @@ section {
 
 /*################----Services----################*/
 .services .icon-box {
-  z-index: -1;
   text-align: center;
   margin-left: 80px;
   margin-right: 80px;
@@ -887,7 +900,6 @@ section {
 }
 
 .services .icon-box .icon {
-  
   margin: 0 auto;
   width: 64px;
   height: 64px;
@@ -902,14 +914,11 @@ section {
 }
 
 .services .icon-box .icon i {
-  
   color: #060606;
   font-size: 28px;
 }
 
 .services .icon-box .icon::before {
-  
- 
   position: absolute;
   content: '';
   left: -8px;
@@ -923,24 +932,26 @@ section {
 }
 
 .services .icon-box h4 {
-  
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px;
 }
 
 .services .icon-box h4 a {
- 
   color: #55a5ea;
 }
 
 .services .icon-box p {
- 
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+}
 
-
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 20px; */
+  margin-top: 8px;
 }
 
 .services .icon-box:hover {
@@ -964,6 +975,31 @@ section {
 .services .icon-box:hover p {
   color: #111111;
 }
+
+/* Styles for medium screens */
+@media (max-width: 991px) {
+  .services .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Styles for smaller screens */
+@media (max-width: 767px) {
+  .services .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Additional smaller adjustments */
+@media (max-width: 575px) {
+  .services .icon-box {
+    padding: 20px;
+  }
+  .services .icon i {
+    font-size: 30px;
+  }
+}
+
 
 
 
