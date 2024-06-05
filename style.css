@@ -1006,67 +1006,108 @@ section {
 
 
 
-/*################----Appointments----################*/
-.layout {
-  /*border: 2px solid #ccc; */
-  background-color: #3fbcc051;
-  border-radius: 30px;
-  padding: 50px;
-  width: 700px;
+/* Overall section styling */
+#appointment.appointment.section-bg {
+ background-color:#022a2d;
+  padding: 50px 0;
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 7%;
+  border-radius: 20px;
+  display: grid;
+  width: 30;
 }
 
-.appointment .php-email-form {
-  width: 100%;
-}
-
-.appointment .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.appointment .php-email-form input,
-.appointment .php-email-form textarea,
-.appointment .php-email-form select {
-  margin-left: 175px;
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  background: #badaf7;
-  border-radius: 10px;
-  padding: 10px !important;
-  color: #6c757d;
-}
-
-.appointment .php-email-form input:focus,
-.appointment .php-email-form textarea:focus,
-.appointment .php-email-form select:focus {
-  border-color: #3fbcc0a6;
-
-}
-
-.appointment .php-email-form input,
-.appointment .php-email-form select {
-  height: 44px;
-  width: 50%;
-}
-
-.appointment .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.appointment .php-email-form button[type="submit"] {
-  margin-left: 250px;
-  background: #3fbcc0a6;
-  border: 0;
-  padding: 10px 35px;
+/* Section title styling */
+.section-title h2 {
+  font-size: 28px;
   color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
+  display: flex;
+  margin-bottom: 20px;
 }
 
-.appointment .php-email-form button[type="submit"]:hover {
-  background: #3fbcc0bd;
+.section-title p {
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+
 }
+
+/* Form styling */
+.php-email-form {
+  display: flex; 
+  flex-wrap: wrap; 
+  color: #badaf7;
+  
+  
+}
+.col-md-4.form-group {
+
+  width: calc(50% - 15px);
+  
+}
+
+.form-group {
+  margin-bottom: 15px;
+  
+  width: calc(50% - 15px);
+  color: #badaf7;
+}
+.form-group.d-flex {
+  display: flex; 
+  flex-wrap: wrap;
+  color: #badaf7;
+}
+
+
+.form-control,
+.form-select {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  height: 50px;
+  width: 50%;
+  
+}
+.php-email-form .form-control,
+.php-email-form .form-select {
+  background-color: #badaf7;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #999;
+  outline: none;
+  color: #badaf7;
+}
+
+/* Text area styling */
+.form-group textarea {
+  resize: none;
+}
+
+/* Submit button styling */
+.text-center button {
+  background-color:#55a5ea; 
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-left: 120px;
+}
+
+.text-center button:hover {
+  background-color: #4bb6b7;
+}
+
 
 
 
