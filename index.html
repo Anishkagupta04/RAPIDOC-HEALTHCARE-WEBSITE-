@@ -323,6 +323,7 @@
      <!-- Google Fonts Link For Icons chatboxx -->
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+     <link rel="stylesheet" href="./Css-Files/aboutus.css" />
      <script src="chatboxx.js" defer></script>
 </head>
 
@@ -463,48 +464,82 @@
 
 
     <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-
-          <h2 style="text-align: center;">About Us</h2>
-
-          <p>RapiDoc is an online platform designed to provide comprehensive information about nearby hospitals and healthcare facilities, addressing a wide range of health-related issues. It serves as a one-stop destination for all your medical needs, offering an easy and efficient way to find essential healthcare services. Whether you're looking for the nearest hospital, specialized medical care, or urgent health services, RapiDoc simplifies the process with its user-friendly interface and extensive database. By centralizing health information, it ensures you have quick access to vital resources, enhancing your ability to make informed healthcare decisions and receive timely medical attention.
-
-          </p>
+      <div id="about-us">
+        <h1 class="about-us-heading">About Us</h1>
+        <div class="about-us-block">
+            <div class="about-us-community">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <img id="community-img" src="./images/checkup.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
+                    <div class="about-us-blk-text">Comprehensive Health Checkups</div>
+                </div>
+                <p class="about-us-blk-para">At Rapidoc, we prioritize your well-being with thorough health checkups that are designed to detect potential health issues early. Our comprehensive packages include a range of tests and screenings, providing a detailed analysis of your health status. Book your health checkup easily through our platform and receive personalized recommendations from our medical experts.</p>
+            </div>
+            <div class="about-us-product">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <img id="product-img" src="./images/ward.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
+                    <div class="about-us-blk-text">Emergency Ward Availability</div>
+                </div>
+                <p class="about-us-blk-para">In critical situations, every second counts. Rapidoc offers real-time updates on the availability of emergency wards across various hospitals. This feature ensures that you can find the nearest hospital with an open emergency ward promptly, facilitating quicker access to urgent medical care when you need it most.</p>
+            </div>
         </div>
-
-        <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center
-     align-items-stretch position-relative">
-
-          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch
-     justify-content-center py-5 px-lg-5">
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-heart"></i></div>
-              <h4 class="title"><a href="">HEALTH CHECKUPS</a></h4>
-              <p class="description">Bootcamps, personalised check-ups, newsletters, it’s all here.</p>
+        <div class="about-us-block">
+            <div class="about-us-location">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <img id="location-img" src="./images/appointment.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
+                    <div class="about-us-blk-text">Seamless Appointment Booking</div>
+                </div>
+                <p class="about-us-blk-para">Say goodbye to long queues and waiting times with Rapidoc's seamless appointment booking system. Our platform allows you to prebook appointments with specialists across numerous hospitals. This ensures you receive timely consultations and reduces the hassle of waiting, making your healthcare experience more efficient and convenient.</p>
             </div>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-health"></i></div>
-              <h4 class="title"><a href="">EMERGENCY WARDS</a></h4>
-              <p class="description">Avoid rush and get immediate medical assistance, know the
-                wards and vacancies.
-              </p>
+            <div class="about-us-event">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <img id="event-img" src="./images/services.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
+                    <div class="about-us-blk-text">Personalized Healthcare Services</div>
+                </div>
+                <p class="about-us-blk-para">Rapidoc is dedicated to offering personalized healthcare services tailored to meet your unique needs. Our platform connects you with a variety of specialists and healthcare providers, ensuring you receive the best possible care. From tailored treatment plans to ongoing health management, Rapidoc supports your journey to optimal health with expert guidance and personalized attention.</p>
             </div>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-help-circle"></i></div>
-              <h4 class="title"><a href="">SERVICES</a></h4>
-              <p class="description">An apple a day won’t keep RapiDoc away. We are always here at your service,
-                bringing to you the best facilities.</p>
-            </div>
-          </div>
         </div>
+    </div>
+    </section>
 
-      </div>
-    </section><!-- End About Section -->
+    <script>
+      document.querySelectorAll('.about-us-community').forEach(function(element) {
+  element.addEventListener('mouseover', function() {
+      element.querySelector('img').src = './images/checkuphover.png';
+  });
+  element.addEventListener('mouseleave', function() {
+      element.querySelector('img').src = './images/checkup.png';
+  });
+});
+
+document.querySelectorAll('.about-us-event').forEach(function(element) {
+  element.addEventListener('mouseover', function() {
+      element.querySelector('img').src = './images/serviceshover.png';
+  });
+  element.addEventListener('mouseleave', function() {
+      element.querySelector('img').src = './images/services.png';
+  });
+});
+
+document.querySelectorAll('.about-us-product').forEach(function(element) {
+  element.addEventListener('mouseover', function() {
+      element.querySelector('img').src = './images/wardhover.png';
+  });
+  element.addEventListener('mouseleave', function() {
+      element.querySelector('img').src = './images/ward.png';
+  });
+});
+
+document.querySelectorAll('.about-us-location').forEach(function(element) {
+  element.addEventListener('mouseover', function() {
+      element.querySelector('img').src = './images/appointmenthover.png';
+  });
+  element.addEventListener('mouseleave', function() {
+      element.querySelector('img').src = './images/appointment.png';
+  });
+});
+  </script>
+    
+    <!-- End About Section -->
 
 
     <!-- ################## Counts Section ################## -->
@@ -513,7 +548,7 @@
     <section id="counts" class="counts">
       <div class="container" data-aos="fade-up">
 
-        <div class="row no-gutters">
+        <div class="row no-gutters" >
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
@@ -530,7 +565,7 @@
               <i class="fas fa-bed"></i>
               <span data-purecounter-start="0" data-purecounter-end="36" data-purecounter-duration="1"
                 class="purecounter"></span>
-              <p><strong>Beds Available</strong> <br> <br>Beds available at your nearest emergency centers.</p><br>
+              <p><strong>Beds Available</strong> <br><br>Nearby emergency beds available.</p><br>
               <a href="">Find out more &raquo;</a>
             </div>
           </div>
@@ -575,7 +610,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-heartbeat"></i></div>
               <h4><a href="">Clinics/Labs</a></h4>
-              <p>Locate the best healthcare facilities around you hassle-free.</p>
+              <p>Locate the best healthcare facilities around you hassle-free.From routine check-ups to specialized treatments, find the right clinic or lab that meets your needs. Our database is updated regularly to ensure you have the most accurate information.</p>
             </div>
           </div>
 
@@ -583,7 +618,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-pills"></i></div>
               <h4><a href="https://www.1mg.com">Pharmacy</a></h4>
-              <p>Get your prescribed medicines delivered at your doorstep.</p>
+              <p>Get your prescribed medicines delivered at your doorstep.Our pharmacy service ensures you never miss a dose with timely reminders and easy refill options. Enjoy the convenience of home delivery and exclusive discounts on a wide range of medicines.</p>
             </div>
           </div>
 
@@ -591,8 +626,8 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-hospital-user"></i></div>
               <h4><a href="">Daily Feed</a></h4>
-              <p>Access to heath benefits like bootcamps, vaccination drives and much more
-                . </p>
+              <p>Access to heath benefits like bootcamps, vaccination drives and much more.Stay informed about the latest health trends, wellness tips, and upcoming events in your area. Participate in community health initiatives and boost your wellbeing.
+               </p>
             </div>
           </div>
 
@@ -600,7 +635,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-dna"></i></div>
               <h4><a href="Html-Files/blood.html">Blood Bank</a></h4>
-              <p>Know the blood banks and blood groups available around you. No one should suffer ỉn emergencies.</p>
+              <p>Know the blood banks and blood groups available around you. No one should suffer ỉn emergencies.Find the nearest blood donation centers, check blood availability, and get information on how to donate or request blood in urgent situations.</p>
             </div>
           </div>
 
@@ -608,7 +643,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-wheelchair"></i></div>
               <h4><a href="">Disabled Person</a></h4>
-              <p>Convenient medical care is here. Wheelchair accessible hospitals and clinics, find all in one go.</p>
+              <p>Convenient medical care is here. Wheelchair accessible hospitals and clinics, find all in one go.Access resources and support tailored to the needs of individuals with disabilities, ensuring a seamless healthcare experience for everyone.</p>
             </div>
           </div>
 
@@ -616,7 +651,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-notes-medical"></i></div>
               <h4><a href="https://www.medicalnewstoday.com/">Health Post</a></h4>
-              <p>Weekly, monthly, yearly or each day, however you like it!</p>
+              <p>Weekly, monthly, yearly or each day, however you like it!  Subscribe to our health post for expert articles, tips, and insights to help you make informed health decisions.</p>
             </div>
           </div>
         </div>
@@ -798,7 +833,7 @@
       </div>
       <div class="container">
 
-        <div class="row">
+        <div class="column">
 
           <div class="col-lg-6">
             <div class="member d-flex align-items-start">
