@@ -30,38 +30,38 @@
 }
 
 .about-us-community {
-    border: 2px solid #1977cc;
+    border: 2px solid #1c413b;
 }
 
 .about-us-community:hover {
-    background: #1977cc;
+    background: #1c413b;
     color: white;
 }
 
 .about-us-location {
-    border: 2px solid #1977cc;
+    border: 2px solid #1c413b;
 }
 
 .about-us-location:hover {
-    background: #1977cc;
+    background: #1c413b;
     color: white;
 }
 
 .about-us-product {
-    border: 2px solid #1977cc;
+    border: 2px solid #1c413b;
 }
 
 .about-us-product:hover {
-    background: #1977cc;
+    background: #1c413b;
     color: white;
 }
 
 .about-us-event {
-    border: 2px solid #1977cc;
+    border: 2px solid #1c413b;
 }
 
 .about-us-event:hover {
-    background: #1977cc;
+    background: #1c413b;
     color: white;
 }
 
