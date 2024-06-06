@@ -50,7 +50,7 @@ margin-top: -18px;
     display: inline-block;
     line-height: 1px;
     transition: 0.3s;
-    transform: translateY(400px);
+    transform: translateY(-100px);
 
     
   }
