@@ -356,9 +356,6 @@ section {
   left: calc(50% - 20px);
 }
 
-.section-title p {
-  margin-bottom: 0;
-}
 
 /*################----Home Section----################*/
 #home {
@@ -558,7 +555,7 @@ section {
 }
 
 .featured-services .title a {
-  color: #111;
+  color: #eee;
 }
 
 .featured-services .description {
@@ -1738,7 +1735,6 @@ footer {
 .form-control {
   width: 50%;
   /* Full width */
-
   padding: 10px;
   border: 1px solid #ccc;
   /* Light gray border */
