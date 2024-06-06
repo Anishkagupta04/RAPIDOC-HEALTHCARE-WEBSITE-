@@ -13,18 +13,13 @@
   <div class="container" id="container">
 
     <div class="form-container register-container">
-      <form action="#">
+      <form action="#" id="registerForm">
         <h1>RAPIDOC </h1>
         <input type="text" placeholder="Name">
         <input type="email" placeholder="Email">
         <input type="password" placeholder="Password">
-        <button onclick="refreshPage()">Register</button>
-        <script>
-          function refreshPage() {
-            location.reload();
-          }
-        </script>
-        <span>or use your account</span>
+        <button type="submit">Register</button>
+        <span id="registerMessage" style="display: none;">Account created successfully</span>
         <div class="social-container">
           <a href="www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
           <a href="www.google.com" class="social"><i class="lni lni-google"></i></a>
@@ -34,7 +29,7 @@
     </div>
 
     <div class="form-container login-container">
-      <form action="#">
+      <form action="#" id="loginForm">
         <h1>RAPIDOC</h1>
         <input type="email" placeholder="Email">
         <input type="password" placeholder="Password">
@@ -47,7 +42,7 @@
             <a href="#">Forgot password?</a>
           </div>
         </div>
-        <a href="index.html"><button>Login</button></a>
+        <button type="submit">Login</button>
         <span>or use your account</span>
         <div class="social-container">
           <a href="www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
@@ -61,13 +56,13 @@
       <div class="overlay">
         <div class="overlay-panel overlay-left">
           <h1 class="title">Hello <br> friends</h1>
-          <p>if Yout have an account, login here and have fun</p>
+          <p>if you have an account, login here and have fun</p>
           <button class="ghost" id="login">Login
             <i class="lni lni-arrow-left login"></i>
           </button>
         </div>
         <div class="overlay-panel overlay-right">
-          <h1 class="title">Start your <br> journy now</h1>
+          <h1 class="title">Start your <br> journey now</h1>
           <p>if you don't have an account yet, join us and start your journey.</p>
           <button class="ghost" id="register">Register
             <i class="lni lni-arrow-right register"></i>
@@ -77,8 +72,22 @@
     </div>
 
   </div>
-
+  
   <script src="log/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const registerButton = document.getElementById("register");
+      const container = document.getElementById("container");
 
+      registerButton.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent the default behavior of the anchor tag
+
+        container.classList.add("right-panel-active");
+
+        // Scroll to the top of the form for better visibility
+        document.getElementById("registerForm").scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
 </body>
 </html>
