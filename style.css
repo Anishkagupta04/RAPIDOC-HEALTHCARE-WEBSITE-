@@ -34,6 +34,20 @@ h6 {
   transition: all 0.3s ease 0s;
   color: white;
 }
+button {
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #4bb6b7;
+  background-color: #4bb6b7;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 8px;
+  padding: 8px 50px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  transition: 0.3s ease-in-out;
+}
 
 .nav_link li a:hover {
   color: #55a5ea;
@@ -124,6 +138,7 @@ h6 {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
+  z-index: -1;
 }
 
 
@@ -141,11 +156,13 @@ h6 {
   transition: 0.3s;
   font-size: 16px;
   font-weight: 600;
+  z-index: -1;
   display: inline-block;
 }
 
 .appointment-btn:hover {
   background: #55a5ea;
+  z-index: -1;
   color: #fff;
 }
 
@@ -459,6 +476,7 @@ section {
 }
 
 .featured-services .icon-box {
+  z-index: -1;
   width: 230px;
   height: 270px;
   margin-left: 15px;
@@ -476,6 +494,7 @@ section {
 }
 
 .featured-services .icon-box::before {
+  z-index: -1;
   content: '';
   position: absolute;
   background: #000;
@@ -488,16 +507,19 @@ section {
 }
 
 .featured-services .icon-box:hover::before {
+  z-index: -1;
   background: #3fbcc051;
   top: 0px;
   border-radius: 50px;
 }
 
 .featured-services .icon1 {
+  z-index: -1;
   margin-bottom: 15px;
 }
 
 .featured-services .icon1 i {
+  z-index: -1;
   font-size: 48px;
   line-height: 1;
   color: #3fbcc0a4;
@@ -505,10 +527,12 @@ section {
 }
 
 .featured-services .icon2 {
+  z-index: -1;
   margin-bottom: 15px;
 }
 
 .featured-services .icon2 i {
+  z-index: -1;
   font-size: 48px;
   line-height: 1;
   color: #55a5ea;
@@ -516,10 +540,12 @@ section {
 }
 
 .featured-services .icon3 {
+  z-index: -1;
   margin-bottom: 15px;
 }
 
 .featured-services .icon3 i {
+  z-index: -1;
   font-size: 48px;
   line-height: 1;
   color: #55a5ea;
@@ -527,10 +553,12 @@ section {
 }
 
 .featured-services .icon4 {
+  z-index: -1;
   margin-bottom: 15px;
 }
 
 .featured-services .icon4 i {
+  z-index: -1;
   font-size: 48px;
   line-height: 1;
   color: #55a5ea;
@@ -578,12 +606,14 @@ section {
 
 /*################----About----################*/
 .about .icon-boxes h4 {
+  z-index: -1;
   font-size: 18px;
   color: #55a5ea;
   margin-bottom: 15px;
 }
 
 .about .icon-boxes h3 {
+  z-index: -1;
   font-size: 28px;
   font-weight: 700;
   color: #55a5ea;
@@ -591,6 +621,7 @@ section {
 }
 
 .about .icon-box {
+  z-index: -1;
   background: #111111;
   border-radius: 10px;
   margin-top: 35px;
@@ -599,6 +630,7 @@ section {
 }
 
 .about .icon-box .icon {
+  z-index: -1;
   float: left;
   display: flex;
   align-items: center;
@@ -611,20 +643,24 @@ section {
 }
 
 .about .icon-box .icon i {
+  z-index: -1;
   color: #3fbcc0a4;
   font-size: 32px;
 }
 
 .about .icon-box:hover .icon {
+  z-index: -1;
   background: #55a5ea;
   border-color: #55a5ea;
 }
 
 .about .icon-box:hover .icon i {
+  z-index: -1;
   color: #fff;
 }
 
 .about .icon-box .title {
+  z-index: -1;
   margin-left: 85px;
 
   font-weight: 700;
@@ -633,6 +669,7 @@ section {
 }
 
 .about .icon-box .title a {
+  z-index: -1;
   color: #fff;
   transition: 0.3s;
   font-size: 18px;
@@ -640,16 +677,19 @@ section {
 }
 
 .about .icon-box .title a:hover {
+  z-index: -1;
   color: #55a5ea;
 }
 
 .about .icon-box .description {
+  z-index: -1;
   margin-left: 85px;
   line-height: 24px;
   font-size: 14px;
 }
 
 .about .video-box {
+  z-index: -1;
   background: url("../img/about.png") center center no-repeat;
   background-size: cover;
   height: 300px;
@@ -658,6 +698,7 @@ section {
 
 .about .play-btn {
   width: 94px;
+  z-index: -1;
   height: 94px;
   background: radial-gradient(#55a5ea 50%, rgba(4, 196, 234, 0.4) 52%);
   border-radius: 50%;
@@ -669,6 +710,7 @@ section {
 }
 
 .about .play-btn::after {
+  z-index: -1;
   content: '';
   position: absolute;
   left: 50%;
@@ -684,6 +726,7 @@ section {
 }
 
 .about .play-btn::before {
+  z-index: -1;
   content: '';
   position: absolute;
   width: 120px;
@@ -697,12 +740,14 @@ section {
 }
 
 .about .play-btn:hover::after {
+  z-index: -1;
   border-left: 15px solid #55a5ea;
   transform: scale(20);
 }
 
 .about .play-btn:hover::before {
   content: '';
+  z-index: -1;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -748,10 +793,13 @@ section {
 /*################----Counts----################*/
 .counts {
   /* padding-top: 30px; */
+ 
   justify-content: center;
 }
 
+
 .counts .count-box {
+  z-index: -1;
   box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
   padding: 50px 80px;
   margin: 5%;
@@ -811,6 +859,7 @@ section {
 }
 
 .counts .count-box p {
+  z-index: -1;
   padding: 30px 0 0 0;
   /* margin: 0; */
   font-family: "Roboto", sans-serif;
@@ -819,6 +868,7 @@ section {
 }
 
 .counts .count-box a {
+  z-index: -1;
   font-weight: 600;
   display: block;
   /* margin-top: 10px; */
@@ -895,8 +945,13 @@ section {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+}
 
-
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 20px; */
+  margin-top: 8px;
 }
 
 .services .icon-box:hover {
@@ -920,6 +975,31 @@ section {
 .services .icon-box:hover p {
   color: #111111;
 }
+
+/* Styles for medium screens */
+@media (max-width: 991px) {
+  .services .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Styles for smaller screens */
+@media (max-width: 767px) {
+  .services .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Additional smaller adjustments */
+@media (max-width: 575px) {
+  .services .icon-box {
+    padding: 20px;
+  }
+  .services .icon i {
+    font-size: 30px;
+  }
+}
+
 
 
 
