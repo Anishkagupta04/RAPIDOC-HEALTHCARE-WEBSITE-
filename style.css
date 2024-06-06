@@ -781,6 +781,7 @@ section {
 }
 
 .counts .count-box {
+  margin-top: 17px;
   flex: 15%;
   z-index: -1;
   width: 280px;
