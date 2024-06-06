@@ -74,9 +74,11 @@
 	background-color: var(#00C896);
 	transform: scale(1.03);
 }
-.share-button:hover{
-  background-color: #00C896;
+
+.share-button:hover {
+	background-color: #00C896;
 }
+
 .social {
 	position: absolute;
 	list-style: none;
@@ -323,7 +325,6 @@
      <!-- Google Fonts Link For Icons chatboxx -->
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-     <link rel="stylesheet" href="./Css-Files/aboutus.css" />
      <script src="chatboxx.js" defer></script>
 </head>
 
@@ -354,19 +355,6 @@
       </nav>
       </div>
     </header>
-    <ul class="chatbox">
-      <li class="chat incoming">
-        <span class="material-symbols-outlined">smart_toy</span>
-        <p>Hi there 👋<br>How can I help you today?</p>
-      </li>
-    </ul>
-    <div class="chat-input">
-      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-      <span id="send-btn" class="material-symbols-rounded">send</span>
-    </div>
-  </div>
-
-
   <!-- ############# Header ############# -->
 
   <header id="header" class="fixed-top">
@@ -464,82 +452,48 @@
 
 
     <section id="about" class="about">
-      <div id="about-us">
-        <h1 class="about-us-heading">About Us</h1>
-        <div class="about-us-block">
-            <div class="about-us-community">
-                <div style="display: flex; align-items: center; gap: 1rem;">
-                    <img id="community-img" src="./images/checkup.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
-                    <div class="about-us-blk-text">Comprehensive Health Checkups</div>
-                </div>
-                <p class="about-us-blk-para">At Rapidoc, we prioritize your well-being with thorough health checkups that are designed to detect potential health issues early. Our comprehensive packages include a range of tests and screenings, providing a detailed analysis of your health status. Book your health checkup easily through our platform and receive personalized recommendations from our medical experts.</p>
-            </div>
-            <div class="about-us-product">
-                <div style="display: flex; align-items: center; gap: 1rem;">
-                    <img id="product-img" src="./images/ward.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
-                    <div class="about-us-blk-text">Emergency Ward Availability</div>
-                </div>
-                <p class="about-us-blk-para">In critical situations, every second counts. Rapidoc offers real-time updates on the availability of emergency wards across various hospitals. This feature ensures that you can find the nearest hospital with an open emergency ward promptly, facilitating quicker access to urgent medical care when you need it most.</p>
-            </div>
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+
+          <h2 style="text-align: center;">About Us</h2>
+
+          <p>RapiDoc is an online platform designed to provide comprehensive information about nearby hospitals and healthcare facilities, addressing a wide range of health-related issues. It serves as a one-stop destination for all your medical needs, offering an easy and efficient way to find essential healthcare services. Whether you're looking for the nearest hospital, specialized medical care, or urgent health services, RapiDoc simplifies the process with its user-friendly interface and extensive database. By centralizing health information, it ensures you have quick access to vital resources, enhancing your ability to make informed healthcare decisions and receive timely medical attention.
+
+          </p>
         </div>
-        <div class="about-us-block">
-            <div class="about-us-location">
-                <div style="display: flex; align-items: center; gap: 1rem;">
-                    <img id="location-img" src="./images/appointment.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
-                    <div class="about-us-blk-text">Seamless Appointment Booking</div>
-                </div>
-                <p class="about-us-blk-para">Say goodbye to long queues and waiting times with Rapidoc's seamless appointment booking system. Our platform allows you to prebook appointments with specialists across numerous hospitals. This ensures you receive timely consultations and reduces the hassle of waiting, making your healthcare experience more efficient and convenient.</p>
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center
+     align-items-stretch position-relative">
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch
+     justify-content-center py-5 px-lg-5">
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-heart"></i></div>
+              <h4 class="title"><a href="">HEALTH CHECKUPS</a></h4>
+              <p class="description">Bootcamps, personalised check-ups, newsletters, it’s all here.</p>
             </div>
-            <div class="about-us-event">
-                <div style="display: flex; align-items: center; gap: 1rem;">
-                    <img id="event-img" src="./images/services.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
-                    <div class="about-us-blk-text">Personalized Healthcare Services</div>
-                </div>
-                <p class="about-us-blk-para">Rapidoc is dedicated to offering personalized healthcare services tailored to meet your unique needs. Our platform connects you with a variety of specialists and healthcare providers, ensuring you receive the best possible care. From tailored treatment plans to ongoing health management, Rapidoc supports your journey to optimal health with expert guidance and personalized attention.</p>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-health"></i></div>
+              <h4 class="title"><a href="">EMERGENCY WARDS</a></h4>
+              <p class="description">Avoid rush and get immediate medical assistance, know the
+                wards and vacancies.
+              </p>
             </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-help-circle"></i></div>
+              <h4 class="title"><a href="">SERVICES</a></h4>
+              <p class="description">An apple a day won’t keep RapiDoc away. We are always here at your service,
+                bringing to you the best facilities.</p>
+            </div>
+          </div>
         </div>
-    </div>
-    </section>
 
-    <script>
-      document.querySelectorAll('.about-us-community').forEach(function(element) {
-  element.addEventListener('mouseover', function() {
-      element.querySelector('img').src = './images/checkuphover.png';
-  });
-  element.addEventListener('mouseleave', function() {
-      element.querySelector('img').src = './images/checkup.png';
-  });
-});
-
-document.querySelectorAll('.about-us-event').forEach(function(element) {
-  element.addEventListener('mouseover', function() {
-      element.querySelector('img').src = './images/serviceshover.png';
-  });
-  element.addEventListener('mouseleave', function() {
-      element.querySelector('img').src = './images/services.png';
-  });
-});
-
-document.querySelectorAll('.about-us-product').forEach(function(element) {
-  element.addEventListener('mouseover', function() {
-      element.querySelector('img').src = './images/wardhover.png';
-  });
-  element.addEventListener('mouseleave', function() {
-      element.querySelector('img').src = './images/ward.png';
-  });
-});
-
-document.querySelectorAll('.about-us-location').forEach(function(element) {
-  element.addEventListener('mouseover', function() {
-      element.querySelector('img').src = './images/appointmenthover.png';
-  });
-  element.addEventListener('mouseleave', function() {
-      element.querySelector('img').src = './images/appointment.png';
-  });
-});
-  </script>
-    
-    <!-- End About Section -->
+      </div>
+    </section><!-- End About Section -->
 
 
     <!-- ################## Counts Section ################## -->
@@ -548,7 +502,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
     <section id="counts" class="counts">
       <div class="container" data-aos="fade-up">
 
-        <div class="row no-gutters" >
+        <div class="row no-gutters">
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
@@ -565,7 +519,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
               <i class="fas fa-bed"></i>
               <span data-purecounter-start="0" data-purecounter-end="36" data-purecounter-duration="1"
                 class="purecounter"></span>
-              <p><strong>Beds Available</strong> <br><br>Nearby emergency beds available.</p><br>
+              <p><strong>Beds Available</strong> <br> <br>Beds available at your nearest emergency centers.</p><br>
               <a href="">Find out more &raquo;</a>
             </div>
           </div>
@@ -833,7 +787,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       </div>
       <div class="container">
 
-        <div class="column">
+        <div class="row">
 
           <div class="col-lg-6">
             <div class="member d-flex align-items-start">
@@ -1196,91 +1150,6 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
             <input type="text" placeholder="Your email" required>
             <button type="submit">SUBSCRIBE</button>
           </form>
-          <!--div class="icons">
-            <button class="share-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="white"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  stroke="none"
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                  class="box"
-                ></path>
-                <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                <path d="M8.7 10.7l6.6 -3.4"></path>
-                <path d="M8.7 13.3l6.6 3.4"></path>
-              </svg>
-            </button>
-            <ul class="socials-menu">
-              <li class="social" id="discord" title="discord">
-                <a href="https://discord.com/">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-discord"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"
-                    />
-                  </svg>
-                </a>
-              </li>
-              <li class="social" title="signal" id="signal">
-                <a href="https://signal.org/">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-signal"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="m6.08.234.179.727a7.3 7.3 0 0 0-2.01.832l-.383-.643A7.9 7.9 0 0 1 6.079.234zm3.84 0L9.742.96a7.3 7.3 0 0 1 2.01.832l.388-.643A8 8 0 0 0 9.92.234m-8.77 3.63a8 8 0 0 0-.916 2.215l.727.18a7.3 7.3 0 0 1 .832-2.01l-.643-.386zM.75 8a7 7 0 0 1 .081-1.086L.091 6.8a8 8 0 0 0 0 2.398l.74-.112A7 7 0 0 1 .75 8m11.384 6.848-.384-.64a7.2 7.2 0 0 1-2.007.831l.18.728a8 8 0 0 0 2.211-.919M15.251 8q0 .547-.082 1.086l.74.112a8 8 0 0 0 0-2.398l-.74.114q.082.54.082 1.086m.516 1.918-.728-.18a7.3 7.3 0 0 1-.832 2.012l.643.387a8 8 0 0 0 .917-2.219m-6.68 5.25c-.72.11-1.453.11-2.173 0l-.112.742a8 8 0 0 0 2.396 0l-.112-.741zm4.75-2.868a7.2 7.2 0 0 1-1.537 1.534l.446.605a8 8 0 0 0 1.695-1.689zM12.3 2.163c.587.432 1.105.95 1.537 1.537l.604-.45a8 8 0 0 0-1.69-1.691zM2.163 3.7A7.2 7.2 0 0 1 3.7 2.163l-.45-.604a8 8 0 0 0-1.691 1.69l.604.45zm12.688.163-.644.387c.377.623.658 1.3.832 2.007l.728-.18a8 8 0 0 0-.916-2.214M6.913.831a7.3 7.3 0 0 1 2.172 0l.112-.74a8 8 0 0 0-2.396 0zM2.547 14.64 1 15l.36-1.549-.729-.17-.361 1.548a.75.75 0 0 0 .9.902l1.548-.357zM.786 12.612l.732.168.25-1.073A7.2 7.2 0 0 1 .96 9.74l-.727.18a8 8 0 0 0 .736 1.902l-.184.79zm3.5 1.623-1.073.25.17.731.79-.184c.6.327 1.239.574 1.902.737l.18-.728a7.2 7.2 0 0 1-1.962-.811zM8 1.5a6.5 6.5 0 0 0-6.498 6.502 6.5 6.5 0 0 0 .998 3.455l-.625 2.668L4.54 13.5a6.502 6.502 0 0 0 6.93-11A6.5 6.5 0 0 0 8 1.5"
-                    />
-                  </svg>
-                </a>
-              </li>
-              <li class="social" title="Github" id="github">
-                <a href="https://github.com/GameSphere-MultiPlayer">
-                  <i class="fa-brands fa-github" style="color: white"></i>
-                </a>
-              </li>
-              <li class="social" title="reddit" id="reddit">
-                <a href="https://www.reddit.com/?rdt=35900" title="Facebook">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-reddit"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M6.167 8a.83.83 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661m1.843 3.647c.315 0 1.403-.038 1.976-.611a.23.23 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83s.83-.381.83-.83a.831.831 0 0 0-1.66 0z"
-                    />
-                    <path
-                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.2.2 0 0 0-.153.028.2.2 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224q-.03.17-.029.353c0 1.795 2.091 3.256 4.669 3.256s4.668-1.451 4.668-3.256c0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165"
-                    />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div-->
         </div>
       </div>
       <div id="copyright" style="text-align: center">
@@ -1377,6 +1246,18 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
   <script src="swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
+  <!--script>
+window.embeddedChatbotConfig = {
+chatbotId: "xjRGZgxJziSoHQ1T1twl6",
+domain: "www.chatbase.co"
+}
+</script>
+<script
+src="https://www.chatbase.co/embed.min.js"
+chatbotId="xjRGZgxJziSoHQ1T1twl6"
+domain="www.chatbase.co"
+defer>
+</script-->
   <script src="patient-portal.js"></script>
  
   <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
