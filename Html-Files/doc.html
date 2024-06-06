@@ -1,87 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../Css-Files/bloodstyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
     <link rel="stylesheet" href="../Css-Files/doctor.css">
-
-    <title>
-        Doctors
-    </title>
-    <style>
-        .home-button {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-            background-color: #007074d5;
-            cursor: pointer;
-        }
-        .home-button:hover {
-            background-color: #02969bd5;
-        }
-    </style>
 </head>
-
 <body>
 
-    <div id="topbar1" class="d-flex align-items-center fixed-top">
-        <div class="logo">
-            <h1><a href="#">RapiDoc</a></h1>
-        </div>
-        <div class="container d-flex justify-content-between">
-            <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">rapidoc@mail.com</a>
-            </div>
-            <div class="d-none d-lg-flex social-links align-items-center">
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-            </div>
-        </div>
-    </div>
+    <header class="header_container">
+        <div class="img">
+        <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
+      </div>
+      <div class="text" style="margin-left: -33rem;">
+  
+        <h1 class="logo me-auto"><a style="text-decoration: none; color: #55a5ea;" href="index.html">RapiDoc</a></h1>
+      </div>
+      
+        <nav class="nav_menu">
+  
+          <ul class="nav_link">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">About</a></li>
+            <li><a href="/Html-Files/news.html">News</a></li>
+            <li><a href="../index.html">Services</a></li>
+            <li><a href="../index.html">patient Portal</a></li>
+            <li><a href="../index.html">Doctor</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <button class="button home-button" onclick="window.location.href='/index.html'">Return Home</button>
-
-  <div class="slide-container swiper">
+    <div class="slide-container swiper">
         <div class="slide-content">
             <div class="card-wrapper swiper-wrapper">
                 <div class="card swiper-slide">
                     <div class="image-content">
                         <span class="overlay"></span>
                         <div class="card-image">
-                            <img src="images/1.png" alt="" class="card-img">
+                            <img src="../img/doctors/1.png" alt="" class="card-img">
                         </div>
                     </div>
                     <div class="card-content">
                         <h2 class="name">Dr. Satbir Singh</h2>
                         <p class="discription">Cardiologist</p>
-                        <a href="appointment.html"><button class="button">Make an Appointment</button></a>
+                        <a href="../img/doctors/2.png"><button class="button">Make an Appointment</button></a>
                     </div>
                 </div>
                 <div class="card swiper-slide">
                     <div class="image-content">
                         <span class="overlay"></span>
                         <div class="card-image">
-                            <img src="images/2.png" alt="" class="card-img">
+                            <img src="../img/doctors/3.png" alt="" class="card-img">
                         </div>
                     </div>
                     <div class="card-content">
                         <h2 class="name">Dr. Vikas Chopra</h2>
                         <p class="discription">Cardiologist</p>
-                        <a href="appointment.html"><button class="button">Make an Appointment</button></a>
+                        <a href="../img/doctors/3.png"><button class="button">Make an Appointment</button></a>
                     </div>
                 </div>
                 <div class="card swiper-slide">
                     <div class="image-content">
                         <span class="overlay"></span>
                         <div class="card-image">
-                            <img src="images/3.png" alt="" class="card-img">
+                            <img src="../img/doctors/2.png" alt="" class="card-img">
                         </div>
                     </div>
                     <div class="card-content">
@@ -94,7 +78,7 @@
                     <div class="image-content">
                         <span class="overlay"></span>
                         <div class="card-image">
-                            <img src="images/4.png" alt="" class="card-img">
+                            <img src="../img/doctors/1.png" alt="" class="card-img">
                         </div>
                     </div>
                     <div class="card-content">
@@ -107,7 +91,7 @@
                     <div class="image-content">
                         <span class="overlay"></span>
                         <div class="card-image">
-                            <img src="images/5.png" alt="" class="card-img">
+                            <img src="../img/doctors/2.png" alt="" class="card-img">
                         </div>
                     </div>
                     <div class="card-content">
@@ -120,7 +104,7 @@
                     <div class="image-content">
                         <span class="overlay"></span>
                         <div class="card-image">
-                            <img src="images/6.png" alt="" class="card-img">
+                            <img src="../img/doctors/3.png" alt="" class="card-img">
                         </div>
                     </div>
                     <div class="card-content">
@@ -133,7 +117,7 @@
                     <div class="image-content">
                         <span class="overlay"></span>
                         <div class="card-image">
-                            <img src="images/7.png" alt="" class="card-img">
+                            <img src="../img/doctors/4.png" alt="" class="card-img">
                         </div>
                     </div>
                     <div class="card-content">
@@ -207,26 +191,22 @@
                         <a href="appointment.html"><button class="button">Make an Appointment</button></a>
                     </div>
                 </div>
-                
             </div>
         </div>
-
-        <div class="swiper-button-next swiper-navBtn"></div>
-        <div class="swiper-button-prev swiper-navBtn"></div>
-        <div class="swiper-pagination"></div>
     </div>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="glightbox/js/glightbox.min.js"></script>
-    <script src="php-email-form/validate.js"></script>
-    <script src="purecounter/purecounter.js"></script>
-    <script src="swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    </div>
+
+    <!-- Copyright -->
+    <div id="copyright" style="text-align: center;">
+      <p style="align-items: center;">
+        © Copyright &nbsp; <span> RapiDoc </span> &nbsp; | All Rights
+        Reserved
+      </p>
+      <p>Designed by RapiDoc</p>
+    </div>
+  </footer>
 
 
 
 </body>
-
 </html>
