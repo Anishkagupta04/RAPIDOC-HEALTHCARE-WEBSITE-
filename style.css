@@ -1106,7 +1106,7 @@ section {
 .appointment .php-email-form input:focus,
 .appointment .php-email-form textarea:focus,
 .appointment .php-email-form select:focus {
-  border-color: #3fbcc0a6;
+  border-color: rgba(63, 188, 192, 0.651);
 }
 
 .appointment .php-email-form input,
@@ -1121,7 +1121,7 @@ section {
 
 .appointment .php-email-form button[type="submit"] {
   margin-left: 250px;
-  background: #3fbcc0a6;
+  background: hsla(182, 51%, 50%, 0.651);
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -1847,7 +1847,7 @@ footer {
 }
 
 button {
-  background-color: #29888a;
+  background-color: hwb(181 16% 46%);
   /* Blue background for the button */
   color: white;
   border: none;
