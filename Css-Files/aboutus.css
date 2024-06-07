@@ -1,0 +1,119 @@
+.about-us {
+    display: block;
+    margin: auto;
+    width: 52.5rem;
+    height: 100%;
+    background-color: white;
+}
+
+.about-us-heading {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+.about-us-block {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.about-us-community, .about-us-product, .about-us-event, .about-us-location {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 35%;
+    height: 18rem;
+    border: 1px solid rgba(206, 212, 218, 1);
+    border-radius: 8px;
+    margin-bottom: 21px;
+}
+
+.about-us-community {
+    border: 2px solid #1c413b;
+}
+
+.about-us-community:hover {
+    background: #1c413b;
+    color: white;
+}
+
+.about-us-location {
+    border: 2px solid #1c413b;
+}
+
+.about-us-location:hover {
+    background: #1c413b;
+    color: white;
+}
+
+.about-us-product {
+    border: 2px solid #1c413b;
+}
+
+.about-us-product:hover {
+    background: #1c413b;
+    color: white;
+}
+
+.about-us-event {
+    border: 2px solid #1c413b;
+}
+
+.about-us-event:hover {
+    background: #1c413b;
+    color: white;
+}
+
+.about-us-blk-text {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.about-us-blk-para {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .about-us-block {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us-community, .about-us-event, .about-us-location, .about-us-product {
+        width: 90%;
+        height: 100%;
+        padding: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .about-us-block {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us-community, .about-us-event, .about-us-location, .about-us-product {
+        width: 90% !important;
+        height: 100%;
+        padding: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .about-us-community, .about-us-event, .about-us-location, .about-us-product {
+        width: 45%;
+    }
+}
