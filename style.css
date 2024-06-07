@@ -9,6 +9,11 @@ a {
   text-decoration: none;
 }
 
+.logo {
+  padding: 28px;
+  margin-left: 60px;
+}
+
 a:hover {
   color: #55a5ea;
   text-decoration: none;
@@ -33,6 +38,7 @@ h6 {
   transition: all 0.3s ease 0s;
   color: white;
 }
+
 button {
   position: relative;
   border-radius: 10px;
@@ -86,6 +92,7 @@ button {
 }
 
 .content h1 {
+  margin-left: 50px;
   font-size: 80px;
   color: #d9d9d9;
 }
@@ -140,6 +147,8 @@ button {
 * Appointment Button *
 */
 .appointment-btn {
+  margin-right: 54px;
+  margin-top: 25px;
   margin-left: 25px;
   background: #55a5ea;
   color: #fff;
@@ -184,7 +193,7 @@ button {
   position: relative;
 }
 
-.navbar > ul > li {
+.navbar>ul>li {
   position: relative;
   white-space: nowrap;
   padding: 8px 0 8px 20px;
@@ -213,7 +222,7 @@ button {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover > a {
+.navbar li:hover>a {
   color: #55a5ea;
   border-color: #55a5ea;
 }
@@ -284,7 +293,7 @@ button {
   transition: 0.3s;
 }
 
-.navbar-mobile > ul > li {
+.navbar-mobile>ul>li {
   padding: 0;
 }
 
@@ -297,7 +306,7 @@ button {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover > a {
+.navbar-mobile li:hover>a {
   color: #3fbcc0c6;
 }
 
@@ -307,6 +316,7 @@ button {
 
 /*################----Sections General----################*/
 section {
+  margin-left: 43px;
   padding: 50px 0;
   overflow: hidden;
 }
@@ -979,6 +989,7 @@ section {
   .services .icon-box {
     padding: 20px;
   }
+
   .services .icon i {
     font-size: 30px;
   }
@@ -1354,6 +1365,7 @@ section {
   text-align: center;
 
   .button {
+    margin-bottom: 163px;
     width: 15%;
     background-color: white;
     border-radius: 0.5rem;
@@ -1420,6 +1432,7 @@ section {
   height: 36px;
   transition: 0.3s;
 }
+
 /* Importing Google font - Open Sans */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
@@ -1465,6 +1478,8 @@ section {
 }
 
 .footer-col .links li a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #bfbfbf;
 }
