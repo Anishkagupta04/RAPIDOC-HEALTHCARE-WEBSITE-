@@ -22,7 +22,7 @@ document.getElementById("google").addEventListener("click", function() {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const user = result.user;
       console.log(user);
-      window.location.href = "/signedup.html";
+      window.location.href = "./signedup.html";
     }).catch((error) => {
       console.error("Error during Google sign-in:", error);
     });
@@ -37,7 +37,7 @@ document.getElementById("signup-form").addEventListener("submit", function(event
   if (validateForm(name, email, password)) {
     // Simulate a successful registration (Replace with actual Firebase sign-up logic)
     console.log("Form submitted with:", { name, email, password });
-    window.location.href = "/signed.html";
+    window.location.href = "./signedup.html";
   }
 });
 
@@ -61,3 +61,5 @@ function validateEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
 }
+
+/*646664380070-n07i34glgcc6sanb59p3m1k5k0cgn1v1.apps.googleusercontent.com*/
