@@ -27,6 +27,102 @@ body{
     padding: 40px 0;
     border-radius: 20px;
 }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.logo {
+    height: 40px;
+}
+
+.header-buttons button {
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+.calendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.month {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dates {
+    display: flex;
+    gap: 10px;
+}
+
+.date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10, .date11, .date12 {
+    background-color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.date:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.schedule {
+    padding: 20px;
+}
+
+.consultation {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.consultation h3 {
+    margin: 0;
+}
+
+.consultation p {
+    margin: 5px 0;
+}
+
+.consult-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.consult-button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
 .card{
     border-radius: 25px;
     background-color: #FFf;
@@ -104,6 +200,7 @@ transition: all 0.3s ease;
 .button:hover{
     background: #02969bd5;
 }
+
 .swiper-navBtn{
     color: white;
 }
