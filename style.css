@@ -55,27 +55,27 @@ button {
 }
 
 .header_container {
-  /* background-color: #d9d9d9; */
   background-color: #022a2d;
   opacity: 0.9;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-evenly; */
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 80px;
+  width: 100%;
   margin: auto;
 }
 
-.container {
+.container1 {
   /* display: ; */
   font-family: sans-serif;
   padding-top: 80px;
-}
+} 
+
 
 /* .container a:hover {
   text-decoration: underline 2px;
-} */
+}
 
 .content {
   display: flex;
@@ -356,6 +356,13 @@ section {
   left: calc(50% - 20px);
 }
 
+.section-title p {
+  margin-bottom: 0;
+}
+.btn-get-started:hover{
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
 
 /*################----Home Section----################*/
 #home {
@@ -370,7 +377,7 @@ section {
   color: #55a5ea;
 }
 
-#home .container {
+#home .container2 {
   position: relative;
   margin-top: 150px;
 }
@@ -429,7 +436,7 @@ section {
     height: 100vh;
   }
 
-  #home .container {
+  #home .container2 {
     padding-bottom: 63px;
   }
 
@@ -450,6 +457,11 @@ section {
     height: 110vh;
   }
 }
+.content{
+  margin-left: 50px;
+}
+
+
 
 /*################----Featured----################*/
 
@@ -460,6 +472,8 @@ section {
 
 .featured-services .icon-box {
   z-index: -1;
+  width: 350px;
+  height: 270px;
   width: 290px;
   height: 327px;
   margin-left: 15px;
@@ -669,13 +683,7 @@ section {
   font-size: 14px;
 }
 
-.about .video-box {
-  z-index: -1;
-  background: url("../img/about.png") center center no-repeat;
-  background-size: cover;
-  height: 300px;
-  top: 50px;
-}
+
 
 .about .play-btn {
   width: 94px;
@@ -827,7 +835,20 @@ section {
   margin-left: 50px;
 }
 
-.container .drop .content span {
+.container3{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container3-box{
+  width: 25%;
+}
+
+.container3 .drop .content span {
   font-size: 42px;
   line-height: 24px;
   display: inline-block;
@@ -835,7 +856,7 @@ section {
   color: #faf8f8;
 }
 
-.container .drop .content p {
+.container3 .drop .content p {
   font-size: 30px;
   line-height: 24px;
   display: inline-block;
@@ -934,7 +955,7 @@ section {
 .services .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* gap: 20px; */
+  gap: 20px;
   margin-top: 8px;
 }
 
@@ -994,7 +1015,74 @@ section {
   margin: 0 auto;
 }
 
-.appointment .php-email-form {
+
+.row3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* Container styles */
+
+/* Section title styles */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Form layout styles */
+.layout .row3,
+.layout .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.iti.iti--allow-dropdown{
+  margin-left: 0px;
+}
+/* Form group styles */
+.form-group {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button styles */
+.text-center {
+    text-align: center;
+}
+
+.text-center button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.text-center button:hover {
+    background-color: #0056b3;
+}
+
+/* .appointment .php-email-form {
   width: 100%;
 }
 
@@ -1043,6 +1131,21 @@ section {
 
 .appointment .php-email-form button[type="submit"]:hover {
   background: #3fbcc0bd;
+} */
+
+
+.avatar{
+  border-radius: 50%;
+}
+
+.btn2{
+  background-color: #3fbcc0a6;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  margin-top: 10px;
 }
 
 /*################----Doctors----################*/
@@ -1236,7 +1339,7 @@ section {
 
 .feedback {
   border-radius: 1rem;
-  background-color: #fff;
+  background-color: #3fbcc0a6;
   padding: 2rem 4rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -1776,3 +1879,154 @@ button {
 #back-to-top:hover {
   fill: hsl(214, 50%, 60%);
 }
+
+.iti--allow-dropdown input {
+  padding-left: 50px;
+  background-color: rgb(255, 255, 255);
+  /* Adjust padding to prevent overlap */
+}
+
+
+/* .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+} */
+
+.content {
+  text-align: left;
+  flex: 1;
+  padding: 20px;
+}
+
+.sec-img {
+  max-width: 50%;
+  width: 600px;
+  height: 600px;
+  margin-left: auto;
+}
+
+.btn-get-started {
+  display: inline-block;
+  background-color: #55a5ea;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sec-img {
+    max-width: 100%;
+    margin: 20px 0;
+    position: relative;
+    top: 0;
+    right: 0;
+
+  }
+
+  .content {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .sec-img {
+    max-width: 100%;
+    margin: 20px 0;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+}
+
+/*Preloader CSS*/
+.pre {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s ease-out, visibility 2s ease-out;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+}
+
+.pre--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #55a5ea;
+  animation: spin 3s linear infinite;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3fbcc0c6;
+  animation: spin 3s linear infinite;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
