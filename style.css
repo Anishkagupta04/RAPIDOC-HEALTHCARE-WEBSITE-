@@ -23,7 +23,6 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-
 .nav_link li {
   padding: 5px 20px;
   display: inline-block;
@@ -74,7 +73,6 @@ button {
   padding-top: 80px;
 }
 
-
 /* .container a:hover {
   text-decoration: underline 2px;
 } */
@@ -108,7 +106,6 @@ button {
   display: inline;
   font-size: xx-large;
   color: #55a5ea;
-
 }
 
 .container-head {
@@ -117,8 +114,6 @@ button {
   grid-template-columns: 1fr 2fr 13fr 3fr;
   margin-top: 0px;
 }
-
-
 
 /*---------------------parallax effect after about------------*/
 .parallax-container {
@@ -140,8 +135,6 @@ button {
   border-radius: 10px;
   z-index: -1;
 }
-
-
 
 /**
 * Appointment Button *
@@ -175,7 +168,6 @@ button {
 
 /*################----Navigation----################*/
 
-
 .navbar {
   padding: 0;
 }
@@ -192,7 +184,7 @@ button {
   position: relative;
 }
 
-.navbar>ul>li {
+.navbar > ul > li {
   position: relative;
   white-space: nowrap;
   padding: 8px 0 8px 20px;
@@ -221,17 +213,17 @@ button {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #55a5ea;
   border-color: #55a5ea;
 }
 
-#navbar li a{ 
+#navbar li a {
   color: white;
 }
 
-#navbar a:hover{
-  color:  #3fbcc0a4;
+#navbar a:hover {
+  color: #3fbcc0a4;
   text-decoration: underline;
   text-decoration-color: #3fbcc0a4;
 }
@@ -292,7 +284,7 @@ button {
   transition: 0.3s;
 }
 
-.navbar-mobile>ul>li {
+.navbar-mobile > ul > li {
   padding: 0;
 }
 
@@ -305,7 +297,7 @@ button {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
   color: #3fbcc0c6;
 }
 
@@ -343,7 +335,7 @@ section {
 }
 
 .section-title h2::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 120px;
@@ -354,7 +346,7 @@ section {
 }
 
 .section-title h2::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 40px;
@@ -363,11 +355,6 @@ section {
   bottom: 0;
   left: calc(50% - 20px);
 }
-
-.section-title p {
-  margin-bottom: 0;
-}
-
 
 
 /*################----Home Section----################*/
@@ -464,21 +451,17 @@ section {
   }
 }
 
-
-
 /*################----Featured----################*/
 
-.row{
+.row {
   display: flex;
   justify-content: center;
-  /* border: 2px solid red; */
-  margin: 30px;
 }
 
 .featured-services .icon-box {
   z-index: -1;
-  width: 230px;
-  height: 270px;
+  width: 290px;
+  height: 327px;
   margin-left: 15px;
   margin-right: 15px;
   padding: 30px;
@@ -495,7 +478,7 @@ section {
 
 .featured-services .icon-box::before {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   background: #000;
   right: 0;
@@ -572,7 +555,7 @@ section {
 }
 
 .featured-services .title a {
-  color: #111;
+  color: #eee;
 }
 
 .featured-services .description {
@@ -601,8 +584,6 @@ section {
 .featured-services .icon-box:hover .icon4 i {
   color: greenyellow;
 }
-
-
 
 /*################----About----################*/
 .about .icon-boxes h4 {
@@ -711,7 +692,7 @@ section {
 
 .about .play-btn::after {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 50%;
@@ -722,12 +703,12 @@ section {
   border-bottom: 10px solid transparent;
   border-left: 15px solid #fff;
   z-index: 100;
-  transition: all .5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: all 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .about .play-btn::before {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   width: 120px;
   height: 120px;
@@ -746,7 +727,7 @@ section {
 }
 
 .about .play-btn:hover::before {
-  content: '';
+  content: "";
   z-index: -1;
   position: absolute;
   left: 50%;
@@ -788,37 +769,40 @@ section {
   }
 }
 
-
-
 /*################----Counts----################*/
-.counts {
-  /* padding-top: 30px; */
- 
-  justify-content: center;
-}
 
+.counts {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+}
 
 .counts .count-box {
+  margin-top: 17px;
+  flex: 15%;
   z-index: -1;
-  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
-  padding: 50px 80px;
-  margin: 5%;
-  width: calc(100%-5px);
-  height: 100%;
+  width: 280px;
+  height: 300px;
+  margin-left: 25px;
+  margin-right: 15px;
+  padding: 53px;
+  position: relative;
+  overflow: hidden;
   background: #1c413b;
-  align-content: space-evenly;
-  border-radius: 15px;
-  /* margin-top: 10px; */
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  border-radius: 50px;
 }
-/* .row {
+
+.row {
+  padding-left: 33px;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--bs-gutter-y)* -1);
+  margin-top: calc(var(--bs-gutter-y)* -2);
   margin-right: calc(var(--bs-gutter-x) / -2);
   margin-left: calc(var(--bs-gutter-x) / -2);
-} */
+}
 
 .row-d {
   display: flex;
@@ -826,7 +810,6 @@ section {
   align-items: center;
   justify-content: space-between;
   /* flex-wrap: wrap; */
-
 }
 
 .counts .count-box i {
@@ -885,8 +868,6 @@ section {
   color: #55a5ea;
 }
 
-
-
 /*################----Services----################*/
 .services .icon-box {
   text-align: center;
@@ -908,7 +889,7 @@ section {
   height: 64px;
   background: #1977cc;
   border-radius: 5px;
-  transition: all .3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -923,14 +904,14 @@ section {
 
 .services .icon-box .icon::before {
   position: absolute;
-  content: '';
+  content: "";
   left: -8px;
   top: -8px;
   height: 100%;
   width: 100%;
   background: #badaf7;
   border-radius: 5px;
-  transition: all .3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
 }
 
@@ -1003,9 +984,6 @@ section {
   }
 }
 
-
-
-
 /*################----Appointments----################*/
 .layout {
   /*border: 2px solid #ccc; */
@@ -1041,7 +1019,6 @@ section {
 .appointment .php-email-form textarea:focus,
 .appointment .php-email-form select:focus {
   border-color: #3fbcc0a6;
-
 }
 
 .appointment .php-email-form input,
@@ -1067,9 +1044,6 @@ section {
 .appointment .php-email-form button[type="submit"]:hover {
   background: #3fbcc0bd;
 }
-
-
-
 
 /*################----Doctors----################*/
 .doctors {
@@ -1125,7 +1099,7 @@ section {
 }
 
 .doctors .member span::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 50px;
@@ -1147,11 +1121,8 @@ section {
 }
 
 .doctors .nxt-pg button:hover {
-
   background: #55a5ea;
 }
-
-
 
 /*################----Contact----################*/
 .contact .info {
@@ -1201,7 +1172,6 @@ section {
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
   background: #55a5ea;
-
 }
 
 .contact .php-email-form {
@@ -1218,7 +1188,6 @@ section {
   border-radius: 10px;
   box-shadow: none;
   font-size: 14px;
-
 }
 
 .contact .php-email-form input {
@@ -1263,14 +1232,14 @@ section {
   }
 }
 
-
 /*################--feedback###############*/
 
 .feedback {
   border-radius: 1rem;
   background-color: #fff;
   padding: 2rem 4rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   margin: 50px;
   width: 60%;
   margin-left: 250px;
@@ -1279,7 +1248,7 @@ section {
 
 .feedback h1 {
   color: black;
-  font-size: 2.0rem;
+  font-size: 2rem;
   margin-bottom: 0.3rem;
   font-family: "Poppins", sans-serif;
 }
@@ -1324,7 +1293,8 @@ section {
   margin-bottom: 0.6rem;
 
   &:active {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   }
 }
 
@@ -1332,7 +1302,6 @@ section {
   width: 40%;
   display: flex;
   justify-content: space-between;
-
 }
 
 .one {
@@ -1362,7 +1331,6 @@ section {
 
   &:checked::before {
     background-color: #1977cc;
-
   }
 }
 
@@ -1399,8 +1367,7 @@ section {
 
   .button:active {
     background-color: white;
-    transform: scale(1.0);
-
+    transform: scale(1);
   }
 
   .button:hover {
@@ -1408,13 +1375,11 @@ section {
   }
 }
 
-
-
 #footer {
   background: #000;
   padding: 0 0 30px 0;
-color: #fff;
-font-size: 14px;
+  color: #fff;
+  font-size: 14px;
 }
 
 #footer .footer-top {
@@ -1456,13 +1421,13 @@ font-size: 14px;
   transition: 0.3s;
 }
 /* Importing Google font - Open Sans */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .footer {
@@ -1525,7 +1490,7 @@ font-size: 14px;
   background: none;
   width: 100%;
   outline: none;
-  border: 1px solid #7489C6 ;
+  border: 1px solid #7489c6;
   caret-color: #fff;
   color: #fff;
   padding-left: 10px;
@@ -1535,7 +1500,7 @@ font-size: 14px;
   color: #ccc;
 }
 
- .footer-col form button {
+.footer-col form button {
   background: #fff;
   border: none;
   color: #08434551;
@@ -1561,7 +1526,7 @@ font-size: 14px;
   color: #afb6c7;
 }
 
-.footer-col .icons i:hover  {
+.footer-col .icons i:hover {
   color: #fff;
 }
 
@@ -1673,7 +1638,6 @@ font-size: 14px;
 
 #footer .footer-top .footer-newsletter form input[type="submit"]:hover {
   background: #57a6ea;
-  ;
 }
 
 #footer .copyright {
@@ -1728,8 +1692,6 @@ footer {
   opacity: 1;
 }
 
-
-
 /* Style for pateint portal  */
 /* -----***************************************-----  */
 .patient-portal {
@@ -1766,7 +1728,6 @@ footer {
   /* Adds bottom margin for form-group */
 }
 
-
 .forgot-password {
   margin-top: 20px;
 }
@@ -1774,7 +1735,6 @@ footer {
 .form-control {
   width: 50%;
   /* Full width */
-
   padding: 10px;
   border: 1px solid #ccc;
   /* Light gray border */

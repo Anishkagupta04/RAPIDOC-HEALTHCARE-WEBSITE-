@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ</title>
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>RapiDoc</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link href="Css-Files/animate.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="remixicon/remixicon.css" rel="stylesheet">
+  <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+                         
+  <link href="patient-portal.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+</head>
+<style>
+    #faq-container {
+        width: 75%;
+        display: block;
+        margin: auto;
+        margin-bottom: 12rem;
+    }
+
+    @media screen and (max-width: 760px) {
+    #faq-container {
+        width: 90%;
+    }
+
+    .footer {
+        top: 130% !important;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #faq-container {
+        margin-bottom: 0rem;
+    }
+}
+
+
+    .answers.show {
+    display: block; /* show answers when the show class is present */
+}
+
+  .main-heading {
+    display: flex;
+    margin-top: 30px;
+    padding: 20px;
+    background: #102723;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+    cursor: pointer;
+  }
+
+  .main-heading h3 {
+    margin-left: 30px;
+    color: white;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .main-heading p {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .answers {
+    padding: 30px 20px 40px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    background: #1c413b;
+    color: rgb(192, 192, 192);
+    border-radius: 0 0 5px 5px;
+    display: none;
+  }
+
+  body.dark .answers {
+    color: rgb(40, 37, 53);
+  }
+
+  .lead, .pt-5 {
+    text-align: center;
+    font-size: xx-large;
+  }
+</style>
+<body>
+    <!-- Header -->
+
+    <header class="header_container">
+        <div class="img">
+        <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
+      </div>
+      
+      </div>
+      <nav class="nav_menu">
+
+        <ul class="nav_link">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Html-Files/news.html">News</a></li>
+          <a href="dex.html"><button>Service</button></a>
+          <li><a href="#patient-portal">patient Portal</a></li>
+          <li><a href="#doctors">Doctor</a></li>
+          <li><a href="Html-Files/contact.html">Contact us</a></li>
+          <a href="login.html"><button>Sign in/Sign up</button></a>
+        </ul>
+      </nav>
+      </div>
+    </header>
+
+  <!-- header -->
+
+  <!-- faq -->
+<div id="page-content" class="page-content">
+    <div class="banner">
+        <div class="text-center rounded-0" style="background-image: url('assets/img/logo/nn.png');">
+            <div class="container">
+                <h1 class="pt-5">
+                    FAQ
+                </h1>
+                <p class="lead">
+                    Frequently Asked Questions.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="faq-container">
+        <div class="main-heading" onclick="toggleAnswer('question1')">
+            <p id="icon1">➕</p>
+            <h3>What services does the platform offer?</h3>
+        </div>
+        <p id="question1" class="answers">Our platform provides a range of healthcare services, including real-time information on hospital bed availability, patient statistics, OPD appointment booking, blood group availability, and much more.</p>
+
+        <div class="main-heading" onclick="toggleAnswer('question2')">
+            <p id="icon2">➕</p>
+            <h3>How can I check the availability of hospital beds?</h3>
+        </div>
+        <p id="question2" class="answers">To check hospital bed availability, log in to your account, navigate to the "Hospital Services" section, and select "Bed Availability." You will be able to see real-time updates on the availability of beds in your preferred hospitals.</p>
+
+        <div class="main-heading" onclick="toggleAnswer('question3')">
+            <p id="icon3">➕</p>
+            <h3>Can I book an OPD appointment through the platform?</h3>
+        </div>
+        <p id="question3" class="answers">Yes, you can easily prebook OPD appointments. Visit the "Appointments" section, choose your preferred doctor and hospital, and select a convenient time slot to book your appointment.</p>
+
+        <div class="main-heading" onclick="toggleAnswer('question4')">
+            <p id="icon4">➕</p>
+            <h3>How do I find the availability of specific blood groups in hospitals?</h3>
+        </div>
+        <p id="question4" class="answers">Go to the "Blood Bank" section, select the required blood group, and the platform will display the current availability status in various hospitals and blood banks.</p>
+
+        <div class="main-heading" onclick="toggleAnswer('question5')">
+            <p id="icon4">➕</p>
+            <h3>Is there a mobile app for this platform?</h3>
+        </div>
+        <p id="question5" class="answers">Yes, our platform is accessible via a mobile app available for both Android and iOS devices. You can download it from the respective app stores.</p>
+
+        <div class="main-heading" onclick="toggleAnswer('question6')">
+            <p id="icon4">➕</p>
+            <h3>How do I register on the platform?</h3>
+        </div>
+        <p id="question6" class="answers">To register, click on the "Sign Up" button on the homepage, fill in the required details, and verify your email address. Once registered, you can log in to access all the services.</p>
+
+        <div class="main-heading" onclick="toggleAnswer('question7')">
+            <p id="icon4">➕</p>
+            <h3>Can I cancel or reschedule my OPD appointment?</h3>
+        </div>
+        <p id="question7" class="answers">Yes, you can cancel or reschedule your OPD appointment through the "Appointments" section. Please note that some hospitals may have specific policies regarding cancellations and rescheduling, so check the terms during the booking process.</p>
+
+        <div class="main-heading" onclick="toggleAnswer('question8')">
+            <p id="icon4">➕</p>
+            <h3>Can I access my medical records through the platform?</h3>
+        </div>
+        <p id="question8" class="answers">Yes, you can access your medical records under the "My Health Records" section. Ensure that your hospital is integrated with our platform to view your records.</p>
+
+        <div class="main-heading" onclick="toggleAnswer('question9')">
+            <p id="icon4">➕</p>
+            <h3>How can I contact customer support?</h3>
+        </div>
+        <p id="question9" class="answers">You can contact our customer support team by clicking on the "Contact Us" link at the bottom of the homepage. We offer support via email, phone, and live chat.</p>
+
+        <div class="main-heading" onclick="toggleAnswer('question10')">
+            <p id="icon4">➕</p>
+            <h3>Is my personal information secure on the platform?</h3>
+        </div>
+        <p id="question10" class="answers">Yes, we prioritize your privacy and security. Our platform uses advanced encryption technologies to ensure that your personal and medical information is securely stored and transmitted.</p>
+
+        <div class="main-heading" onclick="toggleAnswer('question11')">
+            <p id="icon4">➕</p>
+            <h3>Are there any fees for using the platform?</h3>
+        </div>
+        <p id="question11" class="answers">Basic services such as browsing hospital information and checking bed availability are free. However, there may be fees for certain premium services like detailed health analytics and advanced appointment features. These fees will be clearly indicated before any charges are applied.</p>
+
+        <div class="main-heading" onclick="toggleAnswer('question12')">
+            <p id="icon4">➕</p>
+            <h3>I have many more questions for you!</h3>
+        </div>
+        <p id="question12" class="answers">Contact us! We will be there for support at <a href="mailto:rapidoc@gmail.com">rapidoc@gmail.com</a>.</p>
+
+    </div>
+</div>
+
+<!-- faq -->
+
+<!-- footer -->
+
+<footer id="footer">
+    <div class="footer-top" >
+      <div class="container" >
+        <div class="row-d" >
+
+    <section class="footer">
+      <div class="footer-row">
+        <div class="footer-col">
+          
+          <h4>Quick Links</h4>
+          <ul class="links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="./Html-Files/contact.html">Contact Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="links">
+            <li><a href="#">Appointment</a></li>
+            <li><a href="#">Patient Portal</a></li>
+            <li><a href="#">Login account</a></li>
+            <li><a href="#">Helplines</a></li>
+            <li><a href="#">Location</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="links">
+            <li><a href="#">Customer Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>RAPIDOC Newsletter</h4>
+          <p>
+            Subscribe to our newsletter for a weekly dose
+            of news, updates, helpful tips, and
+            exclusive offers.
+          </p>
+          <form action="#">
+            <input type="text" placeholder="Your email" required>
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+        </div>
+      </div>
+      <div id="copyright" style="text-align: center">
+        <p style="align-items: center">
+          © <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+          Reserved
+        </p>
+        <p>Made with ❤️ by RapiDoc</p>
+      </div>
+    </section>
+
+
+
+  <div id="back-to-top-container">
+    <div class="circle">
+      <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- footer -->
+
+<script>
+    function toggleAnswer(id) {
+var answer = document.getElementById(id);
+if (answer) {
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+        document.getElementById("icon" + id.charAt(id.length - 1)).innerText = "➕";
+    } else {
+        answer.style.display = "block";
+        document.getElementById("icon" + id.charAt(id.length - 1)).innerText = "➖";
+    }
+}
+}
+
+
+</script>
+</body>
+</html>
