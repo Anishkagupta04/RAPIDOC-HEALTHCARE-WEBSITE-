@@ -10,6 +10,15 @@
 
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "o6kveYmOSDrs0l1Mg",
+        });
+    })();
+  </script>
+
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <title>RapiDoc</title>
@@ -998,21 +1007,6 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
           </section>
 
           <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.js-testimonals-slider', {
-    grabCursor: true,
-    spaceBetween: 30,
-    pagination: {
-      el: '.js-testimonals-pagination',
-      clickable: true
-    },
-    breakpoints: {
-      767: {
-        slidesPerView: 2,
-      }
-    }
-  })
-</script>
 
 
      <!-- testimonial section -->
@@ -1180,6 +1174,23 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
   </script>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+   <script>
+    const swiper = new Swiper('.js-testimonals-slider', {
+      grabCursor: true,
+      spaceBetween: 30,
+      pagination: {
+        el: '.js-testimonals-pagination',
+        clickable: true
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+        }
+      }
+    })
+  </script>
+
    <script>
        document.addEventListener("DOMContentLoaded", function() {
            const phoneInputField = document.getElementById('phone');
@@ -1232,7 +1243,16 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
     ScrollReveal().reveal('.feedback', { delay: 400 , origin:'left' });
     ScrollReveal().reveal('.footer', { delay: 400 , origin:'bottom' });
   </script>
-          <script>
+<script>
+    function sendMail(){
+    let params={
+      to_email: document.getElementById("subscribe-email").value,
+      message: `<h1>Thank you for subscribing to RapiDoc Newsletter</h1>
+      <p>Stay tuned for the latest news, updates, helpful tips, and exclusive offers.</p>`,
+    }
+    emailjs.send("service_lktb68z","template_w79vd94",params).then(alert("Subscribed Successfully!"));
+  }
+
 
 window.addEventListener("load", () => {
   const loader = document.querySelector(".pre");
