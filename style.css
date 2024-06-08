@@ -35,6 +35,9 @@ h6 {
 }
 
 .nav_link li a {
+  display: flex;
+  justify-content: center;
+  align-items: end;
   transition: all 0.3s ease 0s;
   color: white;
 }

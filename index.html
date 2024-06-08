@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
 
   <link rel="stylesheet" type="text/css" href="./style.css" />
@@ -37,139 +37,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
-    <style>
-      .icons {
-  position: absolute;
-/*  bottom: 380px;
-  right: 175px;
-  */
-  right: 1225px;
-  transform: translateX(50%);
-  z-index: 2;
-}
-
-.socials-menu {
-	opacity: 0;	
-	transition: opacity 0.5s;
-}
-
-.active > .socials-menu {
-	opacity: 1;	
-}
-
-.share-button {
-	position: absolute;
-	border: none;
-	cursor: pointer;
-	z-index: 2;
-	transition: all 0.4s ease-in-out;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 4rem;
-	height: 4rem;
-	background-color: var(--background);
-	border-radius: 50%;
-	outline: 2px solid white;
-	outline-offset: 3px;
-}
-.active .share-button, .share-button:hover {
-	background-color: var(#00C896);
-	transform: scale(1.03);
-}
-
-.share-button:hover {
-	background-color: #00C896;
-}
-
-.social {
-	position: absolute;
-	list-style: none;
-	transition: all 0.5s ease-in-out;
-	display: grid;
-	cursor: pointer;
-	place-items: center;
-	width: 4rem;
-	height: 4rem;
-	border-radius: 50%;
-	outline: 2px solid white;
-	outline-offset: 3px;
-}
-
-.social a {
-	display: grid;
-	cursor: pointer;
-	place-items: center;
-}
-
-.social li a {
-  transition: font-size 0.3s;
-}
-
-.active .social:nth-child(1) {
-	transform: translateX(-5rem);
-}
-
-
-.active .social:nth-child(1) {
-	background: #7289da !important; 
-}
-
-.active .social:nth-child(2) {
-	transform: translateY(-5rem);
-}
-
-.active .social:nth-child(2){
-	background-color: #3a76f0 !important;
-}
-
-.active .social:nth-child(3) {
-	transform: translateX(5rem);
-}
-
-.active .social:nth-child(3){
-	background: grey !important; 
-}
-
-.active .social:nth-child(4) {
-	transform: translateY(5rem);
-}
-
-.active .social:nth-child(4){
-	background-color: #ff4500 !important;
-}
-
-.light-mode .social {
-	outline: 2px solid black;
-}
-
-.light-mode .share-button {
-	outline: 2px solid black;
-  color: black;
-}
-
-.light-mode .share-button svg path{
-  color: black; 
-  stroke: #000000;
-}
-.light-mode .share-button svg .box{
-  stroke: white;
-}
-
-@media (max-width: 768px) {
-  .icons{
-    position: absolute;
-  }
-}
-
-@media (max-width: 480px) {
-  .icons{
-    position: absolute;
-    top: calc(100% - 50vh);
-    right: calc(100% - 75vw);
-  }
-}
-    </style>
     <style>
       /* Ensure the input takes up full width */
        /* Ensure the input takes up full width */
@@ -339,7 +206,7 @@
   </div>
       <!-- ############# Header ############# -->
   
-      <!-- <header class="header_container">
+      <header class="header_container">
         <div class="img">
         <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
       </div>
@@ -348,13 +215,38 @@
       <nav class="nav_menu">
 
         <ul class="nav_link">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="Html-Files/news.html">News</a></li>
-          <a href="dex.html"><button>Service</button></a>
-          <li><a href="#patient-portal">Patient Portal</a></li>
-          <li><a href="#doctors">Doctor</a></li>
-          <li><a href="Html-Files/contact.html">Contact us</a></li>
+          <li><a href="index.html"><lord-icon
+                  src="https://cdn.lordicon.com/wmwqvixz.json"
+                  trigger="hover"
+                  colors="primary:#ffffff"
+                  style="width:20px;height:20px">
+              </lord-icon>&nbsp;&nbsp;Home</a></li>
+          <li><a href="#about"><lord-icon
+                  src="https://cdn.lordicon.com/jnzhohhs.json"
+                  trigger="hover"
+                  colors="primary:#ffffff"
+                  style="width:20px;height:20px">
+              </lord-icon>&nbsp;&nbsp;About</a></li>
+          <li><a href="Html-Files/news.html"><lord-icon
+                  src="https://cdn.lordicon.com/rwtswsap.json"
+                  trigger="hover"
+                  colors="primary:#ffffff"
+                  style="width:20px;height:20px">
+              </lord-icon>&nbsp;&nbsp;News</a></li>
+          <a href="dex.html"><button><lord-icon
+                  src="https://cdn.lordicon.com/ojnjgkun.json"
+                  trigger="hover"
+                  colors="primary:#ffffff"
+                  style="width:20px;height:20px">
+              </lord-icon>&nbsp;&nbsp;Service</button></a>
+          <li><a href="#patient-portal"><i class="fa-solid fa-users" style="color: #ffffff;"></i>&nbsp;&nbsp;patient Portal</a></li>
+          <li><a href="#doctors"><i class="fa-solid fa-user-doctor" style="color: #ffffff;"></i>&nbsp;&nbsp;Doctor</a></li>
+          <li><a href="Html-Files/contact.html"><lord-icon
+                  src="https://cdn.lordicon.com/srsgifqc.json"
+                  trigger="hover"
+                  colors="primary:#ffffff"
+                  style="width:20px;height:20px;padding-top:2px;">
+              </lord-icon>&nbsp;&nbsp;Contact us</a></li>
           <a href="login.html"><button>Sign in/Sign up</button></a>
         </ul>
       </nav>
@@ -366,11 +258,12 @@
         <p>Hi there 👋<br>How can I help you today?</p>
       </li>
     </ul>
-    <div class="chat-input">
+    <!-- <div class="chat-input">
       <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
       <span id="send-btn" class="material-symbols-rounded">send</span>
     </div>
   </div> -->
+
 
   <!-- ############# Header ############# -->
 
@@ -1222,78 +1115,32 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
           
           <h4>Quick Links</h4>
           <ul class="links">
-            <li><a href="./index.html"><lord-icon
-                  src="https://cdn.lordicon.com/wmwqvixz.json"
-                  trigger="hover"
-                  colors="primary:#ffffff"
-                  style="width:20px;height:20px">
-              </lord-icon>&nbsp;&nbsp;Home</a></li>
-            <li><a href="#about"><lord-icon
-                  src="https://cdn.lordicon.com/jnzhohhs.json"
-                  trigger="hover"
-                  colors="primary:#ffffff"
-                  style="width:20px;height:20px">
-              </lord-icon>&nbsp;&nbsp;About Us</a></li>
-            <li><a href="./Html-Files/contact.html">
-              <lord-icon
-                  src="https://cdn.lordicon.com/srsgifqc.json"
-                  trigger="hover"
-                  colors="primary:#ffffff"
-                  style="width:20px;height:20px">
-              </lord-icon>&nbsp;&nbsp;Contact Us</a></li>
-            <li><a href="#services"><lord-icon
-                  src="https://cdn.lordicon.com/ojnjgkun.json"
-                  trigger="hover"
-                  colors="primary:#ffffff"
-                  style="width:20px;height:20px">
-              </lord-icon>&nbsp;&nbsp;Services</a></li>
-            <li><a href="#doctors"><i class="fa-solid fa-user-doctor" style="color: #ffffff;"></i>&nbsp;&nbsp;Doctors</a></li>
-            <li><a href="./faq.html"><lord-icon
-                  src="https://cdn.lordicon.com/pyoiumqr.json"
-                  trigger="hover"
-                  colors="primary:#ffffff"
-                  style="width:20px;height:20px">
-              </lord-icon>&nbsp;&nbsp;FAQ</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="./Html-Files/contact.html">Contact Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Explore</h4>
           <ul class="links">
-            <li><a href="#"><i class="fa-solid fa-calendar-check" style="color: #ffffff;"></i>&nbsp;&nbsp;Appointment</a></li>
-            <li><a href="#"><lord-icon
-                  src="https://cdn.lordicon.com/djemrejv.json"
-                  trigger="hover"
-                  colors="primary:#ffffff"
-                  style="width:20px;height:20px">
-              </lord-icon> &nbsp;&nbsp;Patient Portal</a></li>
-            <li><a href="#"><i class="fa-solid fa-right-to-bracket" style="color: #ffffff;"></i>&nbsp;&nbsp; Login account</a></li>
-            <li><a href="#"><lord-icon
-                  src="https://cdn.lordicon.com/ojnjgkun.json"
-                  trigger="hover"
-                  colors="primary:#ffffff"
-                  style="width:20px;height:20px">
-              </lord-icon>&nbsp;&nbsp;Helplines</a></li>
-            <li><a href="#"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Location</a></li>
+            <li><a href="#">Appointment</a></li>
+            <li><a href="#">Patient Portal</a></li>
+            <li><a href="#">Login account</a></li>
+            <li><a href="#">Helplines</a></li>
+            <li><a href="#">Location</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
           <ul class="links">
-            <li><a href="#"><lord-icon
-                  src="https://cdn.lordicon.com/hrjifpbq.json"
-                  trigger="hover"
-                  colors="primary:#ffffff"
-                  style="width:20px;height:20px">
-              </lord-icon>&nbsp;&nbsp;Customer Agreement</a></li>
-            <li><a href="#"><i class="fa-solid fa-shield-halved" style="color: #ffffff;"></i>&nbsp;&nbsp; Privacy Policy</a></li>
-            <li><a href="#"><lord-icon
-                  src="https://cdn.lordicon.com/xpgofwru.json"
-                  trigger="hover"
-                  colors="primary:#ffffff"
-                  style="width:20px;height:20px">
-              </lord-icon>&nbsp;&nbsp;GDPR</a></li>
-            <li><a href="#"><i class="fa-solid fa-lock" style="color: #ffffff;"></i>&nbsp;&nbsp;Security</a></li>
-            <li><a href="#"><i class="fa-solid fa-users" style="color: #ffffff;"></i>&nbsp;&nbsp;Testimonials</a></li>
+            <li><a href="#">Customer Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Testimonials</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1307,6 +1154,14 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
             <input type="text" placeholder="Your email" required>
             <button type="submit">SUBSCRIBE</button>
           </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-envelope"></i>
+          </div>
         </div>
       </div>
       <div id="copyright" style="text-align: center">
@@ -1403,23 +1258,11 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
   <script src="swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
-  
   <script src="patient-portal.js"></script>
   <script src="swiper-bundle.min.js"></script>
  
   <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
-  <script>
-    window.embeddedChatbotConfig = {
-    chatbotId: "xjRGZgxJziSoHQ1T1twl6",
-    domain: "www.chatbase.co"
-    }
-    </script>
-    <script
-    src="https://www.chatbase.co/embed.min.js"
-    chatbotId="xjRGZgxJziSoHQ1T1twl6"
-    domain="www.chatbase.co"
-    defer>
-    </script>
+  
   <script>
     ScrollReveal({ 
         //reset: true ,
@@ -1456,23 +1299,6 @@ window.addEventListener("load", () => {
   document.body.removeChild(loader);
   });
   });
-  </script>
-  <script>
-    const shareButton = document.querySelector(".share-button");
-    const toggleSocials = () => {
-      const socialsWrapper = document.querySelector(".icons");
-      const shareButtonImage = shareButton.querySelector("img");
-
-      socialsWrapper.classList.toggle("active");
-
-      if (shareButtonImage.src.includes("share")) {
-        shareButtonImage.src = "close.svg";
-      } else {
-        shareButtonImage.src = "assets/share.svg";
-      }
-    };
-
-    shareButton.addEventListener("click", toggleSocials);
   </script>
 </body>
 
