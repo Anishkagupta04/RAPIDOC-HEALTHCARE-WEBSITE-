@@ -11,6 +11,9 @@ body{
     justify-content: center;
     background-color: #000;
 }
+.logo {
+    cursor: pointer;
+}
 .slide-content{
     margin: 0 40px;
     overflow: hidden;
