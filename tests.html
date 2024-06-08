@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Test </title>
+    <link rel="stylesheet" href="tests.css">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Red+Rose:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="bootstraptest.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+</head>
+<body>
+    <header class="header_container">
+        <div class="img">
+        <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
+      </div>
+      
+      </div>
+      <nav class="nav_menu">
+
+        <ul class="nav_link">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Html-Files/news.html">News</a></li>
+          <li><a href="Html-Files/news.html">Service</a></li>
+          <li><a href="login.html">Sign in/Sign-up</a></li>
+          <li><a href="#patient-portal">patient Portal</a></li>
+          <li><a href="#doctors">Doctor</a></li>
+          <li><a href="Html-Files/contact.html">Contact us</a></li>
+
+        </ul>
+      </nav>
+      </div>
+    </header>
+    <div class="top-search">
+        <div class="search">
+            <!-- <h2>Search and Filter Options</h2>--> 
+        <input type="text" id="search-bar">
+        <i class="fa-solid fa-magnifying-glass" onclick="filterTests()"></i>
+        <!--<button onclick="filterTests()">Search</button>--> 
+        </div>
+        <div class="img-h1" style = " display:inline">
+    <h1 style="font-size: 65px; color:white">
+        Book Your <span style="color: #55a5ea;">Blood Test <img class="sec-img" src="images/rd.png" alt="" data-sr-id="17" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.5s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.5s;"></span> 
+    </h1>
+    <div class="container-fluid container-service py-5">
+      <div class="container pt-5">
+          <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+              <h1 class="display-6 mb-3">Reliable & High-Quality Laboratory Service</h1>
+              <p class="mb-5">Trust our state-of-the-art facilities and expert staff to deliver accurate results and exceptional care for all your testing needs.</p>
+          </div>
+          <div class="row g-4">
+              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                  <div class="service-item">
+                      <div class="icon-box-primary mb-4">
+                          <i class="bi bi-heart-pulse text-dark"></i>
+                      </div>
+                      <h5 class="mb-3">Pathology Testing</h4>
+                          <p class="mb-4">Experience comprehensive analysis and precise diagnosis through our expert laboratory examinations of your bodily samples.</p>
+                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                  <div class="service-item">
+                      <div class="icon-box-primary mb-4">
+                          <i class="bi bi-lungs text-dark"></i>
+                      </div>
+                      <h5 class="mb-3">Microbiology Tests</h4>
+                          <p class="mb-4">Discover how we can help identify infections and guide your treatment with our advanced microbiological investigations.</p>
+                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                  <div class="service-item">
+                      <div class="icon-box-primary mb-4">
+                          <i class="bi bi-virus text-dark"></i>
+                      </div>
+                      <h5 class="mb-3">Biochemistry Tests</h4>
+                          <p class="mb-4">Gain valuable health insights with our detailed assessment of your body's biochemical processes and compounds.</p>
+                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                  <div class="service-item">
+                      <div class="icon-box-primary mb-4">
+                          <i class="bi bi-capsule-pill text-dark"></i>
+                      </div>
+                      <h5 class="mb-3">Histopatology Tests</h4>
+                          <p class="mb-4">Trust our microscopic tissue examinations to provide accurate information about the manifestations of diseases.</p>
+                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                  <div class="service-item">
+                      <div class="icon-box-primary mb-4">
+                          <i class="bi bi-capsule text-dark"></i>
+                      </div>
+                      <h5 class="mb-3">Urine Tests</h4>
+                          <p class="mb-4">Detect and manage various medical conditions with our thorough urine analysis services.
+                        </p>
+                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                  <div class="service-item">
+                      <div class="icon-box-primary mb-4">
+                          <i class="bi bi-prescription2 text-dark"></i>
+                      </div>
+                      <h5 class="mb-3">Blood Tests</h4>
+                          <p class="mb-4">Ensure your overall health and receive accurate diagnoses with our vital blood examination services.</p>
+                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                  <div class="service-item">
+                      <div class="icon-box-primary mb-4">
+                          <i class="bi bi-clipboard2-pulse text-dark"></i>
+                      </div>
+                      <h5 class="mb-3">Fever Tests</h4>
+                          <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
+                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                  <div class="service-item">
+                      <div class="icon-box-primary mb-4">
+                          <i class="bi bi-file-medical text-dark"></i>
+                      </div>
+                      <h5 class="mb-3">Allergy Tests</h4>
+                          <p class="mb-4">Identify and manage your allergies with our reliable and comprehensive testing services, tailored to your specific needs.</p>
+                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    
+    <<!--<div class="container">
+
+        </div>
+        
+        
+        
+        
+        
+        <div class="section">
+            
+            <h2>Test Categories</h2>
+            <select id="test-category">
+                <option value="all">All</option>
+                <option value="hematology">Hematology</option>
+                <option value="biochemistry">Biochemistry</option>
+                <option value="immunology">Immunology</option>
+                <option value="microbiology">Microbiology</option>
+            </select>
+            <h2>Booking and Scheduling</h2>
+            <label for="test-date">Choose a date:</label>
+            <input type="date" id="test-date">
+            
+            <label for="time-slot">Choose a time slot:</label>
+            <select id="time-slot">
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+            </select>
+            <h2>Sample Collection Method</h2>
+            <select id="sample-method">
+                <option value="home">Home Collection</option>
+                <option value="lab">Lab Visit</option>
+            </select>
+            <h2>Pricing Information</h2>
+            <p id="pricing"style= "color:black ; background-color:white; border-radius:1rem; Poppins , sans-serif;font-size:15px;padding:10px">Please select a test category to see the pricing.</p>
+            <h2>Preparation Instructions</h2>
+            <p id="instructions" style= "color:black ; background-color:white; border-radius:1rem; Poppins , sans-serif;font-size:15px;padding:10px">Please select a test category to see the preparation instructions.</p>
+            <button onclick="bookTest()">Book Test</button>
+            
+    </div>-->
+     
+   
+    <br /><br />
+    
+   
+    <footer class="footer">
+        <div class="footer-container">
+            <hr>
+            <h2>Quick Links</h2>
+        <ul>
+          <li class="foot-quick"><a href="#home" onclick="lenis.scrollTo('#home')">Home</a></li>
+          <li class="foot-quick"><a href="#about" onclick="lenis.scrollTo('#about')">About</a></li>
+          <li class="foot-quick"><a href="#news" onclick="lenis.scrollTo('#news')">News</a></li>
+          <li class="foot-quick"><a href="#doctor" onclick="lenis.scrollTo('#doctor')">Doctor</a></li>
+          <li class="foot-quick"><a href="#service" onclick="lenis.scrollTo('#service')">Service</a></li>
+          <li class="foot-quick"><a href="#cintactus" onclick="lenis.scrollTo('#contactus')">Contact Us</a></li>
+        </ul>
+        <div class="social-icons">
+        
+            <div class="icons">
+              <a href="#">
+                <div class="icon">
+                  <i class="fab fa-facebook-square"></i>
+                </div>
+              </a>
+        
+              <a href="#">
+                <div class="icon">
+                  <i class="fa-brands fa-square-x-twitter"></i>
+                </div>
+              </a>
+        
+              <a href="#">
+                <div class="icon">
+                  <i class="fab fa-instagram-square"></i>
+                </div>
+              </a>
+        
+              <a href="https://www.youtube.com/@anuragbytes">
+                <div class="icon">
+                  <i class="fab fa-youtube-square"></i>
+                </div>
+              </a>
+      </div>
+          <p style =" color:white; text-align:center"> &copy; 2024 RapiDoc. All Rights Reserved. </p>
+          
+        </div>
+        
+      </footer>
+        
+            
+              
+    
+    
+        
+    
+    
+    <script src="tests.js"></script>
+</body>
+</html>
