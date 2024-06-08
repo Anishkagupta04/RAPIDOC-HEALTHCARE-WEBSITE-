@@ -71,6 +71,7 @@ button {
   /* display: ; */
   font-family: sans-serif;
   padding-top: 80px;
+  display: unset;
 }
 
 /* .container a:hover {
@@ -140,7 +141,8 @@ button {
 * Appointment Button *
 */
 .appointment-btn {
-  margin-left: 25px;
+  /* /* margin-left: 60rem; */
+  margin-top: 1rem; 
   background: #55a5ea;
   color: #fff;
   border-radius: 50px;
@@ -149,7 +151,7 @@ button {
   transition: 0.3s;
   font-size: 16px;
   font-weight: 600;
-  z-index: -1;
+  /* z-index: -1; */
   display: inline-block;
 }
 
@@ -173,7 +175,8 @@ button {
 }
 
 .navbar ul {
-  margin: 0;
+  margin-left: 35rem;
+  margin-top: -3rem;
   padding: 0;
   display: flex;
   list-style: none;
@@ -985,11 +988,11 @@ section {
 
 /*################----Appointments----################*/
 .layout {
-  /*border: 2px solid #ccc; */
   background-color: #3fbcc051;
   border-radius: 30px;
   padding: 50px;
-  width: 700px;
+  width: 90%;  /* Changed width to 90% for better responsiveness */
+  max-width: 1200px;  /* Added max-width for better control */
   margin: 0 auto;
 }
 
@@ -1004,14 +1007,15 @@ section {
 .appointment .php-email-form input,
 .appointment .php-email-form textarea,
 .appointment .php-email-form select {
-  margin-left: 175px;
-  border-radius: 0;
+  display: block;  /* Added display block to ensure full-width elements */
+  margin: 10px auto;  /* Centering elements */
+  border-radius: 10px;
   box-shadow: none;
   font-size: 14px;
   background: #badaf7;
-  border-radius: 10px;
   padding: 10px !important;
   color: #6c757d;
+  width: 80%;  /* Adjusted width for better layout */
 }
 
 .appointment .php-email-form input:focus,
@@ -1020,18 +1024,9 @@ section {
   border-color: rgba(63, 188, 192, 0.651);
 }
 
-.appointment .php-email-form input,
-.appointment .php-email-form select {
-  height: 44px;
-  width: 50%;
-}
-
-.appointment .php-email-form textarea {
-  padding: 10px 12px;
-}
-
 .appointment .php-email-form button[type="submit"] {
-  margin-left: 250px;
+  display: block;
+  margin: 20px auto;
   background: hsla(182, 51%, 50%, 0.651);
   border: 0;
   padding: 10px 35px;
@@ -1044,10 +1039,12 @@ section {
   background: #3fbcc0bd;
 }
 
-/*################----Doctors----################*/
 .doctors {
   background: #000;
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .doctors .member {
@@ -1055,18 +1052,18 @@ section {
   position: relative;
   border-radius: 10px;
   padding: 30px;
-  margin: 10px 500px;
+  margin: 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
+  width: 250px; 
+  box-sizing: border-box;
 }
 
 .doctors .member .pic {
   overflow: hidden;
   width: 180px;
-  /* margin: 0 130px; */
   border-radius: 50%;
 }
 
@@ -1079,7 +1076,7 @@ section {
 }
 
 .doctors .member .member-info {
-  padding-left: 30px;
+  padding-top: 20px;
 }
 
 .doctors .member h4 {
@@ -1108,11 +1105,16 @@ section {
   left: 0;
 }
 
+.doctors .nxt-pg {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
 .doctors .nxt-pg button {
   background: #55a5ea;
   border: 0;
   padding: 10px 35px;
-  text-decoration: none;
   transition: 0.4s;
   width: 200px;
   border-radius: 50px;
@@ -1123,13 +1125,11 @@ section {
   background: #55a5ea;
 }
 
-/*################----Contact----################*/
 .contact .info {
   width: 100%;
   background: #0a0a0a;
   border-radius: 15px;
   padding: 15px;
-  /* border: 2px; */
 }
 
 .contact .info i {
@@ -1199,6 +1199,8 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
+  display: block;
+  margin: 20px auto;
   background: #3fbcc0a6;
   border: 0;
   padding: 10px 35px;
@@ -1215,7 +1217,6 @@ section {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
@@ -1225,11 +1226,11 @@ section {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
+
 
 /*################--feedback###############*/
 
