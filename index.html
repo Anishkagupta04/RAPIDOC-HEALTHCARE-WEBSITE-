@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
 
 
   <link rel="stylesheet" type="text/css" href="./style.css" />
@@ -34,6 +34,141 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <style>
+      .icons {
+  position: absolute;
+/*  bottom: 380px;
+  right: 175px;
+  */
+  right: 1225px;
+  transform: translateX(50%);
+  z-index: 2;
+}
+
+.socials-menu {
+	opacity: 0;	
+	transition: opacity 0.5s;
+}
+
+.active > .socials-menu {
+	opacity: 1;	
+}
+
+.share-button {
+	position: absolute;
+	border: none;
+	cursor: pointer;
+	z-index: 2;
+	transition: all 0.4s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 4rem;
+	height: 4rem;
+	background-color: var(--background);
+	border-radius: 50%;
+	outline: 2px solid white;
+	outline-offset: 3px;
+}
+.active .share-button, .share-button:hover {
+	background-color: var(#00C896);
+	transform: scale(1.03);
+}
+
+.share-button:hover {
+	background-color: #00C896;
+}
+
+.social {
+	position: absolute;
+	list-style: none;
+	transition: all 0.5s ease-in-out;
+	display: grid;
+	cursor: pointer;
+	place-items: center;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	outline: 2px solid white;
+	outline-offset: 3px;
+}
+
+.social a {
+	display: grid;
+	cursor: pointer;
+	place-items: center;
+}
+
+.social li a {
+  transition: font-size 0.3s;
+}
+
+.active .social:nth-child(1) {
+	transform: translateX(-5rem);
+}
+
+
+.active .social:nth-child(1) {
+	background: #7289da !important; 
+}
+
+.active .social:nth-child(2) {
+	transform: translateY(-5rem);
+}
+
+.active .social:nth-child(2){
+	background-color: #3a76f0 !important;
+}
+
+.active .social:nth-child(3) {
+	transform: translateX(5rem);
+}
+
+.active .social:nth-child(3){
+	background: grey !important; 
+}
+
+.active .social:nth-child(4) {
+	transform: translateY(5rem);
+}
+
+.active .social:nth-child(4){
+	background-color: #ff4500 !important;
+}
+
+.light-mode .social {
+	outline: 2px solid black;
+}
+
+.light-mode .share-button {
+	outline: 2px solid black;
+  color: black;
+}
+
+.light-mode .share-button svg path{
+  color: black; 
+  stroke: #000000;
+}
+.light-mode .share-button svg .box{
+  stroke: white;
+}
+
+@media (max-width: 768px) {
+  .icons{
+    position: absolute;
+  }
+}
+
+@media (max-width: 480px) {
+  .icons{
+    position: absolute;
+    top: calc(100% - 50vh);
+    right: calc(100% - 75vw);
+  }
+}
+    </style>
     <style>
       /* Ensure the input takes up full width */
        /* Ensure the input takes up full width */
@@ -48,7 +183,7 @@
 }
 
 .container {
-    display: flex;
+    display:unset;
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -192,6 +327,8 @@
      <!-- Google Fonts Link For Icons chatboxx -->
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+     <link rel="stylesheet" href="./Css-Files/aboutus.css" />
+     <link rel="stylesheet" href="./Css-Files/testimonial.css" />
      <script src="chatboxx.js" defer></script>
 </head>
 
@@ -203,7 +340,7 @@
   
       <header class="header_container">
         <div class="img">
-        <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
+        <img id="rd-logo"  style="width: 90px; height: auto;" src="images/rd.png"> 
       </div>
       
       </div>
@@ -214,7 +351,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="Html-Files/news.html">News</a></li>
           <a href="dex.html"><button>Service</button></a>
-          <li><a href="#patient-portal">patient Portal</a></li>
+          <li><a href="#patient-portal">Patient Portal</a></li>
           <li><a href="#doctors">Doctor</a></li>
           <li><a href="Html-Files/contact.html">Contact us</a></li>
           <a href="login.html"><button>Sign in/Sign up</button></a>
@@ -222,18 +359,6 @@
       </nav>
       </div>
     </header>
-    <ul class="chatbox">
-      <li class="chat incoming">
-        <span class="material-symbols-outlined">smart_toy</span>
-        <p>Hi there 👋<br>How can I help you today?</p>
-      </li>
-    </ul>
-    <div class="chat-input">
-      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-      <span id="send-btn" class="material-symbols-rounded">send</span>
-    </div>
-  </div>
-
 
   <!-- ############# Header ############# -->
 
@@ -332,48 +457,82 @@
 
 
     <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-
-          <h2 style="text-align: center;">About Us</h2>
-
-          <p>RapiDoc is an online platform designed to provide comprehensive information about nearby hospitals and healthcare facilities, addressing a wide range of health-related issues. It serves as a one-stop destination for all your medical needs, offering an easy and efficient way to find essential healthcare services. Whether you're looking for the nearest hospital, specialized medical care, or urgent health services, RapiDoc simplifies the process with its user-friendly interface and extensive database. By centralizing health information, it ensures you have quick access to vital resources, enhancing your ability to make informed healthcare decisions and receive timely medical attention.
-
-          </p>
+      <div id="about-us">
+        <h1 class="about-us-heading">About Us</h1>
+        <div class="about-us-block">
+            <div class="about-us-community">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <img id="community-img" src="./images/checkup.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
+                    <div class="about-us-blk-text">Comprehensive Health Checkups</div>
+                </div>
+                <p class="about-us-blk-para">At Rapidoc, we prioritize your well-being with thorough health checkups that are designed to detect potential health issues early. Our comprehensive packages include a range of tests and screenings, providing a detailed analysis of your health status. Book your health checkup easily through our platform and receive personalized recommendations from our medical experts.</p>
+            </div>
+            <div class="about-us-product">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <img id="product-img" src="./images/ward.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
+                    <div class="about-us-blk-text">Emergency Ward Availability</div>
+                </div>
+                <p class="about-us-blk-para">In critical situations, every second counts. Rapidoc offers real-time updates on the availability of emergency wards across various hospitals. This feature ensures that you can find the nearest hospital with an open emergency ward promptly, facilitating quicker access to urgent medical care when you need it most.</p>
+            </div>
         </div>
-
-        <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center
-     align-items-stretch position-relative">
-
-          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch
-     justify-content-center py-5 px-lg-5">
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-heart"></i></div>
-              <h4 class="title"><a href="">HEALTH CHECKUPS</a></h4>
-              <p class="description">Bootcamps, personalised check-ups, newsletters, it’s all here.</p>
+        <div class="about-us-block">
+            <div class="about-us-location">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <img id="location-img" src="./images/appointment.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
+                    <div class="about-us-blk-text">Seamless Appointment Booking</div>
+                </div>
+                <p class="about-us-blk-para">Say goodbye to long queues and waiting times with Rapidoc's seamless appointment booking system. Our platform allows you to prebook appointments with specialists across numerous hospitals. This ensures you receive timely consultations and reduces the hassle of waiting, making your healthcare experience more efficient and convenient.</p>
             </div>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-health"></i></div>
-              <h4 class="title"><a href="">EMERGENCY WARDS</a></h4>
-              <p class="description">Avoid rush and get immediate medical assistance, know the
-                wards and vacancies.
-              </p>
+            <div class="about-us-event">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <img id="event-img" src="./images/services.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
+                    <div class="about-us-blk-text">Personalized Healthcare Services</div>
+                </div>
+                <p class="about-us-blk-para">Rapidoc is dedicated to offering personalized healthcare services tailored to meet your unique needs. Our platform connects you with a variety of specialists and healthcare providers, ensuring you receive the best possible care. From tailored treatment plans to ongoing health management, Rapidoc supports your journey to optimal health with expert guidance and personalized attention.</p>
             </div>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-help-circle"></i></div>
-              <h4 class="title"><a href="">SERVICES</a></h4>
-              <p class="description">An apple a day won’t keep RapiDoc away. We are always here at your service,
-                bringing to you the best facilities.</p>
-            </div>
-          </div>
         </div>
+    </div>
+    </section>
 
-      </div>
-    </section><!-- End About Section -->
+    <script>
+      document.querySelectorAll('.about-us-community').forEach(function(element) {
+  element.addEventListener('mouseover', function() {
+      element.querySelector('img').src = './images/checkuphover.png';
+  });
+  element.addEventListener('mouseleave', function() {
+      element.querySelector('img').src = './images/checkup.png';
+  });
+});
+
+document.querySelectorAll('.about-us-event').forEach(function(element) {
+  element.addEventListener('mouseover', function() {
+      element.querySelector('img').src = './images/serviceshover.png';
+  });
+  element.addEventListener('mouseleave', function() {
+      element.querySelector('img').src = './images/services.png';
+  });
+});
+
+document.querySelectorAll('.about-us-product').forEach(function(element) {
+  element.addEventListener('mouseover', function() {
+      element.querySelector('img').src = './images/wardhover.png';
+  });
+  element.addEventListener('mouseleave', function() {
+      element.querySelector('img').src = './images/ward.png';
+  });
+});
+
+document.querySelectorAll('.about-us-location').forEach(function(element) {
+  element.addEventListener('mouseover', function() {
+      element.querySelector('img').src = './images/appointmenthover.png';
+  });
+  element.addEventListener('mouseleave', function() {
+      element.querySelector('img').src = './images/appointment.png';
+  });
+});
+  </script>
+    
+    <!-- End About Section -->
 
 
     <!-- ################## Counts Section ################## -->
@@ -382,7 +541,7 @@
     <section id="counts" class="counts">
       <div class="container" data-aos="fade-up">
 
-        <div class="row no-gutters">
+        <div class="row no-gutters" >
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
@@ -399,7 +558,7 @@
               <i class="fas fa-bed"></i>
               <span data-purecounter-start="0" data-purecounter-end="36" data-purecounter-duration="1"
                 class="purecounter"></span>
-              <p><strong>Beds Available</strong> <br> <br>Beds available at your nearest emergency centers.</p><br>
+              <p><strong>Beds Available</strong> <br><br>Nearby emergency beds available.</p><br>
               <a href="">Find out more &raquo;</a>
             </div>
           </div>
@@ -444,7 +603,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-heartbeat"></i></div>
               <h4><a href="">Clinics/Labs</a></h4>
-              <p>Locate the best healthcare facilities around you hassle-free.</p>
+              <p>Locate the best healthcare facilities around you hassle-free.From routine check-ups to specialized treatments, find the right clinic or lab that meets your needs. Our database is updated regularly to ensure you have the most accurate information.</p>
             </div>
           </div>
 
@@ -452,7 +611,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-pills"></i></div>
               <h4><a href="https://www.1mg.com">Pharmacy</a></h4>
-              <p>Get your prescribed medicines delivered at your doorstep.</p>
+              <p>Get your prescribed medicines delivered at your doorstep.Our pharmacy service ensures you never miss a dose with timely reminders and easy refill options. Enjoy the convenience of home delivery and exclusive discounts on a wide range of medicines.</p>
             </div>
           </div>
 
@@ -460,8 +619,8 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-hospital-user"></i></div>
               <h4><a href="">Daily Feed</a></h4>
-              <p>Access to heath benefits like bootcamps, vaccination drives and much more
-                . </p>
+              <p>Access to heath benefits like bootcamps, vaccination drives and much more.Stay informed about the latest health trends, wellness tips, and upcoming events in your area. Participate in community health initiatives and boost your wellbeing.
+               </p>
             </div>
           </div>
 
@@ -469,7 +628,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-dna"></i></div>
               <h4><a href="Html-Files/blood.html">Blood Bank</a></h4>
-              <p>Know the blood banks and blood groups available around you. No one should suffer ỉn emergencies.</p>
+              <p>Know the blood banks and blood groups available around you. No one should suffer ỉn emergencies.Find the nearest blood donation centers, check blood availability, and get information on how to donate or request blood in urgent situations.</p>
             </div>
           </div>
 
@@ -477,7 +636,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-wheelchair"></i></div>
               <h4><a href="">Disabled Person</a></h4>
-              <p>Convenient medical care is here. Wheelchair accessible hospitals and clinics, find all in one go.</p>
+              <p>Convenient medical care is here. Wheelchair accessible hospitals and clinics, find all in one go.Access resources and support tailored to the needs of individuals with disabilities, ensuring a seamless healthcare experience for everyone.</p>
             </div>
           </div>
 
@@ -485,7 +644,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-notes-medical"></i></div>
               <h4><a href="https://www.medicalnewstoday.com/">Health Post</a></h4>
-              <p>Weekly, monthly, yearly or each day, however you like it!</p>
+              <p>Weekly, monthly, yearly or each day, however you like it!  Subscribe to our health post for expert articles, tips, and insights to help you make informed health decisions.</p>
             </div>
           </div>
         </div>
@@ -502,6 +661,7 @@
         <!-- <p>The Patient Portal is your personalized online gateway to your health information. Whether you need to check your recent lab results, review your prescription history, or update your personal details, the Patient Portal provides a convenient and secure platform for managing your healthcare needs.</p> 
       </div>
       <div class="container">
+
 
 
       <!-- Add Login Form for Patient Portal 
@@ -533,7 +693,10 @@
       <!-- Add Forgot Password Link -->
 
 
-    <!-- ############# Appointment Section ############# -->
+      <!-- Add Login Form for Patient Portal -->
+
+
+
 
 
     <!-- Patient Portal Section -->
@@ -624,6 +787,64 @@
         
           <div class="col-md-12 form-group mt-3">
             <select name="time-slot" id="time-slot" class="form-select" required>
+
+      <!-- ############# Appointment Section ############# -->
+<section id="appointment" class="appointment section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>Make an Appointment</h2>
+      <p>We listed the docs, we made you a form. You make us an appointment.</p><br><br>
+    </div>
+    <div class="layout">
+      <form action="" role="form" class="php-email-form">
+        <div class="row">
+          <div class="col-md-4 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" maxlength="10" minlength="10" pattern="[0-9]*">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 form-group mt-3">
+            <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date">
+            <script>
+              //To set value of minimum date in calendar
+              var currentDate = new Date();
+              var year = currentDate.getFullYear();
+              var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+              var day = currentDate.getDate().toString().padStart(2, '0');
+              var formattedDate = `${year}-${month}-${day}`;
+              document.getElementById('date').setAttribute('min', formattedDate);
+            </script>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="age" id="age" class="form-select">
+              <option value="">Select Age</option>
+              <option value="Department 1">18 or below</option>
+              <option value="Department 2">18 to 55</option>
+              <option value="Department 3">55 above</option>
+            </select>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="doctor" id="doctor" class="form-select">
+              <option value="">Your Location</option>
+              <option value="Doctor 1">Mumbai</option>
+              <option value="Doctor 2">Delhi</option>
+              <option value="Doctor 3">Chennai</option>
+              <!-- Add more locations as needed -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Time Slot Section -->
+        <div class="row">
+          <div class="col-md-12 form-group mt-3">
+            <select name="time-slot" id="time-slot" class="form-select">
+
               <option value="">Select Time Slot</option>
               <!-- Populate with available time slots -->
               <option value="9:00 AM">9:00 AM</option>
@@ -632,6 +853,7 @@
               <!-- Add more time slots as needed -->
             </select>
           </div>
+
           <div class="col-md-12 form-group mt-3">
 
             <select name="hospital" id="hospital" class="form-select">
@@ -700,202 +922,320 @@
 
 
 
-    <!-- ################# Doctors Section ################# -->
+        </div>
 
 
-    <section id="doctors" class="doctors">
-
-      <div class="section-title">
-        <h2>Doctors</h2>
-        <p>Don’t compromise your health when we have listed the best doctors for you!</p>
-      </div>
-      <div class="container">
-
+        <!-- Hospital Selection Section -->
         <div class="row">
-
-          <div class="col-lg-6">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/1.png" class="img-fluid" alt=""
-                  style="width: 188px; height: 188px;"></div>
-              <div class="member-info">
-                <h4>Dermatologist</h4>
-                <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
-              </div>
-            </div>
+          <div class="col-md-12 form-group mt-3">
+            <select name="hospital" id="hospital" class="form-select">
+              <option value="">Select Hospital</option>
+              <!-- Populate with available hospitals -->
+              <option value="Hospital 1">Hospital 1</option>
+              <option value="Hospital 2">Hospital 2</option>
+              <option value="Hospital 3">Hospital 3</option>
+              <!-- Add more hospitals as needed -->
+            </select>
           </div>
+        </div>
 
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/2.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Gynecologist</h4>
-                <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
-              </div>
-            </div>
+        <!-- OPD Section -->
+        <div class="row">
+          <div class="col-md-12 form-group mt-3">
+            <select name="opd-section" id="opd-section" class="form-select">
+              <option value="">Select OPD Section</option>
+              <!-- Populate with available OPD sections -->
+              <option value="ENT">ENT</option>
+              <option value="Gynecologist">Gynecologist</option>
+              <!-- Add more OPD sections as needed -->
+            </select>
           </div>
+        </div>
 
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/3.png" class="img-fluid" alt=""
-                  style="width: 188px; height: 188px;"></div>
-              <div class="member-info">
-                <h4>Cardiologist</h4>
-                <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
-              </div>
-            </div>
-          </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+        </div>
+        <div class="text-center">
+          <a href="successful_appointment.html" style="text-decoration: none;">
+            <button type="submit">Make an Appointment</button>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section><!-- End Appointment Section -->
 
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/4.png" class="img-fluid" alt=""
-                  style="width: 188px; height: 188px;"></div>
-              <div class="member-info">
-                <h4>ENT</h4>
-                <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/Image(13).png" class="img-fluid" alt=""
-                  style="width: 188px; height: 188px;"></div>
-              <div class="member-info">
-                <h4>Pediatrician</h4>
-                <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
-              </div>
-            </div>
+<!-- ################# Doctors Section ################# -->
+<section id="doctors" class="doctors">
+  <div class="section-title">
+    <h2>Doctors</h2>
+    <p>Don’t compromise your health when we have listed the best doctors for you!</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="img/doctors/1.png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+          <div class="member-info">
+            <h4>Dermatologist</h4>
+            <br>
+            <div class="nxt-pg"><a href="Html-Files/derma.html"><button type="">Appoint a Doctor</button></a></div>
           </div>
         </div>
       </div>
-    </section><!-- End Doctors Section -->
 
-
-    <!-- ################# Contact Section ################# -->
-
-
-
-    <section id="contact" class="contact">
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Located your appointment. Feel free to give us feedback and help us improve our digital med care.</p>
+      <div class="col-lg-6 mt-4 mt-lg-0">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="img/doctors/2.png" class="img-fluid" alt=""></div>
+          <div class="member-info">
+            <h4>Gynecologist</h4>
+            <br>
+            <div class="nxt-pg"><a href="Html-Files/gynaco.html"><button type="">Appoint a Doctor</button></a></div>
+          </div>
+        </div>
       </div>
+
+      <div class="col-lg-6 mt-4">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="img/doctors/3.png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+          <div class="member-info">
+            <h4>Cardiologist</h4>
+            <br>
+            <div class="nxt-pg"><a href="Html-Files/cardio.html"><button type="">Appoint a Doctor</button></a></div>
+          </div>
+        </div>
       </div>
-      <div class="container">
 
+      <div class="col-lg-6 mt-4">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="img/doctors/4.png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+          <div class="member-info">
+            <h4>ENT</h4>
+            <br>
+            <div class="nxt-pg"><a href="Html-Files/ent.html"><button type="">Appoint a Doctor</button></a></div>
+          </div>
+        </div>
+      </div>
 
-        <!--Google map-->
-        <div class="mapouter">
-          <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
-              marginheight="0" marginwidth="0"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"></iframe><a
-              href="https://www.fnfgo.com/">FNF Mods</a></div>
-          <style>
-            .mapouter {
-              position: relative;
-              text-align: right;
-              width: 100%;
-              height: 363px;
-            }
+      <div class="col-lg-6 mt-4">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="img/doctors/Image(13).png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+          <div class="member-info">
+            <h4>Pediatrician</h4>
+            <br>
+            <div class="nxt-pg"><a href="Html-Files/pediatrition.html"><button type="">Appoint a Doctor</button></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+<!-- End Doctors Section -->
 
-            .gmap_canvas {
-              overflow: hidden;
-              background: none !important;
-              width: 100%;
-              height: 363px;
-            }
-
-            .gmap_iframe {
-              height: 363px !important;
-            }
-          </style>
-        </div><br>
-
-        <div class="container" >
-          <div class="row mt-2"
-            style="display: flex; flex-direction: row; align-items: stretch; justify-content: space-around;">
-
-            <div class="col-lg-4">
-              <div class="info">
-                <div class="address">
-                  <i class="fa fa-location-dot"></i>
-                  <h4>Location:</h4>
-                  <p><a href="https://www.google.com/maps/search/?api=1&query=IGDTUW,Delhi" target="_blank">IGDTUW,
-                      Delhi</a></p>
-                </div>
-
-        <div class="row mt-5">
-
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p><a href="https://www.google.com/maps/search/?api=1&query=IGDTUW,Delhi" target="_blank">IGDTUW,
-                    Delhi</a></p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p><a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a></p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
-              </div>
+<!-- ################# Contact Section ################# -->
+<section id="contact" class="contact">
+  <div class="section-title">
+    <h2>Contact</h2>
+    <p>Located your appointment. Feel free to give us feedback and help us improve our digital med care.</p>
+  </div>
+  <div class="container">
+    <!--Google map-->
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"></iframe>
+        <a href="https://www.fnfgo.com/">FNF Mods</a>
+      </div>
+      <style>
+        .mapouter {
+          position: relative;
+          text-align: right;
+          width: 100%;
+          height: 363px;
+        }
+        .gmap_canvas {
+          overflow: hidden;
+          background: none !important;
+          width: 100%;
+          height: 363px;
+        }
+        .gmap_iframe {
+          height: 363px !important;
+        }
+      </style>
+    </div><br>
+    <div class="row mt-2" style="display: flex; flex-direction: row; align-items: stretch; justify-content: space-around;">
+      <div class="col-lg-4">
+        <div class="info">
+          <div class="address">
+            <i class="fa fa-location-dot"></i>
+            <h4>Location:</h4>
+            <p><a href="https://www.google.com/maps/search/?api=1&query=IGDTUW,Delhi" target="_blank">IGDTUW, Delhi</a></p>
+          </div>
+          <div class="email">
+            <i class="fa fa-envelope"></i>
+            <h4>Email:</h4>
+            <p><a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a></p>
+          </div>
+          <div class="phone">
+            <i class="fa fa-phone"></i>
+            <h4>Call:</h4>
+            <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 mt-5 mt-lg-0">
+        <form action="" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
             </div>
-          </div><br><br>
-
-
-                <div class="email">
-                  <i class="fa fa-envelope"></i>
-                  <h4>Email:</h4>
-                  <p><a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a></p>
-                </div>
-
-                <div class="phone">
-                  <i class="fa fa-phone"></i>
-                  <h4>Call:</h4>
-                  <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
-                </div>
-              </div>
-            </div><br><br>
-
-          
-            <div class="col-lg-8 mt-5 mt-lg-0">
-              <form action="" role="form" class="php-email-form">
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required=""
-                      fdprocessedid="b0eyy">
-                  </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                      required="" fdprocessedid="ajhhhr">
-                  </div>
-                </div>
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required=""
-                    fdprocessedid="mbdam9">
-                </div>
-                <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required=""></textarea>
-                </div>
-                <div class="text-center"><button type="submit" fdprocessedid="dyl49d">Send Message</button></div>
-              </form>
-
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
             </div>
           </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+          <div class="text-center"><button type="submit">Send Message</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section><!-- End Contact Section -->
 
-        </div>
-    </section><!-- End Contact Section -->
+
+
+      
+          <!-- End Contact Section -->
+
+    <!-- testimonial section -->
+
+    <section id="test" class="testimonals">
+      <h2 class="h2 section-title has-underline" style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
+          What our Patients Say
+        </h2>
+      
+          <div class="testimonals-content">
+          <div class="swiper testimonals-slider js-testimonals-slider">
+          <div class="swiper-wrapper">
+          <div class="swiper-slide testimonals-item">
+          <div class="info">
+          <img src="./images/profile1.webp" alt="">
+          <div class="text-box">
+          <h3 class="name">Dinesh Karthik</h3>
+          <span class="job">Bangalore</span>
+          </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+          <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          </div>
+          </div>
+      
+          <div class="swiper-slide testimonals-item">
+          <div class="info">
+          <img src="./images/profile2.webp" alt="">
+          <div class="text-box">
+          <h3 class="name">Virat Kohli</h3>
+          <span class="job">Delhi</span>
+          </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+          <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          </div>
+          </div>
+      
+          <div class="swiper-slide testimonals-item">
+          <div class="info">
+          <img src="./images/profile3.webp" alt="">
+          <div class="text-box">
+          <h3 class="name">Smrithi Mandanna</h3>
+          <span class="job">Mumbai</span>
+          </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+          <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          </div>
+          </div>
+      
+          <div class="swiper-slide testimonals-item">
+          <div class="info">
+          <img src="./images/profile4.webp" alt="">
+          <div class="text-box">
+          <h3 class="name">John Doe</h3>
+          <span class="job">Chennai</span>
+          </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+          <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          </div>
+          </div>
+      
+          <div class="swiper-slide testimonals-item">
+          <div class="info">
+          <img src="./images/profile5.webp" alt="">
+          <div class="text-box">
+          <h3 class="name">Shikha Pandey</h3>
+          <span class="job">Kolkata</span>
+          </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo aliquam incidunt provident vero nostrum quam!</p>
+          <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div class="swiper-pagination js-testimonals-pagination"></div>
+          </div>
+          </div>
+          </div>
+          <div class="swiper-pagination js-testimonals-pagination"></div>
+                          </div>
+          </section>
+
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.js-testimonals-slider', {
+    grabCursor: true,
+    spaceBetween: 30,
+    pagination: {
+      el: '.js-testimonals-pagination',
+      clickable: true
+    },
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+      }
+    }
+  })
+</script>
+
+
+     <!-- testimonial section -->
 
 
     <!-- Feedback System-->
@@ -938,7 +1278,7 @@
   <!-- ############### Footer ############### -->
 <br><br><br><br><br><br>
 
-  <footer id="footer">
+  <!--footer id="footer">
     <div class="footer-top" >
       <div class="container" >
         <div class="row-d" >
@@ -954,6 +1294,35 @@
             <li><a href="./Html-Files/contact.html">Contact Us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#doctors">Doctors</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li>
+              <div class="icons" style="display: flex;flex-direction: row;">
+                <style>
+                  .icons a  {
+                    margin-right: 10px; 
+                  }
+                  .icons a:last-child {
+                    margin-right: 0; 
+                  }
+                  .icons a div i {
+                    color: #afb6c7;
+                  }
+                 .icons a div i:hover {
+                   color: #fff;
+                  }
+                </style>
+                <div style="visibility: hidden;">2</div>
+                <div style="visibility: hidden;">1</div>
+                <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+      
+                <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
+                <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a>
+                <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
+                <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
+                <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
+                <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
+              </div>
+            </li>
           </ul>
         </div>
         <div class="footer-col">
@@ -987,26 +1356,92 @@
             <input type="text" placeholder="Your email" required>
             <button type="submit">SUBSCRIBE</button>
           </form>
-          <div class="icons">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-phone"></i>
-            <i class="fa-solid fa-envelope"></i>
+          <div id="copyright" style="text-align: center;float: right;">
+            <p style="align-items: center">
+              © <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+              Reserved <br> Made with ❤️ by RapiDoc
+            </p>
           </div>
         </div>
       </div>
-      <div id="copyright" style="text-align: center">
-        <p style="align-items: center">
-          © <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
-          Reserved
-        </p>
-        <p>Made with ❤️ by RapiDoc</p>
-      </div>
     </section>
-
-
+  </footer-->
+  <footer>
+    <div class="footer-wrapper">
+        <div class="footer-columns">
+            <div class="other-columns">
+                <section>
+                    <h4>Quick Links</h4><br>
+                      <ul class="links">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="./Html-Files/contact.html">Contact Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                    </ul>
+                </section>
+                <section>
+                  <h4>Explore</h4><br>
+                  <ul class="links">
+                    <li><a href="#">Appointment</a></li>
+                    <li><a href="#">Patient Portal</a></li>
+                    <li><a href="#">Login account</a></li>
+                    <li><a href="#">Helplines</a></li>
+                    <li><a href="#">Location</a></li>
+                  </ul>
+                </section>
+                <section>
+                  <h4>Legal</h4><br>
+                  <ul class="links">
+                    <li><a href="#">Customer Agreement</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">GDPR</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                  </ul>
+                </section>
+                <section class="footer-col">
+                  <h4>RAPIDOC Newsletter</h4><br>
+                  <p>
+                    Subscribe to our newsletter for a weekly dose
+                    of news, updates, helpful tips, and
+                    exclusive offers.
+                  </p>
+                  <form action="#">
+                    <input type="text" placeholder="Your email" required>
+                    <button type="submit">SUBSCRIBE</button>
+                  </form>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-wrapper">
+            <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+              Reserved  Made with ❤️ by RapiDoc</small>
+              <style>
+                .social-wrapper a div i {
+                  color: #afb6c7;
+                }
+               .social-wrapper a div i:hover {
+                 color: #fff;
+                }
+              </style>
+            <div class="social-wrapper">
+              <div class="social-links">
+              <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+              <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
+              <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a>
+              <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
+              <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
+              <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
+              <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
+              </div>
+            </div>
+      </div>
+    </div>
+</footer>
 
   <div id="back-to-top-container">
     <div class="circle">
@@ -1091,10 +1526,23 @@
   <script src="swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
+  
   <script src="patient-portal.js"></script>
+  <script src="swiper-bundle.min.js"></script>
  
   <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
-  
+  <script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "xjRGZgxJziSoHQ1T1twl6",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="xjRGZgxJziSoHQ1T1twl6"
+    domain="www.chatbase.co"
+    defer>
+    </script>
   <script>
     ScrollReveal({ 
         //reset: true ,
@@ -1132,6 +1580,24 @@ window.addEventListener("load", () => {
   });
   });
   </script>
+  <script>
+    const shareButton = document.querySelector(".share-button");
+    const toggleSocials = () => {
+      const socialsWrapper = document.querySelector(".icons");
+      const shareButtonImage = shareButton.querySelector("img");
+
+      socialsWrapper.classList.toggle("active");
+
+      if (shareButtonImage.src.includes("share")) {
+        shareButtonImage.src = "close.svg";
+      } else {
+        shareButtonImage.src = "assets/share.svg";
+      }
+    };
+
+    shareButton.addEventListener("click", toggleSocials);
+  </script>
+ 
 </body>
 
 </html>
