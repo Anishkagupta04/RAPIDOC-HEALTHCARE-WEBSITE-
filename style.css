@@ -1534,22 +1534,22 @@ section {
 .footer-col form button:hover {
   background: #cecccc;
 }
-
-.footer-col .icons {
+/*
+ .icons {
   display: flex;
   margin-top: 30px;
   gap: 30px;
   cursor: pointer;
 }
 
-.footer-col .icons i {
+ .icons i {
   color: #afb6c7;
 }
 
-.footer-col .icons i:hover {
+ .icons i:hover {
   color: #fff;
 }
-
+*/
 @media (max-width: 768px) {
   .footer {
     position: relative;
