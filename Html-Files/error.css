@@ -6,6 +6,10 @@ body {
     background-color: #f2f2f2;
   }
   
+header {
+    text-align: right;
+  }
+
   .container {
     max-width: 1000px;
     margin: 0 auto;
