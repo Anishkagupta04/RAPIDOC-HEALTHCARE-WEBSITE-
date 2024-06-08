@@ -183,7 +183,7 @@
 }
 
 .container {
-    display: flex;
+    display:unset;
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -340,7 +340,7 @@
   
       <header class="header_container">
         <div class="img">
-        <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
+        <img id="rd-logo"  style="width: 90px; height: auto;" src="images/rd.png"> 
       </div>
       
       </div>
@@ -664,353 +664,260 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 
 
       <!-- Add Login Form for Patient Portal -->
+
+
+
+      <!-- ############# Appointment Section ############# -->
+<section id="appointment" class="appointment section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>Make an Appointment</h2>
+      <p>We listed the docs, we made you a form. You make us an appointment.</p><br><br>
+    </div>
+    <div class="layout">
+      <form action="" role="form" class="php-email-form">
+        <div class="row">
+          <div class="col-md-4 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" maxlength="10" minlength="10" pattern="[0-9]*">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 form-group mt-3">
+            <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date">
+            <script>
+              //To set value of minimum date in calendar
+              var currentDate = new Date();
+              var year = currentDate.getFullYear();
+              var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+              var day = currentDate.getDate().toString().padStart(2, '0');
+              var formattedDate = `${year}-${month}-${day}`;
+              document.getElementById('date').setAttribute('min', formattedDate);
+            </script>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="age" id="age" class="form-select">
+              <option value="">Select Age</option>
+              <option value="Department 1">18 or below</option>
+              <option value="Department 2">18 to 55</option>
+              <option value="Department 3">55 above</option>
+            </select>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="doctor" id="doctor" class="form-select">
+              <option value="">Your Location</option>
+              <option value="Doctor 1">Mumbai</option>
+              <option value="Doctor 2">Delhi</option>
+              <option value="Doctor 3">Chennai</option>
+              <!-- Add more locations as needed -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Time Slot Section -->
+        <div class="row">
+          <div class="col-md-12 form-group mt-3">
+            <select name="time-slot" id="time-slot" class="form-select">
+              <option value="">Select Time Slot</option>
+              <!-- Populate with available time slots -->
+              <option value="9:00 AM">9:00 AM</option>
+              <option value="11:00 AM">11:00 AM</option>
+              <option value="2:00 PM">2:00 PM</option>
+              <!-- Add more time slots as needed -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Hospital Selection Section -->
+        <div class="row">
+          <div class="col-md-12 form-group mt-3">
+            <select name="hospital" id="hospital" class="form-select">
+              <option value="">Select Hospital</option>
+              <!-- Populate with available hospitals -->
+              <option value="Hospital 1">Hospital 1</option>
+              <option value="Hospital 2">Hospital 2</option>
+              <option value="Hospital 3">Hospital 3</option>
+              <!-- Add more hospitals as needed -->
+            </select>
+          </div>
+        </div>
+
+        <!-- OPD Section -->
+        <div class="row">
+          <div class="col-md-12 form-group mt-3">
+            <select name="opd-section" id="opd-section" class="form-select">
+              <option value="">Select OPD Section</option>
+              <!-- Populate with available OPD sections -->
+              <option value="ENT">ENT</option>
+              <option value="Gynecologist">Gynecologist</option>
+              <!-- Add more OPD sections as needed -->
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+        </div>
+        <div class="text-center">
+          <a href="successful_appointment.html" style="text-decoration: none;">
+            <button type="submit">Make an Appointment</button>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section><!-- End Appointment Section -->
+
+<!-- ################# Doctors Section ################# -->
+<section id="doctors" class="doctors">
+  <div class="section-title">
+    <h2>Doctors</h2>
+    <p>Don’t compromise your health when we have listed the best doctors for you!</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="img/doctors/1.png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+          <div class="member-info">
+            <h4>Dermatologist</h4>
+            <br>
+            <div class="nxt-pg"><a href="Html-Files/derma.html"><button type="">Appoint a Doctor</button></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mt-4 mt-lg-0">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="img/doctors/2.png" class="img-fluid" alt=""></div>
+          <div class="member-info">
+            <h4>Gynecologist</h4>
+            <br>
+            <div class="nxt-pg"><a href="Html-Files/gynaco.html"><button type="">Appoint a Doctor</button></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mt-4">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="img/doctors/3.png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+          <div class="member-info">
+            <h4>Cardiologist</h4>
+            <br>
+            <div class="nxt-pg"><a href="Html-Files/cardio.html"><button type="">Appoint a Doctor</button></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mt-4">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="img/doctors/4.png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+          <div class="member-info">
+            <h4>ENT</h4>
+            <br>
+            <div class="nxt-pg"><a href="Html-Files/ent.html"><button type="">Appoint a Doctor</button></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mt-4">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="img/doctors/Image(13).png" class="img-fluid" alt="" style="width: 188px; height: 188px;"></div>
+          <div class="member-info">
+            <h4>Pediatrician</h4>
+            <br>
+            <div class="nxt-pg"><a href="Html-Files/pediatrition.html"><button type="">Appoint a Doctor</button></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+<!-- End Doctors Section -->
+
+<!-- ################# Contact Section ################# -->
+<section id="contact" class="contact">
+  <div class="section-title">
+    <h2>Contact</h2>
+    <p>Located your appointment. Feel free to give us feedback and help us improve our digital med care.</p>
+  </div>
+  <div class="container">
+    <!--Google map-->
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"></iframe>
+        <a href="https://www.fnfgo.com/">FNF Mods</a>
+      </div>
+      <style>
+        .mapouter {
+          position: relative;
+          text-align: right;
+          width: 100%;
+          height: 363px;
+        }
+        .gmap_canvas {
+          overflow: hidden;
+          background: none !important;
+          width: 100%;
+          height: 363px;
+        }
+        .gmap_iframe {
+          height: 363px !important;
+        }
+      </style>
+    </div><br>
+    <div class="row mt-2" style="display: flex; flex-direction: row; align-items: stretch; justify-content: space-around;">
+      <div class="col-lg-4">
+        <div class="info">
+          <div class="address">
+            <i class="fa fa-location-dot"></i>
+            <h4>Location:</h4>
+            <p><a href="https://www.google.com/maps/search/?api=1&query=IGDTUW,Delhi" target="_blank">IGDTUW, Delhi</a></p>
+          </div>
+          <div class="email">
+            <i class="fa fa-envelope"></i>
+            <h4>Email:</h4>
+            <p><a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a></p>
+          </div>
+          <div class="phone">
+            <i class="fa fa-phone"></i>
+            <h4>Call:</h4>
+            <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 mt-5 mt-lg-0">
+        <form action="" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+          <div class="text-center"><button type="submit">Send Message</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section><!-- End Contact Section -->
+
+
+
       
-          <div class="login-box">
-              <div class="avatar">
-                  <img src="img\avatar.png" alt="Avatar">
-              </div>
-              <form>
-                  <div class="textbox">
-                      <i class="fas fa-user"></i>
-                      <input type="text" placeholder="Username" name="username" required>
-                  </div>
-                  <div class="textbox">
-                      <i class="fas fa-lock"></i>
-                      <input type="password" placeholder="Password" name="password" required>
-                  </div>
-                  <input type="submit" class="btn" value="SUBMIT">
-                  <div class="register-link">
-                      <a href="#">Not registered yet? Register Here</a>
-                  </div>
-                  <div class="forgot-password" id="forgot-password-patient-portal">
-                    <a href="forgot-password.php">Forgot Your Password?</a>
-                  </div>
-              </form>
-          </div>
-
-
-      <!-- Add Forgot Password Link -->
-
-
-    <!-- ############# Appointment Section ############# -->
-
-
-    <section id="appointment" class="appointment section-bg">
-
-      <div class="container">
-        <div class="section-title">
-          <h2>Make an Appointment</h2>
-          <p>We listed the docs, we made you a form. You make us an appointment.</p><br><br>
-        </div>
-        <div class="layout">
-          <form accept="" role="form" class="php-email-form">
-            <div class="row">
-
-              <div class="col-md-4 form-group">
-
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
-              </div>
-              <div class="col-md-4 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
-              </div>
-              <div class="col-md-4 form-group mt-3 mt-md-0">
-
-                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" maxlength="10"
-                  minlength="10" pattern="[0-9]*" style="width: 100%;"
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 form-group mt-3">
-
-                <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date">
-
-                <script>   //To set value of minimum date in calender 
-                  var currentDate = new Date();
-                  var year = currentDate.getFullYear();
-                  var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
-                  var day = currentDate.getDate().toString().padStart(2, '0');
-                  var formattedDate = `${year}-${month}-${day}`;
-
-                  document.getElementById('date').setAttribute('min', formattedDate);
-                </script>
-
-              </div>
-              <div class="col-md-4 form-group mt-3">
-                <select name="age" id="age" class="form-select">
-                  <option value="">Select Age</option>
-                  <option value="Department 1">18 or below</option>
-                  <option value="Department 2">18 to 55</option>
-                  <option value="Department 3">55 above</option>
-                </select>
-              </div>
-              <div class="col-md-4 form-group mt-3">
-                <select name="doctor" id="doctor" class="form-select">
-                  <option value="">Your Location</option>
-                  <option value="Doctor 1">Mumbai</option>
-                  <option value="Doctor 2">Delhi</option>
-                  <option value="Doctor 3">Chennai</option>
-                  <!-- Add more locations as needed -->
-                </select>
-              </div>
-            </div>
-
-            <!-- Time Slot Section -->
-            <div class="row">
-              <div class="col-md-12 form-group mt-3">
-
-                <select name="time-slot" id="time-slot" class="form-select">
-                  <option value="">Select Time Slot</option>
-                  <!-- Populate with available time slots -->
-                  <option value="9:00 AM">9:00 AM</option>
-                  <option value="11:00 AM">11:00 AM</option>
-                  <option value="2:00 PM">2:00 PM</option>
-                  <!-- Add more time slots as needed -->
-                </select>
-              </div>
-            </div>
-
-            <!-- Hospital Selection Section -->
-            <div class="row">
-              <div class="col-md-12 form-group mt-3">
-
-                <select name="hospital" id="hospital" class="form-select">
-                  <option value="">Select Hospital</option>
-                  <!-- Populate with available hospitals -->
-                  <option value="Hospital 1">Hospital 1</option>
-                  <option value="Hospital 2">Hospital 2</option>
-                  <option value="Hospital 3">Hospital 3</option>
-                  <!-- Add more hospitals as needed -->
-                </select>
-              </div>
-            </div>
-
-            <!-- OPD Section -->
-            <div class="row">
-              <div class="col-md-12 form-group mt-3">
-
-                <select name="opd-section" id="opd-section" class="form-select">
-                  <option value="">Select OPD Section</option>
-                  <!-- Populate with available OPD sections -->
-                  <option value="ENT">ENT</option>
-                  <option value="Gynecologist">Gynecologist</option>
-                  <!-- Add more OPD sections as needed -->
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-            </div>
-            <div class="text-center">
-              <a href="successful_appointment.html" style="text-decoration: none;">
-                <button type="submit">Make an Appointment</button>
-              </a>
-            </div>
-          </form>
-
-        </div>
-
-      </div>
-    </section><!-- End Appointment Section -->
-
-
-
-    <!-- ################# Doctors Section ################# -->
-
-
-    <section id="doctors" class="doctors">
-
-      <div class="section-title">
-        <h2>Doctors</h2>
-        <p>Don’t compromise your health when we have listed the best doctors for you!</p>
-      </div>
-      <div class="container">
-
-        <div class="column">
-
-          <div class="col-lg-6">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/1.png" class="img-fluid" alt=""
-                  style="width: 188px; height: 188px;"></div>
-              <div class="member-info">
-                <h4>Dermatologist</h4>
-                <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/2.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Gynecologist</h4>
-                <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/3.png" class="img-fluid" alt=""
-                  style="width: 188px; height: 188px;"></div>
-              <div class="member-info">
-                <h4>Cardiologist</h4>
-                <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/4.png" class="img-fluid" alt=""
-                  style="width: 188px; height: 188px;"></div>
-              <div class="member-info">
-                <h4>ENT</h4>
-                <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/doctors/Image(13).png" class="img-fluid" alt=""
-                  style="width: 188px; height: 188px;"></div>
-              <div class="member-info">
-                <h4>Pediatrician</h4>
-                <br>
-                <div class="nxt-pg"><a href="Html-Files/doc.html"><button type="">Appoint a Doctor</button></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Doctors Section -->
-
-
-    <!-- ################# Contact Section ################# -->
-
-
-
-    <section id="contact" class="contact">
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Located your appointment. Feel free to give us feedback and help us improve our digital med care.</p>
-      </div>
-      </div>
-      <div class="container">
-
-
-        <!--Google map-->
-        <div class="mapouter">
-          <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
-              marginheight="0" marginwidth="0"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"></iframe><a
-              href="https://www.fnfgo.com/">FNF Mods</a></div>
-          <style>
-            .mapouter {
-              position: relative;
-              text-align: right;
-              width: 100%;
-              height: 363px;
-            }
-
-            .gmap_canvas {
-              overflow: hidden;
-              background: none !important;
-              width: 100%;
-              height: 363px;
-            }
-
-            .gmap_iframe {
-              height: 363px !important;
-            }
-          </style>
-        </div><br>
-
-        <div class="container" >
-          <div class="row mt-2"
-            style="display: flex; flex-direction: row; align-items: stretch; justify-content: space-around;">
-
-            <div class="col-lg-4">
-              <div class="info">
-                <div class="address">
-                  <i class="fa fa-location-dot"></i>
-                  <h4>Location:</h4>
-                  <p><a href="https://www.google.com/maps/search/?api=1&query=IGDTUW,Delhi" target="_blank">IGDTUW,
-                      Delhi</a></p>
-                </div>
-
-        <div class="row mt-5">
-
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p><a href="https://www.google.com/maps/search/?api=1&query=IGDTUW,Delhi" target="_blank">IGDTUW,
-                    Delhi</a></p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p><a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a></p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
-              </div>
-            </div>
-          </div><br><br>
-
-
-                <div class="email">
-                  <i class="fa fa-envelope"></i>
-                  <h4>Email:</h4>
-                  <p><a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a></p>
-                </div>
-
-                <div class="phone">
-                  <i class="fa fa-phone"></i>
-                  <h4>Call:</h4>
-                  <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
-                </div>
-              </div>
-            </div><br><br>
-
-          
-            <div class="col-lg-8 mt-5 mt-lg-0">
-              <form action="" role="form" class="php-email-form">
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required=""
-                      fdprocessedid="b0eyy">
-                  </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                      required="" fdprocessedid="ajhhhr">
-                  </div>
-                </div>
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required=""
-                    fdprocessedid="mbdam9">
-                </div>
-                <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required=""></textarea>
-                </div>
-                <div class="text-center"><button type="submit" fdprocessedid="dyl49d">Send Message</button></div>
-              </form>
-
-            </div>
-          </div>
-
-        </div>
-    </section><!-- End Contact Section -->
+          <!-- End Contact Section -->
 
     <!-- testimonial section -->
 
@@ -1179,7 +1086,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
   <!-- ############### Footer ############### -->
 <br><br><br><br><br><br>
 
-  <footer id="footer">
+  <!--footer id="footer">
     <div class="footer-top" >
       <div class="container" >
         <div class="row-d" >
@@ -1195,95 +1102,35 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
             <li><a href="./Html-Files/contact.html">Contact Us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#doctors">Doctors</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
             <li>
-              <div class="icons">
-                <button class="share-button">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="white"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      stroke="none"
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                      class="box"
-                    ></path>
-                    <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                    <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                    <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                    <path d="M8.7 10.7l6.6 -3.4"></path>
-                    <path d="M8.7 13.3l6.6 3.4"></path>
-                  </svg>
-                </button>
-                <ul class="socials-menu">
-                  <li class="social" id="discord" title="discord">
-                    <a href="https://discord.com/">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-discord"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social" title="signal" id="signal">
-                    <a href="https://signal.org/">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-signal"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="m6.08.234.179.727a7.3 7.3 0 0 0-2.01.832l-.383-.643A7.9 7.9 0 0 1 6.079.234zm3.84 0L9.742.96a7.3 7.3 0 0 1 2.01.832l.388-.643A8 8 0 0 0 9.92.234m-8.77 3.63a8 8 0 0 0-.916 2.215l.727.18a7.3 7.3 0 0 1 .832-2.01l-.643-.386zM.75 8a7 7 0 0 1 .081-1.086L.091 6.8a8 8 0 0 0 0 2.398l.74-.112A7 7 0 0 1 .75 8m11.384 6.848-.384-.64a7.2 7.2 0 0 1-2.007.831l.18.728a8 8 0 0 0 2.211-.919M15.251 8q0 .547-.082 1.086l.74.112a8 8 0 0 0 0-2.398l-.74.114q.082.54.082 1.086m.516 1.918-.728-.18a7.3 7.3 0 0 1-.832 2.012l.643.387a8 8 0 0 0 .917-2.219m-6.68 5.25c-.72.11-1.453.11-2.173 0l-.112.742a8 8 0 0 0 2.396 0l-.112-.741zm4.75-2.868a7.2 7.2 0 0 1-1.537 1.534l.446.605a8 8 0 0 0 1.695-1.689zM12.3 2.163c.587.432 1.105.95 1.537 1.537l.604-.45a8 8 0 0 0-1.69-1.691zM2.163 3.7A7.2 7.2 0 0 1 3.7 2.163l-.45-.604a8 8 0 0 0-1.691 1.69l.604.45zm12.688.163-.644.387c.377.623.658 1.3.832 2.007l.728-.18a8 8 0 0 0-.916-2.214M6.913.831a7.3 7.3 0 0 1 2.172 0l.112-.74a8 8 0 0 0-2.396 0zM2.547 14.64 1 15l.36-1.549-.729-.17-.361 1.548a.75.75 0 0 0 .9.902l1.548-.357zM.786 12.612l.732.168.25-1.073A7.2 7.2 0 0 1 .96 9.74l-.727.18a8 8 0 0 0 .736 1.902l-.184.79zm3.5 1.623-1.073.25.17.731.79-.184c.6.327 1.239.574 1.902.737l.18-.728a7.2 7.2 0 0 1-1.962-.811zM8 1.5a6.5 6.5 0 0 0-6.498 6.502 6.5 6.5 0 0 0 .998 3.455l-.625 2.668L4.54 13.5a6.502 6.502 0 0 0 6.93-11A6.5 6.5 0 0 0 8 1.5"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social" title="Github" id="github">
-                    <a href="https://github.com/GameSphere-MultiPlayer">
-                      <i class="fa-brands fa-github" style="color: white"></i>
-                    </a>
-                  </li>
-                  <li class="social" title="reddit" id="reddit">
-                    <a href="https://www.reddit.com/?rdt=35900" title="Facebook">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-reddit"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M6.167 8a.83.83 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661m1.843 3.647c.315 0 1.403-.038 1.976-.611a.23.23 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83s.83-.381.83-.83a.831.831 0 0 0-1.66 0z"
-                        />
-                        <path
-                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.2.2 0 0 0-.153.028.2.2 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224q-.03.17-.029.353c0 1.795 2.091 3.256 4.669 3.256s4.668-1.451 4.668-3.256c0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+              <div class="icons" style="display: flex;flex-direction: row;">
+                <style>
+                  .icons a  {
+                    margin-right: 10px; 
+                  }
+                  .icons a:last-child {
+                    margin-right: 0; 
+                  }
+                  .icons a div i {
+                    color: #afb6c7;
+                  }
+                 .icons a div i:hover {
+                   color: #fff;
+                  }
+                </style>
+                <div style="visibility: hidden;">2</div>
+                <div style="visibility: hidden;">1</div>
+                <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+      
+                <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
+                <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a>
+                <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
+                <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
+                <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
+                <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
               </div>
             </li>
-            <li><a href="./faq.html">FAQ</a></li>
-
           </ul>
         </div>
         <div class="footer-col">
@@ -1317,18 +1164,92 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
             <input type="text" placeholder="Your email" required>
             <button type="submit">SUBSCRIBE</button>
           </form>
+          <div id="copyright" style="text-align: center;float: right;">
+            <p style="align-items: center">
+              © <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+              Reserved <br> Made with ❤️ by RapiDoc
+            </p>
+          </div>
         </div>
       </div>
-      <div id="copyright" style="text-align: center">
-        <p style="align-items: center">
-          © <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
-          Reserved
-        </p>
-        <p>Made with ❤️ by RapiDoc</p>
-      </div>
     </section>
-
-
+  </footer-->
+  <footer>
+    <div class="footer-wrapper">
+        <div class="footer-columns">
+            <div class="other-columns">
+                <section>
+                    <h4>Quick Links</h4><br>
+                      <ul class="links">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="./Html-Files/contact.html">Contact Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                    </ul>
+                </section>
+                <section>
+                  <h4>Explore</h4><br>
+                  <ul class="links">
+                    <li><a href="#">Appointment</a></li>
+                    <li><a href="#">Patient Portal</a></li>
+                    <li><a href="#">Login account</a></li>
+                    <li><a href="#">Helplines</a></li>
+                    <li><a href="#">Location</a></li>
+                  </ul>
+                </section>
+                <section>
+                  <h4>Legal</h4><br>
+                  <ul class="links">
+                    <li><a href="#">Customer Agreement</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">GDPR</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                  </ul>
+                </section>
+                <section class="footer-col">
+                  <h4>RAPIDOC Newsletter</h4><br>
+                  <p>
+                    Subscribe to our newsletter for a weekly dose
+                    of news, updates, helpful tips, and
+                    exclusive offers.
+                  </p>
+                  <form action="#">
+                    <input type="text" placeholder="Your email" required>
+                    <button type="submit">SUBSCRIBE</button>
+                  </form>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-wrapper">
+            <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+              Reserved  Made with ❤️ by RapiDoc</small>
+              <style>
+                .social-wrapper a div i {
+                  color: #afb6c7;
+                }
+               .social-wrapper a div i:hover {
+                 color: #fff;
+                }
+              </style>
+            <div class="social-wrapper">
+              <div class="social-links">
+              <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+              <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
+              <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a>
+              <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
+              <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
+              <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
+              <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
+              </div>
+            </div>
+      </div>
+    </div>
+</footer>
 
   <div id="back-to-top-container">
     <div class="circle">
@@ -1484,6 +1405,7 @@ window.addEventListener("load", () => {
 
     shareButton.addEventListener("click", toggleSocials);
   </script>
+ 
 </body>
 
 </html>
