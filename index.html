@@ -652,20 +652,141 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 
     <!-- Add Patient Portal Section -->
 
-  <section id="patient-portal" class="patient-portal">
+ <!-- <section id="patient-portal" class="patient-portal">
       <div class="container-patientportal">
       <div class="section-title" id="section-patientportal">
 
         <h2>Patient Portal</h2>
         <p>Access your medical records, lab results, and prescription history securely.</p>
-        <!-- <p>The Patient Portal is your personalized online gateway to your health information. Whether you need to check your recent lab results, review your prescription history, or update your personal details, the Patient Portal provides a convenient and secure platform for managing your healthcare needs.</p> -->
+        <!-- <p>The Patient Portal is your personalized online gateway to your health information. Whether you need to check your recent lab results, review your prescription history, or update your personal details, the Patient Portal provides a convenient and secure platform for managing your healthcare needs.</p> 
       </div>
       <div class="container">
+
+
+
+      <!-- Add Login Form for Patient Portal 
+      
+          <div class="login-box">
+              <div class="avatar">
+                  <img src="img\avatar.png" alt="Avatar">
+              </div>
+              <form>
+                  <div class="textbox">
+                      <i class="fas fa-user"></i>
+                      <input type="text" placeholder="Username" name="username" required>
+                  </div>
+                  <div class="textbox">
+                      <i class="fas fa-lock"></i>
+                      <input type="password" placeholder="Password" name="password" required>
+                  </div>
+                  <input type="submit" class="btn" value="SUBMIT">
+                  <div class="register-link">
+                      <a href="#">Not registered yet? Register Here</a>
+                  </div>
+                  <div class="forgot-password" id="forgot-password-patient-portal">
+                    <a href="forgot-password.php">Forgot Your Password?</a>
+                  </div>
+              </form>
+          </div>-->
+
+
+      <!-- Add Forgot Password Link -->
 
 
       <!-- Add Login Form for Patient Portal -->
 
 
+
+
+
+    <!-- Patient Portal Section -->
+<section id="patient-portal" class="patient-portal">
+  <div class="container-patientportal">
+    <div class="section-title" id="section-patientportal">
+      <h2>Patient Portal</h2>
+      <p>Access your medical records, lab results, and prescription history securely.</p>
+    </div>
+    <div class="container">
+
+      <!-- Add Login Form for Patient Portal -->
+      <div class="login-box">
+        <div class="avatar">
+          <img src="img/avatar.png" alt="Avatar" style = "margin-left:325px">
+        </div>
+        <form>
+          <div class="textbox">
+            <i class="fas fa-user" style = "margin-left:325px"></i>
+            <input type="text" placeholder="Username" name="username" required>
+          </div>
+          <div class="textbox">
+            <i class="fas fa-lock" style = "margin-left:325px"></i>
+            <input type="password" placeholder="Password" name="password" required>
+          </div>
+          <input type="submit" class="btn" value="SUBMIT" style = "margin-left:325px">
+          <div class="register-link" style = "margin-left:325px">
+            <a href="#">Not registered yet? Register Here</a>
+          </div>
+          <div class="forgot-password" id="forgot-password-patient-portal"style = "margin-left:325px">
+            <a href="forgot-password.php">Forgot Your Password?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Appointment Section -->
+<section id="appointment" class="appointment section-bg">
+   
+  <div class="container">
+    <div class="section-title">
+      <h2>Make an Appointment</h2>
+      <p>We listed the docs, we made you a form. You make us an appointment.</p>
+    
+    <!--<div class="layout">-->
+      <form action="successful_appointment.html" method="post" class="php-email-form">
+        
+          <div class="col-md-4 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="location" id="location" class="form-select" required>
+              <option value="">Your Location</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Chennai">Chennai</option>
+              <!-- Add more locations as needed -->
+            </select>
+          </div>
+          <!--<div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" maxlength="10" minlength="10" pattern="[0-9]*" required>
+          </div>-->
+        <!--</div>-->
+        
+          <div class="col-md-4 form-group mt-3">
+            <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" required>
+            <script>
+              // To set value of minimum date in calendar 
+              var currentDate = new Date();
+              var year = currentDate.getFullYear();
+              var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+              var day = currentDate.getDate().toString().padStart(2, '0');
+              var formattedDate = `${year}-${month}-${day}`;
+
+              document.getElementById('date').setAttribute('min', formattedDate);
+            </script>
+          <!--</div>-->
+          
+          
+        </div>
+
+        <!-- Time Slot Section -->
+        
+          <div class="col-md-12 form-group mt-3">
+            <select name="time-slot" id="time-slot" class="form-select" required>
 
       <!-- ############# Appointment Section ############# -->
 <section id="appointment" class="appointment section-bg">
@@ -723,6 +844,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
         <div class="row">
           <div class="col-md-12 form-group mt-3">
             <select name="time-slot" id="time-slot" class="form-select">
+
               <option value="">Select Time Slot</option>
               <!-- Populate with available time slots -->
               <option value="9:00 AM">9:00 AM</option>
@@ -731,7 +853,77 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
               <!-- Add more time slots as needed -->
             </select>
           </div>
+
+          <div class="col-md-12 form-group mt-3">
+
+            <select name="hospital" id="hospital" class="form-select">
+              <option value="">Select Hospital</option>
+                          <!-- Populate with available hospitals -->
+                <option value="Hospital 1">Hospital 1</option>
+                <option value="Hospital 2">Hospital 2</option>
+               <option value="Hospital 3">Hospital 3</option>
+                          <!-- Add more hospitals as needed -->
+            </select>
+          </div>
+        
+        
+                   
+        
+                    <!-- OPD Section -->
+                    
+          <div class="col-md-12 form-group mt-3">
+        
+            <select name="opd-section" id="opd-section" class="form-select">
+              <option value="">Select OPD Section</option>
+                          <!-- Populate with available OPD sections -->
+              <option value="ENT">ENT</option>
+              <option value="Gynecologist">Gynecologist</option>
+                          <!-- Add more OPD sections as needed -->
+            </select>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="age" id="age" class="form-select" required>
+              <option value="">Select Age</option>
+              <option value="18 or below">18 or below</option>
+              <option value="18 to 55">18 to 55</option>
+              <option value="55 above">55 above</option>
+            </select>
+          </div>
+        
+                    
+        
+          <!--<div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+          </div>-->
+          <div class="text-center">
+            <a href="successful_appointment.html" style="text-decoration: none;">
+            <button type="submit">Make an Appointment</button>
+            </a>
+          </div>
         </div>
+
+       
+       
+        </div>
+      </form>
+    </div>
+  </div>
+  
+
+<!--<section id="hospital" class="hospital-section-bg">
+
+
+
+            <!-- Hospital Selection Section -->
+            
+  
+         
+</section><!-- End Appointment Section -->
+
+
+
+        </div>
+
 
         <!-- Hospital Selection Section -->
         <div class="row">
