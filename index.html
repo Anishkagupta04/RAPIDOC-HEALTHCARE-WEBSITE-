@@ -316,8 +316,43 @@
       transform: rotate(360deg);
   }
 }
-
-
+.avatar{
+  margin: 20px 100px;
+}
+.avatar img{
+  margin: 0px 450px;
+}
+form{
+  margin: 10px 210px;
+}
+.textbox input{
+  width:200px;
+  height: 40px;
+}
+.btn{
+  margin-left: 50px;
+  width:240px;
+  height: 40px;
+  background-color: #00C896;
+  border: none;
+  font-size: 1rem;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+#appointment.appointment.section-bg{
+  margin: 0px 200px;;
+}
+#appointment.appointment.section-bg h2{
+  margin: 0px 115px ;
+}
+form.php-email-form{
+  width: 300px;
+  margin-right: 250px;
+  display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start
+}
 .loader--hidden{
   opacity: 0;
   visibility: hidden;
@@ -711,17 +746,19 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       <!-- Add Login Form for Patient Portal -->
       <div class="login-box">
         <div class="avatar">
-          <img src="img/avatar.png" alt="Avatar" style = "margin-left:325px">
+          <img src="img/avatar.png" alt="Avatar" >
         </div>
         <form>
           <div class="textbox">
             <i class="fas fa-user" style = "margin-left:325px"></i>
             <input type="text" placeholder="Username" name="username" required>
           </div>
+          <br>
           <div class="textbox">
             <i class="fas fa-lock" style = "margin-left:325px"></i>
             <input type="password" placeholder="Password" name="password" required>
           </div>
+          <br>
           <input type="submit" class="btn" value="SUBMIT" style = "margin-left:325px">
           <div class="register-link" style = "margin-left:325px">
             <a href="#">Not registered yet? Register Here</a>
@@ -749,9 +786,11 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
           <div class="col-md-4 form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
           </div>
+          <br>
           <div class="col-md-4 form-group mt-3 mt-md-0">
             <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
           </div>
+          <br>
           <div class="col-md-4 form-group mt-3">
             <select name="location" id="location" class="form-select" required>
               <option value="">Your Location</option>
@@ -889,6 +928,32 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
               <option value="55 above">55 above</option>
             </select>
           </div>
+
+          <div class="row">
+            <div class="col-md-12 form-group mt-3">
+              <select name="hospital" id="hospital" class="form-select">
+                <option value="">Select Hospital</option>
+                <!-- Populate with available hospitals -->
+                <option value="Hospital 1">Hospital 1</option>
+                <option value="Hospital 2">Hospital 2</option>
+                <option value="Hospital 3">Hospital 3</option>
+                <!-- Add more hospitals as needed -->
+              </select>
+            </div>
+          </div>
+  
+          <!-- OPD Section -->
+          <div class="row">
+            <div class="col-md-12 form-group mt-3">
+              <select name="opd-section" id="opd-section" class="form-select">
+                <option value="">Select OPD Section</option>
+                <!-- Populate with available OPD sections -->
+                <option value="ENT">ENT</option>
+                <option value="Gynecologist">Gynecologist</option>
+                <!-- Add more OPD sections as needed -->
+              </select>
+            </div>
+          </div>
         
                     
         
@@ -926,40 +991,40 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 
 
         <!-- Hospital Selection Section -->
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-12 form-group mt-3">
             <select name="hospital" id="hospital" class="form-select">
-              <option value="">Select Hospital</option>
+              <option value="">Select Hospital</option> -->
               <!-- Populate with available hospitals -->
-              <option value="Hospital 1">Hospital 1</option>
+              <!-- <option value="Hospital 1">Hospital 1</option>
               <option value="Hospital 2">Hospital 2</option>
-              <option value="Hospital 3">Hospital 3</option>
+              <option value="Hospital 3">Hospital 3</option> -->
               <!-- Add more hospitals as needed -->
-            </select>
+            <!-- </select>
           </div>
-        </div>
+        </div> -->
 
         <!-- OPD Section -->
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-12 form-group mt-3">
             <select name="opd-section" id="opd-section" class="form-select">
-              <option value="">Select OPD Section</option>
+              <option value="">Select OPD Section</option> -->
               <!-- Populate with available OPD sections -->
-              <option value="ENT">ENT</option>
-              <option value="Gynecologist">Gynecologist</option>
+              <!-- <option value="ENT">ENT</option>
+              <option value="Gynecologist">Gynecologist</option> -->
               <!-- Add more OPD sections as needed -->
-            </select>
+            <!-- </select>
           </div>
-        </div>
+        </div> -->
 
-        <div class="form-group mt-3">
+        <!-- <div class="form-group mt-3">
           <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-        </div>
-        <div class="text-center">
+        </div> -->
+        <!-- <div class="text-center">
           <a href="successful_appointment.html" style="text-decoration: none;">
             <button type="submit">Make an Appointment</button>
           </a>
-        </div>
+        </div> -->
       </form>
     </div>
   </div>
