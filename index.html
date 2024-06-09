@@ -1272,6 +1272,37 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 
       </div>
     </section>
+	  <script>
+  function submitFeedback(event) {
+    event.preventDefault();
+
+    // Get the feedback data
+    const feedbackText = document.getElementById('textarea').value;
+    const satisfaction = document.querySelector('input[name="satisfaction"]:checked');
+
+    if (!satisfaction) {
+      alert('Please select your satisfaction level.');
+      return;
+    }
+
+    // Here you would normally send the feedback to the server
+    // For this example, we'll just display a confirmation message
+
+    // Display the confirmation message
+    const confirmationMessage = document.getElementById('confirmation-message');
+    confirmationMessage.style.display = 'block';
+
+    // Reset the form
+    document.getElementById('textarea').value = '';
+    document.querySelector('input[name="satisfaction"]:checked').checked = false;
+
+    // Hide the confirmation message after a few seconds
+    setTimeout(() => {
+      confirmationMessage.style.display = 'none';
+    }, 6000);
+  }
+</script>
+
 
 
   </main><!-- End #main -->
