@@ -1084,7 +1084,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
         </div>
       </div>
       <div class="col-lg-8 mt-5 mt-lg-0">
-        <form action="" role="form" class="php-email-form">
+        <form id="contactForm" action="" role="form" class="php-email-form">
           <div class="row">
             <div class="col-md-6 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -1101,10 +1101,23 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
           </div>
           <div class="text-center"><button type="submit">Send Message</button></div>
         </form>
+        <div id="confirmationMessage" style="display:none; margin-top: 20px; color: green;">
+          Thank you for your message. We will get back to you shortly.
+        </div>
       </div>
     </div>
   </div>
-</section><!-- End Contact Section -->
+</section>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    // Display confirmation message
+    document.getElementById('confirmationMessage').style.display = 'block';
+    // Reset the form
+    event.target.reset();
+  });
+</script>
 
 
 
