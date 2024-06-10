@@ -1,3 +1,4 @@
+styles.css
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
@@ -5,7 +6,7 @@ body {
 }
 
 a {
-  color: #ffffff;
+  color: #55a5ea;
   text-decoration: none;
 }
 
@@ -2124,4 +2125,4 @@ footer {
       text-align: center;
       padding: 1rem 0.5rem 2rem 0.5rem;
   }
-}
+}}}}

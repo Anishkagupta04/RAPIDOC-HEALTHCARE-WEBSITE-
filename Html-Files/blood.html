@@ -10,29 +10,44 @@
   <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="remixicon/remixicon.css" rel="stylesheet">
   <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-<link rel="stylesheet" href="Css-Files/bloodstyle.css">
+  <link href="../style.css" rel="stylesheet">
+<link rel="stylesheet" href="../Css-Files/bloodstyle.css">
+<link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 <title>
 Blood Bank
 </title>
 </head>
+
 <body>
-    <div id="topbar1" class="d-flex align-items-center fixed-top">
-        <div class="logo">
-            <h1><a href="#">RapiDoc</a></h1>
-        </div>
-        <div class="container d-flex justify-content-between">
-          <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">rapidoc@mail.com</a>
-          </div>
-          <div class="d-none d-lg-flex social-links align-items-center">
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-          </div>
-        </div>
+      <header class="header_container">
+        <div class="img">
+        <img id="rd-logo"  style="width: 90px; height: auto;" src="../images/rd.png"> 
       </div>
+      
+      </div>
+      <nav class="nav_menu">
+
+        <ul class="nav_link">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Html-Files/news.html">News</a></li>
+          <a href="dex.html"><button>Service</button></a>
+          <li><a href="#patient-portal">Patient Portal</a></li>
+          <li><a href="#doctors">Doctor</a></li>
+          <li><a href="Html-Files/contact.html">Contact us</a></li>
+          <a href="login.html"><button>Sign in/Sign up</button></a>
+        </ul>
+      </nav>
+      </div>
+    </header>
     
 <div class="container">
     <div class="drop" style="--clr:#ff0f5b;">
@@ -107,6 +122,66 @@ Blood Bank
     </div>
     </div>
 </div>
+
+<footer id="footer">
+    <div class="footer-top">
+      <div class="containerf">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>RapiDoc</h3>
+              <p>
+                Address<br>
+                Delhi, India<br><br>
+                <strong>Phone:</strong> +91 1234567890<br>
+                <strong>Email:</strong> rapidoc@mail.com<br>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#doctor">Doctors</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Location Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Online OPDs</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Availability Status</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Pharmacy Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">User Benefits</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Daily Newsletter</h4>
+            <p>Get your medical insights! Subscribe to our newsletters&nbsp;now!</p>
+            <form action="" method="post">
+              <input type="email" name="email" placeholder="Email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="containerf">
+      <div class="copyright">
+        © Copyright <strong> RapiDoc </strong> . All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="glightbox/js/glightbox.min.js"></script>
 <script src="php-email-form/validate.js"></script>
@@ -114,5 +189,10 @@ Blood Bank
 <script src="swiper/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
 <script src="js/main.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="patient-portal.js"></script>
+<script src="swiper-bundle.min.js"></script>
+ 
+  <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
 </body>
 </html>
