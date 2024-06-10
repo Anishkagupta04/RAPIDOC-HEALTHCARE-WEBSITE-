@@ -997,6 +997,7 @@ section {
   box-sizing: border-box;
   width: 90%;
   max-width: 900px;
+}
 
 /*################----Appointments----################*/
 .layout {
@@ -1038,6 +1039,7 @@ section {
   display: flex; 
   flex-wrap: wrap; 
   color: #badaf7;
+}
   
   
 
@@ -1111,6 +1113,7 @@ section {
   cursor: pointer;
   transition: 0.3s ease;
   margin-left: 120px;
+}
 
 .appointment .php-email-form input:focus,
 .appointment .php-email-form textarea:focus,
@@ -1477,161 +1480,61 @@ section {
   }
 }
 
-#footer {
-  background: #000;
-  padding: 0 0 30px 0;
-  color: #fff;
-  font-size: 14px;
+.footer-wrapper{
+  background-color: rgb(28, 65, 59);;
+  
 }
-
-#footer .footer-top {
-  background: #000;
-  padding: 60px 0 30px 0;
-}
-
-#footer .footer-top .footer-info {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-info h3 {
-  font-size: 50px;
-  margin: 0 0 20px 0;
-  color: #57a6ea;
-  padding: 2px 0 2px 0;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-info p {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-#footer .footer-top .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #57a6ea;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 4px;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-/* Importing Google font - Open Sans */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-}
-
-.footer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 1280px;
-  width: 95%;
-  background: #3fbcc051;
-  border-radius: 6px;
-}
-
-.footer .footer-row {
+.footer-columns {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
+
+}
+.other-columns {
+  display: flex;
   justify-content: space-between;
-  gap: 3.5rem;
-  padding: 60px;
-}
-
-.footer-row .footer-col h4 {
-  color: #f0f0f0;
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-.footer-col .links {
-  margin-top: 20px;
-}
-
-.footer-col .links li {
-  list-style: none;
-  margin-bottom: 10px;
-}
-
-.footer-col .links li a {
-  text-decoration: none;
-  color: #bfbfbf;
-}
-
-.footer-col .links li a:hover {
-  color: #fff;
-}
-
-.footer-col p {
-  margin: 20px 0;
-  color: #bfbfbf;
-  max-width: 300px;
-}
-
-.footer-col form {
-  display: flex;
-  gap: 5px;
-}
-
-.footer-col input {
-  height: 40px;
-  border-radius: 6px;
-  background: none;
   width: 100%;
-  outline: none;
-  border: 1px solid #7489c6;
-  caret-color: #fff;
-  color: #fff;
-  padding-left: 10px;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+.news-letter {
+  margin-left:750px;
+  border-radius:2rem;
+}
+.subscribe-button {
+  background-color: #55a5ea;
+  color: white;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 110px;
+  box-sizing: border-box;
+  border-radius: 20rem;
+  margin-left:30px
+
 }
 
-.footer-col input::placeholder {
-  color: #ccc;
+.subscribe-button:hover {
+  background-color: rgb(4, 9, 47);
+}
+.footer-bottom {
+  background-color: rgb(4, 9, 47);
+  width: 100%;
 }
 
-.footer-col form button {
-  background: #fff;
-  border: none;
-  color: #08434551;
-  padding: 10px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 1000;
-  transition: 0.2s ease;
-}
-
-.footer-col form button:hover {
-  background: #cecccc;
-}
-/*
- .icons {
+.footer-bottom-wrapper {
   display: flex;
-  margin-top: 30px;
-  gap: 30px;
-  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
- .icons i {
+.footer-bottom small {
   color: #afb6c7;
 }
-
- .icons i:hover {
-  color: #fff;
-}
-*/
 @media (max-width: 768px) {
   .footer {
     position: relative;
@@ -1649,6 +1552,7 @@ section {
 
   .footer-col form {
     display: block;
+    
   }
 
   .footer-col form :where(input, button) {
@@ -1660,97 +1564,11 @@ section {
   }
 }
 
-#footer .footer-top .social-links a:hover {
-  background: #57a6ea;
-  text-decoration: none;
-}
-
-#footer .footer-top h4 {
-  font-size: 16px;
-  font-weight: 600;
-  position: relative;
-  padding-bottom: 12px;
-}
-
-#footer .footer-top .footer-links {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#footer .footer-top .footer-links ul i {
-  padding-right: 2px;
-  color: #57a6ea;
-  font-size: 18px;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
-#footer .footer-top .footer-links ul a {
-  color: #fff;
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul a:hover {
-  color: #57a6ea;
-}
-
-#footer .footer-top .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 4px;
-}
-
-#footer .footer-top .footer-newsletter form input[type="email"] {
-  border: 0;
-  padding: 4px;
-  width: calc(100% - 110px);
-}
-
-#footer .footer-top .footer-newsletter form input[type="submit"] {
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: #57a6ea;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 0 4px 4px 0;
-}
-
-#footer .footer-top .footer-newsletter form input[type="submit"]:hover {
-  background: #57a6ea;
-}
-
-#footer .copyright {
-  justify-content: center;
-  /* padding-top: 10px; */
-}
 
 /*################----Back to top----################*/
 footer {
   position: relative;
-  padding: 50px 0;
+  /* padding: 50px 0; */
 }
 
 #back-to-top-container {
@@ -1793,6 +1611,7 @@ footer {
   visibility: visible;
   opacity: 1;
 }
+
 
 /* Style for pateint portal  */
 /* -----***************************************-----  */
@@ -1915,7 +1734,7 @@ button {
 /*? footer containers */
 footer {
   bottom: 0;
-  background-color: var(--footer-bg);
+  background-color:#1c413b;
   width: 100%;
   min-width: 20re;
   bottom: 0;
@@ -1931,7 +1750,7 @@ footer {
   max-width: 80rem;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 .footer-logo-columns {
@@ -1990,7 +1809,7 @@ footer {
 }
 
 .other-columns ul a {
-  color: var(--text-color);
+  color: rgb(116, 119, 116);
   text-decoration: none;
   font-size: 0.85rem;
 }
@@ -2010,12 +1829,7 @@ footer {
   fill: var(--white);
 }
 
-/*? Footer bottom */
-.footer-bottom {
-  width: 100%;
-  color: var(--text-color);
-  background-color: var(--footer-bottom-bg);
-}
+
 
 .footer-bottom-wrapper {
   display: flex;
