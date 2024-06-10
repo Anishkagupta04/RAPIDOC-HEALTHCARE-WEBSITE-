@@ -37,124 +37,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
-      .icons {
-  position: absolute;
-/*  bottom: 380px;
-  right: 175px;
-  */
-  right: 1225px;
-  transform: translateX(50%);
-  z-index: 2;
-}
-
-.socials-menu {
-	opacity: 0;	
-	transition: opacity 0.5s;
-}
-
-.active > .socials-menu {
-	opacity: 1;	
-}
-
-.share-button {
-	position: absolute;
-	border: none;
-	cursor: pointer;
-	z-index: 2;
-	transition: all 0.4s ease-in-out;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 4rem;
-	height: 4rem;
-	background-color: var(--background);
-	border-radius: 50%;
-	outline: 2px solid white;
-	outline-offset: 3px;
-}
-.active .share-button, .share-button:hover {
-	background-color: var(#00C896);
-	transform: scale(1.03);
-}
-
-.share-button:hover {
-	background-color: #00C896;
-}
-
-.social {
-	position: absolute;
-	list-style: none;
-	transition: all 0.5s ease-in-out;
-	display: grid;
-	cursor: pointer;
-	place-items: center;
-	width: 4rem;
-	height: 4rem;
-	border-radius: 50%;
-	outline: 2px solid white;
-	outline-offset: 3px;
-}
-
-.social a {
-	display: grid;
-	cursor: pointer;
-	place-items: center;
-}
-
-.social li a {
-  transition: font-size 0.3s;
-}
-
-.active .social:nth-child(1) {
-	transform: translateX(-5rem);
-}
-
-
-.active .social:nth-child(1) {
-	background: #7289da !important; 
-}
-
-.active .social:nth-child(2) {
-	transform: translateY(-5rem);
-}
-
-.active .social:nth-child(2){
-	background-color: #3a76f0 !important;
-}
-
-.active .social:nth-child(3) {
-	transform: translateX(5rem);
-}
-
-.active .social:nth-child(3){
-	background: grey !important; 
-}
-
-.active .social:nth-child(4) {
-	transform: translateY(5rem);
-}
-
-.active .social:nth-child(4){
-	background-color: #ff4500 !important;
-}
-
-.light-mode .social {
-	outline: 2px solid black;
-}
-
-.light-mode .share-button {
-	outline: 2px solid black;
-  color: black;
-}
-
-.light-mode .share-button svg path{
-  color: black; 
-  stroke: #000000;
-}
-.light-mode .share-button svg .box{
-  stroke: white;
-}
-
 @media (max-width: 768px) {
   .icons{
     position: absolute;
@@ -170,9 +52,6 @@
 }
     </style>
     <style>
-      /* Ensure the input takes up full width */
-       /* Ensure the input takes up full width */
-/* Ensure the input takes up full width */
 .iti--allow-dropdown input {
     padding-left: 50px;
     background-color: black; /* Adjust padding to prevent overlap */
@@ -355,6 +234,7 @@
           <li><a href="#doctors">Doctor</a></li>
           <li><a href="Html-Files/contact.html">Contact us</a></li>
           <a href="login.html"><button>Sign in/Sign up</button></a>
+          <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
         </ul>
       </nav>
       </div>
@@ -1480,23 +1360,6 @@ window.addEventListener("load", () => {
   document.body.removeChild(loader);
   });
   });
-  </script>
-  <script>
-    const shareButton = document.querySelector(".share-button");
-    const toggleSocials = () => {
-      const socialsWrapper = document.querySelector(".icons");
-      const shareButtonImage = shareButton.querySelector("img");
-
-      socialsWrapper.classList.toggle("active");
-
-      if (shareButtonImage.src.includes("share")) {
-        shareButtonImage.src = "close.svg";
-      } else {
-        shareButtonImage.src = "assets/share.svg";
-      }
-    };
-
-    shareButton.addEventListener("click", toggleSocials);
   </script>
 </body>
 
