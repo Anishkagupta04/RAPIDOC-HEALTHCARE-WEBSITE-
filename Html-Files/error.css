@@ -1,0 +1,118 @@
+/* Baseline styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+header {
+    text-align: center;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #095a55;
+  }
+  
+  /* Main content styles */
+  main {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+  
+  .error {
+    text-align: center;
+    padding: 40px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: entrance 0.5s ease-in-out forwards;
+    border: 1px solid #ddd; /* Remove border for two-color scheme */
+  }
+  
+  .error h1 {
+    font-size: 100px;
+    color: #095a55;
+    margin-bottom: 20px;
+  }
+  
+  .error h2 {
+    font-size: 24px;
+    color: #333; /* Can be adjusted to black for stronger contrast */
+    margin-bottom: 15px;
+  }
+  
+  .error p {
+    font-size: 16px;
+    color: #444; /* Can be adjusted to black for stronger contrast */
+    line-height: 1.5;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #095a55;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: #00474a;
+  }
+  
+  /* Image hover effect (replace with a healthcare-related image) */
+  .image-container {
+    position: relative;
+    margin: 20px auto;
+    width: 200px; /* Adjust image size */
+    height: 200px; /* Adjust image size */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container:hover img {
+    opacity: 0.5;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: #fff; /* White text */
+    padding: 10px; /* Add padding for text */
+    text-align: center; /* Center text alignment */
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #f2f2f2;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    color: #333; /* Can be adjusted to black for stronger contrast */
+  }
+  
