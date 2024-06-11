@@ -375,6 +375,7 @@ section {
 #home .container {
   position: relative;
   margin-top: 150px;
+  justify-content: center;
 }
 
 #home h1 {
@@ -498,6 +499,55 @@ section {
   border-radius: 50px;
 }
 
+
+
+.count-box {
+  z-index: -1;
+  width: 290px;
+  height: 327px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 2rem;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: #111111;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+  z-index: 1;
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+}
+
+.count-box::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  background: #000;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.count-box:hover::before {
+  z-index: -1;
+  background: #3fbcc051;
+  top: 0px;
+  border-radius: 50px;
+}
+
+
+
+
+
+
+
+
+
 .featured-services .icon1 {
   z-index: -1;
   margin-bottom: 15px;
@@ -584,8 +634,63 @@ section {
 }
 
 .featured-services .icon-box:hover .icon4 i {
-  color: greenyellow;
+  color:green;
+} 
+
+
+
+
+
+
+.count-box:hover .icon1 i {
+  color: green;
 }
+
+.count-box:hover .icon2 i {
+  color: orangered;
+}
+
+.count-box:hover .icon3 i {
+  color: yellow;
+}
+
+.count-box:hover .icon4 i {
+  color: goldenrod;
+}
+
+
+
+
+
+.count-box .icon1 i {
+  color: blue;
+}
+
+.count-box .icon2 i {
+  color: orangered;
+}
+
+.count-box .icon3 i {
+  color: yellow;
+}
+
+.count-box .icon4 i {
+  color: goldenrod;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*################----About----################*/
 .about .icon-boxes h4 {
@@ -779,7 +884,7 @@ section {
   margin: 30px;
 }
 
-.counts .count-box {
+/* .counts .count-box {
   margin-top: 17px;
   flex: 15%;
   z-index: -1;
@@ -793,7 +898,7 @@ section {
   background: #1c413b;
   box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
   border-radius: 50px;
-}
+} */
 
 .row {
   padding-left: 33px;
