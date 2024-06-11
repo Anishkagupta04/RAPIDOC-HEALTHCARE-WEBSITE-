@@ -1016,13 +1016,7 @@ section {
   width: 30;
 }
 
-/* Section title styling */
-.section-title h2 {
-  font-size: 28px;
-  color: #fff;
-  display: flex;
-  margin-bottom: 20px;
-}
+
 
 .section-title p {
   color: #fff;
