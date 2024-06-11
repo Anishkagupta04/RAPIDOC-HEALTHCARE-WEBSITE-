@@ -230,6 +230,9 @@ button {
   text-decoration: underline;
   text-decoration-color: #3fbcc0a4;
 }
+.icon-box{
+cursor:pointer
+}
 
 /*################----Mobile Navigation----################*/
 
