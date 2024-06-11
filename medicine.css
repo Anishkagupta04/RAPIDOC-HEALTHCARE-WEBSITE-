@@ -99,7 +99,7 @@ button:hover {
     background-color: #55a5ea;
 }
 .footer-wrapper{
-    background-color: rgb(11, 17, 72);
+    background-color: #59bcbf51;
     padding: 10px 0;
 }
 .footer-columns {
@@ -135,7 +135,7 @@ button:hover {
     background-color: #3fbcc051;
 }
 .footer-bottom {
-    background-color: #222;
+    background-color: #080d3f;
     padding: 20px 0;
 }
 
@@ -152,3 +152,49 @@ button:hover {
 .footer-bottom small {
     color: #afb6c7;
 }
+.social-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 100px;
+    
+  }
+  
+  .social-links {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: left;
+  }
+  
+  .social-links img {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .social-links img:hover {
+    transform: scale(1.1);
+  }
+  
+  .social-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style-type: none;
+  }
+  
+  .footer-bottom-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+
+  
+  
+
+ 
+  
+ 
+  
+
+  
