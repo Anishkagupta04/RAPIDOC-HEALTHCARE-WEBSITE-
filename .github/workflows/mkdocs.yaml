@@ -1,63 +1,27 @@
-name: MK Docs
+name: Build site nightly
 
 on:
-  push:
-    branches:
-      - main
-    tags:
-      - "*"
-      - "Documentation-*"
-  pull_request_target:
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
-  build:
-    name: Build MkDocs
+  dot-release:
+    name: dot-release
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: curl
+        env:
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        uses: wei/curl@v1
         with:
-          python-version: '3.x'
-
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('mkdocs/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      - name: Install dependencies
-        run: pip install -r mkdocs/requirements.txt
-
-      - name: Build MK Docs project
-        run: mkdocs build -f mkdocs/mkdocs.yml
-
-      - name: Upload MK Docs build files
-        uses: actions/upload-artifact@v4
-        with:
-          name: mkdocs-files
-          path: ./mkdocs/site
-
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-    runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v') || startsWith(github.ref, 'refs/tags/Documentation-')
-    
-    steps:
-      - name: Download MkDocs artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: mkdocs-files
-          path: ./mkdocs/site
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_dir: ./mkdocs/site
+          args: -X POST -d '{}' "$NETLIFY_BUILD_HOOK"
+        
+      - name: Check response status
+        run: |
+          response=$(curl -s -o response.txt -w "%{http_code}" -X POST -d '{}' "$NETLIFY_BUILD_HOOK")
+          if [ "$response" -ne 200 ]; then
+            echo "Build trigger failed with status: $response"
+            cat response.txt
+            exit 1
+          fi
