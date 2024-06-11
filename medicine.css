@@ -90,7 +90,6 @@ button:hover {
 
 #medicine-info {
     background-color: #4bb6b7;
-    padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -102,10 +101,13 @@ button:hover {
     background-color: #59bcbf51;
     padding: 10px 0;
 }
+
 .footer-columns {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    text-decoration: none;
+    
     
 }
 .other-columns {
@@ -114,7 +116,32 @@ button:hover {
     width: 100%;
     max-width: 1200px;
     flex-wrap: wrap;
+    text-decoration: none;
+    
 }
+.links{
+  text-decoration: none;
+  color: #55a5ea;
+}
+.other-columns ul a {
+  color: rgb(116, 119, 116);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.other-columns ul a:hover {
+  text-decoration: underline;
+}
+
+.other-columns h3 {
+  color: var(--link-color);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: ui-monospace, monospace;
+}
+
+
+
 .news-letter {
     margin-left:500px
 }
