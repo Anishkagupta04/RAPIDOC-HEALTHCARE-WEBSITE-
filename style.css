@@ -230,6 +230,8 @@ button {
   text-decoration: underline;
   text-decoration-color: #3fbcc0a4;
 }
+
+/* Added the cursor as a pointer  */
 .icon-box{
 cursor:pointer
 }
