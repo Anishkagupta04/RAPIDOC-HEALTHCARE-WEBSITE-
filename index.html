@@ -17,6 +17,9 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
+    <!-- transalator -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate" ></script>
+
   <!-- CSS Files -->
   <link href="Css-Files/animate.min.css" rel="stylesheet">
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,139 +39,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <style>
-      .icons {
-  position: absolute;
-/*  bottom: 380px;
-  right: 175px;
-  */
-  right: 1225px;
-  transform: translateX(50%);
-  z-index: 2;
-}
-
-.socials-menu {
-	opacity: 0;	
-	transition: opacity 0.5s;
-}
-
-.active > .socials-menu {
-	opacity: 1;	
-}
-
-.share-button {
-	position: absolute;
-	border: none;
-	cursor: pointer;
-	z-index: 2;
-	transition: all 0.4s ease-in-out;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 4rem;
-	height: 4rem;
-	background-color: var(--background);
-	border-radius: 50%;
-	outline: 2px solid white;
-	outline-offset: 3px;
-}
-.active .share-button, .share-button:hover {
-	background-color: var(#00C896);
-	transform: scale(1.03);
-}
-
-.share-button:hover {
-	background-color: #00C896;
-}
-
-.social {
-	position: absolute;
-	list-style: none;
-	transition: all 0.5s ease-in-out;
-	display: grid;
-	cursor: pointer;
-	place-items: center;
-	width: 4rem;
-	height: 4rem;
-	border-radius: 50%;
-	outline: 2px solid white;
-	outline-offset: 3px;
-}
-
-.social a {
-	display: grid;
-	cursor: pointer;
-	place-items: center;
-}
-
-.social li a {
-  transition: font-size 0.3s;
-}
-
-.active .social:nth-child(1) {
-	transform: translateX(-5rem);
-}
-
-
-.active .social:nth-child(1) {
-	background: #7289da !important; 
-}
-
-.active .social:nth-child(2) {
-	transform: translateY(-5rem);
-}
-
-.active .social:nth-child(2){
-	background-color: #3a76f0 !important;
-}
-
-.active .social:nth-child(3) {
-	transform: translateX(5rem);
-}
-
-.active .social:nth-child(3){
-	background: grey !important; 
-}
-
-.active .social:nth-child(4) {
-	transform: translateY(5rem);
-}
-
-.active .social:nth-child(4){
-	background-color: #ff4500 !important;
-}
-
-.light-mode .social {
-	outline: 2px solid black;
-}
-
-.light-mode .share-button {
-	outline: 2px solid black;
-  color: black;
-}
-
-.light-mode .share-button svg path{
-  color: black; 
-  stroke: #000000;
-}
-.light-mode .share-button svg .box{
-  stroke: white;
-}
-
-@media (max-width: 768px) {
-  .icons{
-    position: absolute;
-  }
-}
-
-@media (max-width: 480px) {
-  .icons{
-    position: absolute;
-    top: calc(100% - 50vh);
-    right: calc(100% - 75vw);
-  }
-}
-    </style>
     <style>
       /* Ensure the input takes up full width */
        /* Ensure the input takes up full width */
@@ -214,7 +84,37 @@
     border-radius: 5px;
     margin-top: 20px;
 }
+select{
+  padding: 1px;
+  background-color: #55a5ea;
+  color: white;
+ height: 5vh;
+ width: 17vh;
+}
+option{
+  background-color: #55a5ea;
+  color: white;
+}
+/* }
+.VIpgJd-ZVi9od-ORHb-OEVmcd{
+  display: none;
+}
+.VIpgJd-ZVi9od-l4eHX-hSRGPd{
+  display: none;
+}  
+.skiptranslate{
+  font-size: 0;
 
+} */
+/* body {
+  top: 0px !important; 
+} */
+/* iframe.skiptranslate { visibility: hidden !important; } */
+/* .VIpgJd-ZVi9od-ORHb-OEVmcd .skiptranslate{
+  display: none !important;
+  background: none !important;
+  visibility: hidden !important;
+} */
 @media screen and (max-width: 992px) {
     .container {
         flex-wrap: wrap;
@@ -316,8 +216,40 @@
       transform: rotate(360deg);
   }
 }
-
-
+.avatar{
+  margin: 20px 100px;
+}
+.avatar img{
+  margin: 0px 450px;
+}
+.textbox input{
+  width:200px;
+  height: 40px;
+}
+.btn{
+  margin-left: 50px;
+  width:240px;
+  height: 40px;
+  background-color: #00C896;
+  border: none;
+  font-size: 1rem;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+#appointment.appointment.section-bg{
+  margin: 0px 200px;;
+}
+#appointment.appointment.section-bg h2{
+  margin: 0px 115px ;
+}
+form.php-email-form{
+  width: 300px;
+  margin-right: 250px;
+  display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start
+}
 .loader--hidden{
   opacity: 0;
   visibility: hidden;
@@ -350,11 +282,15 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="Html-Files/news.html">News</a></li>
-          <a href="dex.html"><button>Service</button></a>
+          <a href="dex.html">Service</a>
           <li><a href="#patient-portal">Patient Portal</a></li>
           <li><a href="#doctors">Doctor</a></li>
           <li><a href="Html-Files/contact.html">Contact us</a></li>
-          <a href="login.html"><button>Sign in/Sign up</button></a>
+          <li  >  
+<div  id="google_element" class="myclass" style="color: #ffffff; display: flex;" ></div>          </li>
+          <a href="login.html">Sign in/Sign up</a>
+          <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+
         </ul>
       </nav>
       </div>
@@ -365,22 +301,9 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">RapiDoc</a></h1>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#home">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      
       <a href="#appointment" class="appointment-btn scrollto">
         <span class="d-md-inline">EMERGENCY</span></a>
-
     </div>
   </header>
 
@@ -595,7 +518,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 
     <section id="services" class="services">
       <div class="section-title">
-        <h2>Services</h2>
+        <h2 style="text-align:center;">Services</h2>
         <p>Our services are for your good health. We are with you at every digital step.</p>
       </div>
       <div class="container">
@@ -711,17 +634,19 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       <!-- Add Login Form for Patient Portal -->
       <div class="login-box">
         <div class="avatar">
-          <img src="img/avatar.png" alt="Avatar" style = "margin-left:325px">
+          <img src="img/avatar.png" alt="Avatar" >
         </div>
         <form>
           <div class="textbox">
             <i class="fas fa-user" style = "margin-left:325px"></i>
             <input type="text" placeholder="Username" name="username" required>
           </div>
+          <br>
           <div class="textbox">
             <i class="fas fa-lock" style = "margin-left:325px"></i>
             <input type="password" placeholder="Password" name="password" required>
           </div>
+          <br>
           <input type="submit" class="btn" value="SUBMIT" style = "margin-left:325px">
           <div class="register-link" style = "margin-left:325px">
             <a href="#">Not registered yet? Register Here</a>
@@ -749,9 +674,11 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
           <div class="col-md-4 form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
           </div>
+          <br>
           <div class="col-md-4 form-group mt-3 mt-md-0">
             <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
           </div>
+          <br>
           <div class="col-md-4 form-group mt-3">
             <select name="location" id="location" class="form-select" required>
               <option value="">Your Location</option>
@@ -889,6 +816,32 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
               <option value="55 above">55 above</option>
             </select>
           </div>
+
+          <div class="row">
+            <div class="col-md-12 form-group mt-3">
+              <select name="hospital" id="hospital" class="form-select">
+                <option value="">Select Hospital</option>
+                <!-- Populate with available hospitals -->
+                <option value="Hospital 1">Hospital 1</option>
+                <option value="Hospital 2">Hospital 2</option>
+                <option value="Hospital 3">Hospital 3</option>
+                <!-- Add more hospitals as needed -->
+              </select>
+            </div>
+          </div>
+  
+          <!-- OPD Section -->
+          <div class="row">
+            <div class="col-md-12 form-group mt-3">
+              <select name="opd-section" id="opd-section" class="form-select">
+                <option value="">Select OPD Section</option>
+                <!-- Populate with available OPD sections -->
+                <option value="ENT">ENT</option>
+                <option value="Gynecologist">Gynecologist</option>
+                <!-- Add more OPD sections as needed -->
+              </select>
+            </div>
+          </div>
         
                     
         
@@ -926,40 +879,40 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 
 
         <!-- Hospital Selection Section -->
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-12 form-group mt-3">
             <select name="hospital" id="hospital" class="form-select">
-              <option value="">Select Hospital</option>
+              <option value="">Select Hospital</option> -->
               <!-- Populate with available hospitals -->
-              <option value="Hospital 1">Hospital 1</option>
+              <!-- <option value="Hospital 1">Hospital 1</option>
               <option value="Hospital 2">Hospital 2</option>
-              <option value="Hospital 3">Hospital 3</option>
+              <option value="Hospital 3">Hospital 3</option> -->
               <!-- Add more hospitals as needed -->
-            </select>
+            <!-- </select>
           </div>
-        </div>
+        </div> -->
 
         <!-- OPD Section -->
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-12 form-group mt-3">
             <select name="opd-section" id="opd-section" class="form-select">
-              <option value="">Select OPD Section</option>
+              <option value="">Select OPD Section</option> -->
               <!-- Populate with available OPD sections -->
-              <option value="ENT">ENT</option>
-              <option value="Gynecologist">Gynecologist</option>
+              <!-- <option value="ENT">ENT</option>
+              <option value="Gynecologist">Gynecologist</option> -->
               <!-- Add more OPD sections as needed -->
-            </select>
+            <!-- </select>
           </div>
-        </div>
+        </div> -->
 
-        <div class="form-group mt-3">
+        <!-- <div class="form-group mt-3">
           <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-        </div>
-        <div class="text-center">
+        </div> -->
+        <!-- <div class="text-center">
           <a href="successful_appointment.html" style="text-decoration: none;">
             <button type="submit">Make an Appointment</button>
           </a>
-        </div>
+        </div> -->
       </form>
     </div>
   </div>
@@ -1085,21 +1038,19 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       </div>
       <div class="col-lg-8 mt-5 mt-lg-0">
         <form id="contactForm" action="" role="form" class="php-email-form">
-          <div class="row">
-            <div class="col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-            </div>
-            <div class="col-md-6 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-            </div>
+          <div class="form-group">
+            <input type="text" name="name" class="form-control enhanced-input" id="name" placeholder="Your Name" required>
           </div>
           <div class="form-group mt-3">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            <input type="email" class="form-control enhanced-input" name="email" id="email" placeholder="Your Email" required>
           </div>
           <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            <input type="text" class="form-control enhanced-input" name="subject" id="subject" placeholder="Subject" required>
           </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
+          <div class="form-group mt-3">
+            <textarea class="form-control enhanced-textarea" name="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+          <div class="text-center"><button type="submit" class="btn-submit">Send Message</button></div>
         </form>
         <div id="confirmationMessage" style="display:none; margin-top: 20px; color: green;">
           Thank you for your message. We will get back to you shortly.
@@ -1108,6 +1059,36 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
     </div>
   </div>
 </section>
+
+<style>
+  .enhanced-input {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  .enhanced-textarea {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
+  }
+
+  .btn-submit {
+    padding: 10px 20px;
+    background-color: #55a5ea;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .btn-submit:hover {
+    background-color: #4cae4c;
+  }
+</style>
 
 <script>
   document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -1321,95 +1302,6 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
   </main><!-- End #main -->
   <!-- ############### Footer ############### -->
 <br><br><br><br><br><br>
-
-  <!--footer id="footer">
-    <div class="footer-top" >
-      <div class="container" >
-        <div class="row-d" >
-
-    <section class="footer">
-      <div class="footer-row">
-        <div class="footer-col">
-          
-          <h4>Quick Links</h4>
-          <ul class="links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="./Html-Files/contact.html">Contact Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#doctors">Doctors</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
-            <li>
-              <div class="icons" style="display: flex;flex-direction: row;">
-                <style>
-                  .icons a  {
-                    margin-right: 10px; 
-                  }
-                  .icons a:last-child {
-                    margin-right: 0; 
-                  }
-                  .icons a div i {
-                    color: #afb6c7;
-                  }
-                 .icons a div i:hover {
-                   color: #fff;
-                  }
-                </style>
-                <div style="visibility: hidden;">2</div>
-                <div style="visibility: hidden;">1</div>
-                <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
-      
-                <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
-                <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a>
-                <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
-                <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
-                <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
-                <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul class="links">
-            <li><a href="#">Appointment</a></li>
-            <li><a href="#">Patient Portal</a></li>
-            <li><a href="#">Login account</a></li>
-            <li><a href="#">Helplines</a></li>
-            <li><a href="#">Location</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <ul class="links">
-            <li><a href="#">Customer Agreement</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">GDPR</a></li>
-            <li><a href="#">Security</a></li>
-            <li><a href="#">Testimonials</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>RAPIDOC Newsletter</h4>
-          <p>
-            Subscribe to our newsletter for a weekly dose
-            of news, updates, helpful tips, and
-            exclusive offers.
-          </p>
-          <form action="#">
-            <input type="text" placeholder="Your email" required>
-            <button type="submit">SUBSCRIBE</button>
-          </form>
-          <div id="copyright" style="text-align: center;float: right;">
-            <p style="align-items: center">
-              © <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
-              Reserved <br> Made with ❤️ by RapiDoc
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </footer-->
   <footer>
     <div class="footer-wrapper">
         <div class="footer-columns">
@@ -1506,6 +1398,11 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 
   <!-- JS Files -->
   <script>
+
+function loadGoogleTranslate(){
+          new google.translate.TranslateElement("google_element");
+      }
+
     var currentYear = new Date().getFullYear();
     document.getElementById('year').textContent = currentYear;
   </script>
@@ -1624,24 +1521,6 @@ window.addEventListener("load", () => {
   });
   });
   </script>
-  <script>
-    const shareButton = document.querySelector(".share-button");
-    const toggleSocials = () => {
-      const socialsWrapper = document.querySelector(".icons");
-      const shareButtonImage = shareButton.querySelector("img");
-
-      socialsWrapper.classList.toggle("active");
-
-      if (shareButtonImage.src.includes("share")) {
-        shareButtonImage.src = "close.svg";
-      } else {
-        shareButtonImage.src = "assets/share.svg";
-      }
-    };
-
-    shareButton.addEventListener("click", toggleSocials);
-  </script>
- 
 </body>
 
 </html>
