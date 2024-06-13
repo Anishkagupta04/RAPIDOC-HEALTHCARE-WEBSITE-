@@ -228,6 +228,7 @@ gap: 15px
     align-items: center;
     font-size: 2em;
     color: var(--clr);
+    padding-left: 1em;
 }
 .container .drop .content a{
     position: relative;
