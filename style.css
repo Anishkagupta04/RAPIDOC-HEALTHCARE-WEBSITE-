@@ -1749,8 +1749,8 @@ footer {
 
 #back-to-top-container {
   position: fixed;
-  bottom: 100px;
-  right: 47px;
+  bottom: 25px;
+  left: 30px;
   cursor: pointer;
   z-index: 1000;
 }
