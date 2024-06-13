@@ -210,7 +210,9 @@ option{
   margin-bottom: 20px;
 }
 #appointment.appointment.section-bg{
-  margin: 0px 280px 100px;
+  margin: 20px auto;
+  border-radius: 20px;
+
 }
 #appointment.appointment.section-bg h2{
   margin: 0px 115px ;
@@ -700,7 +702,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
         <!-- Time Slot Section -->
         
           <div class="col-md-12 form-group mt-3">
-            <select name="time-slot" id="time-slot" class="form-select" required>
+            <select name="time-slot" id="time-slot" class="form-select" style="margin-right: 12px;" required>
 
       <!-- ############# Appointment Section ############# -->
  <section id="appointment" class="appointment section-bg">
@@ -928,16 +930,16 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       <div class="col-lg-8 mt-5 mt-lg-0">
         <form id="contactForm" action="" role="form" class="php-email-form">
           <div class="form-group">
-            <input type="text" name="name" class="form-control enhanced-input" id="name" placeholder="Your Name" required>
+            <input type="text" name="name" class="form-control enhanced-input" style="color: black;" id="name" placeholder="Your Name" required>
           </div>
           <div class="form-group mt-3">
-            <input type="email" class="form-control enhanced-input" name="email" id="email" placeholder="Your Email" required>
+            <input type="email" class="form-control enhanced-input" style="color: black;" name="email" id="email" placeholder="Your Email" required>
           </div>
           <div class="form-group mt-3">
-            <input type="text" class="form-control enhanced-input" name="subject" id="subject" placeholder="Subject" required>
+            <input type="text" class="form-control enhanced-input" style="color: black;" name="subject" id="subject" placeholder="Subject" required>
           </div>
           <div class="form-group mt-3">
-            <textarea class="form-control enhanced-textarea" name="message" rows="5" placeholder="Message" required></textarea>
+            <textarea class="form-control enhanced-textarea" style="color: black; width: 100%;" name="message" rows="5" placeholder="Message" required></textarea>
           </div>
           <div class="text-center"><button type="submit" class="btn-submit">Send Message</button></div>
         </form>
@@ -1122,7 +1124,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 
 
     <!-- Feedback System-->
-    <section id="feedback" class="feed">
+    <section id="feedback center container" class="feed center">
       <div class="feedback">
         <h1>Give Us Your Valuable Feedback.</h1>
         <p>Your feedback is very important for Rapidoc.</p>
@@ -1150,7 +1152,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       </div>
       <div class="info">
         <div class="center">
-          <button class="btn button">Submit</button>
+          <button class="btn button" style="padding-bottom: 3rem;">Submit</button>
         </div>
 
       </div>

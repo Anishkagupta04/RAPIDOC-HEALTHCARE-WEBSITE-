@@ -1309,10 +1309,9 @@ section {
   background-color: #fff;
   padding: 2rem 4rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  margin: 50px;
+  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin: auto;
   width: 60%;
-  margin-left: 250px;
   padding: 20px;
 }
 
@@ -1369,9 +1368,9 @@ section {
 }
 
 .radiobtn {
-  width: 40%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .one {
@@ -2119,4 +2118,13 @@ footer {
       text-align: center;
       padding: 1rem 0.5rem 2rem 0.5rem;
   }
+}
+
+/* Adding the below css to fix the padding in submit button of feedback sectio */
+.feedBtn{
+  padding-bottom: 5px;
+}
+/* make Appointment section at center */
+#appointment{
+  margin: auto;
 }
