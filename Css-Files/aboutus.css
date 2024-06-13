@@ -3,7 +3,6 @@
   margin: auto;
   width: 52.5rem;
   height: 100%;
-  background-color: white;
 }
 
 .about-us-heading {
@@ -16,7 +15,6 @@
 .about-service {
   height: 360px;
   width: 1200px;
-  border: 1px solid white;
   margin-left: 150px;
   margin-top: -40px;
   display: flex;
@@ -28,7 +26,6 @@
 .sec-2 {
   height: 360px;
   width: 600px;
-  border: 1px solid white;
 }
 
 .sec-2 {
@@ -44,26 +41,65 @@
 .a-3 {
   height: 94px;
   width: 500px;
-  border: 1px solid white;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  background-color: #111111;
+  border-radius: 11px;
 }
 
 .a-l,
-.b-l {
-  height: 65px;
-  width: 65px;
+.b-l,
+.c-l {
+  height: 58px;
+  width: 58px;
   border-radius: 50%;
-  border: 1px solid white;
-  margin-top: 14px;
+  margin-top: 17px;
   margin-left: 15px;
+  border: 2px solid #2f7f81;
 }
 
+.a-r,
+.b-r {
+  height: 58px;
+  width: 380px;
+  margin-top: 19px;
+  margin-left: 20px;
+}
+
+.c-r {
+  height: 58px;
+  width: 380px;
+  margin-left: 20px;
+  margin-top: 17px;
+}
+
+.head-1,
+.head-2 {
+  height: 28px;
+  width: 380px;
+}
+
+.head-1 {
+  font-size: 18px;
+}
+
+.head-2 {
+  font-size: 10px;
+  margin-top: 7px;
+}
 .h-icon {
-  margin-left: 11px;
-  margin-top: 13px;
+  margin-left: 10px;
+  margin-top: 11px;
+}
+
+.q-icon {
+  margin-left: 7px;
+  margin-top: 7px;
 }
 
 .a-icon {
-  margin-left: 15px;
+  margin-left: 14px;
   margin-top: 15px;
 }
 .about-img {
