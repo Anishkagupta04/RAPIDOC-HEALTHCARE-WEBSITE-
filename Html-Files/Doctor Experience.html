@@ -10,6 +10,51 @@
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
+    <style>
+    #doctor-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#doctor-list li {
+  border: 2px solid #4bb6b7;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px 0;
+  background-color: #2c3e50;
+  font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+  color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#doctor-list li .content {
+  flex-grow: 1;
+}
+
+#doctor-list li .content h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #ecf0f1;
+}
+
+#doctor-list li .content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #bdc3c7;
+}
+
+#doctor-list li:hover{
+  background:  rgb(75, 182, 183);
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+  </style>
 </head>
 <body>
   <div class="pre">
@@ -17,7 +62,7 @@
   </div>
   <header class="header_container">
     <div class="img">
-    <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
+    <img id="rd-logo"  style="width: 90px; height: auto;" src="../assets/img/rd1.png"> 
   </div>
   
   </div>
@@ -40,16 +85,16 @@
   <header class="h">
     <h1>Find a Doctor</h1>
     <div class="filter-sort">
-      <label for="experience-filter" style="color: #4bb6b7;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Experience:</label>
-      <select id="experience-filter">
+      <label for="experience-filter" style="color: #4bb6b7;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">Experience:</label>
+      <select id="experience-filter" style="height: 35px;background-color: #ecf0f1;">
         <option value="" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">All</option>
         <option value="5">5+ years</option>
         <option value="10">10+ years</option>
         <option value="15">15+ years</option>
       </select>
-      <label for="fee-filter" style="color: #4bb6b7;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Minimum Fee:</label>
+      <label for="fee-filter" style="color: #4bb6b7;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 25px;">Minimum Fee:</label>
       <input type="range" id="fee-filter" min="0" max="1000" step="50" value="500">
-      <span id="fee-value" style="color: #4bb6b7;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">1000</span>
+      <span id="fee-value" style="color: #4bb6b7;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 25px;">1000</span>
       <button id="sort-btn" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Sort by Fee</button>
     </div>
   </header>
@@ -133,6 +178,9 @@
     </div>
 </footer>
   <script>
+    document.getElementById('fee-filter').addEventListener('input', function() {
+      document.getElementById('fee-value').textContent = this.value;
+    });
     const doctorList = [
   { name: 'Dr.Ram', experience: 12, minFee: 200 },
   { name: 'Dr.krishn', experience: 8, minFee: 150 },
