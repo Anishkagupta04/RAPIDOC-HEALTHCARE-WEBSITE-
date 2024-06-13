@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Doctor</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.png">
+  <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./Css-Files/Experiencestyle.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+</head>
+<body>
+  <div class="pre">
+    <div class="loader"></div>
+  </div>
+  <header class="header_container">
+    <div class="img">
+    <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
+  </div>
+  
+  </div>
+  <nav class="nav_menu">
+
+    <ul class="nav_link">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html">About</a></li>
+      <li><a href="../Html-Files/news.html">News</a></li>
+      <a href="../dex.html"><button>Service</button></a>
+      <li><a href="../index.html">Patient Portal</a></li>
+      <li><a href="../index.html">Doctor</a></li>
+      <li><a href="../Html-Files/contact.html">Contact us</a></li>
+      <a href="../login.html"><button>Sign in/Sign up</button></a>
+    </ul>
+  </nav>
+  </div>
+</header>
+
+  <header class="h">
+    <h1>Find a Doctor</h1>
+    <div class="filter-sort">
+      <label for="experience-filter" style="color: #4bb6b7;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Experience:</label>
+      <select id="experience-filter">
+        <option value="" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">All</option>
+        <option value="5">5+ years</option>
+        <option value="10">10+ years</option>
+        <option value="15">15+ years</option>
+      </select>
+      <label for="fee-filter" style="color: #4bb6b7;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Minimum Fee:</label>
+      <input type="range" id="fee-filter" min="0" max="1000" step="50" value="500">
+      <span id="fee-value" style="color: #4bb6b7;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">1000</span>
+      <button id="sort-btn" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Sort by Fee</button>
+    </div>
+  </header>
+  <main>
+    <ul id="doctor-list"></ul>
+  </main>
+  <footer>
+    <div class="footer-wrapper">
+        <div class="footer-columns">
+            <div class="other-columns">
+                <section>
+                    <h4>Quick Links</h4><br>
+                      <ul class="links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html">About Us</a></li>
+                        <li><a href="../Html-Files/contact.html">Contact Us</a></li>
+                        <li><a href="../dex.html">Services</a></li>
+                        <li><a href="../index.html">Doctors</a></li>
+                        <li><a href="../index.html">FAQ</a></li>
+                    </ul>
+                </section>
+                <section>
+                  <h4>Explore</h4><br>
+                  <ul class="links">
+                    <li><a href="#">Appointment</a></li>
+                    <li><a href="#">Patient Portal</a></li>
+                    <li><a href="#">Login account</a></li>
+                    <li><a href="#">Helplines</a></li>
+                    <li><a href="#">Location</a></li>
+                  </ul>
+                </section>
+                <section>
+                  <h4>Legal</h4><br>
+                  <ul class="links">
+                    <li><a href="#">Customer Agreement</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">GDPR</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                  </ul>
+                </section>
+                <section class="footer-col">
+                  <h4>RAPIDOC Newsletter</h4><br>
+                  <p>
+                    Subscribe to our newsletter for a weekly dose
+                    of news, updates, helpful tips, and
+                    exclusive offers.
+                  </p>
+                  <form action="#">
+                    <input type="text" placeholder="Your email" required>
+                    <button type="submit">SUBSCRIBE</button>
+                  </form>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-wrapper">
+            <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+              Reserved  Made with ❤️ by RapiDoc</small>
+              <style>
+                .social-wrapper a div i {
+                  color: #afb6c7;
+                }
+               .social-wrapper a div i:hover {
+                 color: #fff;
+                }
+              </style>
+            <div class="social-wrapper">
+              <div class="social-links">
+              <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+              <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
+              <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a>
+              <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
+              <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
+              <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
+              <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
+              </div>
+            </div>
+      </div>
+    </div>
+</footer>
+  <script>
+    const doctorList = [
+  { name: 'Dr.Ram', experience: 12, minFee: 200 },
+  { name: 'Dr.krishn', experience: 8, minFee: 150 },
+  { name: 'Dr.Shiv', experience: 15, minFee: 300 },
+  { name: 'Dr.Surya', experience: 5, minFee: 100 },
+  { name: 'Dr.Kishor', experience: 20, minFee: 400 },
+  { name: 'Dr. Aditya Sharma', experience: 12, minFee: 500 },
+{ name: 'Dr. Priya Gupta', experience: 8, minFee: 400 },
+{ name: 'Dr. Rahul Patel', experience: 15, minFee: 800 },
+{ name: 'Dr. Anjali Singh', experience: 10, minFee: 600 },
+{ name: 'Dr. Arjun Desai', experience: 18, minFee: 900 },
+{ name: 'Dr. Ishita Rao', experience: 7, minFee: 450 },
+{ name: 'Dr. Vikram Reddy', experience: 16, minFee: 850 },
+{ name: 'Dr. Shreya Trivedi', experience: 11, minFee: 650 },
+{ name: 'Dr. Aryan Mehta', experience: 20, minFee: 1000 },
+{ name: 'Dr. Disha Verma', experience: 9, minFee: 550 },
+{ name: 'Dr. Rohan Malhotra', experience: 14, minFee: 750 },
+{ name: 'Dr. Avni Jain', experience: 6, minFee: 400 },
+{ name: 'Dr. Vihaan Srivastava', experience: 13, minFee: 700 },
+{ name: 'Dr. Aditi Kapoor', experience: 17, minFee: 850 },
+{ name: 'Dr. Arjun Bhatia', experience: 12, minFee: 650 },
+{ name: 'Dr. Ishika Chawla', experience: 8, minFee: 500 },
+{ name: 'Dr. Aditya Rathore', experience: 15, minFee: 800 },
+{ name: 'Dr. Priya Bansal', experience: 10, minFee: 600 },
+{ name: 'Dr. Rahul Kulkarni', experience: 19, minFee: 950 },
+{ name: 'Dr. Anjali Murthy', experience: 7, minFee: 450 },
+{ name: 'Dr. Arjun Shetty', experience: 16, minFee: 850 },
+{ name: 'Dr. Ishita Nair', experience: 11, minFee: 650 },
+{ name: 'Dr. Vikram Menon', experience: 18, minFee: 900 },
+{ name: 'Dr. Shreya Varma', experience: 9, minFee: 550 },
+{ name: 'Dr. Aryan Chatterjee', experience: 21, minFee: 1050 },
+{ name: 'Dr. Disha Agarwal', experience: 6, minFee: 400 },
+{ name: 'Dr. Rohan Saxena', experience: 15, minFee: 800 },
+{ name: 'Dr. Avni Lal', experience: 10, minFee: 600 },
+{ name: 'Dr. Vihaan Pandey', experience: 17, minFee: 850 },
+{ name: 'Dr. Aditi Goel', experience: 12, minFee: 650 },
+{ name: 'Dr. Arjun Chaudhari', experience: 20, minFee: 1000 },
+{ name: 'Dr. Ishika Arora', experience: 8, minFee: 500 },
+{ name: 'Dr. Aditya Thakur', experience: 16, minFee: 850 },
+{ name: 'Dr. Priya Iyer', experience: 11, minFee: 650 },
+{ name: 'Dr. Rahul Puri', experience: 22, minFee: 1100 },
+{ name: 'Dr. Anjali Parikh', experience: 9, minFee: 550 },
+{ name: 'Dr. Arjun Ahuja', experience: 18, minFee: 900 },
+{ name: 'Dr. Ishita Joshi', experience: 7, minFee: 450 },
+{ name: 'Dr. Vikram Vaidya', experience: 19, minFee: 950 },
+{ name: 'Dr. Shreya Parekh', experience: 13, minFee: 700 },
+{ name: 'Dr. Aryan Mehra', experience: 23, minFee: 1150 },
+{ name: 'Dr. Disha Khanna', experience: 10, minFee: 600 },
+{ name: 'Dr. Rohan Mittal', experience: 17, minFee: 850 },
+{ name: 'Dr. Avni Khurana', experience: 12, minFee: 650 },
+{ name: 'Dr. Vihaan Shukla', experience: 21, minFee: 1050 },
+{ name: 'Dr. Aditi Choudhary', experience: 8, minFee: 500 },
+{ name: 'Dr. Arjun Sharma', experience: 16, minFee: 850 },
+{ name: 'Dr. Ishika Gupta', experience: 11, minFee: 650 },
+{ name: 'Dr. Aditya Patel', experience: 20, minFee: 1000 },
+{ name: 'Dr. Priya Singh', experience: 9, minFee: 550 },
+{ name: 'Dr. Rahul Desai', experience: 24, minFee: 1200 },
+{ name: 'Dr. Anjali Rao', experience: 7, minFee: 450 },
+{ name: 'Dr. Arjun Reddy', experience: 15, minFee: 800 },
+{ name: 'Dr. Ishita Trivedi', experience: 10, minFee: 600 },
+{ name: 'Dr. Vikram Mehta', experience: 19, minFee: 950 },
+{ name: 'Dr. Shreya Verma', experience: 14, minFee: 750 },
+{ name: 'Dr. Aryan Malhotra', experience: 22, minFee: 1100 },
+{ name: 'Dr. Disha Jain', experience: 8, minFee: 500 },
+{ name: 'Dr. Rohan Srivastava', experience: 18, minFee: 900 },
+{ name: 'Dr. Avni Kapoor', experience: 13, minFee: 700 },
+{ name: 'Dr. Vihaan Bhatia', experience: 25, minFee: 1250 },
+{ name: 'Dr. Aditi Chawla', experience: 6, minFee: 400 },
+{ name: 'Dr. Arjun Rathore', experience: 17, minFee: 850 },
+{ name: 'Dr. Ishika Bansal', experience: 12, minFee: 650 },
+{ name: 'Dr. Aditya Kulkarni', experience: 21, minFee: 1050 },
+{ name: 'Dr. Priya Murthy', experience: 10, minFee: 600 },
+{ name: 'Dr. Rahul Shetty', experience: 23, minFee: 1150 },
+{ name: 'Dr. Anjali Nair', experience: 9, minFee: 550 },
+{ name: 'Dr. Arjun Menon', experience: 16, minFee: 850 },
+{ name: 'Dr. Ishita Varma', experience: 11, minFee: 650 },
+{ name: 'Dr. Vikram Sharma' ,experience:20 , minFee: 1000}
+];
+
+const doctorListElement = document.getElementById('doctor-list');
+const experienceFilter = document.getElementById('experience-filter');
+const feeFilter = document.getElementById('fee-filter');
+const feeValue = document.getElementById('fee-value');
+const sortBtn = document.getElementById('sort-btn');
+
+function renderDoctorList(doctors) {
+  doctorListElement.innerHTML = '';
+  doctors.forEach(doctor => {
+    const li = document.createElement('li');
+    li.textContent = `${doctor.name} - Experience: ${doctor.experience} years, Minimum Fee: $${doctor.minFee}`;
+    doctorListElement.appendChild(li);
+  });
+}
+
+function filterDoctors() {
+  const minExperience = parseInt(experienceFilter.value, 10) || 0;
+  const maxFee = parseInt(feeFilter.value, 10);
+  const filteredDoctors = doctorList.filter(
+    doctor => doctor.experience >= minExperience && doctor.minFee <= maxFee
+  );
+  renderDoctorList(filteredDoctors);
+}
+
+function sortDoctorsByFee() {
+  const sortedDoctors = [...doctorList].sort((a, b) => a.minFee - b.minFee);
+  renderDoctorList(sortedDoctors);
+}
+
+experienceFilter.addEventListener('change', filterDoctors);
+feeFilter.addEventListener('input', () => {
+  feeValue.textContent = feeFilter.value;
+  filterDoctors();
+});
+sortBtn.addEventListener('click', sortDoctorsByFee);
+
+renderDoctorList(doctorList);
+  </script>
+  <script>
+
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".pre");
+    
+      loader.classList.add("pre--hidden");
+    
+      loader.addEventListener("transitionend", () => {
+      document.body.removeChild(loader);
+      });
+      });
+    
+      window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+    
+      loader.classList.add("loader--hidden");
+    
+      loader.addEventListener("transitionend", () => {
+      document.body.removeChild(loader);
+      });
+      });
+      </script>
+</body>
+</html>
