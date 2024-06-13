@@ -998,7 +998,7 @@ section {
   box-sizing: border-box;
   width: 90%;
   max-width: 900px;
-
+}
 /*################----Appointments----################*/
 .layout {
   background-color: #3fbcc051;
@@ -1017,13 +1017,7 @@ section {
   width: 30;
 }
 
-/* Section title styling */
-.section-title h2 {
-  font-size: 28px;
-  color: #fff;
-  display: flex;
-  margin-bottom: 20px;
-}
+
 
 .section-title p {
   color: #fff;
@@ -1040,7 +1034,7 @@ section {
   flex-wrap: wrap; 
   color: #badaf7;
   
-  
+}
 
 .appointment .php-email-form input,
 .appointment .php-email-form textarea,
@@ -1112,7 +1106,7 @@ section {
   cursor: pointer;
   transition: 0.3s ease;
   margin-left: 120px;
-
+}
 .appointment .php-email-form input:focus,
 .appointment .php-email-form textarea:focus,
 .appointment .php-email-form select:focus {
