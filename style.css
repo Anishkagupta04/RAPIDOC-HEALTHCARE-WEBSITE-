@@ -24,8 +24,8 @@ h6 {
 }
 
 .nav_link li {
-  margin-right: 5px; /* Add space between items */
-  padding: 2px 3px;
+  margin-right: 1px; /* Add space between items */
+  padding: 2px 10px;
   display: inline-block;
   color: white;
 }
@@ -36,11 +36,11 @@ h6 {
 }
 button {
   position: relative;
-  border-radius: 10px;
+  border-radius: 0px;
   border: 1px solid #4bb6b7;
   background-color: #4bb6b7;
   color: #fff;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 700;
   margin: 8px;
   padding: 8px 50px;
@@ -62,9 +62,9 @@ button {
   /* justify-content: space-evenly; */
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 85px;
   margin: auto;
-  margin-top: 20px; /* Adjust this value to move the header down */
+  margin-top: 15px; /* Adjust this value to move the header down */
 }
 
 
