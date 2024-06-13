@@ -24,8 +24,8 @@ h6 {
 }
 
 .nav_link li {
-  margin-right: 20px; /* Add space between items */
-  padding: 4px 5px;
+  margin-right: 5px; /* Add space between items */
+  padding: 2px 3px;
   display: inline-block;
   color: white;
 }
@@ -51,8 +51,6 @@ button {
 
 .nav_link li a:hover {
   color: #55a5ea;
-
-  /* text-decoration: underline 2.5px rgb(3, 3, 94); */
 }
 
 .header_container {
@@ -66,7 +64,7 @@ button {
   align-items: center;
   height: 60px;
   margin: auto;
-  margin-top: 0px; /* Adjust this value to move the header down */
+  margin-top: 20px; /* Adjust this value to move the header down */
 }
 
 
