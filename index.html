@@ -17,6 +17,9 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
+    <!-- transalator -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate" ></script>
+
   <!-- CSS Files -->
   <link href="Css-Files/animate.min.css" rel="stylesheet">
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -81,7 +84,37 @@
     border-radius: 5px;
     margin-top: 20px;
 }
+select{
+  padding: 1px;
+  background-color: #55a5ea;
+  color: white;
+ height: 5vh;
+ width: 17vh;
+}
+option{
+  background-color: #55a5ea;
+  color: white;
+}
+/* }
+.VIpgJd-ZVi9od-ORHb-OEVmcd{
+  display: none;
+}
+.VIpgJd-ZVi9od-l4eHX-hSRGPd{
+  display: none;
+}  
+.skiptranslate{
+  font-size: 0;
 
+} */
+/* body {
+  top: 0px !important; 
+} */
+/* iframe.skiptranslate { visibility: hidden !important; } */
+/* .VIpgJd-ZVi9od-ORHb-OEVmcd .skiptranslate{
+  display: none !important;
+  background: none !important;
+  visibility: hidden !important;
+} */
 @media screen and (max-width: 992px) {
     .container {
         flex-wrap: wrap;
@@ -189,9 +222,6 @@
 .avatar img{
   margin: 0px 450px;
 }
-form{
-  margin: 10px 210px;
-}
 .textbox input{
   width:200px;
   height: 40px;
@@ -256,6 +286,8 @@ form.php-email-form{
           <li><a href="#patient-portal">Patient Portal</a></li>
           <li><a href="#doctors">Doctor</a></li>
           <li><a href="Html-Files/contact.html">Contact us</a></li>
+          <li  >  
+<div  id="google_element" class="myclass" style="color: #ffffff; display: flex;" ></div>          </li>
           <a href="login.html">Sign in/Sign up</a>
           <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
 
@@ -272,7 +304,6 @@ form.php-email-form{
       
       <a href="#appointment" class="appointment-btn scrollto">
         <span class="d-md-inline">EMERGENCY</span></a>
-
     </div>
   </header>
 
@@ -487,7 +518,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 
     <section id="services" class="services">
       <div class="section-title">
-        <h2>Services</h2>
+        <h2 style="text-align:center;">Services</h2>
         <p>Our services are for your good health. We are with you at every digital step.</p>
       </div>
       <div class="container">
@@ -1367,6 +1398,11 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 
   <!-- JS Files -->
   <script>
+
+function loadGoogleTranslate(){
+          new google.translate.TranslateElement("google_element");
+      }
+
     var currentYear = new Date().getFullYear();
     document.getElementById('year').textContent = currentYear;
   </script>
