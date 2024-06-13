@@ -24,7 +24,8 @@ h6 {
 }
 
 .nav_link li {
-  padding: 5px 20px;
+  margin-right: 20px; /* Add space between items */
+  padding: 4px 5px;
   display: inline-block;
   color: white;
 }
@@ -65,7 +66,9 @@ button {
   align-items: center;
   height: 60px;
   margin: auto;
+  margin-top: 0px; /* Adjust this value to move the header down */
 }
+
 
 .container {
   /* display: ; */
