@@ -1,9 +1,9 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: black; /* Set the entire page background to black */
-  color: #fff; /* Set default text color to white */
-  margin: 0; /* Remove default body margin */
-  padding: 0; /* Remove default body padding */
+  background-color: black;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .header_container {
@@ -15,15 +15,15 @@ body {
   align-items: center;
   height: 85px;
   margin: auto;
-  margin-top: 5px; /* Adjust this value to move the header down */
+  margin-top: 5px;
 }
 
 .img {
-  flex: 0 0 auto; /* Ensures the logo doesn't grow */
+  flex: 0 0 auto;
 }
 
 .nav_link li {
-  margin-right: 1px; /* Add space between items */
+  margin-right: 1px;
   padding: 4px 6px;
   display: inline-block;
 }
@@ -31,28 +31,28 @@ body {
 .nav_link li a {
   transition: all 0.3s ease 0s;
   color: white;
-  text-decoration: none; /* Remove underline from nav links */
+  text-decoration: none;
 }
 
 .container {
-  background-color: #fff;
+  background-color: #022a2d;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 450px;
-  margin: 20px auto; /* Center the container horizontally */
+  margin: 20px auto;
   transition: box-shadow 0.3s, transform 0.3s;
-  position: relative; /* Ensure relative positioning for absolute child */
+  position: relative;
 }
 
 .container:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(255, 255, 255, 0.6);
   transform: scale(1.05);
 }
 
 .container h2 {
-  color: #333;
+  color: white;
 }
 
 .rating {
@@ -63,28 +63,30 @@ body {
   cursor: pointer;
   font-size: 30px;
   color: #ccc;
-  transition: color 0.3s; /* Smooth transition for color change */
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .rating .star.selected {
-  color: #f7d32e; /* Yellow color for selected stars */
+  color: #f7d32e;
+  transform: scale(1.2);
+  font-size: 33px;
+
 }
 
-.rating .star:hover,
-.rating .star:hover ~ .star {
-  color: #f7d32e; /* Yellow color on hover */
+.rating .star:hover {
+  color: #f7d32e;
 }
 
 textarea {
   width: 90%;
   height: 110px;
-  margin: 20px auto; /* Center the textarea vertically */
+  margin: 20px auto;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   transition: box-shadow 0.3s, transform 0.3s;
-  background-color: #fff; /* Set textarea background color to white */
-  color: #333; /* Set textarea text color to default */
+  background-color: #fff;
+  color: #333;
 }
 
 textarea:hover {
@@ -99,9 +101,9 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Smooth transition for background-color */
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #4bb6b7; /* Darker shade of green on hover */
+  background-color: #3aa5a6;
 }

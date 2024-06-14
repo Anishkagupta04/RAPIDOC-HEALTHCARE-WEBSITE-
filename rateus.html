@@ -6,6 +6,7 @@
   <title>Rate Us</title>
   <link rel="stylesheet" href="rateus.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
   <header class="header_container">
@@ -37,10 +38,11 @@
       <span class="star" data-value="4">&#9733;</span>
       <span class="star" data-value="5">&#9733;</span>
     </div>
-    <textarea id="comment" placeholder="Enter your comments"></textarea>
+    <textarea id="comment" placeholder="Give Us Your Feedback :) "></textarea>
     <button onclick="submitRating()">Submit</button>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const stars = document.querySelectorAll('.star');
@@ -64,8 +66,28 @@
     });
 
     function submitRating() {
-      const rating = document.querySelector('.star.selected:last-of-type');
+      const selectedStars = document.querySelectorAll('.star.selected');
       const comment = document.getElementById('comment').value;
+      
+      if (selectedStars.length > 0 && comment.trim() !== '') {
+        Toastify({
+          text: "Thanks For Your Feedback :)",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "center",
+          backgroundColor: "#4CAF50",
+        }).showToast();
+      } else {
+        Toastify({
+          text: "Please Fill All The Details :(",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "center",
+          backgroundColor: "#FF0000",
+        }).showToast();
+      }
     }
   </script>
 </body>
