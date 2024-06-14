@@ -227,6 +227,7 @@ section::before {
     border: none;
     max-width: 150px;
     padding: 12px;
+    margin-left: 170px;
 }
 
 .container .contactForm .formBox .inputBox input[type="submit"]:hover {
