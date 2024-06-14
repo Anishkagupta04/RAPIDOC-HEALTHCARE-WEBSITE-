@@ -1497,20 +1497,32 @@ section {
   max-width: 1200px;
   flex-wrap: wrap;
 }
-.news-letter {
+.news-letter form {
+  color: transparent; 
+  background-color: transparent; 
+  border: none;
+  display: flex;
+  
+}
+
+.news-letter input[type="text"] {
+  color: transparent; 
+  background-color: transparent;
+  border: 1px solid #7489c6;; 
+  outline: none; 
   margin-left:750px;
-  border-radius:2rem;
+  height: 40px;
+  width: 150px;
 }
 .subscribe-button {
-  background-color: #55a5ea;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(103, 102, 102);
   padding: 0.5rem;
-  margin-bottom: 1rem;
   width: 100%;
   max-width: 110px;
   box-sizing: border-box;
-  border-radius: 20rem;
-  margin-left:30px
+  margin-left:10px;
+  
 
 }
 
