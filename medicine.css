@@ -69,9 +69,8 @@ input {
     width: 100%;
     max-width: 300px;
     box-sizing: border-box;
-    border-radius: 1rem;
     margin-left: 500px;
-}
+} 
 
 button {
     background-color: #55a5ea;
@@ -130,7 +129,8 @@ button:hover {
 }
 
 .other-columns ul a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #080d3f;
 }
 
 .other-columns h3 {
@@ -142,21 +142,34 @@ button:hover {
 
 
 
-.news-letter {
-    margin-left:500px
+.news-letter form {
+  color: transparent; 
+  background-color: transparent; 
+  border: none;
+  display: flex;
+  
+
+}
+
+.news-letter input[type="text"] {
+  color: transparent; 
+  background-color: transparent;
+  border: 1px solid #7489c6;; 
+  outline: none; 
+  margin-left:800px;
+  height: 40px;
+  width: 150px;
 }
 .subscribe-button {
-    background-color: #55a5ea;
-    color: white;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    width: 50%;
-    max-width: 100px;
-    box-sizing: border-box;
-    border-radius: 1rem;
-    margin-left:500px
-    
+  background-color: #ffffff;
+  color: rgb(103, 102, 102);
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 110px;
+  box-sizing: border-box;
+  margin-left:10px;
 }
+
 
 .subscribe-button:hover {
     background-color: #3fbcc051;
