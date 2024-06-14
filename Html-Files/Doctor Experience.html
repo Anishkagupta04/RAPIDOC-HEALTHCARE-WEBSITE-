@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Doctor</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.png">
+  <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./Css-Files/Experiencestyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #E0E0E0;
+  
+    
+    }
+
+    h1 {
+      color: #00bfa5;
+      text-align: center;
+      margin-left: 40px;
+    }
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .filters select, .filters input {
+      margin: 0 10px;
+    }
+
+    .filters label {
+      margin-right: 10px;
+    }
+
+    .filters input[type="range"] {
+      margin-left: 10px;
+    }
+
+    #doctor-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #doctor-list li {
+      border: 2px solid #4bb6b7;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 20px 0;
+      background-color: #2c3e50;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 25px;
+      color: #ecf0f1;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin:30px;
+      
+    }
+
+    #doctor-list li .content {
+      flex-grow: 1;
+      padding-right: 20px; 
+     margin-left: 50px;
+    }
+
+    #doctor-list li .content h4 {
+      margin: 0;
+      font-size: 28px;
+      color: #ecf0f1;
+    }
+
+    #doctor-list li .content p {
+      margin: 5px 0 0;
+      font-size: 20px;
+      color: #f2f7fa;
+    }
+     
+    #doctor-list li img {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+      margin-right: 200px; /* Add margin to left to separate from content */
+    }
+    #doctor-list li:hover {
+      background: rgb(75, 182, 183);
+      border: 2px solid white;
+      color: rgb(129, 124, 124);
+      font-weight: 700;
+      font-size: 30px;
+    }
+    #doctor-list li .content:hover {
+      color: aliceblue;
+      font-size: 30px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="pre">
+    <div class="loader"></div>
+  </div>
+  <header class="header_container">
+    <div class="img">
+      <img id="rd-logo" style="width: 90px; height: auto;" src="../assets/img/rd1.png">
+    </div>
+    <nav class="nav_menu">
+      <ul class="nav_link">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html">About</a></li>
+        <li><a href="../Html-Files/news.html">News</a></li>
+        <a href="../dex.html"><button>Service</button></a>
+        <li><a href="../index.html">Patient Portal</a></li>
+        <li><a href="../index.html">Doctor</a></li>
+        <li><a href="../Html-Files/contact.html">Contact us</a></li>
+        <a href="../login.html"><button>Sign in/Sign up</button></a>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="h">
+    <h1>Find a Doctor</h1>
+    <div class="filter-sort">
+      <label for="experience-filter" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">Experience:</label>
+      <select id="experience-filter" style="height: 35px; background-color: #ecf0f1;">
+        <option value="" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">All</option>
+        <option value="5">5+ years</option>
+        <option value="10">10+ years</option>
+        <option value="15">15+ years</option>
+      </select>
+      
+      <label for="fee-filter" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">Minimum Fee:</label>
+      <input type="range" id="fee-filter" min="0" max="1000" step="50" value="500" style="height: 35px; background-color: #ecf0f1;">
+      <span id="fee-value" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">1000</span>
+      
+      <button id="sort-btn" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Sort by Fee</button>
+    </div>
+  </header>
+
+  <main>
+    <ul id="doctor-list"></ul>
+  </main>
+
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-columns">
+        <div class="other-columns">
+          <section>
+            <h4>Quick Links</h4><br>
+            <ul class="links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../index.html">About Us</a></li>
+              <li><a href="../Html-Files/contact.html">Contact Us</a></li>
+              <li><a href="../dex.html">Services</a></li>
+              <li><a href="../index.html">Doctors</a></li>
+              <li><a href="../index.html">FAQ</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4>Explore</h4><br>
+            <ul class="links">
+              <li><a href="#">Appointment</a></li>
+              <li><a href="#">Patient Portal</a></li>
+              <li><a href="#">Login account</a></li>
+              <li><a href="#">Helplines</a></li>
+              <li><a href="#">Location</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4>Legal</h4><br>
+            <ul class="links">
+              <li><a href="#">Customer Agreement</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">GDPR</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Testimonials</a></li>
+            </ul>
+          </section>
+          <section class="footer-col">
+            <h4>RAPIDOC Newsletter</h4><br>
+            <p>
+              Subscribe to our newsletter for a weekly dose of news, updates, helpful tips, and exclusive offers.
+            </p>
+            <form action="#">
+              <input type="text" placeholder="Your email" required>
+              <button type="submit">SUBSCRIBE</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-wrapper">
+        <small>© <span id="year"></span> RapiDoc | All Rights Reserved Made with ❤️ by RapiDoc</small>
+        <div class="social-wrapper">
+          <div class="social-links">
+            <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
+            <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a>
+            <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
+            <a href="https://www.instagram.com" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const doctorList = [
+      {
+        name: "Dr. Ram",
+        specialization: "Cardiology",
+        experience: 12,
+        fee: 300,
+        image: "./images/doctor19.jpeg"
+      },
+      {
+        name: "Dr. Rina",
+        specialization: "Gaynocologist",
+        experience: 8,
+        fee: 400,
+        image: "./images/doctor.png"
+      },
+      {
+        name: "Dr. Ganesh",
+        specialization: "Dermatologist",
+        experience: 10,
+        fee: 500,
+        image: "./images/doctor8.jpeg"
+      },
+      {
+      name: "Dr. Appa",
+        specialization: "ENT",
+        experience: 9,
+        fee: 600,
+        image: "./images/doctor19.jpeg"
+      },
+      {
+      name: "Dr. Sanket",
+        specialization: "Pediatrics",
+        experience: 8,
+        fee: 700,
+        image: "./images/doctor.png"
+      },
+      {
+      name: "Dr. Ashwin",
+        specialization: "Cardiology",
+        experience: 5,
+        fee: 800,
+        image: "./images/doctor17.jpeg"
+      },
+      {
+      name: "Dr. Tushar",
+        specialization: "Dermatologist",
+        experience: 13,
+        fee: 900,
+        image: "./images/doctor18.jpeg"
+      },
+      {
+      name: "Dr. Shivani",
+        specialization: "Gynacologist",
+        experience: 14,
+        fee: 1000,
+        image: "./images/doctor8.jpeg"
+      },
+      {
+      name: "Dr. Piyush",
+        specialization: "ENT",
+        experience: 15,
+        fee: 150,
+        image: "./images/doctor17.jpeg"
+      },
+      {
+      name: "Dr. Dhanraj",
+        specialization: "Pediatrics",
+        experience: 11,
+        fee: 250,
+        image: "./images/doctor18.jpeg"
+      },
+      {
+      name: "Dr. Rani",
+        specialization: "Cardiology",
+        experience: 5,
+        fee: 100,
+        image: "./images/doctor19.jpeg"
+      },
+      {
+      name: "Dr. Dhanshree",
+        specialization: "Pediatrics",
+        experience: 6,
+        fee: 350,
+        image: "./images/doctor8.jpeg"
+      },
+      {
+      name: "Dr. Radheshyam",
+        specialization: "Dermatologist",
+        experience: 7,
+        fee: 450,
+        image: "./images/doctor.png"
+      },
+      {
+      name: "Dr. Abhishek",
+        specialization: "Gynacologist",
+        experience: 8,
+        fee: 550,
+        image: "./images/doctor17.jpeg"
+      },
+      {
+      name: "Dr. Kalyani",
+        specialization: "ENT",
+        experience: 9,
+        fee: 650,
+        image: "./images/doctor8.jpeg"
+      },
+      {
+      name: "Dr. Priya",
+        specialization: "Pediatrics",
+        experience: 10,
+        fee: 750,
+        image: "./images/doctor.png"
+      },
+      {
+      name: "Dr. Sunita",
+        specialization: "Cardiology",
+        experience: 11,
+        fee: 850,
+        image: "./images/doctor17.jpeg"
+      },
+      {
+      name: "Dr. Rajesh",
+        specialization: "Gynacologist",
+        experience: 12,
+        fee: 950,
+        image: "./images/doctor18.jpeg"
+      },
+      {
+      name: "Dr. Namrata",
+        specialization: "ENT",
+        experience: 13,
+        fee: 200,
+        image:"./images/doctor19.jpeg"
+      },
+      {
+      name: "Dr. Divyansh",
+        specialization: "Dermatologist",
+        experience: 14,
+        fee: 300,
+        image: "./images/doctor17.jpeg"
+      },
+      {
+      name: "Dr. Samiksha",
+        specialization: "Pediatrics",
+        experience: 16,
+        fee: 400,
+        image: "./images/doctor.png"
+      },
+      {
+      name: "Dr. Ramesh",
+        specialization: "Cardiologist",
+        experience: 10,
+        fee: 200,
+        image: "./images/doctor8.jpeg"
+      },
+      {
+      name: "Dr. Madhuri",
+        specialization: "Pediatrics",
+        experience: 9,
+        fee: 500,
+        image: "./images/doctor17.jpeg"
+      },
+      {
+      name: "Dr. Kanchan",
+        specialization: "Dermatologist",
+        experience: 8,
+        fee: 600,
+        image: "./images/doctor18.jpeg"
+      },
+      {
+      name: "Dr. Suresh",
+        specialization: "Pediatrics",
+        experience: 7,
+        fee: 700,
+        image: "./images/doctor19.jpeg"
+      },
+      {
+      name: "Dr. Dipali",
+        specialization: "ENT",
+        experience: 6,
+        fee: 800,
+        image: "./images/doctor.png"
+      },
+      {
+      name: "Dr. Nikita",
+        specialization: "Dermatologist",
+        experience: 5,
+        fee: 900,
+        image: "./images/doctor17.jpeg"
+      },
+      {
+      name: "Dr. Sangeeta",
+        specialization: "Cardiologist",
+        experience: 5,
+        fee: 1000,
+        image:"./images/doctor8.jpeg"
+      },
+      {
+      name: "Dr. Vanshika",
+        specialization: "ENT",
+        experience: 10,
+        fee: 100,
+        image: "./images/doctor19.jpeg"
+      },
+      {
+      name: "Dr. Prabhakar",
+        specialization: "Gynacologist",
+        experience: 11,
+        fee: 300,
+        image: "./images/doctor18.jpeg"
+      },
+    ];
+
+    function renderDoctorList(doctors) {
+      const doctorListElement = document.getElementById("doctor-list");
+      doctorListElement.innerHTML = "";
+
+      doctors.forEach(doctor => {
+        const doctorItem = document.createElement("li");
+        doctorItem.innerHTML = `
+          <div class="content">
+            <h4>${doctor.name}</h4>
+            <p>Specialization: ${doctor.specialization}</p>
+            <p>Experience: ${doctor.experience} years</p>
+            <p>Fee: $${doctor.fee}</p>
+          </div>
+          ${doctor.image ? `<img src="${doctor.image}" alt="${doctor.name}" style="width: 80px; height: auto; border-radius: 50%;">` : ""}
+        `;
+        doctorListElement.appendChild(doctorItem);
+      });
+    }
+
+    function filterDoctors() {
+      const experienceFilter = document.getElementById("experience-filter").value;
+      const feeFilter = document.getElementById("fee-filter").value;
+
+      let filteredDoctors = doctorList.filter(doctor => {
+        return (
+          (experienceFilter === "" || doctor.experience >= experienceFilter) &&
+          doctor.fee >= feeFilter
+        );
+      });
+
+      renderDoctorList(filteredDoctors);
+    }
+
+    function sortDoctorsByFee() {
+      doctorList.sort((a, b) => a.fee - b.fee);
+      renderDoctorList(doctorList);
+    }
+
+    document.getElementById("experience-filter").addEventListener("change", filterDoctors);
+    document.getElementById("fee-filter").addEventListener("input", () => {
+      document.getElementById("fee-value").textContent = document.getElementById("fee-filter").value;
+      filterDoctors();
+    });
+
+    document.getElementById("sort-btn").addEventListener("click", sortDoctorsByFee);
+
+    renderDoctorList(doctorList);
+
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".pre");
+      loader.classList.add("pre--hidden");
+      loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+      });
+    });
+
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+      loader.classList.add("loader--hidden");
+      loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+      });
+    });
+  </script>
+</body>
+</html>
