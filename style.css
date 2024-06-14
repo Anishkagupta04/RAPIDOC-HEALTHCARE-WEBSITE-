@@ -25,7 +25,7 @@ h6 {
 
 .nav_link li {
   margin-right: 1px; /* Add space between items */
-  padding: 2px 10px;
+  padding: 2px 10px;  
   display: inline-block;
   color: white;
 }
