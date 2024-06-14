@@ -24,7 +24,8 @@ h6 {
 }
 
 .nav_link li {
-  padding: 5px 20px;
+  margin-right: 1px; /* Add space between items */
+  padding: 2px 10px;  
   display: inline-block;
   color: white;
 }
@@ -32,14 +33,15 @@ h6 {
 .nav_link li a {
   transition: all 0.3s ease 0s;
   color: white;
-}
+} 
+
 button {
   position: relative;
-  border-radius: 10px;
+  border-radius: 0px;
   border: 1px solid #4bb6b7;
   background-color: #4bb6b7;
   color: #fff;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 700;
   margin: 8px;
   padding: 8px 50px;
@@ -50,22 +52,20 @@ button {
 
 .nav_link li a:hover {
   color: #55a5ea;
-
-  /* text-decoration: underline 2.5px rgb(3, 3, 94); */
 }
 
 .header_container {
-  /* background-color: #d9d9d9; */
   background-color: #022a2d;
   opacity: 0.9;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-evenly; */
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 85px;
   margin: auto;
+  margin-top: 15px; /* Adjust this value to move the header down */
 }
+
 
 .container {
   /* display: ; */
@@ -73,7 +73,6 @@ button {
   padding-top: 80px;
   display: unset;
 }
-
 
 .content {
   display: flex;
@@ -162,66 +161,6 @@ button {
 
 /*################----Navigation----################*/
 
-.navbar {
-  padding: 0;
-}
-
-.navbar ul {
-  margin-left: 35rem;
-  margin-top: -3rem;
-  padding: 0;
-  display: flex;
-  list-style: none;
-  align-items: center;
-}
-
-.navbar li {
-  position: relative;
-}
-
-.navbar > ul > li {
-  position: relative;
-  white-space: nowrap;
-  padding: 8px 0 8px 20px;
-}
-
-.navbar a,
-.navbar a:focus {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #fff;
-  white-space: nowrap;
-  transition: 0.3s;
-  border-bottom: 2px solid #fff;
-  padding: 5px 2px;
-}
-
-.navbar a i,
-.navbar a:focus i {
-  font-size: 12px;
-  line-height: 0;
-  margin-left: 5px;
-}
-
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover > a {
-  color: #55a5ea;
-  border-color: #55a5ea;
-}
-
-#navbar li a {
-  color: white;
-}
-
-#navbar a:hover {
-  color: #3fbcc0a4;
-  text-decoration: underline;
-  text-decoration-color: #3fbcc0a4;
-}
 
 /*################----Mobile Navigation----################*/
 
@@ -973,7 +912,6 @@ section {
   }
 }
 
-/* Overall section styling */
 #appointment.appointment.section-bg {
  background-color:#022a2d;
   padding: 50px 0;
@@ -988,7 +926,6 @@ section {
   padding: 50px;
   width: 90%;  /* Changed width to 90% for better responsiveness */
   max-width: 1200px;  /* Added max-width for better control */
-
   margin: 0 auto;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -998,8 +935,6 @@ section {
   display: grid;
   width: 30;
 }
-
-
 
 .section-title p {
   color: #fff;
@@ -1030,11 +965,9 @@ section {
   padding: 10px !important;
   color: #6c757d;
   width: 100%;  /* Adjusted width for better layout */
-
 }
 .col-md-4.form-group {
   width: calc(50% - 15px);
-  
 }
 
 .form-group {
