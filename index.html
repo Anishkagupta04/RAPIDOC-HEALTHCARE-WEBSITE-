@@ -29,8 +29,6 @@
   <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="remixicon/remixicon.css" rel="stylesheet">
   <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
-
-
                          
   <link href="patient-portal.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -40,9 +38,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
-      /* Ensure the input takes up full width */
-       /* Ensure the input takes up full width */
-/* Ensure the input takes up full width */
 .iti--allow-dropdown input {
     padding-left: 50px;
     background-color: black; /* Adjust padding to prevent overlap */
@@ -95,26 +90,7 @@ option{
   background-color: #55a5ea;
   color: white;
 }
-/* }
-.VIpgJd-ZVi9od-ORHb-OEVmcd{
-  display: none;
-}
-.VIpgJd-ZVi9od-l4eHX-hSRGPd{
-  display: none;
-}  
-.skiptranslate{
-  font-size: 0;
 
-} */
-/* body {
-  top: 0px !important; 
-} */
-/* iframe.skiptranslate { visibility: hidden !important; } */
-/* .VIpgJd-ZVi9od-ORHb-OEVmcd .skiptranslate{
-  display: none !important;
-  background: none !important;
-  visibility: hidden !important;
-} */
 @media screen and (max-width: 992px) {
     .container {
         flex-wrap: wrap;
@@ -219,9 +195,6 @@ option{
 .avatar{
   margin: 20px 100px;
 }
-.avatar img{
-  margin: 0px 450px;
-}
 .textbox input{
   width:200px;
   height: 40px;
@@ -237,7 +210,7 @@ option{
   margin-bottom: 20px;
 }
 #appointment.appointment.section-bg{
-  margin: 0px 200px;;
+  margin: 0px 280px 100px;
 }
 #appointment.appointment.section-bg h2{
   margin: 0px 115px ;
@@ -253,6 +226,94 @@ form.php-email-form{
 .loader--hidden{
   opacity: 0;
   visibility: hidden;
+}
+    </style>
+    <style>
+/*Appointment section Styling's to align it to center*/
+     .appointment .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appointment form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.appointment .form-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.appointment input,
+.appointment select,
+.appointment button {
+  width: 100%;
+  max-width: 400px;
+}
+
+.appointment .text-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.appointment button[type="submit"] {
+  width: auto;
+  padding: 10px 20px;
+  display: block;
+  margin: 0 auto;
+}
+.php-email-form .form-group {
+  margin-bottom: 0;
+}
+
+.php-email-form .form-control,
+.php-email-form .form-select {
+  margin: 0 0 0 0;
+}
+
+.php-email-form .row {
+  margin: 0 0 0 0;
+}
+
+.php-email-form .col-md-4,
+.php-email-form .col-md-12 {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.php-email-form input{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+/* Remove bottom margin from name and email inputs */
+#name, #email {
+  margin-bottom: 0;
+}
+
+/* Remove top margin from email and location inputs */
+#email, #location {
+  margin-top: -50px;
+}
+
+/* Remove <br> tags if present in HTML */
+#name + br, #email + br {
+  display: none;
+}
+
+/* Optional: Add a small border or visual separator if desired */
+#name, #email {
+  border-bottom: none;
+}
+#email, #location {
+  border-top: 1px solid #ccc; /* Adjust color as needed */
 }
     </style>
     <link rel="stylesheet" href="chatbox.css">
@@ -285,8 +346,7 @@ form.php-email-form{
           <li><a href="#patient-portal">Patient Portal</a></li>
           <li><a href="#doctors">Doctor</a></li>
           <li><a href="Html-Files/contact.html">Contact us</a></li>
-          <li  >  
-<div  id="google_element" class="myclass" style="color: #ffffff; display: flex;" ></div>          </li>
+          
           <a href="login.html">Sign in/Sign up</a>
           <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
 
@@ -571,56 +631,6 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
           </div>
         </div>
     </section><!-- End Services Section -->
-
-    <!-- Add Patient Portal Section -->
-
- <!-- <section id="patient-portal" class="patient-portal">
-      <div class="container-patientportal">
-      <div class="section-title" id="section-patientportal">
-
-        <h2>Patient Portal</h2>
-        <p>Access your medical records, lab results, and prescription history securely.</p>
-        <!-- <p>The Patient Portal is your personalized online gateway to your health information. Whether you need to check your recent lab results, review your prescription history, or update your personal details, the Patient Portal provides a convenient and secure platform for managing your healthcare needs.</p> 
-      </div>
-      <div class="container">
-
-
-
-      <!-- Add Login Form for Patient Portal 
-      
-          <div class="login-box">
-              <div class="avatar">
-                  <img src="img\avatar.png" alt="Avatar">
-              </div>
-              <form>
-                  <div class="textbox">
-                      <i class="fas fa-user"></i>
-                      <input type="text" placeholder="Username" name="username" required>
-                  </div>
-                  <div class="textbox">
-                      <i class="fas fa-lock"></i>
-                      <input type="password" placeholder="Password" name="password" required>
-                  </div>
-                  <input type="submit" class="btn" value="SUBMIT">
-                  <div class="register-link">
-                      <a href="#">Not registered yet? Register Here</a>
-                  </div>
-                  <div class="forgot-password" id="forgot-password-patient-portal">
-                    <a href="forgot-password.php">Forgot Your Password?</a>
-                  </div>
-              </form>
-          </div>-->
-
-
-      <!-- Add Forgot Password Link -->
-
-
-      <!-- Add Login Form for Patient Portal -->
-
-
-
-
-
     <!-- Patient Portal Section -->
 <section id="patient-portal" class="patient-portal">
   <div class="container-patientportal">
@@ -637,20 +647,20 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
         </div>
         <form>
           <div class="textbox">
-            <i class="fas fa-user" style = "margin-left:325px"></i>
+            <i class="fas fa-user"></i>
             <input type="text" placeholder="Username" name="username" required>
           </div>
           <br>
           <div class="textbox">
-            <i class="fas fa-lock" style = "margin-left:325px"></i>
+            <i class="fas fa-lock"></i>
             <input type="password" placeholder="Password" name="password" required>
           </div>
           <br>
-          <input type="submit" class="btn" value="SUBMIT" style = "margin-left:325px">
-          <div class="register-link" style = "margin-left:325px">
+          <input type="submit" class="btn" value="SUBMIT">
+          <div class="register-link">
             <a href="#">Not registered yet? Register Here</a>
           </div>
-          <div class="forgot-password" id="forgot-password-patient-portal"style = "margin-left:325px">
+          <div class="forgot-password" id="forgot-password-patient-portal">
             <a href="forgot-password.php">Forgot Your Password?</a>
           </div>
         </form>
@@ -662,11 +672,10 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 <!-- Appointment Section -->
 <section id="appointment" class="appointment section-bg">
    
-  <div class="container">
+  <div class="container" style="border-radius: 10px;">
     <div class="section-title">
       <h2>Make an Appointment</h2>
       <p>We listed the docs, we made you a form. You make us an appointment.</p>
-    
     <!--<div class="layout">-->
       <form action="successful_appointment.html" method="post" class="php-email-form">
         
@@ -687,35 +696,13 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
               <!-- Add more locations as needed -->
             </select>
           </div>
-          <!--<div class="col-md-4 form-group mt-3 mt-md-0">
-            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" maxlength="10" minlength="10" pattern="[0-9]*" required>
-          </div>-->
-        <!--</div>-->
-        
-          <div class="col-md-4 form-group mt-3">
-            <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" required>
-            <script>
-              // To set value of minimum date in calendar 
-              var currentDate = new Date();
-              var year = currentDate.getFullYear();
-              var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
-              var day = currentDate.getDate().toString().padStart(2, '0');
-              var formattedDate = `${year}-${month}-${day}`;
-
-              document.getElementById('date').setAttribute('min', formattedDate);
-            </script>
-          <!--</div>-->
-          
-          
-        </div>
-
         <!-- Time Slot Section -->
         
           <div class="col-md-12 form-group mt-3">
             <select name="time-slot" id="time-slot" class="form-select" required>
 
       <!-- ############# Appointment Section ############# -->
-<section id="appointment" class="appointment section-bg">
+ <section id="appointment" class="appointment section-bg">
   <div class="container">
     <div class="section-title">
       <h2>Make an Appointment</h2>
@@ -723,17 +710,6 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
     </div>
     <div class="layout">
       <form action="" role="form" class="php-email-form">
-        <div class="row">
-          <div class="col-md-4 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
-          </div>
-          <div class="col-md-4 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
-          </div>
-          <div class="col-md-4 form-group mt-3 mt-md-0">
-            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" maxlength="10" minlength="10" pattern="[0-9]*">
-          </div>
-        </div>
         <div class="row">
           <div class="col-md-4 form-group mt-3">
             <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date">
@@ -761,42 +737,28 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
               <option value="Doctor 1">Mumbai</option>
               <option value="Doctor 2">Delhi</option>
               <option value="Doctor 3">Chennai</option>
-              <!-- Add more locations as needed -->
             </select>
           </div>
         </div>
-
         <!-- Time Slot Section -->
         <div class="row">
           <div class="col-md-12 form-group mt-3">
             <select name="time-slot" id="time-slot" class="form-select">
-
               <option value="">Select Time Slot</option>
-              <!-- Populate with available time slots -->
               <option value="9:00 AM">9:00 AM</option>
               <option value="11:00 AM">11:00 AM</option>
               <option value="2:00 PM">2:00 PM</option>
-              <!-- Add more time slots as needed -->
             </select>
           </div>
-
           <div class="col-md-12 form-group mt-3">
-
             <select name="hospital" id="hospital" class="form-select">
               <option value="">Select Hospital</option>
-                          <!-- Populate with available hospitals -->
                 <option value="Hospital 1">Hospital 1</option>
                 <option value="Hospital 2">Hospital 2</option>
                <option value="Hospital 3">Hospital 3</option>
-                          <!-- Add more hospitals as needed -->
             </select>
           </div>
-        
-        
-                   
-        
-                    <!-- OPD Section -->
-                    
+          <!-- OPD Section -->        
           <div class="col-md-12 form-group mt-3">
         
             <select name="opd-section" id="opd-section" class="form-select">
@@ -815,20 +777,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
               <option value="55 above">55 above</option>
             </select>
           </div>
-
-          <div class="row">
-            <div class="col-md-12 form-group mt-3">
-              <select name="hospital" id="hospital" class="form-select">
-                <option value="">Select Hospital</option>
-                <!-- Populate with available hospitals -->
-                <option value="Hospital 1">Hospital 1</option>
-                <option value="Hospital 2">Hospital 2</option>
-                <option value="Hospital 3">Hospital 3</option>
-                <!-- Add more hospitals as needed -->
-              </select>
-            </div>
-          </div>
-  
+          
           <!-- OPD Section -->
           <div class="row">
             <div class="col-md-12 form-group mt-3">
@@ -841,12 +790,6 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
               </select>
             </div>
           </div>
-        
-                    
-        
-          <!--<div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-          </div>-->
           <div class="text-center">
             <a href="successful_appointment.html" style="text-decoration: none;">
             <button type="submit">Make an Appointment</button>
@@ -859,63 +802,9 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
         </div>
       </form>
     </div>
-  </div>
-  
-
-<!--<section id="hospital" class="hospital-section-bg">
-
-
-
-            <!-- Hospital Selection Section -->
-            
-  
-         
-</section><!-- End Appointment Section -->
-
-
-
-        </div>
-
-
-        <!-- Hospital Selection Section -->
-        <!-- <div class="row">
-          <div class="col-md-12 form-group mt-3">
-            <select name="hospital" id="hospital" class="form-select">
-              <option value="">Select Hospital</option> -->
-              <!-- Populate with available hospitals -->
-              <!-- <option value="Hospital 1">Hospital 1</option>
-              <option value="Hospital 2">Hospital 2</option>
-              <option value="Hospital 3">Hospital 3</option> -->
-              <!-- Add more hospitals as needed -->
-            <!-- </select>
-          </div>
-        </div> -->
-
-        <!-- OPD Section -->
-        <!-- <div class="row">
-          <div class="col-md-12 form-group mt-3">
-            <select name="opd-section" id="opd-section" class="form-select">
-              <option value="">Select OPD Section</option> -->
-              <!-- Populate with available OPD sections -->
-              <!-- <option value="ENT">ENT</option>
-              <option value="Gynecologist">Gynecologist</option> -->
-              <!-- Add more OPD sections as needed -->
-            <!-- </select>
-          </div>
-        </div> -->
-
-        <!-- <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-        </div> -->
-        <!-- <div class="text-center">
-          <a href="successful_appointment.html" style="text-decoration: none;">
-            <button type="submit">Make an Appointment</button>
-          </a>
-        </div> -->
-      </form>
-    </div>
-  </div>
-</section><!-- End Appointment Section -->
+  </div>   
+ </section>
+<!-- End Appointment Section -->
 
 <!-- ################# Doctors Section ################# -->
 <section id="doctors" class="doctors">
@@ -1343,7 +1232,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
                     of news, updates, helpful tips, and
                     exclusive offers.
                   </p>
-                  <form action="#">
+                  <form action="#" class="subscribe-form">
                     <input type="text" placeholder="Your email" required>
                     <button type="submit">SUBSCRIBE</button>
                   </form>

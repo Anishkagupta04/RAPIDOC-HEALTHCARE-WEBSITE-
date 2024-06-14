@@ -77,16 +77,11 @@ button {
   display: unset;
 }
 
-/* .container a:hover {
-  text-decoration: underline 2px;
-} */
 
 .content {
   display: flex;
   flex-direction: column;
   padding-left: 50px;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .content h1 {
@@ -140,9 +135,6 @@ button {
   z-index: -1;
 }
 
-/**
-* Appointment Button *
-*/
 .appointment-btn {
   /* /* margin-left: 60rem; */
   margin-top: 1rem; 
@@ -321,13 +313,11 @@ section {
 }
 
 .section-title {
-  /* text-align: left; */
   padding-left: 50px;
   padding-right: 50px;
   margin-left: 15%;
   margin-right: 15%;
   text-align: center;
-  /* text-align: left; */
 }
 
 .section-title h2 {
@@ -814,7 +804,6 @@ section {
   margin: 0px 20px 0px 20px;
   align-items: center;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
 }
 
 .counts .count-box i {
@@ -852,7 +841,6 @@ section {
 .counts .count-box p {
   z-index: -1;
   padding: 30px 0 0 0;
-  /* margin: 0; */
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #fffcfc;
@@ -939,7 +927,6 @@ section {
 .services .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* gap: 20px; */
   margin-top: 8px;
 }
 
@@ -989,10 +976,6 @@ section {
   }
 }
 
-
-
-
-
 /* Overall section styling */
 #appointment.appointment.section-bg {
  background-color:#022a2d;
@@ -1041,27 +1024,24 @@ section {
 .appointment .php-email-form input,
 .appointment .php-email-form textarea,
 .appointment .php-email-form select {
-  display: block;  /* Added display block to ensure full-width elements */
-  margin: 10px auto;  /* Centering elements */
+  display: block; 
+  margin: 10px auto;  
   border-radius: 10px;
   box-shadow: none;
   font-size: 14px;
   background: #badaf7;
   padding: 10px !important;
   color: #6c757d;
-  width: 80%;  /* Adjusted width for better layout */
+  width: 100%;  /* Adjusted width for better layout */
 
 }
 .col-md-4.form-group {
-
-
   width: calc(50% - 15px);
   
 }
 
 .form-group {
   margin-bottom: 15px;
-  
   width: calc(50% - 15px);
   color: #badaf7;
 }
@@ -1124,17 +1104,11 @@ section {
   color: #fff;
   transition: 0.4s;
   border-radius: 50px;
-
 }
 
 .text-center button:hover {
   background-color: #4bb6b7;
 }
-
-
-
-
-
 
 /*################----Doctors----################*/
 
@@ -1580,23 +1554,19 @@ section {
 
 .footer-col form {
   display: flex;
-  gap: 5px;
+  
 }
 
 .footer-col input {
-  height: 40px;
-  border-radius: 6px;
+  width: 300px; /* Adjust the value to set the desired width */
+  height: 40px; /* Adjust the value to set the desired height */
+  padding: 5px; /* Add some padding for better spacing */
+  font-size: 16px; 
   background: none;
-  width: 100%;
   outline: none;
   border: 1px solid #7489c6;
   caret-color: #fff;
   color: #fff;
-  padding-left: 10px;
-}
-
-.footer-col input::placeholder {
-  color: #ccc;
 }
 
 .footer-col form button {
@@ -1604,31 +1574,66 @@ section {
   border: none;
   color: #08434551;
   padding: 10px 15px;
-  border-radius: 6px;
+  border-radius: 6px 10px 10px 6px;
   cursor: pointer;
   font-weight: 1000;
   transition: 0.2s ease;
 }
 
 .footer-col form button:hover {
-  background: #cecccc;
+  background: #4bb6b7;;
 }
+
+
 /*
- .icons {
+.subscribe-form {
   display: flex;
-  margin-top: 30px;
-  gap: 30px;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.subscribe-form > input {
+  border: 1px solid var(
+      --button-border);
+  color: var(--primary);
+  outline: none;
+  min-height: 1rem;
+  background-color: var(
+      --white);
+  font-size: 1.2rem;
+  flex-grow: 3;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.subscribe-form > input:focus {
+  border: 1px solid var(
+      --primary);
+}
+
+.subscribe-form > 
+input::placeholder {
+  color: var(--text-heading-gray);
+}
+
+.subscribe-form > button {
   cursor: pointer;
-}
+  background-color: var(
+      --primary);
+  border-radius: 0.5rem;
+  color: var(--white);
+  font-size: 1.25rem;
+  min-height: 1rem;
+  flex-grow: 1;
+  white-space: nowrap;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  outline: none;
+  border: 1px solid var(
+      --button-border);
+}*/
 
- .icons i {
-  color: #afb6c7;
-}
-
- .icons i:hover {
-  color: #fff;
-}
-*/
 @media (max-width: 768px) {
   .footer {
     position: relative;
@@ -1752,8 +1757,8 @@ footer {
 
 #back-to-top-container {
   position: fixed;
-  bottom: 100px;
-  right: 47px;
+  bottom: 25px;
+  left: 30px;
   cursor: pointer;
   z-index: 1000;
 }
@@ -1792,17 +1797,16 @@ footer {
 }
 
 /* Style for pateint portal  */
-/* -----***************************************-----  */
 .patient-portal {
   width: 90%;
   max-width: 900px;
-  /* Maximum width of the container */
   margin: 0 auto;
-  /* Centers the container */
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #3fbcc051;
   text-align: center;
+  align-items: center;
+  align-content: center;
   margin-bottom: 7%;
   border-radius: 20px;
 }
@@ -1810,7 +1814,6 @@ footer {
 /* Section title styling */
 .section-title h1 {
   color: #29888a;
-  /* Sets a blue color for the heading */
   text-align: center;
 }
 
@@ -1824,7 +1827,7 @@ footer {
 .form-group {
   margin-top: 15px;
   margin-bottom: 15px;
-  /* Adds bottom margin for form-group */
+  align-content: center;
 }
 
 .forgot-password {
@@ -1836,15 +1839,12 @@ footer {
   /* Full width */
   padding: 10px;
   border: 1px solid #ccc;
-  /* Light gray border */
   border-radius: 4px;
-  /* Rounded corners */
-  /* text-align: center; */
+  text-align: center;
 }
 
 button {
   background-color: hwb(181 16% 46%);
-  /* Blue background for the button */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -1887,7 +1887,7 @@ button {
   --button-border: #848D97;
 }
 
-.subscribe-btn {
+.subscribebtn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1905,8 +1905,9 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-.subscribe-btn:hover {
+.subscribebtn:hover {
   border: 3px solid var(--white);
+  background-color: var(--footer-bg);
 }
 
 /*? footer containers */
