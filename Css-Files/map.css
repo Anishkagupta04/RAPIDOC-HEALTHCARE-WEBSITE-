@@ -1,0 +1,16 @@
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+#map{
+    height:90%;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: 500;
+}
