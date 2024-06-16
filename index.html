@@ -6,10 +6,20 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <link rel="icon" type="image/x-icon" href="favicon.png">
-
-
+<!-- Bootstrap Icons CDN link -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "o6kveYmOSDrs0l1Mg",
+        });
+    })();
+  </script>
+
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <title>RapiDoc</title>
@@ -338,22 +348,19 @@ form.php-email-form{
       
       </div>
       <nav class="nav_menu">
-
         <ul class="nav_link">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="Html-Files/news.html">News</a></li>
-          <a href="dex.html">Service</a>
-          <li><a href="#patient-portal">Patient Portal</a></li>
-          <li><a href="#doctors">Doctor</a></li>
-          <li><a href="Html-Files/contact.html">Contact us</a></li>
-          
-          <a href="login.html">Sign in/Sign up</a>
-          <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
-
-        </ul>
+          <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+          <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+          <li><a href="Html-Files/news.html"><i class="bi bi-newspaper"></i> News</a></li>
+          <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
+          <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+          <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+          <li><a href="Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a></li>
+          <li><a href="rateus.html"><i class="bi bi-star"></i>Rate Us</a></li>
+          <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+           <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+         </ul>
       </nav>
-      </div>
     </header>
 
   <!-- ############# Header ############# -->
@@ -437,11 +444,71 @@ form.php-email-form{
 
 
     <!-- ################### About Section ################### -->
-
+  
 
     <section id="about" class="about">
       <div id="about-us">
         <h1 class="about-us-heading">About Us</h1>
+
+        <section class="about-service">
+          <div class="sec-1">
+            <img src="img/about.png" class="about-img">
+          </div>
+          <div class="sec-2">
+            <div class="a-1">
+              <div class="a-l">
+                <div class="h-icon"><svg width="36px" height="36px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="#2F7F81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></div>
+              </div>
+              <div class="a-r">
+                  <div class="head-1">HEALTH CHECKUPS</div>
+                  <div class="head-2">Bootcamps, personalised check-ups,newsletter, it's all here</div>
+              </div>
+            </div>
+            <div class="a-2">
+              <div class="b-l">
+                <div class="a-icon">
+                  <svg height="28px" width="28px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512"  xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#2F7F81;}
+</style>
+<g>
+	<polygon class="st0" points="501.539,169.221 453.886,86.7 303.669,173.449 303.669,0 208.365,0 208.365,173.479 58.114,86.73 
+		10.461,169.261 160.674,255.99 10.501,342.71 58.154,425.231 208.365,338.482 208.365,512 303.669,512 303.669,338.542 
+		453.846,425.271 501.499,342.74 351.267,255.99 	"/>
+</g>
+</svg>
+                </div>
+              </div>
+              <div class="b-r">
+                <div class="head-1">EMERGENCY WARDS</div>
+                <div class="head-2">Avoid rush and get immediate medical assistance, the wards and vacancies.</div>
+              </div>
+            </div>
+            <div class="a-3">
+              <div class="c-l">
+                <div class="q-icon">
+                  <svg width="44px" height="44px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>question</title>
+                    <g id="Page-1" stroke="none" stroke-width="0.5" fill="none" fill-rule="evenodd">
+                        <g id="add" fill="#2F7F81" transform="translate(42.666667, 42.666667)">
+                            <path d="M291.76704,163.504 C291.76704,177.01952 288.33216,188.82176 281.479253,198.90112 C275.828267,207.371093 266.358187,216.549547 253.042987,226.434987 C245.378987,231.682347 240.331947,236.618667 237.916587,241.257813 C234.87744,246.90624 233.376213,255.371093 233.376213,266.666667 L190.710827,266.666667 C190.710827,249.530027 192.53504,237.027413 196.165333,229.162667 C200.394453,219.679573 209.571627,210.098773 223.686187,200.42048 C230.350293,195.374933 235.188693,190.2368 238.214827,184.994773 C241.839787,179.143253 243.664,172.49216 243.664,165.028693 C243.664,153.13024 240.125013,144.26304 233.070293,138.404907 C227.4336,134.177067 220.56768,132.059947 212.501333,132.059947 C199.39328,132.059947 189.911467,136.398507 184.065067,145.069013 C179.829333,151.518293 177.7056,159.787733 177.7056,169.868587 L177.7056,170.173227 L132.34368,170.173227 C132.34368,143.751253 140.703147,123.790507 157.43488,110.274773 C171.554773,98.9922133 189.007787,93.3346133 209.77344,93.3346133 C227.933653,93.3346133 243.865813,96.86848 257.571627,103.9232 C280.37504,115.62624 291.76704,135.494827 291.76704,163.504 Z M426.666667,213.333333 C426.666667,331.153707 331.153707,426.666667 213.333333,426.666667 C95.51296,426.666667 3.55271368e-14,331.153707 3.55271368e-14,213.333333 C3.55271368e-14,95.51168 95.51296,3.55271368e-14 213.333333,3.55271368e-14 C331.153707,3.55271368e-14 426.666667,95.51168 426.666667,213.333333 Z M384,213.333333 C384,119.226667 307.43872,42.6666667 213.333333,42.6666667 C119.227947,42.6666667 42.6666667,119.226667 42.6666667,213.333333 C42.6666667,307.43872 119.227947,384 213.333333,384 C307.43872,384 384,307.43872 384,213.333333 Z M213.332053,282.666667 C198.60416,282.666667 186.665387,294.60544 186.665387,309.333333 C186.665387,324.061227 198.60416,336 213.332053,336 C228.059947,336 239.99872,324.061227 239.99872,309.333333 C239.99872,294.60544 228.059947,282.666667 213.332053,282.666667 Z" id="Shape">
+                
+                </path>
+                        </g>
+                    </g>
+                </svg>
+                </div>
+              </div>
+              <div class="c-r">
+                <div class="head-1">SERVICES</div>
+                <div class="head-2">An apple a day won't keep Rapidoc away. We are always here at your service, bringing to you the best facilities.</div>
+              </div>
+            </div>
+          </div>
+        </section>
         <div class="about-us-block">
             <div class="about-us-community">
                 <div style="display: flex; align-items: center; gap: 1rem;">
@@ -610,7 +677,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
           <div class="align-items-stretch ">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-dna"></i></div>
-              <h4><a href="Html-Files/blood.html">Blood Bank</a></h4>
+              <h4><a href="./Html-Files/blood.html">Blood Bank</a></h4>
               <p>Know the blood banks and blood groups available around you. No one should suffer ỉn emergencies.Find the nearest blood donation centers, check blood availability, and get information on how to donate or request blood in urgent situations.</p>
             </div>
           </div>
@@ -1101,21 +1168,6 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
           </section>
 
           <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.js-testimonals-slider', {
-    grabCursor: true,
-    spaceBetween: 30,
-    pagination: {
-      el: '.js-testimonals-pagination',
-      clickable: true
-    },
-    breakpoints: {
-      767: {
-        slidesPerView: 2,
-      }
-    }
-  })
-</script>
 
 
      <!-- testimonial section -->
@@ -1150,7 +1202,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       </div>
       <div class="info">
         <div class="center">
-          <button class="btn button">Submit</button>
+          <button class="btn button" style="text-align: center; font-weight: 700;">Submit</button>
         </div>
 
       </div>
@@ -1273,7 +1325,20 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
                  color: #fff;
                 }
               </style>
-            
+          
+            <div class="social-wrapper">
+              <div class="social-links">
+              <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+              <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
+              <!-- <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a> -->
+                <a href="https://www.twitter.com"><div><img src="twitter.png" style="width: 16px; height: 15px;"></div></a>
+              <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
+               <a href="#" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
+              <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
+              <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
+              <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
+              </div>
+            </div>
       </div>
     </div>
 </footer>
@@ -1334,6 +1399,23 @@ function loadGoogleTranslate(){
   </script>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+   <script>
+    const swiper = new Swiper('.js-testimonals-slider', {
+      grabCursor: true,
+      spaceBetween: 30,
+      pagination: {
+        el: '.js-testimonals-pagination',
+        clickable: true
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+        }
+      }
+    })
+  </script>
+
    <script>
        document.addEventListener("DOMContentLoaded", function() {
            const phoneInputField = document.getElementById('phone');
@@ -1398,7 +1480,16 @@ function loadGoogleTranslate(){
     ScrollReveal().reveal('.feedback', { delay: 400 , origin:'left' });
     ScrollReveal().reveal('.footer', { delay: 400 , origin:'bottom' });
   </script>
-          <script>
+<script>
+    function sendMail(){
+    let params={
+      to_email: document.getElementById("subscribe-email").value,
+      message: `<h1>Thank you for subscribing to RapiDoc Newsletter</h1>
+      <p>Stay tuned for the latest news, updates, helpful tips, and exclusive offers.</p>`,
+    }
+    emailjs.send("service_lktb68z","template_w79vd94",params).then(alert("Subscribed Successfully!"));
+  }
+
 
 window.addEventListener("load", () => {
   const loader = document.querySelector(".pre");
