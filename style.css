@@ -1,11 +1,11 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
-  background-color: #000;
+  background-color: #000 !important;
 }
 
 a {
-  color: #ffffff;
+  color: #55a5ea;
   text-decoration: none;
 }
 
@@ -24,7 +24,8 @@ h6 {
 }
 
 .nav_link li {
-  padding: 5px 20px;
+  margin-right: 1px; /* Add space between items */
+  padding: 2px 10px;  
   display: inline-block;
   color: white;
 }
@@ -32,14 +33,15 @@ h6 {
 .nav_link li a {
   transition: all 0.3s ease 0s;
   color: white;
-}
+} 
+
 button {
   position: relative;
-  border-radius: 10px;
+  border-radius: 0px;
   border: 1px solid #4bb6b7;
   background-color: #4bb6b7;
   color: #fff;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 700;
   margin: 8px;
   padding: 8px 50px;
@@ -50,22 +52,20 @@ button {
 
 .nav_link li a:hover {
   color: #55a5ea;
-
-  /* text-decoration: underline 2.5px rgb(3, 3, 94); */
 }
 
 .header_container {
-  /* background-color: #d9d9d9; */
   background-color: #022a2d;
   opacity: 0.9;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-evenly; */
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 85px;
   margin: auto;
+  margin-top: 15px; /* Adjust this value to move the header down */
 }
+
 
 .container {
   /* display: ; */
@@ -74,16 +74,10 @@ button {
   display: unset;
 }
 
-/* .container a:hover {
-  text-decoration: underline 2px;
-} */
-
 .content {
   display: flex;
   flex-direction: column;
   padding-left: 50px;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .content h1 {
@@ -137,9 +131,6 @@ button {
   z-index: -1;
 }
 
-/**
-* Appointment Button *
-*/
 .appointment-btn {
   /* /* margin-left: 60rem; */
   margin-top: 1rem; 
@@ -170,66 +161,6 @@ button {
 
 /*################----Navigation----################*/
 
-.navbar {
-  padding: 0;
-}
-
-.navbar ul {
-  margin-left: 35rem;
-  margin-top: -3rem;
-  padding: 0;
-  display: flex;
-  list-style: none;
-  align-items: center;
-}
-
-.navbar li {
-  position: relative;
-}
-
-.navbar > ul > li {
-  position: relative;
-  white-space: nowrap;
-  padding: 8px 0 8px 20px;
-}
-
-.navbar a,
-.navbar a:focus {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #fff;
-  white-space: nowrap;
-  transition: 0.3s;
-  border-bottom: 2px solid #fff;
-  padding: 5px 2px;
-}
-
-.navbar a i,
-.navbar a:focus i {
-  font-size: 12px;
-  line-height: 0;
-  margin-left: 5px;
-}
-
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover > a {
-  color: #55a5ea;
-  border-color: #55a5ea;
-}
-
-#navbar li a {
-  color: white;
-}
-
-#navbar a:hover {
-  color: #3fbcc0a4;
-  text-decoration: underline;
-  text-decoration-color: #3fbcc0a4;
-}
 
 /*################----Mobile Navigation----################*/
 
@@ -318,13 +249,11 @@ section {
 }
 
 .section-title {
-  /* text-align: left; */
   padding-left: 50px;
   padding-right: 50px;
   margin-left: 15%;
   margin-right: 15%;
   text-align: center;
-  /* text-align: left; */
 }
 
 .section-title h2 {
@@ -811,7 +740,6 @@ section {
   margin: 0px 20px 0px 20px;
   align-items: center;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
 }
 
 .counts .count-box i {
@@ -849,7 +777,6 @@ section {
 .counts .count-box p {
   z-index: -1;
   padding: 30px 0 0 0;
-  /* margin: 0; */
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #fffcfc;
@@ -936,7 +863,6 @@ section {
 .services .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* gap: 20px; */
   margin-top: 8px;
 }
 
@@ -986,18 +912,13 @@ section {
   }
 }
 
-
-
-
-
-/* Overall section styling */
 #appointment.appointment.section-bg {
  background-color:#022a2d;
   padding: 50px 0;
   box-sizing: border-box;
   width: 90%;
   max-width: 900px;
-
+}
 /*################----Appointments----################*/
 .layout {
   background-color: #3fbcc051;
@@ -1005,7 +926,6 @@ section {
   padding: 50px;
   width: 90%;  /* Changed width to 90% for better responsiveness */
   max-width: 1200px;  /* Added max-width for better control */
-
   margin: 0 auto;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1014,14 +934,6 @@ section {
   border-radius: 20px;
   display: grid;
   width: 30;
-}
-
-/* Section title styling */
-.section-title h2 {
-  font-size: 28px;
-  color: #fff;
-  display: flex;
-  margin-bottom: 20px;
 }
 
 .section-title p {
@@ -1039,32 +951,27 @@ section {
   flex-wrap: wrap; 
   color: #badaf7;
   
-  
+}
 
 .appointment .php-email-form input,
 .appointment .php-email-form textarea,
 .appointment .php-email-form select {
-  display: block;  /* Added display block to ensure full-width elements */
-  margin: 10px auto;  /* Centering elements */
+  display: block; 
+  margin: 10px auto;  
   border-radius: 10px;
   box-shadow: none;
   font-size: 14px;
   background: #badaf7;
   padding: 10px !important;
   color: #6c757d;
-  width: 80%;  /* Adjusted width for better layout */
-
+  width: 100%;  /* Adjusted width for better layout */
 }
 .col-md-4.form-group {
-
-
   width: calc(50% - 15px);
-  
 }
 
 .form-group {
   margin-bottom: 15px;
-  
   width: calc(50% - 15px);
   color: #badaf7;
 }
@@ -1111,7 +1018,7 @@ section {
   cursor: pointer;
   transition: 0.3s ease;
   margin-left: 120px;
-
+}
 .appointment .php-email-form input:focus,
 .appointment .php-email-form textarea:focus,
 .appointment .php-email-form select:focus {
@@ -1127,17 +1034,11 @@ section {
   color: #fff;
   transition: 0.4s;
   border-radius: 50px;
-
 }
 
 .text-center button:hover {
   background-color: #4bb6b7;
 }
-
-
-
-
-
 
 /*################----Doctors----################*/
 
@@ -1344,7 +1245,7 @@ section {
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   margin: 50px;
   width: 60%;
-  margin-left: 250px;
+  margin-left: 20rem;
   padding: 20px;
 }
 
@@ -1456,7 +1357,7 @@ section {
   text-align: center;
 
   .button {
-    width: 15%;
+    /* width: 15%; */
     background-color: white;
     border-radius: 0.5rem;
     border: none;
@@ -1583,23 +1484,19 @@ section {
 
 .footer-col form {
   display: flex;
-  gap: 5px;
+  
 }
 
 .footer-col input {
-  height: 40px;
-  border-radius: 6px;
+  width: 300px; /* Adjust the value to set the desired width */
+  height: 40px; /* Adjust the value to set the desired height */
+  padding: 5px; /* Add some padding for better spacing */
+  font-size: 16px; 
   background: none;
-  width: 100%;
   outline: none;
   border: 1px solid #7489c6;
   caret-color: #fff;
   color: #fff;
-  padding-left: 10px;
-}
-
-.footer-col input::placeholder {
-  color: #ccc;
 }
 
 .footer-col form button {
@@ -1607,31 +1504,66 @@ section {
   border: none;
   color: #08434551;
   padding: 10px 15px;
-  border-radius: 6px;
+  border-radius: 6px 10px 10px 6px;
   cursor: pointer;
   font-weight: 1000;
   transition: 0.2s ease;
 }
 
 .footer-col form button:hover {
-  background: #cecccc;
+  background: #4bb6b7;;
 }
+
+
 /*
- .icons {
+.subscribe-form {
   display: flex;
-  margin-top: 30px;
-  gap: 30px;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.subscribe-form > input {
+  border: 1px solid var(
+      --button-border);
+  color: var(--primary);
+  outline: none;
+  min-height: 1rem;
+  background-color: var(
+      --white);
+  font-size: 1.2rem;
+  flex-grow: 3;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.subscribe-form > input:focus {
+  border: 1px solid var(
+      --primary);
+}
+
+.subscribe-form > 
+input::placeholder {
+  color: var(--text-heading-gray);
+}
+
+.subscribe-form > button {
   cursor: pointer;
-}
+  background-color: var(
+      --primary);
+  border-radius: 0.5rem;
+  color: var(--white);
+  font-size: 1.25rem;
+  min-height: 1rem;
+  flex-grow: 1;
+  white-space: nowrap;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  outline: none;
+  border: 1px solid var(
+      --button-border);
+}*/
 
- .icons i {
-  color: #afb6c7;
-}
-
- .icons i:hover {
-  color: #fff;
-}
-*/
 @media (max-width: 768px) {
   .footer {
     position: relative;
@@ -1755,8 +1687,8 @@ footer {
 
 #back-to-top-container {
   position: fixed;
-  bottom: 100px;
-  right: 47px;
+  bottom: 25px;
+  left: 30px;
   cursor: pointer;
   z-index: 1000;
 }
@@ -1795,17 +1727,16 @@ footer {
 }
 
 /* Style for pateint portal  */
-/* -----***************************************-----  */
 .patient-portal {
   width: 90%;
   max-width: 900px;
-  /* Maximum width of the container */
   margin: 0 auto;
-  /* Centers the container */
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #3fbcc051;
   text-align: center;
+  align-items: center;
+  align-content: center;
   margin-bottom: 7%;
   border-radius: 20px;
 }
@@ -1813,7 +1744,6 @@ footer {
 /* Section title styling */
 .section-title h1 {
   color: #29888a;
-  /* Sets a blue color for the heading */
   text-align: center;
 }
 
@@ -1827,7 +1757,7 @@ footer {
 .form-group {
   margin-top: 15px;
   margin-bottom: 15px;
-  /* Adds bottom margin for form-group */
+  align-content: center;
 }
 
 .forgot-password {
@@ -1839,15 +1769,12 @@ footer {
   /* Full width */
   padding: 10px;
   border: 1px solid #ccc;
-  /* Light gray border */
   border-radius: 4px;
-  /* Rounded corners */
-  /* text-align: center; */
+  text-align: center;
 }
 
 button {
   background-color: hwb(181 16% 46%);
-  /* Blue background for the button */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -1890,7 +1817,7 @@ button {
   --button-border: #848D97;
 }
 
-.subscribe-btn {
+.subscribebtn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1908,8 +1835,9 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-.subscribe-btn:hover {
+.subscribebtn:hover {
   border: 3px solid var(--white);
+  background-color: var(--footer-bg);
 }
 
 /*? footer containers */
