@@ -1,11 +1,11 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
-  background-color: #000;
+  background-color: #000 !important;
 }
 
 a {
-  color: #ffffff;
+  color: #55a5ea;
   text-decoration: none;
 }
 
@@ -1250,7 +1250,7 @@ section {
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   margin: 50px;
   width: 60%;
-  margin-left: 250px;
+  margin-left: 20rem;
   padding: 20px;
 }
 
@@ -1362,7 +1362,7 @@ section {
   text-align: center;
 
   .button {
-    width: 15%;
+    /* width: 15%; */
     background-color: white;
     border-radius: 0.5rem;
     border: none;
