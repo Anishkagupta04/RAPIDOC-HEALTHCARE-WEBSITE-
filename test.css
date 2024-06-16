@@ -473,7 +473,7 @@ h2{
 }
 footer {
   background-color: #022a2d;
-  padding: 20px 0;
+ 
 }
 
 .footer-container {
@@ -492,7 +492,7 @@ footer {
 .footer-section h3 {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #333;
+  color: #666;
 }
 
 .footer-section ul {
@@ -517,38 +517,41 @@ footer {
 
 .footer-section form {
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
+  
 }
 
 .footer-section input[type="email"] {
   padding: 10px;
   font-size: 14px;
-  border: 1px solid #ddd;
+  border: 1px solid #55a5ea;
   border-radius: 4px;
   margin-bottom: 10px;
+  background-color: transparent;
+  
 }
 
 .footer-section button {
   padding: 10px;
   font-size: 14px;
-  color: #fff;
-  background-color: #55a5ea;
-  border: none;
+  color: #878484;
+  background-color: #ffffff;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  height: 40px;
 }
 
 .footer-section button:hover {
-  background-color: #30705d;
+  background-color: #55a5ea;
 }
 
 .bottom-footer {
   background-color: #09173b;
-  padding: 10px 20px;
+  padding: 10px;
   text-align: center;
   font-size: 14px;
-  color: #333;
+  color: #fffefe;
 }
 
 .bottom-footer .social-links {
