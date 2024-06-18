@@ -105,6 +105,9 @@ body {
     border-radius: 5px;
     font-size: 20px;
 }
+.text input::placeholder{
+    text-align: center;
+}
 .text button {
     width: 25%;
     height: 50px;
