@@ -80,6 +80,11 @@
     border-radius: 5px;
     margin-top: 20px;
 }
+.btn-get-started:hover{
+  background-color: #4cae4c;
+  color: white;
+  border: 1px solid yellow;
+}
 select{
   padding: 1px;
   background-color: #55a5ea;
@@ -209,6 +214,11 @@ option{
   font-size: 1rem;
   border-radius: 20px;
   margin-bottom: 20px;
+}
+.btn:hover{
+    background-color: #4cae4c;
+    color: white;
+    width: auto;
 }
 #appointment.appointment.section-bg{
   margin: 0px 280px 100px;
@@ -748,7 +758,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
           <br>
           <div class="col-md-4 form-group mt-3">
             <select name="location" id="location" class="form-select" required>
-              <option value="">Your Location</option>
+              <option value="Your loaction">Your Location</option>
               <option value="Mumbai">Mumbai</option>
               <option value="Delhi">Delhi</option>
               <option value="Chennai">Chennai</option>
@@ -759,6 +769,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
         
           <div class="col-md-12 form-group mt-3">
             <select name="time-slot" id="time-slot" class="form-select" required>
+
 
       <!-- ############# Appointment Section ############# -->
  <section id="appointment" class="appointment section-bg">
@@ -1208,7 +1219,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       </div>
       <div class="info">
         <div class="center">
-          <button class="btn button">Submit</button>
+          <button class="btn button" style="font-size: 25px; padding-bottom: 50px;">Submit</button>
         </div>
 
       </div>
