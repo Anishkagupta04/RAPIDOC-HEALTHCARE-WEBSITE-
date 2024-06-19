@@ -48,6 +48,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
+      .nav_menu{
+        display: flex;
+      }
+      .nav_link{
+        display: flex;
+      }
 .iti--allow-dropdown input {
     padding-left: 50px;
     background-color: black; /* Adjust padding to prevent overlap */
@@ -100,7 +106,43 @@ option{
   background-color: #55a5ea;
   color: white;
 }
-
+.hamburger{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 39px;
+    right: 1.5%;
+}
+.line{
+    width: 30px;
+    height: 5px;
+    margin: 4px 4px;
+    background-color: white;
+}
+@media only screen and (max-width: 820px){
+  .hamburger{
+    display: block;
+  }
+  .header_container{
+    flex-direction: column;
+    height: 24.8rem;
+    transition: 0.55s all ease-out;
+    padding-top: 5px;
+  }
+  .nav_link{
+    flex-direction: column;
+    /* margin-top: 161px;
+    margin-right: -8px;
+    text-align: right; */
+  }
+  .nav-h{
+    height: 5.5rem;
+    width: 100vw;
+  }
+  .vis-h{
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 992px) {
     .container {
         flex-wrap: wrap;
@@ -340,15 +382,12 @@ form.php-email-form{
     <div class="loader"></div>
   </div>
       <!-- ############# Header ############# -->
-  
-      <header class="header_container">
+      <header class="header_container nav-h">
         <div class="img">
-        <img id="rd-logo"  style="width: 90px; height: auto;" src="images/rd.png"> 
-      </div>
-      
-      </div>
+          <img id="rd-logo"  style="width: 90px; height: auto;" src="images/rd.png"> 
+        </div>
       <nav class="nav_menu">
-        <ul class="nav_link">
+        <ul class="nav_link vis-h">
           <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
           <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
           <li><a href="Html-Files/news.html"><i class="bi bi-newspaper"></i> News</a></li>
@@ -360,6 +399,11 @@ form.php-email-form{
           <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
            <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
          </ul>
+         <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </nav>
     </header>
 
@@ -1487,6 +1531,13 @@ window.addEventListener("load", () => {
   document.body.removeChild(loader);
   });
   });
+  const hamburger=document.querySelector('.hamburger');
+  const navbar=document.querySelector('.header_container');
+  const nav=document.querySelector('.nav_link');
+  hamburger.addEventListener('click',()=>{
+    navbar.classList.toggle('nav-h');
+    nav.classList.toggle('vis-h');
+  })
   </script>
 </body>
 
