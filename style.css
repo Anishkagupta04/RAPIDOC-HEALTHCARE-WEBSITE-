@@ -1682,15 +1682,16 @@ input::placeholder {
 /*################----Back to top----################*/
 footer {
   position: relative;
-  padding: 50px 0;
+ 
 }
 
 #back-to-top-container {
   position: fixed;
-  bottom: 25px;
+  bottom: 70px;
   left: 30px;
   cursor: pointer;
   z-index: 1000;
+  
 }
 
 .circle {
@@ -1859,7 +1860,7 @@ footer {
   max-width: 80rem;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem;
+  
 }
 
 .footer-logo-columns {
@@ -1938,30 +1939,23 @@ footer {
   fill: var(--white);
 }
 
-/*? Footer bottom */
 .footer-bottom {
+  background-color: rgb(4, 9, 47);
   width: 100%;
-  color: var(--text-color);
-  background-color: var(--footer-bottom-bg);
+  padding: 10px;
 }
 
 .footer-bottom-wrapper {
   display: flex;
-  max-width: 80rem;
-  margin: 0 auto;
-  gap: 1rem;
-  width: 100%;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  align-content: center;
-  padding: 1rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+   
 }
 
 .footer-bottom small {
-  font-size: 1rem;
-  display: inline;
-  white-space: nowrap;
+  color: #afb6c7;
 }
 
 .footer-bottom-links {
@@ -2019,11 +2013,7 @@ footer {
   list-style-type: none;
 }
 
-.footer-bottom-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 
 
 
