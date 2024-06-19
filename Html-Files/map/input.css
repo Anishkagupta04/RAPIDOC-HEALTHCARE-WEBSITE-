@@ -1,0 +1,43 @@
+body{
+    background-color: #74EBD5;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+.map{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
+}
+.map-input{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#text{
+    font-size: 3rem;
+    color: black;
+    font-weight: 700;
+}
+#location-input{
+    height: 2rem;
+    width: 15rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+.map button{
+    background-color: #74EBD5;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+    border: 2px solid black;
+    height: 2.5rem;
+    border-radius: 15px;
+    font-size: large;
+    font-weight: 500;
+}
