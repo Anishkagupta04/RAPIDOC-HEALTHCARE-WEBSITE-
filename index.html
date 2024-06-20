@@ -333,6 +333,13 @@ form.php-email-form{
      <link rel="stylesheet" href="./Css-Files/aboutus.css" />
      <link rel="stylesheet" href="./Css-Files/testimonial.css" />
      <script src="chatboxx.js" defer></script>
+     <script>
+      function toggleMenu() {
+        const navMenu = document.querySelector('.nav_menu');
+        navMenu.classList.toggle('active');
+    }
+    
+     </script>
 </head>
 
 <body>
@@ -343,8 +350,8 @@ form.php-email-form{
   
       <header class="header_container">
         <div class="img">
-        <img id="rd-logo"  style="width: 90px; height: auto;" src="images/rd.png"> 
-      </div>
+          <img id="rd-logo"  style="width: 90px; height: auto;" src="images/rd.png"> 
+        </div>
       
       </div>
       <nav class="nav_menu">
@@ -358,9 +365,12 @@ form.php-email-form{
           <li><a href="Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a></li>
           <li><a href="rateus.html"><i class="bi bi-star"></i>Rate Us</a></li>
           <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li><br>
-          <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+          <li><a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a></li>
         </ul>
       </nav>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <i class="bi bi-list"></i>
+    </button>
           </header>
 
   <!-- ############# Header ############# -->

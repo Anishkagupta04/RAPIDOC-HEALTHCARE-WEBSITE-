@@ -23,32 +23,95 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header container */
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+
+/* Navigation menu */
+.nav_menu {
+  position: relative;
+}
+
+.nav_link {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
 .nav_link li {
-  margin-right: 1px; /* Add space between items */
-  padding: 2px 10px;
-  display: inline-block;
-  color: white;
+  margin: 0 10px;
 }
 
 .nav_link li a {
-  transition: all 0.3s ease 0s;
-  color: white;
-} 
-
-.nav_link li a:hover {
-  color: #55a5ea;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
 }
 
-.header_container {
-  background-color: #022a2d;
-  opacity: 0.9;
+.nav_link li a:hover {
+  color: #ddd;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+/* Responsive styles */
+@media (max-width: 1310px) {
+  .nav_link {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 20px;
+    z-index: 1000;
+}
+
+  .nav_link li {
+      margin: 10px 0;
+      text-align: center;
+  }
+
+  .nav_link a {
+      font-size: 20px;
+  }
+
+  .nav_link a button {
+      width: 100%;
+  }
+
+  .hamburger {
+      display: block;
+  }
+  .nav_menu.active{
+    width: 100%;
+    
+  }
+}
+
+/* Show the menu when active */
+.nav_menu.active .nav_link {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 85px;
-  margin: auto;
-  margin-top: 15px; /* Adjust this value to move the header down */
 }
 
 
@@ -57,6 +120,7 @@ h6 {
   font-family: sans-serif;
   padding-top: 80px;
   display: unset;
+  z-index: 1;
 }
 
 .content {
