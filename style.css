@@ -25,7 +25,7 @@ h6 {
 
 .nav_link li {
   margin-right: 1px; /* Add space between items */
-  padding: 4px 10px;  
+  padding: 5px 10px;  
   display: inline-block;
   color: white;
 }
@@ -38,7 +38,10 @@ h6 {
 .nav_link li a:hover {
   color: #55a5ea;
 }
-
+#header{
+  position: relative;
+  top: 12px;
+}
 .header_container {
   background-color: #022a2d;
   opacity: 0.9;
