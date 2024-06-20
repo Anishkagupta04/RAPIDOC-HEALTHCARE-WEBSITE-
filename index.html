@@ -110,8 +110,8 @@ option{
     display: none;
     cursor: pointer;
     position: absolute;
-    top: 39px;
-    right: 1.5%;
+    top: 29px;
+    left: 1.5%;
 }
 .line{
     width: 30px;
@@ -125,22 +125,30 @@ option{
   }
   .header_container{
     flex-direction: column;
+    align-items:start;
     height: 24.8rem;
     transition: 0.55s all ease-out;
-    padding-top: 5px;
+    /* padding-top: 5px; */
   }
   .nav_link{
     flex-direction: column;
-    /* margin-top: 161px;
-    margin-right: -8px;
-    text-align: right; */
+    position: relative;
+    bottom: 33px;
   }
+  /* .nav-link li{
+    margin-bottom: 5px;
+  } */
   .nav-h{
     height: 5.5rem;
     width: 100vw;
   }
   .vis-h{
     opacity: 0;
+  }
+  .img{
+    position: relative;
+    left: 300px;
+    bottom: 12px;
   }
 }
 @media screen and (max-width: 992px) {
