@@ -35,7 +35,6 @@ section::before {
     display: inline-block;
     color: white;
 }
-
 .nav_link li a {
     transition: all 0.3s ease 0s;
     color: white;
@@ -46,7 +45,6 @@ section::before {
     color: #55a5ea;
     text-decoration: underline 2.5px rgb(3, 3, 94);
 }
-
 .header_container {
     background-color: #022a2d;
     opacity: 0.9;
@@ -62,7 +60,7 @@ section::before {
 .container {
     position: relative;
     min-width: 1100px;
-    min-height: 550px;
+    min-height: 400px;
     display: flex;
     z-index: 1000;
     /* border-radius: 22px; */
@@ -235,11 +233,78 @@ section::before {
 }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
+
+@media (max-width: 715px) {
+    .header_container{
+        width: 300%;
+    }
+    .nav_link li{
+        display: none;
+    }
+    .responsive li{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        background-color: #0d9480;
+        width: 40vw;
+        position: relative;
+        left: 130vw;
+        border-radius: 56px;
+        padding:10px 0px;
+    }
+    
+}
+
+@media (min-width: 1361px) {
+    .nav_link span{
+        display: none;
+    }
+    .responsive li{
+        display: none;
+    }
+    .container .contactInfo {
+        top: 0;
+        height: 550px;
+        position: relative;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+    .container .contactForm {
+        position: relative;
+        width: calc(100% - 350px);
+        padding-left: 0;
+        margin-left: 0;
+        padding: 40px;
+        height: 550px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+}
+@media (max-width: 1361px) and (min-width: 715px) {
     .container {
         width: 90%;
         margin: 20px;
         box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+    .responsive li{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        background-color: #0d9480;
+        width: 30vw;
+        position: relative;
+        left: 58vw;
+        border-radius: 56px;
+        padding:10px 0px;
+    }
+
+    .header_container{
+        width: 150vw;
+    }
+    .nav_link li{
+        display: none;
     }
 
     .container .contactInfo {
