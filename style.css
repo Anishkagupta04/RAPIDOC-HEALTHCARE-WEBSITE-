@@ -39,17 +39,23 @@ h6 {
   background-color: #333;
   color: #fff;
 }
-
+.nav_menu{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.img{
+  width: 90px;
+  height: 80px;
+}
 
 /* Navigation menu */
-.nav_menu {
-  position: relative;
-}
 
 .nav_link {
   display: flex;
   list-style: none;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav_link li {
@@ -79,7 +85,7 @@ h6 {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 50px;
+    top: 90px;
     right: 0;
     background-color: #333;
     width: 100%;
@@ -102,11 +108,18 @@ h6 {
 
   .hamburger {
       display: block;
+      align-items: end;
   }
   .nav_menu.active{
     width: 100%;
     
   }
+  .img{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
 }
 
 /* Show the menu when active */
