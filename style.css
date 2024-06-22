@@ -125,9 +125,8 @@ h6 {
 /* Show the menu when active */
 .nav_menu.active .nav_link {
   display: flex;
+
 }
-
-
 .container {
   /* display: ; */
   font-family: sans-serif;
@@ -216,7 +215,6 @@ h6 {
   z-index: -1;
   color: #fff;
 }
-
 @media (max-width: 768px) {
   .appointment-btn {
     margin: 0 15px 0 0;

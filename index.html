@@ -48,6 +48,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
+      .nav_menu{
+        display: flex;
+      }
+      .nav_link{
+        display: flex;
+      }
 .iti--allow-dropdown input {
     padding-left: 50px;
     background-color: black; /* Adjust padding to prevent overlap */
@@ -100,7 +106,51 @@ option{
   background-color: #55a5ea;
   color: white;
 }
-
+.hamburger{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 29px;
+    left: 1.5%;
+}
+.line{
+    width: 30px;
+    height: 5px;
+    margin: 4px 4px;
+    background-color: white;
+}
+@media only screen and (max-width: 820px){
+  .hamburger{
+    display: block;
+  }
+  .header_container{
+    flex-direction: column;
+    align-items:start;
+    height: 24.8rem;
+    transition: 0.55s all ease-out;
+    /* padding-top: 5px; */
+  }
+  .nav_link{
+    flex-direction: column;
+    position: relative;
+    bottom: 40px;
+  }
+  /* .nav-link li{
+    margin-bottom: 5px;
+  } */
+  .nav-h{
+    height: 5.5rem;
+    width: 100vw;
+  }
+  .vis-h{
+    opacity: 0;
+  }
+  .img{
+    position: relative;
+    left: 300px;
+    bottom: 12px;
+  }
+}
 @media screen and (max-width: 992px) {
     .container {
         flex-wrap: wrap;
@@ -347,6 +397,7 @@ form.php-email-form{
     <div class="loader"></div>
   </div>
       <!-- ############# Header ############# -->
+
   
       <header class="header_container">
         <nav class="nav_menu">
@@ -370,7 +421,7 @@ form.php-email-form{
           <li><a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a></li>
         </ul>
       </nav>
-          </header>
+     </header>
 
   <!-- ############# Header ############# -->
 
@@ -1496,6 +1547,13 @@ window.addEventListener("load", () => {
   document.body.removeChild(loader);
   });
   });
+  const hamburger=document.querySelector('.hamburger');
+  const navbar=document.querySelector('.header_container');
+  const nav=document.querySelector('.nav_link');
+  hamburger.addEventListener('click',()=>{
+    navbar.classList.toggle('nav-h');
+    nav.classList.toggle('vis-h');
+  })
   </script>
 </body>
 
