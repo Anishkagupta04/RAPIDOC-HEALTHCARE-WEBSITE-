@@ -15,28 +15,30 @@
   <div class="pre">
     <div class="loader"></div>
   </div>
-  <header class="header_container">
-    <div class="img">
-    <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
-  </div>
+
+
+
+
+<nav class="nav_menu">
+  <div class="img">
+      <img id="rd-logo" style="width: 90px; height: auto;" src="../images/rd.png">
+    </div>
+  <h1 id="home">RapiDoc</h1>
+  <img    id="menu-icon" style="outline: none;" src="../images/Menu.svg" alt="Menu">
   
-  </div>
-  <nav class="nav_menu">
+  <ul class="nav-item navbar">
+      <li class="navitem"><a href="index.html">Home</a></li>
+      <li class="navitem"><a href="#about">About</a></li>
+      <li class="navitem"><a href="Html-Files/news.html">News</a></li>
+      <li class="navitem"><a href="dex.html">Service</a></li>
+      <li class="navitem"><a href="#patient-portal">Patient Portal</a></li>
+      <li class="navitem"><a href="#doctors">Doctor</a></li>
+      <li class="navitem"><a href="Html-Files/contact.html">Contact us</a></li>
+      <li class="navitem"><a href="login.html">Sign in/Sign up</a></li>
+      <li class="navitem"><a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a></li>
 
-    <ul class="nav_link">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html">About</a></li>
-      <li><a href="../Html-Files/news.html">News</a></li>
-      <a href="../dex.html"><button>Service</button></a>
-      <li><a href="../index.html">Patient Portal</a></li>
-      <li><a href="../index.html">Doctor</a></li>
-      <li><a href="../Html-Files/contact.html">Contact us</a></li>
-      <a href="../login.html"><button>Sign in/Sign up</button></a>
-    </ul>
-  </nav>
-  </div>
-</header>
-
+  </ul>
+</nav>
   <header class="h">
     <h1>Find a Doctor</h1>
     <div class="filter-sort">
@@ -120,7 +122,7 @@
               </style>
             <div class="social-wrapper">
               <div class="social-links">
-              <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+              <div style="font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
               <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
               <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a>
               <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
@@ -272,5 +274,40 @@ renderDoctorList(doctorList);
       });
       });
       </script>
+
+
+
+<script>   
+  document.addEventListener('DOMContentLoaded', function() {
+      const menuIcon = document.getElementById('menu-icon');
+      const navLinks = document.querySelector('.nav-item.navbar');
+  
+      if (menuIcon && navLinks) {
+          menuIcon.addEventListener('click', toggleMenu);
+         
+      } else {
+          console.error('Menu icon or nav links not found');
+      }
+  
+      function toggleMenu() {
+          navLinks.classList.toggle('show');
+          if (navLinks.classList.contains('show')) {
+              menuIcon.src = './images/Close.svg';
+              disableScroll();
+          } else {
+              menuIcon.src = './images/Menu.svg';
+              enableScroll();
+          }
+      }
+  
+      function disableScroll() {
+          document.body.style.overflow = "hidden";
+      }
+  
+      function enableScroll() {
+          document.body.style.overflow = "visible";
+      }
+  });
+</script> 
 </body>
 </html>

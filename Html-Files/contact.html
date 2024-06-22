@@ -1,114 +1,717 @@
 <!doctype html>
 <html>
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Contact Us</title>
-    <link rel="shortcut icon" type="image/jpg" href="images/news2.png"/>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
-    </style>
-    <link rel="stylesheet" href="Css-Files/styles.css">
-    </head>
-    <body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link rel="shortcut icon" type="image/jpg" href="images/news2.png"/>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
-        <header class="header_container">
-            <div class="img">
-            <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
-          </div>
-          <div class="text" style="margin-left: -33rem;">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #095a55;
+        position: relative;
+    }
+
+    section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: #fff38e;
+    }
+
+    /* .nav_link {
+        list-style: none;
+    }
+
+    .nav_link li {
+        padding: 5px 20px;
+        display: inline-block;
+        color: white;
+    }
+
+    .nav_link li a {
+        transition: all 0.3s ease 0s;
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav_link li a:hover {
+        color: #55a5ea;
+        text-decoration: underline 2.5px rgb(3, 3, 94);
+    } */
+
+    .header_container {
+        background-color: #022a2d;
+        opacity: 0.9;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .container {
+        position: relative;
+        max-width: 1200px;
+        width: 100%;
+        margin: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        border-radius: 22px;
+    }
+
+    .container .contactInfo {
+        width: 100%;
+        background: #095a55;
+        padding: 40px;
+        box-shadow: none;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .contactInfo h2 {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .container .contactInfo ul.info {
+        margin: 20px 0; 
+    }
+
+    .container .contactInfo ul.info li {
+        list-style: none;
+        display: flex;
+        margin: 20px 0;
+        cursor: pointer;
+        align-items: flex-start;
+    }
+
+    .container .contactInfo ul.info li span:nth-child(1) {
+        width: 30px; 
+        min-width: 30px;
+    }
+
+    .container .contactInfo ul.info li span a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .container .contactInfo ul.info li span:nth-child(1) img {
+        max-width: 100%;
+        filter: invert(1);
+    }
+
+    .container .contactInfo ul.info li span:nth-child(2) {
+        color: #fff;
+        margin-left: 10px;
+        font-weight: 300;
+    }
+
+    .container .contactInfo ul.sci {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .contactInfo ul.sci li {
+        list-style: none;
+        margin-right: 15px;
+    }
+
+    .container .contactInfo ul.sci li a {
+        text-decoration: none;
+    }
+
+    .container .contactInfo ul.sci li a img {
+        filter: invert(1);
+        width: 25px;
+        height: 25px;
+    }
+
+    .container .contactForm {
+        width: 100%;
+        padding: 40px;
+        background: #fff; 
+        box-shadow: none;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .contactForm h2 {
+        color: #0f3959;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .container .contactForm .formBox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .container .contactForm .formBox .inputBox {
+        margin-bottom: 35px;
+        width: 48%;
+        position: relative;
+    }
+
+    .container .contactForm .formBox .inputBox.w100 {
+        width: 100%;
+    }
+
+    .container .contactForm .formBox .inputBox input,
+    .container .contactForm .formBox .inputBox textarea {
+        width: 100%;
+        resize: none;
+        padding: 5px 0;
+        font-size: 18px;
+        font-weight: 300;
+        color: #333;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #777;
+    }
+
+    .container .contactForm .formBox .inputBox textarea {
+        height: 120px;
+    }
+
+    .container .contactForm .formBox .inputBox span {
+        position: absolute;
+        left: 0;
+        padding: 5px 0;
+        pointer-events: none;
+        font-size: 18px;
+        font-weight: 300;
+        transition: 0.3s;
+    }
+
+    .container .contactForm .formBox .inputBox input:focus ~ span,
+    .container .contactForm .formBox .inputBox input:valid ~ span,
+    .container .contactForm .formBox .inputBox textarea:focus ~ span, 
+    .container .contactForm .formBox .inputBox textarea:valid ~ span {
+        transform: translateY(-20px);
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #095a55;
+        font-weight: 500;
+    } 
+
+    .container .contactForm .formBox .inputBox input[type="submit"] {
+        cursor: pointer;
+        background: #095a55;
+        border-radius: 20px;
+        color: #fff;
+        border: none;
+        max-width: 150px;
+        padding: 12px;
+    }
+
+    .container .contactForm .formBox .inputBox input[type="submit"]:hover {
+        background: #0d9480;
+    }
+
+    @media (min-width: 992px) {
+        .container {
+            flex-direction: row;
+        }
+
+        .container .contactInfo, 
+        .container .contactForm {
+            width: 50%;
+            height: 100%;
+        }
+
+        .container .contactInfo {
+            border-radius: 22px 0 0 22px;
+        }
+
+        .container .contactForm {
+            border-radius: 0 22px 22px 0;
+        }
+
+        .container .contactForm {
+            padding-left: 250px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .container {
+            flex-direction: column-reverse;
+        }
+
+        .container .contactForm {
+            padding-left: 0;
+        }
+
+        .container .contactForm .formBox .inputBox {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .container .contactForm {
+            padding: 25px;
+        }
+
+        .container .contactInfo {
+            padding: 25px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .container .contactInfo ul.sci {
+            margin-top: 40px;
+        }
+    }
+
+    .nav_menu {
+    background-color: #022a2d;
+}
+nav {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    color: #000000;
+    padding: 5px 2px 2px 2px;
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    user-select: none;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin-right: 20px; /* Adjust spacing between navbar items */
+    color: white;
+}
+
+
+
+
+
+nav ul li a {
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+  color: white;
+}
+
+nav ul li a:hover {
+    color: #55a5ea;
+  
+    /* text-decoration: underline 2.5px rgb(3, 3, 94); */
+  }
+button {
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #4bb6b7;
+    background-color: #4bb6b7;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 8px;
+    padding: 8px 50px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    transition: 0.3s ease-in-out;
+  }
+    
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000000;
+    padding: 5px 2px 2px 2px;
+    background-color: #ffffff;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px; /* Adjust spacing between navbar items */
+    color: white;
+}
+
+
+
+
+
+.navbar-contact {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-contact a {
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 20px;
+}
+
+.navbar-contact a:hover {
+    color: #222;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+nav ul li.contact {
+    margin-top: 2px; /* Adjust this value as needed */
+}
+nav ul li.contact a i {
+    vertical-align: middle;
+}
+.navbar-icons {
+    color: #000000; /* or #333333 */
+}
+
+nav img {
+    display: none;
+    cursor: pointer;
+}
+
+nav h1 {
+    font-size: 2rem;
+    padding-left: 5px;
+    margin: 0px;
+    color: white;
+    margin-bottom: 25px;
+}
+nav h1 :hover{
+    color: #55a5ea;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 5px 20px;
+    position: relative;
+    font-size: 16.5px;
+    letter-spacing: 0.3px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    background-color: #435365;
+    /* background-color: #007bff; */
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    transition: 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+    transition: all 0.5s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 885px) {
+    nav a {
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    
+}
+
+@media screen and (max-width: 1024px) {
+    nav img {
+        display: inline-block;
+        padding-right: 15px;
+    }
+
+    nav {
+        padding: 15px;
+        /* position: relative; */
+    }
+
+    nav ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: #022a2d;
+        flex-direction: column;
+        text-align: center;
+        transition: left 0.3s ease;
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 30px 0;
+    }
+
+    nav img {
+        display: block;
+    }
+
+    nav ul a {
+        color: #000000;
+        font-size: 20px;
+    }
+    nav ul li a:hover {
+        color: #55a5ea;
       
-            <h1 class="logo me-auto"><a style="text-decoration: none; color: #55a5ea;" href="index.html">RapiDoc</a></h1>
-          </div>
-          
-            <nav class="nav_menu">
-      
-              <ul class="nav_link">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html">About</a></li>
-                <li><a href="/Html-Files/news.html">News</a></li>
-                <li><a href="../index.html">Services</a></li>
-                <li><a href="../index.html">patient Portal</a></li>
-                <li><a href="../index.html">Doctor</a></li>
-                <li><a href="#">Contact us</a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+        /* text-decoration: underline 2.5px rgb(3, 3, 94); */
+      }
+
+}
 
 
-        <section>
-            <div class="container">
-                <div class="contactInfo"> 
-                    <div>
-                        <h2>Contact Info</h2>
-                        <ul class="info">
-                            
-                            <li>
-                                <span><img src="images/location.png"></span>
-                                <span>IGDTUW, Delhi</span>
-                                </span>
-                            </li>
-                            <li>
-                                <span><img src="images/mail.png"></span>
-                                <!-- <span>nassosanagn@gmail.com</span> -->
-                                <span><a href = "mailto: nassosanagn@gmail.com">rapidoc@mail.com</a></span>
-                            </li>
-                            <li>
-                                <span><img src="images/call.png"></span>
-                                <span>+91 1234567890</span>
-                            </li>
 
-                        </ul>
-                    </div>
-                    <ul class="sci">
-                        <li><a href="https://www.facebook.com"><img src="images/1.png"></a></li>
-                        <li><a href="https://www.instagram.com"><img src="images/3.png"></a></li>
-                        <li class="social-icon"><a href="https://www.twitter.com"><img src="images/x-twitter.svg"></a></li>
-                        <li><a href="https://www.linkedin.com"><img src="images/5.png"></a></li>
-                        
-                    </ul>
+
+/* added */
+@media screen and (max-width: 860px) {
+    nav img {
+        display: inline-block;
+        padding-right: 15px;
+    }
+}
+@media screen and (max-width: 860px) {
+    nav ul {
+        position: fixed;
+        top: 70px; /* Adjust top positioning based on your header height */
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: #022a2d;
+        flex-direction: column;
+        text-align: center;
+        transition: left 0.3s ease;
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 30px 0;
+    }
+
+    nav ul a {
+        color: #000000;
+        font-size: 20px;
+    }
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    position: relative;
+    font-size: 13.5px; /* Adjust font size as needed */
+    letter-spacing: 0.3px;
+}
+
+
+
+
+
+/* Example CSS for larger screens (greater than 1024px) */
+@media screen and (min-width: 1025px) {
+    #rd-logo {
+        display: inline-block; /* Ensure the logo is displayed */
+    }
+}
+
+</style>
+<link rel="stylesheet" href="Css-Files/styles.css">
+</head>
+<body>
+
+<!-- <header class="header_container">
+    <div class="img">
+        <img id="rd-logo" style="width: 90px; height: auto;" src="/images/rd.png"> 
+    </div>
+    <div class="text" style="margin-left: -33rem;">
+        <h1 class="logo me-auto"><a style="text-decoration: none; color: #55a5ea;" href="index.html">RapiDoc</a></h1>
+    </div>
+    <nav class="nav_menu">
+        <ul class="nav_link">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">About</a></li>
+            <li><a href="/Html-Files/news.html">News</a></li>
+            <li><a href="../index.html">Services</a></li>
+            <li><a href="../index.html">Patient Portal</a></li>
+            <li><a href="../index.html">Doctor</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+</header> -->
+
+
+
+<nav class="nav_menu">
+    <div class="img">
+        <img id="rd-logo" style="width: 90px; height: auto;" src="/images/rd.png">
+      </div>
+    <h1 id="home">RapiDoc</h1>
+    <img    id="menu-icon" style="outline: none;" src="/images/Menu.svg" alt="Menu">
+    
+    <ul class="nav-item navbar">
+        <li class="navitem"><a href="index.html">Home</a></li>
+        <li class="navitem"><a href="#about">About</a></li>
+        <li class="navitem"><a href="Html-Files/news.html">News</a></li>
+        <li class="navitem"><a href="dex.html">Service</a></li>
+        <li class="navitem"><a href="#patient-portal">Patient Portal</a></li>
+        <li class="navitem"><a href="#doctors">Doctor</a></li>
+        <li class="navitem"><a href="Html-Files/contact.html">Contact us</a></li>
+        <li class="navitem"><a href="login.html">Sign in/Sign up</a></li>
+        <li class="navitem"><a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a></li>
+
+    </ul>
+</nav>
+
+<section>
+    <div class="container">
+        <div class="contactInfo"> 
+            <div>
+                <h2>Contact Info</h2>
+                <ul class="info">
+                    <li>
+                        <span><img src="images/location.png"></span>
+                        <span>IGDTUW, Delhi</span>
+                    </li>
+                    <li>
+                        <span><img src="images/mail.png"></span>
+                        <span><a href="mailto: nassosanagn@gmail.com">rapidoc@mail.com</a></span>
+                    </li>
+                    <li>
+                        <span><img src="images/call.png"></span>
+                        <span>+91 1234567890</span>
+                    </li>
+                </ul>
+            </div>
+            <ul class="sci">
+                <li><a href="https://www.facebook.com"><img src="images/1.png"></a></li>
+                <li><a href="https://www.instagram.com"><img src="images/3.png"></a></li>
+                <li class="social-icon"><a href="https://www.twitter.com"><img src="images/x-twitter.svg"></a></li>
+                <li><a href="https://www.linkedin.com"><img src="images/5.png"></a></li>
+            </ul>
+        </div>
+        <div class="contactForm">
+            <h2>RapiDoc Query</h2>
+            <div class="formBox">
+                <div class="inputBox w50">
+                    <input type="text" name="" required>
+                    <span>First Name</span>
                 </div>
-                
-                    <div class="contactForm">
-                        <h2>RapiDoc Query</h2>
-                        <div class="formBox">
-                        <div class="inputBox w50">
-                            <input type="text" name="" required>
-                            <span>First Name</span>
-                        </div>
-                        <div class="inputBox w50">
-                            <input type="text" required>
-                            <span>Last Name</span>
-                        </div>
-                        <div class="inputBox w50">
-                            <input type="email" required>
-                            <span>Email Address</span>
-                        </div>
-                        <div class="inputBox w50">
-                            <input type="text" required>
-                            <span>Mobile Number</span>
-                        </div>
-                        <div class="inputBox w100">
-                            <textarea required></textarea>
-                            <span>Write your message here...</span>
-                        </div>
-                        <div class="inputBox w100">
-                            <input type="submit" value="Send">
-                        </div>
-                        
-                    </div>
+                <div class="inputBox w50">
+                    <input type="text" required>
+                    <span>Last Name</span>
                 </div>
-                    
-                    
-             
-        </section>
-    </body>
+                <div class="inputBox w50">
+                    <input type="email" required>
+                    <span>Email Address</span>
+                </div>
+                <div class="inputBox w50">
+                    <input type="text" required>
+                    <span>Mobile Number</span>
+                </div>
+                <div class="inputBox w100">
+                    <textarea required></textarea>
+                    <span>Write your message here...</span>
+                </div>
+                <div class="inputBox w100">
+                    <input type="submit" value="Send">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>   
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.querySelector('.nav-item.navbar');
+    
+        if (menuIcon && navLinks) {
+            menuIcon.addEventListener('click', toggleMenu);
+           
+        } else {
+            console.error('Menu icon or nav links not found');
+        }
+    
+        function toggleMenu() {
+            navLinks.classList.toggle('show');
+            if (navLinks.classList.contains('show')) {
+                menuIcon.src = './Images/Close.svg';
+                disableScroll();
+            } else {
+                menuIcon.src = './Images/Menu.svg';
+                enableScroll();
+            }
+        }
+    
+        function disableScroll() {
+            document.body.style.overflow = "hidden";
+        }
+    
+        function enableScroll() {
+            document.body.style.overflow = "visible";
+        }
+    });
+</script>  
+</body>
 </html>

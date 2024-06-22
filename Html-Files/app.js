@@ -11,7 +11,7 @@ function toggleDarkMode() {
 }
 
 // Event listener for dark mode toggle button
-darkModeToggle.addEventListener("change", toggleDarkMode);
+// darkModeToggle.addEventListener("change", toggleDarkMode);
 
 // Function to check and set initial dark mode state based on user preferences
 function setInitialDarkMode() {
@@ -81,5 +81,5 @@ function getNews(newsCategoryName) {
     }
   };
 
-  xhr.send();
+  // xhr.send();
 }
