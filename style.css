@@ -153,6 +153,11 @@ h6 {
 /*################----Navigation----################*/
 
 
+/* Added the cursor as a pointer  */
+.icon-box{
+cursor:pointer
+}
+
 /*################----Mobile Navigation----################*/
 
 .mobile-nav-toggle {
