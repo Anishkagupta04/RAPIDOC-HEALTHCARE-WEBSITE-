@@ -11,6 +11,15 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "o6kveYmOSDrs0l1Mg",
+        });
+    })();
+  </script>
+
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <title>RapiDoc</title>
@@ -39,6 +48,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
+      .nav_menu{
+        display: flex;
+      }
+      .nav_link{
+        display: flex;
+      }
 .iti--allow-dropdown input {
     padding-left: 50px;
     background-color: black; /* Adjust padding to prevent overlap */
@@ -91,7 +106,51 @@ option{
   background-color: #55a5ea;
   color: white;
 }
-
+.hamburger{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 29px;
+    left: 1.5%;
+}
+.line{
+    width: 30px;
+    height: 5px;
+    margin: 4px 4px;
+    background-color: white;
+}
+@media only screen and (max-width: 820px){
+  .hamburger{
+    display: block;
+  }
+  .header_container{
+    flex-direction: column;
+    align-items:start;
+    height: 24.8rem;
+    transition: 0.55s all ease-out;
+    /* padding-top: 5px; */
+  }
+  .nav_link{
+    flex-direction: column;
+    position: relative;
+    bottom: 40px;
+  }
+  /* .nav-link li{
+    margin-bottom: 5px;
+  } */
+  .nav-h{
+    height: 5.5rem;
+    width: 100vw;
+  }
+  .vis-h{
+    opacity: 0;
+  }
+  .img{
+    position: relative;
+    left: 300px;
+    bottom: 12px;
+  }
+}
 @media screen and (max-width: 992px) {
     .container {
         flex-wrap: wrap;
@@ -331,15 +390,12 @@ form.php-email-form{
     <div class="loader"></div>
   </div>
       <!-- ############# Header ############# -->
-  
-      <header class="header_container">
+      <header class="header_container nav-h">
         <div class="img">
-        <img id="rd-logo"  style="width: 90px; height: auto;" src="images/rd.png"> 
-      </div>
-      
-      </div>
+          <img id="rd-logo"  style="width: 90px; height: auto;" src="images/rd.png"> 
+        </div>
       <nav class="nav_menu">
-        <ul class="nav_link">
+        <ul class="nav_link vis-h">
           <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
           <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
           <li><a href="Html-Files/news.html"><i class="bi bi-newspaper"></i> News</a></li>
@@ -348,11 +404,17 @@ form.php-email-form{
           <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
           <li><a href="Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a></li>
           <li><a href="rateus.html"><i class="bi bi-star"></i>Rate Us</a></li>
+
           <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
            <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
          </ul>
+         <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </nav>
-    </header>
+     </header>
 
   <!-- ############# Header ############# -->
 
@@ -1159,21 +1221,6 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
           </section>
 
           <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.js-testimonals-slider', {
-    grabCursor: true,
-    spaceBetween: 30,
-    pagination: {
-      el: '.js-testimonals-pagination',
-      clickable: true
-    },
-    breakpoints: {
-      767: {
-        slidesPerView: 2,
-      }
-    }
-  })
-</script>
 
 
      <!-- testimonial section -->
@@ -1292,7 +1339,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
                     exclusive offers.
                   </p>
                   <form action="#" class="subscribe-form">
-                    <input type="text" placeholder="Your email" required>
+                    <input type="email" placeholder="Your email" required>
                     <button type="submit">SUBSCRIBE</button>
                   </form>
                 </section>
@@ -1340,9 +1387,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 
 
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+ 
 
 
   <!-- JS Files -->
@@ -1384,6 +1429,23 @@ function loadGoogleTranslate(){
   </script>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+   <script>
+    const swiper = new Swiper('.js-testimonals-slider', {
+      grabCursor: true,
+      spaceBetween: 30,
+      pagination: {
+        el: '.js-testimonals-pagination',
+        clickable: true
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+        }
+      }
+    })
+  </script>
+
    <script>
        document.addEventListener("DOMContentLoaded", function() {
            const phoneInputField = document.getElementById('phone');
@@ -1448,7 +1510,16 @@ function loadGoogleTranslate(){
     ScrollReveal().reveal('.feedback', { delay: 400 , origin:'left' });
     ScrollReveal().reveal('.footer', { delay: 400 , origin:'bottom' });
   </script>
-          <script>
+<script>
+    function sendMail(){
+    let params={
+      to_email: document.getElementById("subscribe-email").value,
+      message: `<h1>Thank you for subscribing to RapiDoc Newsletter</h1>
+      <p>Stay tuned for the latest news, updates, helpful tips, and exclusive offers.</p>`,
+    }
+    emailjs.send("service_lktb68z","template_w79vd94",params).then(alert("Subscribed Successfully!"));
+  }
+
 
 window.addEventListener("load", () => {
   const loader = document.querySelector(".pre");
@@ -1469,6 +1540,13 @@ window.addEventListener("load", () => {
   document.body.removeChild(loader);
   });
   });
+  const hamburger=document.querySelector('.hamburger');
+  const navbar=document.querySelector('.header_container');
+  const nav=document.querySelector('.nav_link');
+  hamburger.addEventListener('click',()=>{
+    navbar.classList.toggle('nav-h');
+    nav.classList.toggle('vis-h');
+  })
   </script>
 </body>
 
