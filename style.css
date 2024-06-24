@@ -25,7 +25,7 @@ h6 {
 
 .nav_link li {
   margin-right: 1px; /* Add space between items */
-  padding: 2px 10px;
+  padding: 5px 10px;  
   display: inline-block;
   color: white;
 }
@@ -38,7 +38,10 @@ h6 {
 .nav_link li a:hover {
   color: #55a5ea;
 }
-
+#header{
+  position: relative;
+  top: 12px;
+}
 .header_container {
   background-color: #022a2d;
   opacity: 0.9;
@@ -48,10 +51,9 @@ h6 {
   align-items: center;
   height: 85px;
   margin: auto;
-  margin-top: 15px; /* Adjust this value to move the header down */
+  margin-top: 0px; /* Adjust this value to move the header down */
+  padding-top: 15px;
 }
-
-
 .container {
   /* display: ; */
   font-family: sans-serif;
@@ -139,7 +141,6 @@ h6 {
   z-index: -1;
   color: #fff;
 }
-
 @media (max-width: 768px) {
   .appointment-btn {
     margin: 0 15px 0 0;
@@ -149,6 +150,11 @@ h6 {
 
 /*################----Navigation----################*/
 
+
+/* Added the cursor as a pointer  */
+.icon-box{
+cursor:pointer
+}
 
 /*################----Mobile Navigation----################*/
 
