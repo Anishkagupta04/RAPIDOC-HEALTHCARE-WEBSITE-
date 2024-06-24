@@ -1361,7 +1361,7 @@ section {
     background-color: white;
     border-radius: 0.5rem;
     border: none;
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
     font-family: "Poppins", sans-serif;
     padding: 1rem 4rem;
     cursor: pointer;
