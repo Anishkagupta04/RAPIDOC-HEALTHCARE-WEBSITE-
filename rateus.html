@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="rateus.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="cursorAnimation.css">
 </head>
 <body>
   <header class="header_container">
@@ -43,6 +44,7 @@
     <textarea id="comment" placeholder="Give Us Your Feedback :)"></textarea>
     <button onclick="submitRating()">Submit</button>
   </div>
+  <div class="cursor"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script>
@@ -95,5 +97,6 @@
       };
     });
   </script>
+  <script src="cursorAnimation.js"></script>
 </body>
 </html>
