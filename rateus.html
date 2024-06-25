@@ -11,7 +11,7 @@
 <body>
   <header class="header_container">
     <div class="img">
-        <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png"> 
+      <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png"> 
     </div>
     <nav class="nav_menu">
       <ul class="nav_link">
@@ -22,73 +22,78 @@
         <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
         <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
         <li><a href="Html-Files/contact.html"><i class="bi bi-telephone"></i> Contact us</a></li>
-        <li><a href="Html-Files/rateus.html"><i class="bi bi-star"></i> Rate Us</a></li>
+        <li><a href="rateus.html"><i class="bi bi-star"></i> Rate Us</a></li>
         <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
-        <li><a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a></li>
       </ul>
+      <div class="find-doctor">
+        <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+      </div>
     </nav>
   </header>
-
+  
   <div class="container">
     <h2>Rate Us</h2>
     <div class="rating">
-      <span class="star" data-value="1">&#9733;</span>
-      <span class="star" data-value="2">&#9733;</span>
-      <span class="star" data-value="3">&#9733;</span>
-      <span class="star" data-value="4">&#9733;</span>
-      <span class="star" data-value="5">&#9733;</span>
+      <span class="emoji" data-value="😢">😢</span>
+      <span class="emoji" data-value="😡">😡</span>
+      <span class="emoji" data-value="😐">😐</span>
+      <span class="emoji" data-value="😊">😊</span>
+      <span class="emoji" data-value="🤩">🤩</span>
     </div>
-    <textarea id="comment" placeholder="Give Us Your Feedback :) "></textarea>
+    <textarea id="comment" placeholder="Give Us Your Feedback :)"></textarea>
     <button onclick="submitRating()">Submit</button>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const stars = document.querySelectorAll('.star');
+      const emojis = document.querySelectorAll('.emoji');
+      let selectedEmoji = '';
 
-      stars.forEach(star => {
-        star.addEventListener('click', () => {
-          const value = star.getAttribute('data-value');
-          highlightStars(value);
+      emojis.forEach(emoji => {
+        emoji.addEventListener('click', () => {
+          const value = emoji.getAttribute('data-value');
+          highlightEmojis(value);
+          selectedEmoji = value;
         });
       });
 
-      function highlightStars(value) {
-        stars.forEach((star, index) => {
-          if (index < value) {
-            star.classList.add('selected');
+      function highlightEmojis(value) {
+        emojis.forEach((emoji) => {
+          if (emoji.getAttribute('data-value') === value) {
+            emoji.classList.add('selected');
           } else {
-            star.classList.remove('selected');
+            emoji.classList.remove('selected');
           }
         });
       }
-    });
 
-    function submitRating() {
-      const selectedStars = document.querySelectorAll('.star.selected');
-      const comment = document.getElementById('comment').value;
-      
-      if (selectedStars.length > 0 && comment.trim() !== '') {
-        Toastify({
-          text: "Thanks For Your Feedback :)",
-          duration: 3000,
-          close: true,
-          gravity: "top",
-          position: "center",
-          backgroundColor: "#4CAF50",
-        }).showToast();
-      } else {
-        Toastify({
-          text: "Please Fill All The Details :(",
-          duration: 3000,
-          close: true,
-          gravity: "top",
-          position: "center",
-          backgroundColor: "#FF0000",
-        }).showToast();
-      }
-    }
+      window.submitRating = function() {
+        const comment = document.getElementById('comment').value;
+
+        if (selectedEmoji && comment.trim() !== '') {
+          Toastify({
+            text: `Thanks For Your Feedback ${selectedEmoji} `,
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "#4CAF50",
+          }).showToast();
+          console.log('Rating:', selectedEmoji);
+          console.log('Comments:', comment);
+        } else {
+          Toastify({
+            text: "Please Fill All The Details 😔",
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "#FF0000",
+          }).showToast();
+        }
+      };
+    });
   </script>
 </body>
 </html>
