@@ -140,15 +140,104 @@
         /* padding-top: 5px; */
       }
 
-      .nav_link {
+.nav_link {
+    flex-direction: column;
+    position: relative;
+    bottom: 40px;
+}
+
+.iti--allow-dropdown input {
+    padding-left: 50px;
+    background-color: black; /* Adjust padding to prevent overlap */
+}
+
+.iti.iti--allow-dropdown {
+    margin-left: 250px;
+}
+
+.container {
+    display: unset;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    text-align: left;
+    flex: 1;
+    padding: 20px;
+}
+
+.sec-img {
+    max-width: 50%;
+    width: 600px;
+    height: 600px;
+    margin-left: auto;
+}
+
+.btn-get-started {
+    display: inline-block;
+    background-color: #55a5ea;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-get-started:hover {
+    background-color: green;
+    color: white;
+}
+
+select {
+    padding: 1px;
+    background-color: #55a5ea;
+    color: white;
+    height: 5vh;
+    width: 17vh;
+}
+
+option {
+    background-color: #55a5ea;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 29px;
+    left: 1.5%;
+}
+
+.line {
+    width: 30px;
+    height: 5px;
+    margin: 4px 4px;
+    background-color: white;
+}
+
+@media only screen and (max-width: 820px) {
+    .hamburger {
+        display: block;
+    }
+    .header_container {
+        flex-direction: column;
+        align-items: start;
+        height: 24.8rem;
+        transition: 0.55s all ease-out;
+    }
+    .nav_link {
         flex-direction: column;
         position: relative;
         bottom: 40px;
-      }
+    }
+}
 
-      /* .nav-link li{
-    margin-bottom: 5px;
-  } */
       .nav-h {
         height: 5.5rem;
         width: 100vw;
@@ -1367,7 +1456,7 @@
       </div>
       <div class="info">
         <div class="center">
-          <button class="btn button" style="text-align: center; font-weight: 700;">Submit</button>
+          <button class="btn button" style="text-align: center; font-weight: 700; padding-bottom:40px ;">Submit</button>
         </div>
 
       </div>
@@ -1410,51 +1499,54 @@
   <br><br><br><br><br><br>
   <footer>
     <div class="footer-wrapper">
-      <div class="footer-columns">
-        <div class="other-columns">
-          <section>
+<div class="footer-columns">
+    <div class="other-columns">
+        <section>
             <h4>Quick Links</h4><br>
             <ul class="links">
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="./Html-Files/contact.html">Contact Us</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#doctors">Doctors</a></li>
-              <li><a href="./faq.html">FAQ</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="./Html-Files/contact.html">Contact Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
             </ul>
-          </section>
-          <section>
+        </section>
+        <section>
             <h4>Explore</h4><br>
             <ul class="links">
-              <li><a href="#">Appointment</a></li>
-              <li><a href="#">Patient Portal</a></li>
-              <li><a href="#">Login account</a></li>
-              <li><a href="#">Helplines</a></li>
-              <li><a href="#">Location</a></li>
+                <li><a href="#">Appointment</a></li>
+                <li><a href="#">Patient Portal</a></li>
+                <li><a href="#">Login account</a></li>
+                <li><a href="#">Helplines</a></li>
+                <li><a href="#">Location</a></li>
             </ul>
-          </section>
-          <section>
+        </section>
+        <section>
             <h4>Legal</h4><br>
             <ul class="links">
-              <li><a href="#">Customer Agreement</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">GDPR</a></li>
-              <li><a href="#">Security</a></li>
-              <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Customer Agreement</a></li>
+                <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+                <li><a href="#">GDPR</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#test">Testimonials</a></li>
             </ul>
-          </section>
-          <section class="footer-col">
+        </section>
+        <section class="footer-col">
             <h4>RAPIDOC Newsletter</h4><br>
             <p>
-              Subscribe to our newsletter for a weekly dose
-              of news, updates, helpful tips, and
-              exclusive offers.
+                Subscribe to our newsletter for a weekly dose
+                of news, updates, helpful tips, and
+                exclusive offers.
             </p>
             <form action="#" class="subscribe-form">
-              <input type="email" placeholder="Your email" required>
-              <button type="submit">SUBSCRIBE</button>
+                <input type="email" placeholder="Your email" required>
+                <button type="submit">SUBSCRIBE</button>
             </form>
-          </section>
+        </section>
+    </div>
+</div>
+
         </div>
       </div>
     </div>
