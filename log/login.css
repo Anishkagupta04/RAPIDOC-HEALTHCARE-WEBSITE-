@@ -338,6 +338,7 @@ input {
   list-style: none;
   display: flex;
   gap: 20px;
+  margin-left: 102px;
 }
 
 .nav-links li {
