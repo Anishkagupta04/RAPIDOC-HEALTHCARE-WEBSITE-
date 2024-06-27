@@ -44,93 +44,108 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <style>
-    .nav_menu {
-      display: flex;
-    }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<style>
+  .nav_menu {
+    display: flex;
+  }
 
-    .nav_link {
-      display: flex;
-    }
+  .nav_link {
+    display: flex;
+  }
 
-    .iti--allow-dropdown input {
-      padding-left: 50px;
-      background-color: black;
-      /* Adjust padding to prevent overlap */
-    }
+  .iti--allow-dropdown input {
+    padding-left: 50px;
+    background-color: black;
+    /* Adjust padding to prevent overlap */
+  }
 
-    .iti.iti--allow-dropdown {
-      margin-left: 250px;
-    }
+  .iti.iti--allow-dropdown {
+    margin-left: 250px;
+  }
 
-    .container {
-      display: unset;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: nowrap;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
+  .container {
+    display: unset;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-    .content {
-      text-align: left;
-      flex: 1;
-      padding: 20px;
-    }
+  .content {
+    text-align: left;
+    flex: 1;
+    padding: 20px;
+  }
 
-    .sec-img {
-      max-width: 50%;
-      width: 600px;
-      height: 600px;
-      margin-left: auto;
-    }
+  .sec-img {
+    max-width: 50%;
+    width: 600px;
+    height: 600px;
+    margin-left: auto;
+  }
 
-    .btn-get-started {
-      display: inline-block;
-      background-color: #55a5ea;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
+  .btn-get-started {
+    display: inline-block;
+    background-color: #55a5ea;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
 
-    select {
-      padding: 1px;
-      background-color: #55a5ea;
-      color: white;
-      height: 5vh;
-      width: 17vh;
-    }
+  select {
+    padding: 1px;
+    background-color: #55a5ea;
+    color: white;
+    height: 5vh;
+    width: 17vh;
+  }
 
-    option {
-      background-color: #55a5ea;
-      color: white;
-    }
+  option {
+    background-color: #55a5ea;
+    color: white;
+  }
 
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 29px;
+    left: 1.5%;
+  }
+
+  .line {
+    width: 30px;
+    height: 5px;
+    margin: 4px 4px;
+    background-color: white;
+  }
+
+  @media only screen and (max-width: 820px) {
     .hamburger {
-      display: none;
-      cursor: pointer;
-      position: absolute;
-      top: 29px;
-      left: 1.5%;
+      display: block;
     }
+  }
 
-    .line {
-      width: 30px;
-      height: 5px;
-      margin: 4px 4px;
-      background-color: white;
-    }
+  .emoji input {
+    display: none;
+  }
 
-    @media only screen and (max-width: 820px) {
-      .hamburger {
-        display: block;
-      }
+  .emoji label {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .emoji input:checked + label {
+    background-color: rgb(41, 136, 138);
+  }
 
       .header_container {
         flex-direction: column;
@@ -335,18 +350,82 @@ option {
       animation: spin 3s linear infinite;
     }
 
-    .loader:after {
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      right: 15px;
-      bottom: 15px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #fff;
-      animation: spin 1.5s linear infinite;
-    }
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.avatar {
+  margin: 20px 100px;
+  padding-left: 50px;
+  padding-right: 60px;
+}
+
+.textbox input {
+  width: 240px;
+  height: 40px;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.btn {
+  margin-left: 2px;
+  width: 230px;
+  height: 40px;
+  background-color: #00C896;
+  border: none;
+  font-size: 1rem;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+#appointment.appointment.section-bg {
+  margin: 0px 280px 100px;
+}
+
+#appointment.appointment.section-bg h2 {
+  margin: 0px 115px;
+}
+
+form.php-email-form {
+  width: 300px;
+  margin-right: 250px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Appointment section styling to align it to center */
+.appointment .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
     @keyframes spin {
       0% {
@@ -399,7 +478,7 @@ option {
       opacity: 0;
       visibility: hidden;
     }
-  </style>
+
   <style>
     /*Appointment section Styling's to align it to center*/
     .appointment .container {
@@ -871,13 +950,13 @@ option {
         <p>Our services are for your good health. We are with you at every digital step.</p>
       </div>
       <div class="container">
-        <div class="align-items-stretch ">
-          <div class="icon-box">
-            <div class="icon"><i class="fas fa-heartbeat"></i></div>
-            <h4><a href="">Clinics/Labs</a></h4>
-            <p>Locate the best healthcare facilities around you hassle-free.From routine check-ups to specialized
-              treatments, find the right clinic or lab that meets your needs. Our database is updated regularly to
-              ensure you have the most accurate information.</p>
+          <div class="align-items-stretch ">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="/Html-Files/input.html">Clinics/Labs</a></h4>
+              <p>Locate the best healthcare facilities around you hassle-free.From routine check-ups to specialized treatments, find the right clinic or lab that meets your needs. Our database is updated regularly to ensure you have the most accurate information.</p>
+            </div>
+
           </div>
         </div>
 
@@ -933,11 +1012,134 @@ option {
       </div>
     </section><!-- End Services Section -->
     <!-- Patient Portal Section -->
-    <section id="patient-portal" class="patient-portal">
-      <div class="container-patientportal">
-        <div class="section-title" id="section-patientportal">
-          <h2>Patient Portal</h2>
-          <p>Access your medical records, lab results, and prescription history securely.</p>
+<section id="patient-portal" class="patient-portal">
+  <div class="container-patientportal">
+    <div class="section-title" id="section-patientportal">
+      <h2>Patient Portal</h2>
+      <p>Access your medical records, lab results, and prescription history securely.</p>
+    </div>
+    <div class="container">
+      <!-- Add Login Form for Patient Portal -->
+      <div class="login-box">
+        <div class="avatar">
+          <img src="img/avatar.png" height="220px" width="263px" alt="Avatar">
+        </div>
+        <form>
+          <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" name="username" required>
+          </div>
+          <br>
+          <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" name="password" required>
+          </div>
+          <br>
+          <input type="submit" class="btn" value="SUBMIT">
+          <div class="register-link">
+            <a href="#">Not registered yet? Register Here</a>
+          </div>
+          <div class="forgot-password" id="forgot-password-patient-portal">
+            <a href="forgot-password.php">Forgot Your Password?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Appointment Section -->
+<section id="appointment" class="appointment section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>Make an Appointment</h2>
+      <p>We listed the docs, we made you a form. You make us an appointment.</p>
+    </div>
+    <div class="layout">
+      <form action="successful_appointment.html" method="post" class="php-email-form">
+        <div class="row">
+          <div class="col-md-4 form-group mt-3">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <br>
+          <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div>
+          <br>
+          <div class="col-md-4 form-group mt-3">
+            <select name="location" id="location" class="form-select" required>
+              <option value="">Your Location</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Chennai">Chennai</option>
+              <!-- Add more locations as needed -->
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 form-group mt-3">
+            <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" required>
+            <script>
+              //To set value of minimum date in calendar
+              var currentDate = new Date();
+              var year = currentDate.getFullYear();
+              var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+              var day = currentDate.getDate().toString().padStart(2, '0');
+              var formattedDate = `${year}-${month}-${day}`;
+              document.getElementById('date').setAttribute('min', formattedDate);
+            </script>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="age" id="age" class="form-select" required>
+              <option value="">Select Age</option>
+              <option value="18 or below">18 or below</option>
+              <option value="18 to 55">18 to 55</option>
+              <option value="55 above">55 above</option>
+            </select>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="doctor" id="doctor" class="form-select" required>
+              <option value="">Select Doctor</option>
+              <option value="Doctor 1">Doctor 1</option>
+              <option value="Doctor 2">Doctor 2</option>
+              <option value="Doctor 3">Doctor 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 form-group mt-3">
+            <select name="time-slot" id="time-slot" class="form-select" required>
+              <option value="">Select Time Slot</option>
+              <option value="9:00 AM">9:00 AM</option>
+              <option value="11:00 AM">11:00 AM</option>
+              <option value="2:00 PM">2:00 PM</option>
+            </select>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="hospital" id="hospital" class="form-select" required>
+              <option value="">Select Hospital</option>
+              <option value="Hospital 1">Hospital 1</option>
+              <option value="Hospital 2">Hospital 2</option>
+              <option value="Hospital 3">Hospital 3</option>
+            </select>
+          </div>
+          <div class="col-md-4 form-group mt-3">
+            <select name="opd-section" id="opd-section" class="form-select" required>
+              <option value="">Select OPD Section</option>
+              <option value="ENT">ENT</option>
+              <option value="Gynecologist">Gynecologist</option>
+              <!-- Add more OPD sections as needed -->
+            </select>
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit">Make an Appointment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
         </div>
         <div class="container">
 
@@ -1432,13 +1634,19 @@ option {
       <div class="feedback">
         <h1>Give Us Your Valuable Feedback.</h1>
         <p>Your feedback is very important for Rapidoc.</p>
-        <div class="emoji">
-          <button class="btn normal">&#128578;</button>
-          <button class="btn normal">&#128515;</button>
-          <button class="btn normal">&#128519;</button>
-          <button class="btn normal">&#128531;</button>
-          <button class="btn normal">&#128532;</button>
-          <button class="btn normal">&#128545;</button>
+        <div class="emoji" >
+          <input type="radio" id="emoji1" name="emoji" value="&#128578;" style="display: none;">
+          <label for="emoji1" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128578;</label>
+          <input type="radio" id="emoji2" name="emoji" value="&#128515;" style="display: none;">
+          <label for="emoji2" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128515;</label>
+          <input type="radio" id="emoji3" name="emoji" value="&#128519;" style="display: none;">
+          <label for="emoji3" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128519;</label>
+          <input type="radio" id="emoji4" name="emoji" value="&#128531;" style="display: none;">
+          <label for="emoji4" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128531;</label>
+          <input type="radio" id="emoji5" name="emoji" value="&#128532;" style="display: none;">
+          <label for="emoji5" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128532;</label>
+          <input type="radio" id="emoji6" name="emoji" value="&#128545;" style="display: none;">
+          <label for="emoji6" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128545;</label>
         </div>
         <p class="ques">What you want to say?</p>
         <textarea id="textarea" cols="20" rows="5"></textarea>
@@ -1456,41 +1664,47 @@ option {
       </div>
       <div class="info">
         <div class="center">
-          <button class="btn button" style="text-align: center; font-weight: 700; padding-bottom:40px ;">Submit</button>
+          <button class="btn button" style="text-align: center; font-weight: 700; padding-bottom:40px ;"onclick="submitFeedback(event)">Submit</button>
         </div>
 
       </div>
     </section>
-    <script>
-      function submitFeedback(event) {
-        event.preventDefault();
+<div id="overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); display: none; justify-content: center; align-items: center; z-index: 1000;">
+  <div id="confirmation-message" style="width: 80%; height: 80%; color: #1c413b; font-size: 50px; font-weight: bold; text-align: center; background-color: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 10px; display: flex; justify-content: center; align-items: center;">
+    Thank you for your feedback!
+  </div>
+</div>
 
-        // Get the feedback data
-        const feedbackText = document.getElementById('textarea').value;
-        const satisfaction = document.querySelector('input[name="satisfaction"]:checked');
+<script>
+  function submitFeedback(event) {
+    event.preventDefault();
 
-        if (!satisfaction) {
-          alert('Please select your satisfaction level.');
-          return;
-        }
+    // Get the feedback data
+    const feedbackText = document.getElementById('textarea').value;
+    const satisfaction = document.querySelector('input[name="satisfaction"]:checked');
 
-        // Here you would normally send the feedback to the server
-        // For this example, we'll just display a confirmation message
+    if (!feedbackText.trim() || !satisfaction) {
+      alert('Please fill the feedback form completely.');
+      return;
+    }
 
-        // Display the confirmation message
-        const confirmationMessage = document.getElementById('confirmation-message');
-        confirmationMessage.style.display = 'block';
+    // Display the confirmation message
+    const overlay = document.getElementById('overlay');
+    overlay.style.display = 'flex';
+    document.body.classList.add('blur');
 
-        // Reset the form
-        document.getElementById('textarea').value = '';
-        document.querySelector('input[name="satisfaction"]:checked').checked = false;
+    // Reset the form
+    document.getElementById('textarea').value = '';
+    satisfaction.checked = false;
 
-        // Hide the confirmation message after a few seconds
-        setTimeout(() => {
-          confirmationMessage.style.display = 'none';
-        }, 6000);
-      }
-    </script>
+    // Hide the confirmation message after a few seconds
+    setTimeout(() => {
+      overlay.style.display = 'none';
+      document.body.classList.remove('blur');
+    }, 6000);
+  }
+</script>
+
 
 
 
@@ -1498,58 +1712,57 @@ option {
   <!-- ############### Footer ############### -->
   <br><br><br><br><br><br>
   <footer>
-    <div class="footer-wrapper">
-<div class="footer-columns">
-    <div class="other-columns">
-        <section>
-            <h4>Quick Links</h4><br>
-            <ul class="links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="./Html-Files/contact.html">Contact Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#doctors">Doctors</a></li>
-                <li><a href="./faq.html">FAQ</a></li>
-            </ul>
-        </section>
-        <section>
-            <h4>Explore</h4><br>
-            <ul class="links">
-                <li><a href="#">Appointment</a></li>
-                <li><a href="#">Patient Portal</a></li>
-                <li><a href="#">Login account</a></li>
-                <li><a href="#">Helplines</a></li>
-                <li><a href="#">Location</a></li>
-            </ul>
-        </section>
-        <section>
-            <h4>Legal</h4><br>
-            <ul class="links">
-                <li><a href="#">Customer Agreement</a></li>
-                <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
-                <li><a href="#">GDPR</a></li>
-                <li><a href="#">Security</a></li>
-                <li><a href="#test">Testimonials</a></li>
-            </ul>
-        </section>
-        <section class="footer-col">
-            <h4>RAPIDOC Newsletter</h4><br>
-            <p>
-                Subscribe to our newsletter for a weekly dose
-                of news, updates, helpful tips, and
-                exclusive offers.
-            </p>
-            <form action="#" class="subscribe-form">
-                <input type="email" placeholder="Your email" required>
-                <button type="submit">SUBSCRIBE</button>
-            </form>
-        </section>
+   <div class="footer-wrapper">
+    <div class="footer-columns">
+        <div class="other-columns">
+            <section>
+                <h4>Quick Links</h4><br>
+                <ul class="links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="./Html-Files/contact.html">Contact Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#doctors">Doctors</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                </ul>
+            </section>
+            <section>
+                <h4>Explore</h4><br>
+                <ul class="links">
+                    <li><a href="Html-Files/appointment.html">Appointment</a></li>
+                    <li><a href="#">Patient Portal</a></li>
+                    <li><a href="login.html">Login account</a></li>
+                    <li><a href="#">Helplines</a></li>
+                    <li><a href="#">Location</a></li>
+                </ul>
+            </section>
+            <section>
+                <h4>Legal</h4><br>
+                <ul class="links">
+                    <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
+                    <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+                    <li><a href="Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
+                    <li><a href="#">GDPR</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#test">Testimonials</a></li>
+                </ul>
+            </section>
+            <section class="footer-col">
+                <h4>RAPIDOC Newsletter</h4><br>
+                <p>
+                    Subscribe to our newsletter for a weekly dose
+                    of news, updates, helpful tips, and
+                    exclusive offers.
+                </p>
+                <form action="#" class="subscribe-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+            </section>
+        </div>
     </div>
 </div>
 
-        </div>
-      </div>
-    </div>
     <div class="footer-bottom">
       <div class="footer-bottom-wrapper">
         <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
