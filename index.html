@@ -48,6 +48,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
+      .emoji input {
+        display: none;
+      }
+      .emoji label {
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 5px;
+      }
+      .emoji input:checked + label {
+        background-color: rgb(41, 136, 138);
+      }
       .nav_menu{
         display: flex;
       }
@@ -258,20 +269,28 @@ option{
 }
 .avatar{
   margin: 20px 100px;
+  padding-left: 50px;
+  padding-right: 60px;
+ 
+ 
+
 }
 .textbox input{
-  width:200px;
+  width:240px;
   height: 40px;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 20px;
 }
 .btn{
-  margin-left: 50px;
-  width:240px;
+  margin-left: 2px;
+  width:230px;
   height: 40px;
   background-color: #00C896;
   border: none;
   font-size: 1rem;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
 }
 #appointment.appointment.section-bg{
   margin: 0px 280px 100px;
@@ -768,7 +787,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       <!-- Add Login Form for Patient Portal -->
       <div class="login-box">
         <div class="avatar">
-          <img src="img/avatar.png" alt="Avatar" >
+          <img src="img/avatar.png" height="220px" width="263px" alt="Avatar" >
         </div>
         <form>
           <div class="textbox">
@@ -1235,13 +1254,19 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       <div class="feedback">
         <h1>Give Us Your Valuable Feedback.</h1>
         <p>Your feedback is very important for Rapidoc.</p>
-        <div class="emoji">
-          <button class="btn normal">&#128578;</button>
-          <button class="btn normal">&#128515;</button>
-          <button class="btn normal">&#128519;</button>
-          <button class="btn normal">&#128531;</button>
-          <button class="btn normal">&#128532;</button>
-          <button class="btn normal">&#128545;</button>
+        <div class="emoji" >
+          <input type="radio" id="emoji1" name="emoji" value="&#128578;" style="display: none;">
+          <label for="emoji1" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128578;</label>
+          <input type="radio" id="emoji2" name="emoji" value="&#128515;" style="display: none;">
+          <label for="emoji2" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128515;</label>
+          <input type="radio" id="emoji3" name="emoji" value="&#128519;" style="display: none;">
+          <label for="emoji3" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128519;</label>
+          <input type="radio" id="emoji4" name="emoji" value="&#128531;" style="display: none;">
+          <label for="emoji4" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128531;</label>
+          <input type="radio" id="emoji5" name="emoji" value="&#128532;" style="display: none;">
+          <label for="emoji5" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128532;</label>
+          <input type="radio" id="emoji6" name="emoji" value="&#128545;" style="display: none;">
+          <label for="emoji6" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128545;</label>
         </div>
         <p class="ques">What you want to say?</p>
         <textarea id="textarea" cols="20" rows="5"></textarea>
@@ -1259,41 +1284,41 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       </div>
       <div class="info">
         <div class="center">
-          <button class="btn button" style="text-align: center; font-weight: 700; padding-bottom:40px ;">Submit</button>
+          <button class="btn button" style="text-align: center; font-weight: 700; padding-bottom:40px ;"onclick="submitFeedback(event)">Submit</button>
         </div>
 
       </div>
     </section>
+    <div id="overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); display: none; justify-content: center; align-items: center; z-index: 1000;">
+      <div id="confirmation-message" style="width: 80%; height: 80%; color: #1c413b;; font-size: 50px; font-weight: bold; text-align: center; background-color: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 10px; display: flex; justify-content: center; align-items: center;">
+        Thank you for your feedback!
+    </div>
+    
+    
+    </div>
 	  <script>
-  function submitFeedback(event) {
-    event.preventDefault();
-
-    // Get the feedback data
-    const feedbackText = document.getElementById('textarea').value;
-    const satisfaction = document.querySelector('input[name="satisfaction"]:checked');
-
-    if (!satisfaction) {
-      alert('Please select your satisfaction level.');
-      return;
-    }
-
-    // Here you would normally send the feedback to the server
-    // For this example, we'll just display a confirmation message
-
-    // Display the confirmation message
-    const confirmationMessage = document.getElementById('confirmation-message');
-    confirmationMessage.style.display = 'block';
-
-    // Reset the form
-    document.getElementById('textarea').value = '';
-    document.querySelector('input[name="satisfaction"]:checked').checked = false;
-
-    // Hide the confirmation message after a few seconds
-    setTimeout(() => {
-      confirmationMessage.style.display = 'none';
-    }, 6000);
-  }
-</script>
+      function submitFeedback(event) {
+        event.preventDefault();
+        const feedbackText = document.getElementById('textarea').value;
+        const selectedEmoji = document.querySelector('input[name="emoji"]:checked');
+        if (!feedbackText.trim() || !selectedEmoji) {
+          alert('Please fill the feedback form');
+          return;
+        }
+        if (!selectedEmoji) {
+          alert('Please select your satisfaction level');
+          return;
+        }
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'flex';
+        document.body.classList.add('blur');
+        setTimeout(() => {
+          overlay.style.display = 'none';
+          document.body.classList.remove('blur');
+          location.reload(true); 
+        }, 1000);
+      }
+    </script>
 
 
 
