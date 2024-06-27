@@ -137,9 +137,9 @@ h6 {
 }
 
 .appointment-btn:hover {
-  background: #55a5ea;
   z-index: -1;
-  color: #fff;
+  background-color: green;
+  color: white;
 }
 @media (max-width: 768px) {
   .appointment-btn {
@@ -1195,6 +1195,7 @@ section {
   border-radius: 10px;
   box-shadow: none;
   font-size: 14px;
+  color: #000;
 }
 
 .contact .php-email-form input {
@@ -1741,7 +1742,7 @@ footer {
 }
 
 .form-control {
-  width: 50%;
+  width: 100%;
   /* Full width */
   padding: 10px;
   border: 1px solid #ccc;
@@ -2030,4 +2031,8 @@ footer {
       text-align: center;
       padding: 1rem 0.5rem 2rem 0.5rem;
   }
+}
+ #abc :hover{
+  background: #55a5ea;
+  border-color: #3fbbc0;
 }
