@@ -1,0 +1,71 @@
+site_name: RapiDoc
+site_author: Anishka Gupta
+docs_dir: Docs
+
+theme:
+  name: material
+  feature:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotations
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: deep purple
+      accent: deep purple
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+      primary: slate
+      accent: lime
+  language: en
+  logo: favicon.ico
+  favicon: favicon.ico
+  
+repo_url: https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-
+repo_name: RapiDoc
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Objectives: Objectives.md
+  - Purpose: purpose.md
+  - Features and Services: features And Services.md
+  - Technology Stack Used: Technology stack.md
+  - Architecture: Architecture.md
+  - Getting Started: Installation.md
+  - Usage: Usage.md
+  - Advantages: Advantages.md
+  - Diadvantages: Disadvantages.md
+  - Future Scope: Future Scope.md
+  - Contributing: Contributing.md
+  - Conclusion: Conclusion.md
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-"  target="_blank" rel="noopener">RapiDoc</a>
