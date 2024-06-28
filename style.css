@@ -1970,14 +1970,15 @@ footer {
 /*? socials */
 .social-wrapper {
   display: flex;
-  gap: 0.5rem;
-  margin: 0 auto;
+    gap: 0.5rem;
+    margin: 0 auto;
 }
 
 .social-links {
   display: inline-flex;
   gap: 0.5rem;
   align-items: center;
+  
 }
 
 .social-links img {
