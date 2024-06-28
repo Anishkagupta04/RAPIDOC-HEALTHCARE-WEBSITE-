@@ -14,25 +14,26 @@ import {
   equalTo,
 } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBEiIKrS7Raxv-73DyTjv_7xHkPKCyTKoo",
-  authDomain: "gssoc-issue-solve.firebaseapp.com",
-  databaseURL: "https://gssoc-issue-solve-default-rtdb.firebaseio.com",
-  projectId: "gssoc-issue-solve",
-  storageBucket: "gssoc-issue-solve.appspot.com",
-  messagingSenderId: "897320160719",
-  appId: "1:897320160719:web:7cb31eed6e903af62bd6ba"
+  apiKey: "AIzaSyDx_FcoL3XJryt6BInhOaDsMKiSmxzrYBI",
+  authDomain: "fir-7f3dd.firebaseapp.com",
+  projectId: "fir-7f3dd",
+  storageBucket: "fir-7f3dd.appspot.com",
+  messagingSenderId: "467011865433",
+  appId: "1:467011865433:web:e23be9d0cc3496bb961a48"
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
 const database = getDatabase();
 const dbref = ref(database, "data");
+const auth = getAuth(app);
+
 auth.languageCode = 'en';
 
 const provider = new GoogleAuthProvider();
-
-document.getElementById("google").addEventListener("click", function() {
+//signin
+document.getElementById("google").addEventListener("click", function () {
   signInWithPopup(auth, provider)
     .then((result) => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -40,7 +41,8 @@ document.getElementById("google").addEventListener("click", function() {
       console.log(user);
       sessionStorage.setItem("username", user.displayName);
       window.location.href = "./signedup.html";
-    }).catch((error) => {
+    })
+    .catch((error) => {
       console.error("Error during Google sign-in:", error);
     });
 });

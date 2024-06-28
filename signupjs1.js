@@ -3,13 +3,12 @@ import { getAuth, GoogleAuthProvider, signInWithPopup ,createUserWithEmailAndPas
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBEiIKrS7Raxv-73DyTjv_7xHkPKCyTKoo",
-  authDomain: "gssoc-issue-solve.firebaseapp.com",
-  databaseURL: "https://gssoc-issue-solve-default-rtdb.firebaseio.com",
-  projectId: "gssoc-issue-solve",
-  storageBucket: "gssoc-issue-solve.appspot.com",
-  messagingSenderId: "897320160719",
-  appId: "1:897320160719:web:7cb31eed6e903af62bd6ba"
+  apiKey: "AIzaSyDx_FcoL3XJryt6BInhOaDsMKiSmxzrYBI",
+  authDomain: "fir-7f3dd.firebaseapp.com",
+  projectId: "fir-7f3dd",
+  storageBucket: "fir-7f3dd.appspot.com",
+  messagingSenderId: "467011865433",
+  appId: "1:467011865433:web:e23be9d0cc3496bb961a48"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -39,7 +38,6 @@ document.getElementById("registerForm").addEventListener("submit", function(even
   const password = document.getElementById("password").value;
 
   if (validateForm(name, email, password)) {
-    // Simulate a successful registration (Replace with actual Firebase sign-up logic)
     try {
       createUserWithEmailAndPassword(auth,email,password)
      .then((credential)=>
@@ -51,14 +49,18 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     updateProfile(credential.user,{  // update profile for username
       displayName:name,
     })
+    window.location.href = "index.html";
   });
-
+    
     } catch (error) {
       console.log(error);
       //alert("error occured!")
     }
+     
+    // Simulate a successful registration (Replace with actual Firebase sign-up logic)
+    
     console.log("Form submitted with:", { name, email, password });
-    //window.location.href = "./signed.html";
+    //
   }
 });
 
