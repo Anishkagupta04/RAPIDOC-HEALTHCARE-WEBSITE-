@@ -8,7 +8,7 @@
   <link rel="icon" type="image/x-icon" href="log/favicon.ico">
   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
   <link rel="stylesheet" href="log/login.css">
-  <script src="scriptsignup.js" defer type="module"></script>
+  <!-- <script src="scriptsignup.js" defer type="module"></script> -->
   <script src="signupjs.js" defer type="module"></script>
   <script src="signupjs1.js" defer type="module"></script>
   <meta name="google-signin-client_id" content="646664380070-n07i34glgcc6sanb59p3m1k5k0cgn1v1.apps.googleusercontent.com">
@@ -20,9 +20,9 @@
     <div class="form-container register-container">
       <form action="#" id="registerForm">
         <h1>RAPIDOC </h1>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
+        <input type="text" id="name" placeholder="Name" autocomplete="on">
+        <input type="email" id="email" placeholder="Email" autocomplete="on">
+        <input type="password" id="password" placeholder="Password" autocomplete="on">
         <button type="submit">Register</button>
         <span id="registerMessage" style="display: none;">Account created successfully</span>
         <div class="social-container">
@@ -36,8 +36,8 @@
     <div class="form-container login-container">
       <form action="#" id="loginForm">
         <h1>RAPIDOC</h1>
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
+        <input type="email" id="loginEmail" placeholder="Email" autocomplete="on">
+        <input type="password" id="loginPassword" placeholder="Password" autocomplete="on">
         <div class="content">
           <div class="checkbox">
             <input type="checkbox" name="checkbox" id="checkbox">
@@ -48,6 +48,7 @@
           </div>
         </div>
         <button type="submit">Login</button>
+        <span id="login-failed" style="display: none;">create account!</span>
         <span>or use your account</span>
         <div class="social-container">
           <a href="www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>

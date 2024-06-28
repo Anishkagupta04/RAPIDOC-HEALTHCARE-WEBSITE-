@@ -428,7 +428,7 @@ form.php-email-form{
           <li><a href="Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a></li>
           <li><a href="rateus.html"><i class="bi bi-star"></i>Rate Us</a></li>
 
-          <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+          <li><a href="login.html" id="login" ><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
            <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
          </ul>
          <div class="hamburger">
@@ -621,6 +621,12 @@ form.php-email-form{
     </section>
 
     <script>
+
+        window.onload=()=>{
+        const username=sessionStorage.getItem('username');
+        if(username)
+        document.getElementById('login').innerHTML=username;
+      };
       document.querySelectorAll('.about-us-community').forEach(function(element) {
   element.addEventListener('mouseover', function() {
       element.querySelector('img').src = './images/checkuphover.png';

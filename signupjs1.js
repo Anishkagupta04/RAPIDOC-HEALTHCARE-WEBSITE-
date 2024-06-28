@@ -1,17 +1,21 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup ,createUserWithEmailAndPassword,updateProfile} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDx_FcoL3XJryt6BInhOaDsMKiSmxzrYBI",
-  authDomain: "fir-7f3dd.firebaseapp.com",
-  projectId: "fir-7f3dd",
-  storageBucket: "fir-7f3dd.appspot.com",
-  messagingSenderId: "467011865433",
-  appId: "1:467011865433:web:e23be9d0cc3496bb961a48"
+  apiKey: "AIzaSyBEiIKrS7Raxv-73DyTjv_7xHkPKCyTKoo",
+  authDomain: "gssoc-issue-solve.firebaseapp.com",
+  databaseURL: "https://gssoc-issue-solve-default-rtdb.firebaseio.com",
+  projectId: "gssoc-issue-solve",
+  storageBucket: "gssoc-issue-solve.appspot.com",
+  messagingSenderId: "897320160719",
+  appId: "1:897320160719:web:7cb31eed6e903af62bd6ba"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const database=getDatabase();
+const dbRef=ref(database,'data');
 auth.languageCode = 'en';
 
 const provider = new GoogleAuthProvider();
@@ -28,7 +32,7 @@ document.getElementById("google1").addEventListener("click", function() {
     });
 });
 
-document.getElementById("signup-form").addEventListener("submit", function(event) {
+document.getElementById("registerForm").addEventListener("submit", function(event) {
   event.preventDefault();  // Prevent form from submitting the default way
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
@@ -36,8 +40,25 @@ document.getElementById("signup-form").addEventListener("submit", function(event
 
   if (validateForm(name, email, password)) {
     // Simulate a successful registration (Replace with actual Firebase sign-up logic)
+    try {
+      createUserWithEmailAndPassword(auth,email,password)
+     .then((credential)=>
+      {
+        set(ref(database, 'users/' + credential.user.uid), { // set userdetails in realtime database 
+        username: name,
+        email: email,
+    })
+    updateProfile(credential.user,{  // update profile for username
+      displayName:name,
+    })
+  });
+
+    } catch (error) {
+      console.log(error);
+      //alert("error occured!")
+    }
     console.log("Form submitted with:", { name, email, password });
-    window.location.href = "./signed.html";
+    //window.location.href = "./signed.html";
   }
 });
 
