@@ -1,0 +1,114 @@
+.appointment-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #3fbcc051;
+    text-align: center;
+    margin-bottom: 7%;
+    border-radius: 20px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin: 20px 0 0 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+.php-email-form {
+    display: inline;
+    align-items: center;
+    justify-self: center;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    text-align: start;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-primary {
+    width: 40%;
+    height: 40%;
+    text-align: center;
+    background-color: #29888A;
+    color: #fff;
+    font-size: 1.2rem;
+    border: 1px solid #30a3a5;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px 0px 30px 0;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #30a3a5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .appointment-container {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .section-title h2 {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    .section-title p {
+        font-size: 1.0rem;
+    }
+
+    .php-email-form {
+      padding: 20px;
+    }
+
+    .btn-primary {
+      width: 100%;
+      max-width: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+}
+
