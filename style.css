@@ -1511,7 +1511,7 @@ section {
 .footer-col form button {
   background: #fff;
   border: none;
-  color: #08434551;
+  color: black;
   padding: 10px 15px;
   border-radius: 6px;
   cursor: pointer;
@@ -1520,7 +1520,8 @@ section {
 }
 
 .footer-col form button:hover {
-  background: #cecccc;
+  background: #022a2d;
+  color: white;
 }
 /*
  .icons {
