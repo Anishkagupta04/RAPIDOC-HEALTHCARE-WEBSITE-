@@ -17,27 +17,27 @@ document.addEventListener("DOMContentLoaded", function() {
     loginForm.scrollIntoView({ behavior: "smooth" });
   });
 
-  registerForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    // Your registration logic goes here
+  // registerForm.addEventListener("submit", (event) => {
+  //   event.preventDefault();
+  //   // Your registration logic goes here
 
-    // Simulate registration success
-    document.getElementById("registerMessage").style.display = "block";
-    setTimeout(() => {
-      container.classList.remove("right-panel-active");
-      loginForm.scrollIntoView({ behavior: "smooth" });
-    }, 2000);
-  });
+  //   // Simulate registration success
+  //   document.getElementById("registerMessage").style.display = "block";
+  //   setTimeout(() => {
+  //     container.classList.remove("right-panel-active");
+  //     loginForm.scrollIntoView({ behavior: "smooth" });
+  //   }, 2000);
+  // });
 
-  loginForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    // Your login logic goes here
+  // loginForm.addEventListener("submit", (event) => {
+  //   event.preventDefault();
+  //   // Your login logic goes here
 
-    // Simulate login success
-    alert("Login successful!");
-    // Redirect to the homepage after login
-    setTimeout(() => {
-      window.location.href = "index.html"; // Change "index.html" to your desired URL
-    }, 1000); // Redirect after 1 second (1000 milliseconds)
-  });
+  //   // Simulate login success
+  //   alert("Login successful!");
+  //   // Redirect to the homepage after login
+  //   setTimeout(() => {
+  //     window.location.href = "index.html"; // Change "index.html" to your desired URL
+  //   }, 1000); // Redirect after 1 second (1000 milliseconds)
+  // });
 });
