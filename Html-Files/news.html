@@ -323,27 +323,32 @@ form.php-email-form{
 .news-section h2 {
   text-align: center;
   margin-bottom: 30px;
-  color: #333;
+  color: #faf8f8;
 }
 
 .news-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+ 
 }
 
 .news-item {
   width: calc(33.33% - 20px);
   margin-bottom: 30px;
-  background-color: #fff;
+  background-color:black;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  box-shadow: 7px 0px 15px #70bde7, -7px 0px 15px #14aa21;
+  color: white;
 }
 
 .news-item:hover {
   transform: translateY(-5px);
+  background-color:#29888a;
+  box-shadow: 7px 0px 15px #fdfefe, -7px 0px 15px aqua;
 }
 
 .news-item img {
@@ -356,14 +361,14 @@ form.php-email-form{
   padding: 15px;
   margin: 0;
   font-size: 18px;
-  color: #333;
+  color: white
 }
 
 .news-item p {
   padding: 0 15px 15px;
   margin: 0;
   font-size: 14px;
-  color: #666;
+  color: #c3b5b5;
 }
 
 .read-more {
@@ -447,7 +452,7 @@ form.php-email-form{
   <div class="conta" style="display: flex; flex-wrap: wrap;">
     <div class="container" style="display:flex ;">
       <div class="news-section">
-        <h2 style="color: white"><strong>Latest News</strong></h2>
+        <h2 style="color: white;font-size: 35px"><strong>Latest News</strong></h2>
         <div class="news-container">
           <div class="news-item">
             <h3>RapiDoc Launches Revolutionary Telemedicine</h3>
@@ -843,8 +848,11 @@ window.addEventListener("load", () => {
     }
 
     .icon {
-      background-color: #fff;
+      /* background-color: #080808; */
       padding: 10px 10px 5px 10px;
+    }
+    .icon:hover{
+      /* background-color: #29888a; */
     }
 
     .icon svg {
