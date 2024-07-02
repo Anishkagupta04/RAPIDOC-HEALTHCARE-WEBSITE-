@@ -268,9 +268,9 @@ option{
   }
 }
 .avatar{
-  margin: 20px 100px;
-  padding-left: 50px;
-  padding-right: 60px;
+  margin: 20px 10px;
+  padding-left: 0px;
+  padding-right: 0px;
  
  
 
@@ -293,10 +293,12 @@ option{
   margin-bottom: 20px; 
 }
 #appointment.appointment.section-bg{
-  margin: 0px 280px 100px;
+  /* margin: 0px 280px 100px; */
+  margin: 0px 2px 10px;
 }
 #appointment.appointment.section-bg h2{
-  margin: 0px 115px ;
+  margin: 10px -128px;
+    margin-right: 205px;
 }
 form.php-email-form{
   width: 300px;
@@ -776,178 +778,129 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
         </div>
     </section><!-- End Services Section -->
     <!-- Patient Portal Section -->
-<section id="patient-portal" class="patient-portal">
-  <div class="container-patientportal">
-    <div class="section-title" id="section-patientportal">
-      <h2>Patient Portal</h2>
-      <p>Access your medical records, lab results, and prescription history securely.</p>
-    </div>
-    <div class="container">
-
-      <!-- Add Login Form for Patient Portal -->
-      <div class="login-box">
-        <div class="avatar">
-          <img src="img/avatar.png" height="220px" width="263px" alt="Avatar" >
+    <section id="patient-portal" class="patient-portal">
+      <div class="container-patientportal">
+        <div class="section-title" id="section-patientportal">
+          <h2>Patient Portal</h2>
+          <p>Access your medical records, lab results, and prescription history securely.</p>
         </div>
-        <form>
-          <div class="textbox">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" name="username" required>
+        <div class="container">
+
+          <!-- Add Login Form for Patient Portal -->
+          <div class="login-box">
+            <div class="avatar">
+              <img src="img/avatar.png" alt="Avatar">
+            </div>
+            <form>
+              <div class="textbox">
+                <i class="fas fa-user" ></i>
+                <input type="text" placeholder="Username" name="username" required>
+              </div>
+              <br>
+              <div class="textbox">
+                <i class="fas fa-lock" ></i>
+                <input type="password" placeholder="Password" name="password" required>
+              </div>
+              <br>
+              <input type="submit" class="btn" value="SUBMIT">
+              <div class="register-link" >
+                <a href="#">Not registered yet? Register Here</a>
+              </div>
+              <div class="forgot-password" id="forgot-password-patient-portal" >
+                <a href="forgot-password.php">Forgot Your Password?</a>
+              </div>
+            </form>
           </div>
-          <br>
-          <div class="textbox">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" name="password" required>
-          </div>
-          <br>
-          <input type="submit" class="btn" value="SUBMIT">
-          <div class="register-link">
-            <a href="#">Not registered yet? Register Here</a>
-          </div>
-          <div class="forgot-password" id="forgot-password-patient-portal">
-            <a href="forgot-password.php">Forgot Your Password?</a>
-          </div>
-        </form>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 <!-- Appointment Section -->
 <section id="appointment" class="appointment section-bg">
-   
-  <div class="container" style="border-radius: 10px;">
-    <div class="section-title">
-      <h2>Make an Appointment</h2>
-      <p>We listed the docs, we made you a form. You make us an appointment.</p>
-    <!--<div class="layout">-->
-      <form action="successful_appointment.html" method="post" class="php-email-form">
-        
-          <div class="col-md-4 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-          </div>
-          <br>
-          <div class="col-md-4 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-          </div>
-          <br>
-          <div class="col-md-4 form-group mt-3">
-            <select name="location" id="location" class="form-select" required>
-              <option value="">Your Location</option>
-              <option value="Mumbai">Mumbai</option>
-              <option value="Delhi">Delhi</option>
-              <option value="Chennai">Chennai</option>
-              <!-- Add more locations as needed -->
-            </select>
-          </div>
-        <!-- Time Slot Section -->
-        
-          <div class="col-md-12 form-group mt-3">
-            <select name="time-slot" id="time-slot" class="form-select" required>
-
-      <!-- ############# Appointment Section ############# -->
- <section id="appointment" class="appointment section-bg">
   <div class="container">
     <div class="section-title">
       <h2>Make an Appointment</h2>
-      <p>We listed the docs, we made you a form. You make us an appointment.</p><br><br>
+      <p>We listed the docs, we made you a form. You make us an appointment.</p>
     </div>
-    <div class="layout">
-      <form action="" role="form" class="php-email-form">
-        <div class="row">
-          <div class="col-md-4 form-group mt-3">
-            <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date">
-            <script>
-              //To set value of minimum date in calendar
-              var currentDate = new Date();
-              var year = currentDate.getFullYear();
-              var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
-              var day = currentDate.getDate().toString().padStart(2, '0');
-              var formattedDate = `${year}-${month}-${day}`;
-              document.getElementById('date').setAttribute('min', formattedDate);
-            </script>
-          </div>
-          <div class="col-md-4 form-group mt-3">
-            <select name="age" id="age" class="form-select">
-              <option value="">Select Age</option>
-              <option value="Department 1">18 or below</option>
-              <option value="Department 2">18 to 55</option>
-              <option value="Department 3">55 above</option>
-            </select>
-          </div>
-          <div class="col-md-4 form-group mt-3">
-            <select name="doctor" id="doctor" class="form-select">
-              <option value="">Your Location</option>
-              <option value="Doctor 1">Mumbai</option>
-              <option value="Doctor 2">Delhi</option>
-              <option value="Doctor 3">Chennai</option>
-            </select>
-          </div>
+
+    <form action="successful_appointment.html" method="post" class="php-email-form">
+      <div class="row">
+        <div class="col-md-4 form-group">
+          <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
         </div>
-        <!-- Time Slot Section -->
-        <div class="row">
-          <div class="col-md-12 form-group mt-3">
-            <select name="time-slot" id="time-slot" class="form-select">
-              <option value="">Select Time Slot</option>
-              <option value="9:00 AM">9:00 AM</option>
-              <option value="11:00 AM">11:00 AM</option>
-              <option value="2:00 PM">2:00 PM</option>
-            </select>
-          </div>
-          <div class="col-md-12 form-group mt-3">
-            <select name="hospital" id="hospital" class="form-select">
-              <option value="">Select Hospital</option>
-                <option value="Hospital 1">Hospital 1</option>
-                <option value="Hospital 2">Hospital 2</option>
-               <option value="Hospital 3">Hospital 3</option>
-            </select>
-          </div>
-          <!-- OPD Section -->        
-          <div class="col-md-12 form-group mt-3">
         
-            <select name="opd-section" id="opd-section" class="form-select">
-              <option value="">Select OPD Section</option>
-                          <!-- Populate with available OPD sections -->
-              <option value="ENT">ENT</option>
-              <option value="Gynecologist">Gynecologist</option>
-                          <!-- Add more OPD sections as needed -->
-            </select>
-          </div>
-          <div class="col-md-4 form-group mt-3">
-            <select name="age" id="age" class="form-select" required>
-              <option value="">Select Age</option>
-              <option value="18 or below">18 or below</option>
-              <option value="18 to 55">18 to 55</option>
-              <option value="55 above">55 above</option>
-            </select>
-          </div>
-          
-          <!-- OPD Section -->
-          <div class="row">
-            <div class="col-md-12 form-group mt-3">
-              <select name="opd-section" id="opd-section" class="form-select">
-                <option value="">Select OPD Section</option>
-                <!-- Populate with available OPD sections -->
-                <option value="ENT">ENT</option>
-                <option value="Gynecologist">Gynecologist</option>
-                <!-- Add more OPD sections as needed -->
-              </select>
-            </div>
-          </div>
-          <div class="text-center">
-            <a href="successful_appointment.html" style="text-decoration: none;">
-            <button type="submit">Make an Appointment</button>
-            </a>
-          </div>
+        <div class="col-md-4 form-group mt-3 mt-md-0">
+          <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+        </div>
+        
+        <div class="col-md-4 form-group mt-3">
+          <select name="location" id="location" class="form-select" required>
+            <option value="">Your Location</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Chennai">Chennai</option>
+            <!-- Add more locations as needed -->
+          </select>
+        </div>
+        
+        <div class="col-md-4 form-group mt-3">
+          <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" required>
+          <script>
+            // To set value of minimum date in calendar 
+            var currentDate = new Date();
+            var year = currentDate.getFullYear();
+            var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+            var day = currentDate.getDate().toString().padStart(2, '0');
+            var formattedDate = `${year}-${month}-${day}`;
+            document.getElementById('date').setAttribute('min', formattedDate);
+          </script>
         </div>
 
-       
-       
+        <div class="col-md-4 form-group mt-3">
+          <select name="age" id="age" class="form-select" required>
+            <option value="">Select Age</option>
+            <option value="18 or below">18 or below</option>
+            <option value="18 to 55">18 to 55</option>
+            <option value="55 above">55 above</option>
+          </select>
         </div>
-      </form>
-    </div>
-  </div>   
- </section>
+
+        <div class="col-md-4 form-group mt-3">
+          <select name="hospital" id="hospital" class="form-select" required>
+            <option value="">Select Hospital</option>
+            <option value="Hospital 1">Hospital 1</option>
+            <option value="Hospital 2">Hospital 2</option>
+            <option value="Hospital 3">Hospital 3</option>
+            <!-- Add more hospitals as needed -->
+          </select>
+        </div>
+
+        <div class="col-md-4 form-group mt-3">
+          <select name="opd-section" id="opd-section" class="form-select" required>
+            <option value="">Select OPD Section</option>
+            <option value="ENT">ENT</option>
+            <option value="Gynecologist">Gynecologist</option>
+            <!-- Add more OPD sections as needed -->
+          </select>
+        </div>
+
+        <div class="col-md-12 form-group mt-3">
+          <select name="time-slot" id="time-slot" class="form-select" required>
+            <option value="">Select Time Slot</option>
+            <option value="9:00 AM">9:00 AM</option>
+            <option value="11:00 AM">11:00 AM</option>
+            <option value="2:00 PM">2:00 PM</option>
+            <!-- Add more time slots as needed -->
+          </select>
+        </div>
+      </div>
+      
+      <div class="text-center mt-3">
+        <button type="submit">Make an Appointment</button>
+      </div>
+    </form>
+  </div>
+</section>
 <!-- End Appointment Section -->
 
 <!-- ################# Doctors Section ################# -->
@@ -1254,19 +1207,13 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       <div class="feedback">
         <h1>Give Us Your Valuable Feedback.</h1>
         <p>Your feedback is very important for Rapidoc.</p>
-        <div class="emoji" >
-          <input type="radio" id="emoji1" name="emoji" value="&#128578;" style="display: none;">
-          <label for="emoji1" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128578;</label>
-          <input type="radio" id="emoji2" name="emoji" value="&#128515;" style="display: none;">
-          <label for="emoji2" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128515;</label>
-          <input type="radio" id="emoji3" name="emoji" value="&#128519;" style="display: none;">
-          <label for="emoji3" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128519;</label>
-          <input type="radio" id="emoji4" name="emoji" value="&#128531;" style="display: none;">
-          <label for="emoji4" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128531;</label>
-          <input type="radio" id="emoji5" name="emoji" value="&#128532;" style="display: none;">
-          <label for="emoji5" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128532;</label>
-          <input type="radio" id="emoji6" name="emoji" value="&#128545;" style="display: none;">
-          <label for="emoji6" style="font-size: 2rem; cursor: pointer; padding: 5px;">&#128545;</label>
+        <div class="emoji">
+          <button class=" normal">&#128578;</button>
+          <button class=" normal">&#128515;</button>
+          <button class=" normal">&#128519;</button>
+          <button class=" normal">&#128531;</button>
+          <button class=" normal">&#128532;</button>
+          <button class=" normal">&#128545;</button>
         </div>
         <p class="ques">What you want to say?</p>
         <textarea id="textarea" cols="20" rows="5"></textarea>
@@ -1284,7 +1231,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       </div>
       <div class="info">
         <div class="center">
-          <button class="btn button" style="text-align: center; font-weight: 700; padding-bottom:40px ;"onclick="submitFeedback(event)">Submit</button>
+          <button class=" submit_button">Submit</button>
         </div>
 
       </div>
@@ -1325,84 +1272,94 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
   </main><!-- End #main -->
   <!-- ############### Footer ############### -->
 <br><br><br><br><br><br>
-  <footer>
-    <div class="footer-wrapper">
-        <div class="footer-columns">
-            <div class="other-columns">
-                <section>
-                    <h4>Quick Links</h4><br>
-                      <ul class="links">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="./Html-Files/contact.html">Contact Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#doctors">Doctors</a></li>
-                        <li><a href="./faq.html">FAQ</a></li>
-                    </ul>
-                </section>
-                <section>
-                  <h4>Explore</h4><br>
-                  <ul class="links">
-                    <li><a href="Html-Files/appointment.html">Appointment</a></li>
-                    <li><a href="#">Patient Portal</a></li>
-                    <li><a href="login.html">Login account</a></li>
-                    <li><a href="#">Helplines</a></li>
-                    <li><a href="#">Location</a></li>
-                  </ul>
-                </section>
-                <section>
-                  <h4>Legal</h4><br>
-                  <ul class="links">
-                    <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
-                    <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
-                    <li><a href="Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
-                    <li><a href="#">GDPR</a></li>
-                    <li><a href="#">Security</a></li>
-                    <li><a href="#test">Testimonials</a></li>
-                  </ul>
-                </section>
-                <section class="footer-col">
-                  <h4>RAPIDOC Newsletter</h4><br>
-                  <p>
-                    Subscribe to our newsletter for a weekly dose
-                    of news, updates, helpful tips, and
-                    exclusive offers.
-                  </p>
-                  <form action="#" class="subscribe-form">
-                    <input type="email" placeholder="Your email" required>
-                    <button type="submit">SUBSCRIBE</button>
-                  </form>
-                </section>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="footer-bottom-wrapper">
-            <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
-              Reserved  Made with ❤️ by RapiDoc</small>
-              <style>
-                .social-wrapper a div i {
-                  color: #afb6c7;
-                }
-               .social-wrapper a div i:hover {
-                 color: #fff;
-                }
-              </style>
-            <div class="social-wrapper">
-              <div class="social-links">
-              <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
-              <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
-              <!-- <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a> -->
-                <a href="https://www.twitter.com"><div><img src="twitter.png" style="width: 16px; height: 15px;"></div></a>
-              <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
-               <a href="#" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
-              <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
-              <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
-              <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
-              </div>
-            </div>
+<footer>
+  <div class="footer-wrapper">
+    <div class="footer-columns">
+      <div class="other-columns">
+        <section>
+          <h4>Quick Links</h4><br>
+          <ul class="links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="./Html-Files/contact.html">Contact Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+          </ul>
+        </section>
+        <section>
+          <h4>Explore</h4><br>
+          <ul class="links">
+            <li><a href="#">Appointment</a></li>
+            <li><a href="#">Patient Portal</a></li>
+            <li><a href="#">Login account</a></li>
+            <li><a href="#">Helplines</a></li>
+            <li><a href="#">Location</a></li>
+          </ul>
+        </section>
+        <section>
+          <h4>Legal</h4><br>
+          <ul class="links">
+            <li><a href="#">Customer Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </section>
+        <section class="footer-col">
+          <h4>RAPIDOC Newsletter</h4><br>
+          <p>
+            Subscribe to our newsletter for a weekly dose
+            of news, updates, helpful tips, and
+            exclusive offers.
+          </p>
+          <form action="#">
+            <input type="text" placeholder="Your email" required>
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+        </section>
       </div>
     </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-wrapper">
+      <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+        Reserved Made with ❤️ by RapiDoc</small>
+      <style>
+        .social-wrapper a div i {
+          color: #afb6c7;
+        }
+
+        .social-wrapper a div i:hover {
+          color: #fff;
+        }
+      </style>
+      <div class="social-wrapper">
+        <div class="social-links">
+          <div style="font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+          <a href="https://www.facebook.com/" target="_blank">
+            <div><i class="fa-brands fa-facebook-f"></i></div>
+          </a>
+          <a href="https://www.twitter.com" target="_blank">
+            <div><i class="fa-brands fa-twitter"></i></div>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank">
+            <div><i class="fa-brands fa-linkedin"></i></div>
+          </a>
+          <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+            <div><i class="fa-brands fa-github"></i></div>
+          </a>
+          <a href="+91 1234567890" title="+91 1234567890" target="_blank">
+            <div><i class="fa-solid fa-phone"></i></div>
+          </a>
+          <a href="info@rapidoc.com" target="_blank">
+            <div><i class="fa-solid fa-envelope"></i></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
   <div id="back-to-top-container">

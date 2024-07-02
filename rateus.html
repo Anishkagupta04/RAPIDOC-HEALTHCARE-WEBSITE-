@@ -9,28 +9,31 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
-  <header class="header_container">
+  <header class="header_container nav-h">
     <div class="img">
-      <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png"> 
+      <img id="rd-logo"  style="width: 90px; height: auto;" src="images/rd.png"> 
     </div>
-    <nav class="nav_menu">
-      <ul class="nav_link">
-        <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
-        <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
-        <li><a href="Html-Files/news.html"><i class="bi bi-newspaper"></i> News</a></li>
-        <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
-        <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
-        <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
-        <li><a href="Html-Files/contact.html"><i class="bi bi-telephone"></i> Contact us</a></li>
-        <li><a href="rateus.html"><i class="bi bi-star"></i> Rate Us</a></li>
-        <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
-      </ul>
-      <div class="find-doctor">
-        <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
-      </div>
-    </nav>
-  </header>
-  
+  <nav class="nav_menu">
+    <ul class="nav_link vis-h">
+      <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+      <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+      <li><a href="Html-Files/news.html"><i class="bi bi-newspaper"></i> News</a></li>
+      <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
+      <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+      <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+      <li><a href="Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a></li>
+      <li><a href="rateus.html"><i class="bi bi-star"></i>Rate Us</a></li>
+
+      <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+       <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+     </ul>
+     <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+ </header>
   <div class="container">
     <h2>Rate Us</h2>
     <div class="rating">
@@ -94,6 +97,15 @@
         }
       };
     });
+
+
+    const hamburger=document.querySelector('.hamburger');
+  const navbar=document.querySelector('.header_container');
+  const nav=document.querySelector('.nav_link');
+  hamburger.addEventListener('click',()=>{
+    navbar.classList.toggle('nav-h');
+    nav.classList.toggle('vis-h');
+  })
   </script>
 </body>
 </html>
