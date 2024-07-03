@@ -24,8 +24,9 @@ h6 {
 }
 
 .nav_link li {
-  margin-right: 1px; /* Add space between items */
-  padding: 5px 10px;  
+  margin-right: 1px;
+  /* Add space between items */
+  padding: 5px 10px;
   display: inline-block;
   color: white;
 }
@@ -33,15 +34,17 @@ h6 {
 .nav_link li a {
   transition: all 0.3s ease 0s;
   color: white;
-} 
+}
 
 .nav_link li a:hover {
   color: #55a5ea;
 }
-#header{
+
+#header {
   position: relative;
   top: 12px;
 }
+
 .header_container {
   background-color: #022a2d;
   opacity: 0.9;
@@ -51,9 +54,11 @@ h6 {
   align-items: center;
   height: 85px;
   margin: auto;
-  margin-top: 0px; /* Adjust this value to move the header down */
+  margin-top: 0px;
+  /* Adjust this value to move the header down */
   padding-top: 15px;
 }
+
 .container {
   /* display: ; */
   font-family: sans-serif;
@@ -122,8 +127,8 @@ h6 {
 
 
 /* Added the cursor as a pointer  */
-.icon-box{
-cursor:pointer
+.icon-box {
+  cursor: pointer
 }
 
 /*################----Mobile Navigation----################*/
@@ -182,7 +187,7 @@ cursor:pointer
   transition: 0.3s;
 }
 
-.navbar-mobile > ul > li {
+.navbar-mobile>ul>li {
   padding: 0;
 }
 
@@ -195,7 +200,7 @@ cursor:pointer
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover > a {
+.navbar-mobile li:hover>a {
   color: #3fbcc0c6;
 }
 
@@ -877,7 +882,7 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 250px; 
+  width: 250px;
   box-sizing: border-box;
 }
 
@@ -1007,6 +1012,7 @@ section {
   border-radius: 10px;
   box-shadow: none;
   font-size: 14px;
+  color: #000;
 }
 
 .contact .php-email-form input {
@@ -1037,6 +1043,7 @@ section {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -1046,6 +1053,7 @@ section {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -1195,51 +1203,6 @@ section {
   }
 }
 
-#footer {
-  background: #000;
-  padding: 0 0 30px 0;
-  color: #fff;
-  font-size: 14px;
-}
-
-#footer .footer-top {
-  background: #000;
-  padding: 60px 0 30px 0;
-}
-
-#footer .footer-top .footer-info {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-info h3 {
-  font-size: 50px;
-  margin: 0 0 20px 0;
-  color: #57a6ea;
-  padding: 2px 0 2px 0;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-info p {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-#footer .footer-top .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #57a6ea;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 4px;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
 /* Importing Google font - Open Sans */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
@@ -1334,6 +1297,7 @@ section {
 .footer-col form button:hover {
   background: #cecccc;
 }
+
 /*
  .icons {
   display: flex;
@@ -1376,93 +1340,6 @@ section {
   .footer-col form button {
     margin: 10px 0 0 0;
   }
-}
-
-#footer .footer-top .social-links a:hover {
-  background: #57a6ea;
-  text-decoration: none;
-}
-
-#footer .footer-top h4 {
-  font-size: 16px;
-  font-weight: 600;
-  position: relative;
-  padding-bottom: 12px;
-}
-
-#footer .footer-top .footer-links {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#footer .footer-top .footer-links ul i {
-  padding-right: 2px;
-  color: #57a6ea;
-  font-size: 18px;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
-#footer .footer-top .footer-links ul a {
-  color: #fff;
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul a:hover {
-  color: #57a6ea;
-}
-
-#footer .footer-top .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 4px;
-}
-
-#footer .footer-top .footer-newsletter form input[type="email"] {
-  border: 0;
-  padding: 4px;
-  width: calc(100% - 110px);
-}
-
-#footer .footer-top .footer-newsletter form input[type="submit"] {
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: #57a6ea;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 0 4px 4px 0;
-}
-
-#footer .footer-top .footer-newsletter form input[type="submit"]:hover {
-  background: #57a6ea;
-}
-
-#footer .copyright {
-  justify-content: center;
-  /* padding-top: 10px; */
 }
 
 /*################----Back to top----################*/
@@ -1553,7 +1430,7 @@ footer {
 }
 
 .form-control {
-  width: 50%;
+  width: 100%;
   /* Full width */
   padding: 10px;
   border: 1px solid #ccc;
@@ -1713,10 +1590,6 @@ footer {
   font-size: 0.85rem;
 }
 
-.other-columns ul a:hover {
-  text-decoration: underline;
-}
-
 .other-columns h3 {
   color: var(--link-color);
   margin-bottom: 1rem;
@@ -1729,6 +1602,48 @@ footer {
 }
 
 /*? Footer bottom */
+
+/* Remove underline from all links in the footer sections */
+.links a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  /* Optional: Use this if you want the link to inherit the color from its parent element */
+  transition: color 0.3s ease;
+  /* Smooth transition effect */
+}
+
+/* Add the underline effect */
+.links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  /* Adjust the thickness of the underline */
+  bottom: -2px;
+  /* Adjust position if needed */
+  left: 0;
+  background-color: #000;
+  /* Change this to your desired underline color */
+  transition: width 0.3s ease;
+  transition-delay: 0.1s;
+  /* Optional: Adds a slight delay to the animation */
+}
+
+.links a:hover {
+  color: #000;
+  /* Change text color to black */
+}
+
+/* Hover effect */
+.links a:hover::after {
+  width: 100%;
+  left: 0;
+  /* Reset to left 0 to create the effect from right to left */
+  right: auto;
+}
+
+
 .footer-bottom {
   width: 100%;
   color: var(--text-color);
@@ -1755,6 +1670,7 @@ footer {
 }
 
 .footer-bottom-links {
+  text-decoration: none;
   list-style-type: none;
   display: inline-flex;
   flex-wrap: wrap;
@@ -1770,7 +1686,7 @@ footer {
 
 .footer-bottom-links a:hover {
   color: var(--link-hover);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer-bottom>small {
@@ -1819,27 +1735,33 @@ footer {
 
 @media (min-width: 600px) {
   .other-columns {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .footer-bottom-wrapper {
-      flex-direction: row;
+    flex-direction: row;
   }
-  .footer-bottom-wrapper small{
+
+  .footer-bottom-wrapper small {
     font-size: smaller;
   }
+
   .footer-bottom-links {
-      margin-left: 1.5rem;
+    margin-left: 1.5rem;
   }
 }
 
 @media (max-width: 800px) {
   .footer-top {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 1rem 0.5rem 2rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0.5rem 2rem 0.5rem;
   }
+}
+ #abc :hover{
+  background: #55a5ea;
+  border-color: #3fbbc0;
 }
