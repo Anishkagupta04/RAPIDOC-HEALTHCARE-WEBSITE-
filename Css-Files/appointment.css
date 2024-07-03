@@ -47,7 +47,7 @@
 
 .form-control {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -57,12 +57,25 @@
 
 .form-select {
     width: 100%;
-    padding: 10px;
+    padding: 6px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #fff;
     color: #000;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14l-4.796-5.481C2.027 5.191 2.208 5 2.5 5h11c.292 0 .473.191.549.659l-4.796 5.481a.513.513 0 0 1-.702 0z"/></svg>'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center; 
+    background-size: 16px 16px;
+}
+
+.form-select::placeholder {
+    color: #999;
+    opacity: 1; 
 }
 
 .btn-primary {
