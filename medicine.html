@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Information Finder</title>
+    <link rel="stylesheet" href="medicine.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+      
+       
+</head>
+<body>
+    <header class="header_container">
+        <div class="img">
+        <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
+      </div>
+
+      </div>
+      <nav class="nav_menu">
+
+        <ul class="nav_link">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Html-Files/news.html">News</a></li>
+          <li><a href="Html-Files/news.html">Service</a></li>
+          <li><a href="login.html">Sign in/Sign-up</a></li>
+          <li><a href="#patient-portal">patient Portal</a></li>
+          <li><a href="#doctors">Doctor</a></li>
+          <li><a href="Html-Files/contact.html">Contact us</a></li>
+
+        </ul>
+      </nav>
+      </div>
+    </header>
+   
+
+    <main>
+        <h1 style="font-size: 65px; color:white; display: flex; align-items: center;">
+            Know Your&nbsp;<span style="color: #55a5ea;">Meds</span>
+            <img class="sec-img" src="images/rd.png" alt="" style="margin-left: 10px; height: 7em;">
+        </h1>
+        
+        
+        <form id="medicine-form">
+            <label for="medicine-name"></label>
+            <input type="text" placeholder="Enter Medicine Name" id="medicine-name" name="medicine-name" required>
+            <button type="submit">Search</button>
+        </form>
+        <section id="medicine-info">
+            <!-- Medicine information will be displayed here -->
+        </section>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+          <div class="footer-columns">
+              <div class="other-columns">
+                  <section>
+                      <h4>Quick Links</h4><br>
+                        <ul class="links">
+                          <li style="list-style: none;text-decoration:none;"><a href="./index.html">Home</a></li>
+                          <li style="list-style: none;text-decoration:none;"><a href="#about">About Us</a></li>
+                          <li style="list-style: none;text-decoration:none;"><a href="./Html-Files/contact.html">Contact Us</a></li>
+                          <li style="list-style: none;text-decoration:none;"><a href="#services">Services</a></li>
+                          <li style="list-style: none;text-decoration:none;"><a href="#doctors">Doctors</a></li>
+                          <li style="list-style: none;text-decoration:none;"><a href="./faq.html">FAQ</a></li>
+                      </ul>
+                  </section>
+                  <section>
+                    <h4>Explore</h4><br>
+                    <ul class="links">
+                      <li style="list-style: none;text-decoration:none;"><a href="#">Appointment</a></li>
+                      <li style="list-style: none;text-decoration:none;"><a href="#">Patient Portal</a></li>
+                      <li style="list-style: none;text-decoration:none;"><a href="#">Login account</a></li>
+                      <li style="list-style: none;text-decoration:none;"><a href="#">Helplines</a></li>
+                      <li style="list-style: none;text-decoration:none;"><a href="#">Location</a></li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4>Legal</h4><br>
+                    <ul class="links">
+                      <li style="list-style: none;text-decoration:none;"><a href="#">Customer Agreement</a></li>
+                      <li style="list-style: none;text-decoration:none;"><a href="#">Privacy Policy</a></li>
+                      <li style="list-style: none;text-decoration:none;"><a href="#">GDPR</a></li>
+                      <li style="list-style: none;text-decoration:none;"><a href="#">Security</a></li>
+                      <li style="list-style: none;text-decoration:none;"><a href="#">Testimonials</a></li>
+                    </ul>
+                  </section>
+                  <section class="footer-col">
+                    <h4>RAPIDOC Newsletter</h4><br>
+                    <p style= "color:rgb(116, 119, 116);">Subscribe to our newsletter for a weekly dose</p>
+                    <p style= "color:rgb(116, 119, 116);"> of news, updates, helpful tips, and</p>
+                     <p style= "color:rgb(116, 119, 116);"> exclusive offers.</p>
+    
+    
+                  </section>
+    
+              </div>
+              <div class = "news-letter">
+                  <form action="#">
+                      <input type="text" placeholder="Your email" required>
+                      <button type="submit" class="subscribe-button">SUBSCRIBE</button>
+                    </form>
+              </div>
+    
+    
+    
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <div class="footer-bottom-wrapper">
+              <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+                Reserved  Made with ❤️ by RapiDoc</small>
+                <style>
+                  .social-wrapper a div i {
+                    color: #afb6c7;
+                  }
+                 .social-wrapper a div i:hover {
+                   color: #fff;
+                  }
+                </style>
+              <div class="social-wrapper">
+                <div class="social-links">
+                <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+                <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
+                <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a>
+                <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
+                <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
+                <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
+                <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
+                </div>
+              </div>
+        </div>
+      </div>
+    </footer>
+    
+      <div id="back-to-top-container">
+        <div class="circle">
+          <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+            <path
+              d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+          </svg>
+        </div>
+      </div>
+    <script src="medicine.js"></script>
+</body>
+</html> 
