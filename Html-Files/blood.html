@@ -53,7 +53,7 @@ Blood Bank
         <h2>A+</h2>
         <span data-purecounter-start="0" data-purecounter-end="125" data-purecounter-duration="1"
                 class="purecounter"></span><p class="ltr">liters</p>
-        <a href="../Html-Files/list.html">Get List</a>
+        <a id="getListBtn-A+" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#be01fe;">
@@ -62,7 +62,7 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="../Html-Files/list.html">Get List</a>
+        <a id="getListBtn-O+" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#01b4ff;">
@@ -71,7 +71,7 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="78" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="../Html-Files/list.html">Get List</a>
+        <a id="getListBtn-B+" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#fc7200;">
@@ -80,7 +80,7 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="../Html-Files/list.html">Get List</a>
+        <a id="getListBtn-AB+" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#010efe;">
@@ -89,7 +89,7 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="72" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="../Html-Files/list.html">Get List</a>
+        <a id="getListBtn-A" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#01d0ff;">
@@ -98,7 +98,7 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="../Html-Files/list.html">Get List</a>
+        <a id="getListBtn-O" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#00fe11;">
@@ -107,7 +107,7 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="62" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="../Html-Files/list.html">Get List</a>
+        <a id="getListBtn-B" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#fe0101;">
@@ -116,7 +116,7 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="../Html-Files/list.html">Get List</a>
+        <a  id="getListBtn-AB" class="get-list-btn">Get List</a>
     </div>
     </div>
 </div>
@@ -207,10 +207,12 @@ Blood Bank
       </svg>
     </div>
   </div>
-
-
-
-
+  <div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <div id="popupContent"></div>
+    </div>
+    </div>
       <script>
         document.addEventListener("DOMContentLoaded", function () {
           const backToTopButton = document.getElementById('back-to-top-container');
@@ -236,6 +238,7 @@ Blood Bank
         });
     
       </script>
+      <script src="../js/popupbloodlist.js"></script>
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="glightbox/js/glightbox.min.js"></script>
 <script src="php-email-form/validate.js"></script>
