@@ -406,6 +406,13 @@ form.php-email-form{
      <link rel="stylesheet" href="./Css-Files/aboutus.css" />
      <link rel="stylesheet" href="./Css-Files/testimonial.css" />
      <script src="chatboxx.js" defer></script>
+     <script>
+      function toggleMenu() {
+        const navMenu = document.querySelector('.nav_menu');
+        navMenu.classList.toggle('active');
+    }
+    
+     </script>
 </head>
 
 <body>
@@ -413,12 +420,18 @@ form.php-email-form{
     <div class="loader"></div>
   </div>
       <!-- ############# Header ############# -->
-      <header class="header_container nav-h">
+
+  
+      <header class="header_container">
+        <nav class="nav_menu">
         <div class="img">
           <img id="rd-logo"  style="width: 90px; height: auto;" src="images/rd.png"> 
+          <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <i class="bi bi-list"></i>
+        </button>
         </div>
-      <nav class="nav_menu">
-        <ul class="nav_link vis-h">
+
+        <ul class="nav_link">
           <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
           <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
           <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
@@ -427,15 +440,9 @@ form.php-email-form{
           <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
           <li><a href="Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a></li>
           <li><a href="rateus.html"><i class="bi bi-star"></i>Rate Us</a></li>
-
-          <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
-           <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
-         </ul>
-         <div class="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
+          <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li><br>
+          <li><a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a></li>
+        </ul>
       </nav>
      </header>
 
