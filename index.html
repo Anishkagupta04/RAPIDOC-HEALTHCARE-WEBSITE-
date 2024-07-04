@@ -48,6 +48,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
+      .emoji input {
+        display: none;
+      }
+      .emoji label {
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 5px;
+      }
+      .emoji input:checked + label {
+        background-color: rgb(41, 136, 138);
+      }
       .nav_menu{
         display: flex;
       }
@@ -94,6 +105,10 @@
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
+}
+.btn-get-started:hover{
+    background-color: green;
+    color: white;
 }
 select{
   padding: 1px;
@@ -254,20 +269,28 @@ option{
 }
 .avatar{
   margin: 20px 100px;
+  padding-left: 50px;
+  padding-right: 60px;
+ 
+ 
+
 }
 .textbox input{
-  width:200px;
+  width:240px;
   height: 40px;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 20px;
 }
 .btn{
-  margin-left: 50px;
-  width:240px;
+  margin-left: 2px;
+  width:230px;
   height: 40px;
   background-color: #00C896;
   border: none;
   font-size: 1rem;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
 }
 #appointment.appointment.section-bg{
   margin: 0px 280px 100px;
@@ -411,7 +434,7 @@ form.php-email-form{
         <ul class="nav_link">
           <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
           <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
-          <li><a href="Html-Files/news.html"><i class="bi bi-newspaper"></i> News</a></li>
+          <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
           <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
           <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
           <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
@@ -474,7 +497,7 @@ form.php-email-form{
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <div class="icon2"><i class="fas fa-dna"></i></div>
-              <h4 class="title"><a href="">Blood Test</a></h4>
+              <h4 class="title"><a href="test.html">Blood Test</a></h4>
               <p class="description"> Get your tests done to look for signs of disease or agents that cause disease.</p>
             </div>
           </div>
@@ -491,7 +514,7 @@ form.php-email-form{
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon4"><i class="fas fa-hand-holding-medical"></i></div>
-              <h4 class="title"><a href="">Medicine use</a></h4>
+              <h4 class="title"><a href="medicine.html">Medicine use</a></h4>
               <p class="description">Know what to use when to use and how to use.
               </p>
             </div>
@@ -653,17 +676,17 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 
         <div class="row no-gutters" >
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" id="abc">
             <div class="count-box">
               <i class="fas fa-user-md"></i>
               <span data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="1"
                 class="purecounter"></span>
               <p><strong>Doctors Available</strong> <br><br>Doctors listed on our website.</p><br>
-              <a href="">Find out more &raquo;</a>
+              <a href="#doctors">Find out more &raquo;</a>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" id="abc">
             <div class="count-box">
               <i class="fas fa-bed"></i>
               <span data-purecounter-start="0" data-purecounter-end="36" data-purecounter-duration="1"
@@ -673,7 +696,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" id="abc">
             <div class="count-box">
               <i class="fas fa-flask-vial"></i>
               <span data-purecounter-start="0" data-purecounter-end="23" data-purecounter-duration="1"
@@ -683,13 +706,13 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" id="abc">
             <div class="count-box">
               <i class="fas fa-trophy"></i>
               <span data-purecounter-start="0" data-purecounter-end="1250" data-purecounter-duration="1"
                 class="purecounter"></span>
               <p><strong>User Reviews</strong><br> <br>Over 1K positive reviews.</p><br>
-              <a href="">Find out more &raquo;</a>
+              <a href="#test">Find out more &raquo;</a>
             </div>
           </div>
 
@@ -712,7 +735,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
           <div class="align-items-stretch ">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-heartbeat"></i></div>
-              <h4><a href="">Clinics/Labs</a></h4>
+              <h4><a href="/Html-Files/input.html">Clinics/Labs</a></h4>
               <p>Locate the best healthcare facilities around you hassle-free.From routine check-ups to specialized treatments, find the right clinic or lab that meets your needs. Our database is updated regularly to ensure you have the most accurate information.</p>
             </div>
           </div>
@@ -771,7 +794,7 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
       <!-- Add Login Form for Patient Portal -->
       <div class="login-box">
         <div class="avatar">
-          <img src="img/avatar.png" alt="Avatar" >
+          <img src="img/avatar.png" height="220px" width="263px" alt="Avatar" >
         </div>
         <form>
           <div class="textbox">
@@ -1234,71 +1257,100 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
 
 
     <!-- Feedback System-->
-    <section id="feedback" class="feed">
+  <section id="feedback" class="feed">
       <div class="feedback">
         <h1>Give Us Your Valuable Feedback.</h1>
         <p>Your feedback is very important for Rapidoc.</p>
         <div class="emoji">
-          <button class="btn normal">&#128578;</button>
-          <button class="btn normal">&#128515;</button>
-          <button class="btn normal">&#128519;</button>
-          <button class="btn normal">&#128531;</button>
-          <button class="btn normal">&#128532;</button>
-          <button class="btn normal">&#128545;</button>
+          <input type="radio" id="emoji1" name="emoji" value="😊" style="display: none;">
+          <label for="emoji1" style="font-size: 2rem; cursor: pointer; padding: 5px;">😊</label>
+          <input type="radio" id="emoji2" name="emoji" value="😁" style="display: none;">
+          <label for="emoji2" style="font-size: 2rem; cursor: pointer; padding: 5px;">😁</label>
+          <input type="radio" id="emoji3" name="emoji" value="😇" style="display: none;">
+          <label for="emoji3" style="font-size: 2rem; cursor: pointer; padding: 5px;">😇</label>
+          <input type="radio" id="emoji4" name="emoji" value="😕" style="display: none;">
+          <label for="emoji4" style="font-size: 2rem; cursor: pointer; padding: 5px;">😕</label>
+          <input type="radio" id="emoji5" name="emoji" value="😔" style="display: none;">
+          <label for="emoji5" style="font-size: 2rem; cursor: pointer; padding: 5px;">😔</label>
+          <input type="radio" id="emoji6" name="emoji" value="😡" style="display: none;">
+          <label for="emoji6" style="font-size: 2rem; cursor: pointer; padding: 5px;">😡</label>
         </div>
+        <p id="mood-text" style="font-size: 1rem; font-weight: bold;"></p>
         <p class="ques">What you want to say?</p>
         <textarea id="textarea" cols="20" rows="5"></textarea>
-        <p class="ques">Are you satisfied with rapidoc?</p>
+        <p class="ques">Are you satisfied with Rapidoc?</p>
         <div class="radiobtn">
           <div class="one">
-            <input class="input" type="radio" name="one" id="Yes" />
+            <input class="input" type="radio" name="satisfaction" id="Yes" />
             <label class="label" for="Yes">Yes</label>
           </div>
           <div class="one">
-            <input class="input" type="radio" name="one" id="No" />
+            <input class="input" type="radio" name="satisfaction" id="No" />
             <label class="label" for="No">No</label>
           </div>
         </div>
       </div>
       <div class="info">
         <div class="center">
-          <button class="btn button" style="text-align: center; font-weight: 700;">Submit</button>
+          <button class="btn button" style="text-align: center; font-weight: 700; padding-bottom:40px;" onclick="submitFeedback(event)">Submit</button>
         </div>
-
       </div>
     </section>
-	  <script>
-  function submitFeedback(event) {
-    event.preventDefault();
-
-    // Get the feedback data
-    const feedbackText = document.getElementById('textarea').value;
-    const satisfaction = document.querySelector('input[name="satisfaction"]:checked');
-
-    if (!satisfaction) {
-      alert('Please select your satisfaction level.');
-      return;
-    }
-
-    // Here you would normally send the feedback to the server
-    // For this example, we'll just display a confirmation message
-
-    // Display the confirmation message
-    const confirmationMessage = document.getElementById('confirmation-message');
-    confirmationMessage.style.display = 'block';
-
-    // Reset the form
-    document.getElementById('textarea').value = '';
-    document.querySelector('input[name="satisfaction"]:checked').checked = false;
-
-    // Hide the confirmation message after a few seconds
-    setTimeout(() => {
-      confirmationMessage.style.display = 'none';
-    }, 6000);
-  }
-</script>
-
-
+    <div id="overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); display: none; justify-content: center; align-items: center; z-index: 1000;">
+      <div id="confirmation-message" style="width: 80%; height: 80%; color: #1c413b; font-size: 50px; font-weight: bold; text-align: center; background-color: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 10px; display: flex; justify-content: center; align-items: center;">
+        Thank you for your feedback!
+      </div>
+    </div>
+    <script>
+      const emojiLabels = document.querySelectorAll('.emoji label');
+      const moodText = document.getElementById('mood-text');
+    
+      emojiLabels.forEach(label => {
+        label.addEventListener('click', () => {
+          const emoji = label.innerHTML;
+          let mood = '';
+          switch (emoji) {
+            case '😊':
+              mood = 'Highly Satisfied';
+              break;
+            case '😁':
+              mood = 'Satisfied';
+              break;
+            case '😇':
+              mood = 'Average';
+              break;
+            case '😕':
+              mood = 'Confused';
+              break;
+            case '😔':
+              mood = 'Dissatisfied';
+              break;
+            case '😡':
+              mood = 'Highly Dissatisfied';
+              break;
+          }
+          moodText.textContent = `Mood: ${mood}`;
+        });
+      });
+    
+      function submitFeedback(event) {
+        event.preventDefault();
+        const feedbackText = document.getElementById('textarea').value;
+        const selectedEmoji = document.querySelector('input[name="emoji"]:checked');
+        if (!feedbackText.trim() || !selectedEmoji) {
+          alert('Please fill the feedback form and select your satisfaction level');
+          return;
+        }
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'flex';
+        document.body.classList.add('blur');
+        setTimeout(() => {
+          overlay.style.display = 'none';
+          document.body.classList.remove('blur');
+          location.reload(true);
+        }, 1000);
+      }
+    </script>
 
   </main><!-- End #main -->
   <!-- ############### Footer ############### -->
@@ -1321,9 +1373,9 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
                 <section>
                   <h4>Explore</h4><br>
                   <ul class="links">
-                    <li><a href="#">Appointment</a></li>
+                    <li><a href="Html-Files/appointment.html">Appointment</a></li>
                     <li><a href="#">Patient Portal</a></li>
-                    <li><a href="#">Login account</a></li>
+                    <li><a href="login.html">Login account</a></li>
                     <li><a href="#">Helplines</a></li>
                     <li><a href="#">Location</a></li>
                   </ul>
@@ -1331,11 +1383,12 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
                 <section>
                   <h4>Legal</h4><br>
                   <ul class="links">
-                    <li><a href="#">Customer Agreement</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
+                    <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+                    <li><a href="Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
                     <li><a href="#">GDPR</a></li>
                     <li><a href="#">Security</a></li>
-                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#test">Testimonials</a></li>
                   </ul>
                 </section>
                 <section class="footer-col">
