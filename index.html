@@ -1285,15 +1285,43 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
                 <section class="footer-col">
                   <h4>RAPIDOC Newsletter</h4><br>
                   <p>
-                    Subscribe to our newsletter for a weekly dose
-                    of news, updates, helpful tips, and
-                    exclusive offers.
+                      Subscribe to our newsletter for a weekly dose
+                      of news, updates, helpful tips, and
+                      exclusive offers.
                   </p>
                   <form action="#" class="subscribe-form">
-                    <input type="email" placeholder="Your email" required>
-                    <button type="submit">SUBSCRIBE</button>
+                      <input type="email" placeholder="Your email" required>
+                      <button type="submit">SUBSCRIBE</button>
                   </form>
-                </section>
+                  <p class="confirmation-message">Thank you for subscribing!</p>
+              </section>
+              <style>
+                .confirmation-message {
+                    display: none;
+                    color: green;
+                    margin-top: 10px;
+                }
+            </style>
+          
+              <script>
+                  document.querySelector('.subscribe-form').addEventListener('submit', function(event) {
+                      event.preventDefault(); // Prevent the form from submitting in the traditional way
+          
+                      // Here you would normally send the form data to the server using fetch or XMLHttpRequest
+                      // For demonstration purposes, we'll just show the confirmation message
+          
+                      const confirmationMessage = document.querySelector('.confirmation-message');
+                      confirmationMessage.style.display = 'block'; // Show the confirmation message
+          
+                      // Clear the input field
+                      this.querySelector('input[type="email"]').value = '';
+          
+                      // Optionally, you can hide the confirmation message after a few seconds
+                      setTimeout(() => {
+                          confirmationMessage.style.display = 'none';
+                      }, 5000); // Hide after 5 seconds
+                  });
+                  </script>
             </div>
         </div>
     </div>
@@ -1309,19 +1337,27 @@ document.querySelectorAll('.about-us-location').forEach(function(element) {
                  color: #fff;
                 }
               </style>
-            <div class="social-wrapper">
-              <div class="social-links">
-              <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
-              <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
-              <!-- <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a> -->
-                <a href="https://www.twitter.com"><div><img src="twitter.png" style="width: 16px; height: 15px;"></div></a>
-              <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
-               <a href="#" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
-              <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
-              <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
-              <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
+              <div class="social-wrapper">
+                <div class="social-links">
+                <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+                <a href="https://www.instagram.com" target="_blank">
+                  <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.twitter.com" target="_blank">
+                  <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+                  <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+              </a>
+              
+              <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a>
+              <a href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                </div>
               </div>
-            </div>
       </div>
     </div>
 </footer>
