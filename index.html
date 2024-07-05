@@ -39,7 +39,7 @@
   <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="remixicon/remixicon.css" rel="stylesheet">
   <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="Css-Files/appointment.css">                    
+  <link href="Css-Files/appointment.css" rel="stylesheet">
   <link href="patient-portal.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -48,7 +48,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
-    .emoji input {
+  .emoji input {
       display: none;
     }
 
@@ -219,136 +219,156 @@
         right: 0;
       }
     }
-}
-/*Preloader CSS*/
-.pre{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 2s ease-out, visibility 2s ease-out;
-  opacity: 1;
-  visibility: visible;
-  z-index: 9999; 
-}
 
-.pre--hidden {
-  opacity: 0;
-  visibility: hidden;
-}
+    /*Preloader CSS*/
+    .pre {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 2s ease-out, visibility 2s ease-out;
+      opacity: 1;
+      visibility: visible;
+      z-index: 9999;
+    }
 
-.loader {
-  display: block;
-  position: relative;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #55a5ea;
-  animation: spin 3s linear infinite;
-}
+    .pre--hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
 
-.loader:before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #3fbcc0c6;
-  animation: spin 3s linear infinite;
-}
+    .loader {
+      display: block;
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #55a5ea;
+      animation: spin 3s linear infinite;
+    }
 
-.loader:after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #fff;
-  animation: spin 1.5s linear infinite;
-}
+    .loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #3fbcc0c6;
+      animation: spin 3s linear infinite;
+    }
 
-@keyframes spin {
-  0% {
-      transform: rotate(0deg);
-  }
-  100% {
-      transform: rotate(360deg);
-  }
-}
-    
-.avatar{
-  margin: 20px 100px;
-  padding-left: 50px;
-  padding-right: 60px;
-}
-    
-.textbox input{
-  width:240px;
-  height: 40px;
-  align-items: center;
-  margin-left: 10px;
-  margin-right: 20px;
-}
-    
-.btn{
-  margin-left: 2px;
-  width:230px;
-  height: 40px;
-  background-color: #00C896;
-  border: none;
-  font-size: 1rem;
-  border-radius: 20px;
-  margin-bottom: 20px; 
-}
+    .loader:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #fff;
+      animation: spin 1.5s linear infinite;
+    }
 
-.loader--hidden{
-  opacity: 0;
-  visibility: hidden;
-}
-    </style>
-    <style>
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .avatar {
+      margin: 20px 100px;
+      padding-left: 50px;
+      padding-right: 60px;
+    }
+
+    .textbox input {
+      width: 240px;
+      height: 40px;
+      align-items: center;
+      margin-left: 10px;
+      margin-right: 20px;
+    }
+
+    .btn {
+      margin-left: 2px;
+      width: 230px;
+      height: 40px;
+      background-color: #00C896;
+      border: none;
+      font-size: 1rem;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .loader--hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  </style>
+  <style>
 
 /* Remove bottom margin from name and email inputs */
-#name, #email {
+#name,
+#email {
   margin-bottom: 0;
 }
 
 /* Remove top margin from email and location inputs */
-#email, #location {
+#email,
+#location {
   margin-top: -50px;
 }
 
 /* Remove <br> tags if present in HTML */
-#name + br, #email + br {
+#name+br,
+#email+br {
   display: none;
 }
 
 /* Optional: Add a small border or visual separator if desired */
-#name, #email {
-  border-bottom: none;
+#name,
+#email {
+      border-bottom: none;
 }
-#email, #location {
-  border-top: 1px solid #ccc; /* Adjust color as needed */
+
+#email,
+#location {
+      border-top: 1px solid #ccc;
+      /* Adjust color as needed */
 }
-    </style>
-    <link rel="stylesheet" href="chatbox.css">
-     <!-- Google Fonts Link For Icons chatboxx -->
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-     <link rel="stylesheet" href="./Css-Files/aboutus.css" />
-     <link rel="stylesheet" href="./Css-Files/testimonial.css" />
-     <script src="chatboxx.js" defer></script>
+
+#progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 6px;
+      background-color: #3fbcc0;
+      z-index: 9999;
+}
+  </style>
+  <link rel="stylesheet" href="chatbox.css">
+  <!-- Google Fonts Link For Icons chatboxx -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="stylesheet" href="./Css-Files/aboutus.css" />
+  <link rel="stylesheet" href="./Css-Files/testimonial.css" />
+  <script src="chatboxx.js" defer></script>
 </head>
 
 <body>
