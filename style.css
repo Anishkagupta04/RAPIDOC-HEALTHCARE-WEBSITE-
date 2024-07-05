@@ -47,16 +47,18 @@ h6 {
 
 .header_container {
   background-color: #022a2d;
-  opacity: 0.9;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
   height: 85px;
   margin: auto;
   margin-top: 0px;
   /* Adjust this value to move the header down */
   padding-top: 15px;
+  z-index: 555;
 }
 
 .container {
