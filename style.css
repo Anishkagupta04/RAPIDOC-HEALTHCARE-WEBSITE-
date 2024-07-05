@@ -47,16 +47,18 @@ h6 {
 
 .header_container {
   background-color: #022a2d;
-  opacity: 0.9;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
   height: 85px;
   margin: auto;
   margin-top: 0px;
   /* Adjust this value to move the header down */
   padding-top: 15px;
+  z-index: 555;
 }
 
 .container {
@@ -1551,17 +1553,15 @@ footer {
 
 #back-to-top-container {
   position: fixed;
-  bottom: 100px;
-  right: 47px;
+  bottom: 15px;
+  right: 77px;
   cursor: pointer;
   z-index: 1000;
 }
 
 .circle {
-  background-color: #00093d;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
+  border-radius: 50%; 
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1569,26 +1569,18 @@ footer {
 }
 
 #back-to-top {
-  width: 40px;
-  height: 40px;
-  fill: #4178c0;
-  color: #00093d;
+  width: 55px;
+  height: 55px;
+  fill: hwb(181 16% 46%);
+  color: hwb(181 11% 13%);
   transition: fill 0.3s;
 }
 
 #back-to-top:hover {
-  fill: hsl(214, 50%, 60%);
+  transform: scale(1.1);
 }
 
-.back-to-top:hover {
-  background: #3fbcc0cd;
-  color: #fff;
-}
 
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
-}
 
 /* Style for pateint portal  */
 /* -----***************************************-----  */
@@ -1650,29 +1642,6 @@ button {
   border-radius: 4px;
   cursor: pointer;
   z-index: 1000;
-}
-
-.circle {
-  background-color: #00093d;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s;
-}
-
-#back-to-top {
-  width: 40px;
-  height: 40px;
-  fill: #4178c0;
-  color: #00093d;
-  transition: fill 0.3s;
-}
-
-#back-to-top:hover {
-  fill: hsl(214, 50%, 60%);
 }
 
 
@@ -1899,14 +1868,15 @@ footer {
 /*? socials */
 .social-wrapper {
   display: flex;
-  gap: 0.5rem;
-  margin: 0 auto;
+    gap: 0.5rem;
+    margin: 0 auto;
 }
 
 .social-links {
   display: inline-flex;
   gap: 0.5rem;
   align-items: center;
+  
 }
 
 .social-links img {
