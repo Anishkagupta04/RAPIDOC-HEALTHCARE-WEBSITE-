@@ -119,7 +119,7 @@
 </head>
 <body>
 
-<form action="submit_appointment.php" method="post" class="appointment-form">
+<form id="appointmentForm" class="appointment-form">
     <div class="form-group">
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -172,6 +172,19 @@
 
     <button type="submit">Make an Appointment</button>
 </form>
+
+<script>
+    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Simulate form submission
+        setTimeout(function() {
+            alert('Appointment successful');
+            // Optionally, clear the form fields after submission
+            document.getElementById('appointmentForm').reset();
+        }, 500); // Simulate a delay for form submission
+    });
+</script>
 
 </body>
 </html>
