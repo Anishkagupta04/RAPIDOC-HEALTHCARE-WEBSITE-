@@ -1,3 +1,9 @@
+#appointment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .appointment-container {
     width: 90%;
     max-width: 900px;
@@ -11,23 +17,23 @@
 }
 
 .section-title h2 {
-    font-size: 2.0rem;
+    font-size: 1.6rem;
     margin: 15px 0 0 0;
     color: #fff;
     font-weight: bold;
 }
 
 .section-title p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #666;
     font-weight: normal;
-    margin-top: 20px;
+    margin: 20px 0 0 0;
 }
 
 .php-email-form {
-    display: inline;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-self: center;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -35,6 +41,8 @@
 
 .form-group {
     margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .form-group label {
@@ -79,26 +87,26 @@
 }
 
 .btn-primary {
-    width: 40%;
-    height: 40%;
     text-align: center;
+    justify-content: center;
     background-color: #29888A;
     color: #fff;
     font-size: 1.2rem;
-    border: 1px solid #30a3a5;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
-    margin: 20px 0px 30px 0;
-    transition: background-color 0.3s;
+    margin: 20px 0 30px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s; 
 }
 
 .btn-primary:hover {
     background-color: #30a3a5;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive adjustments */
-
 /* For tablets and smaller screens */
 @media (max-width: 768px) {
     .appointment-container {
