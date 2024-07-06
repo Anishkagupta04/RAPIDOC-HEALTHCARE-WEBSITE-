@@ -1105,7 +1105,8 @@ section {
   padding: 20px;
   animation: slideInFromBottom 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
   transition: opacity 0.3s ease-in-out;
-  background: linear-gradient(155deg, #3c696a, #163530);
+  /* background: linear-gradient(155deg, #3c696a, #163530); */
+  background-color: #3fbcc051;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(6, 130, 130, 0.1);
   width: 100%;
@@ -1165,7 +1166,7 @@ section {
   display: block;
   margin-top: 0px;
   width: 100%;
-  color: rgb(190, 190, 190);
+  color: rgb(251, 250, 250);
   margin-bottom: 10px;
 }
 .feedback-form button {
@@ -1233,7 +1234,7 @@ section {
 }
 
 .feedback-form button[type="submit"] {
-  background-color: #29888a;
+  background-color: hwb(181 16% 46%);;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -1279,7 +1280,8 @@ section {
 }
 
 .popup-content {
-  background: linear-gradient(155deg, #effcfc, #185c51);
+  /* background: linear-gradient(155deg, #effcfc, #185c51); */
+  background-color: #113435;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -1304,13 +1306,14 @@ section {
 }
 
 .popup h2 {
-  color: #055a5b;
+  /* color: #055a5b; */
+  color: white;
   font-size: 30px;
 }
 
 .popup p {
   margin: 16px 0;
-  color: #cecece;
+  color: #ececec;
 }
 .popup img {
   margin-top: 20px;
