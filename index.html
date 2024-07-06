@@ -39,7 +39,6 @@
   <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="remixicon/remixicon.css" rel="stylesheet">
   <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="Css-Files/appointment.css" rel="stylesheet">
   <link href="patient-portal.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -48,7 +47,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
-  .emoji input {
+    .emoji input {
       display: none;
     }
 
@@ -335,82 +334,109 @@
     }
   </style>
   <style>
-   /* Appointment section Styling to align it to center */
-.appointment .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center container contents */
-  border-radius: 10px;
-  margin: auto;
+   
+
+    /* Appointment section Styling to align it to center */
+    .appointment .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Center container contents */
+      border-radius: 10px;
+      margin: auto;
+    }
+
+    .appointment form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Center form contents */
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .appointment .form-group {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .appointment input,
+    .appointment select,
+    .appointment button {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    .appointment .text-center {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .appointment button[type="submit"] {
+      width: auto;
+      padding: 10px 20px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .php-email-form .form-control,
+    .php-email-form .form-select {
+      margin: 0;
+      padding: 10px;
+    }
+
+    .php-email-form .form-group,
+    .php-email-form .row {
+      margin: 0;
+      padding: 10px;
+    }
+
+    #name,
+    #email {
+      margin-bottom: 10px;
+      border-bottom: none;
+      height: 7vh;
+    }
+
+    #email,
+    #location {
+      border-top: 1px solid #ccc;
+      /* Adjust color as needed */
+      margin-top: 0;
+    }
+
+    /* Remove <br> tags if present in HTML */
+    #name+br,
+    #email+br {
+      display: none;
+    }
+
+    .section-bg {
+    background-color: #1c413b;
+    width: 700px;
+    padding: 40px;
 }
 
-.appointment form {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center form contents */
-  width: 100%;
-  max-width: 600px;
+#appointment.appointment.section-bg {
+    margin: auto;
 }
 
-.appointment .form-group {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15px;
+select {
+    padding: 1px;
+    background-color: #f8f8f8;
+    color: #374151;
+    height: 7vh;
+    width: 17vh;
 }
 
-.appointment input,
-.appointment select,
-.appointment button {
-  width: 100%;
-  max-width: 500px;
-}
 
-.appointment .text-center {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
 
-.appointment button[type="submit"] {
-  width: auto;
-  padding: 10px 20px;
-  display: block;
-  margin: 0 auto;
-}
-
-.php-email-form .form-control,
-.php-email-form .form-select {
-  margin: 0;
-  padding: 10px;
-}
-
-.php-email-form .form-group,
-.php-email-form .row {
-  margin: 0;
-  padding: 0;
-}
-
-#name,
-#email {
-  margin-bottom: 15px;
-  border-bottom: none;
-}
-
-#email,
-#location {
-  border-top: 1px solid #ccc; /* Adjust color as needed */
-  margin-top: 0;
-}
-
-/* Remove <br> tags if present in HTML */
-#name+br,
-#email+br {
-  display: none;
-}
-
-#progressBar {
+    #progressBar {
       position: fixed;
       top: 0;
       left: 0;
@@ -419,11 +445,11 @@
       background-color: #3fbcc0;
       z-index: 9999;
     }
-    
+
     .contact .php-email-form {
-    width: 300%;
-    background: #000;
-}
+      width: 300%;
+      background: #000;
+    }
   </style>
   <link rel="stylesheet" href="chatbox.css">
   <!-- Google Fonts Link For Icons chatboxx -->
@@ -840,124 +866,125 @@
       </div>
     </section><!-- End Services Section -->
     <!-- Patient Portal Section -->
-<section id="patient-portal" class="patient-portal">
-  <div class="container-patientportal">
-    <div class="section-title" id="section-patientportal">
-      <h2>Patient Portal</h2>
-      <p>Access your medical records, lab results, and prescription history securely.</p>
-    </div>
-    <div class="container">
-
-      <!-- Add Login Form for Patient Portal -->
-      <div class="login-box">
-        <div class="avatar">
-          <img src="img/avatar.png" height="220px" width="263px" alt="Avatar" >
+    <section id="patient-portal" class="patient-portal">
+      <div class="container-patientportal">
+        <div class="section-title" id="section-patientportal">
+          <h2>Patient Portal</h2>
+          <p>Access your medical records, lab results, and prescription history securely.</p>
         </div>
-        <form>
-          <div class="textbox">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" name="username" required>
+        <div class="container">
+
+          <!-- Add Login Form for Patient Portal -->
+          <div class="login-box">
+            <div class="avatar">
+              <img src="img/avatar.png" height="220px" width="263px" alt="Avatar">
+            </div>
+            <form>
+              <div class="textbox">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username" name="username" required>
+              </div>
+              <br>
+              <div class="textbox">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" name="password" required>
+              </div>
+              <br>
+              <input type="submit" class="btn" value="SUBMIT">
+              <div class="register-link">
+                <a href="#">Not registered yet? Register Here</a>
+              </div>
+              <div class="forgot-password" id="forgot-password-patient-portal">
+                <a href="forgot-password.php">Forgot Your Password?</a>
+              </div>
+            </form>
           </div>
-          <br>
-          <div class="textbox">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" name="password" required>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="appointment section-bg">
+      <div class="container" style="border-radius: 10px;">
+        <div class="section-title">
+          <h2>Make an Appointment</h2>
+          <p>We listed the docs, we made you a form. You make us an appointment.</p>
+        </div>
+        <form action="successful_appointment.html" method="post" class="php-email-form">
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
           </div>
-          <br>
-          <input type="submit" class="btn" value="SUBMIT">
-          <div class="register-link">
-            <a href="#">Not registered yet? Register Here</a>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
           </div>
-          <div class="forgot-password" id="forgot-password-patient-portal">
-            <a href="forgot-password.php">Forgot Your Password?</a>
+          <div class="form-group">
+            <select name="location" id="location" class="form-select" required>
+              <option value="">Your Location</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Chennai">Chennai</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date"
+              required>
+            <script>
+              // To set value of minimum date in calendar
+              var currentDate = new Date();
+              var year = currentDate.getFullYear();
+              var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+              var day = currentDate.getDate().toString().padStart(2, '0');
+              var formattedDate = `${year}-${month}-${day}`;
+              document.getElementById('date').setAttribute('min', formattedDate);
+            </script>
+          </div>
+          <div class="form-group">
+            <select name="age" id="age" class="form-select" required>
+              <option value="">Select Age</option>
+              <option value="18 or below">18 or below</option>
+              <option value="18 to 55">18 to 55</option>
+              <option value="55 above">55 above</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select name="doctor" id="doctor" class="form-select" required>
+              <option value="">Select Doctor</option>
+              <option value="Doctor 1">Doctor 1</option>
+              <option value="Doctor 2">Doctor 2</option>
+              <option value="Doctor 3">Doctor 3</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select name="time-slot" id="time-slot" class="form-select" required>
+              <option value="">Select Time Slot</option>
+              <option value="9:00 AM">9:00 AM</option>
+              <option value="11:00 AM">11:00 AM</option>
+              <option value="2:00 PM">2:00 PM</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select name="hospital" id="hospital" class="form-select" required>
+              <option value="">Select Hospital</option>
+              <option value="Hospital 1">Hospital 1</option>
+              <option value="Hospital 2">Hospital 2</option>
+              <option value="Hospital 3">Hospital 3</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select name="opd-section" id="opd-section" class="form-select" required>
+              <option value="">Select OPD Section</option>
+              <option value="ENT">ENT</option>
+              <option value="Gynecologist">Gynecologist</option>
+            </select>
+          </div>
+          <div class="text-center">
+            <button type="submit">Make an Appointment</button>
           </div>
         </form>
       </div>
-    </div>
-  </div>
-</section>
-
-   <!-- Appointment Section -->
-<section id="appointment" class="appointment section-bg">
-  <div class="container" style="border-radius: 10px;">
-    <div class="section-title">
-      <h2>Make an Appointment</h2>
-      <p>We listed the docs, we made you a form. You make us an appointment.</p>
-    </div>
-    <form action="successful_appointment.html" method="post" class="php-email-form">
-      <div class="form-group">
-        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-      </div>
-      <div class="form-group">
-        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-      </div>
-      <div class="form-group">
-        <select name="location" id="location" class="form-select" required>
-          <option value="">Your Location</option>
-          <option value="Mumbai">Mumbai</option>
-          <option value="Delhi">Delhi</option>
-          <option value="Chennai">Chennai</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date"
-          required>
-        <script>
-          // To set value of minimum date in calendar
-          var currentDate = new Date();
-          var year = currentDate.getFullYear();
-          var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
-          var day = currentDate.getDate().toString().padStart(2, '0');
-          var formattedDate = `${year}-${month}-${day}`;
-          document.getElementById('date').setAttribute('min', formattedDate);
-        </script>
-      </div>
-      <div class="form-group">
-        <select name="age" id="age" class="form-select" required>
-          <option value="">Select Age</option>
-          <option value="18 or below">18 or below</option>
-          <option value="18 to 55">18 to 55</option>
-          <option value="55 above">55 above</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <select name="doctor" id="doctor" class="form-select" required>
-          <option value="">Select Doctor</option>
-          <option value="Doctor 1">Doctor 1</option>
-          <option value="Doctor 2">Doctor 2</option>
-          <option value="Doctor 3">Doctor 3</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <select name="time-slot" id="time-slot" class="form-select" required>
-          <option value="">Select Time Slot</option>
-          <option value="9:00 AM">9:00 AM</option>
-          <option value="11:00 AM">11:00 AM</option>
-          <option value="2:00 PM">2:00 PM</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <select name="hospital" id="hospital" class="form-select" required>
-          <option value="">Select Hospital</option>
-          <option value="Hospital 1">Hospital 1</option>
-          <option value="Hospital 2">Hospital 2</option>
-          <option value="Hospital 3">Hospital 3</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <select name="opd-section" id="opd-section" class="form-select" required>
-          <option value="">Select OPD Section</option>
-          <option value="ENT">ENT</option>
-          <option value="Gynecologist">Gynecologist</option>
-        </select>
-      </div>
-      <div class="text-center">
-        <button type="submit">Make an Appointment</button>
-      </div>
-    </form>
-  </div>
-</section>
-<!-- End Appointment Section -->
+    </section>
+    <!-- End Appointment Section -->
 
 
     <!-- ################# Doctors Section ################# -->
@@ -1066,8 +1093,7 @@
             }
           </style>
         </div><br>
-        <div class="row mt-2"
-          style="display: flex; flex-direction: row; align-items: stretch;">
+        <div class="row mt-2" style="display: flex; flex-direction: row; align-items: stretch;">
           <div class="col-lg-4">
             <div class="info">
               <div class="address">
