@@ -1105,7 +1105,7 @@ section {
   padding: 20px;
   animation: slideInFromBottom 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
   transition: opacity 0.3s ease-in-out;
-  background: linear-gradient(155deg, #baf7f7, #023a3b);
+  background: linear-gradient(155deg, #3c696a, #163530);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(6, 130, 130, 0.1);
   width: 100%;
@@ -1115,11 +1115,11 @@ section {
 }
 
 .feedback-form h2 {
-  color: #03484e;
-  font-size: 30px;
+  /* color: #2b8d8f; */
+  font-size: 31px;
   margin-bottom: 15px;
   text-align: center;
-  font-weight: 900 !important;
+  font-weight: 1000 !important;
 }
 
 @keyframes slideInFromBottom {
@@ -1146,7 +1146,7 @@ section {
 }
 
 .feedback-form p {
-  color: #666;
+  color: #d7d4d4;
   font-size: 17px;
   margin-bottom: 20px;
   text-align: center;
@@ -1165,6 +1165,7 @@ section {
   display: block;
   margin-top: 0px;
   width: 100%;
+  color: rgb(190, 190, 190);
   margin-bottom: 10px;
 }
 .feedback-form button {
@@ -1190,7 +1191,7 @@ section {
   /* margin-bottom: 5px; */
   margin-top: 9px;
   font-weight: 600;
-  color: #333;
+  color: #fff;
 }
 .feedback-form input {
   margin-top: 10px;
@@ -1270,7 +1271,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.652);
+  background: rgba(0, 0, 0, 0.497);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1278,11 +1279,15 @@ section {
 }
 
 .popup-content {
-  background: linear-gradient(155deg, #effcfc, #b2fbfb);
+  background: linear-gradient(155deg, #effcfc, #185c51);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   position: relative;
+}
+.popup-content a {
+  text-decoration: none;
+  color: white;
 }
 
 .popup-close {
@@ -1305,7 +1310,7 @@ section {
 
 .popup p {
   margin: 16px 0;
-  color: #494949;
+  color: #cecece;
 }
 .popup img {
   margin-top: 20px;
