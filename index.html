@@ -1351,106 +1351,112 @@ select {
 
     <!-- testimonial section -->
 
-
     <!-- Feedback System-->
-    <section id="feedback" class="feed">
-      <div class="feedback">
-        <h1>Give Us Your Valuable Feedback.</h1>
-        <p>Your feedback is very important for Rapidoc.</p>
-        <div class="emoji">
-          <input type="radio" id="emoji1" name="emoji" value="😊" style="display: none;">
-          <label for="emoji1" style="font-size: 2rem; cursor: pointer; padding: 5px;">😊</label>
-          <input type="radio" id="emoji2" name="emoji" value="😁" style="display: none;">
-          <label for="emoji2" style="font-size: 2rem; cursor: pointer; padding: 5px;">😁</label>
-          <input type="radio" id="emoji3" name="emoji" value="😇" style="display: none;">
-          <label for="emoji3" style="font-size: 2rem; cursor: pointer; padding: 5px;">😇</label>
-          <input type="radio" id="emoji4" name="emoji" value="😕" style="display: none;">
-          <label for="emoji4" style="font-size: 2rem; cursor: pointer; padding: 5px;">😕</label>
-          <input type="radio" id="emoji5" name="emoji" value="😔" style="display: none;">
-          <label for="emoji5" style="font-size: 2rem; cursor: pointer; padding: 5px;">😔</label>
-          <input type="radio" id="emoji6" name="emoji" value="😡" style="display: none;">
-          <label for="emoji6" style="font-size: 2rem; cursor: pointer; padding: 5px;">😡</label>
-        </div>
-        <p id="mood-text" style="font-size: 1rem; font-weight: bold;"></p>
-        <p class="ques">What you want to say?</p>
-        <textarea id="textarea" cols="20" rows="5"></textarea>
-        <p class="ques">Are you satisfied with Rapidoc?</p>
-        <div class="radiobtn">
-          <div class="one">
-            <input class="input" type="radio" name="satisfaction" id="Yes" />
-            <label class="label" for="Yes">Yes</label>
-          </div>
-          <div class="one">
-            <input class="input" type="radio" name="satisfaction" id="No" />
-            <label class="label" for="No">No</label>
-          </div>
-        </div>
-      </div>
-      <div class="info">
-        <div class="center">
-          <button class="btn button" style="text-align: center; font-weight: 700; padding-bottom:40px;"
-            onclick="submitFeedback(event)">Submit</button>
-        </div>
-      </div>
-    </section>
-    <div id="overlay"
-      style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); display: none; justify-content: center; align-items: center; z-index: 1000;">
-      <div id="confirmation-message"
-        style="width: 80%; height: 80%; color: #1c413b; font-size: 50px; font-weight: bold; text-align: center; background-color: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 10px; display: flex; justify-content: center; align-items: center;">
-        Thank you for your feedback!
+<div class="feedback-wrapper">
+  <div class="feedback-form">
+    <h2>We'd Love Your Feedback!</h2>
+    <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> Healthcare</p>
+    <div>
+      <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
+      <div class="rating-container">
+        <button type="button" onclick="handleRatingChange(1)">☆</button>
+        <button type="button" onclick="handleRatingChange(2)">☆</button>
+        <button type="button" onclick="handleRatingChange(3)">☆</button>
+        <button type="button" onclick="handleRatingChange(4)">☆</button>
+        <button type="button" onclick="handleRatingChange(5)">☆</button>
       </div>
     </div>
-    <script>
-      const emojiLabels = document.querySelectorAll('.emoji label');
-      const moodText = document.getElementById('mood-text');
+    <form id="feedback-form" onsubmit="handleSubmit(event)">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <label for="feedback">Your Feedback</label>
+      <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+</div>
 
-      emojiLabels.forEach(label => {
-        label.addEventListener('click', () => {
-          const emoji = label.innerHTML;
-          let mood = '';
-          switch (emoji) {
-            case '😊':
-              mood = 'Highly Satisfied';
-              break;
-            case '😁':
-              mood = 'Satisfied';
-              break;
-            case '😇':
-              mood = 'Average';
-              break;
-            case '😕':
-              mood = 'Confused';
-              break;
-            case '😔':
-              mood = 'Dissatisfied';
-              break;
-            case '😡':
-              mood = 'Highly Dissatisfied';
-              break;
-          }
-          moodText.textContent = `Mood: ${mood}`;
-        });
-      });
+<div id="popup" class="popup" style="display: none;">
+  <div class="popup-content">
+    <h2>Thank you for your Feedback! 💚</h2>
+    <div class="popup-icon">
+      <img src="/Feedback Tick.png" width="84" alt="✔️">
+    </div>
+    <p>Your feedback has been received.<br> We appreciate the input you provide.</p>
+    <button class="popup-button" onclick="closePopup()"><a class="active" aria-current="page">Back to Home</a></button>
+  </div>
+</div>
 
-      function submitFeedback(event) {
-        event.preventDefault();
-        const feedbackText = document.getElementById('textarea').value;
-        const selectedEmoji = document.querySelector('input[name="emoji"]:checked');
-        if (!feedbackText.trim() || !selectedEmoji) {
-          alert('Please fill the feedback form and select your satisfaction level');
-          return;
-        }
-        const overlay = document.getElementById('overlay');
-        overlay.style.display = 'flex';
-        document.body.classList.add('blur');
-        setTimeout(() => {
-          overlay.style.display = 'none';
-          document.body.classList.remove('blur');
-          location.reload(true);
-        }, 1000);
+<script>
+  let rating = null;
+
+  function handleRatingChange(value) {
+    rating = value;
+    updateStars();
+  }
+
+  function updateStars() {
+    const buttons = document.querySelectorAll('.rating-container button');
+    buttons.forEach((button, index) => {
+      if (index < rating) {
+        button.textContent = '★';
+        button.classList.add('filled');
+      } else {
+        button.textContent = '☆';
+        button.classList.remove('filled');
       }
-    </script>
+    });
+  }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const feedback = document.getElementById('feedback').value;
+
+    // For now, we will just simulate email sending success
+    console.log('Feedback submitted:', { name, email, rating, feedback });
+
+    // Reset the form fields
+    document.getElementById('feedback-form').reset();
+    rating = null;
+    updateStars();
+
+    // Show the popup
+    document.getElementById('popup').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+
+  const feedbackForm = document.querySelector('.feedback-form');
+
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function handleScroll() {
+    if (isElementInViewport(feedbackForm)) {
+      feedbackForm.classList.add('animate-feedback');
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+
+  updateStars();
+</script>
+    
   </main><!-- End #main -->
   <!-- ############### Footer ############### -->
   <br><br><br><br><br><br>
