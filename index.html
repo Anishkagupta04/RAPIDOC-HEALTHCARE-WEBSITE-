@@ -47,6 +47,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
+    html{
+      scroll-behavior: smooth;
+    }
     .emoji input {
       display: none;
     }
@@ -475,13 +478,12 @@ select {
       <ul class="nav_link vis-h">
         <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
         <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
-        <li><a href="Html-Files/news.html"><i class="bi bi-newspaper"></i> News</a></li>
+        <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
         <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
         <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
         <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
-        <li><a href="Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a></li>
-        <li><a href="rateus.html"><i class="bi bi-star"></i>Rate Us</a></li>
-
+        <li><a href="#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
+        <li><a href="#feedback"><i class="bi bi-star"></i>Rate Us</a></li>
         <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
         <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
       </ul>
@@ -1059,133 +1061,178 @@ select {
     </section>
     <!-- End Doctors Section -->
 
-    <!-- ################# Contact Section ################# -->
-    <section id="contact" class="contact">
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Located your appointment. Feel free to give us feedback and help us improve our digital med care.</p>
-      </div>
-      <div class="container">
-        <!--Google map-->
-        <div class="mapouter">
+   <!-- ################# Contact Section ################# -->
+  <!-- clicking on "contact us" directs to this section -->
+<section id="contact" class="contact"> 
+  <div class="section-title">
+      <h2>Contact</h2>
+      <p>Located your appointment. Feel free to give us feedback and help us improve our digital med care.</p>
+  </div>
+  <div class="container">
+      <!--Google map-->
+      <div class="mapouter">
           <div class="gmap_canvas">
-            <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"></iframe>
-            <a href="https://www.fnfgo.com/">FNF Mods</a>
+              <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"></iframe>
+              <a href="https://www.fnfgo.com/">FNF Mods</a>
           </div>
           <style>
-            .mapouter {
-              position: relative;
-              text-align: right;
-              width: 100%;
-              height: 363px;
-            }
+              .mapouter {
+                  position: relative;
+                  text-align: right;
+                  width: 100%;
+                  height: 363px;
+              }
 
-            .gmap_canvas {
-              overflow: hidden;
-              background: none !important;
-              width: 100%;
-              height: 363px;
-            }
+              .gmap_canvas {
+                  overflow: hidden;
+                  background: none !important;
+                  width: 100%;
+                  height: 363px;
+              }
 
-            .gmap_iframe {
-              height: 363px !important;
-            }
+              .gmap_iframe {
+                  height: 363px !important;
+              }
           </style>
-        </div><br>
-        <div class="row mt-2" style="display: flex; flex-direction: row; align-items: stretch;">
+      </div>
+      <br>
+      <div class="row mt-2" style="display: flex; flex-direction: row; align-items: stretch; justify-content: space-around;">
           <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="fa fa-location-dot"></i>
-                <h4>Location:</h4>
-                <p><a href="https://www.google.com/maps/search/?api=1&query=IGDTUW,Delhi" target="_blank">IGDTUW,
-                    Delhi</a></p>
+              <div class="info">
+                  <div class="address">
+                      <i class="fa fa-location-dot"></i>
+                      <h4>Location:</h4>
+                      <p><a href="https://www.google.com/maps/search/?api=1&query=IGDTUW,Delhi" target="_blank">IGDTUW, Delhi</a></p>
+                  </div>
+                  <div class="email">
+                      <i class="fa fa-envelope"></i>
+                      <h4>Email:</h4>
+                      <p><a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a></p>
+                  </div>
+                  <div class="phone">
+                      <i class="fa fa-phone"></i>
+                      <h4>Call:</h4>
+                      <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
+                  </div>
               </div>
-              <div class="email">
-                <i class="fa fa-envelope"></i>
-                <h4>Email:</h4>
-                <p><a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a></p>
-              </div>
-              <div class="phone">
-                <i class="fa fa-phone"></i>
-                <h4>Call:</h4>
-                <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
-              </div>
-            </div>
           </div>
           <div class="col-lg-8 mt-5 mt-lg-0">
-            <form id="contactForm" action="" role="form" class="php-email-form">
-              <div class="form-group">
-                <input type="text" name="name" class="form-control enhanced-input" id="name" placeholder="Your Name"
-                  required>
-              </div>
-              <div class="form-group mt-3">
-                <input type="email" class="form-control enhanced-input" name="email" id="email" placeholder="Your Email"
-                  required>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control enhanced-input" name="subject" id="subject" placeholder="Subject"
-                  required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control enhanced-textarea" name="message" rows="5" placeholder="Message"
-                  required></textarea>
-              </div>
-              <div class="text-center"><button type="submit" class="btn-submit">Send Message</button></div>
-            </form>
-            <div id="confirmationMessage" style="display:none; margin-top: 20px; color: green;">
-              Thank you for your message. We will get back to you shortly.
-            </div>
+              <form id="contactForm" action="" role="form" class="php-email-form">
+                  <div class="form-group">
+                      <input type="text" name="name" class="form-control enhanced-input" id="name" placeholder=" Your Name" required>
+                  </div>
+                  <div class="form-group mt-3">
+                      <input type="email" class="form-control enhanced-input" name="email" id="email" placeholder=" Your Email" required>
+                  </div>
+                  <div class="form-group mt-3">
+                      <input type="text" class="form-control enhanced-input" name="subject" id="subject" placeholder=" Subject" required>
+                  </div>
+                  <div class="form-group mt-3">
+                      <textarea class="form-control enhanced-textarea" name="message" rows="5" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="text-center"><button type="submit" class="btn-submit">Send Message</button></div>
+              </form>
+              <div id="confirmationMessage" class="confirmation-message">
+                Thank you for your message. We will get back to you shortly.
+                   </div>
           </div>
-        </div>
       </div>
-    </section>
+  </div>
+</section>
 
-    <style>
-      .enhanced-input {
-        padding: 10px;
-        border: 2px solid #ccc;
-        border-radius: 5px;
-        margin-bottom: 15px;
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+  body {
+      font-family: 'Poppins', sans-serif;
+  }
+
+  .section-title h2 {
+      font-size: 32px;
+      color: #000;
+      text-transform: uppercase;
+      position: relative;
+      font-weight: 700;
+      margin-bottom: 20px;
+  }
+
+  .section-title p {
+      font-size: 16px;
+      color: #000;
+      margin-bottom: 40px;
+  }
+
+  .enhanced-input, .enhanced-textarea {
+       border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #000;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s;
+       margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .enhanced-input:focus, .enhanced-textarea:focus {
+    border-color: #4cae4c;
+    background-color: #fff; color: #000;
+  }
+
+  .btn-submit {
+    padding: 10px 20px;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .btn-submit:hover {
+    background-color: #4cae4c;
+    transform: scale(1.05);
+  }
+
+  @keyframes fadeIn {
+      0% {
+          opacity: 0;
       }
-
-      .enhanced-textarea {
-        padding: 10px;
-        border: 2px solid #ccc;
-        border-radius: 5px;
-        margin-bottom: 15px;
-        resize: vertical;
+      100% {
+          opacity: 1;
       }
+  }
+  .confirmation-message {
+    display: none;
+    margin-top: 10px;
+    padding: 30px;
+    background-color: #e0f7fa;
+    color: #00796b;
+    border: 1px solid #00796b;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    animation: slideDown 1s forwards;
+  }
+</style>
 
-      .btn-submit {
-        padding: 10px 20px;
-        background-color: #55a5ea;
-        border: none;
-        border-radius: 5px;
-        color: white;
-        cursor: pointer;
-      }
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    // Display confirmation message
+    var confirmationMessage = document.getElementById('confirmationMessage');
+    confirmationMessage.style.display = 'block';
+    // Reset the form
+    event.target.reset();
+  
+    setTimeout(function() {
+      confirmationMessage.style.display = 'none';
+    }, 5000); //msg disappears after 5s
+  });
+</script>
+     
+          <!-- End Contact Section -->
 
-      .btn-submit:hover {
-        background-color: #4cae4c;
-      }
-    </style>
-
-    <script>
-      document.getElementById('contactForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent form submission
-        // Display confirmation message
-        document.getElementById('confirmationMessage').style.display = 'block';
-        // Reset the form
-        event.target.reset();
-      });
-    </script>
-
-
-
-
-    <!-- End Contact Section -->
 
     <!-- testimonial section -->
 
@@ -1420,9 +1467,9 @@ select {
           <section>
             <h4>Quick Links</h4><br>
             <ul class="links">
-              <li><a href="./index.html">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="#about">About Us</a></li>
-              <li><a href="./Html-Files/contact.html">Contact Us</a></li>
+              <li><a href="index.html#contact">Contact Us</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#doctors">Doctors</a></li>
               <li><a href="./faq.html">FAQ</a></li>
@@ -1432,10 +1479,10 @@ select {
             <h4>Explore</h4><br>
             <ul class="links">
               <li><a href="Html-Files/appointment.html">Appointment</a></li>
-              <li><a href="#">Patient Portal</a></li>
+              <li><a href="index.html#patient-portal">Patient Portal</a></li>
               <li><a href="login.html">Login account</a></li>
               <li><a href="#">Helplines</a></li>
-              <li><a href="#">Location</a></li>
+              <li><a href="index.html#contact">Location</a></li>
             </ul>
           </section>
           <section>
@@ -1446,7 +1493,7 @@ select {
               <li><a href="Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
               <li><a href="#">GDPR</a></li>
               <li><a href="#">Security</a></li>
-              <li><a href="#test">Testimonials</a></li>
+              <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
           <section class="footer-col">
@@ -1710,5 +1757,3 @@ select {
     };
   </script>
 </body>
-
-</html>
