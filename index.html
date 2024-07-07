@@ -1454,7 +1454,7 @@ select {
               <input type="email" placeholder="Your email" required>
               <button type="submit">SUBSCRIBE</button>
             </form>
-            <p class="confirmation-message">Thank you for subscribing!</p>
+            <p class="confirmation-message"></p>
           </section>
           <style>
             .confirmation-message {
@@ -1465,23 +1465,41 @@ select {
           </style>
 
           <script>
+            
             document.querySelector('.subscribe-form').addEventListener('submit', function (event) {
-              event.preventDefault(); // Prevent the form from submitting in the traditional way
+            event.preventDefault(); // Prevent the form from submitting in the traditional way
 
-              // Here you would normally send the form data to the server using fetch or XMLHttpRequest
-              // For demonstration purposes, we'll just show the confirmation message
+            const emailInput = this.querySelector('input[type="email"]');
+            const email = emailInput.value;
+            const confirmationMessage = document.querySelector('.confirmation-message');
 
-              const confirmationMessage = document.querySelector('.confirmation-message');
-              confirmationMessage.style.display = 'block'; // Show the confirmation message
+            // Simple email validation regex
+            emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-              // Clear the input field
-              this.querySelector('input[type="email"]').value = '';
+            if (emailRegex.test(email)) {
+            // If valid, show the confirmation message
+           confirmationMessage.textContent = 'Thank you for subscribing!';
+           confirmationMessage.style.display = 'block';
 
-              // Optionally, you can hide the confirmation message after a few seconds
-              setTimeout(() => {
-                confirmationMessage.style.display = 'none';
-              }, 5000); // Hide after 5 seconds
-            });
+           // Clear the input field
+           emailInput.value = '';
+
+           // Optionally, hide the confirmation message after a few seconds
+           setTimeout(() => {
+           confirmationMessage.style.display = 'none';
+           }, 5000); // Hide after 5 seconds
+           } else {
+          // If invalid, show the error message
+          confirmationMessage.textContent = 'Please enter a valid email address.';
+          confirmationMessage.style.display = 'block';
+
+          // Optionally, hide the error message after a few seconds
+          setTimeout(() => {
+          confirmationMessage.style.display = 'none';
+           }, 5000); // Hide after 5 seconds
+          }
+          });
+
           </script>
         </div>
       </div>
