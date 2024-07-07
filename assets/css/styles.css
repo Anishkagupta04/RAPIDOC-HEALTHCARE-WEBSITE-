@@ -376,9 +376,20 @@ body.dark-theme {
 }
 
 .contact__address {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
+}
+
+.contact__address i {
+  margin-right: 0.5rem; /* Adjust spacing between the icon and the text */
+}
+
+.contact__address p {
+  margin: 0; /* Remove default paragraph margin */
 }
 
 .contact__information {
