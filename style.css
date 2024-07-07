@@ -1155,9 +1155,37 @@ section {
 
 .feedback-form .rating-container {
   display: flex;
-
   justify-content: center;
   margin-bottom: 2px;
+}
+
+.rating-container button {
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: grey;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.rating-container button {
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: grey;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.rating-container button.filled {
+  color: yellow;
+  transform: scale(1.2);
+}
+
+.rating-container button:hover,
+.rating-container button:hover ~ button {
+  transform: scale(1.1);
 }
 
 

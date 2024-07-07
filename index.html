@@ -1233,173 +1233,112 @@
 
     <!-- testimonial section -->
 
-
     <!-- Feedback System-->
-    <div class="feedback-wrapper">
-      <div class="feedback-form">
-        <h2>We'd Love Your Feedback!</h2>
-        <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> </span>Healthcare</p>
-        <div>
-          <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
-          <div class="rating-container">
-            <button type="button" onclick="handleRatingChange(1)">😶</button>
-            <button type="button" onclick="handleRatingChange(2)">😶</button>
-            <button type="button" onclick="handleRatingChange(3)">😶</button>
-            <button type="button" onclick="handleRatingChange(4)">😶</button>
-            <button type="button" onclick="handleRatingChange(5)">😶</button>
-          </div>
-        </div>
-        <form id="feedback-form" onsubmit="handleSubmit(event)">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" placeholder="Enter your name" required>
-          <label for="email">Your Email</label>
-          <input type="email" id="email" placeholder="Enter your email" required>
-          <label for="feedback">Your Feedback</label>
-          <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-          <button type="submit">Submit Feedback</button>
-        </form>
+<div class="feedback-wrapper">
+  <div class="feedback-form">
+    <h2>We'd Love Your Feedback!</h2>
+    <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> Healthcare</p>
+    <div>
+      <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
+      <div class="rating-container">
+        <button type="button" onclick="handleRatingChange(1)">☆</button>
+        <button type="button" onclick="handleRatingChange(2)">☆</button>
+        <button type="button" onclick="handleRatingChange(3)">☆</button>
+        <button type="button" onclick="handleRatingChange(4)">☆</button>
+        <button type="button" onclick="handleRatingChange(5)">☆</button>
       </div>
     </div>
-  
-    <div id="popup" class="popup" style="display: none;">
-      <div class="popup-content">
-        <h2>Thank you for your Feedback! 💚</h2>
-        <div class="popup-icon">
-          <img src="/Feedback Tick.png" width="84" alt="✔️">
-        </div>
-        <p>Your feedback has been received.<br> We appreciate the input you provide.</p>
-        <button class="popup-button" onclick="closePopup()"><a class="active" aria-current="page">Back to Home</a></button>
-      </div>
+    <form id="feedback-form" onsubmit="handleSubmit(event)">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <label for="feedback">Your Feedback</label>
+      <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+</div>
+
+<div id="popup" class="popup" style="display: none;">
+  <div class="popup-content">
+    <h2>Thank you for your Feedback! 💚</h2>
+    <div class="popup-icon">
+      <img src="/Feedback Tick.png" width="84" alt="✔️">
     </div>
+    <p>Your feedback has been received.<br> We appreciate the input you provide.</p>
+    <button class="popup-button" onclick="closePopup()"><a class="active" aria-current="page">Back to Home</a></button>
+  </div>
+</div>
 
-    <script>
-      let rating = null;
+<script>
+  let rating = null;
 
-    function handleRatingChange(value) {
-      rating = value;
-      updateEmojis();
-    }
-
-    function updateEmojis() {
-      const emojis = getEmojis(rating);
-      const buttons = document.querySelectorAll('.rating-container button');
-      buttons.forEach((button, index) => {
-        button.textContent = emojis[index];
-      });
-    }
-
-    function getEmojis(rating) {
-      switch (rating) {
-        case 1:
-          return ["😡", "😶", "😶", "😶", "😶"];
-        case 2:
-          return ["😒", "😒", "😶", "😶", "😶"];
-        case 3:
-          return ["😐", "😐", "😐", "😶", "😶"];
-        case 4:
-          return ["😊", "😊", "😊", "😊", "😶"];
-        case 5:
-          return ["😁", "😁", "😁", "😁", "😁"];
-        default:
-          return ["😶", "😶", "😶", "😶", "😶"];
-      }
-    }
-
-    function handleSubmit(event) {
-      event.preventDefault();
-
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const feedback = document.getElementById('feedback').value;
-
-      // For now, we will just simulate email sending success
-      console.log('Feedback submitted:', { name, email, rating, feedback });
-
-      // Reset the form fields
-      document.getElementById('feedback-form').reset();
-      rating = null;
-      updateEmojis();
-
-      // Show the popup
-      document.getElementById('popup').style.display = 'flex';
-    }
-
-    function closePopup() {
-      document.getElementById('popup').style.display = 'none';
-    }
-
-    const feedbackForm = document.querySelector('.feedback-form');
-
-function isElementInViewport(el) {
-  const rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-function handleScroll() {
-  if (isElementInViewport(feedbackForm)) {
-    feedbackForm.classList.add('animate-feedback');
-    window.removeEventListener('scroll', handleScroll);
+  function handleRatingChange(value) {
+    rating = value;
+    updateStars();
   }
-}
 
-window.addEventListener('scroll', handleScroll);
-    </script>
-    <!-- <script>
-      const emojiLabels = document.querySelectorAll('.emoji label');
-      const moodText = document.getElementById('mood-text');
-
-      emojiLabels.forEach(label => {
-        label.addEventListener('click', () => {
-          const emoji = label.innerHTML;
-          let mood = '';
-          switch (emoji) {
-            case '😊':
-              mood = 'Highly Satisfied';
-              break;
-            case '😁':
-              mood = 'Satisfied';
-              break;
-            case '😇':
-              mood = 'Average';
-              break;
-            case '😕':
-              mood = 'Confused';
-              break;
-            case '😔':
-              mood = 'Dissatisfied';
-              break;
-            case '😡':
-              mood = 'Highly Dissatisfied';
-              break;
-          }
-          moodText.textContent = `Mood: ${mood}`;
-        });
-      });
-
-      function submitFeedback(event) {
-        event.preventDefault();
-        const feedbackText = document.getElementById('textarea').value;
-        const selectedEmoji = document.querySelector('input[name="emoji"]:checked');
-        if (!feedbackText.trim() || !selectedEmoji) {
-          alert('Please fill the feedback form and select your satisfaction level');
-          return;
-        }
-        const overlay = document.getElementById('overlay');
-        overlay.style.display = 'flex';
-        document.body.classList.add('blur');
-        setTimeout(() => {
-          overlay.style.display = 'none';
-          document.body.classList.remove('blur');
-          location.reload(true);
-        }, 1000);
+  function updateStars() {
+    const buttons = document.querySelectorAll('.rating-container button');
+    buttons.forEach((button, index) => {
+      if (index < rating) {
+        button.textContent = '★';
+        button.classList.add('filled');
+      } else {
+        button.textContent = '☆';
+        button.classList.remove('filled');
       }
-    </script> -->
+    });
+  }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const feedback = document.getElementById('feedback').value;
+
+    // For now, we will just simulate email sending success
+    console.log('Feedback submitted:', { name, email, rating, feedback });
+
+    // Reset the form fields
+    document.getElementById('feedback-form').reset();
+    rating = null;
+    updateStars();
+
+    // Show the popup
+    document.getElementById('popup').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+
+  const feedbackForm = document.querySelector('.feedback-form');
+
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function handleScroll() {
+    if (isElementInViewport(feedbackForm)) {
+      feedbackForm.classList.add('animate-feedback');
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+
+  updateStars();
+</script>
+    
   </main><!-- End #main -->
   <!-- ############### Footer ############### -->
   <br><br><br><br><br><br>
