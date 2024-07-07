@@ -22,6 +22,10 @@
       background-color: #3fbcc0;
       z-index: 9999;
     }
+    .footer__copy {
+        font-size: 15px;
+        color: black;
+    }
         </style>
     </head>
     <body>
@@ -220,11 +224,73 @@
                         <li><a href="#" class="footer__link">Customer help</a></li>
                     </ul>
                 </div>
+                <style>
+                    .footer__social-link {
+                        font-size: 25px; /* Adjust the size as needed */
+                        color: black;
+                        transition: color 0.3s;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .footer__social-link:hover {
+                        transform: scale(1.4); /* Increase size on hover */
+                        color: black;
+                    }
+
+                    .footer__social-link:hover .bx.bxl-facebook-circle {
+                        color: #1877f2
+                    }
+
+                    .footer__social-link:hover .fa-linkedin-square {
+                        color: #0077b5;
+                    }
+
+                    .footer__social-link:hover .fa-instagram {
+                        background-image: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                    }
+
+                    .footer__social-link:hover .fa-github {
+                        color: #333;
+                    }
+
+                    .footer__social-link:hover .fa-phone {
+                        color: #34a853;
+                    }
+
+                    .footer__social-link:hover .fa-envelope {
+                        background-image:  linear-gradient(45deg, #ff6a00, #ee0979, #ff6a00, #ee0979);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                    }
+
+                    /* Specific style for the Twitter icon since it uses an image */
+                    .footer__social img:hover {
+                        filter: brightness(0) saturate(100%) invert(64%) sepia(25%) saturate(3461%) hue-rotate(166deg) brightness(98%) contrast(94%);
+                    }
+
+                    .twitter-icon:hover {
+                        transform: scale(1.4);
+                        color: black
+                    }
+
+                    .footer__social img:hover {
+                        filter: none !important;
+                        fill: #1DA1F2 !important; /* Apply Twitter brand color */
+                        cursor: pointer;
+                    }
+
+                </style>
                 <div class="footer__content">
                     <h3 class="footer__title">Follow us</h3>
                         <div class="footer__social">
                         <a href="https://www.facebook.com/" target="_blank" class="footer__social-link"><i class='bx bxl-facebook-circle '></i></a>
-                        <img src="twitter1.svg" style="width: 25px; margin: 0; padding: 0;margin-top: 4px;" alt="Twitter">
+                        <img src="twitter1.svg" style="width: 20px; margin: 0; padding: 0;margin-top: 4px;" alt="Twitter" class="twitter-icon">
                         <a href="https://www.linkedin.com" target="_blank" class="footer__social-link"><i class="fa fa-linkedin-square"></i></a>
                         <a href="https://www.instagram.com" target="_blank" class="footer__social-link"><i class="fa fa-instagram"></i></a>
                         <a href="https://www.github.com" class="footer__social-link"><i class="fa fa-github"></i></a>
@@ -234,7 +300,8 @@
                 </div>
             </div>
 
-            <p class="footer__copy">&#169; Talo. All right reserved</p>
+            <p class="footer__copy"><small>© <span id="copyright-year"></span><span> RapiDoc</span>&nbsp;| All Rights
+                Reserved Made with ❤️ by RapiDoc</small></p>
         </footer>
 
         <!--=============== SCROLL UP ===============-->
@@ -244,5 +311,8 @@
 
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
+        <script>
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        </script>        
     </body>
 </html>
