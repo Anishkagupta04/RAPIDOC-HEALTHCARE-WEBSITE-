@@ -52,7 +52,7 @@ document.getElementById("google").addEventListener("click", function () {
       const user = result.user;
       console.log(user);
       setItemWithExpiry('username',user.displayName,3000); 
-      window.location.href = "./signedup.html";
+     // window.location.href = "./signedup.html";
     })
     .catch((error) => {
       console.error("Error during Google sign-in:", error);
