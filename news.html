@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <style>
+ <style>
 .iti--allow-dropdown input {
     padding-left: 50px;
     background-color: black; /* Adjust padding to prevent overlap */
@@ -323,32 +323,27 @@ form.php-email-form{
 .news-section h2 {
   text-align: center;
   margin-bottom: 30px;
-  color: #faf8f8;
+  color: #333;
 }
 
 .news-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
- 
 }
 
 .news-item {
   width: calc(33.33% - 20px);
   margin-bottom: 30px;
-  background-color:black;
+  background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  box-shadow: 7px 0px 15px #70bde7, -7px 0px 15px #14aa21;
-  color: white;
 }
 
 .news-item:hover {
   transform: translateY(-5px);
-  background-color:#29888a;
-  box-shadow: 7px 0px 15px #fdfefe, -7px 0px 15px aqua;
 }
 
 .news-item img {
@@ -361,14 +356,14 @@ form.php-email-form{
   padding: 15px;
   margin: 0;
   font-size: 18px;
-  color: white
+  color: #333;
 }
 
 .news-item p {
   padding: 0 15px 15px;
   margin: 0;
   font-size: 14px;
-  color: #c3b5b5;
+  color: #666;
 }
 
 .read-more {
@@ -400,16 +395,6 @@ form.php-email-form{
   }
 }
 
-#progressBar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0%;
-      height: 6px;
-      background-color: #3fbcc0;
-      z-index: 9999;
-    }
-
     </style>
     <link rel="stylesheet" href="chatbox.css">
      <!-- Google Fonts Link For Icons chatboxx -->
@@ -417,19 +402,11 @@ form.php-email-form{
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
      <link rel="stylesheet" href="./Css-Files/aboutus.css" />
      <link rel="stylesheet" href="./Css-Files/testimonial.css" />
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
      <script src="chatboxx.js" defer></script>
 </head>
 
 <body>
-  <div id="progressBar"></div>
-  <script>
-    window.onscroll = function () {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("progressBar").style.width = scrolled + "%";
-    };
-  </script>
   <div class="pre">
     <div class="loader"></div>
   </div>
@@ -444,15 +421,15 @@ form.php-email-form{
       <nav class="nav_menu">
 
         <ul class="nav_link">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/index.html/#about">About</a></li>
-          <li><a href="/Html-Files/news.html">News</a></li>
-          <a href="/dex.html">Service</a>
-          <li><a href="/index.html#patient-portal">Patient Portal</a></li>
-          <li><a href="/index.html#doctors">Doctor</a></li>
-          <li><a href="/Html-Files/contact.html">Contact us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="#">News</a></li>
+          <a href="dex.html">Service</a>
+          <li><a href="index.html#patient-portal">Patient Portal</a></li>
+          <li><a href="index.html#doctors">Doctor</a></li>
+          <li><a href="index.html#contact">Contact us</a></li>
 
-          <a href="/login.html">Sign in/Sign up</a>
+          <a href="login.html">Sign in/Sign up</a>
           <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
 
         </ul>
@@ -471,7 +448,7 @@ form.php-email-form{
   <div class="conta" style="display: flex; flex-wrap: wrap;">
     <div class="container" style="display:flex ;">
       <div class="news-section">
-        <h2 style="color: white;font-size: 35px"><strong>Latest News</strong></h2>
+        <h2 style="color: white"><strong>Latest News</strong></h2>
         <div class="news-container">
           <div class="news-item">
             <h3>RapiDoc Launches Revolutionary Telemedicine</h3>
@@ -632,33 +609,32 @@ form.php-email-form{
                 <section>
                     <h4>Quick Links</h4><br>
                       <ul class="links">
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/index.html#about">About Us</a></li>
-                        <li><a href="/Html-Files/contact.html">Contact Us</a></li>
-                        <li><a href="/index.html#services">Services</a></li>
-                        <li><a href="/index.html#doctors">Doctors</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="dex.html">Services</a></li>
+                        <li><a href="index.html#doctors">Doctors</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
                     </ul>
                 </section>
                 <section>
                   <h4>Explore</h4><br>
                   <ul class="links">
-                    <li><a href="/index.html#appointment">Appointment</a></li>
-                    <li><a href="/index.html#patient-portal">Patient Portal</a></li>
-                    <li><a href="/login.html">Login account</a></li>
+                    <li><a href="Html-Files/appointment.html">Appointment</a></li>
+                    <li><a href="index.html#patient-portal">Patient Portal</a></li>
+                    <li><a href="login.html">Login account</a></li>
                     <li><a href="#">Helplines</a></li>
-                    <li><a href="/index.html#contact">Location</a></li>
+                    <li><a href="index.html#contact">Location</a></li>
                   </ul>
                 </section>
                 <section>
                   <h4>Legal</h4><br>
                   <ul class="links">
-                    <li><a href="#">Customer Agreement</a></li>
-                    <li><a href="/Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
-                    <li><a href="/Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
-                    <li><a href="#">GDPR</a></li>
+                    <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
+                    <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+                    <li><a href="Html-Files/terms_and_conditions.html">GDPR</a></li>
                     <li><a href="#">Security</a></li>
-                    <li><a href="/index.html#test">Testimonials</a></li>
+                    <li><a href="#">Testimonials</a></li>
                   </ul>
                 </section>
                 <section class="footer-col">
@@ -857,8 +833,6 @@ window.addEventListener("load", () => {
 });
   </script>
   <style>
-
-
     .button-icon {
       display: flex;
       width: 400px;
@@ -868,11 +842,8 @@ window.addEventListener("load", () => {
     }
 
     .icon {
-      /* background-color: #080808; */
+      background-color: #fff;
       padding: 10px 10px 5px 10px;
-    }
-    .icon:hover{
-      /* background-color: #29888a; */
     }
 
     .icon svg {

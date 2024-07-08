@@ -24,12 +24,24 @@ const firebaseConfig = {
   appId: "1:467011865433:web:e23be9d0cc3496bb961a48"
 };
 
+
+
+
 const app = initializeApp(firebaseConfig);
 const database = getDatabase();
 const dbref = ref(database, "data");
 const auth = getAuth(app);
 
 auth.languageCode = 'en';
+
+function setItemWithExpiry(key,value,ttl){
+  const now=new Date();
+  const item={
+    value:value,
+    expiry:now.getTime()+ttl
+  }
+  localStorage.setItem(key,JSON.stringify(item));
+}
 
 const provider = new GoogleAuthProvider();
 //signin
@@ -39,7 +51,7 @@ document.getElementById("google").addEventListener("click", function () {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const user = result.user;
       console.log(user);
-      sessionStorage.setItem("username", user.displayName);
+      setItemWithExpiry('username',user.displayName,3000); 
       window.location.href = "./signedup.html";
     })
     .catch((error) => {
@@ -55,9 +67,10 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
   if (setTimeout(validateForm(email, password), 500)){
     signInWithEmailAndPassword(auth,email,password)
     .then((userCredential)=>{
-      console.log(userCredential);
-     sessionStorage.setItem("username", userCredential.user.displayName); // set username into session storage 
-    window.location.href = "./index.html";
+      console.log(userCredential.user);
+      setItemWithExpiry('username',userCredential.user.displayName,3000);
+   //  localStorage.setItem("username", userCredential.user.displayName); // set username into session storage 
+     window.location.href = "./index.html";
     })
     .catch((error)=>{
       document.getElementById("login-failed").removeAttribute("style");
