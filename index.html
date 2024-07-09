@@ -468,7 +468,7 @@ select {
       }
       .nav-h{
         height: 5.5rem;
-        width: 163vw;
+        width: -webkit-fill-available !important;
         justify-content: center;
     flex-direction: row;
     align-items: center;
@@ -514,6 +514,11 @@ select {
         display: flex !important;
         justify-content: center !important;
         margin-bottom: 15px !important;
+      }
+      footer {
+        width: max-content !important;
+    padding: 40px  !important;
+    margin: auto !important;
       }
     }
   </style>
