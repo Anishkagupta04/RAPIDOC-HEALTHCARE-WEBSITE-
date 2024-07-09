@@ -395,6 +395,48 @@ form.php-email-form{
   }
 }
 
+.cursor{
+    z-index: 999;
+    background: rgb(11, 173, 198);
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px rgb(11, 173, 198),
+                0 0 60px rgb(11, 173, 198),
+                0 0 100px rgb(11, 173, 198);
+
+    animation: colors 5s infinite; 
+    transform: translate(-50%,-50%);           
+
+
+}
+
+@keyframes colors {
+    0%{
+       filter: hue-rotate(0deg);
+    }
+  
+}
+
+.cursor:before{
+    size: 100px;
+    content: '';
+    position: absolute;
+    background: rgb(11, 173, 198);
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%,-30%);
+    border-radius: 50%;
+
+}
+
+
     </style>
     <link rel="stylesheet" href="chatbox.css">
      <!-- Google Fonts Link For Icons chatboxx -->
@@ -695,6 +737,7 @@ form.php-email-form{
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+      <div class="cursor"></div>
 
 
   <!-- JS Files -->
@@ -732,6 +775,35 @@ function loadGoogleTranslate(){
       });
       checkButtonVisibility();
     });
+
+    const cursor = document.querySelector(".cursor");
+
+//follow cursor on mouse move
+document.addEventListener("mousemove",(e)=>{
+    let x = e.pageX;
+    let y = e.pageY;
+
+    cursor.style.top = y + "px";
+    cursor.style.left =x + "px";
+    cursor.style.display ="block";
+
+    //cursor effects on mouse stopped
+    function mouseStopped(){
+        cursor.style.display="none";
+
+    }
+    clearTimeout(timeout);
+    timeout = setTimeout(mouseStopped,1000);
+
+
+});
+
+//cursor effect on mouseout
+
+document.addEventListener("mouseout",()=>{
+    cursor.style.display="none";
+
+});
 
   </script>
    <script>
