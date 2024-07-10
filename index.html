@@ -1592,7 +1592,6 @@ select {
               <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
-      
           <style>
             .confirmation-message {
               display: none;
@@ -1620,6 +1619,93 @@ select {
               }, 5000); // Hide after 5 seconds
             });
           </script>
+
+          <section class="footer-col">
+            
+              <h4>RAPIDOC Newsletter</h4><br>
+              <p>
+                Subscribe to our newsletter for a weekly dose
+                of news, updates, helpful tips, and
+                exclusive offers.
+              </p>
+              <form action="#" class="subscribe-form">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit">SUBSCRIBE</button>
+              </form>
+              <div id="popupModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p>Thank you for subscribing!</p>
+                </div>
+              </div>
+            </section>
+            
+            <style>
+              .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+              }
+            
+              .modal-content {
+                background-color: teal;
+                margin: 20% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 50%;
+                max-width: 300px;
+                color: white;
+                text-align: center;
+              }
+            
+              .close {
+                color: white;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+              }
+            
+              .close:hover,
+              .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+              }
+            </style>
+            
+            <script>
+              document.querySelector('.subscribe-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting in the traditional way
+            
+                // Show the modal popup
+                const modal = document.getElementById('popupModal');
+                modal.style.display = 'block';
+            
+                // Clear the input field
+                this.querySelector('input[type="email"]').value = '';
+            
+                // Hide the modal when the close button is clicked
+                const closeModal = document.querySelector('.modal .close');
+                closeModal.onclick = function() {
+                  modal.style.display = 'none';
+                }
+              });
+            
+              // Hide the modal when clicking outside of it
+              window.onclick = function(event) {
+                const modal = document.getElementById('popupModal');
+                if (event.target == modal) {
+                  modal.style.display = 'none';
+                }
+              }
+            </script>
+
         </div>
       </div>
     </div>
