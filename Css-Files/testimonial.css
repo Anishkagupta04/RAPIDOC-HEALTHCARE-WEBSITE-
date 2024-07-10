@@ -12,7 +12,8 @@
     color: white !important;
     font-size: 48px;
     margin-bottom: 2rem;
-  }
+    margin-top: 40px;
+}
   
   .rating__star {
     font-size: 20px;

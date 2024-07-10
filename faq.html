@@ -107,13 +107,34 @@
     text-align: center;
     font-size: xx-large;
   }
+  #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 6px;
+      background-color: #3fbcc0;
+      z-index: 9999;
+    }
+
 </style>
 <body>
+
+  <div id="progressBar"></div>
+  <script>
+    window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+  </script>
+
     <!-- Header -->
 
     <header class="header_container">
         <div class="img">
-        <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
+        <img id="rd-logo"  style="width: 90px; height: auto;" src="./images/rd.png"> 
       </div>
       
       </div>
@@ -229,78 +250,88 @@
 <!-- faq -->
 
 <!-- footer -->
-
-<footer id="footer">
-    <div class="footer-top" >
-      <div class="container" >
-        <div class="row-d" >
-
-    <section class="footer">
-      <div class="footer-row">
-        <div class="footer-col">
-          
-          <h4>Quick Links</h4>
-          <ul class="links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="./Html-Files/contact.html">Contact Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#doctors">Doctors</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul class="links">
-            <li><a href="#">Appointment</a></li>
-            <li><a href="#">Patient Portal</a></li>
-            <li><a href="#">Login account</a></li>
-            <li><a href="#">Helplines</a></li>
-            <li><a href="#">Location</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <ul class="links">
-            <li><a href="#">Customer Agreement</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">GDPR</a></li>
-            <li><a href="#">Security</a></li>
-            <li><a href="#">Testimonials</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>RAPIDOC Newsletter</h4>
-          <p>
-            Subscribe to our newsletter for a weekly dose
-            of news, updates, helpful tips, and
-            exclusive offers.
-          </p>
-          <form action="#">
-            <input type="text" placeholder="Your email" required>
-            <button type="submit">SUBSCRIBE</button>
-          </form>
-          <div class="icons">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-phone"></i>
-            <i class="fa-solid fa-envelope"></i>
+<footer>
+  <div class="footer-wrapper">
+      <div class="footer-columns">
+          <div class="other-columns">
+              <section>
+                  <h4>Quick Links</h4><br>
+                    <ul class="links">
+                      <li><a href="./index.html">Home</a></li>
+                      <li><a href="#about">About Us</a></li>
+                      <li><a href="./Html-Files/contact.html">Contact Us</a></li>
+                      <li><a href="dex.html">Services</a></li>
+                      <li><a href="Html-Files\doc.html">Doctors</a></li>
+                      <li><a href="./faq.html">FAQ</a></li>
+                  </ul>
+              </section>
+              <section>
+                <h4>Explore</h4><br>
+                <ul class="links">
+                  <li><a href="Html-Files\appointment.html">Appointment</a></li>
+                  <li><a href="#">Patient Portal</a></li>
+                  <li><a href="login.html">Login account</a></li>
+                  <li><a href="#">Helplines</a></li>
+                  <li><a href="#">Location</a></li>
+                </ul>
+              </section>
+              <section>
+                <h4>Legal</h4><br>
+                <ul class="links">
+                  <li><a href="#">Customer Agreement</a></li>
+                  <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+                  <li><a href="#">GDPR</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#test">Testimonials</a></li>
+                </ul>
+              </section>
+              <section class="footer-col">
+                <h4>RAPIDOC Newsletter</h4><br>
+                <p>
+                  Subscribe to our newsletter for a weekly dose
+                  of news, updates, helpful tips, and
+                  exclusive offers.
+                </p>
+                <form action="#" class="subscribe-form">
+                  <input type="email" placeholder="Your email" required>
+                  <button type="submit">SUBSCRIBE</button>
+                </form>
+              </section>
           </div>
-        </div>
       </div>
-      <div id="copyright" style="text-align: center">
-        <p style="align-items: center">
-          © <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
-          Reserved
-        </p>
-        <p>Made with ❤️ by RapiDoc</p>
-      </div>
+  </div>
+  <div class="footer-bottom">
+      <div class="footer-bottom-wrapper">
+          <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+            Reserved  Made with ❤️ by RapiDoc</small>
+            <style>
+              .social-wrapper a div i {
+                color: #afb6c7;
+              }
+             .social-wrapper a div i:hover {
+               color: #fff;
+              }
+            </style>
+          <div class="social-wrapper">
+            <div class="social-links">
+            <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
+            <!-- <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a> -->
+              <a href="https://www.twitter.com"><div><img src="twitter.png" style="width: 16px; height: 15px;"></div></a>
+            <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
+             <a href="#" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
+            <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
+            <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
+            <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
+            </div>
+          </div>
+    </div>
+  </div>
+</footer>
+
     </section>
 
-
-
+<!--scroll button-->
   <div id="back-to-top-container">
     <div class="circle">
       <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -326,8 +357,29 @@ if (answer) {
     }
 }
 }
+</script>
+<script>
+  //// JavaScript working of scroll button when scrolling down
+  var backToTopBtn = document.getElementById("back-to-top");
 
+if (backToTopBtn) {
+  backToTopBtn.addEventListener("click", function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, edge
+  });
+}
 
+// JavaScript to show scroll button when scrolling down
+window.addEventListener("scroll", function() {
+  var scrollBtn = document.getElementById("back-to-top");
+  if (scrollBtn) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  }
+});
 </script>
 </body>
 </html>
