@@ -541,14 +541,13 @@ select {
     .social-wrapper{
       margin-right: 50%;
     }
+    #slide-item{
+      width: 510px !important;
+    }
     .footer-col{
       padding:15px ;
       text-align: center;
     }
-    #slide-item{
-      width: 510px !important;
-    }
-    
     }
    
   </style>
@@ -1626,12 +1625,14 @@ select {
       </div>
     </div>
     <div class="footer-col" >
+      <div>
       <h4>RAPIDOC Newsletter</h4><br>
       <p>
         Subscribe to our newsletter for a weekly dose
         of news, updates, helpful tips, and
         exclusive offers.
       </p>
+    </div>
       <form action="#" class="subscribe-form">
         <input type="email" placeholder="Your email" required>
         <button type="submit">SUBSCRIBE</button>
@@ -1643,6 +1644,19 @@ select {
         <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
           Reserved Made with ❤️ by RapiDoc</small>
         <style>
+          @media (max-width:768px) {
+            .footer-col{
+              display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 90px;
+            }
+            .subscribe-form{
+              display: flex;
+              gap: 10px;
+            }
+          }
           .social-wrapper a div i {
             color: #afb6c7;
           }
