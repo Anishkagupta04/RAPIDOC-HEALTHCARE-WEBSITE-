@@ -1592,6 +1592,22 @@ select {
               <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
+          
+       <section class="footer-col" >
+      <div>
+      <h4>RAPIDOC Newsletter</h4><br>
+      <p>
+        Subscribe to our newsletter for a weekly dose
+        of news, updates, helpful tips, and
+        exclusive offers.
+      </p>
+    </div>
+      <form action="#" class="subscribe-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+      <p class="confirmation-message">Thank you for subscribing!</p>
+       </section>
           <style>
             .confirmation-message {
               display: none;
@@ -1619,26 +1635,6 @@ select {
               }, 5000); // Hide after 5 seconds
             });
           </script>
-
-          <section class="footer-col">
-            
-              <h4>RAPIDOC Newsletter</h4><br>
-              <p>
-                Subscribe to our newsletter for a weekly dose
-                of news, updates, helpful tips, and
-                exclusive offers.
-              </p>
-              <form action="#" class="subscribe-form">
-                <input type="email" placeholder="Your email" required>
-                <button type="submit">SUBSCRIBE</button>
-              </form>
-              <div id="popupModal" class="modal">
-                <div class="modal-content">
-                  <span class="close">&times;</span>
-                  <p>Thank you for subscribing!</p>
-                </div>
-              </div>
-            </section>
             
             <style>
               .modal {
@@ -1709,27 +1705,18 @@ select {
         </div>
       </div>
     </div>
-    <div class="footer-col" >
-      <div>
-      <h4>RAPIDOC Newsletter</h4><br>
-      <p>
-        Subscribe to our newsletter for a weekly dose
-        of news, updates, helpful tips, and
-        exclusive offers.
-      </p>
-    </div>
-      <form action="#" class="subscribe-form">
-        <input type="email" placeholder="Your email" required>
-        <button type="submit">SUBSCRIBE</button>
-      </form>
-      <p class="confirmation-message">Thank you for subscribing!</p>
-    </div>
+   
     <div class="footer-bottom">
       <div class="footer-bottom-wrapper">
         <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
           Reserved Made with ❤️ by RapiDoc</small>
         <style>
           @media (max-width:768px) {
+          .other-columns{
+            display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+          }
             .footer-col{
               display: flex;
         flex-direction: row;
