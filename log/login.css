@@ -14,6 +14,36 @@ body {
   overflow: hidden;
   height: 100vh;
 }
+.top-left-corner {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+}
+
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.home-button:hover {
+  background-color: #e2e6ea;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.home-button svg {
+  fill: #4bb6b7;
+  width: 30px;
+  height: 30px;
+}
 
 h1 {
   font-weight: 700;
