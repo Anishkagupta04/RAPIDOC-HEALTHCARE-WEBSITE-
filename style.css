@@ -9,6 +9,29 @@ a {
   text-decoration: none;
 }
 
+::-webkit-scrollbar{
+
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+  background-color: #3fbcc0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+  background-color:#005253;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+
+  background-color:#011212;
+}
+
 a:hover {
   color: #55a5ea;
   text-decoration: none;
