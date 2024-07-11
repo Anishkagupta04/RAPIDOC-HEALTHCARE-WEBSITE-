@@ -1,89 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terms and Conditions - RAPIDOC Healthcare</title>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1458/1458279.png">
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/1458/1458279.png"
+    />
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+      }
 
-        #terms-conditions-container {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #1c413b;
-            border-radius: 8px;
-            color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
 
-        #terms-conditions-header {
-            text-align: center;
-        }
+      ::-webkit-scrollbar-thumb {
+        background-color: #3fbcc0;
+        border-radius: 10px;
+      }
 
-        #terms-conditions-title {
-            color: white;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #005253;
+        border-radius: 10px;
+      }
 
-        #terms-conditions-main {
-            margin-top: 20px;
-        }
+      ::-webkit-scrollbar-track {
+        background-color: #011212;
+      }
 
-        .section-title {
-            color: #00d9ffc2;
-            font-size: 1.5em;
-            margin-top: 20px;
-        }
+      #terms-conditions-container {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #1c413b;
+        border-radius: 8px;
+        color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-        .section-content,
-        .section-list {
-            margin: 10px 0;
-        }
+      #terms-conditions-header {
+        text-align: center;
+      }
 
-        .section-list {
-            list-style: none;
-            padding: 0;
-        }
+      #terms-conditions-title {
+        color: white;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
 
-        .list-item {
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
+      #terms-conditions-main {
+        margin-top: 20px;
+      }
 
+      .section-title {
+        color: #00d9ffc2;
+        font-size: 1.5em;
+        margin-top: 20px;
+      }
 
-        footer {
-            background-color: black;
-            color: #fff;
-            padding: 20px 0;
-        }
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
+      .section-content,
+      .section-list {
+        margin: 10px 0;
+      }
 
-        footer a:hover {
-            text-decoration: none;
-            color: gray;
-        }
+      .section-list {
+        list-style: none;
+        padding: 0;
+      }
 
-        h1, h2 {
-            color: black;
-        }
+      .list-item {
+        margin-bottom: 10px;
+        font-size: 1.1em;
+      }
+
+      footer {
+        background-color: black;
+        color: #fff;
+        padding: 20px 0;
+      }
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: none;
+        color: gray;
+      }
+
+      h1,
+      h2 {
+        color: black;
+      }
     </style>
-     <style>#progressBar {
+    <style>
+      #progressBar {
         position: fixed;
         top: 0;
         left: 0;
@@ -91,87 +115,112 @@
         height: 8px;
         background-color: #3fbcc0;
         z-index: 9999;
-    
-      }</style>
+      }
+    </style>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div id="progressBar"></div>
     <script>
       window.onscroll = function () {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        var height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
         var scrolled = (winScroll / height) * 100;
         document.getElementById("progressBar").style.width = scrolled + "%";
       };
     </script>
-  
-    <div class="container" id="terms-conditions-container">
-        <header class="header" id="terms-conditions-header">
-            <h1 class="title" id="terms-conditions-title">Terms and Conditions</h1>
-        </header>
-        <main class="main-content" id="terms-conditions-main">
-            <section class="section" >
-                <h2 class="section-title" >Introduction</h2>
-                <p class="section-content" >These terms and conditions outline the rules and
-                    regulations for the use of RAPIDOC Healthcare Website. By accessing this website we assume you
-                    accept these terms and conditions. Do not continue to use RAPIDOC Healthcare if you do not agree to
-                    take all of the terms and conditions stated on this page.</p>
-            </section>
-        
-            <section class="section" id="terms-conditions-privacy">
-                <h2 class="section-title" >Privacy</h2>
-                <p class="section-content" >We are committed to protecting your privacy. Please
-                    refer to our Privacy Policy for information on how we collect, use, and disclose your personal
-                    information.</p>
-            </section>
-            <section class="section" id="terms-conditions-license">
-                <h2 class="section-title">License</h2>
-                <p class="section-content" >Unless otherwise stated, RAPIDOC Healthcare and/or its
-                    licensors own the intellectual property rights for all material on RAPIDOC Healthcare. All
-                    intellectual property rights are reserved. You may access this from RAPIDOC Healthcare for your own
-                    personal use subjected to restrictions set in these terms and conditions.</p>
-            </section>
-            <section class="section" id="terms-conditions-conduct">
-                <h2 class="section-title" >User Conduct</h2>
-                <ul class="section-list" >
-                    <li class="list-item">You must not use this website in any way that causes, or may cause, damage to
-                        the website or impairment of the availability or accessibility of the website.</li>
-                    <li class="list-item">You must not use this website in any way which is unlawful, illegal,
-                        fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful
-                        purpose or activity.</li>
-                    <li class="list-item">You must not use this website to copy, store, host, transmit, send, use,
-                        publish or distribute any material which consists of (or is linked to) any spyware, computer
-                        virus, Trojan horse, worm, keystroke logger, rootkit or other malicious computer software.</li>
-                </ul>
-            </section>
-            <section class="section" id="terms-conditions-changes">
-                <h2 class="section-title">Changes to These Terms</h2>
-                <p class="section-content" >We may update our Terms and Conditions from time to
-                    time. We will notify you of any changes by posting the new Terms and Conditions on this page. You
-                    are advised to review this Terms and Conditions periodically for any changes. Changes to this Terms
-                    and Conditions are effective when they are posted on this page.</p>
-            </section>
-            <section class="section" id="terms-conditions-contact">
-                <h2 class="section-title">Contact Information</h2>
-                <p class="section-content" >If you have any questions about these Terms and
-                    Conditions, please contact us at rapidoc@mail.com.</p>
-            </section>
-        </main>
-    </div>
-        <!-- Footer -->
-        <footer class="text-center mt-5">
-            <div class="container">
-                <p>&copy; 2024 RapiDoc. All rights reserved.</p>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="/index.html">Home</a></li>
-                    <li class="list-inline-item"><a href="/Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
-                    <li class="list-inline-item"><a href="/Html-Files/customer_agreement.html">Customer Agreement</a></li>
-                </ul>
-            </div>
-        </footer>
-    
-</body>
 
+    <div class="container" id="terms-conditions-container">
+      <header class="header" id="terms-conditions-header">
+        <h1 class="title" id="terms-conditions-title">Terms and Conditions</h1>
+      </header>
+      <main class="main-content" id="terms-conditions-main">
+        <section class="section">
+          <h2 class="section-title">Introduction</h2>
+          <p class="section-content">
+            These terms and conditions outline the rules and regulations for the
+            use of RAPIDOC Healthcare Website. By accessing this website we
+            assume you accept these terms and conditions. Do not continue to use
+            RAPIDOC Healthcare if you do not agree to take all of the terms and
+            conditions stated on this page.
+          </p>
+        </section>
+
+        <section class="section" id="terms-conditions-privacy">
+          <h2 class="section-title">Privacy</h2>
+          <p class="section-content">
+            We are committed to protecting your privacy. Please refer to our
+            Privacy Policy for information on how we collect, use, and disclose
+            your personal information.
+          </p>
+        </section>
+        <section class="section" id="terms-conditions-license">
+          <h2 class="section-title">License</h2>
+          <p class="section-content">
+            Unless otherwise stated, RAPIDOC Healthcare and/or its licensors own
+            the intellectual property rights for all material on RAPIDOC
+            Healthcare. All intellectual property rights are reserved. You may
+            access this from RAPIDOC Healthcare for your own personal use
+            subjected to restrictions set in these terms and conditions.
+          </p>
+        </section>
+        <section class="section" id="terms-conditions-conduct">
+          <h2 class="section-title">User Conduct</h2>
+          <ul class="section-list">
+            <li class="list-item">
+              You must not use this website in any way that causes, or may
+              cause, damage to the website or impairment of the availability or
+              accessibility of the website.
+            </li>
+            <li class="list-item">
+              You must not use this website in any way which is unlawful,
+              illegal, fraudulent or harmful, or in connection with any
+              unlawful, illegal, fraudulent or harmful purpose or activity.
+            </li>
+            <li class="list-item">
+              You must not use this website to copy, store, host, transmit,
+              send, use, publish or distribute any material which consists of
+              (or is linked to) any spyware, computer virus, Trojan horse, worm,
+              keystroke logger, rootkit or other malicious computer software.
+            </li>
+          </ul>
+        </section>
+        <section class="section" id="terms-conditions-changes">
+          <h2 class="section-title">Changes to These Terms</h2>
+          <p class="section-content">
+            We may update our Terms and Conditions from time to time. We will
+            notify you of any changes by posting the new Terms and Conditions on
+            this page. You are advised to review this Terms and Conditions
+            periodically for any changes. Changes to this Terms and Conditions
+            are effective when they are posted on this page.
+          </p>
+        </section>
+        <section class="section" id="terms-conditions-contact">
+          <h2 class="section-title">Contact Information</h2>
+          <p class="section-content">
+            If you have any questions about these Terms and Conditions, please
+            contact us at rapidoc@mail.com.
+          </p>
+        </section>
+      </main>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+      <div class="container">
+        <p>&copy; 2024 RapiDoc. All rights reserved.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="/index.html">Home</a></li>
+          <li class="list-inline-item">
+            <a href="/Html-Files/privacy_policy_page.html">Privacy Policy</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="/Html-Files/customer_agreement.html">Customer Agreement</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
