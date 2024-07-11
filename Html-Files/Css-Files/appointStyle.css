@@ -65,29 +65,21 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"],
-textarea,
-select {
+input[type="tel"], input[type="date"],
+textarea {
     width: 90%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
-
-
-input[type="date"]
-{
-    width: 60%;
-    padding: 9px;
+select {
+    width: 94%;
+    padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
-
-
 textarea {
     height: 100px;
 }
