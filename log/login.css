@@ -130,6 +130,7 @@ button {
 
 button:hover {
   letter-spacing: 3px;
+  background-color: #28cacd;
 }
 
 button:active {
