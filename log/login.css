@@ -6,13 +6,15 @@
 
 body {
   display: flex;
-  background-color: #f6f5f7;
+  background: linear-gradient(270deg, #6be1f9, #4bb6b7, #28cacd, #0da0a2, #01575d);  
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
   height: 100vh;
+  animation: waveAnimation 5s linear infinite;
+  background-size: 200% 200%;
 }
 .top-left-corner {
   position: absolute;
@@ -35,7 +37,7 @@ body {
 }
 
 .home-button:hover {
-  background-color: #e2e6ea;
+  background-color: #6be1f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -114,8 +116,8 @@ a:hover {
 button {
   position: relative;
   border-radius: 20px;
-  border: 1px solid #4bb6b7;
-  background-color: #4bb6b7;
+  border: 1px solid #022a2d;
+  background-color: #022a2d;
   color: #fff;
   font-size: 15px;
   font-weight: 700;
@@ -341,4 +343,14 @@ input {
 
 .social-container a:hover {
   border: 1px solid #4bb6b7;
+  background-color: #6be1f9;
+}
+
+@keyframes waveAnimation {
+  0% {
+    background-position: -100% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
 }
