@@ -10,6 +10,52 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
+       
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+  <!-- Bootstrap Icons CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "o6kveYmOSDrs0l1Mg",
+      });
+    })();
+  </script>
+
+  <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>RapiDoc</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- transalator -->
+  <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+
+  <!-- CSS Files -->
+  <link href="Css-Files/animate.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="remixicon/remixicon.css" rel="stylesheet">
+  <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="patient-portal.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" type="text/css" href="./service.css" />
+
+ 
 
         <title>RAPIDOC|Delivery</title>
         <style>
@@ -35,48 +81,39 @@
           };
         </script>
         <!--=============== HEADER ===============-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <img src="assets/img/rd1.png" alt="hou">
-                <a href="med.html" class="nav__logo">RAPIDOC Delivery</a>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="index.html" class="nav__link active-link">Home</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="index.html#about" class="nav__link">About us</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#services" class="nav__link">Services</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="index.html#contact" class="nav__link">Contact us</a>
-                        </li>
-
-                        <i class='bx bx-toggle-left change-theme' id="theme-button"></i>
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-grid-alt'></i>
-                </div>
-
-                <a href="med.html" class="button button__header">Order Now!</a>
-            </nav>
-        </header>
+        <header class="header_container nav-h">
+    <div class="img">
+      <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png">
+    </div>
+    <nav class="nav_menu">
+      <ul class="nav_link vis-h">
+        <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+        <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+        <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
+        <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
+        <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+        <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+        <li><a href="#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
+        <li><a href="#feedback"><i class="bi bi-star"></i>Rate Us</a></li>
+        <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+        <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+      </ul>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </header>
 
         <main class="main">
             <!--=============== HOME ===============-->
             <section class="home section" id="home">
                 <div class="home__container container grid">
                     <div class="home__data">
-                        <h1 class="home__title">RAPIDOC|Delivery <br>Order Medicines</h1>
-                        <p class="home__description">Order your <b>Medicine</b> at any time and we will deliver them right to where you are.</p>
-
-                        <a href="med.html" class="button">Get Started</a>
-<img src="assets/img/rd.png" alt="home">
+                        <h1 class="home__title" style="padding-top:70px;">RAPIDOC|Delivery <br>Order Medicines</h1>
+                        <p class="home__description">Order your <b>Medicine</b> at any time and we will deliver <br> them right to where you are.<br><a href="med.html" class="button">Get Started</a></p>
+                        <img src="assets/img/rd.png" alt="home">
                     </div>   
                 </div>
             </section>
@@ -86,8 +123,8 @@
                 <div class="about__container grid">
                     <div class="about__data">
                         <h2 class="section__title-center">Find Out A Little More <br> About Us</h2>
-                        <p class="about__description">We are a company dedicated to the distribution of products by delivery 
-                            to your home or to the place where you are, with the best quality of delivery.
+                        <p class="about__description" style="text-align:justify;">We are a company dedicated to the distribution of products by<br> delivery 
+                            to your home or to the place where you are, with the<br> best quality of delivery.
                         </p>
                         <img src="assets/img/about.png" alt="about">
                     </div>
@@ -99,8 +136,8 @@
                 <div class="security__container grid">
                     <div class="security__data">
                         <h2 class="section__title-center">Your Safety Is <br> Important</h2>
-                        <p class="security__description">When your order reaches you, we have the health safety protocols, 
-                            so that you are protected from any disease. Watch the video of how the delivery is made.
+                        <p class="security__description" style="text-align:justify">When your order reaches you, we have the health safety protocols,<br> 
+                            so that you are protected from any disease. Watch the video of how <br>the delivery is made.
                         </p>
                        
                     </div>
@@ -110,7 +147,7 @@
 
             <!--=============== SERVICES ===============-->
             <section class="services section container" id="services">
-                <h2 class="section__title">Some Services We <br> Offer</h2>
+                <h2 class="section__title"> Our Services</h2>
                 <div class="services__container grid">
                     <div class="services__data">
                         <h3 class="services__subtitle">Payment Done</h3>
@@ -145,7 +182,7 @@
             <section class="app section container">
                 <div class="app__container grid">
                     <div class="app__data">
-                        <h2 class="section__title-center">Watch Your Delivery <br> At Any Time</h2>
+                        <h2 class="section__title-center" >Watch Your Delivery <br> At Any Time</h2>
                         <p class="app__description">With our app you can view the route of your order, from our local headquarters to the 
                             place where you are. Look for the app now!</p>
                         <div class="app__buttons">
@@ -159,83 +196,132 @@
                         </div>
                         
                     </div>
-                    <img src="assets\img\delivery.jpg" alt="home1">
+                    <img src="images\Delivery.png" alt="home1">
                 </div> 
                
             </section>
 
             <!--=============== CONTACT US ===============-->
-            <section class="contact section container" id="contact">
-                <div class="contact__container grid">
-                    <div class="contact__content">
-                        <h2 class="section__title-center">Contact Us From <br> Here</h2>
-                        <p class="contact__description">You can contact us from here, you can write to us, 
-                            call us or visit our service center, we will gladly assist you.</p>
-                    </div>
-
-                    <ul class="contact__content grid">
-                        <li class="contact__address">Email:  <span class="contact__information">delivery@email.com</span></li>
-                        <li class="contact__address">Location: <span class="contact__information">New Delhi</span></li>
-                    </ul>
-
-                    <div class="contact__content">
-                        <a href="index.html#contact" class="button">Contact Us</a>
-                    </div>
-                </div>
-            </section>
+            
         </main>
 
         <!--=============== FOOTER ===============-->
-        <footer class="footer section">
-            <div class="footer__container container grid">
-                <div class="footer__content">
-                    <a href="#" class="footer__logo">Delivery</a>
-                    <p class="footer__description">Order Products Faster <br> Easier</p>
-                </div>
-
-                <div class="footer__content">
-                    <h3 class="footer__title">Our Services</h3>
-                    <ul class="footer__links">
-                        <li><a href="#" class="footer__link">Pricing </a></li>
-                        <li><a href="#" class="footer__link">Discounts</a></li>
-                        <li><a href="index.html#contact" class="footer__link">Report a bug</a></li>
-                        <li><a href="Html-Files/terms_and_conditions.html" class="footer__link">Terms of Service</a></li>
+        <footer>
+            <div class="footer-wrapper">
+              <div class="footer-columns">
+                <div class="other-columns">
+                  <section>
+                    <h4>Quick Links</h4><br>
+                    <ul class="links">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="#about">About Us</a></li>
+                      <li><a href="index.html#contact">Contact Us</a></li>
+                      <li><a href="#services">Services</a></li>
+                      <li><a href="#doctors">Doctors</a></li>
+                      <li><a href="./faq.html">FAQ</a></li>
                     </ul>
-                </div>
-
-                <div class="footer__content">
-                    <h3 class="footer__title">Our Company</h3>
-                    <ul class="footer__links">
-                        <li><a href="#" class="footer__link">Blog</a></li>
-                        <li><a href="#" class="footer__link">Our mision</a></li>
-                        <li><a href="index.html#contact" class="footer__link">Get in touch</a></li>
+                  </section>
+                  <section>
+                    <h4>Explore</h4><br>
+                    <ul class="links">
+                      <li><a href="Html-Files/appointment.html">Appointment</a></li>
+                      <li><a href="index.html#patient-portal">Patient Portal</a></li>
+                      <li><a href="login.html">Login account</a></li>
+                      <li><a href="#">Helplines</a></li>
+                      <li><a href="index.html#contact">Location</a></li>
                     </ul>
-                </div>
-
-                <div class="footer__content">
-                    <h3 class="footer__title">Community</h3>
-                    <ul class="footer__links">
-                        <li><a href="#" class="footer__link">Support</a></li>
-                        <li><a href="faq.html" class="footer__link">Questions</a></li>
-                        <li><a href="index.html#contact" class="footer__link">Customer help</a></li>
+                  </section>
+                  <section>
+                    <h4>Legal</h4><br>
+                    <ul class="links">
+                      <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
+                      <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+                      <li><a href="Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
+                      <li><a href="#">GDPR</a></li>
+                      <li><a href="#">Security</a></li>
+                      <li><a href="#">Testimonials</a></li>
                     </ul>
+                  </section>
+                  <section class="footer-col">
+                    <h4>RAPIDOC Newsletter</h4><br>
+                    <p>
+                      Subscribe to our newsletter for a weekly dose
+                      of news, updates, helpful tips, and
+                      exclusive offers.
+                    </p>
+                    <form action="#" class="subscribe-form">
+                      <input type="email" placeholder="Your email" required>
+                      <button type="submit">SUBSCRIBE</button>
+                    </form>
+                    <p class="confirmation-message">Thank you for subscribing!</p>
+                  </section>
+                  <style>
+                    .confirmation-message {
+                      display: none;
+                      color: green;
+                      margin-top: 10px;
+                    }
+                  </style>
+        
+                  <script>
+                    document.querySelector('.subscribe-form').addEventListener('submit', function (event) {
+                      event.preventDefault(); // Prevent the form from submitting in the traditional way
+        
+                      // Here you would normally send the form data to the server using fetch or XMLHttpRequest
+                      // For demonstration purposes, we'll just show the confirmation message
+        
+                      const confirmationMessage = document.querySelector('.confirmation-message');
+                      confirmationMessage.style.display = 'block'; // Show the confirmation message
+        
+                      // Clear the input field
+                      this.querySelector('input[type="email"]').value = '';
+        
+                      // Optionally, you can hide the confirmation message after a few seconds
+                      setTimeout(() => {
+                        confirmationMessage.style.display = 'none';
+                      }, 5000); // Hide after 5 seconds
+                    });
+                  </script>
                 </div>
-                <div class="footer__content">
-                    <h3 class="footer__title">Follow us</h3>
-                        <div class="footer__social">
-                        <a href="https://www.facebook.com/" target="_blank" class="footer__social-link"><i class='bx bxl-facebook-circle '></i></a>
-                        <img src="twitter1.svg" style="width: 25px; margin: 0; padding: 0;margin-top: 4px;" alt="Twitter">
-                        <a href="https://www.linkedin.com" target="_blank" class="footer__social-link"><i class="fa fa-linkedin-square"></i></a>
-                        <a href="https://www.instagram.com" target="_blank" class="footer__social-link"><i class="fa fa-instagram"></i></a>
-                        <a href="https://www.github.com" class="footer__social-link"><i class="fa fa-github"></i></a>
-                        <a href="#" class="footer__social-link"><i class="fa fa-phone"></i></a>
-                        <a href="#" class="footer__social-link"><i class="fa fa-envelope"></i></a>
-                    </div>
-                </div>
+              </div>
             </div>
-
-            <p class="footer__copy">&#169; Talo. All right reserved</p>
-        </footer>
+            <div class="footer-bottom">
+              <div class="footer-bottom-wrapper">
+                <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+                  Reserved Made with ❤️ by RapiDoc</small>
+                <style>
+                  .social-wrapper a div i {
+                    color: #afb6c7;
+                  }
+        
+                  .social-wrapper a div i:hover {
+                    color: #fff;
+                  }
+                </style>
+                <div class="social-wrapper">
+                  <div class="social-links">
+                    <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+                    <a href="https://www.instagram.com" target="_blank">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+        
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a>
+                    <a href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
 
         <!--=============== SCROLL UP ===============-->
         <a href="#" class="scrollup" id="scroll-up">
