@@ -1,0 +1,102 @@
+.toggle {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 62px;
+    height: 30px;
+    border: 2px solid white;
+    /* Further adjusted width to make the toggle box smaller */
+    border-radius: 25px;
+    /* Adjusted for smaller height */
+    transition: .2s;
+    align-items: center;
+}
+
+.toggle i {
+    width: 50%;
+    line-height: 30px;
+    /* Adjusted to match smaller height */
+    text-align: center;
+    font-size: 16px;
+    /* Adjusted font size for smaller icons */
+    z-index: 1;
+}
+
+.toggle .ball {
+    position: absolute;
+    width: 25px;
+    /* Adjusted ball size */
+    height: 25px;
+    /* Adjusted ball size */
+    margin: 2.5px;
+    /* Adjusted margin to center the ball */
+    border-radius: 50%;
+    transition: .3s ease-out;
+}
+
+input {
+    display: none;
+}
+
+
+/* -- Light Mode -- */
+
+.light {
+    background: #72f183;
+}
+
+.light .toggle .bxs-sun {
+    color: #fafafa;
+}
+
+.light .toggle .bx-moon {
+    color: #198754;
+}
+
+.light .toggle .ball {
+    background: #198754;
+}
+
+
+/* -- Dark Mode -- */
+
+.dark {
+    background: #151d2a;
+}
+
+.dark .toggle {
+    background: #151d2a;
+    box-shadow: 3px 3px 3px #0e131b, -3px -3px 3px #1c2739;
+}
+
+.dark .toggle .bx {
+    color: #fafafa;
+}
+
+.dark .toggle .bxs-moon {
+    color: #080cc3;
+}
+
+.bxs-sun {
+    color: #ff8f00;
+}
+
+.toggle .ball {
+    background: #fafafa;
+    transform: translateX(0%);
+}
+
+.dark .toggle .ball {
+    background: #fafafa;
+    transform: translateX(115%);
+    /* Adjusted for smaller toggle width */
+}
+
+.dark {
+    .media-body {
+        p {
+            color: white;
+        }
+    }
+}
