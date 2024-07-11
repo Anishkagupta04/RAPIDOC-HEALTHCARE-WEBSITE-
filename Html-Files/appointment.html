@@ -5,8 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book an Appointment</title>
     <link rel="stylesheet" href="./Css-Files/appointStyle.css">
+    <style>#progressBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 8px;
+        background-color: #3fbcc0;
+        z-index: 9999;
+    
+      }</style>
 </head>
 <body>
+    <div id="progressBar"></div>
+    <script>
+      window.onscroll = function () {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+      };
+    </script>
     <header>
         <div class="logo">Doctor's Clinic</div>
     </header>
@@ -23,7 +42,6 @@
                     <option value="doctor2">Dr. Ajay Aggarwal - Cardiologist</option>
                     <option value="doctor3">Dr. Soni Gupta - Dermatologist</option>
                     <option value="doctor4">Dr. Jayant Jaswal - ENT Specialist</option>
-
                 </select>
             </div>
 
@@ -57,7 +75,7 @@
                 <input type="tel" id="phone" name="phone" required>
 
                 <label for="reason">Reason for Visit:</label>
-                <textarea id="reason" name="reason"></textarea>
+                <textarea id="reason" name="reason" required></textarea>
 
                 <label>
                     <input type="checkbox" name="existing-patient" id="existing-patient">

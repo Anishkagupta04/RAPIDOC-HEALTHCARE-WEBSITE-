@@ -17,23 +17,27 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     window.previewAppointment = function() {
-        const formData = new FormData(appointmentForm);
-        
-        let details = `
-            <strong>Doctor:</strong> ${formData.get('doctor')}<br>
-            <strong>Date:</strong> ${formData.get('date')}<br>
-            <strong>Time:</strong> ${formData.get('time-slot')}<br>
-            <strong>Name:</strong> ${formData.get('full-name')}<br>
-            <strong>Date of Birth:</strong> ${formData.get('dob')}<br>
-            <strong>Email:</strong> ${formData.get('email')}<br>
-            <strong>Phone:</strong> ${formData.get('phone')}<br>
-            <strong>Reason for Visit:</strong> ${formData.get('reason')}<br>
-            <strong>Existing Patient:</strong> ${formData.get('existing-patient') ? 'Yes' : 'No'}<br>
-            <strong>Patient ID:</strong> ${formData.get('patient-id')}
-        `;
-        previewDetails.innerHTML = details;
-        previewSection.style.display = 'block';
-        appointmentForm.style.display = 'none';
+        if (appointmentForm.checkValidity()) {
+            const formData = new FormData(appointmentForm);
+            
+            let details = `
+                <strong>Doctor:</strong> ${formData.get('doctor')}<br>
+                <strong>Date:</strong> ${formData.get('date')}<br>
+                <strong>Time:</strong> ${formData.get('time-slot')}<br>
+                <strong>Name:</strong> ${formData.get('full-name')}<br>
+                <strong>Date of Birth:</strong> ${formData.get('dob')}<br>
+                <strong>Email:</strong> ${formData.get('email')}<br>
+                <strong>Phone:</strong> ${formData.get('phone')}<br>
+                <strong>Reason for Visit:</strong> ${formData.get('reason')}<br>
+                <strong>Existing Patient:</strong> ${formData.get('existing-patient') ? 'Yes' : 'No'}<br>
+                <strong>Patient ID:</strong> ${formData.get('patient-id')}
+            `;
+            previewDetails.innerHTML = details;
+            previewSection.style.display = 'block';
+            appointmentForm.style.display = 'none';
+        } else {
+            appointmentForm.reportValidity();
+        }
     };
 
     window.confirmAppointment = function() {
@@ -48,3 +52,4 @@ document.addEventListener("DOMContentLoaded", function() {
         appointmentForm.style.display = 'block';
     };
 });
+
