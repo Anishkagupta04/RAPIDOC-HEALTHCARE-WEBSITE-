@@ -164,6 +164,7 @@
             /* .nav-link li{
     margin-bottom: 5px;
   } */
+
             .nav-h {
                 height: 5.5rem;
                 width: 100vw;
@@ -446,6 +447,397 @@
     <link rel="stylesheet" href="./Css-Files/aboutus.css" />
     <link rel="stylesheet" href="./Css-Files/testimonial.css" />
     <script src="chatboxx.js" defer></script>
+
+      .nav-h {
+        height: 5.5rem;
+        width: 100vw;
+      }
+
+      .vis-h {
+        opacity: 0;
+      }
+
+      .img {
+        position: relative;
+        left: 300px;
+        bottom: 12px;
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      .container {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .sec-img {
+        max-width: 100%;
+        margin: 20px 0;
+        position: relative;
+        top: 0;
+        right: 0;
+
+      }
+
+      .content {
+        text-align: center;
+        padding: 10px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .content {
+        text-align: center;
+        padding: 10px;
+      }
+
+      .sec-img {
+        max-width: 100%;
+        margin: 20px 0;
+        position: relative;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    /*Preloader CSS*/
+    .pre {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 2s ease-out, visibility 2s ease-out;
+      opacity: 1;
+      visibility: visible;
+      z-index: 9999;
+    }
+
+    .pre--hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader {
+      display: block;
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #55a5ea;
+      animation: spin 3s linear infinite;
+    }
+
+    .loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #3fbcc0c6;
+      animation: spin 3s linear infinite;
+    }
+
+    .loader:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #fff;
+      animation: spin 1.5s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .avatar {
+      margin: 20px 100px;
+      padding-left: 50px;
+      padding-right: 60px;
+    }
+
+    .textbox input {
+      width: 240px;
+      height: 40px;
+      align-items: center;
+      margin-left: 10px;
+      margin-right: 20px;
+    }
+
+    .btn {
+      margin-left: 2px;
+      width: 230px;
+      height: 40px;
+      background-color: #00C896;
+      border: none;
+      font-size: 1rem;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    #appointment.appointment.section-bg {
+      margin: 0px 280px 100px;
+    }
+
+    #appointment.appointment.section-bg h2 {
+      margin: 0px 115px;
+    }
+
+    form.php-email-form {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: flex-start
+    }
+
+    .loader--hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  </style>
+  <style>
+   
+
+    /* Appointment section Styling to align it to center */
+    .appointment .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Center container contents */
+      border-radius: 10px;
+      margin: auto;
+    }
+
+    .appointment form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Center form contents */
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .appointment .form-group {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .appointment input,
+    .appointment select,
+    .appointment button {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    .appointment .text-center {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .appointment button[type="submit"] {
+      width: auto;
+      padding: 10px 20px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .php-email-form .form-control,
+    .php-email-form .form-select {
+      margin: 0;
+      padding: 10px;
+    }
+
+    .php-email-form .form-group,
+    .php-email-form .row {
+      margin: 0;
+      padding: 10px;
+    }
+
+    #name,
+    #email {
+      margin-bottom: 10px;
+      border-bottom: none;
+      height: 7vh;
+    }
+
+    #email,
+    #location {
+      border-top: 1px solid #ccc;
+      /* Adjust color as needed */
+      margin-top: 0;
+    }
+
+    /* Remove <br> tags if present in HTML */
+    #name+br,
+    #email+br {
+      display: none;
+    }
+
+    .section-bg {
+    background-color: #1c413b;
+    width: 700px;
+    padding: 40px;
+}
+
+#appointment.appointment.section-bg {
+    margin: auto;
+}
+
+select {
+    padding: 1px;
+    background-color: #f8f8f8;
+    color: #374151;
+    height: 7vh;
+    width: 17vh;
+}
+
+
+
+    #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 6px;
+      background-color: #3fbcc0;
+      z-index: 9999;
+    }
+
+    .contact .php-email-form {
+      width: 300%;
+      background: #000;
+    }
+
+    @media (max-width: 768px) {
+      body{
+       
+        width: 163vw !important;
+      }
+      .header_container{
+        width: 163vw;
+        height: auto;
+      }
+      .nav_menu{
+        padding: 10px;
+        height: auto;
+      }
+      .nav-h{
+        height: 5.5rem;
+        width: -webkit-fill-available !important;
+        justify-content: center;
+    flex-direction: row;
+    align-items: center;
+      }
+      .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column-reverse;
+        padding: 10px;
+      }
+      .about-service {
+        height: auto !important; 
+    width: auto !important;
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+    flex-direction: column;
+      }
+      .count-box {
+        padding: 76px;
+        font-size: 24px;
+      }
+      .appointment .container {
+        display: flex !important;
+        justify-content: center !important;
+        align-content: center !important;
+      }
+      .mt-2 {
+        display: flex ;
+    align-items: stretch !important;
+    justify-content: space-around   !important;
+    align-content: center !important;
+    gap: 40px !important;
+    margin-top: 70px !important;
+      }
+      .appointment form {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 500px !important;
+      }
+      .appointment .form-group {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-bottom: 15px !important;
+      }
+      footer {
+        width: 168vw !important;
+    padding: 40px  !important;
+    margin: auto !important;
+      }
+      #appointment.appointment.section-bg {
+        margin: 15px;
+      }
+      .testimonial-contains {
+        padding: 10px !important;
+      }
+      .swiper-slide .testimonals-item {
+        width: 476px !important;
+      }
+      .other-columns{
+        grid-template-columns: repeat(3, 3fr);
+        
+      } .form.php-email-form{
+      align-content: flex-start;
+    }
+    .social-wrapper{
+      margin-right: 50%;
+    }
+    #slide-item{
+      width: 510px !important;
+    }
+    .footer-col{
+      padding:15px ;
+      text-align: center;
+    }
+    }
+   
+  </style>
+  <link rel="stylesheet" href="chatbox.css">
+  <!-- Google Fonts Link For Icons chatboxx -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="stylesheet" href="./Css-Files/aboutus.css" />
+  <link rel="stylesheet" href="./Css-Files/testimonial.css" />
+  <script src="chatboxx.js" defer></script>
+
 </head>
 
 <body>
@@ -1102,6 +1494,7 @@
             </div>
         </section>
 
+
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
             body {
@@ -1296,12 +1689,124 @@
                             </div>
                         </div>
                     </div>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    // Display confirmation message
+    var confirmationMessage = document.getElementById('confirmationMessage');
+    confirmationMessage.style.display = 'block';
+    // Reset the form
+    event.target.reset();
+  
+    setTimeout(function() {
+      confirmationMessage.style.display = 'none';
+    }, 5000); //msg disappears after 5s
+  });
+</script>
+     
+          <!-- End Contact Section -->
+
+
+    <!-- testimonial section -->
+
+    <section id="test" class="testimonals">
+      <h2 class="h2 section-title has-underline"
+        style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
+        What our Patients Say
+      </h2>
+
+      <div class="testimonals-content">
+        <div class="swiper testimonals-slider js-testimonals-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide testimonals-item" id="slide-item" >
+              <div class="info">
+                <img src="./images/profile1.webp" alt="">
+                <div class="text-box">
+                  <h3 class="name">Dinesh Karthik</h3>
+                  <span class="job">Bangalore</span>
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide testimonals-item" id="slide-item" > 
+              <div class="info">
+                <img src="./images/profile2.webp" alt="">
+                <div class="text-box">
+                  <h3 class="name">Virat Kohli</h3>
+                  <span class="job">Delhi</span>
+
                 </div>
                 <div class="swiper-pagination js-testimonals-pagination"></div>
             </div>
+
             </div>
             </div>
             <div class="swiper-pagination js-testimonals-pagination"></div>
+
+
+            <div class="swiper-slide testimonals-item" id="slide-item" >
+              <div class="info">
+                <img src="./images/profile3.webp" alt="">
+                <div class="text-box">
+                  <h3 class="name">Smrithi Mandanna</h3>
+                  <span class="job">Mumbai</span>
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide testimonals-item" id="slide-item" >
+              <div class="info">
+                <img src="./images/profile4.webp" alt="">
+                <div class="text-box">
+                  <h3 class="name">John Doe</h3>
+                  <span class="job">Chennai</span>
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+
+            <div class="swiper-slide testimonals-item" id="slide-item" >
+              <div class="info">
+                <img src="./images/profile5.webp" alt="">
+                <div class="text-box">
+                  <h3 class="name">Shikha Pandey</h3>
+                  <span class="job">Kolkata</span>
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
             </div>
         </section>
 
@@ -1455,19 +1960,22 @@
               <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
-          <section class="footer-col">
-            <h4>RAPIDOC Newsletter</h4><br>
-            <p>
-              Subscribe to our newsletter for a weekly dose
-              of news, updates, helpful tips, and
-              exclusive offers.
-            </p>
-            <form action="#" class="subscribe-form">
-              <input type="email" placeholder="Your email" required>
-              <button type="submit">SUBSCRIBE</button>
-            </form>
-            <p class="confirmation-message">Thank you for subscribing!</p>
-          </section>
+          
+       <section class="footer-col" >
+      <div>
+      <h4>RAPIDOC Newsletter</h4><br>
+      <p>
+        Subscribe to our newsletter for a weekly dose
+        of news, updates, helpful tips, and
+        exclusive offers.
+      </p>
+    </div>
+      <form action="#" class="subscribe-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+      <p class="confirmation-message">Thank you for subscribing!</p>
+       </section>
           <style>
             .confirmation-message {
               display: none;
@@ -1495,11 +2003,79 @@
               }, 5000); // Hide after 5 seconds
             });
           </script>
+            
+            <style>
+              .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+              }
+            
+              .modal-content {
+                background-color: teal;
+                margin: 20% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 50%;
+                max-width: 300px;
+                color: white;
+                text-align: center;
+              }
+            
+              .close {
+                color: white;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+              }
+            
+              .close:hover,
+              .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+              }
+            </style>
+            
+            <script>
+              document.querySelector('.subscribe-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting in the traditional way
+            
+                // Show the modal popup
+                const modal = document.getElementById('popupModal');
+                modal.style.display = 'block';
+            
+                // Clear the input field
+                this.querySelector('input[type="email"]').value = '';
+            
+                // Hide the modal when the close button is clicked
+                const closeModal = document.querySelector('.modal .close');
+                closeModal.onclick = function() {
+                  modal.style.display = 'none';
+                }
+              });
+            
+              // Hide the modal when clicking outside of it
+              window.onclick = function(event) {
+                const modal = document.getElementById('popupModal');
+                if (event.target == modal) {
+                  modal.style.display = 'none';
+                }
+              }
+            </script>
+
         </div>
       </div>
     </div>
+   
     <div class="footer-bottom">
-      <div class="footer-bottom-wrapper">
+      <div class="footer-bottom-wrap
         <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights Reserved Made with ❤️ by RapiDoc</small>
                     <style>
                         .social-wrapper a div i {
@@ -1532,6 +2108,57 @@
                         </div>
                     </div>
             </div>
+
+        <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+          Reserved Made with ❤️ by RapiDoc</small>
+        <style>
+          @media (max-width:768px) {
+          .other-columns{
+            display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+          }
+            .footer-col{
+              display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 90px;
+            }
+            .subscribe-form{
+              display: flex;
+              gap: 10px;
+            }
+          }
+          .social-wrapper a div i {
+            color: #afb6c7;
+          }
+
+          .social-wrapper a div i:hover {
+            color: #fff;
+          }
+        </style>
+        <div class="social-wrapper">
+          <div class="social-links">
+            <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <a href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a>
+            <a href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+
         </div>
         </footer>
 
