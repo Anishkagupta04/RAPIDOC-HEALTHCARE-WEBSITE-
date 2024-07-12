@@ -1770,19 +1770,15 @@ footer {
   position: absolute;
   width: 0;
   height: 2px;
-  /* Adjust the thickness of the underline */
   bottom: -2px;
-  /* Adjust position if needed */
   left: 0;
-  background-color: #000;
-  /* Change this to your desired underline color */
+  background-color: #55a5ea;
   transition: width 0.3s ease;
   transition-delay: 0.1s;
-  /* Optional: Adds a slight delay to the animation */
 }
 
 .links a:hover {
-  color: #000;
+  color: #55a5ea;
   /* Change text color to black */
 }
 
