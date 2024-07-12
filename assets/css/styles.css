@@ -324,9 +324,9 @@ body.dark-theme {
 .about img {
   max-width: 100%;
   height: auto;
-  margin-left: 500px; /* Adjust the margin as needed */
-  margin-top: -150px;
-  padding-left: 60px;
+  margin-left: 0px; 
+  margin-top: 100px;
+  padding-left: 0px;
 }
 
 /*=============== SECURITY ===============*/
@@ -354,18 +354,23 @@ body.dark-theme {
 }
 
 .services__data {
-  display: grid;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
   row-gap: 1rem;
   background-color: #022a2d;
   box-shadow: 0px 2px 6px hsla(var(--hue), 100%, 15%, 0.15);
   padding: 2rem 1.5rem;
   border-radius: 1rem;
-  
   position:relative;
-  width: 100%; /* Adjust as necessary */
+  width: 100%;
   height: auto;
   text-align: justify;
   
+}
+.services__data img {
+  max-width: 100%; 
+  height: auto;
 }
 .services__data:hover{
   background-color: #55a5ea
