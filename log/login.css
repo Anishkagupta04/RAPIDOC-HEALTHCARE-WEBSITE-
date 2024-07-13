@@ -6,14 +6,14 @@
 
 body {
   display: flex;
-  background: linear-gradient(270deg, #6be1f9, #4bb6b7, #28cacd, #0da0a2, #01575d);  
+  background: linear-gradient(270deg, #05596a, #0e5355, #0a8a8d, #0bedf1, #01575d);  
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
   height: 100vh;
-  animation: waveAnimation 5s linear infinite;
+  animation: waveAnimation 8s linear infinite;
   background-size: 200% 200%;
 }
 .top-left-corner {
@@ -347,11 +347,109 @@ input {
   background-color: #6be1f9;
 }
 
-@keyframes waveAnimation {
-  0% {
-    background-position: -100% 50%;
+
+/* Adjustments for screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .container {
+    width: 80%;
   }
-  100% {
-    background-position: 200% 50%;
+
+  .overlay-panel {
+    padding: 0 30px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+}
+
+/* Adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    min-height: 450px;
+    padding: 20px;
+  }
+
+  form {
+    padding: 0 20px;
+  }
+
+  input {
+    padding: 10px;
+    margin: 6px 0;
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 10px 30px;
+    margin: 8px;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .overlay {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+  .overlay-panel {
+    width: 100%;
+    position: relative;
+    transform: none;
+    padding: 20px;
+  }
+
+  .overlay-left{
+    display: none;
+  }
+
+}
+
+/* Further adjustments for screens smaller than 480px */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    min-height: 400px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  input {
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 0.8rem;
+  }
+
+  button {
+    padding: 8px 20px;
+    margin: 6px;
+    font-size: 0.8rem;
+  }
+
+  .overlay {
+    height: 100%;
+  }
+
+  .overlay-panel {
+    padding: 10px;
   }
 }
