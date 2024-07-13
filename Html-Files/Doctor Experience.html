@@ -13,8 +13,6 @@
       font-family: Arial, sans-serif;
       background-color: #121212;
       color: #E0E0E0;
-  
-    
     }
 
     h1 {
@@ -33,6 +31,81 @@
       margin: 0 10px;
     }
 
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #E0E0E0;
+    }
+
+    h1 {
+      color: #00bfa5;
+      text-align: center;
+      margin-left: 40px;
+    }
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .filters select, .filters input {
+      margin: 0 10px;
+    }
+
+    .filters label {
+      margin-right: 10px;
+    }
+
+    .filters input[type="range"] {
+      margin-left: 10px;
+    }
+
+    .doctor-card {
+      border: 2px solid #4bb6b7;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 20px 0;
+      background-color: #2c3e50;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 25px;
+      color: #ecf0f1;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .doctor-card .content {
+      flex-grow: 1;
+      padding-right: 20px;
+    }
+
+    .doctor-card .content h4 {
+      margin: 0;
+      font-size: 28px;
+      color: #ecf0f1;
+    }
+
+    .doctor-card .content p {
+      margin: 5px 0 0;
+      font-size: 20px;
+      color: #f2f7fa;
+    }
+
+    .doctor-card img {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .doctor-card:hover {
+      background: rgb(75, 182, 183);
+      border: 2px solid white;
+      color: rgb(129, 124, 124);
+      font-weight: 700;
+      font-size: 30px;
+    }
     .filters label {
       margin-right: 10px;
     }
@@ -125,6 +198,9 @@
   <header class="h">
     <h1>Find a Doctor</h1>
     <div class="filter-sort">
+      <label for="name-filter" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">Search by Name:</label>
+      <input type="text" id="name-filter" placeholder="Enter doctor's name" style="height: 35px; background-color: #ecf0f1;">
+      
       <label for="experience-filter" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">Experience:</label>
       <select id="experience-filter" style="height: 35px; background-color: #ecf0f1;">
         <option value="" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">All</option>
@@ -212,8 +288,8 @@
     </div>
   </footer>
 
-  <script>
-    const doctorList = [
+    <script>
+      const doctorList = [
       {
         name: "Dr. Ram",
         specialization: "Cardiology",
@@ -426,69 +502,73 @@
       },
     ];
 
-    function renderDoctorList(doctors) {
-      const doctorListElement = document.getElementById("doctor-list");
-      doctorListElement.innerHTML = "";
+function renderDoctorList(doctors) {
+  const doctorListElement = document.getElementById("doctor-list");
+  doctorListElement.innerHTML = "";
 
-      doctors.forEach(doctor => {
-        const doctorItem = document.createElement("li");
-        doctorItem.innerHTML = `
-          <div class="content">
-            <h4>${doctor.name}</h4>
-            <p>Specialization: ${doctor.specialization}</p>
-            <p>Experience: ${doctor.experience} years</p>
-            <p>Fee: $${doctor.fee}</p>
-          </div>
-          ${doctor.image ? `<img src="${doctor.image}" alt="${doctor.name}" style="width: 80px; height: auto; border-radius: 50%;">` : ""}
-        `;
-        doctorListElement.appendChild(doctorItem);
-      });
-    }
+  doctors.forEach(doctor => {
+    const doctorItem = document.createElement("div");
+    doctorItem.className = "doctor-card";
+    doctorItem.innerHTML = `
+      <div class="content">
+        <h4>${doctor.name}</h4>
+        <p>Specialization: ${doctor.specialization}</p>
+        <p>Experience: ${doctor.experience} years</p>
+        <p>Fee: $${doctor.fee}</p>
+      </div>
+      ${doctor.image ? `<img src="${doctor.image}" alt="${doctor.name}" style="width: 80px; height: auto; border-radius: 50%;">` : ""}
+    `;
+    doctorListElement.appendChild(doctorItem);
+  });
+}
 
-    function filterDoctors() {
-      const experienceFilter = document.getElementById("experience-filter").value;
-      const feeFilter = document.getElementById("fee-filter").value;
+function filterDoctors() {
+  const experienceFilter = document.getElementById("experience-filter").value;
+  const feeFilter = document.getElementById("fee-filter").value;
+  const nameFilter = document.getElementById("name-filter").value.toLowerCase();
 
-      let filteredDoctors = doctorList.filter(doctor => {
-        return (
-          (experienceFilter === "" || doctor.experience >= experienceFilter) &&
-          doctor.fee >= feeFilter
-        );
-      });
+  let filteredDoctors = doctorList.filter(doctor => {
+    return (
+      (experienceFilter === "" || doctor.experience >= experienceFilter) &&
+      doctor.fee >= feeFilter &&
+      doctor.name.toLowerCase().includes(nameFilter)
+    );
+  });
 
-      renderDoctorList(filteredDoctors);
-    }
+  renderDoctorList(filteredDoctors);
+}
 
-    function sortDoctorsByFee() {
-      doctorList.sort((a, b) => a.fee - b.fee);
-      renderDoctorList(doctorList);
-    }
+function sortDoctorsByFee() {
+  doctorList.sort((a, b) => a.fee - b.fee);
+  renderDoctorList(doctorList);
+}
 
-    document.getElementById("experience-filter").addEventListener("change", filterDoctors);
-    document.getElementById("fee-filter").addEventListener("input", () => {
-      document.getElementById("fee-value").textContent = document.getElementById("fee-filter").value;
-      filterDoctors();
-    });
+document.getElementById("experience-filter").addEventListener("change", filterDoctors);
+document.getElementById("fee-filter").addEventListener("input", () => {
+  document.getElementById("fee-value").textContent = document.getElementById("fee-filter").value;
+  filterDoctors();
+});
+document.getElementById("name-filter").addEventListener("input", filterDoctors);
+document.getElementById("sort-btn").addEventListener("click", sortDoctorsByFee);
 
-    document.getElementById("sort-btn").addEventListener("click", sortDoctorsByFee);
+renderDoctorList(doctorList);
 
-    renderDoctorList(doctorList);
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".pre");
+  loader.classList.add("pre--hidden");
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild(loader);
+  });
+});
 
-    window.addEventListener("load", () => {
-      const loader = document.querySelector(".pre");
-      loader.classList.add("pre--hidden");
-      loader.addEventListener("transitionend", () => {
-        document.body.removeChild(loader);
-      });
-    });
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+  loader.classList.add("loader--hidden");
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild(loader);
+  });
+});
 
-    window.addEventListener("load", () => {
-      const loader = document.querySelector(".loader");
-      loader.classList.add("loader--hidden");
-      loader.addEventListener("transitionend", () => {
-        document.body.removeChild(loader);
-      });
-    });
-  </script>
+    </script>
 </body>
 </html>
