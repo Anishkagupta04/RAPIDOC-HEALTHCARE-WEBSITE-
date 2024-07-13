@@ -6,15 +6,13 @@
 
 body {
   display: flex;
-  background: linear-gradient(270deg, #05596a, #0e5355, #0a8a8d, #0bedf1, #01575d);  
+  background: linear-gradient(270deg, #06bdc0, #05d3e2);  
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
   height: 100vh;
-  animation: waveAnimation 8s linear infinite;
-  background-size: 200% 200%;
 }
 .top-left-corner {
   position: absolute;
