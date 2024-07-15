@@ -21,28 +21,7 @@ body{
     color: #55a5ea;
     text-decoration: none;
   }
-  
-  .nav_link {
-    list-style: none;
-  }
-  
-  .nav_link li {
-    padding: 5px 20px;
-    display: inline-block;
-    color: white;
-    padding-top: 15px;
-  }
-  
-  .nav_link li a {
-    transition: all 0.3s ease 0s;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .nav_link li a:hover {
-    color: #55a5ea;
-    text-decoration: underline 2.5px rgb(3, 3, 94);
-  }
+
 
   .head {
     display: flex;
@@ -53,14 +32,7 @@ body{
     margin: 12px auto;
 }
 
-.line {
-    width: 30vw;
-    border: 1px solid black;
-    margin: 7px;
-    background-color: black;
-    height: 4px;
-    border-radius: 24px;
-}
+
 
 #newsBox {
     display: flex;
