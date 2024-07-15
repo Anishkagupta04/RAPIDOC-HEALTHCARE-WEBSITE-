@@ -547,7 +547,6 @@ body {
 
 .section-title h2 {
     font-size: 32px;
-    color: #000;
     text-transform: uppercase;
     position: relative;
     font-weight: 700;
@@ -556,8 +555,11 @@ body {
 
 .section-title p {
     font-size: 16px;
-    color: #000;
     margin-bottom: 40px;
+}
+
+.section-black-text p, .section-black-text h2 {
+    color: #000;
 }
 
 .enhanced-input,
