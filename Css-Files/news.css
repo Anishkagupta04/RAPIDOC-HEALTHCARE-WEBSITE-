@@ -43,18 +43,6 @@ body{
     color: #55a5ea;
     text-decoration: underline 2.5px rgb(3, 3, 94);
   }
-  
-  .header_container {
-    /* background-color: #d9d9d9; */
-    background-color: #022a2d;
-    opacity: 0.9;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    margin: auto;
-  }
 
   .head {
     display: flex;
