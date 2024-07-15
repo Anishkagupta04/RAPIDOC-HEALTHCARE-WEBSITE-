@@ -46,7 +46,7 @@ align-items: center;
 
 footer {
     width: 100%;
-    background: linear-gradient(to right, #0f0f0f, #00093d);
+    background: #3fbcc051;
     color: #ffff;
     line-height: 20px;
   }
