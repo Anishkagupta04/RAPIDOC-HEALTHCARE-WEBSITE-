@@ -147,6 +147,7 @@ margin-bottom: 20px;
 .filter-sort {
 display: flex;
 align-items: center;
+flex-wrap: wrap;
 }
 
 .filter-sort label {
@@ -390,7 +391,45 @@ align-items: center;
   }
   
   
-  
+  @media (max-width:768px){
+    .footer-bottom-wrapper{
+      position: relative;
+      right: 200px;
+      width: 68%;
+    }
+    #doctor-list li{
+      width: 56%;
+    }
+    .min,#fee-filter,#fee-value{
+      position: relative;
+      right: 416px;
+      top: 39px;
+    }
+    .img img {
+      position: relative;
+      left: 300px;
+      bottom: 12px;
+    }
+    #sort-btn{
+      position: relative;
+      right: 494px;
+      top: 75px;
+    }
+    .filter-sort{
+      height: 117px;
+    }
+  }
+  @media screen and (max-width:620px) {
+    .min,#fee-filter,#fee-value{
+      right: 450px;
+      top: 75px;
+    }
+    #sort-btn{
+      right: 112px;
+      top: 42px;
+    }
+
+  }
   @media (min-width: 600px) {
     .other-columns {
         display: grid;
