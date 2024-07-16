@@ -474,3 +474,26 @@ input {
   z-index: 1000;
   font-size: 1.2rem;
 }
+.toggle-password {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-password svg {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 15px;
+}
+
+/* Additional styles for password container */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  padding-right: 30px; /* Adjust based on your eye icon size */
+}
