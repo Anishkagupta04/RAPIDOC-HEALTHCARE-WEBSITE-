@@ -340,10 +340,19 @@ input {
   transition: 0.3s ease-in-out;
 }
 
-.social-container a:hover {
-  border: 1px solid #4bb6b7;
-  background-color: #6be1f9;
+.social-container #fb:hover {
+  color: white;
+  background-color: #1877F2;
 }
+.social-container #lin:hover {
+  color: white;
+  background-color: #0A66C2;
+}
+.social-container #goog:hover {
+  color: white;
+  background-color: #34A853;
+}
+
 
 
 /* Adjustments for screens smaller than 1024px */
