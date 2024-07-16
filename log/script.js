@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
   const registerForm = document.getElementById("registerForm");
   const loginForm = document.getElementById("loginForm");
 
+  const successBanner = document.createElement("div");
+  successBanner.id = "successBanner";
+  successBanner.textContent = "Login Successful";
+  document.body.appendChild(successBanner);
+
   registerButton.addEventListener("click", (event) => {
     event.preventDefault();
     container.classList.add("right-panel-active");
@@ -34,10 +39,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Your login logic goes here
 
     // Simulate login success
-    alert("Login successful!");
-    // Redirect to the homepage after login
+    successBanner.style.display = "block";
     setTimeout(() => {
-      window.location.href = "index.html"; // Change "index.html" to your desired URL
-    }, 1000); // Redirect after 1 second (1000 milliseconds)
+      successBanner.style.display = "none";
+      window.location.href = "login.html"; // Change "index.html" to your desired URL
+    }, 2000); // Display banner for 2 seconds
   });
 });

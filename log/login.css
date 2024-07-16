@@ -451,3 +451,17 @@ input {
     padding: 10px;
   }
 }
+/* Banner styling */
+#successBanner {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: green;
+  color: white;
+  text-align: center;
+  z-index: 1000;
+  font-size: 1.2rem;
+}
