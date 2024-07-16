@@ -42,6 +42,36 @@
         margin: auto;
         margin-bottom: 12rem;
     }
+    html, body {
+    overflow-x: hidden;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media screen and (max-width: 760px) {
+    .page-content {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .page-content {
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .page-content {
+        padding: 0;
+    }
+}
+
+
 
     @media screen and (max-width: 760px) {
     #faq-container {
@@ -117,6 +147,250 @@
       z-index: 9999;
     }
 
+    /* Base Styles for Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Responsive Styles for Navbar */
+@media screen and (max-width: 768px) {
+  .nav_menu {
+    display: none;
+    position: absolute;
+    top: 85px; /* Adjust according to your header height */
+    left: 0;
+    width: 100%;
+    background-color: #022a2d;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .nav_menu.show {
+    display: flex;
+  }
+
+  .nav_link {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav_link li {
+    margin: 10px 0;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
+/* Styles for the Hamburger Menu when Opened */
+.hamburger-menu.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* Media Queries */
+
+/* Small Devices (600px and below) */
+@media screen and (max-width: 600px) {
+    #faq-container {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .main-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .main-heading h3 {
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .main-heading p {
+        margin-top: 10px;
+    }
+
+    .answers {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+
+    .lead, .pt-5 {
+        font-size: large;
+    }
+
+    .footer {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .footer-wrapper {
+        display: block;
+        margin: auto;
+    }
+
+    .footer-columns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-columns section {
+        margin-bottom: 1rem;
+    }
+
+    .social-wrapper {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .social-wrapper a div i {
+        font-size: 20px;
+    }
+}
+
+/* Extra Small Devices (400px and below) */
+@media screen and (max-width: 400px) {
+    #faq-container {
+        width: 95%;
+        margin-bottom: 0rem;
+    }
+
+    .main-heading {
+        padding: 10px;
+    }
+
+    .main-heading h3 {
+        font-size: 14px;
+    }
+
+    .answers {
+        padding: 15px 10px;
+        font-size: 12px;
+    }
+
+    .lead, .pt-5 {
+        font-size: medium;
+    }
+
+    .footer {
+        padding: 0.5rem;
+    }
+
+    .footer-wrapper {
+        display: block;
+        margin: auto;
+    }
+
+    .footer-columns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-columns section {
+        margin-bottom: 0.5rem;
+    }
+
+    .social-wrapper {
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+
+    .social-wrapper a div i {
+        font-size: 18px;
+    }
+}
+/* Footer Styles for Mobile Devices */
+@media screen and (max-width: 760px) {
+    .footer-columns {
+        flex-direction: column;
+    }
+
+    .footer-columns section {
+        margin-bottom: 1rem;
+    }
+
+    .footer-wrapper {
+        padding: 1rem;
+    }
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+@media screen and (max-width: 760px) {
+    body {
+        font-size: 14px;
+    }
+
+    .page-content {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+
+    .page-content {
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+
+
 </style>
 <body>
 
@@ -133,26 +407,30 @@
     <!-- Header -->
 
     <header class="header_container">
-        <div class="img">
-        <img id="rd-logo"  style="width: 90px; height: auto;" src="./images/rd.png"> 
+      <div class="img">
+        <img id="rd-logo" style="width: 90px; height: auto;" src="./images/rd.png">
       </div>
       
+      <div class="hamburger-menu" id="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
-      <nav class="nav_menu">
-
+      
+      <nav class="nav_menu" id="nav-menu">
         <ul class="nav_link">
           <li><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="Html-Files/news.html">News</a></li>
           <a href="dex.html"><button>Service</button></a>
-          <li><a href="#patient-portal">patient Portal</a></li>
+          <li><a href="#patient-portal">Patient Portal</a></li>
           <li><a href="#doctors">Doctor</a></li>
           <li><a href="Html-Files/contact.html">Contact us</a></li>
           <a href="login.html"><button>Sign in/Sign up</button></a>
         </ul>
       </nav>
-      </div>
     </header>
+    
 
   <!-- header -->
 
@@ -162,10 +440,9 @@
         <div class="text-center rounded-0" style="background-image: url('assets/img/logo/nn.png');">
             <div class="container">
                 <h1 class="pt-5">
-                    FAQ
+                  FAQ
                 </h1>
                 <p class="lead">
-                    Frequently Asked Questions.
                 </p>
             </div>
         </div>
@@ -380,6 +657,12 @@ window.addEventListener("scroll", function() {
     }
   }
 });
+
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.getElementById('nav-menu').classList.toggle('show');
+});
+
 </script>
 </body>
 </html>
