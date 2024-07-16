@@ -1960,5 +1960,11 @@ background-size: 100%;
 .social-links #mail1 a:hover{
   color: #bd4b39;
 }
+#abc a:hover {
+  background: #55a5ea;
+  border-color: #3fbbc0;
+  color: black;
+}
+
 
 
