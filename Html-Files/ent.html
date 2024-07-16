@@ -24,6 +24,178 @@
         .home-button:hover {
             background-color: #02969bd5;
         }
+
+        /*Responsiveness for Tablet (768px)*/
+        @media screen and (max-width: 768px) {
+          .home-button{
+            position: static;
+          }
+
+          .slide-container {
+            padding: 20px 0;
+          }
+
+          .slide-content {
+            margin: 0 20px;
+          }
+
+          .card {
+            width: 90%;
+            margin: 0 auto;
+          }
+
+          .card-image {
+            height: 120px;
+            width: 120px;
+          }
+
+          .name {
+            font-size: 16px;
+          }
+
+          .description {
+            font-size: 12px;
+          }
+
+          .button {
+            font-size: 14px;
+            padding: 6px 12px;
+          }
+
+          .calendar {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .dates {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+          }
+
+          .date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10, .date11, .date12 
+          {
+            padding: 8px;
+            font-size: 14px;
+          }
+
+          .header-buttons {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .header-buttons button {
+            margin: 5px 0;
+          }
+
+          footer button{
+            width: 30%;
+            padding: 6px 12px;
+          }
+
+          #topbar1 .container{
+            margin-top: 80px;
+          }
+        }
+
+        /*Responsiveness for Mobile-L (425px)*/
+        @media screen and (max-width: 425px) {
+          .slide-container {
+            padding: 15px 0;
+          }
+
+          .slide-content {
+            margin: 0 10px;
+          }
+
+          .card {
+            width: 100%;
+          }
+
+          .card-image {
+            height: 100px;
+            width: 100px;
+          }
+
+          .name {
+            font-size: 14px;
+          }
+
+          .description {
+            font-size: 11px;
+          }
+
+          .button {
+            font-size: 12px;
+            padding: 5px 10px;
+          }
+
+          .date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10, .date11, .date12 {
+            padding: 6px;
+            font-size: 12px;
+          }
+          footer button{
+            width: 35%;
+            padding: 6px 12px;
+          }
+        }
+
+        /*Responsiveness for Mobile-M (375px)*/
+        @media screen and (max-width: 375px) {
+          .card-image {
+            height: 90px;
+            width: 90px;
+          }
+
+          .name {
+            font-size: 13px;
+          }
+
+          .description {
+            font-size: 10px;
+          }
+
+          .button {
+            font-size: 11px;
+            padding: 4px 8px;
+          }
+
+          .date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10, .date11, .date12 {
+            padding: 5px;
+            font-size: 11px;
+          }
+          footer button{
+            width: 40%;
+            padding: 6px 12px;
+            font-size: 11px;
+          }
+        }
+
+        /*Responsiveness for Mobile-S (320px)*/
+        @media screen and (max-width: 320px) {
+          .card-image {
+            height: 80px;
+            width: 80px;
+          }
+
+          .name {
+            font-size: 12px;
+          }
+
+          .description {
+            font-size: 9px;
+          }
+
+          .button {
+            font-size: 10px;
+            padding: 3px 6px;
+          }
+
+          .date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10, .date11, .date12 {
+            padding: 4px;
+            font-size: 10px;
+          }
+        }
     </style>
 </head>
 
