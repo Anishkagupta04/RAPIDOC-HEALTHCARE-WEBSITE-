@@ -386,6 +386,42 @@ img, video {
     height: auto;
 }
 
+.footer-bottom {
+    margin-top: 1rem;
+    padding: 1rem;
+    color: white;
+    overflow: hidden; /* Prevents overflow */
+}
+
+/* Ensure Copyright Text Wrapping */
+.footer-bottom-wrapper small {
+    display: block;
+    margin: 0 auto;
+    font-size: 14px; /* Adjust size if needed */
+    max-width: 100%; /* Prevents overflowing beyond viewport */
+    box-sizing: border-box; /* Includes padding in the width */
+    word-wrap: break-word; /* Ensures long words break */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .footer-bottom-wrapper small {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer-bottom-wrapper small {
+        font-size: 10px; /* Further adjust for smaller screens */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer-bottom-wrapper small {
+        font-size: 8px; /* Adjust for very small screens */
+    }
+}
+
 /* Media Queries */
 @media screen and (max-width: 760px) {
     body {
