@@ -1,0 +1,166 @@
+#appointment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.appointment-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #3fbcc051;
+    text-align: center;
+    margin-bottom: 7%;
+    border-radius: 20px;
+}
+
+.section-title h2 {
+    font-size: 1.6rem;
+    margin: 15px 0 0 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.section-title p {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: normal;
+    margin: 20px 0 0 0;
+}
+
+.php-email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group label {
+    display: block;
+    text-align: start;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+}
+
+.form-select {
+    width: 100%;
+    padding: 6px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14l-4.796-5.481C2.027 5.191 2.208 5 2.5 5h11c.292 0 .473.191.549.659l-4.796 5.481a.513.513 0 0 1-.702 0z"/></svg>'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center; 
+    background-size: 16px 16px;
+}
+
+.form-select::placeholder {
+    color: #999;
+    opacity: 1; 
+}
+
+.btn-primary {
+    text-align: center;
+    justify-content: center;
+    background-color: #29888A;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px 0 30px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s; 
+}
+
+.btn-primary:hover {
+    background-color: #30a3a5;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .appointment-container {
+        padding: 15px;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .section-title p {
+        font-size: 1rem;
+    }
+
+    .php-email-form {
+        padding: 15px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* For larger smartphones and smaller tablets */
+@media (max-width: 576px) {
+    .appointment-container {
+        padding: 10px;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-title p {
+        font-size: 0.9rem;
+    }
+}
+
+/* For extra-large screens (desktops) */
+@media (min-width: 1200px) {
+    .appointment-container {
+        padding: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 3rem; 
+    }
+
+    .section-title p {
+        font-size: 1.2rem; 
+    }
+
+    .php-email-form {
+        padding: 30px;
+    }
+}
