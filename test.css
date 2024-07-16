@@ -116,22 +116,6 @@ button {
 button:hover {
     background-color: #095a55;
 }
-/* input {
-    height: 1rem;
-    width: 20rem;
-    padding: 1rem;
-    font-size: 1.2rem;
-    border-radius: 2rem;
-    border: 0;
-    backdrop-filter: blur(5px) saturate(200%);
-    -webkit-backdrop-filter: blur(5px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.2);
-    color: rgb(0, 0, 0);
-    border: 2px solid rgba(255, 255, 255, 0.125);
-} */
-
-
-
 .search:hover {
     width: 100%;
     box-shadow: 5px 5px 5px rgba(243, 243, 243, 0.6);
@@ -139,20 +123,13 @@ button:hover {
 
 i {
     font-size: 1.5rem;
-    color: #55a5ea;
     transition: all linear .5s;
     backdrop-filter: blur(5px) saturate(200%);
     -webkit-backdrop-filter: blur(5px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.2);
     padding: .5rem;
     border-radius: 1.8rem;
 }
 
-i:hover {
-    transform: scale(1.1);
-    color: #022a2d;
-    box-shadow: 5px 5px 5px rgba(243, 243, 243, 0.6);
-}
 h2{
     color: #55a5ea;
     text-align: center;
@@ -179,19 +156,7 @@ h2{
     gap: 20px; /* Increased gap for larger icons */
   }
 
-  .icon-set {
-    height: 40px; /* Increased icon size */
-    width: 40px; /* Increased icon size */
-  }
 
-  .icon-set:hover {
-    transform: scale(1.1); /* Added scale effect */
-    filter: grayscale(0%) hue-rotate(0deg) saturate(150%); /* Adjusted hover effect */
-  }
-
-  .icon-set:active {
-    filter: hue-rotate(50%);
-  }
   .social-list {
     display: flex;
     /* flex-direction: column; */
