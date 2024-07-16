@@ -12,7 +12,7 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #121212;
-      color: #E0E0E0;
+      color: white;
   
     
     }
@@ -180,16 +180,21 @@
               <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
-          <section class="footer-col">
+          <section class="footer-col" >
+            <div>
             <h4>RAPIDOC Newsletter</h4><br>
             <p>
-              Subscribe to our newsletter for a weekly dose of news, updates, helpful tips, and exclusive offers.
+              Subscribe to our newsletter for a weekly dose
+              of news, updates, helpful tips, and
+              exclusive offers.
             </p>
-            <form action="#">
-              <input type="text" placeholder="Your email" required>
+          </div>
+            <form action="#" class="subscribe-form">
+              <input type="email" placeholder="Your email" required>
               <button type="submit">SUBSCRIBE</button>
             </form>
-          </section>
+            <p class="confirmation-message">Thank you for subscribing!</p>
+             </section>
         </div>
       </div>
     </div>
@@ -507,6 +512,8 @@
         document.body.removeChild(loader);
       });
     });
+    var currentYear = new Date().getFullYear();
+    document.getElementById('year').textContent = currentYear;
   </script>
 </body>
 </html>

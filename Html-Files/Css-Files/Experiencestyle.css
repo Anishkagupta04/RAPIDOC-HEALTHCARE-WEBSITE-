@@ -27,7 +27,7 @@ body {
     transition: all 0.3s ease 0s;
     color: white;
   }
-  button {
+  /* button {
     position: relative;
     border-radius: 10px;
     border: 1px solid #4bb6b7;
@@ -40,7 +40,7 @@ body {
     letter-spacing: 1px;
     text-transform: capitalize;
     transition: 0.3s ease-in-out;
-  }
+  } */
   
   .nav_link li a:hover {
     color: #55a5ea;
@@ -471,3 +471,37 @@ align-items: center;
     align-items: center;
     margin-left: -100px;
   }
+  .subscribe-form {
+    display: flex;
+    gap: 10px;
+}
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489c6;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+.footer-col form button {
+  background: #fff;
+  border: none;
+  color: #08434551;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 1000;
+  transition: 0.2s ease;
+}
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
