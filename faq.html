@@ -164,50 +164,74 @@
 }
 
 /* Responsive Styles for Navbar */
-@media screen and (max-width: 768px) {
-  .nav_menu {
+/* Base Styles for Hamburger Menu */
+.hamburger-menu {
     display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
     position: absolute;
-    top: 85px; /* Adjust according to your header height */
-    left: 0;
-    width: 100%;
-    background-color: #022a2d;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000;
-  }
+    top: 15px; /* Adjust if necessary */
+    left: 15px; /* Move to the left side */
+}
 
-  .nav_menu.show {
-    display: flex;
-  }
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
 
-  .nav_link {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
+/* Responsive Styles for Navbar */
+@media screen and (max-width: 768px) {
+  img{
+    display: none;
   }
+    .nav_menu {
+        display: none;
+        position: absolute;
+        top: 85px; /* Adjust according to your header height */
+        left: 0;
+        width: 100%;
+        background-color: #022a2d;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px; /* Optional: Adjust padding as needed */
+        z-index: 1000;
+    }
 
-  .nav_link li {
-    margin: 10px 0;
-  }
+    .nav_menu.show {
+        display: flex;
+    }
 
-  .hamburger-menu {
-    display: flex;
-  }
+    .nav_link {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav_link li {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
 }
 
 /* Styles for the Hamburger Menu when Opened */
 .hamburger-menu.active .bar:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .hamburger-menu.active .bar:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .hamburger-menu.active .bar:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 
@@ -389,6 +413,119 @@ img, video {
     }
 }
 
+/* Base Styles for Header */
+.header_container {
+    background-color: #022a2d;
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 85px;
+    padding: 15px;
+    z-index: 555;
+}
+
+/* Header Content Wrapper */
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: auto;
+}
+
+/* Styles for the Logo and Text */
+.img {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Space from the left edge */
+}
+
+#rd-logo {
+    width: 90px;
+    height: auto;
+}
+
+#site-name {
+    font-size: 32px; /* Adjust size as needed */
+    color: #00FF00; /* Light green color */
+    margin-left: 10px; /* Space between the text and hamburger menu */
+    display: none; /* Hidden by default */
+}
+
+/* Styles for the Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Responsive Styles for Navbar */
+@media screen and (max-width: 768px) {
+    .img #rd-logo {
+        display: none; /* Hide image */
+    }
+
+    #site-name {
+        display: block; /* Show text */
+    }
+
+    .logo-text{
+      color: #3fbcc0;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .header-content {
+        justify-content: flex-start; /* Align items to the start (left) */
+    }
+
+    .nav_menu {
+        display: none;
+        position: absolute;
+        top: 85px; /* Adjust according to your header height */
+        left: 0;
+        width: 100%;
+        background-color: #022a2d;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .nav_menu.show {
+        display: flex;
+    }
+
+    .nav_link {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav_link li {
+        margin: 10px 0;
+    }
+}
+
+
+
+
 
 
 </style>
@@ -409,6 +546,7 @@ img, video {
     <header class="header_container">
       <div class="img">
         <img id="rd-logo" style="width: 90px; height: auto;" src="./images/rd.png">
+        <span class="logo-text">Rapidoc</span>
       </div>
       
       <div class="hamburger-menu" id="hamburger-menu">
