@@ -505,3 +505,23 @@ align-items: center;
   color: #bfbfbf;
   max-width: 300px;
 }
+/* back to top */
+#back-to-top-container {
+  position: fixed;
+  bottom: 15px;
+  right: 77px;
+  cursor: pointer;
+  z-index: 1000;
+}
+#back-to-top {
+  width: 55px;
+  height: 55px;
+  fill: hwb(181 16% 46%);
+  color: hwb(181 11% 13%);
+  transition: fill 0.3s;
+  background: white;
+  border-radius: 50%;
+}
+#back-to-top:hover {
+  transform: scale(1.1);
+}
