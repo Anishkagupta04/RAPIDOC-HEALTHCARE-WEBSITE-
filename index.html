@@ -81,6 +81,14 @@
         <li><a href="log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
 
         <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+        
+<!-- darkMode button updated -->
+        <div class="darkMode" id="light">
+          <i id="lightBean" class="bi bi-brightness-high-fill" style=" margin-left: 5px; margin-right: 5px; color: white; height: 30px; width: 30px; font-size: 25px; cursor: pointer;"></i>
+        </div>
+<!-- endOf darkMode -->
+
+
       </ul>
       <div class="hamburger">
         <div class="line"></div>
@@ -105,7 +113,7 @@
   <div class="container" style="display:flex ;">
     <div class="content">
 
-      <h1 style="font-size: 65px;">
+      <h1 id="homeHeading" style="font-size: 65px;">
         Welcome to <span style="color: #55a5ea;">RapiDoc!</span> <br /> Your one-stop digital <br> healthcare
         destination
       </h1>
@@ -127,7 +135,7 @@
     <section id="featured-services" class="featured-services">
       <div class="container" data-aos="fade-up">
 
-        <div class="row">
+        <div class="row" id="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon1"><i class="fas fa-heartbeat"></i></div>
@@ -181,7 +189,7 @@
           <div class="sec-1">
             <img src="img/about.png" class="about-img">
           </div>
-          <div class="sec-2">
+          <div class="sec-2" id="row2">
             <div class="a-1">
               <div class="a-l">
                 <div class="h-icon"><svg width="36px" height="36px" viewBox="0 0 24 24" fill="none"
@@ -1303,4 +1311,44 @@
       document.getElementById("progressBar").style.width = scrolled + "%";
     };
   </script>
+    <script>
+      // darkMode button updated
+      let light = document.getElementById("light");
+      let lightBean = document.getElementById("lightBean");
+      let body = document.getElementsByTagName("body")[0];
+      lightBean.addEventListener("click", () => {
+        body.style.backgroundColor = "white";
+        body.style.color = "black";
+        lightBean.style.display = "none";
+      let i = document.createElement("i");
+      i.classList.add("bi", "bi-moon-fill");
+      i.style.marginRight = "5px";
+      i.style.marginLeft = "5px";
+      i.style.marginTop = "5px";
+      i.style.color = "white";
+      i.style.fontSize = "25px";
+      light.appendChild(i);
+
+      let homeHeading = document.getElementById("homeHeading");
+      homeHeading.style.color = "#242323";
+
+      let row = document.getElementById("row");
+      row.style.color="white";
+
+      let row2 = document.getElementById("row2");
+      row2.style.color="white";
+      i.addEventListener("click", () => {
+        // lightMode button updated
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+        lightBean.style.display = "block";
+        homeHeading.style.color = "#d9d9d9";
+        i.remove();
+      })
+  
+      // i.classList.add("bi", "bi-moon-fill");
+  
+      })
+      
+    </script>
 </body>

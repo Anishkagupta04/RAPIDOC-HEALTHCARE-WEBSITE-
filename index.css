@@ -18,11 +18,24 @@ html {
 
 .nav_menu {
     display: flex;
+    
 }
 
 .nav_link {
     display: flex;
+    gap: 5px;
+    align-items: center;
 }
+/* darkMode-lightMode button css */
+.darkMode{
+    cursor: pointer;
+    transition: all 0.1s;
+    }
+    #lightBean:hover{
+    color: #55a5ea;
+    transition: all 0.5s;
+    }
+/* endOf darkMode button */
 
 .iti--allow-dropdown input {
     padding-left: 50px;
@@ -60,7 +73,7 @@ html {
 .btn-get-started {
     display: inline-block;
     background-color: #55a5ea;
-    color: #fff;
+    color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
