@@ -1129,7 +1129,6 @@ section {
   padding: 20px;
   animation: slideInFromBottom 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
   transition: opacity 0.3s ease-in-out;
-  /* background: linear-gradient(155deg, #3c696a, #163530); */
   background-color: #3fbcc051;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(6, 130, 130, 0.1);
@@ -1140,8 +1139,7 @@ section {
 }
 
 .feedback-form h2 {
-  /* color: #2b8d8f; */
-  font-size: 31px;
+  font-size: 28px;
   margin-bottom: 15px;
   text-align: center;
   font-weight: 1000 !important;
@@ -1172,7 +1170,7 @@ section {
 
 .feedback-form p {
   color: #d7d4d4;
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -1182,16 +1180,6 @@ section {
   justify-content: center;
   margin-bottom: 2px;
 }
-
-.rating-container button {
-  font-size: 24px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: grey;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
 
 .rating-container button {
   font-size: 24px;
@@ -1212,7 +1200,6 @@ section {
   transform: scale(1.1);
 }
 
-
 .feedback-form .rate-us {
   text-align: center !important; 
   display: block;
@@ -1221,10 +1208,11 @@ section {
   color: rgb(251, 250, 250);
   margin-bottom: 10px;
 }
+
 .feedback-form button {
   background: none;
   border: none;
-  font-size: 29px;
+  font-size: 25px;
   cursor: pointer;
   z-index: 1;
   padding: 12px;
@@ -1236,26 +1224,19 @@ section {
   flex-direction: column;
   width: 100%;
 }
-/*  */
+
 .feedback-form label {
   width: 100%;
   text-align: left;
   font-size: 14px;
-  /* margin-bottom: 5px; */
   margin-top: 9px;
   font-weight: 600;
   color: #fff;
 }
-.feedback-form input {
-  margin-top: 10px;
-}
+
+.feedback-form input,
 .feedback-form textarea {
   margin-top: 10px;
-}
-/*  */
-.feedback-form input[type="text"],
-.feedback-form input[type="email"],
-.feedback-form textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -1266,13 +1247,8 @@ section {
   transition: all 0.3s ease;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-.feedback-form #email {
-  margin-top: 10px;
-}
 
-
-.feedback-form input[type="text"]:focus,
-.feedback-form input[type="email"]:focus,
+.feedback-form input:focus,
 .feedback-form textarea:focus {
   outline: none;
   border-color: #29888a;
@@ -1286,7 +1262,7 @@ section {
 }
 
 .feedback-form button[type="submit"] {
-  background-color: hwb(181 16% 46%);;
+  background-color: hwb(181 16% 46%);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -1300,6 +1276,7 @@ section {
   background-color: #1c5f5e;
   transform: translateY(-2px);
 }
+
 .feedback-form button[type="submit"]:active {
   transform: translateY(0);
   background-color: #1c5f5e;
@@ -1310,11 +1287,40 @@ section {
   flex-direction: column;
   width: 100%;
   margin-bottom: 15px;
-} 
+}
 
-@media (min-width: 1200px) {
-  .feedback-wrapper {
-    padding: 50px;
+@media (max-width: 768px) {
+  .feedback-form {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .feedback-form h2 {
+    font-size: 24px;
+  }
+
+  .feedback-form p {
+    font-size: 14px;
+  }
+
+  .feedback-form label {
+    font-size: 12px;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .feedback-form button {
+    font-size: 22px;
+    padding: 10px;
+  }
+
+  .feedback-form button[type="submit"] {
+    font-size: 14px;
+    padding: 10px 15px;
   }
 }
 
@@ -1332,13 +1338,15 @@ section {
 }
 
 .popup-content {
-  /* background: linear-gradient(155deg, #effcfc, #185c51); */
   background-color: #113435;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   position: relative;
+  width: 80%;
+  max-width: 400px;
 }
+
 .popup-content a {
   text-decoration: none;
   color: white;
@@ -1346,11 +1354,8 @@ section {
 
 .popup-close {
   position: absolute;
-  top: -13px;
-  right: 225px;
-  margin: auto;
-  color: #000;
-  background: none;
+  top: 10px;
+  right: 10px;
   color: #01494b;
   border: none;
   font-size: 24px;
@@ -1358,18 +1363,17 @@ section {
 }
 
 .popup h2 {
-  /* color: #055a5b; */
   color: white;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .popup p {
   margin: 16px 0;
   color: #ececec;
 }
+
 .popup img {
   margin-top: 20px;
-  
 }
 
 .popup-button {
@@ -1387,6 +1391,31 @@ section {
   color: white;
 }
 
+@media (max-width: 768px) {
+  .popup-content {
+    padding: 15px;
+    width: 90%;
+    max-width: none;
+  }
+
+  .popup h2 {
+    font-size: 22px;
+  }
+
+  .popup p {
+    font-size: 14px;
+  }
+
+  .popup-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .popup-close {
+    top: 10px;
+    right: 10px;
+  }
+}
 
 /* Importing Google font - Open Sans */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
