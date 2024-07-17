@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book an Appointment</title>
+    <link rel="shortcut icon" href="/assets/img/favi-Appoint.png" type="image/x-icon" >
     <link rel="stylesheet" href="./Css-Files/appointStyle.css">
-    <style>#progressBar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 8px;
-        background-color: #3fbcc0;
-        z-index: 9999;
-    
-      }</style>
+    <style>
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #3fbcc0;
+            z-index: 9999;
+        }
+    </style>
 </head>
 <body>
     <div id="progressBar"></div>
     <script>
-      window.onscroll = function () {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        document.getElementById("progressBar").style.width = scrolled + "%";
-      };
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
     </script>
     <header>
         <div class="logo">Doctor's Clinic</div>
@@ -32,26 +34,48 @@
 
     <main>
         <h1>Book an Appointment</h1>
-        <p>Schedule your visit with our expert doctors easily.</p>
+        <p>Conveniently Connect with the Healthcare Experts!</p>
 
         <form id="appointment-form">
             <div class="form-section">
-                <label for="doctor-select">Select a Doctor:</label>
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-section">
+                <label for="dob">Date of Birth : 
+                    <input type="date" id="dob" name="dob"  required></label>
+            </div>
+
+            <div class="form-section">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+            </div>
+
+            <div class="form-section">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-section">
+                <label for="doctor-select">Select a Doctor</label>
                 <select id="doctor-select" name="doctor">
-                    <option value="doctor1">Dr. Vikas Chopra - Cardiologist</option>
-                    <option value="doctor2">Dr. Ajay Aggarwal - Cardiologist</option>
-                    <option value="doctor3">Dr. Soni Gupta - Dermatologist</option>
-                    <option value="doctor4">Dr. Jayant Jaswal - ENT Specialist</option>
+                    <option value="" disabled selected>Select a Doctor</option>
+                    <option value="Dr. Vikas Chopra">Dr. Vikas Chopra - Cardiologist</option>
+                    <option value="Dr. Ajay Aggarwal">Dr. Ajay Aggarwal - Cardiologist</option>
+                    <option value="Dr. Soni Gupta">Dr. Soni Gupta - Dermatologist</option>
+                    <option value="Dr. Jayant Jaswal">Dr. Jayant Jaswal - ENT Specialist</option>
                 </select>
             </div>
 
             <div class="form-section">
-                <label for="appointment-date">Choose a Date:</label>
-                <input type="date" id="appointment-date" name="date" required>
+                <label for="appointment-date">Appointment :&nbsp; 
+                    <input type="date" id="appointment-date" name="date" required></label>
+                
             </div>
 
             <div class="form-section">
-                <label for="time-slot">Select a Time:</label>
+                <label for="time-slot">Select a Time</label>
                 <select id="time-slot" name="time-slot" required>
                     <option value="10:00 AM">10:00 AM</option>
                     <option value="11:00 AM">11:00 AM</option>
@@ -62,36 +86,26 @@
             </div>
 
             <div class="form-section">
-                <label for="full-name">Full Name:</label>
-                <input type="text" id="full-name" name="full-name" required>
+                <label for="reason">Reason for Visit</label>
+                <textarea id="reason" name="reason"  placeholder="Enter your reason for visit..." required></textarea>
+            </div>
 
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob" required>
-
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label for="reason">Reason for Visit:</label>
-                <textarea id="reason" name="reason" required></textarea>
-
+            <div class="form-section">
                 <label>
-                    <input type="checkbox" name="existing-patient" id="existing-patient">
-                    Existing Patient
+                    <input type="checkbox" name="existing-patient" id="existing-patient" onchange="togglePatientID()">
+                    Existing Patient?
                 </label>
-                <input type="text" id="patient-id" name="patient-id" placeholder="Patient ID" style="display:none;">
+                <input type="text" id="patient-id" name="patient-id" placeholder="Enter Patient ID" style="display:none;">
             </div>
 
             <button type="button" onclick="previewAppointment()">Preview Appointment</button>
         </form>
 
         <div id="preview-section" style="display:none;">
-            <h2>Preview Appointment Details</h2>
+            <h2>Appointment Details</h2>
             <p id="preview-details"></p>
-            <button type="button" onclick="confirmAppointment()">Submit</button>
-            <button type="button" onclick="editAppointment()">Edit</button>
+            <button type="button" onclick="confirmAppointment()" style="display: inline;">Submit</button>
+            <button type="button" onclick="editAppointment()" style="display: inline;">Edit</button>
         </div>
     </main>
 

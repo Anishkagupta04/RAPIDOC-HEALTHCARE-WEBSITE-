@@ -1,189 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Customer Agreement - RAPIDOC Healthcare</title>
 
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/2666/2666501.png">
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/256/2666/2666501.png"
+    />
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
 
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: black;
-        }
+      ::-webkit-scrollbar-thumb {
+        background-color: #3fbcc0;
+        border-radius: 10px;
+      }
 
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #005253;
+        border-radius: 10px;
+      }
 
+      ::-webkit-scrollbar-track {
+        background-color: #011212;
+      }
 
-        #customer-agreement-container {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #1c413b;
-            color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      #customer-agreement-container {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #1c413b;
+        color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-        }
+      #customer-agreement-header {
+        text-align: center;
+      }
 
-        #customer-agreement-header {
-            text-align: center;
-            }
-            
-            #customer-agreement-title {
-            color: white;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
+      #customer-agreement-title {
+        color: white;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
 
+      #customer-agreement-main {
+        margin-top: 20px;
+      }
 
+      .section-title {
+        color: #00d9ffc2;
+        font-size: 1.5em;
+        margin-top: 20px;
+      }
 
-        #customer-agreement-main {
-            margin-top: 20px;
-        }
+      .section-content,
+      .section-list {
+        margin: 10px 0;
+      }
 
+      .section-list {
+        list-style: none;
+        padding: 0;
+      }
 
+      .list-item {
+        margin-bottom: 10px;
+        font-size: 1.1em;
+      }
 
-        .section-title {
-            color: #00d9ffc2;
-            font-size: 1.5em;
-            margin-top: 20px;
-        }
-
-        .section-content, .section-list {
-            margin: 10px 0;
-        }
-
-        .section-list {
-            list-style: none;
-            padding: 0;
-        }
-
-
-        .list-item {
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-
-
-
-        footer {
-            background-color: black;
-            color: #fff;
-            padding: 20px 0;
-        }
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: none;
-            color: gray;
-        }
-        h1, h2 {
-            color: black;
-        }
+      footer {
+        background-color: black;
+        color: #fff;
+        padding: 20px 0;
+      }
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: none;
+        color: gray;
+      }
+      h1,
+      h2 {
+        color: black;
+      }
     </style>
-<style>#progressBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 8px;
-    background-color: #3fbcc0;
-    z-index: 9999;
+    <style>
+      #progressBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 8px;
+        background-color: #3fbcc0;
+        z-index: 9999;
+      }
+    </style>
+  </head>
 
-  }</style>
-
-</head>
-
-<body>
+  <body>
     <div id="progressBar"></div>
     <script>
       window.onscroll = function () {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        var height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
         var scrolled = (winScroll / height) * 100;
         document.getElementById("progressBar").style.width = scrolled + "%";
       };
     </script>
 
     <div class="container" id="customer-agreement-container">
-        <header id="customer-agreement-header">
-            <h1 id="customer-agreement-title">Customer Agreement</h1>
-        </header>
-        <main class="main-content" id="customer-agreement-main">
-            <section class="section" id="customer-agreement-introduction">
-                <h2 class="section-title" id="introduction-title">Introduction</h2>
-                <p class="section-content" id="introduction-content">Welcome to RAPIDOC Healthcare Website. This
-                    Customer Agreement outlines the terms and conditions under which you may use our online platform to
-                    access healthcare information and services. By using our website, you agree to comply with and be
-                    bound by the terms of this agreement.</p>
-            </section>
-            <section class="section" id="customer-agreement-services">
-                <h2 class="section-title" >Services Provided</h2>
-                <ul class="section-list" >
-                    <li class="list-item"><strong>Information Access:</strong> RAPIDOC provides information about the
-                        nearest hospitals and healthcare facilities, including blood availability in emergencies, OPDs,
-                        and bed availability.</li>
-                    <li class="list-item"><strong>Appointment Booking:</strong> Users can prebook appointments for OPDs
-                        at desired hospitals.</li>
-                    <li class="list-item"><strong>Emergency Services:</strong> Information on emergency services and
-                        blood group availability.</li>
-                    <li class="list-item"><strong>Healthcare Facilities:</strong> Detailed information on healthcare
-                        services provided by various hospitals.</li>
-                </ul>
-            </section>
-            <section class="section" id="customer-agreement-responsibilities">
-                <h2 class="section-title" >User Responsibilities</h2>
-                <ul class="section-list" >
-                    <li class="list-item"><strong>Accuracy of Information:</strong> Users must provide accurate and
-                        up-to-date information when using our services.</li>
-                    <li class="list-item"><strong>Compliance:</strong> Users must comply with all applicable laws and
-                        regulations when using our platform.</li>
-                    <li class="list-item"><strong>Account Security:</strong> Users are responsible for maintaining the
-                        confidentiality of their account information and password.</li>
-                </ul>
-            </section>
-            <section class="section" id="customer-agreement-terms">
-                <h2 class="section-title" >Terms of Use</h2>
-                <ul class="section-list">
-                    <li class="list-item"><strong>Acceptance of Terms:</strong> By accessing and using our website, you
-                        accept and agree to be bound by the terms of this Customer Agreement.</li>
-                    <li class="list-item"><strong>Modification of Terms:</strong> RAPIDOC reserves the right to modify
-                        these terms at any time. Any changes will be posted on this page, and your continued use of the
-                        website will constitute acceptance of the new terms.</li>
-                    <li class="list-item"><strong>Termination:</strong> RAPIDOC may terminate your access to the website
-                        at any time, without notice, for conduct that it believes violates this agreement or is harmful
-                        to other users of the website, RAPIDOC, or third parties, or for any other reason.</li>
-                </ul>
-            </section>
-            <section class="section" id="customer-agreement-contact">
-                <h2 class="section-title" >Contact Information</h2>
-                <p class="section-content" >For any questions or concerns about this Customer
-                    Agreement, please contact us at rapidoc@mail.com.</p>
-            </section>
-        </main>
+      <header id="customer-agreement-header">
+        <h1 id="customer-agreement-title">Customer Agreement</h1>
+      </header>
+      <main class="main-content" id="customer-agreement-main">
+        <section class="section" id="customer-agreement-introduction">
+          <h2 class="section-title" id="introduction-title">Introduction</h2>
+          <p class="section-content" id="introduction-content">
+            Welcome to RAPIDOC Healthcare Website. This Customer Agreement
+            outlines the terms and conditions under which you may use our online
+            platform to access healthcare information and services. By using our
+            website, you agree to comply with and be bound by the terms of this
+            agreement.
+          </p>
+        </section>
+        <section class="section" id="customer-agreement-services">
+          <h2 class="section-title">Services Provided</h2>
+          <ul class="section-list">
+            <li class="list-item">
+              <strong>Information Access:</strong> RAPIDOC provides information
+              about the nearest hospitals and healthcare facilities, including
+              blood availability in emergencies, OPDs, and bed availability.
+            </li>
+            <li class="list-item">
+              <strong>Appointment Booking:</strong> Users can prebook
+              appointments for OPDs at desired hospitals.
+            </li>
+            <li class="list-item">
+              <strong>Emergency Services:</strong> Information on emergency
+              services and blood group availability.
+            </li>
+            <li class="list-item">
+              <strong>Healthcare Facilities:</strong> Detailed information on
+              healthcare services provided by various hospitals.
+            </li>
+          </ul>
+        </section>
+        <section class="section" id="customer-agreement-responsibilities">
+          <h2 class="section-title">User Responsibilities</h2>
+          <ul class="section-list">
+            <li class="list-item">
+              <strong>Accuracy of Information:</strong> Users must provide
+              accurate and up-to-date information when using our services.
+            </li>
+            <li class="list-item">
+              <strong>Compliance:</strong> Users must comply with all applicable
+              laws and regulations when using our platform.
+            </li>
+            <li class="list-item">
+              <strong>Account Security:</strong> Users are responsible for
+              maintaining the confidentiality of their account information and
+              password.
+            </li>
+          </ul>
+        </section>
+        <section class="section" id="customer-agreement-terms">
+          <h2 class="section-title">Terms of Use</h2>
+          <ul class="section-list">
+            <li class="list-item">
+              <strong>Acceptance of Terms:</strong> By accessing and using our
+              website, you accept and agree to be bound by the terms of this
+              Customer Agreement.
+            </li>
+            <li class="list-item">
+              <strong>Modification of Terms:</strong> RAPIDOC reserves the right
+              to modify these terms at any time. Any changes will be posted on
+              this page, and your continued use of the website will constitute
+              acceptance of the new terms.
+            </li>
+            <li class="list-item">
+              <strong>Termination:</strong> RAPIDOC may terminate your access to
+              the website at any time, without notice, for conduct that it
+              believes violates this agreement or is harmful to other users of
+              the website, RAPIDOC, or third parties, or for any other reason.
+            </li>
+          </ul>
+        </section>
+        <section class="section" id="customer-agreement-contact">
+          <h2 class="section-title">Contact Information</h2>
+          <p class="section-content">
+            For any questions or concerns about this Customer Agreement, please
+            contact us at rapidoc@mail.com.
+          </p>
+        </section>
+      </main>
     </div>
-        <!-- Footer -->
-        <footer class="text-center mt-5">
-            <div class="container">
-                <p>&copy; 2024 RapiDoc. All rights reserved.</p>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="/index.html">Home</a></li>
-                    <li class="list-inline-item"><a href="/Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
-                    <li class="list-inline-item"><a href="/Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
-                </ul>
-            </div>
-        </footer>
-</body>
-
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+      <div class="container">
+        <p>&copy; 2024 RapiDoc. All rights reserved.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="/index.html">Home</a></li>
+          <li class="list-inline-item">
+            <a href="/Html-Files/privacy_policy_page.html">Privacy Policy</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="/Html-Files/terms_and_conditions.html"
+              >Terms and Conditions</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
