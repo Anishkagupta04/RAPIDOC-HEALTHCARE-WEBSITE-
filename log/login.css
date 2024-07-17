@@ -340,10 +340,19 @@ input {
   transition: 0.3s ease-in-out;
 }
 
-.social-container a:hover {
-  border: 1px solid #4bb6b7;
-  background-color: #6be1f9;
+.social-container #fb:hover {
+  color: white;
+  background-color: #1877F2;
 }
+.social-container #lin:hover {
+  color: white;
+  background-color: #0A66C2;
+}
+.social-container #goog:hover {
+  color: white;
+  background-color: #34A853;
+}
+
 
 
 /* Adjustments for screens smaller than 1024px */
@@ -450,4 +459,41 @@ input {
   .overlay-panel {
     padding: 10px;
   }
+}
+/* Banner styling */
+#successBanner {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: green;
+  color: white;
+  text-align: center;
+  z-index: 1000;
+  font-size: 1.2rem;
+}
+.toggle-password {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-password svg {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 15px;
+}
+
+/* Additional styles for password container */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  padding-right: 30px; /* Adjust based on your eye icon size */
 }

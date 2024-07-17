@@ -1933,7 +1933,7 @@ background-size: 100%;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent; 
 -moz-background-clip: text;
--moz-text-fill-color: transparent;
+-moz-text-fill-color:transparent;
 }
 .social-links #twit a:hover{
   color: #000;
