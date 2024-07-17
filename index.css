@@ -131,10 +131,10 @@ option {
         opacity: 0;
     }
 
-    .img {
+    .img p{
         position: relative;
         left: 300px;
-        bottom: 12px;
+        bottom: 0;
     }
 }
 
