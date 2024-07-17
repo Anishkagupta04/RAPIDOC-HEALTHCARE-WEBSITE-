@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -9,6 +8,7 @@
 
 
   <link rel="stylesheet" type="text/css" href="../style.css" />
+  <link rel="stylesheet" type="text/css" href="./Css-Files/news.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
@@ -37,365 +37,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
- <style>
-.iti--allow-dropdown input {
-    padding-left: 50px;
-    background-color: black; /* Adjust padding to prevent overlap */
-}
-
-.iti.iti--allow-dropdown {
-    margin-left: 250px;
-}
-
-.container {
-    display:unset;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.content {
-    text-align: left;
-    flex: 1;
-    padding: 20px;
-}
-
-.sec-img {
-    max-width: 50%;
-    width: 600px;
-    height: 600px;
-    margin-left: auto;
-}
-
-.btn-get-started {
-    display: inline-block;
-    background-color: #55a5ea;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-select{
-  padding: 1px;
-  background-color: #55a5ea;
-  color: white;
- height: 5vh;
- width: 17vh;
-}
-option{
-  background-color: #55a5ea;
-  color: white;
-}
-
-@media screen and (max-width: 992px) {
-    .container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .sec-img {
-        max-width: 100%;
-        margin: 20px 0;
-        position: relative;
-        top: 0;
-        right: 0;
-
-    }
-
-    .content {
-        text-align: center;
-        padding: 10px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .content {
-        text-align: center;
-        padding: 10px;
-    }
-
-    .sec-img {
-        max-width: 100%;
-        margin: 20px 0;
-        position: relative;
-        top: 0;
-        right: 0;
-    }
-}
-/*Preloader CSS*/
-.pre{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 2s ease-out, visibility 2s ease-out;
-  opacity: 1;
-  visibility: visible;
-  z-index: 9999; 
-}
-
-.pre--hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.loader {
-  display: block;
-  position: relative;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #55a5ea;
-  animation: spin 3s linear infinite;
-}
-
-.loader:before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #3fbcc0c6;
-  animation: spin 3s linear infinite;
-}
-
-.loader:after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #fff;
-  animation: spin 1.5s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-      transform: rotate(0deg);
-  }
-  100% {
-      transform: rotate(360deg);
-  }
-}
-.avatar{
-  margin: 20px 100px;
-}
-.textbox input{
-  width:200px;
-  height: 40px;
-}
-.btn{
-  margin-left: 50px;
-  width:240px;
-  height: 40px;
-  background-color: #00C896;
-  border: none;
-  font-size: 1rem;
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
-#appointment.appointment.section-bg{
-  margin: 0px 280px 100px;
-}
-#appointment.appointment.section-bg h2{
-  margin: 0px 115px ;
-}
-form.php-email-form{
-  width: 300px;
-  margin-right: 250px;
-  display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start
-}
-.loader--hidden{
-  opacity: 0;
-  visibility: hidden;
-}
-    </style>
-    <style>
-/*Appointment section Styling's to align it to center*/
-     .appointment .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.appointment form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 600px;
-}
-
-.appointment .form-group {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.appointment input,
-.appointment select,
-.appointment button {
-  width: 100%;
-  max-width: 400px;
-}
-
-.appointment .text-center {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.appointment button[type="submit"] {
-  width: auto;
-  padding: 10px 20px;
-  display: block;
-  margin: 0 auto;
-}
-.php-email-form .form-group {
-  margin-bottom: 0;
-}
-
-.php-email-form .form-control,
-.php-email-form .form-select {
-  margin: 0 0 0 0;
-}
-
-.php-email-form .row {
-  margin: 0 0 0 0;
-}
-
-.php-email-form .col-md-4,
-.php-email-form .col-md-12 {
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.php-email-form input{
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-}
-/* Remove bottom margin from name and email inputs */
-#name, #email {
-  margin-bottom: 0;
-}
-
-/* Remove top margin from email and location inputs */
-#email, #location {
-  margin-top: -50px;
-}
-
-/* Remove <br> tags if present in HTML */
-#name + br, #email + br {
-  display: none;
-}
-
-/* Optional: Add a small border or visual separator if desired */
-#name, #email {
-  border-bottom: none;
-}
-#email, #location {
-  border-top: 1px solid #ccc; /* Adjust color as needed */
-}
-.news-section {
-  width: 100%;
-  padding: 70px 40px;
-}
-
-.news-section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-.news-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.news-item {
-  width: calc(33.33% - 20px);
-  margin-bottom: 30px;
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.news-item:hover {
-  transform: translateY(-5px);
-}
-
-.news-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.news-item h3 {
-  padding: 15px;
-  margin: 0;
-  font-size: 18px;
-  color: #333;
-}
-
-.news-item p {
-  padding: 0 15px 15px;
-  margin: 0;
-  font-size: 14px;
-  color: #666;
-}
-
-.read-more {
-  display: inline-block;
-  margin: 0 15px 15px;
-  padding: 8px 15px;
-  background-color: #55a5ea;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.read-more:hover {
-  background-color: #07192b;
-  color: white;
-  border: 1px solid greenyellow;
-}
-
-@media (max-width: 768px) {
-  .news-item {
-    width: calc(50% - 15px);
-  }
-}
-
-@media (max-width: 480px) {
-  .news-item {
-    width: 100%;
-  }
-}
-
-    </style>
     <link rel="stylesheet" href="chatbox.css">
      <!-- Google Fonts Link For Icons chatboxx -->
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -411,31 +52,28 @@ form.php-email-form{
     <div class="loader"></div>
   </div>
       <!-- ############# Header ############# -->
-
-      <header class="header_container">
+      <header class="header_container nav-h">
         <div class="img">
-        <img id="rd-logo"  style="width: 90px; height: auto;" src="../images/rd.png"> 
-      </div>
-
-      </div>
-      <nav class="nav_menu">
-
-        <ul class="nav_link">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="#">News</a></li>
-          <a href="dex.html">Service</a>
-          <li><a href="index.html#patient-portal">Patient Portal</a></li>
-          <li><a href="index.html#doctors">Doctor</a></li>
-          <li><a href="index.html#contact">Contact us</a></li>
-
-          <a href="login.html">Sign in/Sign up</a>
-          <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
-
-        </ul>
-      </nav>
-      </div>
-    </header>
+          <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png">
+        </div>
+        <nav class="nav_menu">
+          <ul class="nav_link vis-h">
+            <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+            <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+            <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
+            <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
+            <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+            <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+            <li><a href="#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
+            <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+          </ul>
+          <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </nav>
+      </header>
 
   <!-- ############# Header ############# -->
 
@@ -448,7 +86,7 @@ form.php-email-form{
   <div class="conta" style="display: flex; flex-wrap: wrap;">
     <div class="container" style="display:flex ;">
       <div class="news-section">
-        <h2 style="color: white"><strong>Latest News</strong></h2>
+        <h2 style="color: white;margin-top: 50px;"><strong>Latest News</strong></h2>
         <div class="news-container">
           <div class="news-item">
             <h3>RapiDoc Launches Revolutionary Telemedicine</h3>
@@ -598,7 +236,6 @@ form.php-email-form{
       </div>
     </div>
   </div>
-<br><br><br><br><br>
 <!-- End Home -->
 
 
@@ -668,9 +305,9 @@ form.php-email-form{
               <div class="social-links">
               <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
               <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
-              <a href="https://www.twitter.com"><div><img src="images/twitter.png" style="width: 16px; height: 15px;"></div></a>
+              <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a>
               <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
-                     <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
+              <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
               <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
               <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
               <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
@@ -693,8 +330,6 @@ form.php-email-form{
 
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
 
 
   <!-- JS Files -->

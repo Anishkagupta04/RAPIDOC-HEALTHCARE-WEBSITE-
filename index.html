@@ -11,6 +11,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="googletranslate.css">
 
   <script type="text/javascript">
     (function () {
@@ -31,6 +32,7 @@
   <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
 
   <!-- CSS Files -->
+   <link rel="stylesheet" href="index.css">
   <link href="Css-Files/animate.min.css" rel="stylesheet">
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -46,414 +48,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <style>
-    html{
-      scroll-behavior: smooth;
-    }
-    .emoji input {
-      display: none;
-    }
-
-    .emoji label {
-      font-size: 2rem;
-      cursor: pointer;
-      padding: 5px;
-    }
-
-    .emoji input:checked+label {
-      background-color: rgb(41, 136, 138);
-    }
-
-    .nav_menu {
-      display: flex;
-    }
-
-    .nav_link {
-      display: flex;
-    }
-
-    .iti--allow-dropdown input {
-      padding-left: 50px;
-      background-color: black;
-      /* Adjust padding to prevent overlap */
-    }
-
-    .iti.iti--allow-dropdown {
-      margin-left: 250px;
-    }
-
-    .container {
-      display: unset;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: nowrap;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    .content {
-      text-align: left;
-      flex: 1;
-      padding: 20px;
-    }
-
-    .sec-img {
-      max-width: 50%;
-      width: 600px;
-      height: 600px;
-      margin-left: auto;
-    }
-
-    .btn-get-started {
-      display: inline-block;
-      background-color: #55a5ea;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-
-    .btn-get-started:hover {
-      background-color: green;
-      color: white;
-    }
-
-    select {
-      padding: 1px;
-      background-color: #55a5ea;
-      color: white;
-      height: 5vh;
-      width: 17vh;
-    }
-
-    option {
-      background-color: #55a5ea;
-      color: white;
-    }
-
-    .hamburger {
-      display: none;
-      cursor: pointer;
-      position: absolute;
-      top: 29px;
-      left: 1.5%;
-    }
-
-    .line {
-      width: 30px;
-      height: 5px;
-      margin: 4px 4px;
-      background-color: white;
-    }
-
-    @media only screen and (max-width: 820px) {
-      .hamburger {
-        display: block;
-      }
-
-      .header_container {
-        flex-direction: column;
-        align-items: start;
-        height: 24.8rem;
-        transition: 0.55s all ease-out;
-        /* padding-top: 5px; */
-      }
-
-      .nav_link {
-        flex-direction: column;
-        position: relative;
-        bottom: 40px;
-      }
-
-      /* .nav-link li{
-    margin-bottom: 5px;
-  } */
-      .nav-h {
-        height: 5.5rem;
-        width: 100vw;
-      }
-
-      .vis-h {
-        opacity: 0;
-      }
-
-      .img {
-        position: relative;
-        left: 300px;
-        bottom: 12px;
-      }
-    }
-
-    @media screen and (max-width: 992px) {
-      .container {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .sec-img {
-        max-width: 100%;
-        margin: 20px 0;
-        position: relative;
-        top: 0;
-        right: 0;
-
-      }
-
-      .content {
-        text-align: center;
-        padding: 10px;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      .content {
-        text-align: center;
-        padding: 10px;
-      }
-
-      .sec-img {
-        max-width: 100%;
-        margin: 20px 0;
-        position: relative;
-        top: 0;
-        right: 0;
-      }
-    }
-
-    /*Preloader CSS*/
-    .pre {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: opacity 2s ease-out, visibility 2s ease-out;
-      opacity: 1;
-      visibility: visible;
-      z-index: 9999;
-    }
-
-    .pre--hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .loader {
-      display: block;
-      position: relative;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #55a5ea;
-      animation: spin 3s linear infinite;
-    }
-
-    .loader:before {
-      content: "";
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      right: 5px;
-      bottom: 5px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #3fbcc0c6;
-      animation: spin 3s linear infinite;
-    }
-
-    .loader:after {
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      right: 15px;
-      bottom: 15px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #fff;
-      animation: spin 1.5s linear infinite;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    .avatar {
-      margin: 20px 100px;
-      padding-left: 50px;
-      padding-right: 60px;
-    }
-
-    .textbox input {
-      width: 240px;
-      height: 40px;
-      align-items: center;
-      margin-left: 10px;
-      margin-right: 20px;
-    }
-
-    .btn {
-      margin-left: 2px;
-      width: 230px;
-      height: 40px;
-      background-color: #00C896;
-      border: none;
-      font-size: 1rem;
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
-
-    #appointment.appointment.section-bg {
-      margin: 0px 280px 100px;
-    }
-
-    #appointment.appointment.section-bg h2 {
-      margin: 0px 115px;
-    }
-
-    form.php-email-form {
-      width: 300px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-content: flex-start
-    }
-
-    .loader--hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-  </style>
-  <style>
-   
-
-    /* Appointment section Styling to align it to center */
-    .appointment .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /* Center container contents */
-      border-radius: 10px;
-      margin: auto;
-    }
-
-    .appointment form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /* Center form contents */
-      width: 100%;
-      max-width: 500px;
-    }
-
-    .appointment .form-group {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 15px;
-    }
-
-    .appointment input,
-    .appointment select,
-    .appointment button {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 10px;
-    }
-
-    .appointment .text-center {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .appointment button[type="submit"] {
-      width: auto;
-      padding: 10px 20px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .php-email-form .form-control,
-    .php-email-form .form-select {
-      margin: 0;
-      padding: 10px;
-    }
-
-    .php-email-form .form-group,
-    .php-email-form .row {
-      margin: 0;
-      padding: 10px;
-    }
-
-    #name,
-    #email {
-      margin-bottom: 10px;
-      border-bottom: none;
-      height: 7vh;
-    }
-
-    #email,
-    #location {
-      border-top: 1px solid #ccc;
-      /* Adjust color as needed */
-      margin-top: 0;
-    }
-
-    /* Remove <br> tags if present in HTML */
-    #name+br,
-    #email+br {
-      display: none;
-    }
-
-    .section-bg {
-    background-color: #1c413b;
-    width: 700px;
-    padding: 40px;
-}
-
-#appointment.appointment.section-bg {
-    margin: auto;
-}
-
-select {
-    padding: 1px;
-    background-color: #f8f8f8;
-    color: #374151;
-    height: 7vh;
-    width: 17vh;
-}
-
-
-
-    #progressBar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0%;
-      height: 6px;
-      background-color: #3fbcc0;
-      z-index: 9999;
-    }
-
-    .contact .php-email-form {
-      width: 300%;
-      background: #000;
-    }
-  </style>
   <link rel="stylesheet" href="chatbox.css">
   <!-- Google Fonts Link For Icons chatboxx -->
   <link rel="stylesheet"
@@ -484,7 +78,8 @@ select {
         <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
         <li><a href="#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
         <li><a href="#feedback"><i class="bi bi-star"></i>Rate Us</a></li>
-        <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+        <li><a href="log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+
         <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
       </ul>
       <div class="hamburger">
@@ -521,7 +116,6 @@ select {
     <img class="sec-img" src="images/rd.png" alt="" />
 
   </div>
-  <br><br><br><br><br>
   <!-- End Home -->
 
   <main id="main">
@@ -542,15 +136,16 @@ select {
                 cause problems.</p>
             </div>
           </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">          
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <div class="icon2"><i class="fas fa-dna"></i></div>
               <h4 class="title"><a href="test.html">Blood Test</a></h4>
               <p class="description"> Get your tests done to look for signs of disease or agents that cause disease.</p>
             </div>
           </div>
-
+        
+          
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <div class="icon3"><i class="fas fa-temperature-high"></i></div>
@@ -870,7 +465,7 @@ select {
     <!-- Patient Portal Section -->
     <section id="patient-portal" class="patient-portal">
       <div class="container-patientportal">
-        <div class="section-title" id="section-patientportal">
+        <div class="section-title section-black-text" id="section-patientportal">
           <h2>Patient Portal</h2>
           <p>Access your medical records, lab results, and prescription history securely.</p>
         </div>
@@ -909,7 +504,7 @@ select {
     <!-- Appointment Section -->
     <section id="appointment" class="appointment section-bg">
       <div class="container" style="border-radius: 10px;">
-        <div class="section-title">
+        <div class="section-title section-black-text">
           <h2>Make an Appointment</h2>
           <p>We listed the docs, we made you a form. You make us an appointment.</p>
         </div>
@@ -1075,25 +670,7 @@ select {
               <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"></iframe>
               <a href="https://www.fnfgo.com/">FNF Mods</a>
           </div>
-          <style>
-              .mapouter {
-                  position: relative;
-                  text-align: right;
-                  width: 100%;
-                  height: 363px;
-              }
-
-              .gmap_canvas {
-                  overflow: hidden;
-                  background: none !important;
-                  width: 100%;
-                  height: 363px;
-              }
-
-              .gmap_iframe {
-                  height: 363px !important;
-              }
-          </style>
+          
       </div>
       <br>
       <div class="row mt-2" style="display: flex; flex-direction: row; align-items: stretch; justify-content: space-around;">
@@ -1140,82 +717,6 @@ select {
   </div>
 </section>
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
-  body {
-      font-family: 'Poppins', sans-serif;
-  }
-
-  .section-title h2 {
-      font-size: 32px;
-      color: #000;
-      text-transform: uppercase;
-      position: relative;
-      font-weight: 700;
-      margin-bottom: 20px;
-  }
-
-  .section-title p {
-      font-size: 16px;
-      color: #000;
-      margin-bottom: 40px;
-  }
-
-  .enhanced-input, .enhanced-textarea {
-       border: 2px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    color: #000;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s, background-color 0.3s;
-       margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  .enhanced-input:focus, .enhanced-textarea:focus {
-    border-color: #4cae4c;
-    background-color: #fff; color: #000;
-  }
-
-  .btn-submit {
-    padding: 10px 20px;
-    background-color: #000;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-
-  .btn-submit:hover {
-    background-color: #4cae4c;
-    transform: scale(1.05);
-  }
-
-  @keyframes fadeIn {
-      0% {
-          opacity: 0;
-      }
-      100% {
-          opacity: 1;
-      }
-  }
-  .confirmation-message {
-    display: none;
-    margin-top: 10px;
-    padding: 30px;
-    background-color: #e0f7fa;
-    color: #00796b;
-    border: 1px solid #00796b;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    text-align: center;
-    animation: slideDown 1s forwards;
-  }
-</style>
-
 <script>
   document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
@@ -1245,7 +746,7 @@ select {
       <div class="testimonals-content">
         <div class="swiper testimonals-slider js-testimonals-slider">
           <div class="swiper-wrapper">
-            <div class="swiper-slide testimonals-item">
+            <div class="swiper-slide testimonals-item" id="slide-item" >
               <div class="info">
                 <img src="./images/profile1.webp" alt="">
                 <div class="text-box">
@@ -1264,7 +765,7 @@ select {
               </div>
             </div>
 
-            <div class="swiper-slide testimonals-item">
+            <div class="swiper-slide testimonals-item" id="slide-item" > 
               <div class="info">
                 <img src="./images/profile2.webp" alt="">
                 <div class="text-box">
@@ -1282,7 +783,7 @@ select {
               </div>
             </div>
 
-            <div class="swiper-slide testimonals-item">
+            <div class="swiper-slide testimonals-item" id="slide-item" >
               <div class="info">
                 <img src="./images/profile3.webp" alt="">
                 <div class="text-box">
@@ -1300,7 +801,7 @@ select {
               </div>
             </div>
 
-            <div class="swiper-slide testimonals-item">
+            <div class="swiper-slide testimonals-item" id="slide-item" >
               <div class="info">
                 <img src="./images/profile4.webp" alt="">
                 <div class="text-box">
@@ -1319,7 +820,7 @@ select {
               </div>
             </div>
 
-            <div class="swiper-slide testimonals-item">
+            <div class="swiper-slide testimonals-item" id="slide-item" >
               <div class="info">
                 <img src="./images/profile5.webp" alt="">
                 <div class="text-box">
@@ -1459,7 +960,7 @@ select {
     
   </main><!-- End #main -->
   <!-- ############### Footer ############### -->
-  <br><br><br><br><br><br>
+  
   <footer>
     <div class="footer-wrapper">
       <div class="footer-columns">
@@ -1496,26 +997,23 @@ select {
               <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
-          <section class="footer-col">
-            <h4>RAPIDOC Newsletter</h4><br>
-            <p>
-              Subscribe to our newsletter for a weekly dose
-              of news, updates, helpful tips, and
-              exclusive offers.
-            </p>
-            <form action="#" class="subscribe-form">
-              <input type="email" placeholder="Your email" required>
-              <button type="submit">SUBSCRIBE</button>
-            </form>
-            <p class="confirmation-message">Thank you for subscribing!</p>
-          </section>
-          <style>
-            .confirmation-message {
-              display: none;
-              color: green;
-              margin-top: 10px;
-            }
-          </style>
+          
+       <section class="footer-col" >
+      <div>
+      <h4>RAPIDOC Newsletter</h4><br>
+      <p>
+        Subscribe to our newsletter for a weekly dose
+        of news, updates, helpful tips, and
+        exclusive offers.
+      </p>
+    </div>
+      <form action="#" class="subscribe-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+      <p class="confirmation-message">Thank you for subscribing!</p>
+       </section>
+      
 
           <script>
             document.querySelector('.subscribe-form').addEventListener('submit', function (event) {
@@ -1536,41 +1034,69 @@ select {
               }, 5000); // Hide after 5 seconds
             });
           </script>
+            
+            <script>
+              document.querySelector('.subscribe-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting in the traditional way
+            
+                // Show the modal popup
+                const modal = document.getElementById('popupModal');
+                modal.style.display = 'block';
+            
+                // Clear the input field
+                this.querySelector('input[type="email"]').value = '';
+            
+                // Hide the modal when the close button is clicked
+                const closeModal = document.querySelector('.modal .close');
+                closeModal.onclick = function() {
+                  modal.style.display = 'none';
+                }
+              });
+            
+              // Hide the modal when clicking outside of it
+              window.onclick = function(event) {
+                const modal = document.getElementById('popupModal');
+                if (event.target == modal) {
+                  modal.style.display = 'none';
+                }
+              }
+            </script>
+
         </div>
       </div>
     </div>
+   
     <div class="footer-bottom">
       <div class="footer-bottom-wrapper">
-        <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+        <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
           Reserved Made with ❤️ by RapiDoc</small>
-        <style>
-          .social-wrapper a div i {
-            color: #afb6c7;
-          }
-
-          .social-wrapper a div i:hover {
-            color: #fff;
-          }
-        </style>
         <div class="social-wrapper">
           <div class="social-links">
             <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <div  id="insta">
             <a href="https://www.instagram.com" target="_blank">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.twitter.com" target="_blank">
-              <i class="fab fa-twitter"></i>
+          </div>
+          <div id="twit">
+            <a  href="https://www.twitter.com" target="_blank">
+              <i class="bi bi-twitter-x"></i>
             </a>
-            <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+          </div>
+          <div id="git">
+            <a  href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com" target="_blank">
+          </div>
+          <div id="linkd">
+            <a  href="https://www.linkedin.com" target="_blank">
               <i class="fab fa-linkedin"></i>
             </a>
+          </div>
 
-            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a>
-            <a href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            <div id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+           <div id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></div>
+            <div id="mail1" ><a  href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
           </div>
         </div>
       </div>
@@ -1586,6 +1112,27 @@ select {
       </svg>
     </div>
   </div>
+  <button id="translateButton">Translate</button>
+
+  <!-- Popup for Google Translate -->
+  <div id="translatePopup" class="popup">
+      <div class="popup-content">
+          <span class="close">&times;</span>
+          <div id="google_translate_element"></div>
+      </div>
+  </div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+        }, 'google_translate_element');
+    }
+</script>
+<script src=" googletranslate.js"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Your custom JavaScript -->
+<script src="script.js"></script>
 
 
 
