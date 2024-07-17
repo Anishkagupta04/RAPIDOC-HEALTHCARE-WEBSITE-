@@ -1090,26 +1090,37 @@ section {
   background: #55a5ea;
 }
 
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
+.confirmation-message {
+  display: none;
+  text-align: center;
+  margin-top: 15px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .contact .row {
+    flex-direction: column;
   }
 
-  100% {
-    transform: rotate(360deg);
+  .contact .col-lg-4, .contact .col-lg-8 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact .info {
+    margin-bottom: 20px;
   }
 }
 
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
+@media (max-width: 576px) {
+  .contact .section-title {
+    text-align: center;
   }
 
-  100% {
-    transform: rotate(360deg);
+  .contact .php-email-form {
+    padding: 15px;
   }
 }
-
 
 /*################--feedback###############*/
 .feedback-wrapper {
