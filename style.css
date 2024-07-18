@@ -46,44 +46,6 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-.nav_link li {
-  margin-right: 1px;
-  /* Add space between items */
-  padding: 5px 10px;
-  display: inline-block;
-  color: white;
-}
-
-.nav_link li a {
-  transition: all 0.3s ease 0s;
-  color: white;
-}
-
-.nav_link li a:hover {
-  color: #55a5ea;
-}
-
-#header {
-  position: relative;
-  top: 12px;
-}
-
-.header_container {
-  background-color: #022a2d;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  height: 85px;
-  margin: auto;
-  margin-top: 0px;
-  /* Adjust this value to move the header down */
-  padding-top: 15px;
-  z-index: 555;
-}
-
 .container {
   /* display: ; */
   font-family: sans-serif;
@@ -120,15 +82,122 @@ h6 {
   font-size: xx-large;
   color: #55a5ea;
 }
-
-.container-head {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 2fr 13fr 3fr;
-  margin-top: 0px;
+.nav_link li {
+  margin-right: 1px;
+  padding: 5px 10px;
+  display: inline-block;
+  color: white;
 }
 
-/*---------------------parallax effect after about------------*/
+.nav_link li a {
+  transition: all 0.3s ease 0s;
+  color: white;
+}
+
+.nav_link li a:hover {
+  color: #55a5ea;
+}
+
+#header {
+  position: relative;
+  top: 12px;
+}
+
+.header_container {
+  background-color: #022a2d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 85px;
+  margin: auto;
+  margin-top: 0px;
+  padding-top: 15px;
+  z-index: 555;
+}
+
+.logo-text {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  font-size: 24px;
+  transform: translateX(120%);
+  margin-right: 450px;
+  margin-top: 20px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .logo-text {
+    display: none;
+  }
+  
+  #rd-logo {
+    display: none;
+  }
+
+  .nav_link {
+    display: none;
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: flex;
+    order: 1;
+    margin-left: 10px;
+  }
+
+  .mobile-logo-text {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-right: 5px;
+    font-size: 30px;
+  }
+
+  .nav_menu.active .nav_link {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background-color: #022a2d;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    z-index: 1; /* Ensure the nav items are above other elements */
+  }
+
+  .nav_link li {
+    margin: 10px 20px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-logo-text {
+    display: none;
+  }
+}
+
+
+
+/*################----Sections General----################*/
 .parallax-container {
   height: 100vh;
   overflow: hidden;
@@ -148,93 +217,9 @@ h6 {
   border-radius: 10px;
   z-index: -1;
 }
-
-/*################----Navigation----################*/
-
-
-/* Added the cursor as a pointer  */
 .icon-box {
   cursor: pointer
 }
-
-/*################----Mobile Navigation----################*/
-
-.mobile-nav-toggle {
-  color: #fff;
-  font-size: 28px;
-  cursor: pointer;
-  display: none;
-  line-height: 0;
-  transition: 0.5s;
-}
-
-.mobile-nav-toggle.bi-x {
-  color: #fff;
-}
-
-@media (max-width: 991px) {
-  .mobile-nav-toggle {
-    display: block;
-  }
-
-  .navbar ul {
-    display: none;
-  }
-}
-
-.navbar-mobile {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: rgba(28, 47, 65, 0.9);
-  transition: 0.3s;
-  z-index: 999;
-}
-
-.navbar-mobile .mobile-nav-toggle {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-.navbar-mobile ul {
-  display: block;
-  position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  padding: 10px 0;
-  background-color: #000;
-  overflow-y: auto;
-  transition: 0.3s;
-}
-
-.navbar-mobile>ul>li {
-  padding: 0;
-}
-
-.navbar-mobile a {
-  padding: 10px 20px;
-  font-size: 15px;
-  color: #fff;
-  border: none;
-}
-
-.navbar-mobile a:hover,
-.navbar-mobile .active,
-.navbar-mobile li:hover>a {
-  color: #3fbcc0c6;
-}
-
-.navbar-mobile .getstarted {
-  margin: 15px;
-}
-
-/*################----Sections General----################*/
 section {
   overflow: hidden;
 }
@@ -1090,26 +1075,37 @@ section {
   background: #55a5ea;
 }
 
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
+.confirmation-message {
+  display: none;
+  text-align: center;
+  margin-top: 15px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .contact .row {
+    flex-direction: column;
   }
 
-  100% {
-    transform: rotate(360deg);
+  .contact .col-lg-4, .contact .col-lg-8 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact .info {
+    margin-bottom: 20px;
   }
 }
 
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
+@media (max-width: 576px) {
+  .contact .section-title {
+    text-align: center;
   }
 
-  100% {
-    transform: rotate(360deg);
+  .contact .php-email-form {
+    padding: 15px;
   }
 }
-
 
 /*################--feedback###############*/
 .feedback-wrapper {
