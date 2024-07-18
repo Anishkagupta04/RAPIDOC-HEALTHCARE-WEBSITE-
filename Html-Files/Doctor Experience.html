@@ -6,6 +6,7 @@
   <title>Find a Doctor</title>
   <link rel="icon" type="image/x-icon" href="../favicon.png">
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="./Css-Files/Experiencestyle.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <style>
@@ -144,7 +145,6 @@
   <main>
     <ul id="doctor-list"></ul>
   </main>
-
   <footer>
     <div class="footer-wrapper">
       <div class="footer-columns">
@@ -152,52 +152,104 @@
           <section>
             <h4>Quick Links</h4><br>
             <ul class="links">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="../index.html#about">About Us</a></li>
-              <li><a href="../index.html#contact">Contact Us</a></li>
-              <li><a href="../dex.html">Services</a></li>
-              <li><a href="../index.html#doctors">Doctors</a></li>
-              <li><a href="../faq.html">FAQ</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="index.html#contact">Contact Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#doctors">Doctors</a></li>
+              <li><a href="./faq.html">FAQ</a></li>
             </ul>
           </section>
           <section>
             <h4>Explore</h4><br>
             <ul class="links">
-              <li><a href="appointment.html">Appointment</a></li>
-              <li><a href="../index.html#patient-portal">Patient Portal</a></li>
-              <li><a href="../login.html">Login account</a></li>
-              <li><a href="../index.html#contact">Helplines</a></li>
-              <li><a href="../index.html#contact">Location</a></li>
+              <li><a href="Html-Files/appointment.html">Appointment</a></li>
+              <li><a href="index.html#patient-portal">Patient Portal</a></li>
+              <li><a href="log/login.html">Login account</a></li>
+              <li><a href="#">Helplines</a></li>
+              <li><a href="index.html#contact">Location</a></li>
             </ul>
           </section>
           <section>
             <h4>Legal</h4><br>
             <ul class="links">
-              <li><a href="customer_agreement.html">Customer Agreement</a></li>
-              <li><a href="privacy_policy_page.html">Privacy Policy</a></li>
-              <li><a href="terms_and_conditions.html">GDPR</a></li>
+              <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
+              <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+              <li><a href="Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
+              <li><a href="#">GDPR</a></li>
               <li><a href="#">Security</a></li>
               <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
-          <section class="footer-col" >
-            <div>
-            <h4>RAPIDOC Newsletter</h4><br>
-            <p>
-              Subscribe to our newsletter for a weekly dose
-              of news, updates, helpful tips, and
-              exclusive offers.
-            </p>
-          </div>
-            <form action="#" class="subscribe-form">
-              <input type="email" placeholder="Your email" required>
-              <button type="submit">SUBSCRIBE</button>
-            </form>
-            <p class="confirmation-message">Thank you for subscribing!</p>
-             </section>
+          
+       <section class="footer-col" >
+      <div>
+      <h4>RAPIDOC Newsletter</h4><br>
+      <p>
+        Subscribe to our newsletter for a weekly dose
+        of news, updates, helpful tips, and
+        exclusive offers.
+      </p>
+    </div>
+      <form action="#" class="subscribe-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+      <p class="confirmation-message">Thank you for subscribing!</p>
+       </section>
+      
+
+          <script>
+            document.querySelector('.subscribe-form').addEventListener('submit', function (event) {
+              event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+              // Here you would normally send the form data to the server using fetch or XMLHttpRequest
+              // For demonstration purposes, we'll just show the confirmation message
+
+              const confirmationMessage = document.querySelector('.confirmation-message');
+              confirmationMessage.style.display = 'block'; // Show the confirmation message
+
+              // Clear the input field
+              this.querySelector('input[type="email"]').value = '';
+
+              // Optionally, you can hide the confirmation message after a few seconds
+              setTimeout(() => {
+                confirmationMessage.style.display = 'none';
+              }, 5000); // Hide after 5 seconds
+            });
+          </script>
+            
+            <script>
+              document.querySelector('.subscribe-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting in the traditional way
+            
+                // Show the modal popup
+                const modal = document.getElementById('popupModal');
+                modal.style.display = 'block';
+            
+                // Clear the input field
+                this.querySelector('input[type="email"]').value = '';
+            
+                // Hide the modal when the close button is clicked
+                const closeModal = document.querySelector('.modal .close');
+                closeModal.onclick = function() {
+                  modal.style.display = 'none';
+                }
+              });
+            
+              // Hide the modal when clicking outside of it
+              window.onclick = function(event) {
+                const modal = document.getElementById('popupModal');
+                if (event.target == modal) {
+                  modal.style.display = 'none';
+                }
+              }
+            </script>
+
         </div>
       </div>
     </div>
+   
     <div class="footer-bottom">
       <div class="footer-bottom-wrapper">
         <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
@@ -234,6 +286,7 @@
       </div>
     </div>
   </footer>
+
   <div id="back-to-top-container">
     <div class="circle">
       <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
