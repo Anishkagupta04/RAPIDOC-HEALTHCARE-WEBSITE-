@@ -46,7 +46,7 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-/* .nav_link li {
+.nav_link li {
   margin-right: 1px;
   padding: 5px 10px;
   display: inline-block;
@@ -80,7 +80,7 @@ h6 {
   margin-top: 0px;
   padding-top: 15px;
   z-index: 555;
-} */
+}
 * {
   margin: 0;
   padding: 0;
