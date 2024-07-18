@@ -46,9 +46,8 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-.nav_link li {
+/* .nav_link li {
   margin-right: 1px;
-  /* Add space between items */
   padding: 5px 10px;
   display: inline-block;
   color: white;
@@ -79,10 +78,115 @@ h6 {
   height: 85px;
   margin: auto;
   margin-top: 0px;
-  /* Adjust this value to move the header down */
   padding-top: 15px;
   z-index: 555;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* Header container */
+.index-header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+.index-nav_menu{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.index-img{
+  width: 90px;
+  height: 80px;
+}
+
+/* Navigation menu */
+
+.index-nav_link {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.index-nav_link li {
+  margin: 0 10px;
+}
+
+.index-nav_link li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.index-nav_link li a:hover {
+  color: #ddd;
+}
+
+/* Hamburger icon */
+.index-hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+/* Responsive styles */
+@media (max-width: 1310px) {
+  .index-nav_link {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 20px;
+    z-index: 1000;
+}
+
+  .index-nav_link li {
+      margin: 10px 0;
+      text-align: center;
+  }
+
+  .index-nav_link a {
+      font-size: 20px;
+  }
+
+  .index-nav_link a button {
+      width: 100%;
+  }
+
+  .index-hamburger {
+      display: block;
+      align-items: end;
+  }
+  .index-nav_menu.active{
+    width: 100%;
+    transition: 2s;
+    
+  }
+  .index-img{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+}
+
+/* Show the menu when active */
+.index-nav_menu.active .index-nav_link {
+  display: flex;
+  transition: 2s;
+}
+
 
 .container {
   /* display: ; */
