@@ -69,6 +69,12 @@
       <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png">
     </div>
     <nav class="nav_menu">
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="mobile-logo-text">RAPIDOC</div>
       <ul class="nav_link vis-h">
         <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
         <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
@@ -79,29 +85,27 @@
         <li><a href="#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
         <li><a href="#feedback"><i class="bi bi-star"></i>Rate Us</a></li>
         <li><a href="log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
-
         <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
       </ul>
-      <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
     </nav>
   </header>
-
-  <!-- ############# Header ############# -->
-
+  
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-
       <a href="#appointment" class="appointment-btn scrollto">
-        <span class="d-md-inline">EMERGENCY</span></a>
+        <span class="d-md-inline">EMERGENCY</span>
+      </a>
     </div>
   </header>
-
-
+  
+  <script>
+  function toggleMenu() {
+    const navMenu = document.querySelector('.nav_menu');
+    navMenu.classList.toggle('active');
+  }
+  </script>
+  
+     
   <div class="container" style="display:flex ;">
     <div class="content">
 
@@ -295,6 +299,7 @@
         </div>
       </div>
     </section>
+
     <script>
       document.querySelectorAll('.about-us-community').forEach(function (element) {
         element.addEventListener('mouseover', function () {
@@ -304,6 +309,7 @@
           element.querySelector('img').src = './images/checkup.png';
         });
       });
+
       document.querySelectorAll('.about-us-event').forEach(function (element) {
         element.addEventListener('mouseover', function () {
           element.querySelector('img').src = './images/serviceshover.png';
@@ -312,6 +318,7 @@
           element.querySelector('img').src = './images/services.png';
         });
       });
+
       document.querySelectorAll('.about-us-product').forEach(function (element) {
         element.addEventListener('mouseover', function () {
           element.querySelector('img').src = './images/wardhover.png';
@@ -320,6 +327,7 @@
           element.querySelector('img').src = './images/ward.png';
         });
       });
+
       document.querySelectorAll('.about-us-location').forEach(function (element) {
         element.addEventListener('mouseover', function () {
           element.querySelector('img').src = './images/appointmenthover.png';
@@ -654,63 +662,65 @@
 
    <!-- ################# Contact Section ################# -->
   <!-- clicking on "contact us" directs to this section -->
-  <section id="contact" class="contact">
-    <div class="section-title">
+<section id="contact" class="contact"> 
+  <div class="section-title">
       <h2>Contact</h2>
-      <p>Locate your appointment. Feel free to give us feedback and help us improve our digital med care.</p>
-    </div>
-    <div class="container">
+      <p>Located your appointment. Feel free to give us feedback and help us improve our digital med care.</p>
+  </div>
+  <div class="container">
       <!--Google map-->
       <div class="mapouter">
-        <div class="gmap_canvas">
-          <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"></iframe>
-        </div>
+          <div class="gmap_canvas">
+              <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"></iframe>
+              <a href="https://www.fnfgo.com/">FNF Mods</a>
+          </div>
+          
       </div>
       <br>
-      <div class="row mt-2">
-        <div class="col-lg-4">
-          <div class="info">
-            <div class="address">
-              <i class="fa fa-location-dot"></i>
-              <h4>Location:</h4>
-              <p><a href="https://www.google.com/maps/search/?api=1&query=IGDTUW,Delhi" target="_blank">IGDTUW, Delhi</a></p>
-            </div>
-            <div class="email">
-              <i class="fa fa-envelope"></i>
-              <h4>Email:</h4>
-              <p><a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a></p>
-            </div>
-            <div class="phone">
-              <i class="fa fa-phone"></i>
-              <h4>Call:</h4>
-              <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
-            </div>
+      <div class="row mt-2" style="display: flex; flex-direction: row; align-items: stretch; justify-content: space-around;">
+          <div class="col-lg-4">
+              <div class="info">
+                  <div class="address">
+                      <i class="fa fa-location-dot"></i>
+                      <h4>Location:</h4>
+                      <p><a href="https://www.google.com/maps/search/?api=1&query=IGDTUW,Delhi" target="_blank">IGDTUW, Delhi</a></p>
+                  </div>
+                  <div class="email">
+                      <i class="fa fa-envelope"></i>
+                      <h4>Email:</h4>
+                      <p><a href="mailto:rapidoc@mail.com">rapidoc@mail.com</a></p>
+                  </div>
+                  <div class="phone">
+                      <i class="fa fa-phone"></i>
+                      <h4>Call:</h4>
+                      <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col-lg-8 mt-5 mt-lg-0">
-          <form id="contactForm" action="" role="form" class="php-email-form">
-            <div class="form-group">
-              <input type="text" name="name" class="form-control enhanced-input" id="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group mt-3">
-              <input type="email" class="form-control enhanced-input" name="email" id="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group mt-3">
-              <input type="text" class="form-control enhanced-input" name="subject" id="subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group mt-3">
-              <textarea class="form-control enhanced-textarea" name="message" rows="5" placeholder="Message" required></textarea>
-            </div>
-            <div class="text-center"><button type="submit" class="btn-submit">Send Message</button></div>
-          </form>
-          <div id="confirmationMessage" class="confirmation-message">
-            Thank you for your message. We will get back to you shortly.
+          <div class="col-lg-8 mt-5 mt-lg-0">
+              <form id="contactForm" action="" role="form" class="php-email-form">
+                  <div class="form-group">
+                      <input type="text" name="name" class="form-control enhanced-input" id="name" placeholder=" Your Name" required>
+                  </div>
+                  <div class="form-group mt-3">
+                      <input type="email" class="form-control enhanced-input" name="email" id="email" placeholder=" Your Email" required>
+                  </div>
+                  <div class="form-group mt-3">
+                      <input type="text" class="form-control enhanced-input" name="subject" id="subject" placeholder=" Subject" required>
+                  </div>
+                  <div class="form-group mt-3">
+                      <textarea class="form-control enhanced-textarea" name="message" rows="5" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="text-center"><button type="submit" class="btn-submit">Send Message</button></div>
+              </form>
+              <div id="confirmationMessage" class="confirmation-message">
+                Thank you for your message. We will get back to you shortly.
+                   </div>
           </div>
-        </div>
       </div>
-    </div>
-  </section>
-  
+  </div>
+</section>
+
 <script>
   document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
