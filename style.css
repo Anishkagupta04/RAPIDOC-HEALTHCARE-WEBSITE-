@@ -167,7 +167,7 @@ h6 {
     font-weight: bold;
     margin-left: 50px;
     margin-right: 5px;
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .nav_menu.active .nav_link {
@@ -987,10 +987,10 @@ section {
 }
 
 .contact .info {
-  width: 100%;
   background: #0a0a0a;
   border-radius: 15px;
   padding: 15px;
+  margin-bottom: 20px;
 }
 
 .contact .info i {
@@ -1025,7 +1025,7 @@ section {
 
 .contact .info .email,
 .contact .info .phone {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .contact .info .email:hover i,
@@ -1035,34 +1035,27 @@ section {
 }
 
 .contact .php-email-form {
-  width: 100%;
   background: #000;
+  padding: 20px;
+  border-radius: 15px;
 }
 
 .contact .php-email-form .form-group {
-  padding-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 .contact .php-email-form input,
 .contact .php-email-form textarea {
-  border-radius: 10px;
-  box-shadow: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
   font-size: 14px;
   color: #000;
 }
 
-.contact .php-email-form input {
-  height: 44px;
-  width: 100%;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
 .contact .php-email-form button[type="submit"] {
-  display: block;
-  margin: 20px auto;
+  display: inline-block;
   background: #3fbcc0a6;
   border: 0;
   padding: 10px 35px;
@@ -1083,29 +1076,12 @@ section {
 }
 
 @media (max-width: 768px) {
-  .contact .row {
-    flex-direction: column;
-  }
-
-  .contact .col-lg-4, .contact .col-lg-8 {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .contact .info {
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .contact .section-title {
-    text-align: center;
-  }
-
+  .contact .info,
   .contact .php-email-form {
-    padding: 15px;
+      padding: 15px;
   }
 }
+
 
 /*################--feedback###############*/
 .feedback-wrapper {
