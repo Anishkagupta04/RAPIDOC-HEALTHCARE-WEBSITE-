@@ -559,7 +559,7 @@ body {
 }
 
 .section-black-text p, .section-black-text h2 {
-    color: #000;
+    color: white;
 }
 
 .enhanced-input,
@@ -687,3 +687,16 @@ body {
 .social-wrapper a div i:hover {
     color: #fff;
 }
+.confirmation-message {
+    display: none;
+    color: green;
+    margin-top: 10px;
+}
+.nav_link{
+    display: flex;
+    gap: 20px;
+}
+.btn1{
+    margin-right: 15px;
+}
+
