@@ -12,7 +12,7 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #121212;
-      color: #E0E0E0;
+      color: white;
   
     
     }
@@ -180,37 +180,69 @@
               <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
-          <section class="footer-col">
+          <section class="footer-col" >
+            <div>
             <h4>RAPIDOC Newsletter</h4><br>
             <p>
-              Subscribe to our newsletter for a weekly dose of news, updates, helpful tips, and exclusive offers.
+              Subscribe to our newsletter for a weekly dose
+              of news, updates, helpful tips, and
+              exclusive offers.
             </p>
-            <form action="#">
-              <input type="text" placeholder="Your email" required>
-              <button type="submit">SUBSCRIBE</button>
+          </div>
+            <form action="#" class="subscribe-form">
+              <input type="email" placeholder="Your email" required>
+              <button type="submit" style="color: black;">SUBSCRIBE</button>
             </form>
-          </section>
+            <p class="confirmation-message">Thank you for subscribing!</p>
+             </section>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="footer-bottom-wrapper">
-        <small>© <span id="year"></span> RapiDoc | All Rights Reserved Made with ❤️ by RapiDoc</small>
+        <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+          Reserved Made with ❤️ by RapiDoc</small>
         <div class="social-wrapper">
           <div class="social-links">
-            <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
-            <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
-            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
-            <a href="https://www.instagram.com" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
-            <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
-            <a href="#" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
-            <a href="https://www.gmail.com" target="_blank"><div><i class="fa fa-envelope"></i></div></a>
+            <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <div  id="insta">
+            <a href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div id="twit">
+            <a  href="https://www.twitter.com" target="_blank">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+          <div id="git">
+            <a  href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div id="linkd">
+            <a  href="https://www.linkedin.com" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+            <div id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+           <div id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></div>
+            <div id="mail1" ><a  href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
           </div>
         </div>
       </div>
     </div>
   </footer>
+  <div id="back-to-top-container">
+    <div class="circle">
+      <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+      </svg>
+    </div>
+  </div>
 
   <script>
     const doctorList = [
@@ -489,6 +521,35 @@
         document.body.removeChild(loader);
       });
     });
+    var currentYear = new Date().getFullYear();
+    document.getElementById('year').textContent = currentYear;
   </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const backToTopButton = document.getElementById('back-to-top-container');
+  
+        function checkButtonVisibility() {
+          if (window.innerWidth > 100 && window.scrollY > 100) {
+            backToTopButton.style.display = 'block';
+          } else {
+            backToTopButton.style.display = 'none';
+          }
+        }
+  
+        window.addEventListener('scroll', checkButtonVisibility);
+        window.addEventListener('resize', checkButtonVisibility);
+  
+        backToTopButton.addEventListener('click', function () {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+        checkButtonVisibility();
+      });
+  
+    </script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </body>
 </html>
