@@ -66,8 +66,8 @@ label {
 input {
     padding: 0.5rem;
     margin-bottom: 1rem;
-    width: 100%;
-    max-width: 300px;
+    width: 70%;
+    max-width: 60px;
     box-sizing: border-box;
     margin-left: 500px;
 } 
