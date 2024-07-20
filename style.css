@@ -1578,7 +1578,14 @@ footer {
   margin-bottom: 7%;
   border-radius: 20px;
 }
+.patient-portal input{
+  padding: 10px; /* add some padding to make it look nicer */
+  font-size: 16px; /* set the font size */
+  border: 1px solid #ccc; /* add a border */
+  border-radius: 5px; /* add a rounded corner effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow effect */
 
+}
 /* Section title styling */
 .section-title h1 {
   color: #29888a;
@@ -1614,7 +1621,7 @@ footer {
   /* text-align: center; */
 }
 
-button {
+.btn {
   background-color: hwb(181 16% 46%);
   /* Blue background for the button */
   color: white;
