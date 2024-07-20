@@ -1990,3 +1990,13 @@ background-size: 100%;
     font-size: 10px;
   }
 }
+.popup-message {
+  display: none;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+  border-radius: 5px;
+  text-align: center;
+}
