@@ -57,6 +57,17 @@
   <link rel="stylesheet" href="./Css-Files/aboutus.css" />
   <link rel="stylesheet" href="./Css-Files/testimonial.css" />
   <script src="chatboxx.js" defer></script>
+  <style>
+       .rating-container button {
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .rating-container button:hover{
+          transform: scale(1.5);
+        }
+  </style>
 </head>
 
 <body>
@@ -859,14 +870,18 @@
   <div class="feedback-form">
     <h2>We'd Love Your Feedback!</h2>
     <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> Healthcare</p>
-    <div>
+        <p>This is a confused face emoji: &#x1f615;</p>
+
+      <div>
       <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
       <div class="rating-container">
-        <button type="button" onclick="handleRatingChange(1)">☆</button>
-        <button type="button" onclick="handleRatingChange(2)">☆</button>
-        <button type="button" onclick="handleRatingChange(3)">☆</button>
-        <button type="button" onclick="handleRatingChange(4)">☆</button>
-        <button type="button" onclick="handleRatingChange(5)">☆</button>
+        <div class="rating-container">
+          <button type="button" onclick="handleRatingChange(1)">😡</button>
+          <button type="button" onclick="handleRatingChange(2)">☹️</button>
+          <button type="button" onclick="handleRatingChange(3)">😐</button>
+          <button type="button" onclick="handleRatingChange(4)">🙂</button>
+          <button type="button" onclick="handleRatingChange(5)">😄</button>
+      </div>
       </div>
     </div>
     <form id="feedback-form" onsubmit="handleSubmit(event)">
@@ -900,18 +915,44 @@
     updateStars();
   }
 
-  function updateStars() {
-    const buttons = document.querySelectorAll('.rating-container button');
-    buttons.forEach((button, index) => {
-      if (index < rating) {
-        button.textContent = '★';
-        button.classList.add('filled');
-      } else {
-        button.textContent = '☆';
-        button.classList.remove('filled');
-      }
-    });
-  }
+  // function updateStars() {
+  //   const buttons = document.querySelectorAll('.rating-container button');
+  //   buttons.forEach((button, index) => {
+  //     if (index < rating) {
+  //       button.textContent = '★';
+  //       button.classList.add('filled');
+  //     } else {
+  //       button.textContent = '☆';
+  //       button.classList.remove('filled');
+  //     }
+  //   });
+  // }
+
+          let rating = 0;
+
+        function handleRatingChange(newRating) {
+            rating = newRating;
+            updateEmojis();
+            console.log("Rating selected:", rating);
+        }
+
+        function updateEmojis() {
+            const buttons = document.querySelectorAll('.rating-container button');
+            buttons.forEach((button, index) => {
+                button.textContent = getEmoji(index + 1);
+            });
+        }
+
+        function getEmoji(rating) {
+            switch(rating) {
+                case 1: return '😡';
+                case 2: return '☹️';
+                case 3: return '😐';
+                case 4: return '🙂';
+                case 5: return '😄';
+                default: return '😐';
+            }
+        }
 
   function handleSubmit(event) {
     event.preventDefault();
