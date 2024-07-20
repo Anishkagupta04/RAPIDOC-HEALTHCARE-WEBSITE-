@@ -1961,4 +1961,14 @@ background-size: 100%;
   color: #bd4b39;
 }
 
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
 
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+}
