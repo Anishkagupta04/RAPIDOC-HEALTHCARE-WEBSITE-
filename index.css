@@ -15,7 +15,17 @@ html {
 .emoji input:checked + label {
   background-color: rgb(61, 156, 158);
 }
-
+@media screen and (max-width: 768px) {
+    #ss {
+      font-size: 12px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #ss {
+      font-size: 10px;
+    }
+  }
 .nav_menu {
   display: flex;
 }
@@ -359,6 +369,7 @@ form.php-email-form {
   margin-bottom: 10px;
   border-bottom: none;
   height: 7vh;
+
 }
 
 #email,

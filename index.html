@@ -60,6 +60,17 @@
   <link rel="stylesheet" href="./Css-Files/aboutus.css" />
   <link rel="stylesheet" href="./Css-Files/testimonial.css" />
   <script src="chatboxx.js" defer></script>
+  <style>
+       .rating-container button {
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .rating-container button:hover{
+          transform: scale(1.5);
+        }
+  </style>
 </head>
 
 <body>
@@ -79,13 +90,17 @@
         <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
         <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
         <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
-        <li><a href="#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
-        <li><a href="#feedback"><i class="bi bi-star"></i>Rate Us</a></li>
+        <div class="con" style="display: flex; gap: 10px;"><li><a href="#contact"><i class="bi bi-telephone"></i>  Contact us</a></li></div>
+        <li><a href="#feedback"><i class="bi bi-star"></i>  Rate Us</a></li>
         <li><a href="log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+
 
        
         <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
      
+
+        
+
       </ul>
       <div class="hamburger">
         <div class="line"></div>
@@ -866,14 +881,18 @@
   <div class="feedback-form">
     <h2>We'd Love Your Feedback!</h2>
     <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> Healthcare</p>
-    <div>
+        <p>This is a confused face emoji: &#x1f615;</p>
+
+      <div>
       <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
       <div class="rating-container">
-        <button type="button" onclick="handleRatingChange(1)">☆</button>
-        <button type="button" onclick="handleRatingChange(2)">☆</button>
-        <button type="button" onclick="handleRatingChange(3)">☆</button>
-        <button type="button" onclick="handleRatingChange(4)">☆</button>
-        <button type="button" onclick="handleRatingChange(5)">☆</button>
+        <div class="rating-container">
+          <button type="button" onclick="handleRatingChange(1)">😡</button>
+          <button type="button" onclick="handleRatingChange(2)">☹️</button>
+          <button type="button" onclick="handleRatingChange(3)">😐</button>
+          <button type="button" onclick="handleRatingChange(4)">🙂</button>
+          <button type="button" onclick="handleRatingChange(5)">😄</button>
+      </div>
       </div>
     </div>
     <form id="feedback-form" onsubmit="handleSubmit(event)">
@@ -888,7 +907,7 @@
   </div>
 </div>
 
-<div id="popup" class="popup" style="display: none;">
+<div id="popup" class="popup">
   <div class="popup-content">
     <h2>Thank you for your Feedback! 💚</h2>
     <div class="popup-icon">
@@ -907,18 +926,44 @@
     updateStars();
   }
 
-  function updateStars() {
-    const buttons = document.querySelectorAll('.rating-container button');
-    buttons.forEach((button, index) => {
-      if (index < rating) {
-        button.textContent = '★';
-        button.classList.add('filled');
-      } else {
-        button.textContent = '☆';
-        button.classList.remove('filled');
-      }
-    });
-  }
+  // function updateStars() {
+  //   const buttons = document.querySelectorAll('.rating-container button');
+  //   buttons.forEach((button, index) => {
+  //     if (index < rating) {
+  //       button.textContent = '★';
+  //       button.classList.add('filled');
+  //     } else {
+  //       button.textContent = '☆';
+  //       button.classList.remove('filled');
+  //     }
+  //   });
+  // }
+
+          let rating = 0;
+
+        function handleRatingChange(newRating) {
+            rating = newRating;
+            updateEmojis();
+            console.log("Rating selected:", rating);
+        }
+
+        function updateEmojis() {
+            const buttons = document.querySelectorAll('.rating-container button');
+            buttons.forEach((button, index) => {
+                button.textContent = getEmoji(index + 1);
+            });
+        }
+
+        function getEmoji(rating) {
+            switch(rating) {
+                case 1: return '😡';
+                case 2: return '☹️';
+                case 3: return '😐';
+                case 4: return '🙂';
+                case 5: return '😄';
+                default: return '😐';
+            }
+        }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -1007,6 +1052,7 @@
             </ul>
           </section>
           
+
        <section class="footer-col" >
       <div>
       <h4>RAPIDOC Newsletter</h4><br>
@@ -1016,12 +1062,15 @@
         exclusive offers.
       </p>
     </div>
-      <form action="#" class="subscribe-form">
-        <input type="email" placeholder="Your email" required>
-        <button type="submit" style="color: black;">SUBSCRIBE</button>
+      <form action="#" class="subscribe-form" id="subscribeForm">
+        <input type="email" id="emailInput" placeholder="Your email" required>
+        <button type="submit" id="subscribeButton" style="color: black;">SUBSCRIBE</button>
       </form>
-      <p class="confirmation-message">Thank you for subscribing!</p>
-       </section>
+         </section>
+          <div id="subscribeBanner">
+            <p>Thanks for subscribing!</p>
+          </div>
+
       
 
           <script>
@@ -1149,6 +1198,27 @@
 
 
   <!-- JS Files -->
+  <script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Get the email input value
+      var email = document.getElementById('emailInput').value;
+      
+      // You can add further validation of the email input here if needed
+      
+      // Show the subscribe banner
+      document.getElementById('subscribeBanner').style.display = 'block';
+      
+      // Optionally, you can reset the form
+      document.getElementById('subscribeForm').reset();
+      
+      // Simulate a delay and hide the banner after 5 seconds
+      setTimeout(function() {
+        document.getElementById('subscribeBanner').style.display = 'none';
+      }, 5000);
+    });
+  </script>
   <script>
 
     function loadGoogleTranslate() {

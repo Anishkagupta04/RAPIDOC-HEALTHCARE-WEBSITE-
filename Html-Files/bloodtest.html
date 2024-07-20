@@ -55,6 +55,7 @@
      <link rel="stylesheet" href="./Css-Files/testimonial.css">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
      <script src="chatboxx.js" defer=""></script>
+     <!---->
      <style>
         .header_container {
   position: fixed;
@@ -218,6 +219,36 @@
 body.popup-open {
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #ss {
+    font-size: 6px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .social-wrapper {
+    font-size: 14px;
+  }
+
+  .social-links i {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .social-wrapper {
+    font-size: 12px;
+  }
+
+  .social-links i {
+    font-size: 16px;
+  }
+}
       </style>
 </head>
 
@@ -352,7 +383,7 @@ body.popup-open {
     </div>
     <div class="footer-bottom">
         <div class="footer-bottom-wrapper">
-            <small>© <span id="year">2024</span><span> RapiDoc</span>&nbsp;| All Rights
+            <small id="ss">© <span id="year">2024</span><span> RapiDoc</span>&nbsp;| All Rights
               Reserved  Made with ❤️ by RapiDoc</small>
               <style>
                 .social-wrapper a div i {
