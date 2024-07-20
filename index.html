@@ -1042,6 +1042,7 @@
             </ul>
           </section>
           
+
        <section class="footer-col" >
       <div>
       <h4>RAPIDOC Newsletter</h4><br>
@@ -1051,12 +1052,15 @@
         exclusive offers.
       </p>
     </div>
-      <form action="#" class="subscribe-form">
-        <input type="email" placeholder="Your email" required>
-        <button type="submit" style="color: black;">SUBSCRIBE</button>
+      <form action="#" class="subscribe-form" id="subscribeForm">
+        <input type="email" id="emailInput" placeholder="Your email" required>
+        <button type="submit" id="subscribeButton" style="color: black;">SUBSCRIBE</button>
       </form>
-      <p class="confirmation-message">Thank you for subscribing!</p>
-       </section>
+         </section>
+          <div id="subscribeBanner">
+            <p>Thanks for subscribing!</p>
+          </div>
+
       
 
           <script>
@@ -1184,6 +1188,27 @@
 
 
   <!-- JS Files -->
+  <script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Get the email input value
+      var email = document.getElementById('emailInput').value;
+      
+      // You can add further validation of the email input here if needed
+      
+      // Show the subscribe banner
+      document.getElementById('subscribeBanner').style.display = 'block';
+      
+      // Optionally, you can reset the form
+      document.getElementById('subscribeForm').reset();
+      
+      // Simulate a delay and hide the banner after 5 seconds
+      setTimeout(function() {
+        document.getElementById('subscribeBanner').style.display = 'none';
+      }, 5000);
+    });
+  </script>
   <script>
 
     function loadGoogleTranslate() {

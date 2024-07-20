@@ -1966,8 +1966,26 @@ background-size: 100%;
 .social-links #mail1 a:hover{
   color: #bd4b39;
 }
+#abc a:hover {
+  background: #55a5ea;
+  border-color: #3fbbc0;
+  color: black;
+}
 
+#subscribeBanner {
+  display: none;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: rgb(75, 182, 183);
+  color: black;
+  padding: 5px;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
+<<<<<<< HEAD
 /* For screens smaller than 768px (tablets) */
 @media only screen and (max-width: 768px) {
   .patient-portal {
@@ -1992,3 +2010,16 @@ background-size: 100%;
         margin:  auto 6%;
   }
 }
+=======
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+}
+>>>>>>> main
