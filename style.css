@@ -1991,53 +1991,7 @@ background-size: 100%;
   }
 }
 /* pop up */
-/* #thanks {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-}
-form {
-  max-width: 400px;
-  margin: 0 auto;
-}
 
-label {
-  display: block;
-  margin-top: 10px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  padding: 10px 15px;
-  border: none;
-  background-color: #28a745;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #218838;
-}
-
-.popup {
-  display: none;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  z-index: 1000;
-} */
 #feedback-message {
   display: none;
   position: fixed;
