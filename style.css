@@ -1567,8 +1567,7 @@ footer {
 /* Style for pateint portal  */
 /* -----***************************************-----  */
 .patient-portal {
-  width: 90%;
-  max-width: 900px;
+  width: 100%;  
   /* Maximum width of the container */
   margin: 0 auto;
   /* Centers the container */
@@ -1962,3 +1961,27 @@ background-size: 100%;
 }
 
 
+/* For screens smaller than 768px (tablets) */
+@media only screen and (max-width: 768px) {
+  .patient-portal {
+    padding: 15px;
+    margin: 1.5%;
+
+  }
+}
+
+/* For screens smaller than 480px (mobiles) */
+@media only screen and (max-width: 480px) {
+  .patient-portal {
+    padding: 10px;
+    margin: 1.5%;
+    border-radius: 10px;
+  }
+}
+/* For screens smaller than 480px (mobiles) */
+@media only screen and (max-width: 480px) {
+  .patient-portal {
+    width: 95%;
+        margin:  auto 6%;
+  }
+}
