@@ -748,16 +748,16 @@
 
     <!-- testimonial section -->
 
-    <section id="test" class="testimonals">
+     <section id="test" class="testimonals">
       <h2 class="h2 section-title has-underline"
-        style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
+          style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
         What our Patients Say
       </h2>
-
+    
       <div class="testimonals-content">
         <div class="swiper testimonals-slider js-testimonals-slider">
           <div class="swiper-wrapper">
-            <div class="swiper-slide testimonals-item" id="slide-item" >
+            <div class="swiper-slide testimonals-item">
               <div class="info">
                 <img src="./images/profile1.webp" alt="">
                 <div class="text-box">
@@ -776,8 +776,8 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
-            <div class="swiper-slide testimonals-item" id="slide-item" > 
+    
+            <div class="swiper-slide testimonals-item"> 
               <div class="info">
                 <img src="./images/profile2.webp" alt="">
                 <div class="text-box">
@@ -795,8 +795,8 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
-            <div class="swiper-slide testimonals-item" id="slide-item" >
+    
+            <div class="swiper-slide testimonals-item">
               <div class="info">
                 <img src="./images/profile3.webp" alt="">
                 <div class="text-box">
@@ -813,8 +813,8 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
-            <div class="swiper-slide testimonals-item" id="slide-item" >
+    
+            <div class="swiper-slide testimonals-item">
               <div class="info">
                 <img src="./images/profile4.webp" alt="">
                 <div class="text-box">
@@ -832,8 +832,8 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
-            <div class="swiper-slide testimonals-item" id="slide-item" >
+    
+            <div class="swiper-slide testimonals-item">
               <div class="info">
                 <img src="./images/profile5.webp" alt="">
                 <div class="text-box">
@@ -851,15 +851,33 @@
               </div>
             </div>
           </div>
+    
+          <!-- Add Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
+    
         <div class="swiper-pagination js-testimonals-pagination"></div>
       </div>
-      </div>
-      </div>
-      <div class="swiper-pagination js-testimonals-pagination"></div>
-      </div>
     </section>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.js-testimonals-slider', {
+          loop: true,
+          pagination: {
+            el: '.js-testimonals-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
