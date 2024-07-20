@@ -694,7 +694,7 @@ body {
 }
 .nav_link{
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 .btn1{
     margin-right: 15px;
