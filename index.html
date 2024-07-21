@@ -857,31 +857,38 @@
     <!-- testimonial section -->
 
     <!-- Feedback System-->
-<div class="feedback-wrapper">
-  <div class="feedback-form">
-    <h2>We'd Love Your Feedback!</h2>
-    <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> Healthcare</p>
-    <div>
-      <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
-      <div class="rating-container">
-        <button type="button" onclick="handleRatingChange(1)">☆</button>
-        <button type="button" onclick="handleRatingChange(2)">☆</button>
-        <button type="button" onclick="handleRatingChange(3)">☆</button>
-        <button type="button" onclick="handleRatingChange(4)">☆</button>
-        <button type="button" onclick="handleRatingChange(5)">☆</button>
+    <div class="feedback-wrapper">
+      <div class="feedback-form">
+        <h2>We'd Love Your Feedback!</h2>
+        <p>Let us know how we're doing and how we can improve. <br /><strong>RapiDoc</strong> Healthcare</p>
+        <div>
+          <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
+          <div class="rating-container">
+            <button type="button" onclick="handleRatingChange(1)">☆</button>
+            <button type="button" onclick="handleRatingChange(2)">☆</button>
+            <button type="button" onclick="handleRatingChange(3)">☆</button>
+            <button type="button" onclick="handleRatingChange(4)">☆</button>
+            <button type="button" onclick="handleRatingChange(5)">☆</button>
+          </div>
+        </div>
+        <form id="feedback-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="feedback">Your Feedback</label>
+            <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
+          </div>
+          <button type="submit">Submit Feedback</button>
+        </form>
       </div>
     </div>
-    <form id="feedback-form" onsubmit="handleSubmit(event)">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
-      <label for="email">Your Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
-      <label for="feedback">Your Feedback</label>
-      <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-      <button type="submit">Submit Feedback</button>
-    </form>
-  </div>
-</div>
+    
 
 <div id="popup" class="popup" style="display: none;">
   <div class="popup-content">
