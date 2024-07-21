@@ -2005,3 +2005,26 @@ background-size: 100%;
   }
 }
 
+
+
+#feedback-message {
+  display: none;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;  }
+.popup-message {
+  display: none;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+  border-radius: 5px;
+  text-align: center;
+
+}
