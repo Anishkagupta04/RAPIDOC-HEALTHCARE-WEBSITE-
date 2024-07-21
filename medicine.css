@@ -66,8 +66,8 @@ label {
 input {
     padding: 0.5rem;
     margin-bottom: 1rem;
-    width: 100%;
-    max-width: 300px;
+    width: 70%;
+    max-width: 60px;
     box-sizing: border-box;
     margin-left: 500px;
 } 
@@ -229,12 +229,14 @@ button:hover {
   }
   
 
-  
-  
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
 
- 
-  
- 
-  
-
-  
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+}
