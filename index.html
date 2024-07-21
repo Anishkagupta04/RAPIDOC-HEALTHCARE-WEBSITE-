@@ -481,13 +481,13 @@
           <p>Access your medical records, lab results, and prescription history securely.</p>
         </div>
         <div class="container">
-
+    
           <!-- Add Login Form for Patient Portal -->
           <div class="login-box">
             <div class="avatar">
               <img src="img/avatar.png" height="220px" width="263px" alt="Avatar">
             </div>
-            <form>
+            <form id="loginForm">
               <div class="textbox">
                 <i class="fas fa-user"></i>
                 <input type="text" placeholder="Username" name="username" required>
@@ -506,10 +506,13 @@
                 <a href="forgot-password.php">Forgot Your Password?</a>
               </div>
             </form>
+            <div id="loginMessage" class="popup-message"></div>
           </div>
+    
         </div>
       </div>
     </section>
+    
 
 
     <!-- Appointment Section -->
@@ -884,17 +887,19 @@
       </div>
       </div>
     </div>
-    <form id="feedback-form" onsubmit="handleSubmit(event)">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
-      <label for="email">Your Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
-      <label for="feedback">Your Feedback</label>
-      <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-      <button type="submit">Submit Feedback</button>
-    </form>
+    
+  <form id="feedback-form" onsubmit="handleSubmit(event)">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+    <label for="email">Your Email</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <label for="feedback">Your Feedback</label>
+    <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
+    <button type="submit">Submit Feedback</button>
+  </form>
   </div>
 </div>
+<div id="feedback-message">Thanks for the feedback! ❤️ </div>
 
 <div id="popup" class="popup">
   <div class="popup-content">
@@ -906,7 +911,16 @@
     <button class="popup-button" onclick="closePopup()"><a class="active" aria-current="page">Back to Home</a></button>
   </div>
 </div>
-
+<script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const feedbackMessage = document.getElementById('feedback-message');
+      feedbackMessage.style.display = 'block';
+      setTimeout(() => {
+        feedbackMessage.style.display = 'none';
+      }, 3000);
+    }
+  </script>
 <script>
   let rating = null;
 
@@ -1041,6 +1055,7 @@
             </ul>
           </section>
           
+
        <section class="footer-col" >
       <div>
       <h4>RAPIDOC Newsletter</h4><br>
@@ -1050,12 +1065,15 @@
         exclusive offers.
       </p>
     </div>
-      <form action="#" class="subscribe-form">
-        <input type="email" placeholder="Your email" required>
-        <button type="submit" style="color: black;">SUBSCRIBE</button>
+      <form action="#" class="subscribe-form" id="subscribeForm">
+        <input type="email" id="emailInput" placeholder="Your email" required>
+        <button type="submit" id="subscribeButton" style="color: black;">SUBSCRIBE</button>
       </form>
-      <p class="confirmation-message">Thank you for subscribing!</p>
-       </section>
+         </section>
+          <div id="subscribeBanner">
+            <p>Thanks for subscribing!</p>
+          </div>
+
       
 
           <script>
@@ -1214,6 +1232,27 @@
 
 
   <!-- JS Files -->
+  <script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Get the email input value
+      var email = document.getElementById('emailInput').value;
+      
+      // You can add further validation of the email input here if needed
+      
+      // Show the subscribe banner
+      document.getElementById('subscribeBanner').style.display = 'block';
+      
+      // Optionally, you can reset the form
+      document.getElementById('subscribeForm').reset();
+      
+      // Simulate a delay and hide the banner after 5 seconds
+      setTimeout(function() {
+        document.getElementById('subscribeBanner').style.display = 'none';
+      }, 5000);
+    });
+  </script>
   <script>
 
     function loadGoogleTranslate() {
@@ -1375,5 +1414,21 @@
       var scrolled = (winScroll / height) * 100;
       document.getElementById("progressBar").style.width = scrolled + "%";
     };
+  </script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Here you can add actual login logic, for now, we'll just show the message
+  var loginMessage = document.getElementById('loginMessage');
+  loginMessage.textContent = 'Login Successful';
+  loginMessage.style.display = 'block';
+  
+  // Set a timeout to hide the message after 3 seconds
+  setTimeout(function() {
+    loginMessage.style.display = 'none';
+  }, 3000);
+});
+
   </script>
 </body>

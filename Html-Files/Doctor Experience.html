@@ -210,8 +210,9 @@
               <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
-          <section class="footer-col" >
+          <section class="footer-col">
             <div>
+
             <h4>RAPIDOC Newsletter</h4><br>
             <p>
               Subscribe to our newsletter for a weekly dose
@@ -219,16 +220,20 @@
               exclusive offers.
             </p>
           </div>
-            <form action="#" class="subscribe-form">
-              <input type="email" placeholder="Your email" required>
-              <button type="submit" style="color: black;">SUBSCRIBE</button>
+            <form action="#" class="subscribe-form" id="subscribeForm">
+              <input type="email"  id="emailInput" placeholder="Your email" required>
+              <button type="submit"  id="subscribeButton" style="color: black;">SUBSCRIBE</button>
             </form>
-            <p class="confirmation-message">Thank you for subscribing!</p>
-             </section>
+          </section>
+          
+          <div id="subscribeBanner">
+            <p>Thanks for subscribing!</p>
+          </div>
+        
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
+      <div class="footer-bottom">
       <div class="footer-bottom-wrapper">
         <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
           Reserved Made with ❤️ by RapiDoc</small>
@@ -264,15 +269,27 @@
       </div>
     </div>
   </footer>
-  <div id="back-to-top-container">
-    <div class="circle">
-      <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-        class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-        <path
-          d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
-      </svg>
-    </div>
-  </div>
+  <script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Get the email input value
+      var email = document.getElementById('emailInput').value;
+      
+      // You can add further validation of the email input here if needed
+      
+      // Show the subscribe banner
+      document.getElementById('subscribeBanner').style.display = 'block';
+      
+      // Optionally, you can reset the form
+      document.getElementById('subscribeForm').reset();
+      
+      // Simulate a delay and hide the banner after 5 seconds
+      setTimeout(function() {
+        document.getElementById('subscribeBanner').style.display = 'none';
+      }, 5000);
+    });
+  </script>
 
   <script>
     const doctorList = [
@@ -554,32 +571,6 @@
     var currentYear = new Date().getFullYear();
     document.getElementById('year').textContent = currentYear;
   </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const backToTopButton = document.getElementById('back-to-top-container');
   
-        function checkButtonVisibility() {
-          if (window.innerWidth > 100 && window.scrollY > 100) {
-            backToTopButton.style.display = 'block';
-          } else {
-            backToTopButton.style.display = 'none';
-          }
-        }
-  
-        window.addEventListener('scroll', checkButtonVisibility);
-        window.addEventListener('resize', checkButtonVisibility);
-  
-        backToTopButton.addEventListener('click', function () {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        });
-        checkButtonVisibility();
-      });
-  
-    </script>
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </body>
 </html>

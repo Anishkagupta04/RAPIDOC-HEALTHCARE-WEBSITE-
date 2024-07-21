@@ -1960,6 +1960,24 @@ background-size: 100%;
 .social-links #mail1 a:hover{
   color: #bd4b39;
 }
+#abc a:hover {
+  background: #55a5ea;
+  border-color: #3fbbc0;
+  color: black;
+}
+
+#subscribeBanner {
+  display: none;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: rgb(75, 182, 183);
+  color: black;
+  padding: 5px;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
 @media screen and (max-width: 768px) {
   #ss {
@@ -1971,4 +1989,28 @@ background-size: 100%;
   #ss {
     font-size: 10px;
   }
+}
+
+/* pop up */
+
+#feedback-message {
+  display: none;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+.popup-message {
+  display: none;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+  border-radius: 5px;
+  text-align: center;
+
 }
