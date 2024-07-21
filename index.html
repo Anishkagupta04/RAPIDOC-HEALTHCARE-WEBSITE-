@@ -481,13 +481,13 @@
           <p>Access your medical records, lab results, and prescription history securely.</p>
         </div>
         <div class="container">
-
+    
           <!-- Add Login Form for Patient Portal -->
           <div class="login-box">
             <div class="avatar">
               <img src="img/avatar.png" height="220px" width="263px" alt="Avatar">
             </div>
-            <form>
+            <form id="loginForm">
               <div class="textbox">
                 <i class="fas fa-user"></i>
                 <input type="text" placeholder="Username" name="username" required>
@@ -506,10 +506,13 @@
                 <a href="forgot-password.php">Forgot Your Password?</a>
               </div>
             </form>
+            <div id="loginMessage" class="popup-message"></div>
           </div>
+    
         </div>
       </div>
     </section>
+    
 
 
     <!-- Appointment Section -->
@@ -1370,5 +1373,21 @@
       var scrolled = (winScroll / height) * 100;
       document.getElementById("progressBar").style.width = scrolled + "%";
     };
+  </script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Here you can add actual login logic, for now, we'll just show the message
+  var loginMessage = document.getElementById('loginMessage');
+  loginMessage.textContent = 'Login Successful';
+  loginMessage.style.display = 'block';
+  
+  // Set a timeout to hide the message after 3 seconds
+  setTimeout(function() {
+    loginMessage.style.display = 'none';
+  }, 3000);
+});
+
   </script>
 </body>
