@@ -887,17 +887,19 @@
       </div>
       </div>
     </div>
-    <form id="feedback-form" onsubmit="handleSubmit(event)">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
-      <label for="email">Your Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
-      <label for="feedback">Your Feedback</label>
-      <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-      <button type="submit">Submit Feedback</button>
-    </form>
+    
+  <form id="feedback-form" onsubmit="handleSubmit(event)">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+    <label for="email">Your Email</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <label for="feedback">Your Feedback</label>
+    <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
+    <button type="submit">Submit Feedback</button>
+  </form>
   </div>
 </div>
+<div id="feedback-message">Thanks for the feedback! ❤️ </div>
 
 <div id="popup" class="popup">
   <div class="popup-content">
@@ -909,7 +911,16 @@
     <button class="popup-button" onclick="closePopup()"><a class="active" aria-current="page">Back to Home</a></button>
   </div>
 </div>
-
+<script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const feedbackMessage = document.getElementById('feedback-message');
+      feedbackMessage.style.display = 'block';
+      setTimeout(() => {
+        feedbackMessage.style.display = 'none';
+      }, 3000);
+    }
+  </script>
 <script>
   let rating = null;
 
