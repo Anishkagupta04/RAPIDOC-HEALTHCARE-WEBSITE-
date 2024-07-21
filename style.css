@@ -1990,6 +1990,7 @@ background-size: 100%;
     font-size: 10px;
   }
 }
+
 /* pop up */
 
 #feedback-message {
@@ -2002,4 +2003,14 @@ background-size: 100%;
   padding: 10px 20px;
   border-radius: 5px;
   z-index: 1000;
+.popup-message {
+  display: none;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+  border-radius: 5px;
+  text-align: center;
+
 }
