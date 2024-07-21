@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Test </title>
     <link rel="stylesheet" href="test.css">
+ 
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,12 +26,13 @@
     <link href="bootstraptest.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <style>#progressBar {
+        <style>
+        #progressBar {
             position: fixed;
             top: 0;
             left: 0;
@@ -37,7 +41,43 @@
             background-color: #3fbcc0;
             z-index: 9999;
         
-          }</style>
+          }
+        h4{
+            color: white !important;
+            font-family: none !important;
+        }
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .social-wrapper {
+    font-size: 14px;
+  }
+
+  .social-links i {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .social-wrapper {
+    font-size: 12px;
+  }
+
+  .social-links i {
+    font-size: 16px;
+  }
+}
+          </style>
 </head>
 <body>
     <div id="progressBar"></div>
@@ -79,10 +119,10 @@
         <!--<button onclick="filterTests()">Search</button>--> 
         </div>
         <div class="img-h1" style = " display:inline">
-    <h1 style="font-size: 65px; color:white">
+     <h1 style="font-size: 65px; color:white">
         Book Your <span style="color: #55a5ea;">Blood Test <img class="sec-img" src="images/rd.png" alt="" data-sr-id="17" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.5s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.5s;"></span> 
-    </h1>
-    <div class="container-fluid container-service py-5">
+     </h1>
+     <div class="container-fluid container-service py-5">
       <div class="container pt-5">
           <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
               <h1 class="display-6 mb-3">Reliable & High-Quality Laboratory Service</h1>
@@ -172,78 +212,87 @@
               </div>
           </div>
       </div>
-  </div>
-
-   
-    <br /><br />
-    <footer>
-        <div class="footer-container">
-          <div class="footer-section">
-            <h3>QUICK LINKS</h3>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Doctors</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>EXPLORE</h3>
-            <ul>
-              <li><a href="#">Appointment</a></li>
-              <li><a href="#">Patient Portal</a></li>
-              <li><a href="#">Login account</a></li>
-              <li><a href="#">Helplines</a></li>
-              <li><a href="#">Location</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>LEGAL</h3>
-            <ul>
-              <li><a href="#">Customer Agreement</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">GDPR</a></li>
-              <li><a href="#">Security</a></li>
-              <li><a href="#">Testimonials</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>RAPIDOC Newsletter</h3>
-            <p style= "color:rgb(116, 119, 116);">Subscribe to our newsletter for a weekly dose</p>
-            <p style= "color:rgb(116, 119, 116);"> of news, updates, helpful tips, and</p>
-             <p style= "color:rgb(116, 119, 116);"> exclusive offers.</p>
-            <form action="#">
-              <input type="email" placeholder="Enter your email">
-              <button type="submit">SUBSCRIBE</button>
-            </form>
-          </div>
+     </div>
+    </div>
+    </div>
+  <footer>
+    <div class="footer-wrapper">
+        <div class="footer-columns">
+            <div class="other-columns">
+                <section>
+                    <h4>Quick Links</h4><br>
+                      <ul class="links">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="dex.html">Services</a></li>
+                        <li><a href="index.html#doctors">Doctors</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                    </ul>
+                </section>
+                <section>
+                  <h4>Explore</h4><br>
+                  <ul class="links">
+                    <li><a href="Html-Files/appointment.html">Appointment</a></li>
+                    <li><a href="index.html#patient-portal">Patient Portal</a></li>
+                    <li><a href="login.html">Login account</a></li>
+                    <li><a href="#">Helplines</a></li>
+                    <li><a href="index.html#contact">Location</a></li>
+                  </ul>
+                </section>
+                <section>
+                  <h4>Legal</h4><br>
+                  <ul class="links">
+                    <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
+                    <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+                    <li><a href="Html-Files/terms_and_conditions.html">GDPR</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                  </ul>
+                </section>
+                <section class="footer-col">
+                  <h4>RAPIDOC Newsletter</h4><br>
+                  <p>
+                    Subscribe to our newsletter for a weekly dose
+                    of news, updates, helpful tips, and
+                    exclusive offers.
+                  </p>
+                  <form action="#" class="subscribe-form">
+                    <input type="text" placeholder="Your email" required>
+                    <button type="submit" style="color: black;">SUBSCRIBE</button>
+                  </form>
+                </section>
+            </div>
         </div>
-        <div class="bottom-footer">
-          <p>ALL rights Reserved  Made with ❤️ by RapiDoc</p>
-          <div class="social-links">
-            <span>Follow Us:</span>
-            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="tel:+911234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a>
-            <a href="mailto:info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-          </div>
-        </div>
-      </footer>
-      
-
-
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-wrapper">
+            <small style="font-size: 1.3rem;" id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+              Reserved  Made with ❤️ by RapiDoc</small>
+              <style>
+                .social-wrapper a div i {
+                  color: #afb6c7;
+                }
+               .social-wrapper a div i:hover {
+                 color: #fff;
+                }
+              </style>
+            <div class="social-wrapper">
+              <div class="social-links">
+              <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+              <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
+              <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a>
+              <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
+              <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
+              <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
+              <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
+              <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
+              </div>
+            </div>
+      </div>
+    </div>
+</footer>
     
-
-
-
-
-
-
-
     <script src="tests.js"></script>
 </body>
 </html>

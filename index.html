@@ -11,6 +11,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="googletranslate.css">
 
   <script type="text/javascript">
     (function () {
@@ -31,6 +32,7 @@
   <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
 
   <!-- CSS Files -->
+   <link rel="stylesheet" href="index.css">
   <link href="Css-Files/animate.min.css" rel="stylesheet">
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -46,510 +48,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <style>
-    html{
-      scroll-behavior: smooth;
-    }
-    .emoji input {
-      display: none;
-    }
-
-    .emoji label {
-      font-size: 2rem;
-      cursor: pointer;
-      padding: 5px;
-    }
-
-    .emoji input:checked+label {
-      background-color: rgb(41, 136, 138);
-    }
-
-    .nav_menu {
-      display: flex;
-    }
-
-    .nav_link {
-      display: flex;
-    }
-
-    .iti--allow-dropdown input {
-      padding-left: 50px;
-      background-color: black;
-      /* Adjust padding to prevent overlap */
-    }
-
-    .iti.iti--allow-dropdown {
-      margin-left: 250px;
-    }
-
-    .container {
-      display: unset;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: nowrap;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    .content {
-      text-align: left;
-      flex: 1;
-      padding: 20px;
-    }
-
-    .sec-img {
-      max-width: 50%;
-      width: 600px;
-      height: 600px;
-      margin-left: auto;
-    }
-
-    .btn-get-started {
-      display: inline-block;
-      background-color: #55a5ea;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-
-    .btn-get-started:hover {
-      background-color: green;
-      color: white;
-    }
-
-    select {
-      padding: 1px;
-      background-color: #55a5ea;
-      color: white;
-      height: 5vh;
-      width: 17vh;
-    }
-
-    option {
-      background-color: #55a5ea;
-      color: white;
-    }
-
-    .hamburger {
-      display: none;
-      cursor: pointer;
-      position: absolute;
-      top: 29px;
-      left: 1.5%;
-    }
-
-    .line {
-      width: 30px;
-      height: 5px;
-      margin: 4px 4px;
-      background-color: white;
-    }
-
-    @media only screen and (max-width: 820px) {
-      .hamburger {
-        display: block;
-      }
-
-      .header_container {
-        flex-direction: column;
-        align-items: start;
-        height: 24.8rem;
-        transition: 0.55s all ease-out;
-        /* padding-top: 5px; */
-      }
-
-      .nav_link {
-        flex-direction: column;
-        position: relative;
-        bottom: 40px;
-      }
-
-      /* .nav-link li{
-    margin-bottom: 5px;
-  } */
-      .nav-h {
-        height: 5.5rem;
-        width: 100vw;
-      }
-
-      .vis-h {
-        opacity: 0;
-      }
-
-      .img {
-        position: relative;
-        left: 300px;
-        bottom: 12px;
-      }
-    }
-
-    @media screen and (max-width: 992px) {
-      .container {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .sec-img {
-        max-width: 100%;
-        margin: 20px 0;
-        position: relative;
-        top: 0;
-        right: 0;
-
-      }
-
-      .content {
-        text-align: center;
-        padding: 10px;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      .content {
-        text-align: center;
-        padding: 10px;
-      }
-
-      .sec-img {
-        max-width: 100%;
-        margin: 20px 0;
-        position: relative;
-        top: 0;
-        right: 0;
-      }
-    }
-
-    /*Preloader CSS*/
-    .pre {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: opacity 2s ease-out, visibility 2s ease-out;
-      opacity: 1;
-      visibility: visible;
-      z-index: 9999;
-    }
-
-    .pre--hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .loader {
-      display: block;
-      position: relative;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #55a5ea;
-      animation: spin 3s linear infinite;
-    }
-
-    .loader:before {
-      content: "";
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      right: 5px;
-      bottom: 5px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #3fbcc0c6;
-      animation: spin 3s linear infinite;
-    }
-
-    .loader:after {
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      right: 15px;
-      bottom: 15px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #fff;
-      animation: spin 1.5s linear infinite;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    .avatar {
-      margin: 20px 100px;
-      padding-left: 50px;
-      padding-right: 60px;
-    }
-
-    .textbox input {
-      width: 240px;
-      height: 40px;
-      align-items: center;
-      margin-left: 10px;
-      margin-right: 20px;
-    }
-
-    .btn {
-      margin-left: 2px;
-      width: 230px;
-      height: 40px;
-      background-color: #00C896;
-      border: none;
-      font-size: 1rem;
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
-
-    #appointment.appointment.section-bg {
-      margin: 0px 280px 100px;
-    }
-
-    #appointment.appointment.section-bg h2 {
-      margin: 0px 115px;
-    }
-
-    form.php-email-form {
-      width: 300px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-content: flex-start
-    }
-
-    .loader--hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-  </style>
-  <style>
-   
-
-    /* Appointment section Styling to align it to center */
-    .appointment .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /* Center container contents */
-      border-radius: 10px;
-      margin: auto;
-    }
-
-    .appointment form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /* Center form contents */
-      width: 100%;
-      max-width: 500px;
-    }
-
-    .appointment .form-group {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 15px;
-    }
-
-    .appointment input,
-    .appointment select,
-    .appointment button {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 10px;
-    }
-
-    .appointment .text-center {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .appointment button[type="submit"] {
-      width: auto;
-      padding: 10px 20px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .php-email-form .form-control,
-    .php-email-form .form-select {
-      margin: 0;
-      padding: 10px;
-    }
-
-    .php-email-form .form-group,
-    .php-email-form .row {
-      margin: 0;
-      padding: 10px;
-    }
-
-    #name,
-    #email {
-      margin-bottom: 10px;
-      border-bottom: none;
-      height: 7vh;
-    }
-
-    #email,
-    #location {
-      border-top: 1px solid #ccc;
-      /* Adjust color as needed */
-      margin-top: 0;
-    }
-
-    /* Remove <br> tags if present in HTML */
-    #name+br,
-    #email+br {
-      display: none;
-    }
-
-    .section-bg {
-    background-color: #1c413b;
-    width: 700px;
-    padding: 40px;
-}
-
-#appointment.appointment.section-bg {
-    margin: auto;
-}
-
-select {
-    padding: 1px;
-    background-color: #f8f8f8;
-    color: #374151;
-    height: 7vh;
-    width: 17vh;
-}
-
-
-
-    #progressBar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0%;
-      height: 6px;
-      background-color: #3fbcc0;
-      z-index: 9999;
-    }
-
-    .contact .php-email-form {
-      width: 300%;
-      background: #000;
-    }
-
-    @media (max-width: 768px) {
-      body{
-       
-        width: 163vw !important;
-      }
-      .header_container{
-        width: 163vw;
-        height: auto;
-      }
-      .nav_menu{
-        padding: 10px;
-        height: auto;
-      }
-      .nav-h{
-        height: 5.5rem;
-        width: -webkit-fill-available !important;
-        justify-content: center;
-    flex-direction: row;
-    align-items: center;
-      }
-      .container {
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: column-reverse;
-        padding: 10px;
-      }
-      .about-service {
-        height: auto !important; 
-    width: auto !important;
-    margin-left: 0px !important;
-    margin-top: 0px !important;
-    flex-direction: column;
-      }
-      .count-box {
-        padding: 76px;
-        font-size: 24px;
-      }
-      .appointment .container {
-        display: flex !important;
-        justify-content: center !important;
-        align-content: center !important;
-      }
-      .mt-2 {
-        display: flex ;
-    align-items: stretch !important;
-    justify-content: space-around   !important;
-    align-content: center !important;
-    gap: 40px !important;
-    margin-top: 70px !important;
-      }
-      .appointment form {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-        max-width: 500px !important;
-      }
-      .appointment .form-group {
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        margin-bottom: 15px !important;
-      }
-      footer {
-        width: 168vw !important;
-    padding: 40px  !important;
-    margin: auto !important;
-      }
-      #appointment.appointment.section-bg {
-        margin: 15px;
-      }
-      .testimonial-contains {
-        padding: 10px !important;
-      }
-      .swiper-slide .testimonals-item {
-        width: 476px !important;
-      }
-      .other-columns{
-        grid-template-columns: repeat(3, 3fr);
-        
-      } .form.php-email-form{
-      align-content: flex-start;
-    }
-    .social-wrapper{
-      margin-right: 50%;
-    }
-    #slide-item{
-      width: 510px !important;
-    }
-    .footer-col{
-      padding:15px ;
-      text-align: center;
-    }
-    }
-   
-  </style>
   <link rel="stylesheet" href="chatbox.css">
   <!-- Google Fonts Link For Icons chatboxx -->
   <link rel="stylesheet"
@@ -559,6 +57,17 @@ select {
   <link rel="stylesheet" href="./Css-Files/aboutus.css" />
   <link rel="stylesheet" href="./Css-Files/testimonial.css" />
   <script src="chatboxx.js" defer></script>
+  <style>
+       .rating-container button {
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .rating-container button:hover{
+          transform: scale(1.5);
+        }
+  </style>
 </head>
 
 <body>
@@ -578,10 +87,11 @@ select {
         <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
         <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
         <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
-        <li><a href="#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
-        <li><a href="#feedback"><i class="bi bi-star"></i>Rate Us</a></li>
-        <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
-        <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+        <div class="con" style="display: flex; gap: 10px;"><li><a href="#contact"><i class="bi bi-telephone"></i>  Contact us</a></li></div>
+        <li><a href="#feedback"><i class="bi bi-star"></i>  Rate Us</a></li>
+        <li><a href="log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+
+        <a href="Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
       </ul>
       <div class="hamburger">
         <div class="line"></div>
@@ -617,7 +127,6 @@ select {
     <img class="sec-img" src="images/rd.png" alt="" />
 
   </div>
-  <br><br><br><br><br>
   <!-- End Home -->
 
   <main id="main">
@@ -638,15 +147,16 @@ select {
                 cause problems.</p>
             </div>
           </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">          
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <div class="icon2"><i class="fas fa-dna"></i></div>
               <h4 class="title"><a href="test.html">Blood Test</a></h4>
               <p class="description"> Get your tests done to look for signs of disease or agents that cause disease.</p>
             </div>
           </div>
-
+        
+          
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <div class="icon3"><i class="fas fa-temperature-high"></i></div>
@@ -966,18 +476,18 @@ select {
     <!-- Patient Portal Section -->
     <section id="patient-portal" class="patient-portal">
       <div class="container-patientportal">
-        <div class="section-title" id="section-patientportal">
+        <div class="section-title section-black-text" id="section-patientportal">
           <h2>Patient Portal</h2>
           <p>Access your medical records, lab results, and prescription history securely.</p>
         </div>
         <div class="container">
-
+    
           <!-- Add Login Form for Patient Portal -->
           <div class="login-box">
             <div class="avatar">
               <img src="img/avatar.png" height="220px" width="263px" alt="Avatar">
             </div>
-            <form>
+            <form id="loginForm">
               <div class="textbox">
                 <i class="fas fa-user"></i>
                 <input type="text" placeholder="Username" name="username" required>
@@ -996,16 +506,19 @@ select {
                 <a href="forgot-password.php">Forgot Your Password?</a>
               </div>
             </form>
+            <div id="loginMessage" class="popup-message"></div>
           </div>
+    
         </div>
       </div>
     </section>
+    
 
 
     <!-- Appointment Section -->
     <section id="appointment" class="appointment section-bg">
       <div class="container" style="border-radius: 10px;">
-        <div class="section-title">
+        <div class="section-title section-black-text">
           <h2>Make an Appointment</h2>
           <p>We listed the docs, we made you a form. You make us an appointment.</p>
         </div>
@@ -1171,25 +684,7 @@ select {
               <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"></iframe>
               <a href="https://www.fnfgo.com/">FNF Mods</a>
           </div>
-          <style>
-              .mapouter {
-                  position: relative;
-                  text-align: right;
-                  width: 100%;
-                  height: 363px;
-              }
-
-              .gmap_canvas {
-                  overflow: hidden;
-                  background: none !important;
-                  width: 100%;
-                  height: 363px;
-              }
-
-              .gmap_iframe {
-                  height: 363px !important;
-              }
-          </style>
+          
       </div>
       <br>
       <div class="row mt-2" style="display: flex; flex-direction: row; align-items: stretch; justify-content: space-around;">
@@ -1236,82 +731,6 @@ select {
   </div>
 </section>
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
-  body {
-      font-family: 'Poppins', sans-serif;
-  }
-
-  .section-title h2 {
-      font-size: 32px;
-      color: #000;
-      text-transform: uppercase;
-      position: relative;
-      font-weight: 700;
-      margin-bottom: 20px;
-  }
-
-  .section-title p {
-      font-size: 16px;
-      color: #000;
-      margin-bottom: 40px;
-  }
-
-  .enhanced-input, .enhanced-textarea {
-       border: 2px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    color: #000;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s, background-color 0.3s;
-       margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  .enhanced-input:focus, .enhanced-textarea:focus {
-    border-color: #4cae4c;
-    background-color: #fff; color: #000;
-  }
-
-  .btn-submit {
-    padding: 10px 20px;
-    background-color: #000;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-
-  .btn-submit:hover {
-    background-color: #4cae4c;
-    transform: scale(1.05);
-  }
-
-  @keyframes fadeIn {
-      0% {
-          opacity: 0;
-      }
-      100% {
-          opacity: 1;
-      }
-  }
-  .confirmation-message {
-    display: none;
-    margin-top: 10px;
-    padding: 30px;
-    background-color: #e0f7fa;
-    color: #00796b;
-    border: 1px solid #00796b;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    text-align: center;
-    animation: slideDown 1s forwards;
-  }
-</style>
-
 <script>
   document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
@@ -1349,8 +768,9 @@ select {
                   <span class="job">Bangalore</span>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
-                aliquam incidunt provident vero nostrum quam!</p>
+              <p>Digital healthcare has provided me with quick and easy access to medical advice without 
+                 the long waits typically associated with in-person visits. My doctor can easily monitor
+                 my condition remotely, and I feel more connected to my healthcare team than ever before. Highly recommend!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -1368,8 +788,9 @@ select {
                   <span class="job">Delhi</span>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
-                aliquam incidunt provident vero nostrum quam!</p>
+              <p>Digital healthcare has been a game-changer for me. I love being able to consult with 
+                 specialists without leaving my home, especially since I live in a rural area with limited access to healthcare facilities.
+                 The only downside is that sometimes the app can be a bit slow, but overall, the benefits far outweigh the minor inconveniences.</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -1386,8 +807,8 @@ select {
                   <span class="job">Mumbai</span>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
-                aliquam incidunt provident vero nostrum quam!</p>
+              <p>I was initially skeptical about using digital healthcare services, but my experience has been nothing short of amazing.
+                 My doctor can easily monitor my condition remotely, and I feel more connected to my healthcare team than ever before. Highly recommend!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -1404,8 +825,8 @@ select {
                   <span class="job">Chennai</span>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
-                aliquam incidunt provident vero nostrum quam!</p>
+              <p>I've had mixed experiences with digital healthcare. On one hand, it's very convenient to schedule appointments and have virtual consultations.
+                 On the other hand, I feel like some issues are harder to diagnose without a physical examination.</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -1423,8 +844,8 @@ select {
                   <span class="job">Kolkata</span>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
-                aliquam incidunt provident vero nostrum quam!</p>
+              <p>As someone with a chronic illness, digital healthcare has been a lifesaver. Regular monitoring and quick access to my healthcare team
+                 through messaging and video calls have significantly improved my quality of life.</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -1452,16 +873,21 @@ select {
   <div class="feedback-form">
     <h2>We'd Love Your Feedback!</h2>
     <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> Healthcare</p>
-    <div>
+        <p>This is a confused face emoji: &#x1f615;</p>
+
+      <div>
       <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
       <div class="rating-container">
-        <button type="button" onclick="handleRatingChange(1)">☆</button>
-        <button type="button" onclick="handleRatingChange(2)">☆</button>
-        <button type="button" onclick="handleRatingChange(3)">☆</button>
-        <button type="button" onclick="handleRatingChange(4)">☆</button>
-        <button type="button" onclick="handleRatingChange(5)">☆</button>
+        <div class="rating-container">
+          <button type="button" onclick="handleRatingChange(1)">😡</button>
+          <button type="button" onclick="handleRatingChange(2)">☹️</button>
+          <button type="button" onclick="handleRatingChange(3)">😐</button>
+          <button type="button" onclick="handleRatingChange(4)">🙂</button>
+          <button type="button" onclick="handleRatingChange(5)">😄</button>
+      </div>
       </div>
     </div>
+
     <form id="feedback-form" onsubmit="handleSubmit(event)">
       <label for="name">Your Name</label>
       <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -1472,10 +898,12 @@ select {
       <input type="hidden" id="rating-input" name="rating">
       <button type="submit">Submit Feedback</button>
     </form>
+  
   </div>
 </div>
+<div id="feedback-message">Thanks for the feedback! ❤️ </div>
 
-<div id="popup" class="popup" style="display: none;">
+<div id="popup" class="popup">
   <div class="popup-content">
     <h2>Thank you for your Feedback! 💚</h2>
     <div class="popup-icon">
@@ -1485,7 +913,16 @@ select {
     <button class="popup-button" onclick="closePopup()"><a class="active" aria-current="page">Back to Home</a></button>
   </div>
 </div>
-
+<script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const feedbackMessage = document.getElementById('feedback-message');
+      feedbackMessage.style.display = 'block';
+      setTimeout(() => {
+        feedbackMessage.style.display = 'none';
+      }, 3000);
+    }
+  </script>
 <script>
   let rating = null;
 
@@ -1495,18 +932,44 @@ select {
     updateStars();
   }
 
-  function updateStars() {
-    const buttons = document.querySelectorAll('.rating-container button');
-    buttons.forEach((button, index) => {
-      if (index < rating) {
-        button.textContent = '★';
-        button.classList.add('filled');
-      } else {
-        button.textContent = '☆';
-        button.classList.remove('filled');
-      }
-    });
-  }
+  // function updateStars() {
+  //   const buttons = document.querySelectorAll('.rating-container button');
+  //   buttons.forEach((button, index) => {
+  //     if (index < rating) {
+  //       button.textContent = '★';
+  //       button.classList.add('filled');
+  //     } else {
+  //       button.textContent = '☆';
+  //       button.classList.remove('filled');
+  //     }
+  //   });
+  // }
+
+          let rating = 0;
+
+        function handleRatingChange(newRating) {
+            rating = newRating;
+            updateEmojis();
+            console.log("Rating selected:", rating);
+        }
+
+        function updateEmojis() {
+            const buttons = document.querySelectorAll('.rating-container button');
+            buttons.forEach((button, index) => {
+                button.textContent = getEmoji(index + 1);
+            });
+        }
+
+        function getEmoji(rating) {
+            switch(rating) {
+                case 1: return '😡';
+                case 2: return '☹️';
+                case 3: return '😐';
+                case 4: return '🙂';
+                case 5: return '😄';
+                default: return '😐';
+            }
+        }
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -1569,7 +1032,7 @@ select {
     
   </main><!-- End #main -->
   <!-- ############### Footer ############### -->
-  <br><br><br><br><br><br>
+  
   <footer>
     <div class="footer-wrapper">
       <div class="footer-columns">
@@ -1590,7 +1053,7 @@ select {
             <ul class="links">
               <li><a href="Html-Files/appointment.html">Appointment</a></li>
               <li><a href="index.html#patient-portal">Patient Portal</a></li>
-              <li><a href="login.html">Login account</a></li>
+              <li><a href="log/login.html">Login account</a></li>
               <li><a href="#">Helplines</a></li>
               <li><a href="index.html#contact">Location</a></li>
             </ul>
@@ -1607,6 +1070,7 @@ select {
             </ul>
           </section>
           
+
        <section class="footer-col" >
       <div>
       <h4>RAPIDOC Newsletter</h4><br>
@@ -1616,19 +1080,16 @@ select {
         exclusive offers.
       </p>
     </div>
-      <form action="#" class="subscribe-form">
-        <input type="email" placeholder="Your email" required>
-        <button type="submit">SUBSCRIBE</button>
+      <form action="#" class="subscribe-form" id="subscribeForm">
+        <input type="email" id="emailInput" placeholder="Your email" required>
+        <button type="submit" id="subscribeButton" style="color: black;">SUBSCRIBE</button>
       </form>
-      <p class="confirmation-message">Thank you for subscribing!</p>
-       </section>
-          <style>
-            .confirmation-message {
-              display: none;
-              color: green;
-              margin-top: 10px;
-            }
-          </style>
+         </section>
+          <div id="subscribeBanner">
+            <p>Thanks for subscribing!</p>
+          </div>
+
+      
 
           <script>
             document.querySelector('.subscribe-form').addEventListener('submit', function (event) {
@@ -1649,45 +1110,6 @@ select {
               }, 5000); // Hide after 5 seconds
             });
           </script>
-            
-            <style>
-              .modal {
-                display: none;
-                position: fixed;
-                z-index: 1;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                overflow: auto;
-                background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-              }
-            
-              .modal-content {
-                background-color: teal;
-                margin: 20% auto;
-                padding: 20px;
-                border: 1px solid #888;
-                width: 50%;
-                max-width: 300px;
-                color: white;
-                text-align: center;
-              }
-            
-              .close {
-                color: white;
-                float: right;
-                font-size: 28px;
-                font-weight: bold;
-              }
-            
-              .close:hover,
-              .close:focus {
-                color: #000;
-                text-decoration: none;
-                cursor: pointer;
-              }
-            </style>
             
             <script>
               document.querySelector('.subscribe-form').addEventListener('submit', function(event) {
@@ -1722,54 +1144,35 @@ select {
    
     <div class="footer-bottom">
       <div class="footer-bottom-wrapper">
-        <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+        <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
           Reserved Made with ❤️ by RapiDoc</small>
-        <style>
-          @media (max-width:768px) {
-          .other-columns{
-            display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-          }
-            .footer-col{
-              display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: nowrap;
-        gap: 90px;
-            }
-            .subscribe-form{
-              display: flex;
-              gap: 10px;
-            }
-          }
-          .social-wrapper a div i {
-            color: #afb6c7;
-          }
-
-          .social-wrapper a div i:hover {
-            color: #fff;
-          }
-        </style>
         <div class="social-wrapper">
           <div class="social-links">
             <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <div  id="insta">
             <a href="https://www.instagram.com" target="_blank">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.twitter.com" target="_blank">
-              <i class="fab fa-twitter"></i>
+          </div>
+          <div id="twit">
+            <a  href="https://www.twitter.com" target="_blank">
+              <i class="bi bi-twitter-x"></i>
             </a>
-            <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+          </div>
+          <div id="git">
+            <a  href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com" target="_blank">
+          </div>
+          <div id="linkd">
+            <a  href="https://www.linkedin.com" target="_blank">
               <i class="fab fa-linkedin"></i>
             </a>
+          </div>
 
-            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a>
-            <a href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            <div id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+           <div id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></div>
+            <div id="mail1" ><a  href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
           </div>
         </div>
       </div>
@@ -1785,6 +1188,27 @@ select {
       </svg>
     </div>
   </div>
+  <button id="translateButton">Translate</button>
+
+  <!-- Popup for Google Translate -->
+  <div id="translatePopup" class="popup">
+      <div class="popup-content">
+          <span class="close">&times;</span>
+          <div id="google_translate_element"></div>
+      </div>
+  </div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+        }, 'google_translate_element');
+    }
+</script>
+<script src=" googletranslate.js"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Your custom JavaScript -->
+<script src="script.js"></script>
 
 
 
@@ -1792,6 +1216,27 @@ select {
 
 
   <!-- JS Files -->
+  <script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Get the email input value
+      var email = document.getElementById('emailInput').value;
+      
+      // You can add further validation of the email input here if needed
+      
+      // Show the subscribe banner
+      document.getElementById('subscribeBanner').style.display = 'block';
+      
+      // Optionally, you can reset the form
+      document.getElementById('subscribeForm').reset();
+      
+      // Simulate a delay and hide the banner after 5 seconds
+      setTimeout(function() {
+        document.getElementById('subscribeBanner').style.display = 'none';
+      }, 5000);
+    });
+  </script>
   <script>
 
     function loadGoogleTranslate() {
@@ -1954,5 +1399,21 @@ select {
       var scrolled = (winScroll / height) * 100;
       document.getElementById("progressBar").style.width = scrolled + "%";
     };
+  </script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Here you can add actual login logic, for now, we'll just show the message
+  var loginMessage = document.getElementById('loginMessage');
+  loginMessage.textContent = 'Login Successful';
+  loginMessage.style.display = 'block';
+  
+  // Set a timeout to hide the message after 3 seconds
+  setTimeout(function() {
+    loginMessage.style.display = 'none';
+  }, 3000);
+});
+
   </script>
 </body>
