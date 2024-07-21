@@ -709,10 +709,6 @@ body {
 .btn1{
     margin-right: 15px;
 }
-.sec-img {
-    transform-style: preserve-3d;
-    will-change: transform;
-  }
 /*
 .sec-img {
     filter: drop-shadow(2px 2px 10px grey);
