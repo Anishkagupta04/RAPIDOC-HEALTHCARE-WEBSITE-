@@ -711,7 +711,7 @@ body {
 .btn1{
     margin-right: 15px;
 }
-#sec-img {
+.sec-img {
     transform-style: preserve-3d;
     will-change: transform;
   }
