@@ -364,7 +364,7 @@ form.php-email-form {
 #email {
     margin-bottom: 10px;
     border-bottom: none;
-    height: 7vh;
+    width: 30vw;
 }
 
 #email,
@@ -697,8 +697,6 @@ body {
 .social-wrapper a div i:hover {
     color: #fff;
 }
-
-
 .confirmation-message {
     display: none;
     color: green;
@@ -720,3 +718,4 @@ body {
     filter: drop-shadow(2px 2px 10px grey);
   }
     */
+
