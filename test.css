@@ -395,6 +395,7 @@ h2{
 .service-item:hover .icon-box-primary i {
   color: var(--bs-white) !important;
 }
+
 footer {
   background-color:rgb(3, 56, 56);
   width: 100%;
@@ -608,3 +609,16 @@ footer {
     text-align: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+}
+

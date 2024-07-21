@@ -15,7 +15,17 @@ html {
 .emoji input:checked+label {
     background-color: rgb(41, 136, 138);
 }
-
+@media screen and (max-width: 768px) {
+    #ss {
+      font-size: 12px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #ss {
+      font-size: 10px;
+    }
+  }
 .nav_menu {
     display: flex;
 }
@@ -354,7 +364,7 @@ form.php-email-form {
 #email {
     margin-bottom: 10px;
     border-bottom: none;
-    height: 7vh;
+    width: 30vw;
 }
 
 #email,
@@ -687,8 +697,6 @@ body {
 .social-wrapper a div i:hover {
     color: #fff;
 }
-
-
 .confirmation-message {
     display: none;
     color: green;
@@ -696,8 +704,9 @@ body {
 }
 .nav_link{
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 .btn1{
     margin-right: 15px;
 }
+
