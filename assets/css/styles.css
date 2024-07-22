@@ -440,13 +440,8 @@ body.dark-theme {
   border-radius: 3rem;
   font-weight: var(--font-semi-bold);
   transition: .3s;
-
-  margin-top: 100px;
-
-  margin-top: 50px;
-  margin-left: 300px;
   
-
+  
 }
 
 .button:hover {
