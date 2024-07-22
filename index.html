@@ -67,6 +67,10 @@
         .rating-container button:hover{
           transform: scale(1.5);
         }
+        .sec-img {
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
   </style>
 </head>
 
@@ -112,7 +116,6 @@
     </div>
   </header>
 
-
   <div class="container" style="display:flex ;">
     <div class="content">
 
@@ -121,11 +124,41 @@
         destination
       </h1>
       <h4>
-        <a href="#about" class="btn-get-started scrollto">Download Now</a>
+        <a href="#about" class="btn-get-started scrollto" id="btn">Download Now</a>
       </h4>
     </div>
-    <img class="sec-img" src="images/rd.png" alt="" />
+    <img class="sec-img" src="images/rd.png" alt="" id="sec-img"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script>
+  const img = document.querySelector('.sec-img');
+  
+  document.addEventListener("mousemove", function(event) {
+    const rect = img.getBoundingClientRect();
+    const imgX = rect.left + rect.width / 2;
+    const imgY = rect.top + rect.height / 2;
+    const mouseX = event.clientX - imgX;
+    const mouseY = event.clientY - imgY;
+    
+    const rotateX = mouseY * 0.05; // Adjust this value to control tilt sensitivity
+    const rotateY = mouseX * -0.05; // Adjust this value to control tilt sensitivity
+    
+    gsap.to(img, {
+      rotationX: rotateX,
+      rotationY: rotateY,
+      ease: "power2.out",
+      duration: 0.3
+    });
+  });
 
+  document.addEventListener("mouseleave", function() {
+    gsap.to(img, {
+      rotationX: 0,
+      rotationY: 0,
+      ease: "power2.out",
+      duration: 0.5
+    });
+  });
+</script>
   </div>
   <!-- End Home -->
 
@@ -590,7 +623,7 @@
             </select>
           </div>
           <div class="text-center">
-            <button type="submit">Make an Appointment</button>
+            <button type="submit" class="btn">Make an Appointment</button>
           </div>
         </form>
       </div>
@@ -748,7 +781,6 @@
      
           <!-- End Contact Section -->
 
-
     <!-- testimonial section -->
 
     <section id="test" class="testimonals">
@@ -895,7 +927,7 @@
     <input type="email" id="email" placeholder="Enter your email" required>
     <label for="feedback">Your Feedback</label>
     <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-    <button type="submit">Submit Feedback</button>
+    <button type="submit" class="btn" style="width: 21rem;">Submit Feedback</button>
   </form>
   </div>
 </div>
@@ -1067,7 +1099,7 @@
     </div>
       <form action="#" class="subscribe-form" id="subscribeForm">
         <input type="email" id="emailInput" placeholder="Your email" required>
-        <button type="submit" id="subscribeButton" style="color: black;">SUBSCRIBE</button>
+        <button type="submit" id="subscribeButton" class="b">SUBSCRIBE</button>
       </form>
          </section>
           <div id="subscribeBanner">
@@ -1191,10 +1223,8 @@
 </script>
 <script src=" googletranslate.js"></script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <!-- Your custom JavaScript -->
 <script src="script.js"></script>
-
 
 
 
@@ -1375,7 +1405,6 @@
       nav.classList.toggle('vis-h');
     })
   </script>
-
   <div id="progressBar"></div>
   <script>
     window.onscroll = function () {
