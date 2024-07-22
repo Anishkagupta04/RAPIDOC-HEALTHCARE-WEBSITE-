@@ -9,6 +9,29 @@ a {
   text-decoration: none;
 }
 
+::-webkit-scrollbar{
+
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+  background-color: #3fbcc0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+  background-color:#005253;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+
+  background-color:#011212;
+}
+
 a:hover {
   color: #55a5ea;
   text-decoration: none;
@@ -72,6 +95,7 @@ h6 {
   display: flex;
   flex-direction: column;
   padding-left: 50px;
+  padding-top: 90px;
 }
 
 .content h1 {
@@ -1747,19 +1771,15 @@ footer {
   position: absolute;
   width: 0;
   height: 2px;
-  /* Adjust the thickness of the underline */
   bottom: -2px;
-  /* Adjust position if needed */
   left: 0;
-  background-color: #000;
-  /* Change this to your desired underline color */
+  background-color: #55a5ea;
   transition: width 0.3s ease;
   transition-delay: 0.1s;
-  /* Optional: Adds a slight delay to the animation */
 }
 
 .links a:hover {
-  color: #000;
+  color: #55a5ea;
   /* Change text color to black */
 }
 
@@ -1832,8 +1852,9 @@ footer {
 
 .social-links {
   display: inline-flex;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: center;
+  margin-left: -100px;
   
 }
 
@@ -1893,4 +1914,103 @@ footer {
  #abc :hover{
   background: #55a5ea;
   border-color: #3fbbc0;
+}
+.social-links i{
+  font-size: 1.5rem
+  }
+  #ss{
+      font-size: 1.3rem;
+  }
+.social-links #insta:hover {
+ /* Add the white background */
+background: white;
+
+/* Gradient background for text */
+background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+background-size: 100%;
+
+/* Use the text as a mask for the background */
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; 
+-moz-background-clip: text;
+-moz-text-fill-color:transparent;
+}
+.social-links #twit a:hover{
+  color: #000;
+}
+.social-links #git a:hover{
+  color: black;
+}
+.social-links #git:hover{
+  background-color: white;
+  border-radius: 50%;
+}
+.social-links #linkd a:hover{
+  color: #0077b5;
+}
+.social-links #fb a:hover{
+  color: #1877f2;
+}
+.social-links #linkd a:hover{
+  color: #0077b5;
+}
+.social-links #phn a:hover{
+  color: red;
+}
+.social-links #mail1 a:hover{
+  color: #bd4b39;
+}
+#abc a:hover {
+  background: #55a5ea;
+  border-color: #3fbbc0;
+  color: black;
+}
+
+#subscribeBanner {
+  display: none;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: rgb(75, 182, 183);
+  color: black;
+  padding: 5px;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+}
+
+/* pop up */
+
+#feedback-message {
+  display: none;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+.popup-message {
+  display: none;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+  border-radius: 5px;
+  text-align: center;
+
 }
