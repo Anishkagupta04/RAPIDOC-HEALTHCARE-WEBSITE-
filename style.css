@@ -1468,6 +1468,8 @@ section {
     transform: none;
     width: 100%;
     border-radius: 0;
+    margin-right: 0px !important;
+        padding-right: 0px !important;
   }
 
   .footer .footer-row {
@@ -1481,6 +1483,7 @@ section {
 
   .footer-col form :where(input, button) {
     width: 100%;
+    display: inline-block;
   }
 
   .footer-col form button {
@@ -1989,4 +1992,5 @@ flex-direction: row;
 }
 .st0 {
   fill: #2F7F81;
+}
 }

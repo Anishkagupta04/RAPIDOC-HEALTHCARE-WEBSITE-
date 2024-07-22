@@ -528,31 +528,23 @@ select {
 
     .header_container {
         width: 163vw;
-        height: 6rem !important;
-        width: -webkit-fill-available !important;
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
-    }
-    .nav-h .nav_link{
-      display:none !important;
+        
     }
 
     .nav_menu {
         height: auto;
+        top:0;
+        left:0;
+       
     }
-  
-  #rd-logo {
-    display: table-row;
-    margin-right: -4rem !important;
-    margin-left: 25rem !important;
-  }
+
+   
 
     .container {
         flex-wrap: wrap;
         justify-content: center;
         flex-direction: column-reverse;
-        padding: 10px;
+        padding: 0px;
     }
 
     .about-service {
@@ -598,11 +590,46 @@ select {
         margin-bottom: 15px !important;
     }
 
-    footer {
-        width: 168vw !important;
-        padding: 40px !important;
-        margin: auto !important;
+    .footer-wrapper{
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: 10px;
     }
+    .other-columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .footer-col {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 90px;
+        width: 50%;
+    }
+    #ss {
+        font-size: 0.75rem; 
+       width: 90%;
+      }
+    
+    
+    
+
+    .subscribe-form {
+        display: block;
+        gap: 10px;
+        
+    }
+    .social-wrapper{
+        padding-right: 80px;
+        width: 700px;
+    }
+   
+
 
     #appointment.appointment.section-bg {
         margin: 15px;
@@ -616,10 +643,7 @@ select {
         width: 476px !important;
     }
 
-    .other-columns {
-        grid-template-columns: repeat(3, 3fr);
-
-    }
+    
 
     .form.php-email-form {
         align-content: flex-start;
@@ -633,10 +657,7 @@ select {
         width: 510px !important;
     }
 
-    .footer-col {
-        padding: 15px;
-        text-align: center;
-    }
+   
 }
 
 
@@ -777,23 +798,60 @@ body {
 
 
 @media (max-width:768px) {
+    .footer{
+        width: 10%;
+    }
     .other-columns {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+        flex-wrap: wrap; 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-gap: 1rem;
+        margin-right: 0px !important;
+        padding-right: 0px !important;
+      }
+      
+      .other-columns > * {
+        flex: 2 2 50%; 
+       
+      }
+      
+    
+      .footer-col p {
+        max-width: 100%;
+
+      }
+    
+      .footer-col form {
+        flex-direction: column; 
+
+      }
+    
+      .footer-col input {
+        margin-right: 100px; 
+        width: 100%;
+      }
 
     .footer-col {
         display: flex;
         flex-direction: row;
         align-items: center;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: 90px;
+        width: 100%;
+        margin-right: 0px !important;
+        padding-right: 0px !important;
+    }
+    
+
+    .subscribe-form input[type="email"], .subscribe-form button {
+        width: 100%;
+        font-size: 10px;
     }
 
-    .subscribe-form {
-        display: flex;
-        gap: 10px;
+    
+    .social-wrapper a div i {
+        width: 50%;
     }
 }
 
