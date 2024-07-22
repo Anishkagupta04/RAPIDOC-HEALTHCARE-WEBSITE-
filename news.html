@@ -51,6 +51,15 @@
      <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
      <script src="https://unpkg.com/scrollreveal"></script>
      <style>
+      #progressBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 6px;
+        background-color: #3fbcc0;
+        z-index: 9999;
+      }
       .nav_link{
         display: flex;
         gap: 10px;
@@ -374,9 +383,17 @@
 
 
   <div id="preloader"></div>
-
+  <div id="progressBar"></div>
 
   <!-- JS Files -->
+  <script>
+    window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+  </script>
   <script>
 
 function loadGoogleTranslate(){
