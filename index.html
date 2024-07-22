@@ -11,6 +11,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="googletranslate.css">
 
   <script type="text/javascript">
     (function () {
@@ -56,6 +57,17 @@
   <link rel="stylesheet" href="./Css-Files/aboutus.css" />
   <link rel="stylesheet" href="./Css-Files/testimonial.css" />
   <script src="chatboxx.js" defer></script>
+  <style>
+       .rating-container button {
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .rating-container button:hover{
+          transform: scale(1.5);
+        }
+  </style>
 </head>
 
 <body>
@@ -75,11 +87,11 @@
         <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
         <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
         <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
-        <li><a href="#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
-        <li><a href="#feedback"><i class="bi bi-star"></i>Rate Us</a></li>
+        <div class="con" style="display: flex; gap: 10px;"><li><a href="#contact"><i class="bi bi-telephone"></i>  Contact us</a></li></div>
+        <li><a href="#feedback"><i class="bi bi-star"></i>  Rate Us</a></li>
         <li><a href="log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
 
-        <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+        <a href="Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
       </ul>
       <div class="hamburger">
         <div class="line"></div>
@@ -115,7 +127,6 @@
     <img class="sec-img" src="images/rd.png" alt="" />
 
   </div>
-  <br><br><br><br><br>
   <!-- End Home -->
 
   <main id="main">
@@ -136,15 +147,16 @@
                 cause problems.</p>
             </div>
           </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">          
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <div class="icon2"><i class="fas fa-dna"></i></div>
               <h4 class="title"><a href="test.html">Blood Test</a></h4>
               <p class="description"> Get your tests done to look for signs of disease or agents that cause disease.</p>
             </div>
           </div>
-
+        
+          
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <div class="icon3"><i class="fas fa-temperature-high"></i></div>
@@ -469,13 +481,13 @@
           <p>Access your medical records, lab results, and prescription history securely.</p>
         </div>
         <div class="container">
-
+    
           <!-- Add Login Form for Patient Portal -->
           <div class="login-box">
             <div class="avatar">
               <img src="img/avatar.png" height="220px" width="263px" alt="Avatar">
             </div>
-            <form>
+            <form id="loginForm">
               <div class="textbox">
                 <i class="fas fa-user"></i>
                 <input type="text" placeholder="Username" name="username" required>
@@ -494,10 +506,13 @@
                 <a href="forgot-password.php">Forgot Your Password?</a>
               </div>
             </form>
+            <div id="loginMessage" class="popup-message"></div>
           </div>
+    
         </div>
       </div>
     </section>
+    
 
 
     <!-- Appointment Section -->
@@ -753,8 +768,9 @@
                   <span class="job">Bangalore</span>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
-                aliquam incidunt provident vero nostrum quam!</p>
+              <p>Digital healthcare has provided me with quick and easy access to medical advice without 
+                 the long waits typically associated with in-person visits. My doctor can easily monitor
+                 my condition remotely, and I feel more connected to my healthcare team than ever before. Highly recommend!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -772,8 +788,9 @@
                   <span class="job">Delhi</span>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
-                aliquam incidunt provident vero nostrum quam!</p>
+              <p>Digital healthcare has been a game-changer for me. I love being able to consult with 
+                 specialists without leaving my home, especially since I live in a rural area with limited access to healthcare facilities.
+                 The only downside is that sometimes the app can be a bit slow, but overall, the benefits far outweigh the minor inconveniences.</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -790,8 +807,8 @@
                   <span class="job">Mumbai</span>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
-                aliquam incidunt provident vero nostrum quam!</p>
+              <p>I was initially skeptical about using digital healthcare services, but my experience has been nothing short of amazing.
+                 My doctor can easily monitor my condition remotely, and I feel more connected to my healthcare team than ever before. Highly recommend!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -808,8 +825,8 @@
                   <span class="job">Chennai</span>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
-                aliquam incidunt provident vero nostrum quam!</p>
+              <p>I've had mixed experiences with digital healthcare. On one hand, it's very convenient to schedule appointments and have virtual consultations.
+                 On the other hand, I feel like some issues are harder to diagnose without a physical examination.</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -827,8 +844,8 @@
                   <span class="job">Kolkata</span>
                 </div>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
-                aliquam incidunt provident vero nostrum quam!</p>
+              <p>As someone with a chronic illness, digital healthcare has been a lifesaver. Regular monitoring and quick access to my healthcare team
+                 through messaging and video calls have significantly improved my quality of life.</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -856,29 +873,35 @@
   <div class="feedback-form">
     <h2>We'd Love Your Feedback!</h2>
     <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> Healthcare</p>
-    <div>
+        <p>This is a confused face emoji: &#x1f615;</p>
+
+      <div>
       <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
       <div class="rating-container">
-        <button type="button" onclick="handleRatingChange(1)">☆</button>
-        <button type="button" onclick="handleRatingChange(2)">☆</button>
-        <button type="button" onclick="handleRatingChange(3)">☆</button>
-        <button type="button" onclick="handleRatingChange(4)">☆</button>
-        <button type="button" onclick="handleRatingChange(5)">☆</button>
+        <div class="rating-container">
+          <button type="button" onclick="handleRatingChange(1)">😡</button>
+          <button type="button" onclick="handleRatingChange(2)">☹️</button>
+          <button type="button" onclick="handleRatingChange(3)">😐</button>
+          <button type="button" onclick="handleRatingChange(4)">🙂</button>
+          <button type="button" onclick="handleRatingChange(5)">😄</button>
+      </div>
       </div>
     </div>
-    <form id="feedback-form" onsubmit="handleSubmit(event)">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
-      <label for="email">Your Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
-      <label for="feedback">Your Feedback</label>
-      <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-      <button type="submit">Submit Feedback</button>
-    </form>
+    
+  <form id="feedback-form" onsubmit="handleSubmit(event)">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+    <label for="email">Your Email</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <label for="feedback">Your Feedback</label>
+    <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
+    <button type="submit">Submit Feedback</button>
+  </form>
   </div>
 </div>
+<div id="feedback-message">Thanks for the feedback! ❤️ </div>
 
-<div id="popup" class="popup" style="display: none;">
+<div id="popup" class="popup">
   <div class="popup-content">
     <h2>Thank you for your Feedback! 💚</h2>
     <div class="popup-icon">
@@ -888,7 +911,16 @@
     <button class="popup-button" onclick="closePopup()"><a class="active" aria-current="page">Back to Home</a></button>
   </div>
 </div>
-
+<script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const feedbackMessage = document.getElementById('feedback-message');
+      feedbackMessage.style.display = 'block';
+      setTimeout(() => {
+        feedbackMessage.style.display = 'none';
+      }, 3000);
+    }
+  </script>
 <script>
   let rating = null;
 
@@ -897,18 +929,44 @@
     updateStars();
   }
 
-  function updateStars() {
-    const buttons = document.querySelectorAll('.rating-container button');
-    buttons.forEach((button, index) => {
-      if (index < rating) {
-        button.textContent = '★';
-        button.classList.add('filled');
-      } else {
-        button.textContent = '☆';
-        button.classList.remove('filled');
-      }
-    });
-  }
+  // function updateStars() {
+  //   const buttons = document.querySelectorAll('.rating-container button');
+  //   buttons.forEach((button, index) => {
+  //     if (index < rating) {
+  //       button.textContent = '★';
+  //       button.classList.add('filled');
+  //     } else {
+  //       button.textContent = '☆';
+  //       button.classList.remove('filled');
+  //     }
+  //   });
+  // }
+
+          let rating = 0;
+
+        function handleRatingChange(newRating) {
+            rating = newRating;
+            updateEmojis();
+            console.log("Rating selected:", rating);
+        }
+
+        function updateEmojis() {
+            const buttons = document.querySelectorAll('.rating-container button');
+            buttons.forEach((button, index) => {
+                button.textContent = getEmoji(index + 1);
+            });
+        }
+
+        function getEmoji(rating) {
+            switch(rating) {
+                case 1: return '😡';
+                case 2: return '☹️';
+                case 3: return '😐';
+                case 4: return '🙂';
+                case 5: return '😄';
+                default: return '😐';
+            }
+        }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -959,7 +1017,7 @@
     
   </main><!-- End #main -->
   <!-- ############### Footer ############### -->
-  <br><br><br><br><br><br>
+  
   <footer>
     <div class="footer-wrapper">
       <div class="footer-columns">
@@ -980,7 +1038,7 @@
             <ul class="links">
               <li><a href="Html-Files/appointment.html">Appointment</a></li>
               <li><a href="index.html#patient-portal">Patient Portal</a></li>
-              <li><a href="login.html">Login account</a></li>
+              <li><a href="log/login.html">Login account</a></li>
               <li><a href="#">Helplines</a></li>
               <li><a href="index.html#contact">Location</a></li>
             </ul>
@@ -997,6 +1055,7 @@
             </ul>
           </section>
           
+
        <section class="footer-col" >
       <div>
       <h4>RAPIDOC Newsletter</h4><br>
@@ -1006,12 +1065,15 @@
         exclusive offers.
       </p>
     </div>
-      <form action="#" class="subscribe-form">
-        <input type="email" placeholder="Your email" required>
-        <button type="submit">SUBSCRIBE</button>
+      <form action="#" class="subscribe-form" id="subscribeForm">
+        <input type="email" id="emailInput" placeholder="Your email" required>
+        <button type="submit" id="subscribeButton" style="color: black;">SUBSCRIBE</button>
       </form>
-      <p class="confirmation-message">Thank you for subscribing!</p>
-       </section>
+         </section>
+          <div id="subscribeBanner">
+            <p>Thanks for subscribing!</p>
+          </div>
+
       
 
           <script>
@@ -1111,6 +1173,27 @@
       </svg>
     </div>
   </div>
+  <button id="translateButton">Translate</button>
+
+  <!-- Popup for Google Translate -->
+  <div id="translatePopup" class="popup">
+      <div class="popup-content">
+          <span class="close">&times;</span>
+          <div id="google_translate_element"></div>
+      </div>
+  </div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+        }, 'google_translate_element');
+    }
+</script>
+<script src=" googletranslate.js"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Your custom JavaScript -->
+<script src="script.js"></script>
 
 
 
@@ -1118,6 +1201,27 @@
 
 
   <!-- JS Files -->
+  <script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Get the email input value
+      var email = document.getElementById('emailInput').value;
+      
+      // You can add further validation of the email input here if needed
+      
+      // Show the subscribe banner
+      document.getElementById('subscribeBanner').style.display = 'block';
+      
+      // Optionally, you can reset the form
+      document.getElementById('subscribeForm').reset();
+      
+      // Simulate a delay and hide the banner after 5 seconds
+      setTimeout(function() {
+        document.getElementById('subscribeBanner').style.display = 'none';
+      }, 5000);
+    });
+  </script>
   <script>
 
     function loadGoogleTranslate() {
@@ -1280,5 +1384,21 @@
       var scrolled = (winScroll / height) * 100;
       document.getElementById("progressBar").style.width = scrolled + "%";
     };
+  </script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Here you can add actual login logic, for now, we'll just show the message
+  var loginMessage = document.getElementById('loginMessage');
+  loginMessage.textContent = 'Login Successful';
+  loginMessage.style.display = 'block';
+  
+  // Set a timeout to hide the message after 3 seconds
+  setTimeout(function() {
+    loginMessage.style.display = 'none';
+  }, 3000);
+});
+
   </script>
 </body>
