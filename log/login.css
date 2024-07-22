@@ -6,7 +6,7 @@
 
 body {
   display: flex;
-  background: linear-gradient(270deg, #06bdc0, #05d3e2);  
+  background: black;  
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -496,4 +496,37 @@ input {
 
 .password-container input {
   padding-right: 30px; /* Adjust based on your eye icon size */
+}
+
+.container{
+  background-color: #143C3D;
+}
+form{
+  background-color: #143C3D;
+}
+.pass-link a{
+  color: cadetblue;
+}
+.pass-link a:hover{
+  color:aqua;
+}
+
+input[type="checkbox"] {
+  accent-color: aqua;
+}
+.checkbox label{
+  color:whitesmoke;
+}
+span{
+  color:whitesmoke;
+}
+.social-container a{
+  color: whitesmoke;
+}
+.social-container a:hover{
+  color: #4BB6B7;
+}
+.home-button{
+  background-color: #022A2D;
+  border:none;
 }
