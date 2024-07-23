@@ -11,6 +11,7 @@ const firebaseConfig = {
   appId: "1:467011865433:web:e23be9d0cc3496bb961a48"
 };
 
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 auth.languageCode = 'en';
