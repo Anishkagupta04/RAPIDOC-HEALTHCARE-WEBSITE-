@@ -1021,8 +1021,92 @@
 </script>
     
   </main><!-- End #main -->
+  <br>
+  <style>
+.visitor-counter {
+  position: fixed;
+  top: 580px;
+  left: 100px;
+  background-color: #3fbcc0;
+  height: 100px;
+  width: 100px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 200px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+              0 1px 3px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+.visitor-counter div:first-child {
+  margin-bottom: 5px;
+}
+
+.website-counter {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .visitor-counter {
+    height: 100px;
+    width: 100px;
+    font-size: 16px;
+  }
+
+  .website-counter {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .visitor-counter {
+    height: 80px;
+    width: 80px;
+    font-size: 14px;
+  }
+
+  .website-counter {
+    font-size: 18px;
+  }
+}
+  </style>
   <!-- ############### Footer ############### -->
-  
+  <div class="visitor-counter">
+    <div>Visitor</div>
+    <div class="website-counter"></div>
+  </div>
+  <script src="path/to/visitorCounter.js"></script>
+</body>
+  <script>
+    // Function to get the count from localStorage or initialize it
+function getVisitorCount() {
+  return localStorage.getItem('visitorCount') || 0;
+}
+
+// Function to increment and save the count
+function incrementVisitorCount() {
+  let count = parseInt(getVisitorCount()) + 1;
+  localStorage.setItem('visitorCount', count);
+  return count;
+}
+
+// Function to display the count
+function displayVisitorCount() {
+  const counterElement = document.querySelector('.website-counter');
+  const count = incrementVisitorCount();
+  counterElement.textContent = count;
+}
+
+// Call the display function when the page loads
+document.addEventListener('DOMContentLoaded', displayVisitorCount);
+  </script>
+<br>
   <footer>
     <div class="footer-wrapper">
       <div class="footer-columns">
