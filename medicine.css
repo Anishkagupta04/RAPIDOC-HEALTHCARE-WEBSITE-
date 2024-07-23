@@ -240,3 +240,16 @@ button:hover {
     font-size: 10px;
   }
 }
+.img img {
+  width: 90px;
+  height: auto;
+
+}
+
+
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  padding-top:0px ;
+}
