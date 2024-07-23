@@ -1,4 +1,3 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
@@ -7,16 +6,18 @@ const firebaseConfig = {
   authDomain: "fir-7f3dd.firebaseapp.com",
   projectId: "fir-7f3dd",
   storageBucket: "fir-7f3dd.appspot.com",
-  messagingSenderId: "467011865433",
-  appId: "1:467011865433:web:e23be9d0cc3496bb961a48"
+  messagingSenderId: "6681408391",
+  appId: "1:6681408391:web:e23be9d0cc3496bb961a48"
 };
-
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 auth.languageCode = 'en';
 
 const provider = new GoogleAuthProvider();
+provider.setCustomParameters({
+  client_id: "6681408391-4pfklfnr6os9ml05fchsq0iaigf0or20.apps.googleusercontent.com"
+});
 
 document.getElementById("goog").addEventListener("click", function() {
   signInWithPopup(auth, provider)
@@ -24,7 +25,7 @@ document.getElementById("goog").addEventListener("click", function() {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const user = result.user;
       console.log(user);
-      window.location.href = "./signedup.html";
+      window.location.href = "index.html";  // Changed to index.html as per the redirect URI
     }).catch((error) => {
       console.error("Error during Google sign-in:", error);
     });
@@ -39,7 +40,7 @@ document.getElementById("signup-form").addEventListener("submit", function(event
   if (validateForm(name, email, password)) {
     // Simulate a successful registration (Replace with actual Firebase sign-up logic)
     console.log("Form submitted with:", { name, email, password });
-    window.location.href = "./signed.html";
+    window.location.href = "index.html";  // Changed to index.html to match the redirect URI
   }
 });
 

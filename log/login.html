@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,7 +79,7 @@
         <span>or use your account</span>
         <div class="social-container">
           <a href="https://www.facebook.com" class="social" id="fb"><i class="lni lni-facebook-fill"></i></a>
-          <a class="social" id="goog"><i class="lni lni-google"></i></a>
+          <a class="social" id="goog" ><i class="lni lni-google"></i></a>
           <a href="https://www.linkedin.com" class="social" id="lin"><i class="lni lni-linkedin-original"></i></a>
         </div>
       </form>
@@ -105,8 +106,75 @@
 
   </div>
   
+  <script>
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDx_FcoL3XJryt6BInhOaDsMKiSmxzrYBI",
+  authDomain: "fir-7f3dd.firebaseapp.com",
+  projectId: "fir-7f3dd",
+  storageBucket: "fir-7f3dd.appspot.com",
+  messagingSenderId: "6681408391",
+  appId: "1:6681408391:web:e23be9d0cc3496bb961a48"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+auth.languageCode = 'en';
+
+const provider = new GoogleAuthProvider();
+provider.setCustomParameters({
+  client_id: "6681408391-4pfklfnr6os9ml05fchsq0iaigf0or20.apps.googleusercontent.com"
+});
+
+document.getElementById("goog").addEventListener("click", function() {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const user = result.user;
+      console.log(user);
+      window.location.href = "index.html";  // Changed to index.html as per the redirect URI
+    }).catch((error) => {
+      console.error("Error during Google sign-in:", error);
+    });
+});
+
+document.getElementById("signup-form").addEventListener("submit", function(event) {
+  event.preventDefault();  // Prevent form from submitting the default way
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if (validateForm(name, email, password)) {
+    // Simulate a successful registration (Replace with actual Firebase sign-up logic)
+    console.log("Form submitted with:", { name, email, password });
+    window.location.href = "index.html";  // Changed to index.html to match the redirect URI
+  }
+});
+
+function validateForm(name, email, password) {
+  if (name === "" || email === "" || password === "") {
+    alert("All fields are required!");
+    return false;
+  }
+  if (!validateEmail(email)) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters long.");
+    return false;
+  }
+  return true;
+}
+
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+  </script>
   <script src="script.js"></script>
-  <script src="logscript.js"></script>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://accounts.google.com/gsi/client" async="" defer=""></script>
 </body>
 </html>
