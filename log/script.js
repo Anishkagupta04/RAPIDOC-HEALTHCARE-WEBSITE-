@@ -71,3 +71,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 2000); // Display banner for 2 seconds
   });
 });
+
+
