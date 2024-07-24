@@ -36,12 +36,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
 </head>
 <style>
+    @media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+}
     #faq-container {
         width: 75%;
         display: block;
         margin: auto;
         margin-bottom: 12rem;
     }
+    html, body {
+    overflow-x: hidden;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+}
+
+@media screen and (max-width: 760px) {
+    .page-content {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .page-content {
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .page-content {
+        padding: 0;
+    }
+}
+
+
 
     @media screen and (max-width: 760px) {
     #faq-container {
@@ -51,6 +97,8 @@
     .footer {
         top: 130% !important;
     }
+
+    
 }
 
 @media screen and (max-width: 760px) {
@@ -117,6 +165,439 @@
       z-index: 9999;
     }
 
+    /* Base Styles for Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Responsive Styles for Navbar */
+/* Base Styles for Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 15px; /* Adjust if necessary */
+    left: 15px; /* Move to the left side */
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Responsive Styles for Navbar */
+@media screen and (max-width: 768px) {
+  img{
+    display: none;
+  }
+    .nav_menu {
+        display: none;
+        position: absolute;
+        top: 85px; /* Adjust according to your header height */
+        left: 0;
+        width: 100%;
+        background-color: #022a2d;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px; /* Optional: Adjust padding as needed */
+        z-index: 1000;
+    }
+
+    .nav_menu.show {
+        display: flex;
+    }
+
+    .nav_link {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav_link li {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+}
+
+/* Styles for the Hamburger Menu when Opened */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.header-content{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Media Queries */
+
+/* Small Devices (600px and below) */
+@media screen and (max-width: 600px) {
+    #faq-container {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .main-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .main-heading h3 {
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .main-heading p {
+        margin-top: 10px;
+    }
+
+    .answers {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+
+    .lead, .pt-5 {
+        font-size: large;
+    }
+
+    .footer {
+        padding: 1em;
+        text-align: center;
+    }
+
+    .footer-wrapper {
+        display: block;
+        margin: auto;
+    }
+
+    .footer-columns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-columns section {
+        margin-bottom: 1rem;
+    }
+
+    .social-wrapper {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .social-wrapper a div i {
+        font-size: 20px;
+    }
+
+    .follow-us{
+        font-size: 2px;
+    }
+}
+
+/* Extra Small Devices (400px and below) */
+@media screen and (max-width: 400px) {
+    #faq-container {
+        width: 95%;
+        margin-bottom: 0rem;
+    }
+
+    .main-heading {
+        padding: 10px;
+    }
+
+    .main-heading h3 {
+        font-size: 14px;
+    }
+
+    .answers {
+        padding: 15px 10px;
+        font-size: 12px;
+    }
+
+    .lead, .pt-5 {
+        font-size: medium;
+    }
+
+    .footer {
+        padding: 0.5rem;
+    }
+
+    .footer-wrapper {
+        display: block;
+        margin: auto;
+    }
+
+    .footer-columns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-columns section {
+        margin-bottom: 0.5rem;
+    }
+
+    .social-wrapper {
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+
+    .social-wrapper a div i {
+        font-size: 15px;
+    }
+
+
+}
+/* Footer Styles for Mobile Devices */
+@media screen and (max-width: 760px) {
+    .footer-columns {
+        flex-direction: column;
+    }
+
+    .footer-columns section {
+        margin-bottom: 1rem;
+    }
+
+    .footer-wrapper {
+        padding: 1rem;
+    }
+    
+    .footer{
+height: 10px;
+    }
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-bottom {
+    margin-top: 1rem;
+    padding: 1rem;
+    color: white;
+    overflow: hidden; /* Prevents overflow */
+}
+
+/* Ensure Copyright Text Wrapping */
+.footer-bottom-wrapper small {
+    display: block;
+    margin: 0 auto;
+    font-size: 14px; 
+    max-width: 100%; /* Prevents overflowing beyond viewport */
+    box-sizing: border-box; /* Includes padding in the width */
+    word-wrap: break-word; /* Ensures long words break */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .footer-bottom-wrapper small {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer-bottom-wrapper small {
+        font-size: 10px; /* Further adjust for smaller screens */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer-bottom-wrapper small {
+        font-size: 8px; /* Adjust for very small screens */
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 760px) {
+    body {
+        font-size: 14px;
+    }
+
+    .page-content {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+
+    .page-content {
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+/* Base Styles for Header */
+.header_container {
+    background-color: #022a2d;
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 85px;
+    padding: 15px;
+    z-index: 555;
+}
+
+/* Header Content Wrapper */
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: auto;
+}
+
+/* Styles for the Logo and Text */
+.img {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Space from the left edge */
+}
+
+#rd-logo {
+    width: 90px;
+    height: auto;
+}
+
+#site-name {
+    font-size: 32px; /* Adjust size as needed */
+    color: #00FF00; /* Light green color */
+    margin-left: 10px; /* Space between the text and hamburger menu */
+    display: none; /* Hidden by default */
+}
+
+/* Styles for the Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Responsive Styles for Navbar */
+@media screen and (max-width: 768px) {
+    .img #rd-logo {
+        display: none; /* Hide image */
+    }
+
+    #site-name {
+        display: block; /* Show text */
+    }
+
+    .logo-text{
+      color: #3fbcc0;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .header-content {
+        justify-content: flex-start; /* Align items to the start (left) */
+    }
+
+    .nav_menu {
+        display: none;
+        position: absolute;
+        top: 85px; /* Adjust according to your header height */
+        left: 0;
+        width: 100%;
+        background-color: #022a2d;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .nav_menu.show {
+        display: flex;
+    }
+
+    .nav_link {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav_link li {
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+
 </style>
 <body>
 
@@ -133,26 +614,31 @@
     <!-- Header -->
 
     <header class="header_container">
-        <div class="img">
-        <img id="rd-logo"  style="width: 90px; height: auto;" src="./images/rd.png"> 
+      <div class="img">
+        <img id="rd-logo" style="width: 90px; height: auto;" src="./images/rd.png">
+        <span class="logo-text">Rapidoc</span>
       </div>
       
+      <div class="hamburger-menu" id="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
-      <nav class="nav_menu">
-
+      
+      <nav class="nav_menu" id="nav-menu">
         <ul class="nav_link">
           <li><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="Html-Files/news.html">News</a></li>
           <a href="dex.html"><button>Service</button></a>
-          <li><a href="#patient-portal">patient Portal</a></li>
+          <li><a href="#patient-portal">Patient Portal</a></li>
           <li><a href="#doctors">Doctor</a></li>
           <li><a href="Html-Files/contact.html">Contact us</a></li>
           <a href="login.html"><button>Sign in/Sign up</button></a>
         </ul>
       </nav>
-      </div>
     </header>
+    
 
   <!-- header -->
 
@@ -162,10 +648,9 @@
         <div class="text-center rounded-0" style="background-image: url('assets/img/logo/nn.png');">
             <div class="container">
                 <h1 class="pt-5">
-                    FAQ
+                  FAQ
                 </h1>
                 <p class="lead">
-                    Frequently Asked Questions.
                 </p>
             </div>
         </div>
@@ -294,7 +779,7 @@
                 </p>
                 <form action="#" class="subscribe-form">
                   <input type="email" placeholder="Your email" required>
-                  <button type="submit">SUBSCRIBE</button>
+                  <button type="submit" style="color: black;">SUBSCRIBE</button>
                 </form>
               </section>
           </div>
@@ -314,7 +799,7 @@
             </style>
           <div class="social-wrapper">
             <div class="social-links">
-            <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <div style="margin-left: 100px;font-family: sans-serif;" class="follow-us"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
             <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
             <!-- <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a> -->
               <a href="https://www.twitter.com"><div><img src="twitter.png" style="width: 16px; height: 15px;"></div></a>
@@ -380,6 +865,12 @@ window.addEventListener("scroll", function() {
     }
   }
 });
+
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.getElementById('nav-menu').classList.toggle('show');
+});
+
 </script>
 </body>
 </html>
