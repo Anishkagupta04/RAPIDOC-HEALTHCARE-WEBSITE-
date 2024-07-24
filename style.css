@@ -1392,7 +1392,7 @@ section {
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 * {
-  margin: 0;
+  margin: -1px;
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
@@ -1530,7 +1530,7 @@ section {
 /*################----Back to top----################*/
 footer {
   position: relative;
-  padding: 50px 0;
+  padding: 5px 0;
 }
 
 #back-to-top-container {
@@ -1670,12 +1670,10 @@ footer {
   align-items: center;
   flex-direction: column;
 }
-
-
 .footer-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 80rem;
+  max-width: 73rem;
   width: 100%;
   margin: 0 auto;
   padding: 1rem;
@@ -1790,7 +1788,12 @@ footer {
   /* Reset to left 0 to create the effect from right to left */
   right: auto;
 }
-
+.horizontal-line {
+  border: 0;                              /* Remove default border */
+  height: 1px;                            /* Set the height of the line */
+  background: linear-gradient(to right, rgba(204, 204, 204, 0), #ccc, rgba(204, 204, 204, 0)); /* Gradient effect */
+  margin: 20px 0;                         /* Add some margin for spacing */
+}
 
 .footer-bottom {
   width: 100%;
@@ -1800,7 +1803,7 @@ footer {
 
 .footer-bottom-wrapper {
   display: flex;
-  max-width: 80rem;
+  max-width: 52rem;
   margin: 0 auto;
   gap: 1rem;
   width: 100%;
@@ -1846,17 +1849,19 @@ footer {
 /*? socials */
 .social-wrapper {
   display: flex;
-    gap: 0.5rem;
-    margin: 0 auto;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  gap: 0.5rem;
+  margin: 0 auto;
 }
 
 .social-links {
   display: inline-flex;
   gap: 1rem;
   align-items: center;
-  margin-left: -100px;
-  
+  justify-content: center; /* Center items within the flex container */
 }
+
 
 .social-links img {
   width: 1.5rem;
