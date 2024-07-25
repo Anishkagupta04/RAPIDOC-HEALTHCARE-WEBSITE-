@@ -967,16 +967,20 @@
       </div>
       </div>
     </div>
-    
-  <form id="feedback-form" onsubmit="handleSubmit(event)">
-    <label for="name">Your Name</label>
-    <input type="text" id="name" placeholder="Enter your name" required>
-    <label for="email">Your Email</label>
-    <input type="email" id="email" placeholder="Enter your email" required>
-    <label for="feedback">Your Feedback</label>
-    <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-    <button type="submit" class="btn" style="width: 21rem;">Submit Feedback</button>
-  </form>
+
+
+    <form id="feedback-form" onsubmit="handleSubmit(event)">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      <label for="feedback">Your Feedback</label>
+      <textarea id="feedback" rows="5" name="feedback" placeholder="Let us know how we can improve..." required></textarea>
+      <input type="hidden" id="rating-input" name="rating">
+      <button type="submit">Submit Feedback</button>
+    </form>
+  
+
   </div>
 </div>
 <div id="feedback-message">Thanks for the feedback! ❤️ </div>
@@ -1006,6 +1010,7 @@
 
   function handleRatingChange(value) {
     rating = value;
+    document.getElementById('rating-input').value = rating; 
     updateStars();
   }
 
@@ -1048,23 +1053,35 @@
             }
         }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const feedback = document.getElementById('feedback').value;
+    const form = event.target;
+    const formData = new FormData(form);
 
-    // For now, we will just simulate email sending success
-    console.log('Feedback submitted:', { name, email, rating, feedback });
+    try {
+      const response = await fetch('https://formspree.io/f/mblrllll', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
 
-    // Reset the form fields
-    document.getElementById('feedback-form').reset();
-    rating = null;
-    updateStars();
+      if (response.ok) {
+        // Reset the form 
+        form.reset();
+        rating = null;
+        updateStars();
 
-    // Show the popup
-    document.getElementById('popup').style.display = 'flex';
+        // Show the popup
+        document.getElementById('popup').style.display = 'flex';
+      } else {
+        console.error('Form submission error', response);
+      }
+    } catch (error) {
+      console.error('Form submission error', error);
+    }
   }
 
   function closePopup() {
@@ -1092,7 +1109,7 @@
 
   window.addEventListener('scroll', handleScroll);
 
-  updateStars();
+  updateStars(); 
 </script>
     
   </main><!-- End #main -->
