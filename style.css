@@ -717,6 +717,17 @@ section {
   position: relative;
   overflow: hidden;
   background: #1c413b;
+  align-content: space-evenly;
+  border-radius: 15px;
+  /* margin-top: 10px; */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.counts .count-box:hover {
+  transform: translateY(-10px);
+  box-shadow: -10px -5px 50px 0 rgba(0, 0, 0, 0.2);
+  background-color: #3fbcc0a4;
+}
   box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
   border-radius: 50px;
 }
