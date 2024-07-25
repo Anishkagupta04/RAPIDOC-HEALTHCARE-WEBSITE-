@@ -58,6 +58,36 @@
       .btn1{
         margin-right: 15px;
       }
+      @media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .social-wrapper {
+    font-size: 14px;
+  }
+
+  .social-links i {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .social-wrapper {
+    font-size: 12px;
+  }
+
+  .social-links i {
+    font-size: 16px;
+  }
+}
      </style>
 </head>
 
@@ -79,7 +109,7 @@
             <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
             <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
             <li><a href="#contact"><i class="bi bi-telephone"></i> Contact us</a></li>
-            <a href="./Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
+            <a href="Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
           </ul>
           <div class="hamburger">
             <div class="line"></div>
@@ -297,7 +327,7 @@
                   </p>
                   <form action="#" class="subscribe-form">
                     <input type="text" placeholder="Your email" required>
-                    <button type="submit">SUBSCRIBE</button>
+                    <button type="submit" style="color: black;" id="s">SUBSCRIBE</button>
                   </form>
                 </section>
             </div>
@@ -305,8 +335,8 @@
     </div>
     <div class="footer-bottom">
         <div class="footer-bottom-wrapper">
-            <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
-              Reserved  Made with ❤️ by RapiDoc</small>
+          <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+            Reserved Made with ❤️ by RapiDoc</small>
               <style>
                 .social-wrapper a div i {
                   color: #afb6c7;
