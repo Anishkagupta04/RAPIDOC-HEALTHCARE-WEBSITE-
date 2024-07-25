@@ -51,6 +51,15 @@
      <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
      <script src="https://unpkg.com/scrollreveal"></script>
      <style>
+      #progressBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 6px;
+        background-color: #3fbcc0;
+        z-index: 9999;
+      }
       .nav_link{
         display: flex;
         gap: 10px;
@@ -109,7 +118,7 @@
             <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
             <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
             <li><a href="#contact"><i class="bi bi-telephone"></i> Contact us</a></li>
-            <a href="./Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
+            <a href="Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
           </ul>
           <div class="hamburger">
             <div class="line"></div>
@@ -327,7 +336,7 @@
                   </p>
                   <form action="#" class="subscribe-form">
                     <input type="text" placeholder="Your email" required>
-                    <button type="submit" style="color: black;">SUBSCRIBE</button>
+                    <button type="submit" style="color: black;" id="s">SUBSCRIBE</button>
                   </form>
                 </section>
             </div>
@@ -335,8 +344,8 @@
     </div>
     <div class="footer-bottom">
         <div class="footer-bottom-wrapper">
-            <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
-              Reserved  Made with ❤️ by RapiDoc</small>
+          <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+            Reserved Made with ❤️ by RapiDoc</small>
               <style>
                 .social-wrapper a div i {
                   color: #afb6c7;
@@ -374,9 +383,17 @@
 
 
   <div id="preloader"></div>
-
+  <div id="progressBar"></div>
 
   <!-- JS Files -->
+  <script>
+    window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+  </script>
   <script>
 
 function loadGoogleTranslate(){
