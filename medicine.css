@@ -72,8 +72,8 @@ input {
     margin-left: 500px;
 } 
 
-button {
-    background-color: #55a5ea;
+.button {
+    background-color: #3fbcc0a6;
     color: white;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -93,6 +93,20 @@ button {
   transition: width 0.3s ease;
   z-index: -1;
 }
+
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #55a5ea;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
 
 .button:hover {
   color: #fff;
