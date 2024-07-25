@@ -382,7 +382,7 @@ form.php-email-form {
 #email {
     margin-bottom: 10px;
     border-bottom: none;
-    width: 30vw;
+    width: 22vw;
 }
 
 #email,
@@ -884,3 +884,116 @@ body {
   .b:hover::before {
     width: 100%;
   }
+
+  
+
+
+  /* Default styling for .row.mt-2 */
+.row.mt-2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Adjustments for small screens (e.g., phones) */
+@media (max-width: 576px) {
+    .row.mt-2 {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+}
+
+/* Adjustments for medium screens (e.g., tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .row.mt-2 {
+        flex-direction: row;
+        margin-top: 20px;
+        gap: 10px;
+    }
+}
+
+/* Adjustments for large screens (e.g., desktops) */
+@media (min-width: 769px) {
+    .row.mt-2 {
+        flex-direction: row;
+        margin-top: 25px;
+        gap: 15px;
+    }
+}
+@media screen and (max-width: 325px){
+    #name, #email {
+        width: 44vw;
+    }
+}
+
+/* Default styles for container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Doctor section adjustments */
+.doctor-section {
+    flex: 1 1 auto; /* Allows the doctor section to grow and shrink */
+    max-width: 100%;
+    margin: 20px;
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .doctor-section {
+        max-width: 90%;
+    }
+}
+
+/* Further adjustments for mobile screens */
+@media screen and (max-width: 768px) {
+    .doctor-section {
+        max-width: 95%;
+        margin: 10px;
+    }
+}
+
+/* Specific adjustments for very small screens */
+@media screen and (max-width: 480px) {
+    .doctor-section {
+        max-width: 100%;
+        margin: 5px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* Example styles for doctor section */
+.doctor-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.doctor-section h2, .doctor-section p {
+    text-align: center;
+}
+
+/* Ensure any buttons or inputs within the doctor section are responsive */
+.doctor-section .btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+}

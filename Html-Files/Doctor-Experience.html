@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,46 +12,50 @@
   <link rel="icon" type="image/x-icon" href="../favicon.png">
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./Css-Files/Experiencestyle.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <style>
-      @media screen and (max-width: 768px) {
-  #ss {
-    font-size: 8px;
-  }
-}
+    @media screen and (max-width: 768px) {
+      #ss {
+        font-size: 8px;
+      }
+    }
 
-@media screen and (max-width: 600px) {
-  #ss {
-    font-size: 6px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .social-wrapper {
-    font-size: 8px;
-  }
+    @media screen and (max-width: 600px) {
+      #ss {
+        font-size: 8px;
+      }
+    }
 
-  .social-links i {
-    font-size: 6px;
-  }
-}
+    @media screen and (max-width: 768px) {
+      .social-wrapper {
+        font-size: 8px;
+      }
 
-@media screen and (max-width: 480px) {
-  .social-wrapper {
-    font-size: 8px;
-  }
+      .social-links i {
+        font-size: 6px;
+      }
+    }
 
-  .social-links i {
-    font-size: 6px;
-  }
-}
+    @media screen and (max-width: 480px) {
+      .social-wrapper {
+        font-size: 8px;
+      }
+
+      .social-links i {
+        font-size: 6px;
+      }
+    }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #121212;
       color: white;
-  
-    
+
+
     }
 
     h1 {
@@ -65,7 +70,8 @@
       margin-bottom: 20px;
     }
 
-    .filters select, .filters input {
+    .filters select,
+    .filters input {
       margin: 0 10px;
     }
 
@@ -94,14 +100,14 @@
       display: flex;
       align-items: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin:30px;
-      
+      margin: 30px;
+
     }
 
     #doctor-list li .content {
       flex-grow: 1;
-      padding-right: 20px; 
-     margin-left: 50px;
+      padding-right: 20px;
+      margin-left: 50px;
     }
 
     #doctor-list li .content h4 {
@@ -115,13 +121,15 @@
       font-size: 20px;
       color: #f2f7fa;
     }
-     
+
     #doctor-list li img {
       width: 80px;
       height: auto;
       border-radius: 50%;
-      margin-right: 200px; /* Add margin to left to separate from content */
+      margin-right: 200px;
+      /* Add margin to left to separate from content */
     }
+
     #doctor-list li:hover {
       background: rgb(75, 182, 183);
       border: 2px solid white;
@@ -129,19 +137,21 @@
       font-weight: 700;
       font-size: 30px;
     }
+
     #doctor-list li .content:hover {
       color: aliceblue;
       font-size: 30px;
     }
   </style>
 </head>
+
 <body>
   <div class="pre">
     <div class="loader"></div>
   </div>
   <header class="header_container nav-h">
     <div class="img">
-      <img id="rd-logo" style="width: 90px; height: auto;" src="rd.png">
+      <img id="rd-logo" style="width: 90px; height: auto;" src="../images/rd.png">
     </div>
     <nav class="nav_menu">
       <ul class="nav_link vis-h">
@@ -169,19 +179,25 @@
   <header class="h">
     <h1>Find a Doctor</h1>
     <div class="filter-sort">
-      <label for="experience-filter" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">Experience:</label>
+      <label for="experience-filter"
+        style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">Experience:</label>
       <select id="experience-filter" style="height: 35px; background-color: #ecf0f1;">
         <option value="" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">All</option>
         <option value="5">5+ years</option>
         <option value="10">10+ years</option>
         <option value="15">15+ years</option>
       </select>
-      
-      <label for="fee-filter" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">Minimum Fee:</label>
-      <input type="range" id="fee-filter" min="0" max="1000" step="50" value="500" style="height: 35px; background-color: #ecf0f1;">
-      <span id="fee-value" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">1000</span>
-      
-      <button id="sort-btn" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Sort by Fee</button>
+
+      <label for="fee-filter"
+        style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">Minimum
+        Fee:</label>
+      <input type="range" id="fee-filter" min="0" max="1000" step="50" value="500"
+        style="height: 35px; background-color: #ecf0f1;">
+      <span id="fee-value"
+        style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">1000</span>
+
+      <button id="sort-btn" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Sort by
+        Fee</button>
     </div>
   </header>
 
@@ -224,21 +240,21 @@
               <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
-          <section class="footer-col" >
+          <section class="footer-col">
             <div>
-            <h4>RAPIDOC Newsletter</h4><br>
-            <p>
-              Subscribe to our newsletter for a weekly dose
-              of news, updates, helpful tips, and
-              exclusive offers.
-            </p>
-          </div>
+              <h4>RAPIDOC Newsletter</h4><br>
+              <p>
+                Subscribe to our newsletter for a weekly dose
+                of news, updates, helpful tips, and
+                exclusive offers.
+              </p>
+            </div>
             <form action="#" class="subscribe-form">
               <input type="email" placeholder="Your email" required>
               <button type="submit">SUBSCRIBE</button>
             </form>
             <p class="confirmation-message">Thank you for subscribing!</p>
-             </section>
+          </section>
         </div>
       </div>
     </div>
@@ -248,31 +264,33 @@
           Reserved Made with ❤️ by RapiDoc</small>
         <div class="social-wrapper">
           <div class="social-links">
-            <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
-            <div  id="insta">
-            <a href="https://www.instagram.com" target="_blank">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-          <div id="twit">
-            <a  href="https://www.twitter.com" target="_blank">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-          </div>
-          <div id="git">
-            <a  href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-          <div id="linkd">
-            <a  href="https://www.linkedin.com" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
+            <div style="margin-left: 80px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <div id="insta">
+              <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <div id="twit">
+              <a href="https://www.twitter.com" target="_blank">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+            <div id="git">
+              <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <div id="linkd">
+              <a href="https://www.linkedin.com" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
 
-            <div id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
-           <div id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></div>
-            <div id="mail1" ><a  href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
+            <div id="fb"><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div id="phn"> <a href="+91 1234567890" title="+91 1234567890" target="_blank"><i
+                  class="fa-solid fa-phone"></i></a></div>
+            <div id="mail1"><a href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
           </div>
         </div>
       </div>
@@ -312,189 +330,189 @@
         image: "./images/doctor8.jpeg"
       },
       {
-      name: "Dr. Appa",
+        name: "Dr. Appa",
         specialization: "ENT",
         experience: 9,
         fee: 600,
         image: "./images/doctor19.jpeg"
       },
       {
-      name: "Dr. Sanket",
+        name: "Dr. Sanket",
         specialization: "Pediatrics",
         experience: 8,
         fee: 700,
         image: "./images/doctor.png"
       },
       {
-      name: "Dr. Ashwin",
+        name: "Dr. Ashwin",
         specialization: "Cardiology",
         experience: 5,
         fee: 800,
         image: "./images/doctor17.jpeg"
       },
       {
-      name: "Dr. Tushar",
+        name: "Dr. Tushar",
         specialization: "Dermatologist",
         experience: 13,
         fee: 900,
         image: "./images/doctor18.jpeg"
       },
       {
-      name: "Dr. Shivani",
+        name: "Dr. Shivani",
         specialization: "Gynacologist",
         experience: 14,
         fee: 1000,
         image: "./images/doctor8.jpeg"
       },
       {
-      name: "Dr. Piyush",
+        name: "Dr. Piyush",
         specialization: "ENT",
         experience: 15,
         fee: 150,
         image: "./images/doctor17.jpeg"
       },
       {
-      name: "Dr. Dhanraj",
+        name: "Dr. Dhanraj",
         specialization: "Pediatrics",
         experience: 11,
         fee: 250,
         image: "./images/doctor18.jpeg"
       },
       {
-      name: "Dr. Rani",
+        name: "Dr. Rani",
         specialization: "Cardiology",
         experience: 5,
         fee: 100,
         image: "./images/doctor19.jpeg"
       },
       {
-      name: "Dr. Dhanshree",
+        name: "Dr. Dhanshree",
         specialization: "Pediatrics",
         experience: 6,
         fee: 350,
         image: "./images/doctor8.jpeg"
       },
       {
-      name: "Dr. Radheshyam",
+        name: "Dr. Radheshyam",
         specialization: "Dermatologist",
         experience: 7,
         fee: 450,
         image: "./images/doctor.png"
       },
       {
-      name: "Dr. Abhishek",
+        name: "Dr. Abhishek",
         specialization: "Gynacologist",
         experience: 8,
         fee: 550,
         image: "./images/doctor17.jpeg"
       },
       {
-      name: "Dr. Kalyani",
+        name: "Dr. Kalyani",
         specialization: "ENT",
         experience: 9,
         fee: 650,
         image: "./images/doctor8.jpeg"
       },
       {
-      name: "Dr. Priya",
+        name: "Dr. Priya",
         specialization: "Pediatrics",
         experience: 10,
         fee: 750,
         image: "./images/doctor.png"
       },
       {
-      name: "Dr. Sunita",
+        name: "Dr. Sunita",
         specialization: "Cardiology",
         experience: 11,
         fee: 850,
         image: "./images/doctor17.jpeg"
       },
       {
-      name: "Dr. Rajesh",
+        name: "Dr. Rajesh",
         specialization: "Gynacologist",
         experience: 12,
         fee: 950,
         image: "./images/doctor18.jpeg"
       },
       {
-      name: "Dr. Namrata",
+        name: "Dr. Namrata",
         specialization: "ENT",
         experience: 13,
         fee: 200,
-        image:"./images/doctor19.jpeg"
+        image: "./images/doctor19.jpeg"
       },
       {
-      name: "Dr. Divyansh",
+        name: "Dr. Divyansh",
         specialization: "Dermatologist",
         experience: 14,
         fee: 300,
         image: "./images/doctor17.jpeg"
       },
       {
-      name: "Dr. Samiksha",
+        name: "Dr. Samiksha",
         specialization: "Pediatrics",
         experience: 16,
         fee: 400,
         image: "./images/doctor.png"
       },
       {
-      name: "Dr. Ramesh",
+        name: "Dr. Ramesh",
         specialization: "Cardiologist",
         experience: 10,
         fee: 200,
         image: "./images/doctor8.jpeg"
       },
       {
-      name: "Dr. Madhuri",
+        name: "Dr. Madhuri",
         specialization: "Pediatrics",
         experience: 9,
         fee: 500,
         image: "./images/doctor17.jpeg"
       },
       {
-      name: "Dr. Kanchan",
+        name: "Dr. Kanchan",
         specialization: "Dermatologist",
         experience: 8,
         fee: 600,
         image: "./images/doctor18.jpeg"
       },
       {
-      name: "Dr. Suresh",
+        name: "Dr. Suresh",
         specialization: "Pediatrics",
         experience: 7,
         fee: 700,
         image: "./images/doctor19.jpeg"
       },
       {
-      name: "Dr. Dipali",
+        name: "Dr. Dipali",
         specialization: "ENT",
         experience: 6,
         fee: 800,
         image: "./images/doctor.png"
       },
       {
-      name: "Dr. Nikita",
+        name: "Dr. Nikita",
         specialization: "Dermatologist",
         experience: 5,
         fee: 900,
         image: "./images/doctor17.jpeg"
       },
       {
-      name: "Dr. Sangeeta",
+        name: "Dr. Sangeeta",
         specialization: "Cardiologist",
         experience: 5,
         fee: 1000,
-        image:"./images/doctor8.jpeg"
+        image: "./images/doctor8.jpeg"
       },
       {
-      name: "Dr. Vanshika",
+        name: "Dr. Vanshika",
         specialization: "ENT",
         experience: 10,
         fee: 100,
         image: "./images/doctor19.jpeg"
       },
       {
-      name: "Dr. Prabhakar",
+        name: "Dr. Prabhakar",
         specialization: "Gynacologist",
         experience: 11,
         fee: 300,
@@ -568,32 +586,51 @@
     var currentYear = new Date().getFullYear();
     document.getElementById('year').textContent = currentYear;
   </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const backToTopButton = document.getElementById('back-to-top-container');
-  
-        function checkButtonVisibility() {
-          if (window.innerWidth > 100 && window.scrollY > 100) {
-            backToTopButton.style.display = 'block';
-          } else {
-            backToTopButton.style.display = 'none';
-          }
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const backToTopButton = document.getElementById('back-to-top-container');
+
+      function checkButtonVisibility() {
+        if (window.innerWidth > 100 && window.scrollY > 100) {
+          backToTopButton.style.display = 'block';
+        } else {
+          backToTopButton.style.display = 'none';
         }
-  
-        window.addEventListener('scroll', checkButtonVisibility);
-        window.addEventListener('resize', checkButtonVisibility);
-  
-        backToTopButton.addEventListener('click', function () {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
+      }
+
+      window.addEventListener('scroll', checkButtonVisibility);
+      window.addEventListener('resize', checkButtonVisibility);
+
+      backToTopButton.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
         });
-        checkButtonVisibility();
       });
-  
-    </script>
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+      checkButtonVisibility();
+    });
+
+
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+      loader.classList.add("loader--hidden");
+      loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+      });
+    });
+
+
+    const hamburger=document.querySelector('.hamburger');
+  const navbar=document.querySelector('.header_container');
+  const nav=document.querySelector('.nav_link');
+  hamburger.addEventListener('click',()=>{
+    navbar.classList.toggle('nav-h');
+    nav.classList.toggle('vis-h');
+  })
+
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </body>
+
 </html>
