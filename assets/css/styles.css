@@ -471,7 +471,10 @@ body.dark-theme {
   display: grid;
   row-gap: .5rem;
 }
-
+.footer__link:hover{
+  text-decoration: underline;
+  color: #0a71f7;
+}
 .footer__link {
   color: var(--title-color);
 }

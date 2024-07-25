@@ -46,44 +46,6 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-.nav_link li {
-  margin-right: 1px;
-  /* Add space between items */
-  padding: 5px 10px;
-  display: inline-block;
-  color: white;
-}
-
-.nav_link li a {
-  transition: all 0.3s ease 0s;
-  color: white;
-}
-
-.nav_link li a:hover {
-  color: #55a5ea;
-}
-
-#header {
-  position: relative;
-  top: 12px;
-}
-
-.header_container {
-  background-color: #022a2d;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  height: 85px;
-  margin: auto;
-  margin-top: 0px;
-  /* Adjust this value to move the header down */
-  padding-top: 15px;
-  z-index: 555;
-}
-
 .container {
   /* display: ; */
   font-family: sans-serif;
@@ -120,15 +82,122 @@ h6 {
   font-size: xx-large;
   color: #55a5ea;
 }
-
-.container-head {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 2fr 13fr 3fr;
-  margin-top: 0px;
+.nav_link li {
+  margin-right: 1px;
+  padding: 5px 10px;
+  display: inline-block;
+  color: white;
 }
 
-/*---------------------parallax effect after about------------*/
+.nav_link li a {
+  transition: all 0.3s ease 0s;
+  color: white;
+}
+
+.nav_link li a:hover {
+  color: #55a5ea;
+}
+
+#header {
+  position: relative;
+  top: 12px;
+}
+
+.header_container {
+  background-color: #022a2d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 85px;
+  margin: auto;
+  margin-top: 0px;
+  padding-top: 15px;
+  z-index: 555;
+}
+
+.logo-text {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  font-size: 24px;
+  transform: translateX(120%);
+  margin-right: 450px;
+  margin-top: 20px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .logo-text {
+    display: none;
+  }
+  
+  #rd-logo {
+    display: none;
+  }
+
+  .nav_link {
+    display: none;
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: flex;
+    order: 1;
+    margin-left: 10px;
+  }
+
+  .mobile-logo-text {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-right: 5px;
+    font-size: 30px;
+  }
+
+  .nav_menu.active .nav_link {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background-color: #022a2d;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    z-index: 1; /* Ensure the nav items are above other elements */
+  }
+
+  .nav_link li {
+    margin: 10px 20px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-logo-text {
+    display: none;
+  }
+}
+
+
+
+/*################----Sections General----################*/
 .parallax-container {
   height: 100vh;
   overflow: hidden;
@@ -148,93 +217,9 @@ h6 {
   border-radius: 10px;
   z-index: -1;
 }
-
-/*################----Navigation----################*/
-
-
-/* Added the cursor as a pointer  */
 .icon-box {
   cursor: pointer
 }
-
-/*################----Mobile Navigation----################*/
-
-.mobile-nav-toggle {
-  color: #fff;
-  font-size: 28px;
-  cursor: pointer;
-  display: none;
-  line-height: 0;
-  transition: 0.5s;
-}
-
-.mobile-nav-toggle.bi-x {
-  color: #fff;
-}
-
-@media (max-width: 991px) {
-  .mobile-nav-toggle {
-    display: block;
-  }
-
-  .navbar ul {
-    display: none;
-  }
-}
-
-.navbar-mobile {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: rgba(28, 47, 65, 0.9);
-  transition: 0.3s;
-  z-index: 999;
-}
-
-.navbar-mobile .mobile-nav-toggle {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-.navbar-mobile ul {
-  display: block;
-  position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  padding: 10px 0;
-  background-color: #000;
-  overflow-y: auto;
-  transition: 0.3s;
-}
-
-.navbar-mobile>ul>li {
-  padding: 0;
-}
-
-.navbar-mobile a {
-  padding: 10px 20px;
-  font-size: 15px;
-  color: #fff;
-  border: none;
-}
-
-.navbar-mobile a:hover,
-.navbar-mobile .active,
-.navbar-mobile li:hover>a {
-  color: #3fbcc0c6;
-}
-
-.navbar-mobile .getstarted {
-  margin: 15px;
-}
-
-/*################----Sections General----################*/
 section {
   overflow: hidden;
 }
@@ -1013,10 +998,10 @@ section {
 }
 
 .contact .info {
-  width: 100%;
   background: #0a0a0a;
   border-radius: 15px;
   padding: 15px;
+  margin-bottom: 20px;
 }
 
 .contact .info i {
@@ -1051,7 +1036,7 @@ section {
 
 .contact .info .email,
 .contact .info .phone {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .contact .info .email:hover i,
@@ -1061,34 +1046,27 @@ section {
 }
 
 .contact .php-email-form {
-  width: 100%;
   background: #000;
+  padding: 20px;
+  border-radius: 15px;
 }
 
 .contact .php-email-form .form-group {
-  padding-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 .contact .php-email-form input,
 .contact .php-email-form textarea {
-  border-radius: 10px;
-  box-shadow: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
   font-size: 14px;
   color: #000;
 }
 
-.contact .php-email-form input {
-  height: 44px;
-  width: 100%;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
 .contact .php-email-form button[type="submit"] {
-  display: block;
-  margin: 20px auto;
+  display: inline-block;
   background: #3fbcc0a6;
   border: 0;
   padding: 10px 35px;
@@ -1101,23 +1079,17 @@ section {
   background: #55a5ea;
 }
 
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+.confirmation-message {
+  display: none;
+  text-align: center;
+  margin-top: 15px;
+  color: #fff;
 }
 
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .contact .info,
+  .contact .php-email-form {
+      padding: 15px;
   }
 }
 
@@ -1140,7 +1112,6 @@ section {
   padding: 20px;
   animation: slideInFromBottom 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
   transition: opacity 0.3s ease-in-out;
-  /* background: linear-gradient(155deg, #3c696a, #163530); */
   background-color: #3fbcc051;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(6, 130, 130, 0.1);
@@ -1151,8 +1122,7 @@ section {
 }
 
 .feedback-form h2 {
-  /* color: #2b8d8f; */
-  font-size: 31px;
+  font-size: 28px;
   margin-bottom: 15px;
   text-align: center;
   font-weight: 1000 !important;
@@ -1183,7 +1153,7 @@ section {
 
 .feedback-form p {
   color: #d7d4d4;
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -1193,16 +1163,6 @@ section {
   justify-content: center;
   margin-bottom: 2px;
 }
-
-.rating-container button {
-  font-size: 24px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: grey;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
 
 .rating-container button {
   font-size: 24px;
@@ -1223,7 +1183,6 @@ section {
   transform: scale(1.1);
 }
 
-
 .feedback-form .rate-us {
   text-align: center !important; 
   display: block;
@@ -1232,10 +1191,11 @@ section {
   color: rgb(251, 250, 250);
   margin-bottom: 10px;
 }
+
 .feedback-form button {
   background: none;
   border: none;
-  font-size: 29px;
+  font-size: 25px;
   cursor: pointer;
   z-index: 1;
   padding: 12px;
@@ -1247,26 +1207,19 @@ section {
   flex-direction: column;
   width: 100%;
 }
-/*  */
+
 .feedback-form label {
   width: 100%;
   text-align: left;
   font-size: 14px;
-  /* margin-bottom: 5px; */
   margin-top: 9px;
   font-weight: 600;
   color: #fff;
 }
-.feedback-form input {
-  margin-top: 10px;
-}
+
+.feedback-form input,
 .feedback-form textarea {
   margin-top: 10px;
-}
-/*  */
-.feedback-form input[type="text"],
-.feedback-form input[type="email"],
-.feedback-form textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -1277,13 +1230,8 @@ section {
   transition: all 0.3s ease;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-.feedback-form #email {
-  margin-top: 10px;
-}
 
-
-.feedback-form input[type="text"]:focus,
-.feedback-form input[type="email"]:focus,
+.feedback-form input:focus,
 .feedback-form textarea:focus {
   outline: none;
   border-color: #29888a;
@@ -1297,7 +1245,7 @@ section {
 }
 
 .feedback-form button[type="submit"] {
-  background-color: hwb(181 16% 46%);;
+  background-color: hwb(181 16% 46%);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -1311,6 +1259,7 @@ section {
   background-color: #1c5f5e;
   transform: translateY(-2px);
 }
+
 .feedback-form button[type="submit"]:active {
   transform: translateY(0);
   background-color: #1c5f5e;
@@ -1321,11 +1270,40 @@ section {
   flex-direction: column;
   width: 100%;
   margin-bottom: 15px;
-} 
+}
 
-@media (min-width: 1200px) {
-  .feedback-wrapper {
-    padding: 50px;
+@media (max-width: 768px) {
+  .feedback-form {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .feedback-form h2 {
+    font-size: 24px;
+  }
+
+  .feedback-form p {
+    font-size: 14px;
+  }
+
+  .feedback-form label {
+    font-size: 12px;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .feedback-form button {
+    font-size: 22px;
+    padding: 10px;
+  }
+
+  .feedback-form button[type="submit"] {
+    font-size: 14px;
+    padding: 10px 15px;
   }
 }
 
@@ -1343,13 +1321,15 @@ section {
 }
 
 .popup-content {
-  /* background: linear-gradient(155deg, #effcfc, #185c51); */
   background-color: #113435;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   position: relative;
+  width: 80%;
+  max-width: 400px;
 }
+
 .popup-content a {
   text-decoration: none;
   color: white;
@@ -1357,11 +1337,8 @@ section {
 
 .popup-close {
   position: absolute;
-  top: -13px;
-  right: 225px;
-  margin: auto;
-  color: #000;
-  background: none;
+  top: 10px;
+  right: 10px;
   color: #01494b;
   border: none;
   font-size: 24px;
@@ -1369,18 +1346,17 @@ section {
 }
 
 .popup h2 {
-  /* color: #055a5b; */
   color: white;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .popup p {
   margin: 16px 0;
   color: #ececec;
 }
+
 .popup img {
   margin-top: 20px;
-  
 }
 
 .popup-button {
@@ -1398,6 +1374,31 @@ section {
   color: white;
 }
 
+@media (max-width: 768px) {
+  .popup-content {
+    padding: 15px;
+    width: 90%;
+    max-width: none;
+  }
+
+  .popup h2 {
+    font-size: 22px;
+  }
+
+  .popup p {
+    font-size: 14px;
+  }
+
+  .popup-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .popup-close {
+    top: 10px;
+    right: 10px;
+  }
+}
 
 /* Importing Google font - Open Sans */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");

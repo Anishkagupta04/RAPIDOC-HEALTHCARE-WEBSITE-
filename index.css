@@ -429,8 +429,11 @@ select {
 }
 
 .contact .php-email-form {
-    width: 300%;
-    background: #000;
+    width: 200%;
+}
+
+.contact .php-email-form .form-group {
+    width: 100%;
 }
 
 @media (max-width: 768px) {
