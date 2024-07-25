@@ -57,6 +57,28 @@
   <link rel="stylesheet" href="./Css-Files/aboutus.css" />
   <link rel="stylesheet" href="./Css-Files/testimonial.css" />
   <script src="chatboxx.js" defer></script>
+  <style>
+       .rating-container button {
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .rating-container button:hover{
+          transform: scale(1.5);
+        }
+
+        .sec-img {
+            transform-style: preserve-3d;
+            will-change: transform;
+    }
+        .nav_link li{
+          font-size: 16px;
+          display: flex;
+          flex-direction: row;
+
+        }
+  </style>
 </head>
 
 <body>
@@ -71,7 +93,7 @@
     <nav class="nav_menu">
       <ul class="nav_link vis-h">
         <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
-        <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+        <li><a href="about.html"><i class="bi bi-info-circle-fill"></i> About</a></li>
         <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
         <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
         <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
@@ -101,7 +123,6 @@
     </div>
   </header>
 
-
   <div class="container" style="display:flex ;">
     <div class="content">
 
@@ -110,10 +131,10 @@
         destination
       </h1>
       <h4>
-        <a href="#about" class="btn-get-started scrollto">Download Now</a>
+        <a href="#about" class="btn-get-started scrollto" id="btn">Download Now</a>
       </h4>
     </div>
-    <img class="sec-img" src="images/rd.png" alt="" />
+    <img class="sec-img" src="images/rd.png" alt="" id="sec-img" style="padding: 0 0 0 0;"/>
 
   </div>
   <!-- End Home -->
@@ -470,16 +491,16 @@
           <p>Access your medical records, lab results, and prescription history securely.</p>
         </div>
         <div class="container">
-
+    
           <!-- Add Login Form for Patient Portal -->
           <div class="login-box">
             <div class="avatar">
-              <img src="img/avatar.png" height="280px" width="263px" alt="Avatar">
+              <img src="img/avatar.png" height="220px" width="263px" alt="Avatar">
             </div>
-            <form>
+            <form id="loginForm">
               <div class="textbox">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Username" name="username" required class="t1">
+                <input type="text" placeholder="Username" name="username" required>
               </div>
               <br>
               <div class="textbox">
@@ -489,20 +510,23 @@
               <br>
               <input type="submit" class="btn" value="SUBMIT">
               <div class="register-link">
-                <p>Not registered yet?<a href="#"> Register Here</a></p>
+                <a href="#">Not registered yet? Register Here</a>
               </div>
               <div class="forgot-password" id="forgot-password-patient-portal">
                 <a href="forgot-password.php">Forgot Your Password?</a>
               </div>
             </form>
+            <div id="loginMessage" class="popup-message"></div>
           </div>
+    
         </div>
       </div>
     </section>
+    
 
 
     <!-- Appointment Section -->
-    <section id="appointment" class="appointment section-bg">
+    <section id="appointment" class="appointment section-bg" style="height: 1200px;width: 600px;">
       <div class="container" style="border-radius: 10px;">
         <div class="section-title section-black-text">
           <h2>Make an Appointment</h2>
@@ -576,7 +600,7 @@
             </select>
           </div>
           <div class="text-center">
-            <button class="btn2" type="submit">Make an Appointment</button>
+            <button type="submit" class="btn">Make an Appointment</button>
           </div>
         </form>
       </div>
@@ -734,19 +758,71 @@
      
           <!-- End Contact Section -->
 
-
     <!-- testimonial section -->
 
-    <section id="test" class="testimonals">
+    <style>
+      .testimonals {
+        padding: 2rem;
+      }
+    
+      .section-title {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    
+      .testimonals-content {
+        position: relative;
+      }
+    
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        width: 60%;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+    
+      .info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+    
+      .info img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 1rem;
+      }
+    
+      .text-box .name {
+        font-weight: bold;
+      }
+    
+      .rating i {
+        color: #ffdd00;
+      }
+    
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #000;
+      }
+    </style>
+
+     <section id="test" class="testimonals">
       <h2 class="h2 section-title has-underline"
-        style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
+          style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
         What our Patients Say
       </h2>
-
+    
       <div class="testimonals-content">
         <div class="swiper testimonals-slider js-testimonals-slider">
           <div class="swiper-wrapper">
-            <div class="swiper-slide testimonals-item" id="slide-item" >
+            <div class="swiper-slide testimonals-item">
               <div class="info">
                 <img src="./images/profile1.webp" alt="">
                 <div class="text-box">
@@ -765,8 +841,8 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
-            <div class="swiper-slide testimonals-item" id="slide-item" > 
+    
+            <div class="swiper-slide testimonals-item"> 
               <div class="info">
                 <img src="./images/profile2.webp" alt="">
                 <div class="text-box">
@@ -784,8 +860,8 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
-            <div class="swiper-slide testimonals-item" id="slide-item" >
+    
+            <div class="swiper-slide testimonals-item">
               <div class="info">
                 <img src="./images/profile3.webp" alt="">
                 <div class="text-box">
@@ -802,8 +878,8 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
-            <div class="swiper-slide testimonals-item" id="slide-item" >
+    
+            <div class="swiper-slide testimonals-item">
               <div class="info">
                 <img src="./images/profile4.webp" alt="">
                 <div class="text-box">
@@ -821,8 +897,8 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
-            <div class="swiper-slide testimonals-item" id="slide-item" >
+    
+            <div class="swiper-slide testimonals-item">
               <div class="info">
                 <img src="./images/profile5.webp" alt="">
                 <div class="text-box">
@@ -840,15 +916,33 @@
               </div>
             </div>
           </div>
+    
+          <!-- Add Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
+    
         <div class="swiper-pagination js-testimonals-pagination"></div>
       </div>
-      </div>
-      </div>
-      <div class="swiper-pagination js-testimonals-pagination"></div>
-      </div>
     </section>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.js-testimonals-slider', {
+          loop: true,
+          pagination: {
+            el: '.js-testimonals-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
@@ -859,29 +953,35 @@
   <div class="feedback-form">
     <h2>We'd Love Your Feedback!</h2>
     <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> Healthcare</p>
-    <div>
+        <p>This is a confused face emoji: &#x1f615;</p>
+
+      <div>
       <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
       <div class="rating-container">
-        <button type="button" onclick="handleRatingChange(1)">☆</button>
-        <button type="button" onclick="handleRatingChange(2)">☆</button>
-        <button type="button" onclick="handleRatingChange(3)">☆</button>
-        <button type="button" onclick="handleRatingChange(4)">☆</button>
-        <button type="button" onclick="handleRatingChange(5)">☆</button>
+        <div class="rating-container">
+          <button type="button" onclick="handleRatingChange(1)">😡</button>
+          <button type="button" onclick="handleRatingChange(2)">☹️</button>
+          <button type="button" onclick="handleRatingChange(3)">😐</button>
+          <button type="button" onclick="handleRatingChange(4)">🙂</button>
+          <button type="button" onclick="handleRatingChange(5)">😄</button>
+      </div>
       </div>
     </div>
-    <form id="feedback-form" onsubmit="handleSubmit(event)">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
-      <label for="email">Your Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
-      <label for="feedback">Your Feedback</label>
-      <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-      <button type="submit">Submit Feedback</button>
-    </form>
+    
+  <form id="feedback-form" onsubmit="handleSubmit(event)">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+    <label for="email">Your Email</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <label for="feedback">Your Feedback</label>
+    <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
+    <button type="submit" class="btn" style="width: 21rem;">Submit Feedback</button>
+  </form>
   </div>
 </div>
+<div id="feedback-message">Thanks for the feedback! ❤️ </div>
 
-<div id="popup" class="popup" style="display: none;">
+<div id="popup" class="popup">
   <div class="popup-content">
     <h2>Thank you for your Feedback! 💚</h2>
     <div class="popup-icon">
@@ -891,7 +991,16 @@
     <button class="popup-button" onclick="closePopup()"><a class="active" aria-current="page">Back to Home</a></button>
   </div>
 </div>
-
+<script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const feedbackMessage = document.getElementById('feedback-message');
+      feedbackMessage.style.display = 'block';
+      setTimeout(() => {
+        feedbackMessage.style.display = 'none';
+      }, 3000);
+    }
+  </script>
 <script>
   let rating = null;
 
@@ -900,18 +1009,44 @@
     updateStars();
   }
 
-  function updateStars() {
-    const buttons = document.querySelectorAll('.rating-container button');
-    buttons.forEach((button, index) => {
-      if (index < rating) {
-        button.textContent = '★';
-        button.classList.add('filled');
-      } else {
-        button.textContent = '☆';
-        button.classList.remove('filled');
-      }
-    });
-  }
+  // function updateStars() {
+  //   const buttons = document.querySelectorAll('.rating-container button');
+  //   buttons.forEach((button, index) => {
+  //     if (index < rating) {
+  //       button.textContent = '★';
+  //       button.classList.add('filled');
+  //     } else {
+  //       button.textContent = '☆';
+  //       button.classList.remove('filled');
+  //     }
+  //   });
+  // }
+
+          let rating = 0;
+
+        function handleRatingChange(newRating) {
+            rating = newRating;
+            updateEmojis();
+            console.log("Rating selected:", rating);
+        }
+
+        function updateEmojis() {
+            const buttons = document.querySelectorAll('.rating-container button');
+            buttons.forEach((button, index) => {
+                button.textContent = getEmoji(index + 1);
+            });
+        }
+
+        function getEmoji(rating) {
+            switch(rating) {
+                case 1: return '😡';
+                case 2: return '☹️';
+                case 3: return '😐';
+                case 4: return '🙂';
+                case 5: return '😄';
+                default: return '😐';
+            }
+        }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -961,8 +1096,16 @@
 </script>
     
   </main><!-- End #main -->
+  <br>
+  <link rel="stylesheet" href="./assets/css/visitors.css">
   <!-- ############### Footer ############### -->
-  
+  <div class="visitor-counter">
+    <div>Visitor</div>
+    <div class="website-counter"></div>
+  </div>
+  <script src="./assets/js/visitors.js"></script>
+</body>
+<br>
   <footer>
     <div class="footer-wrapper">
       <div class="footer-columns">
@@ -983,7 +1126,7 @@
             <ul class="links">
               <li><a href="Html-Files/appointment.html">Appointment</a></li>
               <li><a href="index.html#patient-portal">Patient Portal</a></li>
-              <li><a href="login.html">Login account</a></li>
+              <li><a href="log/login.html">Login account</a></li>
               <li><a href="#">Helplines</a></li>
               <li><a href="index.html#contact">Location</a></li>
             </ul>
@@ -1000,6 +1143,7 @@
             </ul>
           </section>
           
+
        <section class="footer-col" >
       <div>
       <h4>RAPIDOC Newsletter</h4><br>
@@ -1009,12 +1153,15 @@
         exclusive offers.
       </p>
     </div>
-      <form action="#" class="subscribe-form">
-        <input type="email" placeholder="Your email" required>
-        <button type="submit">SUBSCRIBE</button>
+      <form action="#" class="subscribe-form" id="subscribeForm">
+        <input type="email" id="emailInput" placeholder="Your email" required>
+        <button type="submit" id="subscribeButton" class="b">SUBSCRIBE</button>
       </form>
-      <p class="confirmation-message">Thank you for subscribing!</p>
-       </section>
+         </section>
+          <div id="subscribeBanner">
+            <p>Thanks for subscribing!</p>
+          </div>
+
       
 
           <script>
@@ -1132,7 +1279,6 @@
 </script>
 <script src=" googletranslate.js"></script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <!-- Your custom JavaScript -->
 <script src="script.js"></script>
 
@@ -1140,8 +1286,28 @@
 
 
 
-
   <!-- JS Files -->
+  <script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Get the email input value
+      var email = document.getElementById('emailInput').value;
+      
+      // You can add further validation of the email input here if needed
+      
+      // Show the subscribe banner
+      document.getElementById('subscribeBanner').style.display = 'block';
+      
+      // Optionally, you can reset the form
+      document.getElementById('subscribeForm').reset();
+      
+      // Simulate a delay and hide the banner after 5 seconds
+      setTimeout(function() {
+        document.getElementById('subscribeBanner').style.display = 'none';
+      }, 5000);
+    });
+  </script>
   <script>
 
     function loadGoogleTranslate() {
@@ -1295,7 +1461,6 @@
       nav.classList.toggle('vis-h');
     })
   </script>
-
   <div id="progressBar"></div>
   <script>
     window.onscroll = function () {
@@ -1304,5 +1469,21 @@
       var scrolled = (winScroll / height) * 100;
       document.getElementById("progressBar").style.width = scrolled + "%";
     };
+  </script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Here you can add actual login logic, for now, we'll just show the message
+  var loginMessage = document.getElementById('loginMessage');
+  loginMessage.textContent = 'Login Successful';
+  loginMessage.style.display = 'block';
+  
+  // Set a timeout to hide the message after 3 seconds
+  setTimeout(function() {
+    loginMessage.style.display = 'none';
+  }, 3000);
+});
+
   </script>
 </body>
