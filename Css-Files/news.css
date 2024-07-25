@@ -591,6 +591,7 @@ form.php-email-form{
   opacity: 0;
   visibility: hidden;
 }
+
 .img img {
   width: 90px;
   height: auto;
@@ -602,4 +603,68 @@ form.php-email-form{
 .slideshow-container {
   position: relative;
   max-width: 100%;
+
+
+.btn1 {
+  position: relative;
+  background-color: #3fbcc0a6;
+  color: white;
+  border: 2px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.btn1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #55a5ea;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn1:hover {
+  color: #fff;
+}
+
+.btn1:hover::before {
+  width: 100%;
+}
+
+
+#s {
+  position: relative;
+  background-color: #3fbcc0a6;
+  color: white;
+  border: 2px solid #000;
+  border-radius: 10px;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+#s::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 6px;
+  background-color: #55a5ea;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+#s:hover {
+  color: #fff;
+}
+
+#s:hover::before {
+  width: 100%;
+
 }
