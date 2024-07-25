@@ -67,6 +67,17 @@
         .rating-container button:hover{
           transform: scale(1.5);
         }
+
+        .sec-img {
+            transform-style: preserve-3d;
+            will-change: transform;
+    }
+        .nav_link li{
+          font-size: 16px;
+          display: flex;
+          flex-direction: row;
+
+        }
   </style>
 </head>
 
@@ -82,7 +93,7 @@
     <nav class="nav_menu">
       <ul class="nav_link vis-h">
         <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
-        <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+        <li><a href="about.html"><i class="bi bi-info-circle-fill"></i> About</a></li>
         <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
         <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
         <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
@@ -112,7 +123,6 @@
     </div>
   </header>
 
-
   <div class="container" style="display:flex ;">
     <div class="content">
 
@@ -121,10 +131,10 @@
         destination
       </h1>
       <h4>
-        <a href="#about" class="btn-get-started scrollto">Download Now</a>
+        <a href="#about" class="btn-get-started scrollto" id="btn">Download Now</a>
       </h4>
     </div>
-    <img class="sec-img" src="images/rd.png" alt="" />
+    <img class="sec-img" src="images/rd.png" alt="" id="sec-img" style="padding: 0 0 0 0;"/>
 
   </div>
   <!-- End Home -->
@@ -516,7 +526,7 @@
 
 
     <!-- Appointment Section -->
-    <section id="appointment" class="appointment section-bg">
+    <section id="appointment" class="appointment section-bg" style="height: 1200px;width: 600px;">
       <div class="container" style="border-radius: 10px;">
         <div class="section-title section-black-text">
           <h2>Make an Appointment</h2>
@@ -590,7 +600,7 @@
             </select>
           </div>
           <div class="text-center">
-            <button type="submit">Make an Appointment</button>
+            <button type="submit" class="btn">Make an Appointment</button>
           </div>
         </form>
       </div>
@@ -748,19 +758,71 @@
      
           <!-- End Contact Section -->
 
-
     <!-- testimonial section -->
 
-    <section id="test" class="testimonals">
+    <style>
+      .testimonals {
+        padding: 2rem;
+      }
+    
+      .section-title {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    
+      .testimonals-content {
+        position: relative;
+      }
+    
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        width: 60%;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+    
+      .info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+    
+      .info img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 1rem;
+      }
+    
+      .text-box .name {
+        font-weight: bold;
+      }
+    
+      .rating i {
+        color: #ffdd00;
+      }
+    
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #000;
+      }
+    </style>
+
+     <section id="test" class="testimonals">
       <h2 class="h2 section-title has-underline"
-        style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
+          style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
         What our Patients Say
       </h2>
-
+    
       <div class="testimonals-content">
         <div class="swiper testimonals-slider js-testimonals-slider">
           <div class="swiper-wrapper">
-            <div class="swiper-slide testimonals-item" id="slide-item" >
+            <div class="swiper-slide testimonals-item">
               <div class="info">
                 <img src="./images/profile1.webp" alt="">
                 <div class="text-box">
@@ -779,8 +841,8 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
-            <div class="swiper-slide testimonals-item" id="slide-item" > 
+    
+            <div class="swiper-slide testimonals-item"> 
               <div class="info">
                 <img src="./images/profile2.webp" alt="">
                 <div class="text-box">
@@ -798,8 +860,8 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
-            <div class="swiper-slide testimonals-item" id="slide-item" >
+    
+            <div class="swiper-slide testimonals-item">
               <div class="info">
                 <img src="./images/profile3.webp" alt="">
                 <div class="text-box">
@@ -816,8 +878,8 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
-            <div class="swiper-slide testimonals-item" id="slide-item" >
+    
+            <div class="swiper-slide testimonals-item">
               <div class="info">
                 <img src="./images/profile4.webp" alt="">
                 <div class="text-box">
@@ -835,8 +897,8 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
-            <div class="swiper-slide testimonals-item" id="slide-item" >
+    
+            <div class="swiper-slide testimonals-item">
               <div class="info">
                 <img src="./images/profile5.webp" alt="">
                 <div class="text-box">
@@ -854,15 +916,33 @@
               </div>
             </div>
           </div>
+    
+          <!-- Add Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
+    
         <div class="swiper-pagination js-testimonals-pagination"></div>
       </div>
-      </div>
-      </div>
-      <div class="swiper-pagination js-testimonals-pagination"></div>
-      </div>
     </section>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.js-testimonals-slider', {
+          loop: true,
+          pagination: {
+            el: '.js-testimonals-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
@@ -895,7 +975,7 @@
     <input type="email" id="email" placeholder="Enter your email" required>
     <label for="feedback">Your Feedback</label>
     <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-    <button type="submit">Submit Feedback</button>
+    <button type="submit" class="btn" style="width: 21rem;">Submit Feedback</button>
   </form>
   </div>
 </div>
@@ -1016,8 +1096,16 @@
 </script>
     
   </main><!-- End #main -->
+  <br>
+  <link rel="stylesheet" href="./assets/css/visitors.css">
   <!-- ############### Footer ############### -->
-  
+  <div class="visitor-counter">
+    <div>Visitor</div>
+    <div class="website-counter"></div>
+  </div>
+  <script src="./assets/js/visitors.js"></script>
+</body>
+<br>
   <footer>
     <div class="footer-wrapper">
       <div class="footer-columns">
@@ -1067,7 +1155,7 @@
     </div>
       <form action="#" class="subscribe-form" id="subscribeForm">
         <input type="email" id="emailInput" placeholder="Your email" required>
-        <button type="submit" id="subscribeButton" style="color: black;">SUBSCRIBE</button>
+        <button type="submit" id="subscribeButton" class="b">SUBSCRIBE</button>
       </form>
          </section>
           <div id="subscribeBanner">
@@ -1191,10 +1279,8 @@
 </script>
 <script src=" googletranslate.js"></script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <!-- Your custom JavaScript -->
 <script src="script.js"></script>
-
 
 
 
@@ -1375,7 +1461,6 @@
       nav.classList.toggle('vis-h');
     })
   </script>
-
   <div id="progressBar"></div>
   <script>
     window.onscroll = function () {
