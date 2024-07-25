@@ -1,19 +1,19 @@
-name: Auto Label Issues
+name: Auto Label PRs
 on:
-  issues:
-    types: [opened, edited]
+  pull_request:
+    types: [opened, edited, synchronize]
 
 jobs:
-  label_issues:
+  label_prs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v6
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const issue = context.payload.issue;
-            const title = issue.title.toLowerCase();
-            const body = issue.body.toLowerCase();
+            const pr = context.payload.pull_request;
+            const title = pr.title.toLowerCase();
+            const body = pr.body ? pr.body.toLowerCase() : '';
             
             const labels = [];
             
