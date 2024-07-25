@@ -67,6 +67,11 @@
         .rating-container button:hover{
           transform: scale(1.5);
         }
+        .nav_link li{
+          font-size: 16px;
+          display: flex;
+          flex-direction: row;
+        }
   </style>
 </head>
 
@@ -516,7 +521,7 @@
 
 
     <!-- Appointment Section -->
-    <section id="appointment" class="appointment section-bg">
+    <section id="appointment" class="appointment section-bg" style="height: 1200px;width: 600px;">
       <div class="container" style="border-radius: 10px;">
         <div class="section-title section-black-text">
           <h2>Make an Appointment</h2>
@@ -1087,8 +1092,16 @@
 </script>
     
   </main><!-- End #main -->
+  <br>
+  <link rel="stylesheet" href="./assets/css/visitors.css">
   <!-- ############### Footer ############### -->
-  
+  <div class="visitor-counter">
+    <div>Visitor</div>
+    <div class="website-counter"></div>
+  </div>
+  <script src="./assets/js/visitors.js"></script>
+</body>
+<br>
   <footer>
     <div class="footer-wrapper">
       <div class="footer-columns">
