@@ -678,8 +678,28 @@
           
       </div>
       <br>
-      <div class="row mt-2" style="display: flex; flex-direction: row; align-items: stretch; justify-content: space-around;">
-          <div class="col-lg-4">
+      <div class="row mt-2" style="display: flex; flex-direction: row; justify-content: space-evenly;">
+        <div class="col-lg-8 mt-5 mt-lg-0">
+          <form id="contactForm" action="" role="form" class="php-email-form">
+              <div class="form-group">
+                  <input type="text" name="name" class="form-control enhanced-input" id="name" placeholder=" Your Name" required>
+              </div>
+              <div class="form-group mt-3">
+                  <input type="email" class="form-control enhanced-input" name="email" id="email" placeholder=" Your Email" required>
+              </div>
+              <div class="form-group mt-3">
+                  <input type="text" class="form-control enhanced-input" name="subject" id="subject" placeholder=" Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                  <textarea class="form-control enhanced-textarea" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="text-center"><button type="submit" class="btn-submit">Send Message</button></div>
+          </form>
+          <div id="confirmationMessage" class="confirmation-message">
+            Thank you for your message. We will get back to you shortly.
+               </div>
+        </div>
+        <div class="col-lg-4">
               <div class="info">
                   <div class="address">
                       <i class="fa fa-location-dot"></i>
@@ -697,27 +717,7 @@
                       <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
                   </div>
               </div>
-          </div>
-          <div class="col-lg-8 mt-5 mt-lg-0">
-              <form id="contactForm" action="" role="form" class="php-email-form">
-                  <div class="form-group">
-                      <input type="text" name="name" class="form-control enhanced-input" id="name" placeholder=" Your Name" required>
-                  </div>
-                  <div class="form-group mt-3">
-                      <input type="email" class="form-control enhanced-input" name="email" id="email" placeholder=" Your Email" required>
-                  </div>
-                  <div class="form-group mt-3">
-                      <input type="text" class="form-control enhanced-input" name="subject" id="subject" placeholder=" Subject" required>
-                  </div>
-                  <div class="form-group mt-3">
-                      <textarea class="form-control enhanced-textarea" name="message" rows="5" placeholder="Message" required></textarea>
-                  </div>
-                  <div class="text-center"><button type="submit" class="btn-submit">Send Message</button></div>
-              </form>
-              <div id="confirmationMessage" class="confirmation-message">
-                Thank you for your message. We will get back to you shortly.
-                   </div>
-          </div>
+        </div>
       </div>
   </div>
 </section>
