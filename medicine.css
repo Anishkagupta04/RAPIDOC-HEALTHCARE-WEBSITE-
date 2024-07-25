@@ -82,6 +82,17 @@ input {
     box-sizing: border-box;
     border-radius: 1rem;
 }
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #55a5ea;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
 
 
 .button::before {
@@ -95,6 +106,7 @@ input {
   transition: width 0.3s ease;
   z-index: -1;
 }
+
 
 .button:hover {
   color: #fff;
