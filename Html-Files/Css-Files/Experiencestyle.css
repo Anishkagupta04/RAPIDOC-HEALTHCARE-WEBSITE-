@@ -433,6 +433,7 @@ align-items: center;
   
   /* Use the text as a mask for the background */
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent; 
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
@@ -537,3 +538,123 @@ align-items: center;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+
+
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #ss {
+    font-size: 6px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .social-wrapper {
+    font-size: 8px;
+  }
+
+  .social-links i {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .social-wrapper {
+    font-size: 8px;
+  }
+
+  .social-links i {
+    font-size: 6px;
+  }
+}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+  
+    
+    }
+
+    h1 {
+      color: #00bfa5;
+      text-align: center;
+      margin-left: 40px;
+    }
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .filters select, .filters input {
+      margin: 0 10px;
+    }
+
+    .filters label {
+      margin-right: 10px;
+    }
+
+    .filters input[type="range"] {
+      margin-left: 10px;
+    }
+
+    #doctor-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #doctor-list li {
+      border: 2px solid #4bb6b7;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 20px 0;
+      background-color: #2c3e50;
+      font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 25px;
+      color: #ecf0f1;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin:30px;
+      
+    }
+
+    #doctor-list li .content {
+      flex-grow: 1;
+      padding-right: 20px; 
+     margin-left: 50px;
+    }
+
+    #doctor-list li .content h4 {
+      margin: 0;
+      font-size: 28px;
+      color: #ecf0f1;
+    }
+
+    #doctor-list li .content p {
+      margin: 5px 0 0;
+      font-size: 20px;
+      color: #f2f7fa;
+    }
+     
+    #doctor-list li img {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+      margin-right: 200px; /* Add margin to left to separate from content */
+    }
+    #doctor-list li:hover {
+      background: rgb(75, 182, 183);
+      border: 2px solid white;
+      color: rgb(129, 124, 124);
+      font-weight: 700;
+      font-size: 30px;
+    }
+    #doctor-list li .content:hover {
+      color: aliceblue;
+      font-size: 30px;
+    }

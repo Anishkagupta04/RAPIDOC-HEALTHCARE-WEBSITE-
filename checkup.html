@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Checkup</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+  <!-- Bootstrap Icons CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="googletranslate.css">
+
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "o6kveYmOSDrs0l1Mg",
+      });
+    })();
+  </script>
+
+  <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>RapiDoc</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- transalator -->
+  <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+
+  <!-- CSS Files -->
+   <link rel="stylesheet" href="index.css">
+  <link href="Css-Files/animate.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="remixicon/remixicon.css" rel="stylesheet">
+  <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="patient-portal.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="chatbox.css">
+  <!-- Google Fonts Link For Icons chatboxx -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="stylesheet" href="./Css-Files/aboutus.css" />
+  <link rel="stylesheet" href="./Css-Files/testimonial.css" />
+  <script src="chatboxx.js" defer></script>
+    <link rel="stylesheet" href="checkup.css">
+</head>
+<body>
+    
+    <!-- ############# Header ############# -->
+    <header class="header_container nav-h">
+      <div class="img">
+        <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png">
+      </div>
+      <nav class="nav_menu">
+        <ul class="nav_link vis-h">
+          <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+          <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+          <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
+          <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
+          <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+          <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+          <div class="con" style="display: flex; gap: 10px;"><li><a href="#contact"><i class="bi bi-telephone"></i>  Contact us</a></li></div>
+          <li><a href="#feedback"><i class="bi bi-star"></i>  Rate Us</a></li>
+          <li><a href="log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+  
+          <a href="Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
+        </ul>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+    
+    
+          <a href="#appointment" class="appointment-btn scrollto">
+            <span class="d-md-inline">EMERGENCY</span></a>
+        </div>
+      </header>
+    
+    
+      <div class="container" style="display:flex ;">
+        <div class="content">
+    
+          <h1 style="font-size: 65px;">
+            Welcome to <span style="color: #55a5ea;">RapiDoc!</span> <br /> Your one-stop digital <br> healthcare
+            destination
+          </h1>
+          
+        </div>
+        <img class="sec-img" src="images/rd.png" alt="" />
+    
+      </div>
+
+      <section id="services">
+        <div class="services-grid">
+            <div class="services-item">
+                <h2>General Health Checkup</h2>
+                <div class="content">
+                    <p>Our general health checkup provides a thorough evaluation of your overall health. It includes a physical examination, blood tests, cholesterol checks, and assessments for common conditions such as diabetes and hypertension.</p>
+                    <img src="assets\img\general.jpg" alt="General Health Checkup">
+                </div>
+                <button class="service-btn" onclick="redirectToBooking()">Book Now</button>
+
+            </div>
+            <div class="services-item">
+                <h2>Women's Health Checkup</h2>
+                <div class="content">
+                    <p>Our women's health checkup is designed to address the unique health needs of women at every stage of life. It includes breast exams, pelvic exams, Pap smears, and screenings for osteoporosis and heart health.</p>
+                    <img src="assets\img\women.jpg" alt="Women's Health Checkup">
+                </div>
+                <button class="service-btn" onclick="redirectToBooking()">Book Now</button>
+
+            </div>
+            <div class="services-item">
+                <h2>Senior Citizen Health Checkup</h2>
+                <div class="content">
+                    <p>Our senior citizen's health checkup aims to maintain health and quality of life in older adults. It includes comprehensive physical exams, screenings for chronic conditions, medication reviews, and assessments for mobility and cognitive function.</p>
+                    <img src="assets\img\senior.jpg" alt="Senior Citizen Health Checkup">
+                </div>
+                <button class="service-btn" onclick="redirectToBooking()">Book Now</button>
+
+            </div>
+            <div class="services-item">
+                <h2>Pediatric Health Checkup</h2>
+                <div class="content">
+                    <p>Our Pediatric Health Checkup focuses on monitoring your child's growth and development. It includes physical exams, vaccinations, and developmental screenings to ensure your baby is healthy and meeting milestones.</p>
+                    <img src="assets\img\pediatric.jpg" alt="Pediatric Health Checkup">
+                </div>
+                <button class="service-btn" onclick="redirectToBooking()">Book Now</button>
+
+            </div>
+        </div>
+    </section>
+        
+
+    <section id="expect">
+        <h1 style="font-size: 40px;">What to <span style="color: #55a5ea;font-size: 40px;">Expect?</h1>
+        <div class="expect-grid">
+            <div class="expect-item">
+                <h2 >1</h2>
+                <p>Initial consultation with a healthcare provider.</p>
+            </div>
+        </div>
+        <div class="expect-grid">
+            <div class="expect-item">
+                <h2>2</h2>
+                <p>Personalized health advice and recommendations.</p>
+            </div>
+        </div>
+        <div class="expect-grid">
+            <div class="expect-item">
+                <h2>3</h2>
+                <p>Physical examination and vital signs measurement.</p>
+            </div>
+        </div>
+        <div class="expect-grid">
+            <div class="expect-item">
+                <h2>4</h2>
+                <p>Review of medical history and lifestyle factors.</p>
+            </div>
+        </div>
+        <div class="expect-grid">
+            <div class="expect-item">
+                <h2>5</h2>
+                <p>Laboratory tests and diagnostic screenings.</p>
+            </div>
+        </div>
+        
+    </section>
+    <script>
+      function redirectToBooking() {
+    window.location.href = 'index.html'; 
+  }
+    </script>
+
+    <section id="tips">
+      <h2 style="font-size: 40px;">
+        Health<span style="color: #55a5ea; font-size: 40px;"> Tips</span>
+        
+    </h2>
+    
+        <div class="tip-grid">
+            <div class="tip-item">
+                <p>Maintain a balanced diet rich in fruits, vegetables, and whole grains.</p>
+            </div>
+            <div class="tip-item">
+                <p>Stay physically active with regular exercise.</p>
+            </div>
+            <div class="tip-item">
+                <p>Get enough sleep and manage stress effectively.</p>
+            </div>
+            <div class="tip-item">
+                <p>Stay hydrated by drinking plenty of water.</p>
+            </div>
+            <div class="tip-item">
+                <p>Avoid smoking and limit alcohol consumption.</p>
+            </div>
+            <div class ="tip-item">
+              <p>Practice relaxation techniques such as deep breathing, meditation, or yoga.</p>
+            </div>
+        
+                    
+                    
+                
+            </div>
+        </div>
+        
+    </section>
+
+    <footer>
+        <div class="footer-wrapper">
+          <div class="footer-columns">
+            <div class="other-columns">
+              <section>
+                <h4>Quick Links</h4><br>
+                <ul class="links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="index.html#contact">Contact Us</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#doctors">Doctors</a></li>
+                  <li><a href="./faq.html">FAQ</a></li>
+                </ul>
+              </section>
+              <section>
+                <h4>Explore</h4><br>
+                <ul class="links">
+                  <li><a href="Html-Files/appointment.html">Appointment</a></li>
+                  <li><a href="index.html#patient-portal">Patient Portal</a></li>
+                  <li><a href="log/login.html">Login account</a></li>
+                  <li><a href="#">Helplines</a></li>
+                  <li><a href="index.html#contact">Location</a></li>
+                </ul>
+              </section>
+              <section>
+                <h4>Legal</h4><br>
+                <ul class="links">
+                  <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
+                  <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+                  <li><a href="Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
+                  <li><a href="#">GDPR</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                </ul>
+              </section>
+              
+    
+           <section class="footer-col" >
+          <div>
+          <h4>RAPIDOC Newsletter</h4><br>
+          <p>
+            Subscribe to our newsletter for a weekly dose
+            of news, updates, helpful tips, and
+            exclusive offers.
+          </p>
+        </div>
+          <form action="#" class="subscribe-form" id="subscribeForm">
+            <input type="email" id="emailInput" placeholder="Your email" required>
+            <button type="submit" id="subscribeButton" style="color: black;">SUBSCRIBE</button>
+          </form>
+             </section>
+              <div id="subscribeBanner">
+                <p>Thanks for subscribing!</p>
+              </div>
+    
+          
+    
+              <script>
+                document.querySelector('.subscribe-form').addEventListener('submit', function (event) {
+                  event.preventDefault(); // Prevent the form from submitting in the traditional way
+    
+                  // Here you would normally send the form data to the server using fetch or XMLHttpRequest
+                  // For demonstration purposes, we'll just show the confirmation message
+    
+                  const confirmationMessage = document.querySelector('.confirmation-message');
+                  confirmationMessage.style.display = 'block'; // Show the confirmation message
+    
+                  // Clear the input field
+                  this.querySelector('input[type="email"]').value = '';
+    
+                  // Optionally, you can hide the confirmation message after a few seconds
+                  setTimeout(() => {
+                    confirmationMessage.style.display = 'none';
+                  }, 5000); // Hide after 5 seconds
+                });
+              </script>
+                
+                <script>
+                  document.querySelector('.subscribe-form').addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent the form from submitting in the traditional way
+                
+                    // Show the modal popup
+                    const modal = document.getElementById('popupModal');
+                    modal.style.display = 'block';
+                
+                    // Clear the input field
+                    this.querySelector('input[type="email"]').value = '';
+                
+                    // Hide the modal when the close button is clicked
+                    const closeModal = document.querySelector('.modal .close');
+                    closeModal.onclick = function() {
+                      modal.style.display = 'none';
+                    }
+                  });
+                
+                  // Hide the modal when clicking outside of it
+                  window.onclick = function(event) {
+                    const modal = document.getElementById('popupModal');
+                    if (event.target == modal) {
+                      modal.style.display = 'none';
+                    }
+                  }
+                </script>
+    
+            </div>
+          </div>
+        </div>
+       
+        <div class="footer-bottom">
+          <div class="footer-bottom-wrapper">
+            <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+              Reserved Made with ❤️ by RapiDoc</small>
+            <div class="social-wrapper">
+              <div class="social-links">
+                <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+                <div  id="insta">
+                <a href="https://www.instagram.com" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+              <div id="twit">
+                <a  href="https://www.twitter.com" target="_blank">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+              </div>
+              <div id="git">
+                <a  href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <div id="linkd">
+                <a  href="https://www.linkedin.com" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+    
+                <div id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+               <div id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></div>
+                <div id="mail1" ><a  href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+</body>
+</html>
