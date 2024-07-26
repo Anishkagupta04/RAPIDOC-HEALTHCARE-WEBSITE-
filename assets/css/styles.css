@@ -820,22 +820,6 @@ h6 {
   background: #cecccc;
 }
 
-/*
- .icons {
-  display: flex;
-  margin-top: 30px;
-  gap: 30px;
-  cursor: pointer;
-}
-
- .icons i {
-  color: #afb6c7;
-}
-
- .icons i:hover {
-  color: #fff;
-}
-*/
 @media (max-width: 768px) {
   .footer {
     position: relative;
