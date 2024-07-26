@@ -4,6 +4,20 @@
     box-sizing: border-box;
     font-family: 'poppins',sans-serif;
 }
+
+
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -39,10 +53,6 @@ margin-top: -18px;
   #topbar1.topbar-scrolled {
     top: -40px;
   }
-  
-  
-  
-  
   
   #topbar1 .social-links a {
     margin-top: -40px;
