@@ -7,6 +7,7 @@
 
   <link rel="icon" type="image/x-icon" href="favicon.png">
   <!-- Bootstrap Icons CDN link -->
+  <link rel="stylesheet" href="Css-Files/Rateus.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./style.css" />
@@ -57,17 +58,6 @@
   <link rel="stylesheet" href="./Css-Files/aboutus.css" />
   <link rel="stylesheet" href="./Css-Files/testimonial.css" />
   <script src="chatboxx.js" defer></script>
-  <style>
-       .rating-container button {
-            font-size: 24px;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-        .rating-container button:hover{
-          transform: scale(1.5);
-        }
-  </style>
 </head>
 
 <body>
@@ -80,6 +70,12 @@
       <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png">
     </div>
     <nav class="nav_menu">
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="mobile-logo-text">RAPIDOC</div>
       <ul class="nav_link vis-h">
         <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
         <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
@@ -87,32 +83,30 @@
         <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
         <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
         <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
-        <div class="con" style="display: flex; gap: 10px;"><li><a href="#contact"><i class="bi bi-telephone"></i>  Contact us</a></li></div>
-        <li><a href="#feedback"><i class="bi bi-star"></i>  Rate Us</a></li>
+        <li><a href="#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
+        <li><a href="#feedback"><i class="bi bi-star"></i>Rate Us</a></li>
         <li><a href="log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
-
-        <a href="Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
+        <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
       </ul>
-      <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
     </nav>
   </header>
-
-  <!-- ############# Header ############# -->
-
+  
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-
       <a href="#appointment" class="appointment-btn scrollto">
-        <span class="d-md-inline">EMERGENCY</span></a>
+        <span class="d-md-inline">EMERGENCY</span>
+      </a>
     </div>
   </header>
-
-
+  
+  <script>
+  function toggleMenu() {
+    const navMenu = document.querySelector('.nav_menu');
+    navMenu.classList.toggle('active');
+  }
+  </script>
+  
+     
   <div class="container" style="display:flex ;">
     <div class="content">
 
@@ -765,9 +759,8 @@
                   <span class="job">Bangalore</span>
                 </div>
               </div>
-              <p>Digital healthcare has provided me with quick and easy access to medical advice without 
-                 the long waits typically associated with in-person visits. My doctor can easily monitor
-                 my condition remotely, and I feel more connected to my healthcare team than ever before. Highly recommend!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -785,9 +778,8 @@
                   <span class="job">Delhi</span>
                 </div>
               </div>
-              <p>Digital healthcare has been a game-changer for me. I love being able to consult with 
-                 specialists without leaving my home, especially since I live in a rural area with limited access to healthcare facilities.
-                 The only downside is that sometimes the app can be a bit slow, but overall, the benefits far outweigh the minor inconveniences.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -804,8 +796,8 @@
                   <span class="job">Mumbai</span>
                 </div>
               </div>
-              <p>I was initially skeptical about using digital healthcare services, but my experience has been nothing short of amazing.
-                 My doctor can easily monitor my condition remotely, and I feel more connected to my healthcare team than ever before. Highly recommend!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -822,8 +814,8 @@
                   <span class="job">Chennai</span>
                 </div>
               </div>
-              <p>I've had mixed experiences with digital healthcare. On one hand, it's very convenient to schedule appointments and have virtual consultations.
-                 On the other hand, I feel like some issues are harder to diagnose without a physical examination.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -841,8 +833,8 @@
                   <span class="job">Kolkata</span>
                 </div>
               </div>
-              <p>As someone with a chronic illness, digital healthcare has been a lifesaver. Regular monitoring and quick access to my healthcare team
-                 through messaging and video calls have significantly improved my quality of life.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -866,37 +858,40 @@
     <!-- testimonial section -->
 
     <!-- Feedback System-->
-<div class="feedback-wrapper">
-  <div class="feedback-form">
-    <h2>We'd Love Your Feedback!</h2>
-    <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> Healthcare</p>
-        <p>This is a confused face emoji: &#x1f615;</p>
-
-      <div>
-      <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
-      <div class="rating-container">
-        <div class="rating-container">
-          <button type="button" onclick="handleRatingChange(1)">😡</button>
-          <button type="button" onclick="handleRatingChange(2)">☹️</button>
-          <button type="button" onclick="handleRatingChange(3)">😐</button>
-          <button type="button" onclick="handleRatingChange(4)">🙂</button>
-          <button type="button" onclick="handleRatingChange(5)">😄</button>
-      </div>
+    <div class="feedback-wrapper">
+      <div class="feedback-form">
+        <h2>We'd Love Your Feedback!</h2>
+        <p>Let us know how we're doing and how we can improve. <br /><strong>RapiDoc</strong> Healthcare</p>
+        <div>
+          <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
+          <div class="rating-container">
+            <button type="button" onclick="handleRatingChange(1)">☆</button>
+            <button type="button" onclick="handleRatingChange(2)">☆</button>
+            <button type="button" onclick="handleRatingChange(3)">☆</button>
+            <button type="button" onclick="handleRatingChange(4)">☆</button>
+            <button type="button" onclick="handleRatingChange(5)">☆</button>
+          </div>
+        </div>
+        <form id="feedback-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="feedback">Your Feedback</label>
+            <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
+          </div>
+          <button type="submit">Submit Feedback</button>
+        </form>
       </div>
     </div>
-    <form id="feedback-form" onsubmit="handleSubmit(event)">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
-      <label for="email">Your Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
-      <label for="feedback">Your Feedback</label>
-      <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-      <button type="submit">Submit Feedback</button>
-    </form>
-  </div>
-</div>
+    
 
-<div id="popup" class="popup">
+<div id="popup" class="popup" style="display: none;">
   <div class="popup-content">
     <h2>Thank you for your Feedback! 💚</h2>
     <div class="popup-icon">
@@ -915,44 +910,18 @@
     updateStars();
   }
 
-  // function updateStars() {
-  //   const buttons = document.querySelectorAll('.rating-container button');
-  //   buttons.forEach((button, index) => {
-  //     if (index < rating) {
-  //       button.textContent = '★';
-  //       button.classList.add('filled');
-  //     } else {
-  //       button.textContent = '☆';
-  //       button.classList.remove('filled');
-  //     }
-  //   });
-  // }
-
-          let rating = 0;
-
-        function handleRatingChange(newRating) {
-            rating = newRating;
-            updateEmojis();
-            console.log("Rating selected:", rating);
-        }
-
-        function updateEmojis() {
-            const buttons = document.querySelectorAll('.rating-container button');
-            buttons.forEach((button, index) => {
-                button.textContent = getEmoji(index + 1);
-            });
-        }
-
-        function getEmoji(rating) {
-            switch(rating) {
-                case 1: return '😡';
-                case 2: return '☹️';
-                case 3: return '😐';
-                case 4: return '🙂';
-                case 5: return '😄';
-                default: return '😐';
-            }
-        }
+  function updateStars() {
+    const buttons = document.querySelectorAll('.rating-container button');
+    buttons.forEach((button, index) => {
+      if (index < rating) {
+        button.textContent = '★';
+        button.classList.add('filled');
+      } else {
+        button.textContent = '☆';
+        button.classList.remove('filled');
+      }
+    });
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -1024,7 +993,7 @@
             <ul class="links">
               <li><a href="Html-Files/appointment.html">Appointment</a></li>
               <li><a href="index.html#patient-portal">Patient Portal</a></li>
-              <li><a href="log/login.html">Login account</a></li>
+              <li><a href="login.html">Login account</a></li>
               <li><a href="#">Helplines</a></li>
               <li><a href="index.html#contact">Location</a></li>
             </ul>
@@ -1041,7 +1010,6 @@
             </ul>
           </section>
           
-
        <section class="footer-col" >
       <div>
       <h4>RAPIDOC Newsletter</h4><br>
@@ -1051,15 +1019,12 @@
         exclusive offers.
       </p>
     </div>
-      <form action="#" class="subscribe-form" id="subscribeForm">
-        <input type="email" id="emailInput" placeholder="Your email" required>
-        <button type="submit" id="subscribeButton" style="color: black;">SUBSCRIBE</button>
+      <form action="#" class="subscribe-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">SUBSCRIBE</button>
       </form>
-         </section>
-          <div id="subscribeBanner">
-            <p>Thanks for subscribing!</p>
-          </div>
-
+      <p class="confirmation-message">Thank you for subscribing!</p>
+       </section>
       
 
           <script>
@@ -1187,27 +1152,6 @@
 
 
   <!-- JS Files -->
-  <script>
-    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent default form submission
-      
-      // Get the email input value
-      var email = document.getElementById('emailInput').value;
-      
-      // You can add further validation of the email input here if needed
-      
-      // Show the subscribe banner
-      document.getElementById('subscribeBanner').style.display = 'block';
-      
-      // Optionally, you can reset the form
-      document.getElementById('subscribeForm').reset();
-      
-      // Simulate a delay and hide the banner after 5 seconds
-      setTimeout(function() {
-        document.getElementById('subscribeBanner').style.display = 'none';
-      }, 5000);
-    });
-  </script>
   <script>
 
     function loadGoogleTranslate() {
