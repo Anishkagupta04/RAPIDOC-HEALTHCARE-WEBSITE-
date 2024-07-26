@@ -141,7 +141,7 @@
   </div>
   <header class="header_container nav-h">
     <div class="img">
-      <img id="rd-logo" style="width: 90px; height: auto;" src="rd.png">
+      <img id="rd-logo" style="width: 90px; height: auto;" src="../images/rd.png">
     </div>
     <nav class="nav_menu">
       <ul class="nav_link vis-h">
@@ -248,7 +248,7 @@
           Reserved Made with ❤️ by RapiDoc</small>
         <div class="social-wrapper">
           <div class="social-links">
-            <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <div style="margin-left: 50px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
             <div  id="insta">
             <a href="https://www.instagram.com" target="_blank">
               <i class="fab fa-instagram"></i>
@@ -591,6 +591,14 @@
         });
         checkButtonVisibility();
       });
+
+      const hamburger=document.querySelector('.hamburger');
+  const navbar=document.querySelector('.header_container');
+  const nav=document.querySelector('.nav_link');
+  hamburger.addEventListener('click',()=>{
+    navbar.classList.toggle('nav-h');
+    nav.classList.toggle('vis-h');
+  })
   
     </script>
   
