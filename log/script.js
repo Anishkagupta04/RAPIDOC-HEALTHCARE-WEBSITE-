@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const loginForm = document.getElementById("loginForm");
 
   const successBanner = document.createElement("div");
-  successBanner.id = "successBanner";
-  successBanner.textContent = "Login Successful";
+  // successBanner.id = "successBanner";
+  // successBanner.textContent = "Login Successful";
   document.body.appendChild(successBanner);
 
   // Function to toggle password visibility
@@ -50,6 +50,14 @@ document.addEventListener("DOMContentLoaded", function() {
   registerForm.addEventListener("submit", (event) => {
     event.preventDefault();
     // Your registration logic goes here
+    const name = registerForm.querySelector('input[type="text"]').value;
+    const email = registerForm.querySelector('input[type="email"]').value;
+    const password = registerForm.querySelector('#registerPassword').value;
+
+    if (!name || !email || !password) {
+      alert("Kindly, Please fill all the details😊");
+      return;
+    }
 
     // Simulate registration success
     document.getElementById("registerMessage").style.display = "block";
@@ -62,12 +70,19 @@ document.addEventListener("DOMContentLoaded", function() {
   loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
     // Your login logic goes here
+    const email = loginForm.querySelector('input[type="email"]').value;
+    const password = loginForm.querySelector('#loginPassword').value;
+
+    if (!email || !password) {
+      alert("Kindly, Please fill all the details😊");
+      return;
+    }
 
     // Simulate login success
     successBanner.style.display = "block";
     setTimeout(() => {
       successBanner.style.display = "none";
       window.location.href = "login.html"; // Change "login.html" to your desired URL
-    }, 2000); // Display banner for 2 seconds
+    }, 500); // Display banner for 2 seconds
   });
 });

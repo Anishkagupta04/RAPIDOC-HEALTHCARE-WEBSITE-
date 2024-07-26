@@ -1,0 +1,98 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #3fbcc0;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #005253;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #011212;
+  }
+
+  #customer-agreement-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #1c413b;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #customer-agreement-header {
+    text-align: center;
+  }
+
+  #customer-agreement-title {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  #customer-agreement-main {
+    margin-top: 20px;
+  }
+
+  .section-title {
+    color: #00d9ffc2;
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+
+  .section-content,
+  .section-list {
+    margin: 10px 0;
+  }
+
+  .section-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .list-item {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+
+  footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+  }
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: none;
+    color: gray;
+  }
+  h1,
+  h2 {
+    color: black;
+  }
+  #progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 8px;
+    background-color: #3fbcc0;
+    z-index: 9999;
+  }
