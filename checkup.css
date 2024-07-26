@@ -1,0 +1,136 @@
+#services {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px 20px;
+
+}
+
+.services-item {
+    background-color: #022a2d;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    
+}
+.services-item:hover{
+    background-color:#55a5ea;
+    ;
+}
+
+
+.services-item h2 {
+    margin-top: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+.content img {
+    align-self: flex-start;
+    width: 40%;
+    height: 40%;
+}
+
+.content p {
+    flex: 1;
+}
+#expect{
+    text-align: center;
+    display: flex;
+    justify-content: justify;
+    flex-direction: column;
+}
+.expect-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    gap: 1rem;
+    padding: 10px;
+}
+.expect-item:hover {
+    transform: scale(1.1);
+}
+.expect-item p{
+    align-self: flex-end;
+    background-color:hwb(181 16% 46%);
+    width: 1000px;
+    height: 60px;
+    gap: 30px;
+    border-radius: 20px;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    margin: 0; 
+    text-align: center;
+}
+.expect-item h2 {
+    background-color: #55a5ea;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    margin: 0; 
+    text-align: center; 
+    
+}
+.expect-item p:hover{
+    background-color: #55a5ea;
+   
+}
+.expect-item h2:hover{
+    background-color: #022a2d;
+}
+#tip {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center; 
+    padding: 20px;
+}
+#tips h2 {
+    margin: 0; 
+    font-size: 2em; 
+    color: #ffffff; 
+    margin-left: 650px;
+    padding-top: 50px;
+}
+.tip-item {
+    background-color:hwb(181 16% 46%);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.tip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    margin: 20px; 
+    background-color: #022a2d;
+    height:auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 30PX;
+}
+.tip-item:hover{
+    transform: scale(1.1);
+    background-color: #55a5ea;
+}
