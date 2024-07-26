@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/x-icon" href="../favicon.png">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RAPIDOC</title>
   <link rel="icon" type="image/x-icon" href="./log/favicon.ico">
+  <link rel="stylesheet" href="./forgetpass.css">
   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
   <link rel="stylesheet" href="login.css">
   <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
   <meta name="google-signin-client_id" content="646664380070-n07i34glgcc6sanb59p3m1k5k0cgn1v1.apps.googleusercontent.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <div class="top-left-corner">
@@ -78,7 +81,29 @@
         </div>
       </form>
     </div>
-
+    <div id="forgotPasswordPopup" class="popup">
+      <div class="popup-content">
+        <h2>Reset Password</h2>
+        <form id="resetPasswordForm">
+          <input type="email" id="resetEmail" placeholder="Enter your email" required>
+          <div class="password-input-container">
+            <input type="password" id="newPassword" placeholder="New password" required>
+            <span class="password-toggle" data-target="newPassword">
+              <i class="far fa-eye"></i>
+            </span>
+          </div>
+          <div class="password-input-container">
+            <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+            <span class="password-toggle" data-target="confirmPassword">
+              <i class="far fa-eye"></i>
+            </span>
+          </div>
+          <p id="passwordRequirements">Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character.</p>
+          <button type="submit">Reset Password</button>
+        </form>
+        <span class="close">&times;</span>
+      </div>
+    </div>
     <div class="overlay-container">
       <div class="overlay">
         <div class="overlay-panel overlay-left">
@@ -100,94 +125,8 @@
   </div>
   </div>
   <script src="/js/script.js"></script>
+  <script src="./forgetpass.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
-    import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification, reload, deleteUser } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
-  
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-      projectId: "YOUR_PROJECT_ID",
-      storageBucket: "YOUR_PROJECT_ID.appspot.com",
-      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-      appId: "YOUR_APP_ID",
-      measurementId: "YOUR_MEASUREMENT_ID" // optional
-    };
-
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-  
-    // Register event
-    const registerForm = document.getElementById('registerForm');
-    registerForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-  
-      const email = document.getElementById('registerEmail').value;
-      const password = document.getElementById('registerPassword').value;
-  
-      try {
-        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-        const user = userCredential.user;
-  
-        // Set a timeout for checking email verification
-        const timeout = setTimeout(async () => {
-          await reload(user);
-          if (!user.emailVerified) {
-            await deleteUser(user)
-              .then(() => {
-                alert('Account deleted due to unverified email.');
-                location.reload(); // Reload the page after deletion
-              })
-              .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                alert(errorMessage);
-                location.reload(); // Reload the page on error
-              });
-          }
-        }, 30000); // 30 seconds
-  
-        await sendEmailVerification(user);
-        alert('Registration successful! Please check your email to verify your account.');
-      } catch (error) {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert(errorMessage);
-        location.reload(); // Reload the page on error
-      }
-    });
-  
-    // Login event
-    const loginForm = document.getElementById('loginForm');
-    loginForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-  
-      const email = document.getElementById('loginEmail').value;
-      const password = document.getElementById('loginPassword').value;
-  
-      try {
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        const user = userCredential.user;
-  
-        // Check if email is verified
-        await reload(user); // Ensure latest user data is fetched
-        if (user.emailVerified) {
-          window.location.href = '/index.html'; // Redirect to index.html upon successful login
-        } else {
-          alert('Please verify your email address.');
-        }
-      } catch (error) {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert(errorMessage);
-        location.reload(); // Reload the page on error
-      }
-    });
-  </script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
