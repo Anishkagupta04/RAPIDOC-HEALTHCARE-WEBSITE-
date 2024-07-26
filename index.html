@@ -728,7 +728,7 @@
         <p>This is a confused face emoji: &#x1f615;</p>
       <div>
       <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
-      <div class="rating-container">
+      <!-- <div class="rating-container">
         <div class="rating-container">
           <button type="button" onclick="handleRatingChange(1)">😡</button>
           <button type="button" onclick="handleRatingChange(2)">☹️</button>
@@ -736,7 +736,22 @@
           <button type="button" onclick="handleRatingChange(4)">🙂</button>
           <button type="button" onclick="handleRatingChange(5)">😄</button>
       </div>
-      </div>
+      </div> -->
+      <div class="container" style="text-align: center;" >
+        <div class="emoji-gifs">
+          <img src="emoji1.gif" alt="Emoji 1" class="emoji-gif" data-emoji="😡" data-gif-src="emoji1.gif" width="50px" height="50px" >
+          <img src="emoji2.gif" alt="Emoji 2" class="emoji-gif" data-emoji="☹️" data-gif-src="emoji2.gif" width="50px" height="50px" >
+          <img src="emoji3.gif" alt="Emoji 3" class="emoji-gif" data-emoji="😐" data-gif-src="emoji3.gif" width="50px" height="50px" >
+          <img src="emoji5.gif" alt="Emoji 4" class="emoji-gif" data-emoji="😊" data-gif-src="emoji5.gif" width="50px" height="50px" >
+          <img src="emoji4.gif" alt="Emoji 5" class="emoji-gif" data-emoji="😍" data-gif-src="emoji4.gif" width="50px" height="50px" >
+     </div>
+        <div class="selected-emoji" style="text-align: center;" >
+            <p>You selected: <span id="selected-emoji"></span></p>
+            <img  id="selected-gif" src="" alt="Selected GIF" width="50px" height="50px"  >
+
+        </div>
+    </div>
+
     </div>
   <form id="feedback-form" onsubmit="handleSubmit(event)">
     <label for="name">Your Name</label>
