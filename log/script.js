@@ -50,6 +50,14 @@ document.addEventListener("DOMContentLoaded", function() {
   registerForm.addEventListener("submit", (event) => {
     event.preventDefault();
     // Your registration logic goes here
+    const name = registerForm.querySelector('input[type="text"]').value;
+    const email = registerForm.querySelector('input[type="email"]').value;
+    const password = registerForm.querySelector('#registerPassword').value;
+
+    if (!name || !email || !password) {
+      alert("Kindly, Please fill all the details😊");
+      return;
+    }
 
     // Simulate registration success
     document.getElementById("registerMessage").style.display = "block";
@@ -62,6 +70,13 @@ document.addEventListener("DOMContentLoaded", function() {
   loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
     // Your login logic goes here
+    const email = loginForm.querySelector('input[type="email"]').value;
+    const password = loginForm.querySelector('#loginPassword').value;
+
+    if (!email || !password) {
+      alert("Kindly, Please fill all the details😊");
+      return;
+    }
 
     // Simulate login success
     successBanner.style.display = "block";
