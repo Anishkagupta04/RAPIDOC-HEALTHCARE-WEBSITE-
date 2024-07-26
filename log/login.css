@@ -19,6 +19,10 @@ body {
   top: 10px;
   left: 50px;
 }
+.eye.active {
+  color: #007bff; /* Change this to whatever color you prefer */
+}
+
 
 .home-button {
   display: inline-flex;
