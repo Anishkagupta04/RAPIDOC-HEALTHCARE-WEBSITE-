@@ -46,6 +46,37 @@
             color: white !important;
             font-family: none !important;
         }
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .social-wrapper {
+    font-size: 14px;
+  }
+
+  .social-links i {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .social-wrapper {
+    font-size: 12px;
+  }
+
+  .social-links i {
+    font-size: 16px;
+  }
+}
           </style>
 </head>
 <body>
@@ -228,7 +259,7 @@
                   </p>
                   <form action="#" class="subscribe-form">
                     <input type="text" placeholder="Your email" required>
-                    <button type="submit">SUBSCRIBE</button>
+                    <button type="submit" style="color: black;">SUBSCRIBE</button>
                   </form>
                 </section>
             </div>
@@ -236,7 +267,7 @@
     </div>
     <div class="footer-bottom">
         <div class="footer-bottom-wrapper">
-            <small style="font-size: 1.3rem;">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+            <small style="font-size: 1.3rem;" id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
               Reserved  Made with ❤️ by RapiDoc</small>
               <style>
                 .social-wrapper a div i {

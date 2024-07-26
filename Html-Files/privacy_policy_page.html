@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy - RAPIDOC Healthcare</title>
+    <title>RapiDoc</title>
     <link
       rel="icon"
       href="https://cdn-icons-png.flaticon.com/512/1458/1458279.png"
@@ -22,10 +22,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="./style.css" />
+    <!-- <link rel="stylesheet" href="../style.css"> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script type="text/javascript">
       (function () {
@@ -115,6 +117,8 @@
         border-radius: 8px;
         color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        top: 78px;
       }
 
       #privacy-policy-header {
@@ -171,9 +175,11 @@
         align-items: center;
         height: 85px;
         margin: auto;
-        margin-top: 0px;
+        margin-top: -48px;
         /* Adjust this value to move the header down */
         padding-top: 15px;
+        position: fixed;
+        z-index: 101;
       }
 
       .iti--allow-dropdown input {
@@ -237,6 +243,12 @@
         margin: 4px 4px;
         background-color: white;
       }
+      .img p{
+        display: none; 
+        color: white;
+        font-size: 1.4rem;
+        font-family: "Poppins";
+      }
       @media only screen and (max-width: 820px) {
         .hamburger {
           display: block;
@@ -244,14 +256,16 @@
         .header_container {
           flex-direction: column;
           align-items: start;
-          height: 24.8rem;
+          height: 27.8rem;
           transition: 0.55s all ease-out;
+          width: 100%;
           /* padding-top: 5px; */
         }
         .nav_link {
+          display: flex;
           flex-direction: column;
           position: relative;
-          bottom: 40px;
+          right: 32px;
         }
         .nav-h {
           height: 5.5rem;
@@ -260,10 +274,14 @@
         .vis-h {
           opacity: 0;
         }
-        .img {
+        .img img{
+          display: none;
+        }
+        .img p{
+          display: block;
           position: relative;
           left: 300px;
-          bottom: 12px;
+          bottom: -8px;
         }
       }
 
@@ -801,6 +819,7 @@
           style="width: 90px; height: auto"
           src="/assets/img/rd1.png"
         />
+        <p>Rapidoc</p>
       </div>
       <nav class="nav_menu">
         <ul class="nav_link vis-h">
@@ -998,7 +1017,7 @@
               </p>
               <form action="#" class="subscribe-form">
                 <input type="email" placeholder="Your email" required />
-                <button type="submit">SUBSCRIBE</button>
+                <button type="submit" style="color: black;">SUBSCRIBE</button>
               </form>
             </section>
           </div>
@@ -1058,6 +1077,13 @@
     </footer>
 
     <script>
+      const hamburger = document.querySelector('.hamburger');
+      const navbar = document.querySelector('.header_container');
+      const nav = document.querySelector('.nav_link');
+      hamburger.addEventListener('click', () => {
+        navbar.classList.toggle('nav-h');
+        nav.classList.toggle('vis-h');
+      })
       function toggleAnswer(id) {
         var answer = document.getElementById(id);
         if (answer) {
