@@ -5,6 +5,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <link rel="icon" type="image/x-icon" href="favicon.png">
   <!-- Bootstrap Icons CDN link -->
+  <link rel="stylesheet" href="Css-Files/Rateus.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./style.css" />
@@ -68,6 +69,12 @@
       <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png">
     </div>
     <nav class="nav_menu">
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="mobile-logo-text">RAPIDOC</div>
       <ul class="nav_link vis-h">
         <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
         <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
@@ -75,23 +82,19 @@
         <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
         <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
         <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
-        <div class="con" style="display: flex; gap: 10px;"><li><a href="#contact"><i class="bi bi-telephone"></i>  Contact us</a></li></div>
-        <li><a href="#feedback"><i class="bi bi-star"></i>  Rate Us</a></li>
+        <li><a href="#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
+        <li><a href="#feedback"><i class="bi bi-star"></i>Rate Us</a></li>
         <li><a href="log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
         <a href="Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
+
       </ul>
-      <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
     </nav>
   </header>
-  <!-- ############# Header ############# -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
       <a href="#appointment" class="appointment-btn scrollto">
-        <span class="d-md-inline">EMERGENCY</span></a>
+        <span class="d-md-inline">EMERGENCY</span>
+      </a>
     </div>
   </header>
   <div class="container" style="display:flex ;">
@@ -379,12 +382,13 @@
           <p>Access your medical records, lab results, and prescription history securely.</p>
         </div>
         <div class="container">
+
           <!-- Add Login Form for Patient Portal -->
           <div class="login-box">
             <div class="avatar">
               <img src="img/avatar.png" height="220px" width="263px" alt="Avatar">
             </div>
-            <form id="loginForm">
+            <form>
               <div class="textbox">
                 <i class="fas fa-user"></i>
                 <input type="text" placeholder="Username" name="username" required>
@@ -403,13 +407,12 @@
                 <a href="forgot-password.php">Forgot Your Password?</a>
               </div>
             </form>
-            <div id="loginMessage" class="popup-message"></div>
           </div>
         </div>
       </div>
     </section>
     <!-- Appointment Section -->
-    <section id="appointment" class="appointment section-bg" style="height: 1200px;width: 600px;">
+    <section id="appointment" class="appointment section-bg">
       <div class="container" style="border-radius: 10px;">
         <div class="section-title section-black-text">
           <h2>Make an Appointment</h2>
@@ -626,9 +629,8 @@
                   <span class="job">Bangalore</span>
                 </div>
               </div>
-              <p>Digital healthcare has provided me with quick and easy access to medical advice without 
-                 the long waits typically associated with in-person visits. My doctor can easily monitor
-                 my condition remotely, and I feel more connected to my healthcare team than ever before. Highly recommend!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -645,9 +647,8 @@
                   <span class="job">Delhi</span>
                 </div>
               </div>
-              <p>Digital healthcare has been a game-changer for me. I love being able to consult with 
-                 specialists without leaving my home, especially since I live in a rural area with limited access to healthcare facilities.
-                 The only downside is that sometimes the app can be a bit slow, but overall, the benefits far outweigh the minor inconveniences.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -663,8 +664,8 @@
                   <span class="job">Mumbai</span>
                 </div>
               </div>
-              <p>I was initially skeptical about using digital healthcare services, but my experience has been nothing short of amazing.
-                 My doctor can easily monitor my condition remotely, and I feel more connected to my healthcare team than ever before. Highly recommend!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -680,8 +681,8 @@
                   <span class="job">Chennai</span>
                 </div>
               </div>
-              <p>I've had mixed experiences with digital healthcare. On one hand, it's very convenient to schedule appointments and have virtual consultations.
-                 On the other hand, I feel like some issues are harder to diagnose without a physical examination.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -698,8 +699,8 @@
                   <span class="job">Kolkata</span>
                 </div>
               </div>
-              <p>As someone with a chronic illness, digital healthcare has been a lifesaver. Regular monitoring and quick access to my healthcare team
-                 through messaging and video calls have significantly improved my quality of life.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -781,7 +782,7 @@
             <ul class="links">
               <li><a href="Html-Files/appointment.html">Appointment</a></li>
               <li><a href="index.html#patient-portal">Patient Portal</a></li>
-              <li><a href="log/login.html">Login account</a></li>
+              <li><a href="login.html">Login account</a></li>
               <li><a href="#">Helplines</a></li>
               <li><a href="index.html#contact">Location</a></li>
             </ul>
