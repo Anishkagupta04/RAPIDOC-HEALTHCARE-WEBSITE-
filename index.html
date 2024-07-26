@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
   <link rel="icon" type="image/x-icon" href="favicon.png">
   <!-- Bootstrap Icons CDN link -->
+  <link rel="stylesheet" href="Css-Files/Rateus.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="googletranslate.css">
-
   <script type="text/javascript">
     (function () {
       emailjs.init({
@@ -20,17 +18,14 @@
       });
     })();
   </script>
-
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <title>RapiDoc</title>
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
-
   <!-- transalator -->
   <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-
   <!-- CSS Files -->
    <link rel="stylesheet" href="index.css">
   <link href="Css-Files/animate.min.css" rel="stylesheet">
@@ -57,27 +52,16 @@
   <link rel="stylesheet" href="./Css-Files/aboutus.css" />
   <link rel="stylesheet" href="./Css-Files/testimonial.css" />
   <script src="chatboxx.js" defer></script>
-  <style>
-       .rating-container button {
-            font-size: 24px;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-        .rating-container button:hover{
-          transform: scale(1.5);
-        }
-        .nav_link li{
-          font-size: 16px;
-          display: flex;
-          flex-direction: row;
-        }
-  </style>
+  <link rel="stylesheet" href="Css-Files/caduceus.css">
 </head>
-
 <body>
+  <script src="js/caduceus.js"></script>
   <div class="pre">
     <div class="loader"></div>
+  </div>
+  <div id="caduceus-container">
+    <div class="rope"></div>
+    <img id="caduceus" src="img/2jghCPWR6g8S6w5Nv6bF6WCSHzJ.svg" alt="Caduceus">
   </div>
   <!-- ############# Header ############# -->
   <header class="header_container nav-h">
@@ -85,6 +69,12 @@
       <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png">
     </div>
     <nav class="nav_menu">
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="mobile-logo-text">RAPIDOC</div>
       <ul class="nav_link vis-h">
         <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
         <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
@@ -92,57 +82,38 @@
         <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
         <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
         <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
-        <div class="con" style="display: flex; gap: 10px;"><li><a href="#contact"><i class="bi bi-telephone"></i>  Contact us</a></li></div>
-        <li><a href="#feedback"><i class="bi bi-star"></i>  Rate Us</a></li>
+        <li><a href="#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
+        <li><a href="#feedback"><i class="bi bi-star"></i>Rate Us</a></li>
         <li><a href="log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
-
         <a href="Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
+
       </ul>
-      <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
     </nav>
   </header>
-
-  <!-- ############# Header ############# -->
-
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-
       <a href="#appointment" class="appointment-btn scrollto">
-        <span class="d-md-inline">EMERGENCY</span></a>
+        <span class="d-md-inline">EMERGENCY</span>
+      </a>
     </div>
   </header>
-
-
   <div class="container" style="display:flex ;">
     <div class="content">
-
       <h1 style="font-size: 65px;">
         Welcome to <span style="color: #55a5ea;">RapiDoc!</span> <br /> Your one-stop digital <br> healthcare
         destination
       </h1>
       <h4>
-        <a href="#about" class="btn-get-started scrollto">Download Now</a>
+        <a href="#about" class="btn-get-started scrollto" id="btn">Download Now</a>
       </h4>
     </div>
-    <img class="sec-img" src="images/rd.png" alt="" />
-
+    <img class="sec-img" src="images/rd.png" alt="" id="sec-img" style="padding: 0 0 0 0;"/>
   </div>
   <!-- End Home -->
-
   <main id="main">
-
-
     <!-- ############ Featured Services Section ############ -->
-
-
     <section id="featured-services" class="featured-services">
       <div class="container" data-aos="fade-up">
-
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -152,7 +123,6 @@
                 cause problems.</p>
             </div>
           </div>
-          
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">          
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <div class="icon2"><i class="fas fa-dna"></i></div>
@@ -160,8 +130,6 @@
               <p class="description"> Get your tests done to look for signs of disease or agents that cause disease.</p>
             </div>
           </div>
-        
-          
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <div class="icon3"><i class="fas fa-temperature-high"></i></div>
@@ -170,7 +138,6 @@
                 little higher range: 97.9 F to 100.4 F.</p>
             </div>
           </div>
-
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon4"><i class="fas fa-hand-holding-medical"></i></div>
@@ -179,20 +146,13 @@
               </p>
             </div>
           </div>
-
         </div>
-
       </div>
     </section><!-- End Featured Services Section -->
-
-
     <!-- ################### About Section ################### -->
-
-
     <section id="about" class="about">
       <div id="about-us">
         <h1 class="about-us-heading">About Us</h1>
-
         <section class="about-service">
           <div class="sec-1">
             <img src="img/about.png" class="about-img">
@@ -217,11 +177,6 @@
                 <div class="a-icon">
                   <svg height="28px" width="28px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
-                    <style type="text/css">
-                      .st0 {
-                        fill: #2F7F81;
-                      }
-                    </style>
                     <g>
                       <polygon class="st0" points="501.539,169.221 453.886,86.7 303.669,173.449 303.669,0 208.365,0 208.365,173.479 58.114,86.73 
 		10.461,169.261 160.674,255.99 10.501,342.71 58.154,425.231 208.365,338.482 208.365,512 303.669,512 303.669,338.542 
@@ -246,7 +201,6 @@
                         <path
                           d="M291.76704,163.504 C291.76704,177.01952 288.33216,188.82176 281.479253,198.90112 C275.828267,207.371093 266.358187,216.549547 253.042987,226.434987 C245.378987,231.682347 240.331947,236.618667 237.916587,241.257813 C234.87744,246.90624 233.376213,255.371093 233.376213,266.666667 L190.710827,266.666667 C190.710827,249.530027 192.53504,237.027413 196.165333,229.162667 C200.394453,219.679573 209.571627,210.098773 223.686187,200.42048 C230.350293,195.374933 235.188693,190.2368 238.214827,184.994773 C241.839787,179.143253 243.664,172.49216 243.664,165.028693 C243.664,153.13024 240.125013,144.26304 233.070293,138.404907 C227.4336,134.177067 220.56768,132.059947 212.501333,132.059947 C199.39328,132.059947 189.911467,136.398507 184.065067,145.069013 C179.829333,151.518293 177.7056,159.787733 177.7056,169.868587 L177.7056,170.173227 L132.34368,170.173227 C132.34368,143.751253 140.703147,123.790507 157.43488,110.274773 C171.554773,98.9922133 189.007787,93.3346133 209.77344,93.3346133 C227.933653,93.3346133 243.865813,96.86848 257.571627,103.9232 C280.37504,115.62624 291.76704,135.494827 291.76704,163.504 Z M426.666667,213.333333 C426.666667,331.153707 331.153707,426.666667 213.333333,426.666667 C95.51296,426.666667 3.55271368e-14,331.153707 3.55271368e-14,213.333333 C3.55271368e-14,95.51168 95.51296,3.55271368e-14 213.333333,3.55271368e-14 C331.153707,3.55271368e-14 426.666667,95.51168 426.666667,213.333333 Z M384,213.333333 C384,119.226667 307.43872,42.6666667 213.333333,42.6666667 C119.227947,42.6666667 42.6666667,119.226667 42.6666667,213.333333 C42.6666667,307.43872 119.227947,384 213.333333,384 C307.43872,384 384,307.43872 384,213.333333 Z M213.332053,282.666667 C198.60416,282.666667 186.665387,294.60544 186.665387,309.333333 C186.665387,324.061227 198.60416,336 213.332053,336 C228.059947,336 239.99872,324.061227 239.99872,309.333333 C239.99872,294.60544 228.059947,282.666667 213.332053,282.666667 Z"
                           id="Shape">
-
                         </path>
                       </g>
                     </g>
@@ -311,56 +265,12 @@
         </div>
       </div>
     </section>
-
-    <script>
-      document.querySelectorAll('.about-us-community').forEach(function (element) {
-        element.addEventListener('mouseover', function () {
-          element.querySelector('img').src = './images/checkuphover.png';
-        });
-        element.addEventListener('mouseleave', function () {
-          element.querySelector('img').src = './images/checkup.png';
-        });
-      });
-
-      document.querySelectorAll('.about-us-event').forEach(function (element) {
-        element.addEventListener('mouseover', function () {
-          element.querySelector('img').src = './images/serviceshover.png';
-        });
-        element.addEventListener('mouseleave', function () {
-          element.querySelector('img').src = './images/services.png';
-        });
-      });
-
-      document.querySelectorAll('.about-us-product').forEach(function (element) {
-        element.addEventListener('mouseover', function () {
-          element.querySelector('img').src = './images/wardhover.png';
-        });
-        element.addEventListener('mouseleave', function () {
-          element.querySelector('img').src = './images/ward.png';
-        });
-      });
-
-      document.querySelectorAll('.about-us-location').forEach(function (element) {
-        element.addEventListener('mouseover', function () {
-          element.querySelector('img').src = './images/appointmenthover.png';
-        });
-        element.addEventListener('mouseleave', function () {
-          element.querySelector('img').src = './images/appointment.png';
-        });
-      });
-    </script>
-
+    <script src="js/imageswap.js"></script>
     <!-- End About Section -->
-
-
     <!-- ################## Counts Section ################## -->
-
-
     <section id="counts" class="counts">
       <div class="container" data-aos="fade-up">
-
         <div class="row no-gutters">
-
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" id="abc">
             <div class="count-box">
               <i class="fas fa-user-md"></i>
@@ -370,7 +280,6 @@
               <a href="#doctors">Find out more &raquo;</a>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" id="abc">
             <div class="count-box">
               <i class="fas fa-bed"></i>
@@ -380,7 +289,6 @@
               <a href="">Find out more &raquo;</a>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" id="abc">
             <div class="count-box">
               <i class="fas fa-flask-vial"></i>
@@ -390,7 +298,6 @@
               <a href="">Find out more &raquo;</a>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" id="abc">
             <div class="count-box">
               <i class="fas fa-trophy"></i>
@@ -400,17 +307,11 @@
               <a href="#test">Find out more &raquo;</a>
             </div>
           </div>
-
         </div>
 
       </div>
     </section><!-- End Counts Section -->
-
-
     <!-- #################### Services Section #################### -->
-
-
-
     <section id="services" class="services">
       <div class="section-title">
         <h2 style="text-align:center;">Services</h2>
@@ -426,7 +327,6 @@
               ensure you have the most accurate information.</p>
           </div>
         </div>
-
         <div class="align-items-stretch ">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-pills"></i></div>
@@ -436,7 +336,6 @@
               discounts on a wide range of medicines.</p>
           </div>
         </div>
-
         <div class="align-items-stretch ">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-hospital-user"></i></div>
@@ -447,7 +346,6 @@
             </p>
           </div>
         </div>
-
         <div class="align-items-stretch ">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-dna"></i></div>
@@ -457,7 +355,6 @@
               blood in urgent situations.</p>
           </div>
         </div>
-
         <div class="align-items-stretch ">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-wheelchair"></i></div>
@@ -467,7 +364,6 @@
               healthcare experience for everyone.</p>
           </div>
         </div>
-
         <div class="align-items-stretch">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-notes-medical"></i></div>
@@ -486,13 +382,13 @@
           <p>Access your medical records, lab results, and prescription history securely.</p>
         </div>
         <div class="container">
-    
+
           <!-- Add Login Form for Patient Portal -->
           <div class="login-box">
             <div class="avatar">
               <img src="img/avatar.png" height="220px" width="263px" alt="Avatar">
             </div>
-            <form id="loginForm">
+            <form>
               <div class="textbox">
                 <i class="fas fa-user"></i>
                 <input type="text" placeholder="Username" name="username" required>
@@ -511,17 +407,12 @@
                 <a href="forgot-password.php">Forgot Your Password?</a>
               </div>
             </form>
-            <div id="loginMessage" class="popup-message"></div>
           </div>
-    
         </div>
       </div>
     </section>
-    
-
-
     <!-- Appointment Section -->
-    <section id="appointment" class="appointment section-bg" style="height: 1200px;width: 600px;">
+    <section id="appointment" class="appointment section-bg">
       <div class="container" style="border-radius: 10px;">
         <div class="section-title section-black-text">
           <h2>Make an Appointment</h2>
@@ -545,15 +436,7 @@
           <div class="form-group">
             <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date"
               required>
-            <script>
-              // To set value of minimum date in calendar
-              var currentDate = new Date();
-              var year = currentDate.getFullYear();
-              var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
-              var day = currentDate.getDate().toString().padStart(2, '0');
-              var formattedDate = `${year}-${month}-${day}`;
-              document.getElementById('date').setAttribute('min', formattedDate);
-            </script>
+            <script src="js/date.js"></script>
           </div>
           <div class="form-group">
             <select name="age" id="age" class="form-select" required>
@@ -595,14 +478,12 @@
             </select>
           </div>
           <div class="text-center">
-            <button type="submit">Make an Appointment</button>
+            <button type="submit" class="btn">Make an Appointment</button>
           </div>
         </form>
       </div>
     </section>
     <!-- End Appointment Section -->
-
-
     <!-- ################# Doctors Section ################# -->
     <section id="doctors" class="doctors">
       <div class="section-title">
@@ -622,7 +503,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-lg-6 mt-4 mt-lg-0">
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="img/doctors/2.png" class="img-fluid" alt=""></div>
@@ -633,7 +513,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="img/doctors/3.png" class="img-fluid" alt=""
@@ -645,7 +524,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="img/doctors/4.png" class="img-fluid" alt=""
@@ -657,7 +535,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="img/doctors/Image(13).png" class="img-fluid" alt=""
@@ -674,7 +551,6 @@
       </div>
     </section>
     <!-- End Doctors Section -->
-
    <!-- ################# Contact Section ################# -->
   <!-- clicking on "contact us" directs to this section -->
 <section id="contact" class="contact"> 
@@ -689,7 +565,6 @@
               <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8055368048804!2d77.22981385036265!3d28.6655407892513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1679424592719!5m2!1sen!2sin"></iframe>
               <a href="https://www.fnfgo.com/">FNF Mods</a>
           </div>
-          
       </div>
       <br>
       <div class="row mt-2" style="display: flex; flex-direction: row; align-items: stretch; justify-content: space-around;">
@@ -735,33 +610,14 @@
       </div>
   </div>
 </section>
-
-<script>
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
-    // Display confirmation message
-    var confirmationMessage = document.getElementById('confirmationMessage');
-    confirmationMessage.style.display = 'block';
-    // Reset the form
-    event.target.reset();
-  
-    setTimeout(function() {
-      confirmationMessage.style.display = 'none';
-    }, 5000); //msg disappears after 5s
-  });
-</script>
-     
+<script src="js/contactpopupmessage.js"></script>
           <!-- End Contact Section -->
-
-
     <!-- testimonial section -->
-
     <section id="test" class="testimonals">
       <h2 class="h2 section-title has-underline"
         style="margin-top: 15px;align-items: center; justify-content: center; display: flex;">
         What our Patients Say
       </h2>
-
       <div class="testimonals-content">
         <div class="swiper testimonals-slider js-testimonals-slider">
           <div class="swiper-wrapper">
@@ -773,9 +629,8 @@
                   <span class="job">Bangalore</span>
                 </div>
               </div>
-              <p>Digital healthcare has provided me with quick and easy access to medical advice without 
-                 the long waits typically associated with in-person visits. My doctor can easily monitor
-                 my condition remotely, and I feel more connected to my healthcare team than ever before. Highly recommend!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -784,7 +639,6 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
             <div class="swiper-slide testimonals-item" id="slide-item" > 
               <div class="info">
                 <img src="./images/profile2.webp" alt="">
@@ -793,9 +647,8 @@
                   <span class="job">Delhi</span>
                 </div>
               </div>
-              <p>Digital healthcare has been a game-changer for me. I love being able to consult with 
-                 specialists without leaving my home, especially since I live in a rural area with limited access to healthcare facilities.
-                 The only downside is that sometimes the app can be a bit slow, but overall, the benefits far outweigh the minor inconveniences.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -803,7 +656,6 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
             <div class="swiper-slide testimonals-item" id="slide-item" >
               <div class="info">
                 <img src="./images/profile3.webp" alt="">
@@ -812,8 +664,8 @@
                   <span class="job">Mumbai</span>
                 </div>
               </div>
-              <p>I was initially skeptical about using digital healthcare services, but my experience has been nothing short of amazing.
-                 My doctor can easily monitor my condition remotely, and I feel more connected to my healthcare team than ever before. Highly recommend!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -821,7 +673,6 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
             <div class="swiper-slide testimonals-item" id="slide-item" >
               <div class="info">
                 <img src="./images/profile4.webp" alt="">
@@ -830,8 +681,8 @@
                   <span class="job">Chennai</span>
                 </div>
               </div>
-              <p>I've had mixed experiences with digital healthcare. On one hand, it's very convenient to schedule appointments and have virtual consultations.
-                 On the other hand, I feel like some issues are harder to diagnose without a physical examination.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -840,7 +691,6 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-
             <div class="swiper-slide testimonals-item" id="slide-item" >
               <div class="info">
                 <img src="./images/profile5.webp" alt="">
@@ -849,8 +699,8 @@
                   <span class="job">Kolkata</span>
                 </div>
               </div>
-              <p>As someone with a chronic illness, digital healthcare has been a lifesaver. Regular monitoring and quick access to my healthcare team
-                 through messaging and video calls have significantly improved my quality of life.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod enim, architecto eum pariatur explicabo
+                aliquam incidunt provident vero nostrum quam!</p>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -867,19 +717,14 @@
       <div class="swiper-pagination js-testimonals-pagination"></div>
       </div>
     </section>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
     <!-- testimonial section -->
-
     <!-- Feedback System-->
 <div class="feedback-wrapper">
   <div class="feedback-form">
     <h2>We'd Love Your Feedback!</h2>
     <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> Healthcare</p>
         <p>This is a confused face emoji: &#x1f615;</p>
-
       <div>
       <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
       <div class="rating-container">
@@ -892,7 +737,6 @@
       </div>
       </div>
     </div>
-    
   <form id="feedback-form" onsubmit="handleSubmit(event)">
     <label for="name">Your Name</label>
     <input type="text" id="name" placeholder="Enter your name" required>
@@ -900,12 +744,11 @@
     <input type="email" id="email" placeholder="Enter your email" required>
     <label for="feedback">Your Feedback</label>
     <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-    <button type="submit">Submit Feedback</button>
+    <button type="submit" class="btn" style="width: 21rem;">Submit Feedback</button>
   </form>
   </div>
 </div>
 <div id="feedback-message">Thanks for the feedback! ❤️ </div>
-
 <div id="popup" class="popup">
   <div class="popup-content">
     <h2>Thank you for your Feedback! 💚</h2>
@@ -916,113 +759,16 @@
     <button class="popup-button" onclick="closePopup()"><a class="active" aria-current="page">Back to Home</a></button>
   </div>
 </div>
-<script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      const feedbackMessage = document.getElementById('feedback-message');
-      feedbackMessage.style.display = 'block';
-      setTimeout(() => {
-        feedbackMessage.style.display = 'none';
-      }, 3000);
-    }
-  </script>
-<script>
-  let rating = null;
-
-  function handleRatingChange(value) {
-    rating = value;
-    updateStars();
-  }
-
-  // function updateStars() {
-  //   const buttons = document.querySelectorAll('.rating-container button');
-  //   buttons.forEach((button, index) => {
-  //     if (index < rating) {
-  //       button.textContent = '★';
-  //       button.classList.add('filled');
-  //     } else {
-  //       button.textContent = '☆';
-  //       button.classList.remove('filled');
-  //     }
-  //   });
-  // }
-
-          let rating = 0;
-
-        function handleRatingChange(newRating) {
-            rating = newRating;
-            updateEmojis();
-            console.log("Rating selected:", rating);
-        }
-
-        function updateEmojis() {
-            const buttons = document.querySelectorAll('.rating-container button');
-            buttons.forEach((button, index) => {
-                button.textContent = getEmoji(index + 1);
-            });
-        }
-
-        function getEmoji(rating) {
-            switch(rating) {
-                case 1: return '😡';
-                case 2: return '☹️';
-                case 3: return '😐';
-                case 4: return '🙂';
-                case 5: return '😄';
-                default: return '😐';
-            }
-        }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const feedback = document.getElementById('feedback').value;
-
-    // For now, we will just simulate email sending success
-    console.log('Feedback submitted:', { name, email, rating, feedback });
-
-    // Reset the form fields
-    document.getElementById('feedback-form').reset();
-    rating = null;
-    updateStars();
-
-    // Show the popup
-    document.getElementById('popup').style.display = 'flex';
-  }
-
-  function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-  }
-
-  const feedbackForm = document.querySelector('.feedback-form');
-
-  function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
-  function handleScroll() {
-    if (isElementInViewport(feedbackForm)) {
-      feedbackForm.classList.add('animate-feedback');
-      window.removeEventListener('scroll', handleScroll);
-    }
-  }
-
-  window.addEventListener('scroll', handleScroll);
-
-  updateStars();
-</script>
-    
+<br>
+  <link rel="stylesheet" href="./assets/css/visitors.css">
+  <div class="visitor-counter">
+    <div>Visitor</div>
+    <div class="website-counter"></div>
+  </div>
+  <script src="./assets/js/visitors.js"></script>
+  <script src="js/feedbackmessage.js"></script>
   </main><!-- End #main -->
   <!-- ############### Footer ############### -->
-  
   <footer>
     <div class="footer-wrapper">
       <div class="footer-columns">
@@ -1043,7 +789,7 @@
             <ul class="links">
               <li><a href="Html-Files/appointment.html">Appointment</a></li>
               <li><a href="index.html#patient-portal">Patient Portal</a></li>
-              <li><a href="log/login.html">Login account</a></li>
+              <li><a href="login.html">Login account</a></li>
               <li><a href="#">Helplines</a></li>
               <li><a href="index.html#contact">Location</a></li>
             </ul>
@@ -1059,8 +805,6 @@
               <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
-          
-
        <section class="footer-col" >
       <div>
       <h4>RAPIDOC Newsletter</h4><br>
@@ -1072,66 +816,16 @@
     </div>
       <form action="#" class="subscribe-form" id="subscribeForm">
         <input type="email" id="emailInput" placeholder="Your email" required>
-        <button type="submit" id="subscribeButton" style="color: black;">SUBSCRIBE</button>
+        <button type="submit" id="subscribeButton" class="b">SUBSCRIBE</button>
       </form>
          </section>
           <div id="subscribeBanner">
             <p>Thanks for subscribing!</p>
           </div>
-
-      
-
-          <script>
-            document.querySelector('.subscribe-form').addEventListener('submit', function (event) {
-              event.preventDefault(); // Prevent the form from submitting in the traditional way
-
-              // Here you would normally send the form data to the server using fetch or XMLHttpRequest
-              // For demonstration purposes, we'll just show the confirmation message
-
-              const confirmationMessage = document.querySelector('.confirmation-message');
-              confirmationMessage.style.display = 'block'; // Show the confirmation message
-
-              // Clear the input field
-              this.querySelector('input[type="email"]').value = '';
-
-              // Optionally, you can hide the confirmation message after a few seconds
-              setTimeout(() => {
-                confirmationMessage.style.display = 'none';
-              }, 5000); // Hide after 5 seconds
-            });
-          </script>
-            
-            <script>
-              document.querySelector('.subscribe-form').addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent the form from submitting in the traditional way
-            
-                // Show the modal popup
-                const modal = document.getElementById('popupModal');
-                modal.style.display = 'block';
-            
-                // Clear the input field
-                this.querySelector('input[type="email"]').value = '';
-            
-                // Hide the modal when the close button is clicked
-                const closeModal = document.querySelector('.modal .close');
-                closeModal.onclick = function() {
-                  modal.style.display = 'none';
-                }
-              });
-            
-              // Hide the modal when clicking outside of it
-              window.onclick = function(event) {
-                const modal = document.getElementById('popupModal');
-                if (event.target == modal) {
-                  modal.style.display = 'none';
-                }
-              }
-            </script>
-
+          <script src="js/footersubcribejs.js"></script>
         </div>
       </div>
     </div>
-   
     <div class="footer-bottom">
       <div class="footer-bottom-wrapper">
         <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
@@ -1159,7 +853,6 @@
               <i class="fab fa-linkedin"></i>
             </a>
           </div>
-
             <div id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
            <div id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></div>
             <div id="mail1" ><a  href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
@@ -1168,7 +861,6 @@
       </div>
     </div>
   </footer>
-
   <div id="back-to-top-container">
     <div class="circle">
       <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -1179,7 +871,6 @@
     </div>
   </div>
   <button id="translateButton">Translate</button>
-
   <!-- Popup for Google Translate -->
   <div id="translatePopup" class="popup">
       <div class="popup-content">
@@ -1187,126 +878,15 @@
           <div id="google_translate_element"></div>
       </div>
   </div>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en',
-        }, 'google_translate_element');
-    }
-</script>
-<script src=" googletranslate.js"></script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<!-- Your custom JavaScript -->
-<script src="script.js"></script>
-
-
-
-
-
-
-  <!-- JS Files -->
-  <script>
-    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent default form submission
-      
-      // Get the email input value
-      var email = document.getElementById('emailInput').value;
-      
-      // You can add further validation of the email input here if needed
-      
-      // Show the subscribe banner
-      document.getElementById('subscribeBanner').style.display = 'block';
-      
-      // Optionally, you can reset the form
-      document.getElementById('subscribeForm').reset();
-      
-      // Simulate a delay and hide the banner after 5 seconds
-      setTimeout(function() {
-        document.getElementById('subscribeBanner').style.display = 'none';
-      }, 5000);
-    });
-  </script>
-  <script>
-
-    function loadGoogleTranslate() {
-      new google.translate.TranslateElement("google_element");
-    }
-
-    var currentYear = new Date().getFullYear();
-    document.getElementById('year').textContent = currentYear;
-  </script>
-
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const backToTopButton = document.getElementById('back-to-top-container');
-
-      function checkButtonVisibility() {
-        if (window.innerWidth > 100 && window.scrollY > 100) {
-          backToTopButton.style.display = 'block';
-        } else {
-          backToTopButton.style.display = 'none';
-        }
-      }
-
-      window.addEventListener('scroll', checkButtonVisibility);
-      window.addEventListener('resize', checkButtonVisibility);
-
-      backToTopButton.addEventListener('click', function () {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
-      checkButtonVisibility();
-    });
-
-  </script>
-
+  <!--JS FILES-->
+  <script src="js/googletranslatejs.js"></script>
+  <script src=" googletranslate.js"></script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="script.js"></script>
+  <script src="js/backtotopjs.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-
-  <script>
-    const swiper = new Swiper('.js-testimonals-slider', {
-      grabCursor: true,
-      spaceBetween: 30,
-      pagination: {
-        el: '.js-testimonals-pagination',
-        clickable: true
-      },
-      breakpoints: {
-        767: {
-          slidesPerView: 2,
-        }
-      }
-    })
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const phoneInputField = document.getElementById('phone');
-      const iti = window.intlTelInput(phoneInputField, {
-        initialCountry: "auto",
-        geoIpLookup: function (callback) {
-          fetch('https://ipinfo.io/json?token=YOUR_TOKEN')
-            .then(response => response.json())
-            .then(data => callback(data.country))
-            .catch(() => callback('us'));
-        },
-        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-      });
-
-      document.getElementById('phone-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-        const phoneNumber = iti.getNumber();
-        console.log('Full Phone Number:', phoneNumber);
-
-        // You can now send this phone number to your server or process it as needed
-      });
-    });
-  </script>
-
-
+  <script src="js/testimonalslider.js"></script>
+  <script src="js/phonejs.js"></script>
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="glightbox/js/glightbox.min.js"></script>
   <script src="php-email-form/validate.js"></script>
@@ -1314,96 +894,15 @@
   <script src="swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
-
   <script src="patient-portal.js"></script>
   <script src="swiper-bundle.min.js"></script>
-
   <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
-  <script>
-    window.embeddedChatbotConfig = {
-      chatbotId: "xjRGZgxJziSoHQ1T1twl6",
-      domain: "www.chatbase.co"
-    }
-  </script>
+  <script src="js/chatbotjs.js"></script>
   <script src="https://www.chatbase.co/embed.min.js" chatbotId="xjRGZgxJziSoHQ1T1twl6" domain="www.chatbase.co" defer>
   </script>
-  <script>
-    ScrollReveal({
-      //reset: true ,
-      distance: '60px',
-      duration: 2500,
-      delay: 400
-    });
-    ScrollReveal().reveal('.d-flex,#home', { delay: 500, origin: 'top' });
-    ScrollReveal().reveal('.logo , .navbar,.content', { delay: 500, origin: 'left' });
-    ScrollReveal().reveal('.sec-img', { delay: 500, origin: 'right' });
-    ScrollReveal().reveal('.col-md-6,.about', { delay: 600, origin: 'left' });
-    ScrollReveal().reveal('.col-lg-3', { delay: 500, origin: 'left' });
-    ScrollReveal().reveal('.feedback', { delay: 400, origin: 'left' });
-    ScrollReveal().reveal('.footer', { delay: 400, origin: 'bottom' });
-  </script>
-  <script>
-    function sendMail() {
-      let params = {
-        to_email: document.getElementById("subscribe-email").value,
-        message: `<h1>Thank you for subscribing to RapiDoc Newsletter</h1>
-      <p>Stay tuned for the latest news, updates, helpful tips, and exclusive offers.</p>`,
-      }
-      emailjs.send("service_lktb68z", "template_w79vd94", params).then(alert("Subscribed Successfully!"));
-    }
-
-
-    window.addEventListener("load", () => {
-      const loader = document.querySelector(".pre");
-
-      loader.classList.add("pre--hidden");
-
-      loader.addEventListener("transitionend", () => {
-        document.body.removeChild(loader);
-      });
-    });
-
-    window.addEventListener("load", () => {
-      const loader = document.querySelector(".loader");
-
-      loader.classList.add("loader--hidden");
-
-      loader.addEventListener("transitionend", () => {
-        document.body.removeChild(loader);
-      });
-    });
-    const hamburger = document.querySelector('.hamburger');
-    const navbar = document.querySelector('.header_container');
-    const nav = document.querySelector('.nav_link');
-    hamburger.addEventListener('click', () => {
-      navbar.classList.toggle('nav-h');
-      nav.classList.toggle('vis-h');
-    })
-  </script>
-
+  <script src="js/revealelementsonscrolljsfor_index_html.js"></script>
+  <script src="js/loaderjs.js"></script>
+  <script src="js/progressbar_and_header.js"></script>
   <div id="progressBar"></div>
-  <script>
-    window.onscroll = function () {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("progressBar").style.width = scrolled + "%";
-    };
-  </script>
-  <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-  
-  // Here you can add actual login logic, for now, we'll just show the message
-  var loginMessage = document.getElementById('loginMessage');
-  loginMessage.textContent = 'Login Successful';
-  loginMessage.style.display = 'block';
-  
-  // Set a timeout to hide the message after 3 seconds
-  setTimeout(function() {
-    loginMessage.style.display = 'none';
-  }, 3000);
-});
-
-  </script>
+  <script src="js/patientportal_loginjs.js"></script>
 </body>
