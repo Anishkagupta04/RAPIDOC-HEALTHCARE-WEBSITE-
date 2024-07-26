@@ -507,11 +507,11 @@ select {
         margin-bottom: 15px !important;
     }
 
-    footer {
+    /* footer {
         width: 168vw !important;
         padding: 40px !important;
         margin: auto !important;
-    }
+    } */
 
     #appointment.appointment.section-bg {
         margin: 15px;
@@ -525,10 +525,10 @@ select {
         width: 476px !important;
     }
 
-    .other-columns {
+    /* .other-columns {
         grid-template-columns: repeat(3, 3fr);
 
-    }
+    } */
 
     .form.php-email-form {
         align-content: flex-start;
@@ -542,10 +542,10 @@ select {
         width: 510px !important;
     }
 
-    .footer-col {
+    /* .footer-col {
         padding: 15px;
         text-align: center;
-    }
+    } */
 }
 
 
@@ -685,19 +685,19 @@ body {
 
 
 @media (max-width:768px) {
-    .other-columns {
+    /* .other-columns {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-    }
+    } */
 
-    .footer-col {
+    /* .footer-col {
         display: flex;
         flex-direction: row;
         align-items: center;
         flex-wrap: nowrap;
         gap: 90px;
-    }
+    } */
 
     .subscribe-form {
         display: flex;
@@ -999,3 +999,124 @@ body {
 }
 
 
+/* added */
+
+footer {
+    bottom: 0;
+    background-color: var(--footer-bg);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .footer-columns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .other-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem 1rem;
+    width: 100%;
+    padding-top: 2rem;
+  }
+  
+  .other-columns ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .other-columns ul a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+  
+  .other-columns ul a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    width: 100%;
+    color: var(--text-color);
+    background-color: var(--footer-bottom-bg);
+  }
+  
+  .footer-bottom-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 80rem;
+    margin: 0 auto;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .footer-bottom small {
+    font-size: 1rem;
+    white-space: wrap;
+  }
+  
+  .social-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    
+  }
+  
+  .social-links a div i {
+    color: #afb6c7;
+  }
+  
+  .social-links a div i:hover {
+    color: #fff;
+  }
+  
+  .follow-us {
+    font-family: sans-serif;
+  }
+  
+  @media (min-width: 600px) {
+    .footer-bottom-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .footer-bottom small {
+      font-size: smaller;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .footer-bottom-wrapper {
+      text-align: center;
+    }
+  }
+  
+
+  
