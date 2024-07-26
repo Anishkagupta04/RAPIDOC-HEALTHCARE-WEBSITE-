@@ -118,7 +118,14 @@
             <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
             <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
             <li><a href="#contact"><i class="bi bi-telephone"></i> Contact us</a></li>
+
+            <li><a href="index.html#feedback"><i class="bi bi-star"></i>  Rate Us</a></li>
+            <li><a href="log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+
+            <a href="./Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
+
             <a href="Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
+
           </ul>
           <div class="hamburger">
             <div class="line"></div>
@@ -135,39 +142,73 @@
 
     </div>
   </header>
+  <div class="slideshow-container" style="padding-top:80px">
+    <div class="mySlides fade">
+      <img src="../assets/img/doc.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="../assets/img/AI2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="../assets/img/tele.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="../assets/img/test.jpg" style="width:100%">
+    </div>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+  </script>
 
   <div class="conta" style="display: flex; flex-wrap: wrap;">
     <div class="container" style="display:flex ;">
       <div class="news-section">
         <h2 style="color: white;margin-top: 50px;"><strong>Latest News</strong></h2>
-        <div class="news-container">
-          <div class="news-item">
-            <h3>RapiDoc Launches Revolutionary Telemedicine</h3>
-            <p>RapiDoc introduces a cutting-edge telemedicine platform, connecting patients with top specialists nationwide. This user-friendly service aims to revolutionize healthcare accessibility, especially for those in remote areas.</p>
+        <div class="news-container" >
+          <div class="news-item"style="background-color:#022a2d ;">
+            <h3 style="color:#ffffff ;">RapiDoc Launches Revolutionary Telemedicine</h3>
+            <img src="../assets/img/telemedicine.jpg" alt="">
+            <div class="conten-preview" style="display:none;">
+              <p>RapiDoc introduces a cutting-edge telemedicine platform, connecting patients with top specialists nationwide. This user-friendly service aims to revolutionize healthcare accessibility, especially for those in remote areas.</p>
+
+            </div>
+            <div class="more-content"style="display: none;">
+              <p>RapiDoc introduces a cutting-edge telemedicine platform, connecting patients with top specialists nationwide. This user-friendly service aims to revolutionize healthcare accessibility, especially for those in remote areas.</p>
+
+            </div>
 
             <div class="button-icon" style="padding-left: 90px;">
-              <div class="icon">
-                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
-                </svg>
-                
-              </div>
+             
               <div class="cube">
                 <span class="side front">hover me</span>
                 <span class="side top">Read More</span>
               </div>
             </div>
+            
           </div>
           <div class="news-item">
             <h3>RapiDoc Expands Network: 500 New Doctors Join</h3>
-            <p>In a major expansion, RapiDoc welcomes 500 new doctors across various specialties to its network. This growth significantly enhances our ability to provide diverse, high-quality healthcare services to more patients.</p>
+            <img src="../assets/img/doctor.jpg" alt="">
+           
+            <div class="more-content"style="display: none;">
+              <p>In a major expansion, RapiDoc welcomes 500 new doctors across various specialties to its network. This growth significantly enhances our ability to provide diverse, high-quality healthcare services to more patients.</p>
+            </div>
             <div class="button-icon" style="padding-left: 90px;">
-              <div class="icon">
-                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
-                </svg>
-                
-              </div>
+              
               <div class="cube">
                 <span class="side front">hover me</span>
                 <span class="side top">Read More</span>
@@ -177,28 +218,28 @@
           </div>
           <div class="news-item">
             <h3>RapiDoc's AI Diagnosis Tool Shows 95% Accuracy in Trials</h3>
-            <p>RapiDoc's innovative AI-powered diagnosis tool demonstrates an impressive 95% accuracy rate in recent clinical trials. This breakthrough technology promises faster, more accurate preliminary diagnoses for patients.</p>
+            <img src="../assets/img/AI.jpg" alt="News Image">
+            
+            <div class="more-content"style="display: none;">
+              <p class ="more-content">RapiDoc's innovative AI-powered diagnosis tool demonstrates an impressive 95% accuracy rate in recent clinical trials. This breakthrough technology promises faster, more accurate preliminary diagnoses for patients.</p>
+            </div>
             <div class="button-icon" style="padding-left: 90px;">
-              <div class="icon">
-                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
-                </svg>    
-              </div>
+              
               <div class="cube">
                 <span class="side front">hover me</span>
                 <span class="side top">Read More</span>
               </div>
             </div>
           </div>
-          <div class="news-item">
+          <div class="news-item" >
             <h3>RapiDoc Introduces 24/7 Emergency Consultation Service</h3>
-            <p>Responding to the need for round-the-clock medical support, RapiDoc launches a 24/7 emergency consultation service. This initiative ensures patients can access expert medical advice anytime, anywhere.</p>
+            <img src="../assets/img/consul.jpg" alt="">
+            
+            <div class="more-content"style="display: none;">
+              <p>Responding to the need for round-the-clock medical support, RapiDoc launches a 24/7 emergency consultation service. This initiative ensures patients can access expert medical advice anytime, anywhere.</p>
+            </div>
               <div class="button-icon" style="padding-left: 90px;">
-              <div class="icon">
-                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
-                </svg>  
-              </div>
+              
               <div class="cube">
                 <span class="side front">hover me</span>
                 <span class="side top">Read More</span>
@@ -207,14 +248,13 @@
           </div>
           <div class="news-item">
             <h3>RapiDoc Partners with Leading Hospitals for Seamless Referrals</h3>
-            <p>RapiDoc announces strategic partnerships with top hospitals nationwide, creating a seamless referral system. This collaboration aims to streamline the patient journey from online consultation to in-person specialized care.</p>
+            <img src="../assets/img/partner.jpeg" alt="">
+            
+            <div class="more-content"style="display: none;">
+              <p>RapiDoc announces strategic partnerships with top hospitals nationwide, creating a seamless referral system. This collaboration aims to streamline the patient journey from online consultation to in-person specialized care.</p>
+            </div>
                         <div class="button-icon" style="padding-left: 90px;">
-              <div class="icon">
-                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
-                </svg>
-                
-              </div>
+             
               <div class="cube">
                 <span class="side front">hover me</span>
                 <span class="side top">Read More</span>
@@ -223,14 +263,13 @@
           </div>
           <div class="news-item">
             <h3>RapiDoc's Mobile App Reaches 1 Million Downloads</h3>
-            <p>The RapiDoc mobile app hits a milestone with 1 million downloads. This achievement underscores the growing popularity of our digital healthcare solutions and the trust patients place in our services.</p>
+            <img src="../assets/img/1m.jpg" alt="">
+            
+            <div class="more-content"style="display: none;">
+              <p>The RapiDoc mobile app hits a milestone with 1 million downloads. This achievement underscores the growing popularity of our digital healthcare solutions and the trust patients place in our services.</p>
+            </div>
                         <div class="button-icon" style="padding-left: 90px;">
-              <div class="icon">
-                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
-                </svg>
-                
-              </div>
+              
               <div class="cube">
                 <span class="side front">hover me</span>
                 <span class="side top">Read More</span>
@@ -239,14 +278,13 @@
           </div>
           <div class="news-item">
             <h3>RapiDoc Introduces Personalized Health Monitoring Wearables</h3>
-            <p>RapiDoc unveils a line of state-of-the-art health monitoring wearables. These devices offer personalized health tracking, real-time data analysis, and seamless integration with our telemedicine platform, empowering patients to take control of their well-being.</p>
+            <img src="../assets/img/personalised.webp" alt="">
+            
+            <div class="more-content" style="display: none;">
+              <p>RapiDoc unveils a line of state-of-the-art health monitoring wearables. These devices offer personalized health tracking, real-time data analysis, and seamless integration with our telemedicine platform, empowering patients to take control of their well-being.</p>
+            </div>
                         <div class="button-icon" style="padding-left: 90px;">
-              <div class="icon">
-                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
-                </svg>
-                
-              </div>
+              
               <div class="cube">
                 <span class="side front">hover me</span>
                 <span class="side top">Read More</span>
@@ -255,14 +293,13 @@
           </div>
           <div class="news-item">
             <h3>RapiDoc Launches Innovative Mental Health Support Program</h3>
-            <p>In response to growing mental health concerns, RapiDoc introduces a comprehensive online mental health support program. This initiative combines AI-driven mood tracking, virtual therapy sessions, and community support groups to provide holistic care.</p>
+            <img src="../assets/img/mentalc.jpg" alt="">
+           
+            <div class="more-content"style="display: none;">
+              <p>In response to growing mental health concerns, RapiDoc introduces a comprehensive online mental health support program. This initiative combines AI-driven mood tracking, virtual therapy sessions, and community support groups to provide holistic care.</p>
+            </div>
                         <div class="button-icon" style="padding-left: 90px;">
-              <div class="icon">
-                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
-                </svg>
-                
-              </div>
+              
               <div class="cube">
                 <span class="side front">hover me</span>
                 <span class="side top">Read More</span>
@@ -271,17 +308,19 @@
           </div>
           <div class="news-item">
             <h3>RapiDoc's Research Team Publishes Groundbreaking Study on Preventive Healthcare</h3>
-            <p>RapiDoc's research division publishes a landmark study on preventive healthcare in a leading medical journal. The findings highlight the potential of data-driven, personalized preventive strategies to significantly reduce the risk of chronic diseases.</p>
-                        <div class="button-icon" style="padding-left: 90px;">
-              <div class="icon">
-                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
-                </svg>
-                
-              </div>
+            <img src="../assets/img/researcher.webp" alt="">
+           
+            <div class="more-content"style="display: none;">
+              <p>RapiDoc's research division publishes a landmark study on preventive healthcare in a leading medical journal. The findings highlight the potential of data-driven, personalized preventive strategies to significantly reduce the risk of chronic diseases.</p>
+            </div>
+            <div class="button-icon" style="padding-left: 90px;">
               <div class="cube">
                 <span class="side front">hover me</span>
                 <span class="side top">Read More</span>
+              </div>
+            </div>
+
+                          
               </div>
             </div>
           </div>
@@ -534,7 +573,7 @@ window.addEventListener("load", () => {
       width: 400px;
       height: 100px;
       cursor: pointer;
-      padding-left: 90px;
+      margin-left: 50px;
     }
 
     .icon {
@@ -576,14 +615,14 @@ window.addEventListener("load", () => {
     }
 
     .top {
-      background: #264923;
+      background: hwb(181 16% 46%);
       color: #fff;
       transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
       width: 170px;
     }
 
     .front {
-      background: #444478;
+      background: #55a5ea;
       color: #fff;
       transform: translate3d(0, 0, 1em);
       width: 170px;
@@ -591,6 +630,31 @@ window.addEventListener("load", () => {
 
 
   </style>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const readMoreButtons = document.querySelectorAll('.button-icon');
+
+    readMoreButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            const newsItem = button.closest('.news-item');
+            const moreContent = newsItem.querySelector('.more-content');
+            
+            if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+                moreContent.style.display = 'block'; 
+                button.querySelector('.cube .side.top').textContent = 'Read Less'; 
+            } else {
+                moreContent.style.display = 'none'; 
+                button.querySelector('.cube .side.top').textContent = 'Read More'; 
+            }
+        });
+    });
+});
+
+
+
+
+
+  </script>
 </body>
 
 </html>
