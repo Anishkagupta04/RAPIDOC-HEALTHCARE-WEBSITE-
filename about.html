@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <link rel="icon" type="image/x-icon" href="./favicon.png">
+  <!-- Bootstrap Icons CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="./favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+        button {
+  position: relative;
+  background-color: #3fbcc0a6;
+  color: white;
+  border: 2px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #55a5ea;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+button:hover {
+  color: #fff;
+}
+
+button:hover::before {
+  width: 100%;
+}
+    </style>
+    <style>
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #3fbcc0;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #005253;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: #011212;
+      }
+
+      #progressBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 6px;
+        background-color: #3fbcc0;
+        z-index: 9999;
+      }
+    </style>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "o6kveYmOSDrs0l1Mg",
+      });
+    })();
+  </script>
+
+  <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>RapiDoc</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- transalator -->
+  <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+
+  <!-- CSS Files -->
+   <link rel="stylesheet" href="index.css">
+  <link href="Css-Files/animate.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="remixicon/remixicon.css" rel="stylesheet">
+  <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="patient-portal.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="chatbox.css">
+  <!-- Google Fonts Link For Icons chatboxx -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="stylesheet" href="./Css-Files/aboutus.css" />
+  <link rel="stylesheet" href="./Css-Files/testimonial.css" />
+  <script src="chatboxx.js" defer></script>
+  <style>
+    @media screen and (max-width: 1275px) {
+      #rd-logo{
+        visibility: hidden;
+      }
+    }
+    .team {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.team h2 {
+  margin-bottom: 30px;
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-member {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 250px;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.team-member img {
+  width: 80%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.member-info {
+  padding: 20px;
+}
+
+.member-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.member-info p {
+  margin: 0;
+  color: #666;
+}
+
+#gitlin, .gitlin {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* For the tilt effect */
+.team-member[data-tilt] {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.about {
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h2 {
+  color: #0a0000;
+  margin-bottom: 20px;
+}
+
+.about p {
+  color: #444;
+  line-height: 1.6;
+}
+
+.stats-box {
+  background-color: #f5f5f5;
+  padding: 50px 20px;
+}
+
+.stats-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stats-container h2 {
+  color: grey;
+  margin-bottom: 30px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.stat {
+  margin: 20px;
+}
+
+.stat h3 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: black;
+  -webkit-text-fill-color: white; 
+  -webkit-text-stroke: 2px black;
+}
+
+.stat p {
+  color: #7c7b7b;
+  font-weight: bold;
+}
+  </style>
+</head>
+
+<body>
+  <header class="header_container nav-h">
+    <div class="img">
+      <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png">
+    </div>
+    <nav class="nav_menu">
+      <ul class="nav_link vis-h">
+        <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+        <li><a href="index.html#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+        <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
+        <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
+        <li><a href="index.html#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+        <li><a href="index.html#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+        <li><a href="index.html#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
+
+        <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+      </ul>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </header>
+  <p style="color: black;"><p><p><p><p><p><p><p><p><p>
+    <p><p><p>p
+
+        <p><p>p
+
+            <p><p>p
+
+                <p><p></p></p>
+            </p></p>
+        </p></p>
+    </p></p></p>
+  </p></p></p></p></p></p></p></p></p></p>
+  <section class="about">
+
+      
+    <h2 style="color: #0a0000;">About SwapReads</h2>
+    <p style="color: #444;">
+
+
+    <h2 style="color: white;">About RapiDoc</h2>
+    <p style="color: grey;">
+        RapiDoc is an innovative healthcare platform designed to streamline and enhance the medical experience for both patients and healthcare providers. 
+        Our mission is to make quality healthcare more accessible, efficient, and user-friendly through the power of technology. 
+        RapiDoc offers a range of services including online appointment booking, telemedicine consultations, digital health records management, and a comprehensive patient portal. 
+        We connect patients with a network of qualified healthcare professionals across various specialties, ensuring timely and appropriate care.
+         Our platform also features educational resources, health tracking tools, and personalized health recommendations to empower users in managing their well-being. 
+         By leveraging cutting-edge technology and a user-centric approach, RapiDoc aims to revolutionize healthcare delivery, making it more responsive to the needs of modern patients while supporting healthcare providers in delivering optimal care.</p>
+  </section>
+  <section class="stats-box">
+    <div class="stats-container">
+      <h2 style="color: grey">Our Stats</h2>
+      <div class="stats">
+        <div class="stat">
+          <h3 id="stat1"style="  color: black;
+          -webkit-text-fill-color: white; 
+          -webkit-text-stroke: 2px black;">0</h3>
+          <b><p style="color: #7c7b7b;" >Checkups Available</p></b>
+        </div>
+        <div class="stat">
+          <h3 id="stat2"style="color: black;
+          -webkit-text-fill-color: white; 
+          -webkit-text-stroke: 2px black;">0</h3>
+          <b><p style="color: #7c7b7b;">Genres Covered</p></b>
+        </div>
+        <div class="stat">
+            <h3 id="stat3" style="color: black;
+            -webkit-text-fill-color: white; 
+            -webkit-text-stroke: 2px black;">0</h3>
+            <b><p style="color: #7c7b7b;">Happy Patients</p></b>
+          </div>
+      </div>
+    </div>
+
+  </section>
+  <section class="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-cards">
+      <!-- Team member cards will go here -->
+       <a id="gitlin"  href="https://github.com/Anishkagupta04" style="text-decoration: none;">
+      <div class="team-member" data-tilt>
+        <img src="./images/WhatsApp Image 2024-07-23 at 18.59.53_ca6faccb.jpg" alt="Team Member 1" style="border-radius: 10px;">
+        <div class="member-info">
+          <h3 style="color: black;">Anishkagupta</h3>
+          <p>Project Admin</p>
+        </div>
+      </div></a>
+     <a id="gitlin" href="https://github.com/varshith257"style="text-decoration: none;">
+      <div class="team-member">
+        <img src="./img/WhatsApp Image 2024-07-23 at 18.59.41_52314e5b.jpg" alt="Team Member 2" style="border-radius: 10px;">
+        <div class="member-info">
+          <h3 style="color: black;">Vamshi Maskuri</h3>
+          <p>Mentor</p>
+        </div>
+      </div></a>
+    </div>
+  </section>
+    <body>
+      <section class="contributors">
+        <h2>Our Contributors</h2>
+        <div class="contributor-cards" id="contributor-cards">
+          <!-- Contributor cards will be inserted here -->
+        </div>
+        <div class="pagination" id="pagination" >
+          <!-- Pagination buttons will be inserted here -->
+        </div>
+      </section>
+
+    <style>
+      .contributors {
+        width: 90%;
+        margin: 0 auto;
+        background: var(--seashell);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+        max-width: 1200px;
+      }
+
+      .contributor-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .contributor-member {
+        color: var(--sonic-silver);
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgb(240, 239, 239);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 250px;
+        margin: 10px;
+        flex: 1 1 calc(33.333% - 40px);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contributor-member:hover {
+        scale: 1.1;
+        box-shadow: 0 6px 12px rgb(226, 206, 24);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .contributor-member img {
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: 0 auto 10px auto;
+      }
+      .contributor-member h3 {
+        font-size: 1rem;
+        margin: 10px 0 5px;
+      }
+
+      .contributor-member p {
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      .contributor-member button{
+        background-color: #3fbcc0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 5px 20px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 1.1rem;
+        
+      }
+
+    
+      .contributor-member button:hover {
+        color:rgb(255, 255, 255)
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .pagination button {
+        color: var(--old-rose);
+        margin: 0 5px;
+        padding: 10px 15px;
+        border: 1px solid transparent;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      body.dark-mode .pagination button {
+        background-color: #e333; 
+        color: #fff; 
+        border: 1px solid #444; 
+    }
+    body.dark-mode .pagination button:hover {
+        background-color: #0056b3;
+        color: #fff; 
+    }
+      .pagination button.active {
+        background-color:transparent;
+        text-decoration: underline;
+        font-size:x-large;
+      }
+/* General styles for the about-us-block divs */
+.about-us-block > div {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(179, 179, 179, 0.555);
+  }
+  .about-us-block > div:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgb(248, 153, 12);
+  }
+  .about-us-block > div:hover img {
+    filter: brightness(1.2);
+  }
+  .about-us-block > div:hover .about-us-blk-text {
+    color:#d26d6d;
+  }
+    </style>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-columns">
+          <div class="other-columns">
+            <section>
+              <h4>Quick Links</h4><br>
+              <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="index.html#doctors">Doctors</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+              </ul>
+            </section>
+            <section>
+              <h4>Explore</h4><br>
+              <ul class="links">
+                <li><a href="Html-Files/appointment.html">Appointment</a></li>
+                <li><a href="index.html#patient-portal">Patient Portal</a></li>
+                <li><a href="login.html">Login account</a></li>
+                <li><a href="#">Helplines</a></li>
+                <li><a href="index.html#contact">Location</a></li>
+              </ul>
+            </section>
+            <section>
+              <h4>Legal</h4><br>
+              <ul class="links">
+                <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
+                <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+                <li><a href="Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
+                <li><a href="#">GDPR</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Testimonials</a></li>
+              </ul>
+            </section>
+            
+         <section class="footer-col" >
+        <div>
+        <h4>RAPIDOC Newsletter</h4><br>
+        <p>
+          Subscribe to our newsletter for a weekly dose
+          of news, updates, helpful tips, and
+          exclusive offers.
+        </p>
+      </div>
+        <form action="#" class="subscribe-form">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+        <p class="confirmation-message">Thank you for subscribing!</p>
+         </section>
+        
+  
+            <script>
+              document.querySelector('.subscribe-form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the form from submitting in the traditional way
+  
+                // Here you would normally send the form data to the server using fetch or XMLHttpRequest
+                // For demonstration purposes, we'll just show the confirmation message
+  
+                const confirmationMessage = document.querySelector('.confirmation-message');
+                confirmationMessage.style.display = 'block'; // Show the confirmation message
+  
+                // Clear the input field
+                this.querySelector('input[type="email"]').value = '';
+  
+                // Optionally, you can hide the confirmation message after a few seconds
+                setTimeout(() => {
+                  confirmationMessage.style.display = 'none';
+                }, 5000); // Hide after 5 seconds
+              });
+            </script>
+              
+              <script>
+                document.querySelector('.subscribe-form').addEventListener('submit', function(event) {
+                  event.preventDefault(); // Prevent the form from submitting in the traditional way
+              
+                  // Show the modal popup
+                  const modal = document.getElementById('popupModal');
+                  modal.style.display = 'block';
+              
+                  // Clear the input field
+                  this.querySelector('input[type="email"]').value = '';
+              
+                  // Hide the modal when the close button is clicked
+                  const closeModal = document.querySelector('.modal .close');
+                  closeModal.onclick = function() {
+                    modal.style.display = 'none';
+                  }
+                });
+              
+                // Hide the modal when clicking outside of it
+                window.onclick = function(event) {
+                  const modal = document.getElementById('popupModal');
+                  if (event.target == modal) {
+                    modal.style.display = 'none';
+                  }
+                }
+              </script>
+  
+          </div>
+        </div>
+      </div>
+     
+      <div class="footer-bottom">
+        <div class="footer-bottom-wrapper">
+          <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+            Reserved Made with ❤️ by RapiDoc</small>
+          <div class="social-wrapper">
+            <div class="social-links">
+              <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+              <div  id="insta">
+              <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <div id="twit">
+              <a  href="https://www.twitter.com" target="_blank">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+            </div>
+            <div id="git">
+              <a  href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <div id="linkd">
+              <a  href="https://www.linkedin.com" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+  
+              <div id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+             <div id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></div>
+              <div id="mail1" ><a  href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".team-member"), {
+        max: 25,
+        speed: 400
+      });
+    </script>
+          <script>
+    
+            // Function for the contributors section
+    
+            const owner = 'Anishkagupta04';
+            const repo = 'RAPIDOC-HEALTHCARE-WEBSITE-';
+            const contributorsPerPage = 8;
+            let contributors = [];
+            let currentPage = 1;
+    
+            async function fetchContributors() {
+              const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contributors`);
+              if (!response.ok) {
+                console.error('Failed to fetch contributors:', response.statusText);
+                return;
+              }
+              contributors = await response.json();
+              displayContributors();
+              createPaginationButtons();
+            }
+    
+            function displayContributors() {
+              const container = document.getElementById('contributor-cards');
+              container.innerHTML = '';
+              const start = (currentPage - 1) * contributorsPerPage;
+              const end = start + contributorsPerPage;
+              const currentContributors = contributors.slice(start, end);
+    
+              currentContributors.forEach(contributor => {
+                const card = document.createElement('div');
+                card.className = 'contributor-member';
+                card.setAttribute('data-tilt','');
+    
+                const img = document.createElement('img');
+                img.src = contributor.avatar_url;
+                img.alt = contributor.login;
+    
+                const name = document.createElement('h3');
+                name.textContent = contributor.login;
+    
+                const contributions = document.createElement('p');
+                contributions.textContent = `${contributor.contributions} contributions`;
+    
+                const viewProfileButton = document.createElement("button");
+                viewProfileButton.textContent = "View Profile";
+                viewProfileButton.addEventListener("click", () => {
+                window.open(contributor.html_url, "_blank");
+              });
+    
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(contributions);
+                container.appendChild(card);
+                card.appendChild(viewProfileButton);
+              });
+            }
+    
+            function createPaginationButtons() {
+              const paginationContainer = document.getElementById('pagination');
+              paginationContainer.innerHTML = '';
+              const totalPages = Math.ceil(contributors.length / contributorsPerPage);
+    
+              for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+                button.textContent = i;
+                button.classList.add('pagination-button');
+                if (i === currentPage) {
+                  button.classList.add('active');
+                }
+                button.addEventListener('click', () => {
+                  currentPage = i;
+                  displayContributors();
+                  updatePaginationButtons();
+                });
+                paginationContainer.appendChild(button);
+              }
+            }
+    
+            function updatePaginationButtons() {
+              const buttons = document.querySelectorAll('.pagination-button');
+              buttons.forEach(button => {
+                button.classList.remove('active');
+                if (parseInt(button.textContent) === currentPage) {
+                  button.classList.add('active');
+                }
+              });
+            }
+    
+            fetchContributors();
+        </script>
+        <div id="progressBar"></div>
+        <script>
+          window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+          };
+        </script>
+        <script>
+            // Function to animate counting up to a target number
+function animateValue(id, start, end, duration) {
+  let range = end - start;
+  let current = start;
+  let increment = end > start ? 1 : -1;
+  let stepTime = Math.abs(Math.floor(duration / range));
+  let obj = document.getElementById(id);
+  let timer = setInterval(function() {
+    current += increment;
+    obj.innerHTML = current;
+    if (current == end) {
+      clearInterval(timer);
+    }
+  }, stepTime);
+}
+
+// Start the animation when the page loads
+window.onload = function() {
+  animateValue("stat1", 0, 5000, 2000); 
+  animateValue("stat2", 0, 50, 2000);   
+  animateValue("stat3", 0, 10000, 2000);
+}
+        </script>
+</body>
+</html>
