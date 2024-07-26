@@ -1268,8 +1268,7 @@ footer {
 /* Style for pateint portal  */
 /* -----***************************************-----  */
 .patient-portal {
-  width: 90%;
-  max-width: 900px;
+  width: 100%;  
   /* Maximum width of the container */
   margin: 0 auto;
   /* Centers the container */
@@ -1280,7 +1279,14 @@ footer {
   margin-bottom: 7%;
   border-radius: 20px;
 }
+.patient-portal input{
+  padding: 10px; /* add some padding to make it look nicer */
+  font-size: 16px; /* set the font size */
+  border: 1px solid #ccc; /* add a border */
+  border-radius: 5px; /* add a rounded corner effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow effect */
 
+}
 /* Section title styling */
 .section-title h1 {
   color: #29888a;
@@ -1316,7 +1322,7 @@ footer {
   /* text-align: center; */
 }
 
-button {
+.btn {
   background-color: hwb(181 16% 46%);
   /* Blue background for the button */
   color: white;
@@ -1661,6 +1667,45 @@ background-clip: text;
   color: #bd4b39;
 }
 
+#abc a:hover {
+  background: #55a5ea;
+  border-color: #3fbbc0;
+  color: black;
+}
+
+#subscribeBanner {
+  display: none;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: rgb(75, 182, 183);
+  color: black;
+  padding: 5px;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+   .patient-portal {
+   
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+    .patient-portal {
+     padding: 15px;
+    margin: 1.5%;
+    border-radius: 10px;
+  }
+}
+
 #feedback-message {
   display: none;
   position: fixed;
@@ -1681,7 +1726,6 @@ background-clip: text;
   border: 2px solid green;
   border-radius: 5px;
   text-align: center;
-
 }
 .rating-container button {
   font-size: 24px;
@@ -1704,4 +1748,3 @@ flex-direction: row;
 .st0 {
   fill: #2F7F81;
 }
-
