@@ -70,37 +70,47 @@
 
 .about-us-block {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  margin-top: 80px;
+  flex-wrap: wrap; /* Ensure items wrap to the next line if necessary */
+  gap: 2rem; /* Adjust the gap between the items as needed */
+  justify-content: space-between; /* Distribute items evenly */
+  margin-bottom: 2rem;
 }
 
-.about-us-community,
-.about-us-product,
-.about-us-event,
-.about-us-location {
-  width: 100%;
-  max-width: 520px; /* Adjust as needed */
-  padding: 20px;
-  border: 1px solid rgba(206, 212, 218, 1);
-  border-radius: 8px;
+.about-us-block > div {
+  flex: 1;
+  min-width: 45%; 
+  box-sizing: border-box;
+  border: 1px solid #ccc; 
+  padding: 2rem;
+  border-radius: 0.5rem; 
+  margin: 1rem;
+}
+
+.about-us-block > div:hover{
+  box-sizing: border-box; 
+  border: 3px solid #00C896; 
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-header img {
+  width: 4rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .about-us-blk-text {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px;
-  text-align: left;
-  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .about-us-blk-para {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 25px;
-  text-align: left;
-  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 @media only screen and (max-width: 768px) {
