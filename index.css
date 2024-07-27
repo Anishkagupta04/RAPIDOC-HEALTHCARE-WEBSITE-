@@ -887,3 +887,7 @@ body {
   .b:hover::before {
     width: 100%;
   }
+  .doc-app:hover{
+    background-color: teal !important;
+    font-size: 15px;
+  }
