@@ -239,3 +239,6 @@ transition: all 0.3s ease;
 .swiper-pagination-bullet{
     opacity: 0;
 }
+.btns{
+    width: 200px;
+}
