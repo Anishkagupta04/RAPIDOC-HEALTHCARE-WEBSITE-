@@ -1,6 +1,6 @@
 
 .container-patientportal {
-    width: 100%;
+    width: 100% !important;
     /* display: flex; */
     justify-content: space-between;
     /* align-items: flex-start; */
@@ -106,3 +106,5 @@
 #patient-portal{
     padding: 0px;
 }
+
+/* Add media queries for responsiveness */
