@@ -51,6 +51,29 @@
         background-color: #3fbcc0;
         z-index: 9999;
       }
+      .styled-button-link {
+        text-decoration: none;
+      }
+      
+      .styled-button {
+        background-color: #4bb6b7;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .styled-button:hover {
+        background-color: #2F81CF;
+      }
+      
     </style>
   <script type="text/javascript">
     (function () {
@@ -128,7 +151,9 @@
         <li><a href="index.html#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
         <li><a href="index.html#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
 
-        <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+        <a href="./Html-Files/Doctor Experience.html" class="styled-button-link">
+          <button class="styled-button">Find a Doctor</button>
+        </a>
       </ul>
       <div class="hamburger">
         <div class="line"></div>

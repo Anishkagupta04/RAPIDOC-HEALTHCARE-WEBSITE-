@@ -99,8 +99,12 @@ img {
     box-sizing: border-box;
     padding: 0px;
     margin: 0;
+    margin-top: 25px;
     
     
+  }
+  .d-md-inline{
+    color: #000;
   }
 .header_container {
     width: 163vw;
@@ -110,6 +114,8 @@ img {
 .nav_menu {
     padding: 10px;
     height: auto;
+
+    
 }
 
 .nav-h {
@@ -118,6 +124,7 @@ img {
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    
 }
 
 .container {
@@ -125,6 +132,7 @@ img {
     justify-content: center;
     flex-direction: column-reverse;
     padding: 0px;
+    
 }
   body {
     font-size: calc(var(--normal-font-size) * 0.9);
