@@ -11,7 +11,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../style.css" />
+  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" type="text/css" href="./Css-Files/news.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
@@ -40,6 +43,424 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+ <style>
+.iti--allow-dropdown input {
+    padding-left: 50px;
+    background-color: black; /* Adjust padding to prevent overlap */
+}
+
+.iti.iti--allow-dropdown {
+    margin-left: 250px;
+}
+
+.container {
+    display:unset;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    text-align: left;
+    flex: 1;
+    padding: 20px;
+}
+
+.sec-img {
+    max-width: 50%;
+    width: 600px;
+    height: 600px;
+    margin-left: auto;
+}
+
+.btn-get-started {
+    display: inline-block;
+    background-color: #55a5ea;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+select{
+  padding: 1px;
+  background-color: #55a5ea;
+  color: white;
+ height: 5vh;
+ width: 17vh;
+}
+option{
+  background-color: #55a5ea;
+  color: white;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 29px;
+    left: 1.5%;
+}
+
+.line {
+    width: 30px;
+    height: 5px;
+    margin: 4px 4px;
+    background-color: white;
+}
+
+@media only screen and (max-width: 820px) {
+    .hamburger {
+        display: block;
+    }
+
+    .header_container {
+        flex-direction: column;
+        align-items: start;
+        height: 24.8rem;
+        transition: 0.55s all ease-out;
+        /* padding-top: 5px; */
+    }
+
+    .nav_link {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        bottom: 40px;
+        left: 10px;
+    }
+    /* .nav-link li{
+    margin-bottom: 5px;
+  } */
+   .nav_link i{
+    margin-right: 5.5px;
+   }
+    .nav-h {
+        height: 5.5rem;
+        width: 100vw;
+    }
+
+    .vis-h {
+        opacity: 0;
+    }
+
+    .img p {
+        position: relative;
+        left: 300px;
+        bottom: 0px;
+    }
+    .nav-link button{
+      margin-top: 3px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sec-img {
+        max-width: 100%;
+        margin: 20px 0;
+        position: relative;
+        top: 0;
+        right: 0;
+
+    }
+
+    .content {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .sec-img {
+        max-width: 100%;
+        margin: 20px 0;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+}
+/*Preloader CSS*/
+.pre{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s ease-out, visibility 2s ease-out;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999; 
+}
+
+.pre--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #55a5ea;
+  animation: spin 3s linear infinite;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3fbcc0c6;
+  animation: spin 3s linear infinite;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+.avatar{
+  margin: 20px 100px;
+}
+.textbox input{
+  width:200px;
+  height: 40px;
+}
+.btn{
+  margin-left: 50px;
+  width:240px;
+  height: 40px;
+  background-color: #00C896;
+  border: none;
+  font-size: 1rem;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+#appointment.appointment.section-bg{
+  margin: 0px 280px 100px;
+}
+#appointment.appointment.section-bg h2{
+  margin: 0px 115px ;
+}
+form.php-email-form{
+  width: 300px;
+  margin-right: 250px;
+  display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start
+}
+.loader--hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+    </style>
+    <style>
+/*Appointment section Styling's to align it to center*/
+     .appointment .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appointment form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.appointment .form-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.appointment input,
+.appointment select,
+.appointment button {
+  width: 100%;
+  max-width: 400px;
+}
+
+.appointment .text-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.appointment button[type="submit"] {
+  width: auto;
+  padding: 10px 20px;
+  display: block;
+  margin: 0 auto;
+}
+.php-email-form .form-group {
+  margin-bottom: 0;
+}
+
+.php-email-form .form-control,
+.php-email-form .form-select {
+  margin: 0 0 0 0;
+}
+
+.php-email-form .row {
+  margin: 0 0 0 0;
+}
+
+.php-email-form .col-md-4,
+.php-email-form .col-md-12 {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.php-email-form input{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+/* Remove bottom margin from name and email inputs */
+#name, #email {
+  margin-bottom: 0;
+}
+
+/* Remove top margin from email and location inputs */
+#email, #location {
+  margin-top: -50px;
+}
+
+/* Remove <br> tags if present in HTML */
+#name + br, #email + br {
+  display: none;
+}
+
+/* Optional: Add a small border or visual separator if desired */
+#name, #email {
+  border-bottom: none;
+}
+#email, #location {
+  border-top: 1px solid #ccc; /* Adjust color as needed */
+}
+.news-section {
+  width: 100%;
+  padding: 70px 40px;
+}
+
+.news-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.news-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.news-item {
+  width: calc(33.33% - 20px);
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+}
+
+.news-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-item h3 {
+  padding: 15px;
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.news-item p {
+  padding: 0 15px 15px;
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.read-more {
+  display: inline-block;
+  margin: 0 15px 15px;
+  padding: 8px 15px;
+  background-color: #55a5ea;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #07192b;
+  color: white;
+  border: 1px solid greenyellow;
+}
+
+@media (max-width: 768px) {
+  .news-item {
+    width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 480px) {
+  .news-item {
+    width: 100%;
+  }
+}
+
+    </style>
+
     <link rel="stylesheet" href="chatbox.css">
      <!-- Google Fonts Link For Icons chatboxx -->
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -106,9 +527,9 @@
   </div>
       <!-- ############# Header ############# -->
       <header class="header_container nav-h">
-        <div class="img">
-          <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png">
-        </div>
+      <div class="img">
+        <p style="color: hwb(181 16% 46%); font-size: 1.5rem;margin-top: 5px;">Rapidoc</p>
+      </div>
         <nav class="nav_menu">
           <div class="hamburger" onclick="toggleMenu()">
             <div class="line"></div>
@@ -131,7 +552,6 @@
           </ul>
         </nav>
       </header>
-
   <!-- ############# Header ############# -->
 
   <header id="header" class="fixed-top">
@@ -442,6 +862,13 @@ function loadGoogleTranslate(){
 
 
   <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navbar = document.querySelector('.header_container');
+    const nav = document.querySelector('.nav_link');
+    hamburger.addEventListener('click', () => {
+      navbar.classList.toggle('nav-h');
+      nav.classList.toggle('vis-h');
+    })
     document.addEventListener("DOMContentLoaded", function () {
       const backToTopButton = document.getElementById('back-to-top-container');
 

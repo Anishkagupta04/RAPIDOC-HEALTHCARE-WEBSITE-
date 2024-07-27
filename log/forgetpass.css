@@ -1,3 +1,4 @@
+
 .popup {
     display: none;
     position: fixed;
@@ -93,5 +94,4 @@ color: #888;
 .password-input-container input[type="text"] {
 padding-right: 30px;
 }
-
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
