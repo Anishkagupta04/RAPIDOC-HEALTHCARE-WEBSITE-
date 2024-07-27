@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/x-icon" href="../favicon.png">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RAPIDOC</title>
   <link rel="icon" type="image/x-icon" href="./log/favicon.ico">
+  <link rel="stylesheet" href="./forgetpass.css">
   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
   <link rel="stylesheet" href="login.css">
   <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
   <meta name="google-signin-client_id" content="646664380070-n07i34glgcc6sanb59p3m1k5k0cgn1v1.apps.googleusercontent.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <div class="top-left-corner">
@@ -78,7 +81,29 @@
         </div>
       </form>
     </div>
-
+    <div id="forgotPasswordPopup" class="popup">
+      <div class="popup-content">
+        <h2>Reset Password</h2>
+        <form id="resetPasswordForm">
+          <input type="email" id="resetEmail" placeholder="Enter your email" required>
+          <div class="password-input-container">
+            <input type="password" id="newPassword" placeholder="New password" required>
+            <span class="password-toggle" data-target="newPassword">
+              <i class="far fa-eye"></i>
+            </span>
+          </div>
+          <div class="password-input-container">
+            <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+            <span class="password-toggle" data-target="confirmPassword">
+              <i class="far fa-eye"></i>
+            </span>
+          </div>
+          <p id="passwordRequirements">Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character.</p>
+          <button type="submit">Reset Password</button>
+        </form>
+        <span class="close">&times;</span>
+      </div>
+    </div>
     <div class="overlay-container">
       <div class="overlay">
         <div class="overlay-panel overlay-left">
@@ -99,8 +124,9 @@
     </div>
   </div>
   <script src="/js/script.js"></script>
+  <script src="./forgetpass.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script type="module">
+  <script type="module" src="script.js"></script>
     // Import Firebase modules
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js';
     import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, reload, deleteUser } from 'https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js';
