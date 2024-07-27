@@ -342,7 +342,7 @@ body.dark-theme {
   
   .section__title, .section__title-center {
     font-size: calc(var(--h2-font-size) * 1.1);
-    margin-right: 100px;
+    margin-right: 300px;
     
     
 
@@ -442,9 +442,7 @@ body.dark-theme {
   border-radius: 3rem;
   font-weight: var(--font-semi-bold);
   transition: .3s;
-  height: 20px;
-  align-items: center;
-  justify-content: center;
+ 
   
   
 }
