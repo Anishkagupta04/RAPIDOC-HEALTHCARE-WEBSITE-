@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book an Appointment</title>
+    <title>RapiDoc</title>
     <link rel="shortcut icon" href="/assets/img/favi-Appoint.png" type="image/x-icon" >
     <link rel="stylesheet" href="./Css-Files/appointStyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -30,14 +30,7 @@
 </head>
 <body>
     <div id="progressBar"></div>
-    <script>
-        window.onscroll = function () {
-            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrolled = (winScroll / height) * 100;
-            document.getElementById("progressBar").style.width = scrolled + "%";
-        };
-    </script>
+    <script src="../js/progressbar_and_header.js"></script>
     <header>
         <div class="logo">Doctor's Clinic</div>
     </header>

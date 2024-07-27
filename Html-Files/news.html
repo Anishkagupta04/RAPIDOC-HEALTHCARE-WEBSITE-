@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
   <link rel="icon" type="image/x-icon" href="../favicon.png">
-
-
   <link rel="stylesheet" type="text/css" href="../style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" type="text/css" href="../Css-Files/news.css" />
   <title>RapiDoc</title>
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
-
     <!-- transalator -->
     <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate" ></script>
-
   <!-- CSS Files -->
   <link href="Css-Files/animate.min.css" rel="stylesheet">
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +27,7 @@
   <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="remixicon/remixicon.css" rel="stylesheet">
   <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  <link href="../Css-Files/news.css" rel="stylesheet">
   <link href="../Css-Files/patient-portal.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -38,377 +36,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
-.iti--allow-dropdown input {
-    padding-left: 50px;
-    background-color: black; /* Adjust padding to prevent overlap */
-}
-
-.iti.iti--allow-dropdown {
-    margin-left: 250px;
-}
-
-.container {
-    display:unset;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.content {
-    text-align: left;
-    flex: 1;
-    padding: 20px;
-}
-
-.sec-img {
-    max-width: 50%;
-    width: 600px;
-    height: 600px;
-    margin-left: auto;
-}
-
-.btn-get-started {
-    display: inline-block;
-    background-color: #55a5ea;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-select{
-  padding: 1px;
-  background-color: #55a5ea;
-  color: white;
- height: 5vh;
- width: 17vh;
-}
-option{
-  background-color: #55a5ea;
-  color: white;
-}
-
-@media screen and (max-width: 992px) {
-    .container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .sec-img {
-        max-width: 100%;
-        margin: 20px 0;
-        position: relative;
-        top: 0;
-        right: 0;
-
-    }
-
-    .content {
-        text-align: center;
-        padding: 10px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .content {
-        text-align: center;
-        padding: 10px;
-    }
-
-    .sec-img {
-        max-width: 100%;
-        margin: 20px 0;
-        position: relative;
-        top: 0;
-        right: 0;
-    }
-}
-/*Preloader CSS*/
-.pre{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 2s ease-out, visibility 2s ease-out;
-  opacity: 1;
-  visibility: visible;
-  z-index: 9999; 
-}
-
-.pre--hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.loader {
-  display: block;
-  position: relative;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #55a5ea;
-  animation: spin 3s linear infinite;
-}
-
-.loader:before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #3fbcc0c6;
-  animation: spin 3s linear infinite;
-}
-
-.loader:after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #fff;
-  animation: spin 1.5s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-      transform: rotate(0deg);
-  }
-  100% {
-      transform: rotate(360deg);
-  }
-}
-.avatar{
-  margin: 20px 100px;
-}
-.textbox input{
-  width:200px;
-  height: 40px;
-}
-.btn{
-  margin-left: 50px;
-  width:240px;
-  height: 40px;
-  background-color: #00C896;
-  border: none;
-  font-size: 1rem;
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
-#appointment.appointment.section-bg{
-  margin: 0px 280px 100px;
-}
-#appointment.appointment.section-bg h2{
-  margin: 0px 115px ;
-}
-form.php-email-form{
-  width: 300px;
-  margin-right: 250px;
-  display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start
-}
-.loader--hidden{
-  opacity: 0;
-  visibility: hidden;
-}
-    </style>
-    <style>
-/*Appointment section Styling's to align it to center*/
-     .appointment .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.appointment form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 600px;
-}
-
-.appointment .form-group {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.appointment input,
-.appointment select,
-.appointment button {
-  width: 100%;
-  max-width: 400px;
-}
-
-.appointment .text-center {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.appointment button[type="submit"] {
-  width: auto;
-  padding: 10px 20px;
-  display: block;
-  margin: 0 auto;
-}
-.php-email-form .form-group {
-  margin-bottom: 0;
-}
-
-.php-email-form .form-control,
-.php-email-form .form-select {
-  margin: 0 0 0 0;
-}
-
-.php-email-form .row {
-  margin: 0 0 0 0;
-}
-
-.php-email-form .col-md-4,
-.php-email-form .col-md-12 {
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.php-email-form input{
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-}
-/* Remove bottom margin from name and email inputs */
-#name, #email {
-  margin-bottom: 0;
-}
-
-/* Remove top margin from email and location inputs */
-#email, #location {
-  margin-top: -50px;
-}
-
-/* Remove <br> tags if present in HTML */
-#name + br, #email + br {
-  display: none;
-}
-
-/* Optional: Add a small border or visual separator if desired */
-#name, #email {
-  border-bottom: none;
-}
-#email, #location {
-  border-top: 1px solid #ccc; /* Adjust color as needed */
-}
-.news-section {
-  width: 100%;
-  padding: 70px 40px;
-}
-
-.news-section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #faf8f8;
-}
-
-.news-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
- 
-}
-
-.news-item {
-  width: calc(33.33% - 20px);
-  margin-bottom: 30px;
-  background-color:black;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  box-shadow: 7px 0px 15px #70bde7, -7px 0px 15px #14aa21;
-  color: white;
-}
-
-.news-item:hover {
-  transform: translateY(-5px);
-  background-color:#29888a;
-  box-shadow: 7px 0px 15px #fdfefe, -7px 0px 15px aqua;
-}
-
-.news-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.news-item h3 {
-  padding: 15px;
-  margin: 0;
-  font-size: 18px;
-  color: white
-}
-
-.news-item p {
-  padding: 0 15px 15px;
-  margin: 0;
-  font-size: 14px;
-  color: #c3b5b5;
-}
-
-.read-more {
-  display: inline-block;
-  margin: 0 15px 15px;
-  padding: 8px 15px;
-  background-color: #55a5ea;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.read-more:hover {
-  background-color: #07192b;
-  color: white;
-  border: 1px solid greenyellow;
-}
-
-@media (max-width: 768px) {
-  .news-item {
-    width: calc(50% - 15px);
-  }
-}
-
-@media (max-width: 480px) {
-  .news-item {
-    width: 100%;
-  }
-}
-
-#progressBar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0%;
-      height: 6px;
-      background-color: #3fbcc0;
-      z-index: 9999;
-    }
 
     </style>
     <link rel="stylesheet" href="chatbox.css">
@@ -417,35 +44,16 @@ form.php-email-form{
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
      <link rel="stylesheet" href="./Css-Files/aboutus.css" />
      <link rel="stylesheet" href="./Css-Files/testimonial.css" />
-     <script src="chatboxx.js" defer></script>
-     <style>#progressBar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0%;
-      height: 8px;
-      background-color: #3fbcc0;
-      z-index: 9999;
-  
-    }</style>
 </head>
 
 <body>
 
   <div id="progressBar"></div>
-  <script>
-    window.onscroll = function () {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("progressBar").style.width = scrolled + "%";
-    };
-  </script>
+  <script src="../js/progressbar_and_header.js"></script>
   <div class="pre">
     <div class="loader"></div>
   </div>
       <!-- ############# Header ############# -->
-
       <header class="header_container">
         <div class="img">
         <img id="rd-logo"  style="width: 90px; height: auto;" src="../images/rd.png"> 
@@ -455,17 +63,16 @@ form.php-email-form{
       <nav class="nav_menu">
 
         <ul class="nav_link">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/index.html/#about">About</a></li>
-          <li><a href="/Html-Files/news.html">News</a></li>
-          <a href="/dex.html">Service</a>
-          <li><a href="/index.html#patient-portal">Patient Portal</a></li>
-          <li><a href="/index.html#doctors">Doctor</a></li>
-          <li><a href="/Html-Files/contact.html">Contact us</a></li>
+          <li><a href="/index.html"><i class="bi bi-house-door-fill"></i>Home</a></li>
+          <li><a href="/index.html/#about"><i class="bi bi-info-circle-fill"></i>About</a></li>
+          <li><a href="/Html-Files/news.html"><i class="bi bi-newspaper"></i>News</a></li>
+          <a href="/dex.html"><i class="bi bi-gear"></i>Service</a>
+          <li><a href="/index.html#patient-portal"><i class="bi bi-person"></i>Patient Portal</a></li>
+          <li><a href="/index.html#doctors"><i class="bi bi-person-circle"></i>Doctor</a></li>
+          <li><a href="/Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a></li>
 
-          <a href="/login.html">Sign in/Sign up</a>
+          <a href="/login.html"><i class="bi bi-box-arrow-right"></i>Sign in/Sign up</a>
           <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
-
         </ul>
       </nav>
       </div>
@@ -681,7 +288,7 @@ form.php-email-form{
                   </p>
                   <form action="#" class="subscribe-form">
                     <input type="text" placeholder="Your email" required>
-                    <button type="submit">SUBSCRIBE</button>
+                    <button type="submit" style="color: black;" id="s">SUBSCRIBE</button>
                   </form>
                 </section>
             </div>
@@ -742,67 +349,9 @@ form.php-email-form{
 
 
   <!-- JS Files -->
-  <script>
-
-function loadGoogleTranslate(){
-          new google.translate.TranslateElement("google_element");
-      }
-
-    var currentYear = new Date().getFullYear();
-    document.getElementById('year').textContent = currentYear;
-  </script>
-
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const backToTopButton = document.getElementById('back-to-top-container');
-
-      function checkButtonVisibility() {
-        if (window.innerWidth > 100 && window.scrollY > 100) {
-          backToTopButton.style.display = 'block';
-        } else {
-          backToTopButton.style.display = 'none';
-        }
-      }
-
-      window.addEventListener('scroll', checkButtonVisibility);
-      window.addEventListener('resize', checkButtonVisibility);
-
-      backToTopButton.addEventListener('click', function () {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
-      checkButtonVisibility();
-    });
-
-  </script>
-   <script>
-       document.addEventListener("DOMContentLoaded", function() {
-           const phoneInputField = document.getElementById('phone');
-           const iti = window.intlTelInput(phoneInputField, {
-               initialCountry: "auto",
-               geoIpLookup: function(callback) {
-                   fetch('https://ipinfo.io/json?token=YOUR_TOKEN')
-                       .then(response => response.json())
-                       .then(data => callback(data.country))
-                       .catch(() => callback('us'));
-               },
-               utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-           });
-
-           document.getElementById('phone-form').addEventListener('submit', function(event) {
-               event.preventDefault();
-               const phoneNumber = iti.getNumber();
-               console.log('Full Phone Number:', phoneNumber);
-
-               // You can now send this phone number to your server or process it as needed
-           });
-       });
-   </script>
-
-
+  <script src="../js/date.js"></script>
+  <script src="../js/backtotopjs.js"></script>
+  <script src="../js/phonejs.js"></script>
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="glightbox/js/glightbox.min.js"></script>
   <script src="php-email-form/validate.js"></script>
@@ -810,23 +359,10 @@ function loadGoogleTranslate(){
   <script src="swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
   <script src="js/main.js"></script>
-
   <script src="patient-portal.js"></script>
   <script src="swiper-bundle.min.js"></script>
-
   <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
-  <script>
-    window.embeddedChatbotConfig = {
-    chatbotId: "xjRGZgxJziSoHQ1T1twl6",
-    domain: "www.chatbase.co"
-    }
-    </script>
-    <script
-    src="https://www.chatbase.co/embed.min.js"
-    chatbotId="xjRGZgxJziSoHQ1T1twl6"
-    domain="www.chatbase.co"
-    defer>
-    </script>
+  <script src="../js/chatbotjs.js"></script>
   <script>
     ScrollReveal({ 
         //reset: true ,
@@ -842,28 +378,7 @@ function loadGoogleTranslate(){
     ScrollReveal().reveal('.feedback', { delay: 400 , origin:'left' });
     ScrollReveal().reveal('.footer', { delay: 400 , origin:'bottom' });
   </script>
-          <script>
-
-window.addEventListener("load", () => {
-  const loader = document.querySelector(".pre");
-
-  loader.classList.add("pre--hidden");
-
-  loader.addEventListener("transitionend", () => {
-  document.body.removeChild(loader);
-  });
-  });
-
-  window.addEventListener("load", () => {
-  const loader = document.querySelector(".loader");
-
-  loader.classList.add("loader--hidden");
-
-  loader.addEventListener("transitionend", () => {
-  document.body.removeChild(loader);
-  });
-  });
-  </script>
+  <script src="../js/loaderjs.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
   const newsItems = document.querySelectorAll('.news-item');
@@ -876,74 +391,5 @@ window.addEventListener("load", () => {
   });
 });
   </script>
-  <style>
-
-
-    .button-icon {
-      display: flex;
-      width: 400px;
-      height: 100px;
-      cursor: pointer;
-      padding-left: 90px;
-    }
-
-    .icon {
-      /* background-color: #080808; */
-      padding: 10px 10px 5px 10px;
-    }
-    .icon:hover{
-      /* background-color: #29888a; */
-    }
-
-    .icon svg {
-      width: 25px;
-      height: 25px;
-    }
-
-    .cube {
-      transition: all 0.4s;
-      transform-style: preserve-3d;
-      width: 200px;
-      height: 20px;
-    }
-
-    .button-icon:hover {
-      border-color: #264923;
-    }
-
-    .button-icon:hover .cube {
-      transform: rotateX(90deg);
-    }
-
-    .side {
-      position: absolute;
-      height: 47px;
-      width: 200px;
-      display: flex;
-      font-size: 0.8em;
-      justify-content: center;
-      align-items: center;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: bold;
-    }
-
-    .top {
-      background: #264923;
-      color: #fff;
-      transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
-      width: 170px;
-    }
-
-    .front {
-      background: #444478;
-      color: #fff;
-      transform: translate3d(0, 0, 1em);
-      width: 170px;
-    }
-
-
-  </style>
 </body>
-
 </html>

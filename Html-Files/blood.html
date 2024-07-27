@@ -16,9 +16,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-<title>
-Blood Bank
-</title>
+<title>RapiDoc</title>
 </head>
 
 <body>
@@ -165,7 +163,7 @@ Blood Bank
                   </p>
                   <form action="#" class="subscribe-form">
                     <input type="text" placeholder="Your email" required>
-                    <button type="submit">SUBSCRIBE</button>
+                    <button type="submit" style="color: black;">SUBSCRIBE</button>
                   </form>
                 </section>
             </div>
@@ -197,7 +195,6 @@ Blood Bank
       </div>
     </div>
 </footer>
-
   <div id="back-to-top-container">
     <div class="circle">
       <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -213,31 +210,7 @@ Blood Bank
         <div id="popupContent"></div>
     </div>
     </div>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const backToTopButton = document.getElementById('back-to-top-container');
-    
-          function checkButtonVisibility() {
-            if (window.innerWidth > 100 && window.scrollY > 100) {
-              backToTopButton.style.display = 'block';
-            } else {
-              backToTopButton.style.display = 'none';
-            }
-          }
-    
-          window.addEventListener('scroll', checkButtonVisibility);
-          window.addEventListener('resize', checkButtonVisibility);
-    
-          backToTopButton.addEventListener('click', function () {
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
-          });
-          checkButtonVisibility();
-        });
-    
-      </script>
+      <script src="../js/backtotopjs.js"></script>
       <script src="../js/popupbloodlist.js"></script>
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="glightbox/js/glightbox.min.js"></script>
@@ -249,7 +222,6 @@ Blood Bank
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="patient-portal.js"></script>
 <script src="swiper-bundle.min.js"></script>
- 
-  <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
+<script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
 </body>
 </html>
