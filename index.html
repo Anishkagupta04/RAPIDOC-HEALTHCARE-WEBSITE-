@@ -59,7 +59,7 @@
   </script>
     Copy code
     <script type="text/javascript">
-        emailjs.init("2sPR5b1m7SMJaTyYI"); // Replace with your actual EmailJS User ID
+        emailjs.init("Your_User_ID"); // Replace with your actual EmailJS User ID
     
         // Function to validate email address
         function isValidEmail(email) {
@@ -96,7 +96,7 @@
                 };
     
                 // Send email
-                emailjs.send('service_x67ty34', 'template_4iww9qo', templateParams)
+                emailjs.send('Your_Service_ID', 'Your_Template_ID', templateParams)
                     .then(function(response) {
                         console.log('Email sent successfully:', response);
                         alert('Successfully subscribed to our newsletter!');
