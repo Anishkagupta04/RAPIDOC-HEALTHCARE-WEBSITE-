@@ -342,8 +342,8 @@ body.dark-theme {
   
   .section__title, .section__title-center {
     font-size: calc(var(--h2-font-size) * 1.1);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin-right: 100px;
+    
     
 
   }
@@ -378,7 +378,7 @@ body.dark-theme {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     width: 50%;
-    margin-left: 10px;
+    margin-right: 100px;
   }
 
   .svg__img {
@@ -442,7 +442,7 @@ body.dark-theme {
   border-radius: 3rem;
   font-weight: var(--font-semi-bold);
   transition: .3s;
-  height: 50px;
+  height: 20px;
   align-items: center;
   justify-content: center;
   
