@@ -82,10 +82,10 @@
         <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
         <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
         <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
-        <li><a href="#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
-        <li><a href="#feedback"><i class="bi bi-star"></i>Rate Us</a></li>
+        <li><a href="#contact"><i class="bi bi-telephone"></i> Contact us</a></li>
+        <li><a href="#feedback"><i class="bi bi-star"></i> Rate Us</a></li>
         <li><a href="log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
-        <a href="Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
+        <a href="Html-Files/Doctor Experience.html"><button class="btn1">Find a Doctor</button></a>
 
       </ul>
     </nav>
@@ -216,7 +216,7 @@
           </div>
         </section>
         <div class="about-us-block">
-          <div class="about-us-community">
+          <div class="about-us-community about-card">
             <div style="display: flex; align-items: center; gap: 1rem;">
               <img id="community-img" src="./images/checkup.png" alt=""
                 style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
@@ -227,7 +227,7 @@
               and screenings, providing a detailed analysis of your health status. Book your health checkup easily
               through our platform and receive personalized recommendations from our medical experts.</p>
           </div>
-          <div class="about-us-product">
+          <div class="about-us-product about-card">
             <div style="display: flex; align-items: center; gap: 1rem;">
               <img id="product-img" src="./images/ward.png" alt=""
                 style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
@@ -240,7 +240,7 @@
           </div>
         </div>
         <div class="about-us-block">
-          <div class="about-us-location">
+          <div class="about-us-location about-card">
             <div style="display: flex; align-items: center; gap: 1rem;">
               <img id="location-img" src="./images/appointment.png" alt=""
                 style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
@@ -251,7 +251,7 @@
               numerous hospitals. This ensures you receive timely consultations and reduces the hassle of waiting,
               making your healthcare experience more efficient and convenient.</p>
           </div>
-          <div class="about-us-event">
+          <div class="about-us-event about-card">
             <div style="display: flex; align-items: center; gap: 1rem;">
               <img id="event-img" src="./images/services.png" alt=""
                 style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
@@ -277,7 +277,7 @@
               <span data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="1"
                 class="purecounter"></span>
               <p><strong>Doctors Available</strong> <br><br>Doctors listed on our website.</p><br>
-              <a href="#doctors">Find out more &raquo;</a>
+              <a href="#doctors" class="count-a">Find out more &raquo;</a>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" id="abc">
@@ -286,7 +286,7 @@
               <span data-purecounter-start="0" data-purecounter-end="36" data-purecounter-duration="1"
                 class="purecounter"></span>
               <p><strong>Beds Available</strong> <br><br>Nearby emergency beds available.</p><br>
-              <a href="">Find out more &raquo;</a>
+              <a href="" class="count-a">Find out more &raquo;</a>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" id="abc">
@@ -295,7 +295,7 @@
               <span data-purecounter-start="0" data-purecounter-end="23" data-purecounter-duration="1"
                 class="purecounter"></span>
               <p><strong>Nearest Labs</strong> <br><br>Test labs and clinics near you.</p><br>
-              <a href="">Find out more &raquo;</a>
+              <a href="" class="count-a">Find out more &raquo;</a>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" id="abc">
@@ -304,7 +304,7 @@
               <span data-purecounter-start="0" data-purecounter-end="1250" data-purecounter-duration="1"
                 class="purecounter"></span>
               <p><strong>User Reviews</strong><br> <br>Over 1K positive reviews.</p><br>
-              <a href="#test">Find out more &raquo;</a>
+              <a href="#test" class="count-a">Find out more &raquo;</a>
             </div>
           </div>
         </div>
@@ -317,7 +317,7 @@
         <h2 style="text-align:center;">Services</h2>
         <p>Our services are for your good health. We are with you at every digital step.</p>
       </div>
-      <div class="container">
+      <div class="services container">
         <div class="align-items-stretch ">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-heartbeat"></i></div>
@@ -374,6 +374,7 @@
         </div>
       </div>
     </section><!-- End Services Section -->
+    
     <!-- Patient Portal Section -->
     <section id="patient-portal" class="patient-portal">
       <div class="container-patientportal">
@@ -386,12 +387,12 @@
           <!-- Add Login Form for Patient Portal -->
           <div class="login-box">
             <div class="avatar">
-              <img src="img/avatar.png" height="220px" width="263px" alt="Avatar">
+              <img src="img/avatar.png" height="280px" width="263px" alt="Avatar">
             </div>
             <form>
               <div class="textbox">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Username" name="username" required>
+                <input type="text" placeholder="Username" name="username" required class="t1">
               </div>
               <br>
               <div class="textbox">
@@ -401,10 +402,10 @@
               <br>
               <input type="submit" class="btn" value="SUBMIT">
               <div class="register-link">
-                <a href="#">Not registered yet? Register Here</a>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px;">Not registered yet?<a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> Register Here</a></p>
               </div>
               <div class="forgot-password" id="forgot-password-patient-portal">
-                <a href="forgot-password.php">Forgot Your Password?</a>
+                <a style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px;" href="forgot-password.php">Forgot Your Password?</a>
               </div>
             </form>
           </div>
@@ -420,10 +421,10 @@
         </div>
         <form action="successful_appointment.html" method="post" class="php-email-form">
           <div class="form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            <input type="text" style="width: 480px;" name="name" class="form-control" id="name" placeholder="Your Name" required>
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            <input type="email" class="form-control" style="width: 480px;" name="email" id="email" placeholder="Your Email" required>
           </div>
           <div class="form-group">
             <select name="location" id="location" class="form-select" required>
@@ -478,7 +479,7 @@
             </select>
           </div>
           <div class="text-center">
-            <button type="submit" class="btn">Make an Appointment</button>
+            <button class="btn2" type="submit">Make an Appointment</button>
           </div>
         </form>
       </div>
@@ -488,7 +489,7 @@
     <section id="doctors" class="doctors">
       <div class="section-title">
         <h2>Doctors</h2>
-        <p>Don’t compromise your health when we have listed the best doctors for you!</p>
+        <p>Don't compromise your health when we have listed the best doctors for you!</p>
       </div>
       <div class="container">
         <div class="row">
