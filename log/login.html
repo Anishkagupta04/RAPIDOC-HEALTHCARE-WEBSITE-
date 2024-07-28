@@ -6,15 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RAPIDOC</title>
-  <link rel="icon" type="image/x-icon" href="./log/favicon.ico">
   <link rel="stylesheet" href="./forgetpass.css">
   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
   <link rel="stylesheet" href="login.css">
+  <!-- Removed duplicate font-awesome import -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
   <meta name="google-signin-client_id" content="646664380070-n07i34glgcc6sanb59p3m1k5k0cgn1v1.apps.googleusercontent.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .social-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px; /* Adjust the gap as needed */
+      margin-top: 10px;
+    }
+
+    .social-icon {
+      cursor: pointer;
+    }
+
+    .social-icon i {
+      font-size: 24px;
+    }
+    </style>
 </head>
 <body>
   <div class="top-left-corner">
@@ -43,9 +59,15 @@
         <button type="submit">Register</button>
         <span id="registerMessage" style="display: none;">Account created successfully</span>
         <div class="social-container">
-          <a href="https://www.facebook.com" class="social" id="fb"><i class="lni lni-facebook-fill"></i></a>
-          <a href="#" class="social" id="googleSignIn"><i class="lni lni-google"></i></a>
-          <a href="https://www.linkedin.com" class="social" id="lin"><i class="lni lni-linkedin-original"></i></a>
+          <div onClick="handleFbSignIn()" class="social-icon">
+            <i class="lni lni-facebook-fill" style="color: #3b5998;"></i>
+          </div>
+          <div onClick="handleGoogleSignIn()" class="social-icon">
+            <i class="lni lni-google" style="color: darkturquoise;"></i>
+          </div>
+          <div onClick="handleLinkedInSignIn()" class="social-icon">
+            <i class="lni lni-linkedin-original" style="color: #0077B5;"></i>
+          </div>
         </div>
       </form>
     </div>
@@ -70,188 +92,124 @@
             <label>Remember me</label>
           </div>
           <div class="pass-link">
-            <a href="#">Forgot password?</a>
+            <a href="forgetpass.html">Forgot password?</a>
           </div>
         </div>
         <button type="submit">Login</button>
-        <span>or use your account</span>
+        <span id="loginMessage" style="display: none;">Login successful</span>
         <div class="social-container">
-          <a href="https://www.facebook.com" class="social" id="fb"><i class="lni lni-facebook-fill"></i></a>
-          <a href="#" class="social" id="googleSignIn"><i class="lni lni-google"></i></a>
-          <a href="https://www.linkedin.com" class="social" id="lin"><i class="lni lni-linkedin-original"></i></a>
+          <div onClick="handleFbSignIn()" class="social-icon">
+            <i class="lni lni-facebook-fill" style="color: #3b5998;"></i>
+          </div>
+          <div onClick="handleGoogleSignIn()" class="social-icon">
+            <i class="lni lni-google" style="color: darkturquoise;"></i>
+          </div>
+          <div onClick="handleLinkedInSignIn()" class="social-icon">
+            <i class="lni lni-linkedin-original" style="color: #0077B5;"></i>
+          </div>
         </div>
       </form>
     </div>
-    <div id="forgotPasswordPopup" class="popup">
-      <div class="popup-content">
-        <h2>Reset Password</h2>
-        <form id="resetPasswordForm">
-          <input type="email" id="resetEmail" placeholder="Enter your email" required>
-          <div class="password-input-container">
-            <input type="password" id="newPassword" placeholder="New password" required>
-            <span class="password-toggle" data-target="newPassword">
-              <i class="far fa-eye"></i>
-            </span>
-          </div>
-          <div class="password-input-container">
-            <input type="password" id="confirmPassword" placeholder="Confirm password" required>
-            <span class="password-toggle" data-target="confirmPassword">
-              <i class="far fa-eye"></i>
-            </span>
-          </div>
-          <p id="passwordRequirements">Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character.</p>
-          <button type="submit">Reset Password</button>
-        </form>
-        <span class="close">&times;</span>
-      </div>
-    </div>
+
     <div class="overlay-container">
       <div class="overlay">
         <div class="overlay-panel overlay-left">
-          <h1 class="title">Hello <br> friends</h1>
-          <p>if you have an account, login here and have fun</p>
-          <button class="ghost" id="login">Login
-            <i class="lni lni-arrow-left login"></i>
-          </button>
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button class="ghost" id="login">Sign In</button>
         </div>
         <div class="overlay-panel overlay-right">
-          <h1 class="title">Start your <br> journey now</h1>
-          <p>if you don't have an account yet, join us and start your journey.</p>
-          <button class="ghost" id="register">Register
-            <i class="lni lni-arrow-right register"></i>
-          </button>
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button class="ghost" id="register">Register</button>
         </div>
       </div>
     </div>
   </div>
-  <script src="/js/script.js"></script>
-  <script src="./forgetpass.js"></script>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script src="./forgetpass.js"></script>
-  <script type="module">
-    // Import Firebase modules
-    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js';
-    import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, reload, deleteUser } from 'https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js';
-  
+
+  <script>
     const firebaseConfig = {
       apiKey: "YOUR_API_KEY",
       authDomain: "YOUR_AUTH_DOMAIN",
       projectId: "YOUR_PROJECT_ID",
       storageBucket: "YOUR_STORAGE_BUCKET",
       messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-      appId: "YOUR_APP_ID"
+      appId: "YOUR_APP_ID",
+      measurementId: "YOUR_MEASUREMENT_ID"
     };
-  
-    // Initialize Firebase
-    initializeApp(firebaseConfig);
-    const auth = getAuth();
-  
-    // Google Sign-In
-    document.getElementById('googleSignIn').addEventListener('click', async () => {
-      const provider = new GoogleAuthProvider();
-      try {
-        const result = await signInWithPopup(auth, provider);
-        const user = result.user;
-        console.log('User signed in:', user);
-        // Redirect or perform any action after successful login
-      } catch (error) {
-        console.error('Error during Google Sign-In:', error.message);
-        alert('Google Sign-In failed: ' + error.message);
-      }
-    });
-  
-    // Register event
-    document.getElementById('registerForm').addEventListener('submit', async (e) => {
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    document.getElementById('registerForm').addEventListener('submit', (e) => {
       e.preventDefault();
-  
-      const name = document.getElementById('registerName').value.trim();
-      const email = document.getElementById('registerEmail').value.trim();
+      const email = document.getElementById('registerEmail').value;
       const password = document.getElementById('registerPassword').value;
-  
-      if (!name || !isValidEmail(email) || !isValidPassword(password)) {
-        alert('Please provide valid name, email, and password. Password must be at least 6 characters long and include at least one letter and one number.');
-        return;
-      }
-  
-      try {
-        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-        const user = userCredential.user;
-  
-        // Set a timeout for checking email verification
-        const timeout = setTimeout(async () => {
-          await reload(user);
-          if (!user.emailVerified) {
-            await deleteUser(user)
-              .then(() => {
-                alert('Account deleted due to unverified email.');
-                location.reload(); // Reload the page after deletion
-              })
-              .catch((error) => {
-                alert(error.message);
-                location.reload(); // Reload the page on error
-              });
-          }
-        }, 30000); // 30 seconds
-  
-        await sendEmailVerification(user);
-        alert('Registration successful! Please check your email to verify your account.');
-      } catch (error) {
-        alert(error.message);
-        location.reload(); // Reload the page on error
-      }
+      auth.createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          document.getElementById('registerMessage').style.display = 'block';
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     });
-  
-    // Login event
-    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
       e.preventDefault();
-  
-      const email = document.getElementById('loginEmail').value.trim();
+      const email = document.getElementById('loginEmail').value;
       const password = document.getElementById('loginPassword').value;
-  
-      if (!isValidEmail(email) || !isValidPassword(password)) {
-        alert('Please provide a valid email and password. Password must be at least 6 characters long and include at least one letter and one number.');
-        return;
-      }
-  
-      try {
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        const user = userCredential.user;
-  
-        await reload(user);
-        if (user.emailVerified) {
-          window.location.href = '/index.html';
-        } else {
-          alert('Please verify your email address.');
-        }
-      } catch (error) {
-        alert(error.message);
-        location.reload(); // Reload the page on error
-      }
+      auth.signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          document.getElementById('loginMessage').style.display = 'block';
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     });
-  
-    // Utility functions for validation
-    function isValidEmail(email) {
-      const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return pattern.test(email);
+
+    function handleFbSignIn() {
+      const provider = new firebase.auth.FacebookAuthProvider();
+      auth.signInWithPopup(provider)
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     }
-  
-    function isValidPassword(password) {
-      const pattern = /^(?=.*[a-zA-Z])(?=.*\d)[A-Za-z\d]{6,}$/;
-      return pattern.test(password);
+
+    function handleGoogleSignIn() {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider)
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     }
-  
-    // Toggle password visibility
-    document.addEventListener('DOMContentLoaded', () => {
-      const togglePasswordVisibility = (toggleElement) => {
-        const passwordField = document.querySelector(toggleElement.getAttribute('toggle'));
-        const type = passwordField.type === 'password' ? 'text' : 'password';
-        passwordField.type = type;
-        toggleElement.classList.toggle('active');
-      };
-  
-      document.querySelectorAll('.toggle-password').forEach((element) => {
-        element.addEventListener('click', () => togglePasswordVisibility(element));
+
+    function handleLinkedInSignIn() {
+      // Placeholder function, implement LinkedIn sign-in here if necessary
+      window.location.href = "https://www.linkedin.com";
+    }
+
+    document.querySelectorAll('.toggle-password').forEach(item => {
+      item.addEventListener('click', function() {
+        const input = document.querySelector(this.getAttribute('toggle'));
+        const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+        input.setAttribute('type', type);
+        this.classList.toggle('fa-eye');
+        this.classList.toggle('fa-eye-slash');
       });
+    });
+
+    document.getElementById('register').addEventListener('click', () => {
+      document.getElementById('container').classList.add("right-panel-active");
+    });
+
+    document.getElementById('login').addEventListener('click', () => {
+      document.getElementById('container').classList.remove("right-panel-active");
     });
   </script>
 </body>
