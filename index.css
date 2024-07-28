@@ -57,6 +57,19 @@ button:hover {
   width: 100%;
   margin: 0;
   padding: 0;
+    display: unset;
+    align-items: center;
+    /* justify-content: space-between; */
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+    gap: 25px;
+}
+.services .icon-box{
+    height: 400px;
+    width: 300px;
 }
 
 .content {
@@ -85,6 +98,26 @@ button:hover {
 .btn-get-started:hover {
   background-color: green;
   color: white;
+    display: inline-block;
+    background-color: #3fbcc0;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-get-started::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #000;
+    background-color: #55a5ea;
+    transition: width 0.3s ease;
+    z-index: -1;
 }
 
 select {
@@ -281,8 +314,44 @@ option {
   font-size: 1rem;
   border-radius: 20px;
   margin-bottom: 20px;
+=======
+    width: 240px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 20px;
 }
 
+.btn {
+    margin-left: 4px;
+    width: 240px;
+    height: 40px;
+    background-color: #00C896;
+    border: none;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.btn:hover{
+    background-color: #36b0b3;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #000;
+    background-color: #55a5ea;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
 #appointment.appointment.section-bg {
   margin: 0px 280px 100px;
 }
@@ -356,6 +425,9 @@ form.php-email-form {
 .php-email-form .form-select {
   margin: 0;
   padding: 10px;
+    border: none;
+    margin: 0;
+    padding: 10px;
 }
 
 .php-email-form .form-group,
@@ -416,6 +488,11 @@ select {
 .contact .php-email-form {
   width: 300%;
   background: #000;
+    width: 200%;
+}
+
+.contact .php-email-form .form-group {
+    width: 600px;
 }
 
 @media (max-width: 768px) {
@@ -566,6 +643,9 @@ body {
 .section-title p {
   font-size: 16px;
   margin-bottom: 40px;
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 40px;
 }
 
 .section-black-text p,
@@ -603,10 +683,12 @@ body {
   transition: background-color 0.3s, transform 0.3s;
 }
 
+
 .btn-submit:hover {
   background-color: #4cae4c;
   transform: scale(1.05);
 }
+
 
 @keyframes fadeIn {
   0% {
@@ -703,4 +785,202 @@ body {
   color: green;
   margin-top: 10px;
 }
+.btn2:hover{
+    background-color: #36b0b3;
+}
+.sec-img {
+    filter: drop-shadow(2px 2px 10px grey);
+  }
 
+.btn1 {
+    position: relative;
+    background-color: #3fbcc0a6;
+    color: white;
+    border: 2px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    z-index: 1;
+  }
+  
+  .btn1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #55a5ea;
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
+  
+  .btn1:hover {
+    color: #fff;
+  }
+  
+  .btn1:hover::before {
+    width: 100%;
+  }
+
+  #btn {
+    position: relative;
+    background-color: #3fbcc0a6;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    z-index: 1;
+  }
+  
+  #btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #55a5ea;
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
+  
+  #btn:hover {
+    color: #fff;
+  }
+  
+  #btn:hover::before {
+    width: 100%;
+  }
+
+  .btn {
+    position: relative;
+    background-color: #3fbcc0a6;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    z-index: 1;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #55a5ea;
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
+  
+  .btn:hover {
+    color: #fff;
+  }
+  
+  .btn:hover::before {
+    width: 100%;
+  }
+
+  .btn-submit {
+    position: relative;
+    background-color: #3fbcc0a6;
+    color: white;
+    border: 2px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    z-index: 1;
+  }
+  
+  .btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #55a5ea;
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
+  
+  .btn-submit:hover {
+    color: #fff;
+  }
+  
+  .btn-submit:hover::before {
+    width: 100%;
+  }
+
+
+  .b {
+    position: relative;
+    background-color: #3fbcc0a6;
+    color: white;
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: color 0.3s ease;
+    z-index: 1;
+  }
+  
+  .b::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 6px;
+    background-color: #55a5ea;
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
+  
+  .b:hover {
+    color: #fff;
+  }
+  
+  .b:hover::before {
+    width: 100%;
+  }
+  
+  .btn1{
+    padding:10px;
+  }
+.about-card {
+  perspective: 1000px;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.about-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.card-back {
+    transform: rotateY(180deg);
+    background-color: black;
+    backface-visibility: hidden !important;
+} 
+.card-front {
+    backface-visibility: hidden !important;
+}  
+.card-back img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+}
