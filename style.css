@@ -3,7 +3,9 @@ body {
   color: #fff;
   background-color: #000;
 }
-
+.btn1{
+  padding:10px;
+}
 a {
   color: #ffffff;
   text-decoration: none;

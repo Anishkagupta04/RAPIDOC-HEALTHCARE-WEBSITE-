@@ -53,6 +53,60 @@
   <link rel="stylesheet" href="./Css-Files/testimonial.css" />
   <script src="chatboxx.js" defer></script>
   <link rel="stylesheet" href="Css-Files/caduceus.css">
+  <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+    Copy code
+    <script type="text/javascript">
+        emailjs.init("Your_User_ID"); // Replace with your actual EmailJS User ID
+    
+        // Function to validate email address
+        function isValidEmail(email) {
+            // Simple email validation regex
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!regex.test(email)) {
+                return false;
+            }
+    
+            // Extract domain
+            const domain = email.split('@')[1].toLowerCase();
+            const validDomains = ['gmail.com', 'outlook.com', 'yahoo.com'];
+    
+            return validDomains.includes(domain);
+        }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                var email = document.getElementById('emailInput').value;
+    
+                if (!isValidEmail(email)) {
+                    alert('Please enter a valid email address from Gmail, Outlook, or Yahoo.');
+                    return;
+                }
+    
+                // Prepare the parameters to send
+                var templateParams = {
+                    to_email: email, // Set the recipient's email
+                    from_name: 'Rapidoc', // Replace with your company or your name
+                    to_name: 'Subscriber',
+                    message: 'Thank you for subscribing to our newsletter!'
+                };
+    
+                // Send email
+                emailjs.send('Your_Service_ID', 'Your_Template_ID', templateParams)
+                    .then(function(response) {
+                        console.log('Email sent successfully:', response);
+                        alert('Successfully subscribed to our newsletter!');
+                    }, function(error) {
+                        console.error('Error sending email:', error);
+                        alert('Failed to send email. Please try again later.');
+                    });
+            });
+        });
+    </script>
 </head>
 <body>
   <script src="js/caduceus.js"></script>
@@ -217,50 +271,62 @@
         </section>
         <div class="about-us-block">
           <div class="about-us-community about-card">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <img id="community-img" src="./images/checkup.png" alt=""
-                style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
-              <div class="about-us-blk-text">Comprehensive Health Checkups</div>
+            <div class="card-inner">
+              <div class="card-front">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <img id="community-img" src="./images/checkup.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
+                  <div class="about-us-blk-text">Comprehensive Health Checkups</div>
+                </div>
+                <p class="about-us-blk-para">At Rapidoc, we prioritize your well-being with thorough health checkups that are designed to detect potential health issues early. Our comprehensive packages include a range of tests and screenings, providing a detailed analysis of your health status. Book your health checkup easily through our platform and receive personalized recommendations from our medical experts.</p>
+              </div>
+              <div class="card-back">
+                <img src="./images/checkuphover.png" alt="Checkup Hover Image" style="width: 100%; height: 100%;">
+              </div>
             </div>
-            <p class="about-us-blk-para">At Rapidoc, we prioritize your well-being with thorough health checkups that
-              are designed to detect potential health issues early. Our comprehensive packages include a range of tests
-              and screenings, providing a detailed analysis of your health status. Book your health checkup easily
-              through our platform and receive personalized recommendations from our medical experts.</p>
           </div>
           <div class="about-us-product about-card">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <img id="product-img" src="./images/ward.png" alt=""
-                style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
-              <div class="about-us-blk-text">Emergency Ward Availability</div>
+            <div class="card-inner">
+              <div class="card-front">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <img id="product-img" src="./images/ward.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
+                  <div class="about-us-blk-text">Emergency Ward Availability</div>
+                </div>
+                <p class="about-us-blk-para">In critical situations, every second counts. Rapidoc offers real-time updates on the availability of emergency wards across various hospitals. This feature ensures that you can find the nearest hospital with an open emergency ward promptly, facilitating quicker access to urgent medical care when you need it most.</p>
+              </div>
+              <div class="card-back">
+                <img src="./images/wardhover.png" alt="Ward Hover Image" style="width: 100%; height: 100%;">
+              </div>
             </div>
-            <p class="about-us-blk-para">In critical situations, every second counts. Rapidoc offers real-time updates
-              on the availability of emergency wards across various hospitals. This feature ensures that you can find
-              the nearest hospital with an open emergency ward promptly, facilitating quicker access to urgent medical
-              care when you need it most.</p>
           </div>
         </div>
         <div class="about-us-block">
           <div class="about-us-location about-card">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <img id="location-img" src="./images/appointment.png" alt=""
-                style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
-              <div class="about-us-blk-text">Seamless Appointment Booking</div>
+            <div class="card-inner">
+              <div class="card-front">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <img id="location-img" src="./images/appointment.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
+                  <div class="about-us-blk-text">Seamless Appointment Booking</div>
+                </div>
+                <p class="about-us-blk-para">Say goodbye to long queues and waiting times with Rapidoc's seamless appointment booking system. Our platform allows you to prebook appointments with specialists across numerous hospitals. This ensures you receive timely consultations and reduces the hassle of waiting, making your healthcare experience more efficient and convenient.</p>
+              </div>
+              <div class="card-back">
+                <img src="./images/appointmenthover.png" alt="Appointment Hover Image" style="width: 100%; height: 100%;">
+              </div>
             </div>
-            <p class="about-us-blk-para">Say goodbye to long queues and waiting times with Rapidoc's seamless
-              appointment booking system. Our platform allows you to prebook appointments with specialists across
-              numerous hospitals. This ensures you receive timely consultations and reduces the hassle of waiting,
-              making your healthcare experience more efficient and convenient.</p>
           </div>
           <div class="about-us-event about-card">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <img id="event-img" src="./images/services.png" alt=""
-                style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
-              <div class="about-us-blk-text">Personalized Healthcare Services</div>
+            <div class="card-inner">
+              <div class="card-front">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                  <img id="event-img" src="./images/services.png" alt="" style="margin-left: 1rem; margin-top: 1rem; width: 4rem;">
+                  <div class="about-us-blk-text">Personalized Healthcare Services</div>
+                </div>
+                <p class="about-us-blk-para">Rapidoc is dedicated to offering personalized healthcare services tailored to meet your unique needs. Our platform connects you with a variety of specialists and healthcare providers, ensuring you receive the best possible care. From tailored treatment plans to ongoing health management, Rapidoc supports your journey to optimal health with expert guidance and personalized attention.</p>
+              </div>
+              <div class="card-back">
+                <img src="./images/serviceshover.png" alt="Services Hover Image" style="width: 100%; height: 100%;">
+              </div>
             </div>
-            <p class="about-us-blk-para">Rapidoc is dedicated to offering personalized healthcare services tailored to
-              meet your unique needs. Our platform connects you with a variety of specialists and healthcare providers,
-              ensuring you receive the best possible care. From tailored treatment plans to ongoing health management,
-              Rapidoc supports your journey to optimal health with expert guidance and personalized attention.</p>
           </div>
         </div>
       </div>
@@ -790,7 +856,7 @@
             <ul class="links">
               <li><a href="Html-Files/appointment.html">Appointment</a></li>
               <li><a href="index.html#patient-portal">Patient Portal</a></li>
-              <li><a href="login.html">Login account</a></li>
+              <li><a href="log/login.html">Login account</a></li>
               <li><a href="#">Helplines</a></li>
               <li><a href="index.html#contact">Location</a></li>
             </ul>
@@ -906,4 +972,5 @@
   <script src="js/progressbar_and_header.js"></script>
   <div id="progressBar"></div>
   <script src="js/patientportal_loginjs.js"></script>
+  <!-- <script src="functions/index.js"></script> -->
 </body>
