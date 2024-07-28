@@ -9,7 +9,15 @@ body {
     min-height: 100vh;
     font-family: "Raleway", sans-serif;
 }
-
+#progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 8px;
+    background-color: #3fbcc0;
+    z-index: 9999;
+}
 header {
     background-color: #007074d5;
     color: white;
@@ -140,8 +148,8 @@ button:hover {
     background-color: #cfcece;
     padding: 20px;
     border-radius: 5px;
-    width: 100%;
-    max-width: 100vw;
+    width: 111%;
+    max-width: 108vw;
     box-sizing: border-box;
     text-align: center;
 }
@@ -155,7 +163,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    width: 100%;
+    width: 106%;
     bottom: 0;
 }
 
@@ -181,7 +189,7 @@ footer ul li a {
     }
 
     input[type="date"] {
-        width: 100%;
+        width: 90%;
     }
 }
 

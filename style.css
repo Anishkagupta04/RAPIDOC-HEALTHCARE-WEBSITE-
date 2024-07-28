@@ -3,7 +3,9 @@ body {
   color: #fff;
   background-color: #000;
 }
-
+.btn1{
+  padding:10px;
+}
 a {
   color: #ffffff;
   text-decoration: none;
@@ -13,6 +15,11 @@ a {
 
   width: 10px;
 
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -88,6 +95,7 @@ h6 {
   display: inline-block;
   color: white;
 }
+
 
 .nav_link li a {
   transition: all 0.3s ease 0s;
@@ -702,17 +710,6 @@ section {
   position: relative;
   overflow: hidden;
   background: #1c413b;
-  align-content: space-evenly;
-  border-radius: 15px;
-  /* margin-top: 10px; */
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.counts .count-box:hover {
-  transform: translateY(-10px);
-  box-shadow: -10px -5px 50px 0 rgba(0, 0, 0, 0.2);
-  background-color: #3fbcc0a4;
-}
   box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
   border-radius: 50px;
 }
@@ -1094,317 +1091,11 @@ section {
 }
 
 
-/*################--feedback###############*/
-.feedback-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.feedback-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  animation: slideInFromBottom 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
-  transition: opacity 0.3s ease-in-out;
-  background-color: #3fbcc051;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(6, 130, 130, 0.1);
-  width: 100%;
-  max-width: 500px;
-  box-sizing: border-box;
-  opacity: 0;
-}
-
-.feedback-form h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  text-align: center;
-  font-weight: 1000 !important;
-}
-
-@keyframes slideInFromBottom {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  60% {
-    transform: translateY(-10px);
-    opacity: 0.8;
-  }
-  80% {
-    transform: translateY(5px);
-    opacity: 0.9;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-feedback {
-  opacity: 1;
-}
-
-.feedback-form p {
-  color: #d7d4d4;
-  font-size: 16px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.feedback-form .rating-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2px;
-}
-
-.rating-container button {
-  font-size: 24px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: grey;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.rating-container button.filled {
-  color: yellow;
-  transform: scale(1.2);
-}
-
-.rating-container button:hover,
-.rating-container button:hover ~ button {
-  transform: scale(1.1);
-}
-
-.feedback-form .rate-us {
-  text-align: center !important; 
-  display: block;
-  margin-top: 0px;
-  width: 100%;
-  color: rgb(251, 250, 250);
-  margin-bottom: 10px;
-}
-
-.feedback-form button {
-  background: none;
-  border: none;
-  font-size: 25px;
-  cursor: pointer;
-  z-index: 1;
-  padding: 12px;
-  transition: transform 0.2s ease;
-}
-
-.feedback-form form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.feedback-form label {
-  width: 100%;
-  text-align: left;
-  font-size: 14px;
-  margin-top: 9px;
-  font-weight: 600;
-  color: #fff;
-}
-
-.feedback-form input,
-.feedback-form textarea {
-  margin-top: 10px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-bottom: 15px;
-  width: 100%;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.feedback-form input:focus,
-.feedback-form textarea:focus {
-  outline: none;
-  border-color: #29888a;
-  box-shadow: 0 0 5px rgba(41, 136, 138, 0.5);
-}
-
-.feedback-form textarea {
-  resize: vertical;
-  min-height: 100px;
-  max-height: 300px;
-}
-
-.feedback-form button[type="submit"] {
-  background-color: hwb(181 16% 46%);
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.feedback-form button[type="submit"]:hover {
-  background-color: #1c5f5e;
-  transform: translateY(-2px);
-}
-
-.feedback-form button[type="submit"]:active {
-  transform: translateY(0);
-  background-color: #1c5f5e;
-}
-
-.feedback-form .form-group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-@media (max-width: 768px) {
-  .feedback-form {
-    padding: 15px;
-    max-width: 90%;
-  }
-
-  .feedback-form h2 {
-    font-size: 24px;
-  }
-
-  .feedback-form p {
-    font-size: 14px;
-  }
-
-  .feedback-form label {
-    font-size: 12px;
-  }
-
-  .feedback-form input,
-  .feedback-form textarea {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .feedback-form button {
-    font-size: 22px;
-    padding: 10px;
-  }
-
-  .feedback-form button[type="submit"] {
-    font-size: 14px;
-    padding: 10px 15px;
-  }
-}
-
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.497);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.popup-content {
-  background-color: #113435;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  position: relative;
-  width: 80%;
-  max-width: 400px;
-}
-
-.popup-content a {
-  text-decoration: none;
-  color: white;
-}
-
-.popup-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #01494b;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.popup h2 {
-  color: white;
-  font-size: 24px;
-}
-
-.popup p {
-  margin: 16px 0;
-  color: #ececec;
-}
-
-.popup img {
-  margin-top: 20px;
-}
-
-.popup-button {
-  background-color: #005253;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.popup-button:hover {
-  background-color: #206b6c;
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .popup-content {
-    padding: 15px;
-    width: 90%;
-    max-width: none;
-  }
-
-  .popup h2 {
-    font-size: 22px;
-  }
-
-  .popup p {
-    font-size: 14px;
-  }
-
-  .popup-button {
-    font-size: 14px;
-    padding: 8px 15px;
-  }
-
-  .popup-close {
-    top: 10px;
-    right: 10px;
-  }
-}
-
 /* Importing Google font - Open Sans */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 * {
-  margin: -1px;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
@@ -1542,7 +1233,7 @@ section {
 /*################----Back to top----################*/
 footer {
   position: relative;
-  padding: 5px 0;
+  padding: 50px 0;
 }
 
 #back-to-top-container {
@@ -1579,8 +1270,7 @@ footer {
 /* Style for pateint portal  */
 /* -----***************************************-----  */
 .patient-portal {
-  width: 90%;
-  max-width: 900px;
+  width: 100%;  
   /* Maximum width of the container */
   margin: 0 auto;
   /* Centers the container */
@@ -1591,7 +1281,14 @@ footer {
   margin-bottom: 7%;
   border-radius: 20px;
 }
+.patient-portal input{
+  padding: 10px; /* add some padding to make it look nicer */
+  font-size: 16px; /* set the font size */
+  border: 1px solid #ccc; /* add a border */
+  border-radius: 5px; /* add a rounded corner effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow effect */
 
+}
 /* Section title styling */
 .section-title h1 {
   color: #29888a;
@@ -1627,7 +1324,7 @@ footer {
   /* text-align: center; */
 }
 
-button {
+.btn {
   background-color: hwb(181 16% 46%);
   /* Blue background for the button */
   color: white;
@@ -1682,10 +1379,12 @@ footer {
   align-items: center;
   flex-direction: column;
 }
+
+
 .footer-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 73rem;
+  max-width: 80rem;
   width: 100%;
   margin: 0 auto;
   padding: 1rem;
@@ -1800,12 +1499,7 @@ footer {
   /* Reset to left 0 to create the effect from right to left */
   right: auto;
 }
-.horizontal-line {
-  border: 0;                              /* Remove default border */
-  height: 1px;                            /* Set the height of the line */
-  background: linear-gradient(to right, rgba(204, 204, 204, 0), #ccc, rgba(204, 204, 204, 0)); /* Gradient effect */
-  margin: 20px 0;                         /* Add some margin for spacing */
-}
+
 
 .footer-bottom {
   width: 100%;
@@ -1815,7 +1509,7 @@ footer {
 
 .footer-bottom-wrapper {
   display: flex;
-  max-width: 52rem;
+  max-width: 80rem;
   margin: 0 auto;
   gap: 1rem;
   width: 100%;
@@ -1861,19 +1555,17 @@ footer {
 /*? socials */
 .social-wrapper {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
-  gap: 0.5rem;
-  margin: 0 auto;
+    gap: 0.5rem;
+    margin: 0 auto;
 }
 
 .social-links {
   display: inline-flex;
   gap: 1rem;
   align-items: center;
-  justify-content: center; /* Center items within the flex container */
+  margin-left: -100px;
+  
 }
-
 
 .social-links img {
   width: 1.5rem;
@@ -1941,13 +1633,12 @@ footer {
 .social-links #insta:hover {
  /* Add the white background */
 background: white;
-
 /* Gradient background for text */
 background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
 background-size: 100%;
-
 /* Use the text as a mask for the background */
 -webkit-background-clip: text;
+background-clip: text;
 -webkit-text-fill-color: transparent; 
 -moz-background-clip: text;
 -moz-text-fill-color:transparent;
@@ -1977,6 +1668,7 @@ background-size: 100%;
 .social-links #mail1 a:hover{
   color: #bd4b39;
 }
+
 #abc a:hover {
   background: #55a5ea;
   border-color: #3fbbc0;
@@ -2000,15 +1692,21 @@ background-size: 100%;
   #ss {
     font-size: 12px;
   }
+   .patient-portal {
+   
+  }
 }
 
 @media screen and (max-width: 480px) {
   #ss {
     font-size: 10px;
   }
+    .patient-portal {
+     padding: 15px;
+    margin: 1.5%;
+    border-radius: 10px;
+  }
 }
-
-/* pop up */
 
 #feedback-message {
   display: none;
@@ -2019,7 +1717,8 @@ background-size: 100%;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
-  z-index: 1000;}
+  z-index: 1000;
+}
 .popup-message {
   display: none;
   margin-top: 20px;
@@ -2029,5 +1728,25 @@ background-size: 100%;
   border: 2px solid green;
   border-radius: 5px;
   text-align: center;
-
+}
+.rating-container button {
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.rating-container button:hover{
+transform: scale(1.5);
+}
+.sec-img {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.nav_link li{
+font-size: 16px;
+display: flex;
+flex-direction: row;
+}
+.st0 {
+  fill: #2F7F81;
 }

@@ -56,6 +56,179 @@
   <link rel="stylesheet" href="./Css-Files/aboutus.css" />
   <link rel="stylesheet" href="./Css-Files/testimonial.css" />
   <script src="chatboxx.js" defer></script>
+  <style>
+     .container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .content {
+            padding: 100px;
+            flex: 1;
+        }
+        .mySlides {
+            display: none;
+            position: relative;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 4s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+
+        
+
+        .slideshow-container {
+            padding-top: 15px;
+            
+        }
+
+        
+
+        .image-row-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.image-row1, .image-row2, .image-row3 {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px; 
+    animation: slideInRight 3s ease-out;
+}
+.image-row1 img, .image-row2 img, .image-row3 img {
+    border-radius: 50%; 
+    object-fit: cover; 
+    animation: fadeIn 3s ease-out; 
+}
+
+.image-row1 img {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin: 5px;
+    margin-left: 300px; 
+    animation: slideIn 1s ease-out; 
+}
+
+.image-row2 img {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-left: 200px; 
+    animation: slideIn 1s 0.5s ease-out;
+}
+
+.image-row3 img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-left: 150px; 
+    padding-bottom: 10px;
+    animation: slideIn 1s 1s ease-out;
+    
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 100px;
+            text-align: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 130px;
+            outline-color: black;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .blurred-img {
+            filter: blur(5px); 
+            width: 100%;
+        }
+        .medicine{
+          opacity: 0; 
+          animation: slideInFromRight 2s ease-out forwards, fadeIn 2s ease-out forwards;
+        }
+        @keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+        .heading {
+    font-size: 65px;
+    margin-left: 600px;
+    opacity: 0; 
+    animation: slideInFromRight 2s ease-out forwards, fadeIn 2s ease-out forwards; 
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+</style>
 </head>
 
 <body>
@@ -102,22 +275,88 @@
       padding: 100px;
     }
   </style>
-  <div class="container" style="display:flex ;">
-    <div class="content">
+  <div class="slideshow-container">
+    <div class="text-overlay">Know your&nbsp;<span style="color: #55a5ea;">Meds!</span></div>
+    <div class="mySlides fade">
+        <img src="../assets/img/pill1.jpg" style="width:100%"class="blurred-img">
+        
+    </div>
+    
+    <div class="mySlides fade">
+        <img src="../assets/img/pill2.jpg" style="width:100%"class="blurred-img">
+    </div>
+    <div class="mySlides fade">
+        <img src="../assets/img/pill3.jpg" style="width:100%"class="blurred-img">
+    </div>
+    <div class="mySlides fade">
+        <img src="../assets/img/pill4.jpg" style="width:100%"class="blurred-img">
+    </div>
+</div>
 
-      <h1 style="font-size: 65px;">
-        Know your&nbsp;<span style="color: #55a5ea;">Meds!</span><br/></h1>
-      <h4>
-        <a href="#about" class="btn-get-started scrollto" style="padding: 0 0 0 0;background-color: transparent;"><form id="medicine-form">
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 4000); 
+    }
+</script>
+
+<div class="container">
+    <div class="content">
+       
+        
+    </div>
+
+    <img class="sec-img" src="images/rd.png" alt="">
+    
+</div>
+<h4>
+  <h1 class="heading" style="font-size: 65px;margin-left: 600px;">
+    Know your&nbsp;<span style="color: #55a5ea;">Meds!</span><br/>
+</h1>
+  <a href="#about" class="btn-get-started scrollto" style="margin-left: 600px; background-color: transparent;">
+      <form class="medicine" id="medicine-form">
           <label for="medicine-name"></label>
           <input type="text" placeholder="Enter Medicine Name" id="medicine-name" name="medicine-name" required style="height: 45px;">
           <button type="submit" class="button">Search</button>
       </form>
-      <section id="medicine-info">
-      </section></a>
-      </h4>
-    </div>
-    <img class="sec-img" src="images/rd.png" alt="" />
+  </a>
+</h4>
+<section id="medicine-info" style="background-color: #55a5ea;"></section>
+<div class=".image-row-container ">
+  <div class="image-row1">
+    <img src="../assets/img/pill3.jpg" alt="Image 1" >
+    
+    
+  </div>
+  <div class="image-row3">
+    <img src="../assets/img/pill2.jpg" alt="Image 1" >
+    <!-- <img src="../assets/img/pill5.jpg" alt="Image 2">
+    <img src="../assets/img/pill6.jpg" alt="Image 3"> -->
+    
+  </div>
+  
+  <div class="image-row2">
+    <img src="../assets/img/pill4.jpg" alt="Image 1" >
+    <!-- <img src="../assets/img/pill3.jpg" alt="Image 2"> -->
+    
+    
+  </div>
+</div>
+
+
+
+
+
 
   </div>
   <footer>

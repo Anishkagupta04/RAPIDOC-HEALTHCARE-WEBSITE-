@@ -47,13 +47,18 @@ html {
 .container {
     display: unset;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: nowrap;
     width: 100%;
     margin: 0;
     padding: 0;
+    justify-content: space-evenly;
+    gap: 25px;
 }
-
+.services .icon-box{
+    height: 400px;
+    width: 300px;
+}
 .content {
     text-align: left;
     flex: 1;
@@ -268,20 +273,26 @@ option {
 .textbox input {
     width: 240px;
     height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
     align-items: center;
     margin-left: 10px;
     margin-right: 20px;
 }
 
 .btn {
-    margin-left: 2px;
-    width: 230px;
+    margin-left: 4px;
+    width: 240px;
     height: 40px;
     background-color: #00C896;
     border: none;
     font-size: 1rem;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-bottom: 20px;
+}
+.btn:hover{
+    background-color: #36b0b3;
 }
 .btn::before{
     content: '';
@@ -368,6 +379,7 @@ form.php-email-form {
 
 .php-email-form .form-control,
 .php-email-form .form-select {
+    border: none;
     margin: 0;
     padding: 10px;
 }
@@ -433,7 +445,7 @@ select {
 }
 
 .contact .php-email-form .form-group {
-    width: 100%;
+    width: 600px;
 }
 
 @media (max-width: 768px) {
@@ -585,6 +597,7 @@ body {
 }
 
 .section-title p {
+    margin-top: 20px;
     font-size: 16px;
     margin-bottom: 40px;
 }
@@ -727,7 +740,9 @@ body {
 .btn1{
     margin-right: 15px;
 }
-
+.btn2:hover{
+    background-color: #36b0b3;
+}
 .sec-img {
     filter: drop-shadow(2px 2px 10px grey);
   }
@@ -767,7 +782,6 @@ body {
     position: relative;
     background-color: #3fbcc0a6;
     color: white;
-    border: 2px solid #000;
     border-radius: 10px;
     overflow: hidden;
     transition: color 0.3s ease;
@@ -798,7 +812,6 @@ body {
     position: relative;
     background-color: #3fbcc0a6;
     color: white;
-    border: 2px solid #000;
     border-radius: 10px;
     overflow: hidden;
     transition: color 0.3s ease;
@@ -887,3 +900,42 @@ body {
   .b:hover::before {
     width: 100%;
   }
+  
+  .btn1{
+    padding:10px;
+  }
+.about-card {
+  perspective: 1000px;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.about-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.card-back {
+    transform: rotateY(180deg);
+    background-color: black;
+    backface-visibility: hidden !important;
+} 
+.card-front {
+    backface-visibility: hidden !important;
+}  
+.card-back img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+}
