@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" type="text/css" href="../Css-Files/news.css" />
   <title>RapiDoc</title>
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -38,6 +39,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
+      @media screen and (max-width: 768px) {
+  .social-wrapper {
+    font-size: 14px;
+  }
+
+  .social-links i {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .social-wrapper {
+    font-size: 12px;
+  }
+
+  .social-links i {
+    font-size: 16px;
+  }
+}
 .iti--allow-dropdown input {
     padding-left: 50px;
     background-color: black; /* Adjust padding to prevent overlap */
@@ -418,9 +438,20 @@ form.php-email-form{
      <link rel="stylesheet" href="./Css-Files/aboutus.css" />
      <link rel="stylesheet" href="./Css-Files/testimonial.css" />
      <script src="chatboxx.js" defer></script>
+     <style>#progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 8px;
+      background-color: #3fbcc0;
+      z-index: 9999;
+  
+    }</style>
 </head>
 
 <body>
+
   <div id="progressBar"></div>
   <script>
     window.onscroll = function () {
@@ -453,7 +484,7 @@ form.php-email-form{
           <li><a href="/Html-Files/contact.html">Contact us</a></li>
 
           <a href="/login.html">Sign in/Sign up</a>
-          <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+          <a href="./Html-Files/Doctor Experience.html"><button class="btn1">Find a Doctor</button></a>
 
         </ul>
       </nav>
@@ -670,36 +701,45 @@ form.php-email-form{
                   </p>
                   <form action="#" class="subscribe-form">
                     <input type="text" placeholder="Your email" required>
-                    <button type="submit">SUBSCRIBE</button>
+                    <button type="submit" style="color: black;" id="s">SUBSCRIBE</button>
                   </form>
                 </section>
             </div>
         </div>
     </div>
     <div class="footer-bottom">
-        <div class="footer-bottom-wrapper">
-            <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
-              Reserved  Made with ❤️ by RapiDoc</small>
-              <style>
-                .social-wrapper a div i {
-                  color: #afb6c7;
-                }
-               .social-wrapper a div i:hover {
-                 color: #fff;
-                }
-              </style>
-            <div class="social-wrapper">
-              <div class="social-links">
-              <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
-              <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
-              <a href="https://www.twitter.com"><div><img src="images/twitter.png" style="width: 16px; height: 15px;"></div></a>
-              <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
-                     <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
-              <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
-              <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
-              <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
-              </div>
-            </div>
+      <div class="footer-bottom-wrapper">
+        <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+          Reserved Made with ❤️ by RapiDoc</small>
+        <div class="social-wrapper">
+          <div class="social-links">
+            <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <div  id="insta">
+            <a href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div id="twit">
+            <a  href="https://www.twitter.com" target="_blank">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </div>
+          <div id="git">
+            <a  href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div id="linkd">
+            <a  href="https://www.linkedin.com" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+            <div id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+           <div id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></div>
+            <div id="mail1" ><a  href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
+          </div>
+        </div>
       </div>
     </div>
 </footer>

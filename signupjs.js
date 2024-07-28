@@ -45,38 +45,37 @@ function setItemWithExpiry(key,value,ttl){
 
 const provider = new GoogleAuthProvider();
 //signin
-document.getElementById("google").addEventListener("click", function () {
+document.getElementById("googsignin").addEventListener("click", function () {
   signInWithPopup(auth, provider)
     .then((result) => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const user = result.user;
       console.log(user);
-      setItemWithExpiry('username',user.displayName,3000); 
-     // window.location.href = "./signedup.html";
+      setItemWithExpiry('username',user.displayName,30000); 
     })
     .catch((error) => {
       console.error("Error during Google sign-in:", error);
     });
 });
 
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-  event.preventDefault();  // Prevent form from submitting the default way
-  const email = document.getElementById("loginEmail").value;
-  const password = document.getElementById("loginPassword").value;
+// document.getElementById("loginForm").addEventListener("submit", function(event) {
+//   event.preventDefault();  // Prevent form from submitting the default way
+//   const email = document.getElementById("loginEmail").value;
+//   const password = document.getElementById("loginPassword").value;
 
-  if (setTimeout(validateForm(email, password), 500)){
-    signInWithEmailAndPassword(auth,email,password)
-    .then((userCredential)=>{
-      console.log(userCredential.user);
-      setItemWithExpiry('username',userCredential.user.displayName,3000);
-   //  localStorage.setItem("username", userCredential.user.displayName); // set username into session storage 
-     window.location.href = "./index.html";
-    })
-    .catch((error)=>{
-      document.getElementById("login-failed").removeAttribute("style");
-      console.log(error);
-    })
-  }
+//   if (setTimeout(validateForm(email, password), 500)){
+//     signInWithEmailAndPassword(auth,email,password)
+//     .then((userCredential)=>{
+//       console.log(userCredential.user);
+//       setItemWithExpiry('username',userCredential.user.displayName,3000);
+//    //  localStorage.setItem("username", userCredential.user.displayName); // set username into session storage 
+//      window.location.href = "./index.html";
+//     })
+//     .catch((error)=>{
+//       document.getElementById("login-failed").removeAttribute("style");
+//       console.log(error);
+//     })
+//   }
      // const email = document.getElementById("loginEmail").value;
     // const password = document.getElementById("loginPassword").value;
     // if (setTimeout(validateForm(email, password), 500)) {
@@ -99,7 +98,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     //       console.log("no results found");
     //       document.getElementById("login-failed").removeAttribute("style");
     //     }
-  })
+  //})
   // Simulate a successful registration (Replace with actual Firebase sign-up logic)
  // console.log("Form submitted with:", {email, password});
 //}

@@ -1,7 +1,7 @@
 body {
     background-color: black;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -9,10 +9,8 @@ body {
 
 .container {
     display: flex;
-    height: 100%;
-    width: 100%;
-    flex-direction: row;
-    justify-content: right;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
     background: #0f0c29;
@@ -20,7 +18,7 @@ body {
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+    padding: 20px;
 }
 
 .items {
@@ -50,84 +48,102 @@ body {
     font-weight: bold;
 }
 
-.text1 {
-    width: 100%;
-    font-size: 40px;
+.doc {
+    flex: 1 1 300px;
+    max-width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
-}
-.text2 {
-    width: 50%;
-    margin-left: 5px;
-    font-size:20px;
-    display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
-.doc {
-    display: flex;
-    width: 40vw;
-    height: 100vh;
-    justify-content: end;
-}
 .docimg {
-  
-    display: flex;
-    justify-content: start;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
+
 .text {
-    width: 50vw;
-    padding-right: 50px;
-    height: 100vh;
-    color: black;
+    flex: 1 1 300px;
+    max-width: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    text-align: center;
 }
 
 .head1 {
-    padding: auto;
     color: white;
-    font-size: 70px;
+    font-size: 2.5rem;
     font-weight: 500;
+    margin-bottom: 10px;
 }
 
 .head2 {
     color: wheat;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 500;
-}
-
-.text input {
-    width: 60%;
-    background-color: #f5f5f5;
-    border-radius: 5px;
-    font-size: 20px;
-}
-.text input::placeholder{
-    text-align: center;
-}
-.text button {
-    width: 25%;
-    height: 50px;
-    border-radius: 10px;
-    font-size: 20px;
-    font: weight 5px;
-    border-radius: 5px;
-    background-color: #f5f5f5;
-    align-items: center;
-    background: #ADA996;
-    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-}
-
-.text button:hover {
-    cursor: pointer;
+    line-height: 1.5;
 }
 
 .input {
     display: flex;
-    flex-direction: row;
-    gap: 30px;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+}
+
+.text input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    font-size: 1rem;
+}
+
+.text button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ADA996;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Media Query for Small Screens (up to 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+   
+
+    .item1, .item2, .item3 {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%; /* Maximum width of each item */
+        height: 20px; /* Allow height to adjust based on content */
+        padding: 1rem; /* Padding for spacing */
+        text-align: center; /* Center text content */
+        color: white;
+        background-color: #39365b;
+        border: 1px solid #332e5e;
+        border-radius: 10px;
+        margin-bottom: 1rem; /* Margin bottom for spacing */
+    }
+    
+    .items {
+        
+        width: 90vw; /* 25% of the viewport width */
+        height: 20vh; /* Full viewport height */
+        z-index: 20; /* Optional: Set z-index if needed */
+    }
+
+    .doc, .text {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }

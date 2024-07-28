@@ -20,7 +20,8 @@ auth.languageCode = 'en';
 
 const provider = new GoogleAuthProvider();
 
-document.getElementById("google1").addEventListener("click", function() {
+document.getElementById("goog").addEventListener("click", function() {
+  console.log('clicked');
   signInWithPopup(auth, provider)
     .then((result) => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -32,38 +33,38 @@ document.getElementById("google1").addEventListener("click", function() {
     });
 });
 
-document.getElementById("registerForm").addEventListener("submit", function(event) {
-  event.preventDefault();  // Prevent form from submitting the default way
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+// document.getElementById("registerForm").addEventListener("submit", function(event) {
+//   event.preventDefault();  // Prevent form from submitting the default way
+//   const name = document.getElementById("name").value;
+//   const email = document.getElementById("email").value;
+//   const password = document.getElementById("password").value;
 
-  if (validateForm(name, email, password)) {
-    try {
-      createUserWithEmailAndPassword(auth,email,password)
-     .then((credential)=>
-      {
-        set(ref(database, 'users/' + credential.user.uid), { // set userdetails in realtime database 
-        username: name,
-        email: email,
-    })
-    updateProfile(credential.user,{  // update profile for username
-      displayName:name,
-    })
-    window.location.href = "index.html";
-  });
+//   if (validateForm(name, email, password)) {
+//     try {
+//       createUserWithEmailAndPassword(auth,email,password)
+//      .then((credential)=>
+//       {
+//         set(ref(database, 'users/' + credential.user.uid), { // set userdetails in realtime database 
+//         username: name,
+//         email: email,
+//     })
+//     updateProfile(credential.user,{  // update profile for username
+//       displayName:name,
+//     })
+//     window.location.href = "index.html";
+//   });
     
-    } catch (error) {
-      console.log(error);
-      //alert("error occured!")
-    }
+//     } catch (error) {
+//       console.log(error);
+//       //alert("error occured!")
+//     }
      
-    // Simulate a successful registration (Replace with actual Firebase sign-up logic)
+//     // Simulate a successful registration (Replace with actual Firebase sign-up logic)
     
-    console.log("Form submitted with:", { name, email, password });
-    //
-  }
-});
+//     console.log("Form submitted with:", { name, email, password });
+//     //
+//   }
+// });
 
 function validateForm(name, email, password) {
   if (name === "" || email === "" || password === "") {

@@ -3,16 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find a Doctor</title>
+  <title>RapiDoc</title>
   <link rel="icon" type="image/x-icon" href="../favicon.png">
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./Css-Files/Experiencestyle.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <style>
+    @media screen and (max-width: 768px) {
+  #ss {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #ss {
+    font-size: 6px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .social-wrapper {
+    font-size: 8px;
+  }
+
+  .social-links i {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .social-wrapper {
+    font-size: 8px;
+  }
+
+  .social-links i {
+    font-size: 6px;
+  }
+}
     body {
       font-family: Arial, sans-serif;
       background-color: #121212;
-      color: #E0E0E0;
+      color: white;
   
     
     }
@@ -181,36 +211,85 @@
             </ul>
           </section>
           <section class="footer-col">
+            <div>
+
             <h4>RAPIDOC Newsletter</h4><br>
             <p>
-              Subscribe to our newsletter for a weekly dose of news, updates, helpful tips, and exclusive offers.
+              Subscribe to our newsletter for a weekly dose
+              of news, updates, helpful tips, and
+              exclusive offers.
             </p>
-            <form action="#">
-              <input type="text" placeholder="Your email" required>
-              <button type="submit">SUBSCRIBE</button>
+          </div>
+            <form action="#" class="subscribe-form" id="subscribeForm">
+              <input type="email"  id="emailInput" placeholder="Your email" required>
+              <button type="submit"  id="subscribeButton" style="color: black;">SUBSCRIBE</button>
             </form>
           </section>
+          
+          <div id="subscribeBanner">
+            <p>Thanks for subscribing!</p>
+          </div>
+        
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
+      <div class="footer-bottom">
       <div class="footer-bottom-wrapper">
-        <small>© <span id="year"></span> RapiDoc | All Rights Reserved Made with ❤️ by RapiDoc</small>
+        <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+          Reserved Made with ❤️ by RapiDoc</small>
         <div class="social-wrapper">
           <div class="social-links">
-            <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
-            <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
-            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
-            <a href="https://www.instagram.com" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
-            <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
-            <a href="#" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
-            <a href="https://www.gmail.com" target="_blank"><div><i class="fa fa-envelope"></i></div></a>
+            <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <div  id="insta">
+            <a href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div id="twit">
+            <a  href="https://www.twitter.com" target="_blank">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+          <div id="git">
+            <a  href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div id="linkd">
+            <a  href="https://www.linkedin.com" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+            <div id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+           <div id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></div>
+            <div id="mail1" ><a  href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
           </div>
         </div>
       </div>
     </div>
   </footer>
+  <script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Get the email input value
+      var email = document.getElementById('emailInput').value;
+      
+      // You can add further validation of the email input here if needed
+      
+      // Show the subscribe banner
+      document.getElementById('subscribeBanner').style.display = 'block';
+      
+      // Optionally, you can reset the form
+      document.getElementById('subscribeForm').reset();
+      
+      // Simulate a delay and hide the banner after 5 seconds
+      setTimeout(function() {
+        document.getElementById('subscribeBanner').style.display = 'none';
+      }, 5000);
+    });
+  </script>
 
   <script>
     const doctorList = [
@@ -489,6 +568,9 @@
         document.body.removeChild(loader);
       });
     });
+    var currentYear = new Date().getFullYear();
+    document.getElementById('year').textContent = currentYear;
   </script>
+  
 </body>
 </html>
