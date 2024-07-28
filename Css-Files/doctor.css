@@ -1,3 +1,26 @@
+/*Cardio , Derma , ent ,gynaco & doc HTML CSS*/
+.home-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: #007074d5;
+    cursor: pointer;
+}
+.home-button:hover {
+    background-color: #02969bd5;
+}
+#progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 8px;
+    background-color: #3fbcc0;
+    z-index: 9999;
+
+  }
+  /*End*/
 *{
     margin: 0;
     padding: 0;
@@ -68,9 +91,15 @@ header {
 
 .dates {
     display: flex;
+    flex-wrap: wrap; /* allow wrapping to next line */
+    font-size: 0.8em; /* reduce font size */
     gap: 10px;
 }
-
+@media (min-width: 700px) {
+    .dates {
+      flex-wrap: nowrap; /* don't wrap to next line */
+    }
+  }
 .date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10, .date11, .date12 {
     background-color: #fff;
     padding: 10px;
@@ -209,4 +238,7 @@ transition: all 0.3s ease;
 }
 .swiper-pagination-bullet{
     opacity: 0;
+}
+.btns{
+    width: 200px;
 }

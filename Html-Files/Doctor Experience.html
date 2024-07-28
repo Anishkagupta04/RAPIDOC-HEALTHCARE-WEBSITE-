@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find a Doctor</title>
+  <title>RapiDoc</title>
   <link rel="icon" type="image/x-icon" href="../favicon.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./Css-Files/Experiencestyle.css">
   <link rel="stylesheet" href="../index.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<<<<<<< HEAD
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -111,6 +112,8 @@
         z-index: 9999;
       }
   </style>
+=======
+>>>>>>> c95240aabf081bcd1831deb17d34a642e1974c6b
 </head>
 <body>
   <div class="pre">
@@ -199,8 +202,9 @@
               <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
-          <section class="footer-col" >
+          <section class="footer-col">
             <div>
+
             <h4>RAPIDOC Newsletter</h4><br>
             <p>
               Subscribe to our newsletter for a weekly dose
@@ -208,16 +212,20 @@
               exclusive offers.
             </p>
           </div>
-            <form action="#" class="subscribe-form">
-              <input type="email" placeholder="Your email" required>
-              <button type="submit">SUBSCRIBE</button>
+            <form action="#" class="subscribe-form" id="subscribeForm">
+              <input type="email"  id="emailInput" placeholder="Your email" required>
+              <button type="submit"  id="subscribeButton" style="color: black;">SUBSCRIBE</button>
             </form>
-            <p class="confirmation-message">Thank you for subscribing!</p>
-             </section>
+          </section>
+          
+          <div id="subscribeBanner">
+            <p>Thanks for subscribing!</p>
+          </div>
+        
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
+      <div class="footer-bottom">
       <div class="footer-bottom-wrapper">
         <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
           Reserved Made with ❤️ by RapiDoc</small>
@@ -253,6 +261,7 @@
       </div>
     </div>
   </footer>
+<<<<<<< HEAD
   <div id="back-to-top-container">
     <div class="circle">
       <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -263,6 +272,30 @@
     </div>
   </div>
   <div id="progressBar"></div>
+=======
+  <script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Get the email input value
+      var email = document.getElementById('emailInput').value;
+      
+      // You can add further validation of the email input here if needed
+      
+      // Show the subscribe banner
+      document.getElementById('subscribeBanner').style.display = 'block';
+      
+      // Optionally, you can reset the form
+      document.getElementById('subscribeForm').reset();
+      
+      // Simulate a delay and hide the banner after 5 seconds
+      setTimeout(function() {
+        document.getElementById('subscribeBanner').style.display = 'none';
+      }, 5000);
+    });
+  </script>
+
+>>>>>>> c95240aabf081bcd1831deb17d34a642e1974c6b
   <script>
     window.onscroll = function () {
       var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -549,7 +582,7 @@
     var currentYear = new Date().getFullYear();
     document.getElementById('year').textContent = currentYear;
   </script>
-    <script>
+  <script>
       document.addEventListener("DOMContentLoaded", function () {
         const backToTopButton = document.getElementById('back-to-top-container');
   
@@ -579,8 +612,7 @@
         navbar.classList.toggle('nav-h');
         nav.classList.toggle('vis-h');
       })
-    </script>
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  </script>
+  <script src="./experience.js"></script>
 </body>
 </html>

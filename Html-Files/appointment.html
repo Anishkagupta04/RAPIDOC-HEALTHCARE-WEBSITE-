@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book an Appointment</title>
+    <title>RapiDoc</title>
     <link rel="shortcut icon" href="/assets/img/favi-Appoint.png" type="image/x-icon" >
     <link rel="stylesheet" href="./Css-Files/appointStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <style>
         #progressBar {
             position: fixed;
@@ -16,18 +19,26 @@
             background-color: #3fbcc0;
             z-index: 9999;
         }
+        .social-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .social-links span{
+            margin-left: 20px;
+        }
+        .icons{
+            position: relative;
+            left: 154px;
+            bottom: 17px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
     <div id="progressBar"></div>
-    <script>
-        window.onscroll = function () {
-            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrolled = (winScroll / height) * 100;
-            document.getElementById("progressBar").style.width = scrolled + "%";
-        };
-    </script>
+    <script src="../js/progressbar_and_header.js"></script>
     <header>
         <div class="logo">Doctor's Clinic</div>
     </header>
@@ -117,6 +128,43 @@
     </div>
 
     <footer>
+        <div class="footer-bottom">
+            <div class="footer-bottom-wrapper">
+              <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+                Reserved Made with ❤️ by RapiDoc</small>
+              <div class="social-wrapper">
+                <div class="social-links">
+                  <div style="margin-top: 4px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+                <div class="icons">
+                    <span  id="insta">
+                        <a href="https://www.instagram.com" target="_blank">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                      </span>
+                      <span id="twit">
+                        <a  href="https://www.twitter.com" target="_blank">
+                          <i class="bi bi-twitter-x"></i>
+                        </a>
+                      </span>
+                      <span id="git">
+                        <a  href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </span>
+                      <span id="linkd">
+                        <a  href="https://www.linkedin.com" target="_blank">
+                          <i class="fab fa-linkedin"></i>
+                        </a>
+                      </span>
+            
+                        <span id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></sp>
+                       <span id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></span>
+                        <span id="mail1" ><a  href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         <p>&copy; 2024 Doctor's Clinic</p>
         <p>Opening Hours: Mon-Fri 10:00am - 5:00pm</p>
     </footer>

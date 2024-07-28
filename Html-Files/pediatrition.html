@@ -1,30 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../Css-Files/bloodstyle.css">
     <link rel="stylesheet" href="../Css-Files/doctor.css">
-    <title>
-        Doctors
-    </title>
-    <style>
-        .home-button {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-            background-color: #007074d5;
-            cursor: pointer;
-        }
-        .home-button:hover {
-            background-color: #02969bd5;
-        }
-    </style>
+    <link href="../Css-Files/news.css" rel="stylesheet">
+    <title>RapiDoc</title>
 </head>
-
 <body>
 
     <button class="button home-button" onclick="window.location.href='../index.html#patient-portal'">Rapidoc</button>
@@ -91,11 +77,11 @@
                         <!-- Consultation details will be displayed here -->
                     </div>
                     <footer>
-                        <button>Doctors</button>
-                        <button>Book Appt.</button>
-                        <button>Chat</button>
-                        <button>Reports</button>
-                        <button>Menu</button>
+                        <button class="btns">Doctors</button>
+                        <button class="btns">Book Appt.</button>
+                        <button class="btns">Chat</button>
+                        <button class="btns">Reports</button>
+                        <button class="btns">Menu</button>
                     </footer>
                 </div>
 
@@ -107,65 +93,12 @@
     <div class="swiper-button-next swiper-navBtn"></div>
     <div class="swiper-button-prev swiper-navBtn"></div>
 </div>
-
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="glightbox/js/glightbox.min.js"></script>
 <script src="php-email-form/validate.js"></script>
 <script src="purecounter/purecounter.js"></script>
 <script src="../js/swiper-bundle.min.js"></script>
 <script src="../js/script.js"></script>
-
-<script>
-function showSchedule7(date7) {
-const scheduleDiv7 = document.getElementById('schedule7');
-let scheduleHtml7 = '';
-
-switch(date7) {
-    case '4':
-        scheduleHtml7 = `
-            <div class="consultation">
-                <h3>Max Smart Hospital, Saket</h3>
-                <p>Consultation Fee: ₹ 2000</p>
-                <p>Doctor is available on <strong>4-May-2024 12:40PM</strong></p>
-                <a href="appointment.html"><button class="consult-button">In-Hospital Consultation</button></a>
-            </div>
-            <div class="consultation">
-                <h3>Max Hospital, Lajpat Nagar</h3>
-                <p>Consultation Fee: ₹ 2000</p>
-                <p>Doctor is available on <strong>4-May-2024 2:40PM</strong></p>
-                <a href="appointment.html"><button class="consult-button">In-Hospital Consultation</button></a>
-            </div>
-        `;
-        break;
-    case '15':
-        scheduleHtml7 = `
-            <div class="consultation">
-                <h3>Max Hospital, Lajpat Nagar</h3>
-                <p>Consultation Fee: ₹ 2000</p>
-                <p>Doctor is available on <strong>15-May-2024 12:40PM</strong></p>
-                <a href="appointment.html"><button class="consult-button">In-Hospital Consultation</button></a>
-            </div>
-            <div class="consultation">
-                <h3>Max Hospital, Lajpat Nagar</h3>
-                <p>Consultation Fee: ₹ 2000</p>
-                <p>Doctor is available on <strong>15-May-2024 2:00PM</strong></p>
-                <a href="appointment.html"><button class="consult-button">In-Hospital Consultation</button></a>
-            </div>
-            <div class="consultation">
-                <p>Consultation Fee: ₹ 2500</p>
-                <p>Doctor is available on <strong>15-May-2024 2:00AM</strong></p>
-                <a href="appointment.html"><button class="consult-button">Video Consultation</button></a>
-            </div>
-        `;
-        break;
-    // Add more cases for other dates
-    default:
-        scheduleHtml7 = '<p>No schedule available for this date.</p>';
-}
-
-scheduleDiv7.innerHTML = scheduleHtml7;
-}
-
-
-
-</script>
+<script src="cardio.js"></script>
+</body>
+</html>

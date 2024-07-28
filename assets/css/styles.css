@@ -278,7 +278,8 @@ body.dark-theme {
   border-radius: 3rem;
   font-weight: var(--font-semi-bold);
   transition: .3s;
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-left: 300px;
   
 }
 
@@ -470,7 +471,10 @@ body.dark-theme {
   display: grid;
   row-gap: .5rem;
 }
-
+.footer__link:hover{
+  text-decoration: underline;
+  color: #0a71f7;
+}
 .footer__link {
   color: var(--title-color);
 }
@@ -817,22 +821,6 @@ h6 {
   background: #cecccc;
 }
 
-/*
- .icons {
-  display: flex;
-  margin-top: 30px;
-  gap: 30px;
-  cursor: pointer;
-}
-
- .icons i {
-  color: #afb6c7;
-}
-
- .icons i:hover {
-  color: #fff;
-}
-*/
 @media (max-width: 768px) {
   .footer {
     position: relative;
