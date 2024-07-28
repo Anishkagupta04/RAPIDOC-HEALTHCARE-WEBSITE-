@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Test </title>
     <link rel="stylesheet" href="test.css">
- 
+
     <link rel="icon" type="image/x-icon" href="../favicon.png">
 
     <!-- Google Web Fonts -->
@@ -31,7 +32,7 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <style>
+    <style>
         #progressBar {
             position: fixed;
             top: 0;
@@ -40,259 +41,571 @@
             height: 8px;
             background-color: #3fbcc0;
             z-index: 9999;
-        
-          }
-        h4{
+
+        }
+
+        h4 {
             color: white !important;
             font-family: none !important;
         }
-@media screen and (max-width: 768px) {
-  #ss {
-    font-size: 12px;
-  }
+
+        .nav_link {
+            list-style: none;
+            margin-top: 365px;
+        }
+
+        .header_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #022a2d;
+            color: #fff;
+            position: relative;
+        }
+
+        .header_container .img img {
+            width: 90px;
+            height: auto;
+        }
+
+        .header_container p {
+            margin-left: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: -42px;
+        }
+
+        .nav_menu {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav_link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            list-style: none;
+            margin: 0;
+        }
+
+        .nav_link li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .nav_link li a:hover {
+            background-color: #555;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-right: auto;
+            /* Move hamburger to the left */
+        }
+
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .nav_link {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #022a2d;
+                z-index: 1000;
+            }
+
+            .nav_link li {
+                font-size: 14px;
+                display: flex;
+                flex-direction: row;
+                padding: 0px;
+                height: 5px;
+                margin-left: -172px;
+            }
+
+            button {
+                background-color: #55a5ea;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 2rem;
+                cursor: pointer;
+                margin-left: -147px;
+            }
+
+            .nav_link.active {
+                display: flex;
+                margin-top: 20px;
+            }
+
+            .hamburger {
+                display: flex;
+                margin-left: -211px;
+            }
+
+            .social-links i {
+                font-size: 1rem !important;
+            }
+
+            .header_container p {
+                margin-left: 115px;
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-top: auto;
+            }
+
+            .sec-img {
+                transform-style: preserve-3d;
+                will-change: transform;
+                margin-left: -52px !important;
+            }
+            h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+    margin-top: 31px;
 }
 
-@media screen and (max-width: 480px) {
-  #ss {
-    font-size: 10px;
-  }
+.mb-5{
+    width: 213px;
+    margin-left: 58px;
+    margin-top: 30px;
+}
+        }
+
+        .social-links {
+            display: inline-flex;
+            gap: 0rem !important;
+            align-items: center;
+            margin-left: -100px;
+        }
+
+
+        
+        /* Ensure the hero heading is centered */
+.img-h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #022a2d00; /* Adjust based on your design */
 }
 
-@media screen and (max-width: 768px) {
-  .social-wrapper {
-    font-size: 14px;
-  }
-
-  .social-links i {
-    font-size: 18px;
-  }
+.hero-heading {
+    font-size: 65px;
+    color: white;
+    margin: 0;
 }
 
-@media screen and (max-width: 480px) {
-  .social-wrapper {
-    font-size: 12px;
-  }
-
-  .social-links i {
-    font-size: 16px;
-  }
+.highlight {
+    color: #55a5ea;
+    display: inline;
 }
-          </style>
+
+.sec-img {
+    display: block;
+    margin: 20px auto;
+    height: 402px;
+    margin-top: -65px;
+    margin-bottom: -79px;
+    width: auto;
+}
+
+/* Container styles */
+.container-service {
+    padding: 0; /* Remove default padding */
+}
+
+.container-service .container {
+    padding: 0 15px; /* Adjust padding for responsiveness */
+}
+
+.content-wrapper {
+    max-width: 600px;
+    margin: 0 auto; /* Center content */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-heading {
+        font-size: 50px; /* Reduce font size for smaller screens */
+    }
+    .sec-img {
+        height: 80px; /* Adjust image size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-heading {
+        font-size: 40px; /* Further reduce font size for very small screens */
+    }
+    .sec-img {
+        height: 426px;
+        margin-top: -56px;
+        margin-bottom: -111px;
+    }
+}
+
+    </style>
 </head>
+
 <body>
     <div id="progressBar"></div>
     <script>
-      window.onscroll = function () {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        document.getElementById("progressBar").style.width = scrolled + "%";
-      };
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
     </script>
-    <header class="header_container">
+    <!-- ############# Header ############# -->
+    <header class="header_container nav-h">
         <div class="img">
-        <img id="rd-logo"  style="width: 90px; height: auto;" src="/images/rd.png"> 
-      </div>
+            <img id="rd-logo" style="width: 81px;
+            height: auto;
+            margin: 13px;
+            margin-bottom: 13px;
+            margin-top: -17px;" 
+            src="/assets/img/rd1.png" />
+            <p>Rapidoc</p>
+        </div>
+        <nav class="nav_menu">
+            <ul class="nav_link vis-h">
+                <li>
+                    <a href="/"><i class="bi bi-house-door-fill"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#about"><i class="bi bi-info-circle-fill"></i> About</a>
+                </li>
+                <li>
+                    <a href="news.html"><i class="bi bi-newspaper"></i> News</a>
+                </li>
+                <li>
+                    <a href="dex.html"><i class="bi bi-gear"></i> Service</a>
+                </li>
+                <li>
+                    <a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a>
+                </li>
+                <li>
+                    <a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a>
+                </li>
+                <li>
+                    <a href="Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a>
+                </li>
+                <li>
+                    <a href="rateus.html"><i class="bi bi-star"></i>Rate Us</a>
+                </li>
 
-      </div>
-      <nav class="nav_menu">
-
-        <ul class="nav_link">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="Html-Files/news.html">News</a></li>
-          <li><a href="Html-Files/news.html">Service</a></li>
-          <li><a href="login.html">Sign in/Sign-up</a></li>
-          <li><a href="#patient-portal">patient Portal</a></li>
-          <li><a href="#doctors">Doctor</a></li>
-          <li><a href="Html-Files/contact.html">Contact us</a></li>
-
-        </ul>
-      </nav>
-      </div>
+                <li>
+                    <a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a>
+                </li>
+                <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
     </header>
+
+    <script>
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav_link');
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+
     <div class="top-search">
         <div class="search">
-            <!-- <h2>Search and Filter Options</h2>--> 
-        <input type="text" id="search-bar">
-        <i class="fa-solid fa-magnifying-glass" onclick="filterTests()"></i>
-        <!--<button onclick="filterTests()">Search</button>--> 
+            <!-- <h2>Search and Filter Options</h2>-->
+            <input type="text" id="search-bar">
+            <i class="fa-solid fa-magnifying-glass" onclick="filterTests()"></i>
+            <!--<button onclick="filterTests()">Search</button>-->
         </div>
-        <div class="img-h1" style = " display:inline">
-     <h1 style="font-size: 65px; color:white">
-        Book Your <span style="color: #55a5ea;">Blood Test <img class="sec-img" src="images/rd.png" alt="" data-sr-id="17" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.5s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.5s;"></span> 
-     </h1>
-     <div class="container-fluid container-service py-5">
-      <div class="container pt-5">
-          <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-              <h1 class="display-6 mb-3">Reliable & High-Quality Laboratory Service</h1>
-              <p class="mb-5">Trust our state-of-the-art facilities and expert staff to deliver accurate results and exceptional care for all your testing needs.</p>
-          </div>
-          <div class="row g-4">
-              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                  <div class="service-item">
-                      <div class="icon-box-primary mb-4">
-                          <i class="bi bi-heart-pulse text-dark"></i>
-                      </div>
-                      <h5 class="mb-3">Pathology Testing</h4>
-                          <p class="mb-4">Experience comprehensive analysis and precise diagnosis through our expert laboratory examinations of your bodily samples.</p>
-                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                  <div class="service-item">
-                      <div class="icon-box-primary mb-4">
-                          <i class="bi bi-lungs text-dark"></i>
-                      </div>
-                      <h5 class="mb-3">Microbiology Tests</h4>
-                          <p class="mb-4">Discover how we can help identify infections and guide your treatment with our advanced microbiological investigations.</p>
-                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                  <div class="service-item">
-                      <div class="icon-box-primary mb-4">
-                          <i class="bi bi-virus text-dark"></i>
-                      </div>
-                      <h5 class="mb-3">Biochemistry Tests</h4>
-                          <p class="mb-4">Gain valuable health insights with our detailed assessment of your body's biochemical processes and compounds.</p>
-                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                  <div class="service-item">
-                      <div class="icon-box-primary mb-4">
-                          <i class="bi bi-capsule-pill text-dark"></i>
-                      </div>
-                      <h5 class="mb-3">Histopatology Tests</h4>
-                          <p class="mb-4">Trust our microscopic tissue examinations to provide accurate information about the manifestations of diseases.</p>
-                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                  <div class="service-item">
-                      <div class="icon-box-primary mb-4">
-                          <i class="bi bi-capsule text-dark"></i>
-                      </div>
-                      <h5 class="mb-3">Urine Tests</h4>
-                          <p class="mb-4">Detect and manage various medical conditions with our thorough urine analysis services.
+        <div class="img-h1">
+            <h1 class="hero-heading">
+                Book Your <span class="highlight">Blood Test</span>
+            </h1>
+            <img class="sec-img" src="images/rd.png" alt="Logo" />
+            <div class="container-fluid container-service py-5">
+                <div class="container pt-5">
+                    <div class="text-center mx-auto content-wrapper">
+                        <h1 class="display-6 mb-3">Reliable & High-Quality Laboratory Service</h1>
+                        <p class="mb-5">Trust our state-of-the-art facilities and expert staff to deliver accurate results and exceptional care for all your testing needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-item">
+                                <div class="icon-box-primary mb-4">
+                                    <i class="bi bi-heart-pulse text-dark"></i>
+                                </div>
+                                <h5 class="mb-3">Pathology Testing</h4>
+                                    <p class="mb-4">Experience comprehensive analysis and precise diagnosis through our
+                                        expert laboratory examinations of your bodily samples.</p>
+                                    <a class="btn btn-light px-3" href="">Book Now<i
+                                            class="bi bi-chevron-double-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="service-item">
+                                <div class="icon-box-primary mb-4">
+                                    <i class="bi bi-lungs text-dark"></i>
+                                </div>
+                                <h5 class="mb-3">Microbiology Tests</h4>
+                                    <p class="mb-4">Discover how we can help identify infections and guide your
+                                        treatment with our advanced microbiological investigations.</p>
+                                    <a class="btn btn-light px-3" href="">Book Now<i
+                                            class="bi bi-chevron-double-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="service-item">
+                                <div class="icon-box-primary mb-4">
+                                    <i class="bi bi-virus text-dark"></i>
+                                </div>
+                                <h5 class="mb-3">Biochemistry Tests</h4>
+                                    <p class="mb-4">Gain valuable health insights with our detailed assessment of your
+                                        body's biochemical processes and compounds.</p>
+                                    <a class="btn btn-light px-3" href="">Book Now<i
+                                            class="bi bi-chevron-double-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="service-item">
+                                <div class="icon-box-primary mb-4">
+                                    <i class="bi bi-capsule-pill text-dark"></i>
+                                </div>
+                                <h5 class="mb-3">Histopatology Tests</h4>
+                                    <p class="mb-4">Trust our microscopic tissue examinations to provide accurate
+                                        information about the manifestations of diseases.</p>
+                                    <a class="btn btn-light px-3" href="">Book Now<i
+                                            class="bi bi-chevron-double-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-item">
+                                <div class="icon-box-primary mb-4">
+                                    <i class="bi bi-capsule text-dark"></i>
+                                </div>
+                                <h5 class="mb-3">Urine Tests</h4>
+                                    <p class="mb-4">Detect and manage various medical conditions with our thorough urine
+                                        analysis services.
+                                    </p>
+                                    <a class="btn btn-light px-3" href="">Book Now<i
+                                            class="bi bi-chevron-double-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="service-item">
+                                <div class="icon-box-primary mb-4">
+                                    <i class="bi bi-prescription2 text-dark"></i>
+                                </div>
+                                <h5 class="mb-3">Blood Tests</h4>
+                                    <p class="mb-4">Ensure your overall health and receive accurate diagnoses with our
+                                        vital blood examination services.</p>
+                                    <a class="btn btn-light px-3" href="">Book Now<i
+                                            class="bi bi-chevron-double-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="service-item">
+                                <div class="icon-box-primary mb-4">
+                                    <i class="bi bi-clipboard2-pulse text-dark"></i>
+                                </div>
+                                <h5 class="mb-3">Fever Tests</h4>
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                        tellus augue.</p>
+                                    <a class="btn btn-light px-3" href="">Book Now<i
+                                            class="bi bi-chevron-double-right ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="service-item">
+                                <div class="icon-box-primary mb-4">
+                                    <i class="bi bi-file-medical text-dark"></i>
+                                </div>
+                                <h5 class="mb-3">Allergy Tests</h4>
+                                    <p class="mb-4">Identify and manage your allergies with our reliable and
+                                        comprehensive testing services, tailored to your specific needs.</p>
+                                    <a class="btn btn-light px-3" href="">Book Now<i
+                                            class="bi bi-chevron-double-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- ############### Footer ############### -->
+    <br /><br /><br /><br /><br /><br />
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-columns">
+                <div class="other-columns">
+                    <section>
+                        <h4>Quick Links</h4>
+                        <br />
+                        <ul class="links">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#doctors">Doctors</a></li>
+                            <li><a href="./faq.html">FAQ</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Explore</h4>
+                        <br />
+                        <ul class="links">
+                            <li><a href="appointment.html">Appointment</a></li>
+                            <li><a href="#">Patient Portal</a></li>
+                            <li><a href="login.html">Login account</a></li>
+                            <li><a href="#">Helplines</a></li>
+                            <li><a href="#">Location</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Legal</h4>
+                        <br />
+                        <ul class="links">
+                            <li>
+                                <a href="customer_agreement.html">Customer Agreement</a>
+                            </li>
+                            <li><a href="privacy_policy_page.html">Privacy Policy</a></li>
+                            <li>
+                                <a href="terms_and_conditions.html">Terms and Conditions</a>
+                            </li>
+                            <li><a href="#">GDPR</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#test">Testimonials</a></li>
+                        </ul>
+                    </section>
+                    <section class="footer-col">
+                        <h4>RAPIDOC Newsletter</h4>
+                        <br />
+                        <p>
+                            Subscribe to our newsletter for a weekly dose of news, updates,
+                            helpful tips, and exclusive offers.
                         </p>
-                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                  <div class="service-item">
-                      <div class="icon-box-primary mb-4">
-                          <i class="bi bi-prescription2 text-dark"></i>
-                      </div>
-                      <h5 class="mb-3">Blood Tests</h4>
-                          <p class="mb-4">Ensure your overall health and receive accurate diagnoses with our vital blood examination services.</p>
-                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                  <div class="service-item">
-                      <div class="icon-box-primary mb-4">
-                          <i class="bi bi-clipboard2-pulse text-dark"></i>
-                      </div>
-                      <h5 class="mb-3">Fever Tests</h4>
-                          <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                  <div class="service-item">
-                      <div class="icon-box-primary mb-4">
-                          <i class="bi bi-file-medical text-dark"></i>
-                      </div>
-                      <h5 class="mb-3">Allergy Tests</h4>
-                          <p class="mb-4">Identify and manage your allergies with our reliable and comprehensive testing services, tailored to your specific needs.</p>
-                      <a class="btn btn-light px-3" href="">Book Now<i class="bi bi-chevron-double-right ms-1"></i></a>
-                  </div>
-              </div>
-          </div>
-      </div>
-     </div>
-    </div>
-    </div>
-  <footer>
-    <div class="footer-wrapper">
-        <div class="footer-columns">
-            <div class="other-columns">
-                <section>
-                    <h4>Quick Links</h4><br>
-                      <ul class="links">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="index.html#contact">Contact Us</a></li>
-                        <li><a href="dex.html">Services</a></li>
-                        <li><a href="index.html#doctors">Doctors</a></li>
-                        <li><a href="./faq.html">FAQ</a></li>
-                    </ul>
-                </section>
-                <section>
-                  <h4>Explore</h4><br>
-                  <ul class="links">
-                    <li><a href="Html-Files/appointment.html">Appointment</a></li>
-                    <li><a href="index.html#patient-portal">Patient Portal</a></li>
-                    <li><a href="login.html">Login account</a></li>
-                    <li><a href="#">Helplines</a></li>
-                    <li><a href="index.html#contact">Location</a></li>
-                  </ul>
-                </section>
-                <section>
-                  <h4>Legal</h4><br>
-                  <ul class="links">
-                    <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
-                    <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
-                    <li><a href="Html-Files/terms_and_conditions.html">GDPR</a></li>
-                    <li><a href="#">Security</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                  </ul>
-                </section>
-                <section class="footer-col">
-                  <h4>RAPIDOC Newsletter</h4><br>
-                  <p>
-                    Subscribe to our newsletter for a weekly dose
-                    of news, updates, helpful tips, and
-                    exclusive offers.
-                  </p>
-                  <form action="#" class="subscribe-form">
-                    <input type="text" placeholder="Your email" required>
-                    <button type="submit" style="color: black;">SUBSCRIBE</button>
-                  </form>
-                </section>
+                        <form action="#" class="subscribe-form">
+                            <input type="email" placeholder="Your email" required />
+                            <button type="submit" style="color: black;">SUBSCRIBE</button>
+                        </form>
+                    </section>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="footer-bottom-wrapper">
-            <small style="font-size: 1.3rem;" id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
-              Reserved  Made with ❤️ by RapiDoc</small>
-              <style>
-                .social-wrapper a div i {
-                  color: #afb6c7;
-                }
-               .social-wrapper a div i:hover {
-                 color: #fff;
-                }
-              </style>
-            <div class="social-wrapper">
-              <div class="social-links">
-              <div style="margin-left: 100px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
-              <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
-              <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a>
-              <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
-              <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
-              <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
-              <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
-              <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
-              </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-wrapper">
+                <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+                    Reserved Made with ❤️ by RapiDoc</small>
+                <style>
+                    .social-wrapper a div i {
+                        color: #afb6c7;
+                    }
+
+                    .social-wrapper a div i:hover {
+                        color: #fff;
+                    }
+                </style>
+                <div class="social-wrapper">
+                    <div class="social-links">
+                        <div style="margin-left: 100px; font-family: sans-serif">
+                            <i>Follow&nbsp;Us&nbsp;:&nbsp;</i>
+                        </div>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <div><i class="fa-brands fa-facebook-f"></i></div>
+                        </a>
+                        <!-- <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a> -->
+                        <a href="https://www.twitter.com">
+                            <div>
+                                <img src="twitter.png" style="width: 16px; height: 15px" />
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank">
+                            <div><i class="fa-brands fa-linkedin"></i></div>
+                        </a>
+                        <a href="#" target="_blank">
+                            <div><i class="fa-brands fa-instagram"></i></div>
+                        </a>
+                        <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+                            <div><i class="fa-brands fa-github"></i></div>
+                        </a>
+                        <a href="+91 1234567890" title="+91 1234567890" target="_blank">
+                            <div><i class="fa-solid fa-phone"></i></div>
+                        </a>
+                        <a href="info@rapidoc.com" target="_blank">
+                            <div><i class="fa-solid fa-envelope"></i></div>
+                        </a>
+                    </div>
+                </div>
             </div>
-      </div>
-    </div>
-</footer>
-    
+        </div>
+    </footer>
+
+
+    <script>
+        //// JavaScript working of scroll button when scrolling down
+        var backToTopBtn = document.getElementById("back-to-top");
+
+        if (backToTopBtn) {
+            backToTopBtn.addEventListener("click", function () {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, edge
+            });
+        }
+
+        // JavaScript to show scroll button when scrolling down
+        window.addEventListener("scroll", function () {
+            var scrollBtn = document.getElementById("back-to-top");
+            if (scrollBtn) {
+                if (
+                    document.body.scrollTop > 20 ||
+                    document.documentElement.scrollTop > 20
+                ) {
+                    scrollBtn.style.display = "block";
+                } else {
+                    scrollBtn.style.display = "none";
+                }
+            }
+        });
+    </script>
+
     <script src="tests.js"></script>
 </body>
+
 </html>
