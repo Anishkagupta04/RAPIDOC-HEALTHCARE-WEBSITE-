@@ -1270,10 +1270,8 @@ footer {
 /* Style for pateint portal  */
 /* -----***************************************-----  */
 .patient-portal {
-  width: 100%;  
-  /* Maximum width of the container */
+  width: 60%;  
   margin: 0 auto;
-  /* Centers the container */
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #3fbcc051;
@@ -1523,7 +1521,6 @@ footer {
 .footer-bottom small {
   font-size: 1rem;
   display: inline;
-  white-space: nowrap;
 }
 
 .footer-bottom-links {

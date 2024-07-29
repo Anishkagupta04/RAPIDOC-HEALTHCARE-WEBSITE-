@@ -438,9 +438,15 @@ form.php-email-form {
 
 #name,
 #email {
+
   margin-bottom: 10px;
   border-bottom: none;
   height: 7vh;
+
+
+    margin-bottom: 10px;
+    border-bottom: none;
+    width: 100%;
 
 }
 
