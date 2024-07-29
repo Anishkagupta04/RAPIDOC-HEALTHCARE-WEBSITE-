@@ -122,22 +122,27 @@
         @media (max-width: 768px) {
             .nav_link {
                 display: none;
-                flex-direction: column;
-                width: 100%;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                background-color: #022a2d;
-                z-index: 1000;
-            }
+        position: absolute;
+        top: 85px; /* Adjust according to your header height */
+        left: 0;
+        width: 100%;
+        background-color: #022a2d;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px; /* Optional: Adjust padding as needed */
+        z-index: 1000;
+    }
 
+    .nav_link.active {
+        display: flex; /* Show links when active */
+    }
             .nav_link li {
                 font-size: 14px;
                 display: flex;
                 flex-direction: row;
                 padding: 0px;
                 height: 5px;
-                margin-left: -172px;
+                margin-left: -5px;
             }
 
             button {
@@ -146,12 +151,12 @@
                 padding: 15px 20px;
                 border-radius: 2rem;
                 cursor: pointer;
-                margin-left: -147px;
+                margin-left: -5px;
             }
 
             .nav_link.active {
                 display: flex;
-                margin-top: 20px;
+                margin-top: -6px;
             }
 
             .hamburger {
@@ -463,7 +468,6 @@
             </div>
         </div>
     </div>
-    <!-- Bootstrap JS and dependencies -->
 
     <!-- ############### Footer ############### -->
     <br /><br /><br /><br /><br /><br />
