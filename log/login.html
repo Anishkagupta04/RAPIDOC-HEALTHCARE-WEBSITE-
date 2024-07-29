@@ -60,6 +60,9 @@
         <button type="submit">Register</button>
         <span id="registerMessage" style="display: none;">Account created successfully</span>
         <div class="social-container">
+          <div onClick="handleMicrosoftSignIn()" class="social-icon">
+            <i class="lni lni-microsoft" style="color: #00a2ed;"></i>
+          </div>
           <div onClick="handleFbSignIn()" class="social-icon">
             <i class="lni lni-facebook-fill" style="color: #3b5998;"></i>
           </div>
@@ -68,6 +71,7 @@
           </div>
           <div onClick="handleLinkedInSignIn()" class="social-icon">
             <i class="lni lni-linkedin-original" style="color: #0077B5;"></i>
+            
           </div>
         </div>
       </form>
@@ -99,6 +103,9 @@
         <button type="submit">Login</button>
         <span id="loginMessage" style="display: none;">Login successful</span>
         <div class="social-container">
+          <div onClick="handleMicrosoftSignIn()" class="social-icon">
+            <i class="lni lni-microsoft" style="color: #00a2ed;"></i>
+          </div>
           <div onClick="handleFbSignIn()" class="social-icon">
             <i class="lni lni-facebook-fill" style="color: #3b5998;"></i>
           </div>
@@ -107,6 +114,8 @@
           </div>
           <div onClick="handleLinkedInSignIn()" class="social-icon">
             <i class="lni lni-linkedin-original" style="color: #0077B5;"></i>
+            
+            
           </div>
         </div>
       </form>
@@ -199,6 +208,20 @@ function handleLinkedInSignIn() {
     console.log('LinkedIn token:', linkedin.access_token);
     linkedin.me().then(data => {
       console.log('LinkedIn user data:', data);
+    });
+  }).catch(error => {
+    console.error(error);
+  });
+}
+// Initialize OAuth.io
+OAuth.initialize('your_oauth_io_public_key'); // Replace with your OAuth.io public key
+
+// Handle Microsoft Sign In
+function handleMicrosoftSignIn() {
+  OAuth.popup('microsoft').then(microsoft => {
+    console.log('Microsoft token:', microsoft.access_token);
+    microsoft.me().then(data => {
+      console.log('Microsoft user data:', data);
     });
   }).catch(error => {
     console.error(error);
