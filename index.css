@@ -700,7 +700,7 @@ body {
 }
 
 
-@media (max-width:768px) {
+/* @media (max-width:768px) {
     .other-columns {
         display: flex;
         flex-wrap: wrap;
@@ -719,7 +719,7 @@ body {
         display: flex;
         gap: 10px;
     }
-}
+} */
 
 .social-wrapper a div i {
     color: #afb6c7;
