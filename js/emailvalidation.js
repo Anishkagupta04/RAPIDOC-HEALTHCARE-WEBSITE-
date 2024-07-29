@@ -1,7 +1,7 @@
 emailjs.init("Your_User_ID"); // Replace with your actual EmailJS User ID
     
         // Function to validate email address
-        function isValidEmail(email) {
+       export function isValidEmail(email) {
             // Simple email validation regex
             const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!regex.test(email)) {
