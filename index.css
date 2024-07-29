@@ -394,7 +394,7 @@ form.php-email-form {
 #email {
     margin-bottom: 10px;
     border-bottom: none;
-    width: 30vw;
+    width: 100%;
 }
 
 #email,
