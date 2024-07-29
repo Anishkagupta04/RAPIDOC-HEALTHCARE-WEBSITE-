@@ -1523,7 +1523,6 @@ footer {
 .footer-bottom small {
   font-size: 1rem;
   display: inline;
-  white-space: nowrap;
 }
 
 .footer-bottom-links {
