@@ -14,6 +14,41 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="bootstraptest.css" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
+
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Red+Rose:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="bootstraptest.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -86,20 +121,658 @@
         font-size: 1.1em;
       }
 
-      footer {
-        background-color: black;
-        color: #fff;
-        padding: 20px 0;
-      }
-      footer a {
-        color: #fff;
-        text-decoration: none;
-      }
+      .footer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1280px;
+  width: 95%;
+  background: #3fbcc051;
+  border-radius: 6px;
+}
 
-      footer a:hover {
-        text-decoration: none;
-        color: gray;
-      }
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: #f0f0f0;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489c6;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+.footer-col form button {
+  background: #fff;
+  border: none;
+  color: #08434551;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 1000;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+/*
+ .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+ .icons i {
+  color: #afb6c7;
+}
+
+ .icons i:hover {
+  color: #fff;
+}
+*/
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
+
+/*################----Back to top----################*/
+footer {
+  position: relative;
+  padding: 50px 0;
+}
+
+#back-to-top-container {
+  position: fixed;
+  bottom: 15px;
+  right: 77px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.circle {
+  border-radius: 50%; 
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+#back-to-top {
+  width: 55px;
+  height: 55px;
+  fill: hwb(181 16% 46%);
+  color: hwb(181 11% 13%);
+  transition: fill 0.3s;
+}
+
+#back-to-top:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* Style for pateint portal  */
+/* -----***************************************-----  */
+.patient-portal {
+  width: 60%;  
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #3fbcc051;
+  text-align: center;
+  margin-bottom: 7%;
+  border-radius: 20px;
+}
+.patient-portal input{
+  padding: 10px; /* add some padding to make it look nicer */
+  font-size: 16px; /* set the font size */
+  border: 1px solid #ccc; /* add a border */
+  border-radius: 5px; /* add a rounded corner effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow effect */
+
+}
+/* Section title styling */
+.section-title h1 {
+  color: #29888a;
+  /* Sets a blue color for the heading */
+  text-align: center;
+}
+
+.section-title p {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+/* Form styling */
+.form-group {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  /* Adds bottom margin for form-group */
+}
+
+.forgot-password {
+  margin-top: 20px;
+}
+
+.form-control {
+  width: 100%;
+  /* Full width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  /* Light gray border */
+  border-radius: 4px;
+  /* Rounded corners */
+  /* text-align: center; */
+}
+
+.btn {
+  background-color: hwb(181 16% 46%);
+  /* Blue background for the button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
+:root {
+  --text-color: #959DA5;
+  --footer-bg: #3fbcc051;
+  --footer-bottom-bg: #3fbcc051s;
+  --white: white;
+  --link-color: #959DA5;
+  --link-hover: #2F81CF;
+  --button-border: #848D97;
+}
+
+.subscribe-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 8rem;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  height: 3rem;
+  font-weight: 700;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid var(--link-color);
+  border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.subscribe-btn:hover {
+  border: 3px solid var(--white);
+}
+
+/*? footer containers */
+footer {
+  bottom: 0;
+  background-color: var(--footer-bg);
+  width: 100%;
+  min-width: 20re;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 80rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.footer-logo-columns {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 4;
+  gap: 3rem 1rem;
+}
+
+.footer-logo {
+  margin-bottom: 2rem;
+  width: 3rem;
+}
+
+.footer-logo-column {
+  display: flex;
+  grid-area: footer-logo;
+  flex-direction: column;
+  min-width: 16rem;
+  flex-grow: 1;
+  padding-right: 0.5rem;
+}
+
+.footer-logo-column p {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo-column h3 {
+  color: var(--white);
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* other columns */
+
+.other-columns {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 2rem 1rem;
+  padding-top: 2rem;
+}
+
+.other-columns ul {
+  display: flex;
+  gap: 0.75rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+.other-columns ul a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.other-columns h3 {
+  color: var(--link-color);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: ui-monospace, monospace;
+}
+
+.footer-logo svg {
+  fill: var(--white);
+}
+
+/*? Footer bottom */
+
+/* Remove underline from all links in the footer sections */
+.links a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  /* Optional: Use this if you want the link to inherit the color from its parent element */
+  transition: color 0.3s ease;
+  /* Smooth transition effect */
+}
+
+/* Add the underline effect */
+.links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #55a5ea;
+  transition: width 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.links a:hover {
+  color: #55a5ea;
+  /* Change text color to black */
+}
+
+/* Hover effect */
+.links a:hover::after {
+  width: 100%;
+  left: 0;
+  /* Reset to left 0 to create the effect from right to left */
+  right: auto;
+}
+
+
+.footer-bottom {
+  width: 100%;
+  color: var(--text-color);
+  background-color: var(--footer-bottom-bg);
+}
+
+.footer-bottom-wrapper {
+  display: flex;
+  max-width: 80rem;
+  margin: 0 auto;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 1rem;
+}
+
+.footer-bottom small {
+  font-size: 1rem;
+  display: inline;
+}
+
+.footer-bottom-links {
+  text-decoration: none;
+  list-style-type: none;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-bottom-links a {
+  color: var(--link-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.footer-bottom-links a:hover {
+  color: var(--link-hover);
+  text-decoration: none;
+}
+
+.footer-bottom>small {
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 100%
+}
+
+/*? socials */
+.social-wrapper {
+  display: flex;
+    gap: 0.5rem;
+    margin: 0 auto;
+}
+
+.social-links {
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: -100px;
+  
+}
+
+.social-links img {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+.social-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style-type: none;
+}
+
+.footer-bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+@media (min-width: 600px) {
+  .other-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-bottom-wrapper {
+    flex-direction: row;
+  }
+
+  .footer-bottom-wrapper small {
+    font-size: smaller;
+  }
+
+  .footer-bottom-links {
+    margin-left: 1.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+}
+ #abc :hover{
+  background: #55a5ea;
+  border-color: #3fbbc0;
+}
+.social-links i{
+  font-size: 1.5rem
+  }
+  #ss{
+      font-size: 1.3rem;
+  }
+.social-links #insta:hover {
+ /* Add the white background */
+background: white;
+/* Gradient background for text */
+background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+background-size: 100%;
+/* Use the text as a mask for the background */
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent; 
+-moz-background-clip: text;
+-moz-text-fill-color:transparent;
+}
+.social-links #twit a:hover{
+  color: #000;
+}
+.social-links #git a:hover{
+  color: black;
+}
+.social-links #git:hover{
+  background-color: white;
+  border-radius: 50%;
+}
+.social-links #linkd a:hover{
+  color: #0077b5;
+}
+.social-links #fb a:hover{
+  color: #1877f2;
+}
+.social-links #linkd a:hover{
+  color: #0077b5;
+}
+.social-links #phn a:hover{
+  color: red;
+}
+.social-links #mail1 a:hover{
+  color: #bd4b39;
+}
+
+#abc a:hover {
+  background: #55a5ea;
+  border-color: #3fbbc0;
+  color: black;
+}
+
+#subscribeBanner {
+  display: none;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: rgb(75, 182, 183);
+  color: black;
+  padding: 5px;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+   .patient-portal {
+   
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+    .patient-portal {
+     padding: 15px;
+    margin: 1.5%;
+    border-radius: 10px;
+  }
+}
+
+#feedback-message {
+  display: none;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+.popup-message {
+  display: none;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+  border-radius: 5px;
+  text-align: center;
+}
+.rating-container button {
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.rating-container button:hover{
+transform: scale(1.5);
+}
+.sec-img {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.nav_link li{
+font-size: 16px;
+display: flex;
+flex-direction: row;
+}
+.st0 {
+  fill: #2F7F81;
+}
+
+.h4, h4 {
+    font-size: 1.5rem;
+    color: white;
+}
+
 
       .text-center {
         text-align: center;
@@ -156,6 +829,236 @@
         background-color: #3fbcc0;
         z-index: 9999;
       }
+
+      .nav_link {
+            list-style: none;
+            margin-top: 365px;
+        }
+
+        .header_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #022a2d;
+            color: #fff;
+            position: relative;
+        }
+
+        .header_container .img img {
+            width: 90px;
+            height: auto;
+        }
+
+        .header_container p {
+            margin-left: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: -42px;
+        }
+
+        .nav_menu {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav_link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            list-style: none;
+            margin: 0;
+        }
+
+        .nav_link li a {
+            color: #fff;
+            gap: 13.2px;
+            text-decoration: none;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        button {
+                background-color: #55a5ea;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 2rem;
+                cursor: pointer;
+                margin-left: 8px;
+            }
+
+        .nav_link li a:hover {
+            background-color: #555;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-right: auto;
+            /* Move hamburger to the left */
+        }
+
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .nav_link {
+                display: none;
+        position: absolute;
+        top: 85px; /* Adjust according to your header height */
+        left: 0;
+        width: 100%;
+        background-color: #022a2d;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px; /* Optional: Adjust padding as needed */
+        z-index: 1000;
+    }
+    .header_container .img img{
+      display: none;
+    }
+
+    .nav_link.active {
+        display: flex; /* Show links when active */
+    }
+            .nav_link li {
+                font-size: 14px;
+                display: flex;
+                flex-direction: row;
+                padding: 0px;
+                height: 5px;
+                margin-left: -5px;
+            }
+
+            button {
+                background-color: #55a5ea;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 2rem;
+                cursor: pointer;
+                margin-left: 8px;
+            }
+
+            .nav_link.active {
+                display: flex;
+                margin-top: -6px;
+                gap: 31px;
+            }
+
+            .hamburger {
+                display: flex;
+                margin-left: -211px;
+            }
+
+            .social-links i {
+                font-size: 1rem !important;
+            }
+
+            .header_container p {
+                margin-left: 115px;
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-top: 11px;
+            }
+
+            .sec-img {
+                transform-style: preserve-3d;
+                will-change: transform;
+                margin-left: -52px !important;
+            }
+            h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+    margin-top: 31px;
+}
+
+.mb-5{
+    width: 213px;
+    margin-left: 58px;
+    margin-top: 30px;
+}
+        }
+
+        .social-links {
+            display: inline-flex;
+            gap: -2rem !important;
+            align-items: center;
+            margin-left: -100px;
+        }
+
+
+        
+        /* Ensure the hero heading is centered */
+.img-h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #022a2d00; /* Adjust based on your design */
+}
+
+.hero-heading {
+    font-size: 65px;
+    color: white;
+    margin: 0;
+}
+
+.highlight {
+    color: #55a5ea;
+    display: inline;
+}
+
+.sec-img {
+    display: block;
+    margin: 20px auto;
+    height: 402px;
+    margin-top: -65px;
+    margin-bottom: -79px;
+    width: auto;
+}
+
+/* Container styles */
+.container-service {
+    padding: 0; /* Remove default padding */
+}
+
+.container-service .container {
+    padding: 0 15px; /* Adjust padding for responsiveness */
+}
+
+.content-wrapper {
+    max-width: 600px;
+    margin: 0 auto; /* Center content */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-heading {
+        font-size: 50px; /* Reduce font size for smaller screens */
+    }
+    .sec-img {
+        height: 80px; /* Adjust image size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-heading {
+        font-size: 40px; /* Further reduce font size for very small screens */
+    }
+    .sec-img {
+        height: 426px;
+        margin-top: -56px;
+        margin-bottom: -111px;
+    }
+}
+
+
     </style>
   </head>
 
@@ -172,6 +1075,72 @@
         document.getElementById("progressBar").style.width = scrolled + "%";
       };
     </script>
+
+    <!-- ############# Header ############# -->
+    <header class="header_container nav-h">
+      <div class="img">
+          <img id="rd-logo" style="width: 81px;
+          height: auto;
+          margin: 13px;
+          margin-bottom: 13px;
+          margin-top: -17px;" 
+          src="/assets/img/rd1.png" />
+          <p>Rapidoc</p>
+      </div>
+      <nav class="nav_menu">
+          <ul class="nav_link vis-h">
+              <li>
+                  <a href="/"><i class="bi bi-house-door-fill"></i> Home</a>
+              </li>
+              <li>
+                  <a href="#about"><i class="bi bi-info-circle-fill"></i> About</a>
+              </li>
+              <li>
+                  <a href="news.html"><i class="bi bi-newspaper"></i> News</a>
+              </li>
+              <li>
+                  <a href="dex.html"><i class="bi bi-gear"></i> Service</a>
+              </li>
+              <li>
+                  <a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a>
+              </li>
+              <li>
+                  <a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a>
+              </li>
+              <li>
+                  <a href="Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a>
+              </li>
+              <li>
+                  <a href="rateus.html"><i class="bi bi-star"></i>Rate Us</a>
+              </li>
+
+              <li>
+                  <a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a>
+              </li>
+              <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+          </ul>
+          <div class="hamburger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+          </div>
+      </nav>
+  </header>
+
+  <script>
+      window.onscroll = function () {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("progressBar").style.width = scrolled + "%";
+      };
+
+      const hamburger = document.querySelector('.hamburger');
+      const nav = document.querySelector('.nav_link');
+      hamburger.addEventListener('click', () => {
+          nav.classList.toggle('active');
+      });
+  </script>
 
     <div class="container" id="terms-conditions-container">
       <header class="header" id="terms-conditions-header">
@@ -247,20 +1216,108 @@
         </section>
       </main>
     </div>
-    <!-- Footer -->
-    <footer class="text-center mt-5">
-      <div class="container">
-        <p>&copy; 2024 RapiDoc. All rights reserved.</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="/index.html">Home</a></li>
-          <li class="list-inline-item">
-            <a href="/Html-Files/privacy_policy_page.html">Privacy Policy</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="/Html-Files/customer_agreement.html">Customer Agreement</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+   <!-- ############### Footer ############### -->
+   <br /><br /><br /><br /><br /><br />
+   <footer>
+       <div class="footer-wrapper">
+           <div class="footer-columns">
+               <div class="other-columns">
+                   <section>
+                       <h4>Quick Links</h4>
+                       <br />
+                       <ul class="links">
+                           <li><a href="/">Home</a></li>
+                           <li><a href="#about">About Us</a></li>
+                           <li><a href="contact.html">Contact Us</a></li>
+                           <li><a href="#services">Services</a></li>
+                           <li><a href="#doctors">Doctors</a></li>
+                           <li><a href="./faq.html">FAQ</a></li>
+                       </ul>
+                   </section>
+                   <section>
+                       <h4>Explore</h4>
+                       <br />
+                       <ul class="links">
+                           <li><a href="appointment.html">Appointment</a></li>
+                           <li><a href="#">Patient Portal</a></li>
+                           <li><a href="login.html">Login account</a></li>
+                           <li><a href="#">Helplines</a></li>
+                           <li><a href="#">Location</a></li>
+                       </ul>
+                   </section>
+                   <section>
+                       <h4>Legal</h4>
+                       <br />
+                       <ul class="links">
+                           <li>
+                               <a href="customer_agreement.html">Customer Agreement</a>
+                           </li>
+                           <li><a href="privacy_policy_page.html">Privacy Policy</a></li>
+                           <li>
+                               <a href="terms_and_conditions.html">Terms and Conditions</a>
+                           </li>
+                           <li><a href="#">GDPR</a></li>
+                           <li><a href="#">Security</a></li>
+                           <li><a href="#test">Testimonials</a></li>
+                       </ul>
+                   </section>
+                   <section class="footer-col">
+                       <h4>RAPIDOC Newsletter</h4>
+                       <br />
+                       <p>
+                           Subscribe to our newsletter for a weekly dose of news, updates,
+                           helpful tips, and exclusive offers.
+                       </p>
+                       <form action="#" class="subscribe-form">
+                           <input type="email" placeholder="Your email" required />
+                           <button type="submit" style="color: black;">SUBSCRIBE</button>
+                       </form>
+                   </section>
+               </div>
+           </div>
+       </div>
+       <div class="footer-bottom">
+           <div class="footer-bottom-wrapper">
+               <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+                   Reserved Made with ❤️ by RapiDoc</small>
+               <style>
+                   .social-wrapper a div i {
+                       color: #afb6c7;
+                   }
+
+                   .social-wrapper a div i:hover {
+                       color: #fff;
+                   }
+               </style>
+               <div class="social-wrapper">
+                   <div class="social-links">
+                       <div style="margin-left: 100px; font-family: sans-serif">
+                           <i>Follow&nbsp;Us&nbsp;:&nbsp;</i>
+                       </div>
+                       <a href="https://www.facebook.com/" target="_blank">
+                           <div><i class="fa-brands fa-facebook-f"></i></div>
+                       </a>
+                       
+                       <a href="https://www.linkedin.com" target="_blank">
+                           <div><i class="fa-brands fa-linkedin"></i></div>
+                       </a>
+                       <a href="#" target="_blank">
+                           <div><i class="fa-brands fa-instagram"></i></div>
+                       </a>
+                       <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+                           <div><i class="fa-brands fa-github"></i></div>
+                       </a>
+                       <a href="+91 1234567890" title="+91 1234567890" target="_blank">
+                           <div><i class="fa-solid fa-phone"></i></div>
+                       </a>
+                       <a href="info@rapidoc.com" target="_blank">
+                           <div><i class="fa-solid fa-envelope"></i></div>
+                       </a>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </footer>
+
   </body>
 </html>
