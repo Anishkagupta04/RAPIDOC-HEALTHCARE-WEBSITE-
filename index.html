@@ -57,56 +57,7 @@
   <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
   </script>
-    Copy code
-    <script type="text/javascript">
-        emailjs.init("Your_User_ID"); // Replace with your actual EmailJS User ID
-    
-        // Function to validate email address
-        function isValidEmail(email) {
-            // Simple email validation regex
-            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!regex.test(email)) {
-                return false;
-            }
-    
-            // Extract domain
-            const domain = email.split('@')[1].toLowerCase();
-            const validDomains = ['gmail.com', 'outlook.com', 'yahoo.com'];
-    
-            return validDomains.includes(domain);
-        }
-    
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('subscribeForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-    
-                var email = document.getElementById('emailInput').value;
-    
-                if (!isValidEmail(email)) {
-                    alert('Please enter a valid email address from Gmail, Outlook, or Yahoo.');
-                    return;
-                }
-    
-                // Prepare the parameters to send
-                var templateParams = {
-                    to_email: email, // Set the recipient's email
-                    from_name: 'Rapidoc', // Replace with your company or your name
-                    to_name: 'Subscriber',
-                    message: 'Thank you for subscribing to our newsletter!'
-                };
-    
-                // Send email
-                emailjs.send('Your_Service_ID', 'Your_Template_ID', templateParams)
-                    .then(function(response) {
-                        console.log('Email sent successfully:', response);
-                        alert('Successfully subscribed to our newsletter!');
-                    }, function(error) {
-                        console.error('Error sending email:', error);
-                        alert('Failed to send email. Please try again later.');
-                    });
-            });
-        });
-    </script>
+    <script src="./js/emailvalidation.js"></script>
 </head>
 <body>
   <script src="js/caduceus.js"></script>
@@ -787,6 +738,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- testimonial section -->
     <!-- Feedback System-->
+<center>
 <div class="feedback-wrapper">
   <div class="feedback-form">
     <h2>We'd Love Your Feedback!</h2>
@@ -811,10 +763,11 @@
     <input type="email" id="email" placeholder="Enter your email" required>
     <label for="feedback">Your Feedback</label>
     <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-    <button type="submit" class="btn" style="width: 21rem;">Submit Feedback</button>
+    <button type="submit" class="btn" style="width: 10rem;">Submit Feedback</button>
   </form>
   </div>
 </div>
+</center>
 <div id="feedback-message">Thanks for the feedback! ❤️ </div>
 <div id="popup" class="popup">
   <div class="popup-content">
