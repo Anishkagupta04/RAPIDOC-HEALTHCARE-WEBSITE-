@@ -31,7 +31,7 @@
   <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
 
   <!-- CSS Files -->
-   <link rel="stylesheet" href="index.css">
+   
   <link href="Css-Files/animate.min.css" rel="stylesheet">
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -99,8 +99,8 @@
       <div class="container" style="display:flex ;">
         <div class="content">
     
-          <h1 style="font-size: 65px;">
-            Welcome to <span style="color: #55a5ea;">RapiDoc!</span> <br /> Your one-stop digital <br> healthcare
+          <h1 >
+            Welcome to <span style="color: #55a5ea;">RapiDoc!</span>  Your one-stop digital  healthcare
             destination
           </h1>
           
@@ -152,7 +152,7 @@
         
 
     <section id="expect">
-        <h1 style="font-size: 40px;">What to <span style="color: #55a5ea;font-size: 40px;">Expect?</h1>
+        <h1>What to <span style="color: #55a5ea;">Expect?</h1>
         <div class="expect-grid">
             <div class="expect-item">
                 <h2 >1</h2>
@@ -192,8 +192,8 @@
     </script>
 
     <section id="tips">
-      <h2 style="font-size: 40px;">
-        Health<span style="color: #55a5ea; font-size: 40px;"> Tips</span>
+      <h2 >
+        Health<span style="color: #55a5ea;"> Tips</span>
         
     </h2>
     
@@ -329,6 +329,15 @@
                     }
                   }
                 </script>
+                <script>
+                
+                  document.getElementById('hamburger-menu').addEventListener('click', function() {
+                  var navMenu = document.getElementById('nav-menu');
+                  // Toggle the 'active' class on the navigation menu
+                  navMenu.classList.toggle('active');
+                  });
+                
+                </script>
     
             </div>
           </div>
@@ -370,6 +379,7 @@
           </div>
         </div>
       </footer>
+      <script src="checkup.js"></script>
     
 </body>
 </html>
