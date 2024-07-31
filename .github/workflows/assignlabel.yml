@@ -7,7 +7,7 @@ on:
 jobs:
   assign-issue:
     runs-on: ubuntu-latest
-    if: contains(github.event.comment.body, '/a')
+    if: contains(github.event.comment.body, '/assign')
     steps:
       - name: Check commenter permissions
         id: check-permissions
