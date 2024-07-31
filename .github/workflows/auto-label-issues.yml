@@ -1,22 +1,47 @@
-name: Auto-label on Any Issue
+name: Auto Label Issue
 
 on:
   issues:
-    types: [opened]
+    types: [opened, reopened, edited]
 
 jobs:
-  auto-label:
+  label_issue:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
-      - name: Add labels to any new issue
-        uses: actions/github-script@v4
+      - name: Label Issue
+        uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const labelsToAdd = ["gssoc"];
-            await github.issues.addLabels({
+            const issue = context.payload.issue;
+            const issueBody = issue.body ? issue.body.toLowerCase() : '';
+            const issueTitle = issue.title.toLowerCase();
+            
+            // Add gssoc label to all issues
+            await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: context.issue.number,
-              labels: labelsToAdd
+              issue_number: issue.number,
+              labels: ['gssoc']
             });
+            const addLabel = async (label) => {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: [label]
+              });
+            };
+            if (issueBody.includes('documentation') || issueTitle.includes('doc') || issueBody.includes('readme')) {
+              await addLabel('documentation');
+            }
+            
+            if (issueBody.includes('feature') || issueBody.includes('enhancement') || issueTitle.includes('add') || issueTitle.includes('implement')) {
+              await addLabel('enhancement');
+
+            }
+            if (issueBody.includes('bug') || issueBody.includes('fix') || issueTitle.includes('fix') || issueTitle.includes('resolve')) {
+              await addLabel('bug');
+            }

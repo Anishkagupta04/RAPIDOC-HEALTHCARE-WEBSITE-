@@ -3,7 +3,9 @@ body {
   color: #fff;
   background-color: #000;
 }
-
+.btn1{
+  padding:10px;
+}
 a {
   color: #ffffff;
   text-decoration: none;
@@ -1268,11 +1270,8 @@ footer {
 /* Style for pateint portal  */
 /* -----***************************************-----  */
 .patient-portal {
-  width: 90%;
-  max-width: 900px;
-  /* Maximum width of the container */
+  width: 60%;  
   margin: 0 auto;
-  /* Centers the container */
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #3fbcc051;
@@ -1280,7 +1279,14 @@ footer {
   margin-bottom: 7%;
   border-radius: 20px;
 }
+.patient-portal input{
+  padding: 10px; /* add some padding to make it look nicer */
+  font-size: 16px; /* set the font size */
+  border: 1px solid #ccc; /* add a border */
+  border-radius: 5px; /* add a rounded corner effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow effect */
 
+}
 /* Section title styling */
 .section-title h1 {
   color: #29888a;
@@ -1316,7 +1322,7 @@ footer {
   /* text-align: center; */
 }
 
-button {
+.btn {
   background-color: hwb(181 16% 46%);
   /* Blue background for the button */
   color: white;
@@ -1515,7 +1521,6 @@ footer {
 .footer-bottom small {
   font-size: 1rem;
   display: inline;
-  white-space: nowrap;
 }
 
 .footer-bottom-links {
@@ -1625,13 +1630,12 @@ footer {
 .social-links #insta:hover {
  /* Add the white background */
 background: white;
-
 /* Gradient background for text */
 background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
 background-size: 100%;
-
 /* Use the text as a mask for the background */
 -webkit-background-clip: text;
+background-clip: text;
 -webkit-text-fill-color: transparent; 
 -moz-background-clip: text;
 -moz-text-fill-color:transparent;
@@ -1662,4 +1666,84 @@ background-size: 100%;
   color: #bd4b39;
 }
 
+#abc a:hover {
+  background: #55a5ea;
+  border-color: #3fbbc0;
+  color: black;
+}
 
+#subscribeBanner {
+  display: none;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: rgb(75, 182, 183);
+  color: black;
+  padding: 5px;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+   .patient-portal {
+   
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+    .patient-portal {
+     padding: 15px;
+    margin: 1.5%;
+    border-radius: 10px;
+  }
+}
+
+#feedback-message {
+  display: none;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+.popup-message {
+  display: none;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+  border-radius: 5px;
+  text-align: center;
+}
+.rating-container button {
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.rating-container button:hover{
+transform: scale(1.5);
+}
+.sec-img {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.nav_link li{
+font-size: 16px;
+display: flex;
+flex-direction: row;
+}
+.st0 {
+  fill: #2F7F81;
+}
