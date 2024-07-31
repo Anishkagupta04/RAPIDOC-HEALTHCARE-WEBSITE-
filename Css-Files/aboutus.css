@@ -126,41 +126,33 @@
   margin: 0 1rem; 
 }
 
-@media only screen and (max-width: 1250px) {
-  .about-us-community, .about-us-event, .about-us-location, .about-us-product { width: 45%; }
+
+@media only screen and (max-width: 760px) {
+  .about-us-block {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 98%;
+  }
+
+  .about-us-community,
+  .about-us-event,
+  .about-us-location,
+  .about-us-product {
+    width: 100%;
+    margin-left: 1rem;
+  }
 }
 
 @media only screen and (max-width: 1020px) {
-  .about-us-block { 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
+  .about-us-community,
+  .about-us-event,
+  .about-us-location,
+  .about-us-product {
+    width: 98% !important;
   }
-  .about-us-community, .about-us-event, .about-us-location, .about-us-product { 
-    width: 90%; 
-    height: auto; 
-    padding: 0.5rem; 
-  }
-}
 
-@media only screen and (max-width: 768px) {
-  .about-us-heading { 
-    font-size: 32px; 
-    margin-bottom: 3rem; 
-    margin-top: 3rem; 
-  }
-  .about-service { 
-    margin-left: 0; 
-    margin-right: 0; 
-  }
-  .sec-1, .sec-2 {
-    width: 100%; 
-  }
-  .a-1, .a-2, .a-3 { 
-    width: 90%; 
-  }
-  .about-img { 
-    margin-left: auto; 
-    margin-right: auto; 
+  .about-us-blk-para {
+    font-size: 15px !important;
   }
 }
