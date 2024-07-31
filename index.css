@@ -973,3 +973,85 @@ body {
       width: 5rem;
     }
   }
+
+  /*Patient Portal*/
+@media screen and (min-width: 992px) {
+    .section-title h2 {
+      font-size: 36px;
+    }
+    
+    .section-title p {
+      font-size: 18px;
+    }
+    
+    .login-box {
+      max-width: 450px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .section-title h2 {
+      font-size: 30px;
+    }
+    
+    .section-title p {
+      font-size: 16px;
+    }
+    
+    .login-box {
+      max-width: 400px;
+    }
+    
+    .avatar img {
+      max-width: 80%;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .section-title h2 {
+      font-size: 24px;
+    }
+    
+    .section-title p {
+      font-size: 14px;
+    }
+    
+    .login-box {
+      max-width: 100%;
+      padding: 15px;
+    }
+    
+    .avatar img {
+      max-width: 60%;
+    }
+    
+    .textbox input {
+      padding: 8px 8px 8px 25px;
+    }
+    
+    .btn {
+      padding: 8px;
+    }
+    
+    .register-link p, .forgot-password a {
+      font-size: 12px;
+    }
+  }
+  @media screen and (width: 463px) and (height: 592px) {
+    .section-title h2 {
+      font-size: 30px;
+    }
+    
+    .section-title p {
+      font-size: 16px;
+    }
+    
+    .login-box {
+      max-width: 400px;
+    }
+    
+    .avatar img {
+      width: 600px;
+      height: 100px;
+    }
+  }

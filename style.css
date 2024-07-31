@@ -1689,19 +1689,11 @@ background-clip: text;
   #ss {
     font-size: 12px;
   }
-   .patient-portal {
-   
-  }
 }
 
 @media screen and (max-width: 480px) {
   #ss {
     font-size: 10px;
-  }
-    .patient-portal {
-     padding: 15px;
-    margin: 1.5%;
-    border-radius: 10px;
   }
 }
 
