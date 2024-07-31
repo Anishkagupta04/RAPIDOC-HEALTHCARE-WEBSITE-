@@ -1052,3 +1052,7 @@ body {
       max-width: 30%;
     }
   }
+  .doc-app:hover{
+    background-color: teal !important;
+    font-size: 15px;
+  }

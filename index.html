@@ -11,6 +11,7 @@
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="googletranslate.css">
+  <link rel="stylesheet" href="Css-Files/popupfeedbacksctioncss.css">
   <script type="text/javascript">
     (function () {
       emailjs.init({
@@ -522,7 +523,7 @@
               <div class="member-info">
                 <h4>Dermatologist</h4>
                 <br>
-                <div class="nxt-pg"><a href="Html-Files/derma.html"><button type="">Appoint a Doctor</button></a></div>
+                <div class="nxt-pg"><a href="Html-Files/derma.html"><button type="" class="doc-app">Appoint a Doctor</button></a></div>
               </div>
             </div>
           </div>
@@ -532,7 +533,7 @@
               <div class="member-info">
                 <h4>Gynecologist</h4>
                 <br>
-                <div class="nxt-pg"><a href="Html-Files/gynaco.html"><button type="">Appoint a Doctor</button></a></div>
+                <div class="nxt-pg"><a href="Html-Files/gynaco.html"><button type="" class="doc-app">Appoint a Doctor</button></a></div>
               </div>
             </div>
           </div>
@@ -543,7 +544,7 @@
               <div class="member-info">
                 <h4>Cardiologist</h4>
                 <br>
-                <div class="nxt-pg"><a href="Html-Files/cardio.html"><button type="">Appoint a Doctor</button></a></div>
+                <div class="nxt-pg"><a href="Html-Files/cardio.html"><button type="" class="doc-app">Appoint a Doctor</button></a></div>
               </div>
             </div>
           </div>
@@ -554,7 +555,7 @@
               <div class="member-info">
                 <h4>ENT</h4>
                 <br>
-                <div class="nxt-pg"><a href="Html-Files/ent.html"><button type="">Appoint a Doctor</button></a></div>
+                <div class="nxt-pg"><a href="Html-Files/ent.html"><button type="" class="doc-app">Appoint a Doctor</button></a></div>
               </div>
             </div>
           </div>
@@ -565,7 +566,7 @@
               <div class="member-info">
                 <h4>Pediatrician</h4>
                 <br>
-                <div class="nxt-pg"><a href="Html-Files/pediatrition.html"><button type="">Appoint a Doctor</button></a>
+                <div class="nxt-pg"><a href="Html-Files/pediatrition.html"><button type="" class="doc-app">Appoint a Doctor</button></a>
                 </div>
               </div>
             </div>
@@ -742,37 +743,36 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- testimonial section -->
-    <!-- Feedback System-->
-<center>
-<div class="feedback-wrapper">
-  <div class="feedback-form">
-    <h2>We'd Love Your Feedback!</h2>
-    <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> Healthcare</p>
-        <p>This is a confused face emoji: &#x1f615;</p>
+    <!--POPUP Feedback System-->
+  <div id="overlay" class="overlay"></div>
+
+  <div id="feedback-wrapper" class="feedback-wrapper">
+    <div class="feedback-form">
+      <span class="close-btn" onclick="closeFeedback()">&times;</span>
+      <h2>We'd Love Your Feedback!</h2>
+      <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> Healthcare</p>
+      <p>This is a confused face emoji: &#x1f615;</p>
       <div>
-      <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
-      <div class="rating-container">
+        <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
         <div class="rating-container">
           <button type="button" onclick="handleRatingChange(1)">😡</button>
           <button type="button" onclick="handleRatingChange(2)">☹️</button>
           <button type="button" onclick="handleRatingChange(3)">😐</button>
           <button type="button" onclick="handleRatingChange(4)">🙂</button>
           <button type="button" onclick="handleRatingChange(5)">😄</button>
+        </div>
       </div>
-      </div>
+      <form id="feedback-form" onsubmit="handleSubmit(event)">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <label for="feedback">Your Feedback</label>
+        <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
+        <button type="submit" class="btn" style="width: 10rem;margin-left: 60px;">Submit Feedback</button>
+      </form>
     </div>
-  <form id="feedback-form" onsubmit="handleSubmit(event)">
-    <label for="name">Your Name</label>
-    <input type="text" id="name" placeholder="Enter your name" required>
-    <label for="email">Your Email</label>
-    <input type="email" id="email" placeholder="Enter your email" required>
-    <label for="feedback">Your Feedback</label>
-    <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-    <button type="submit" class="btn" style="width: 10rem;">Submit Feedback</button>
-  </form>
   </div>
-</div>
-</center>
 <div id="feedback-message">Thanks for the feedback! ❤️ </div>
 <div id="popup" class="popup">
   <div class="popup-content">
@@ -930,5 +930,5 @@
   <script src="js/progressbar_and_header.js"></script>
   <div id="progressBar"></div>
   <script src="js/patientportal_loginjs.js"></script>
-  <!-- <script src="functions/index.js"></script> -->
+  <script src="js/popupfeedback.js"></script>
 </body>
