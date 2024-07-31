@@ -24,30 +24,3 @@ jobs:
               repo: context.repo.repo,
               labels: ['gssoc']
             })
-
-      - name: Add additional labels based on title
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            const title = context.payload.pull_request.title.toLowerCase();
-            const labelsToAdd = [];
-            
-            if (title.includes('documentation')) {
-              labelsToAdd.push('documentation');
-            }
-            if (title.includes('feature')) {
-              labelsToAdd.push('feature');
-            }
-            if (title.includes('bug')) {
-              labelsToAdd.push('bug');
-            }
-            
-            if (labelsToAdd.length > 0) {
-              github.rest.issues.addLabels({
-                issue_number: context.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                labels: labelsToAdd
-              });
-            }
