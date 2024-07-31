@@ -1051,7 +1051,6 @@ body {
     }
     
     .avatar img {
-      width: 600px;
-      height: 100px;
+      max-width: 30%;
     }
   }
