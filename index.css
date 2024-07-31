@@ -121,7 +121,9 @@ option {
     margin: 4px 4px;
     background-color: white;
 }
-
+.img p{
+    display: none;
+}
 @media only screen and (max-width: 820px) {
     .hamburger {
         display: block;
@@ -152,11 +154,14 @@ option {
     .vis-h {
         opacity: 0;
     }
-
-    .img {
+    .img img{
+        display: none;
+    }
+    .img p{
+        display: block;
         position: relative;
         left: 300px;
-        bottom: 12px;
+        bottom: 0;
     }
 }
 
