@@ -939,3 +939,37 @@ body {
     display: block;
     margin: 0 auto;
 }
+
+@media screen and (min-width: 768px) {
+    .feedback-form button[type="submit"] {
+      margin-left: 190px;
+      margin-right: auto;
+    }
+  }
+  
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    .feedback-form button[type="submit"] {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media screen and (max-width: 479px) {
+    .feedback-form button[type="submit"] {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      max-width: 10rem;
+    }
+  }
+  @media screen and (min-width: 592px) and (max-width:933px) {
+    .feedback-form button[type="submit"] {
+      margin-left: 100px;
+    }
+  }
+  @media screen and (min-width: 592px) and (max-width:941px) {
+    .feedback-form button[type="submit"] {
+      margin-left: 50px;
+      width: 5rem;
+    }
+  }
