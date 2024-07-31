@@ -17,11 +17,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: transparent;
-    padding: 20px;
+    padding: 100px;
     border-radius: 10px;
     z-index: 1000;
     max-width: 500px;
     width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   
   .close-btn {
