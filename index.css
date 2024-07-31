@@ -973,21 +973,14 @@ body {
       width: 5rem;
     }
   }
-
-  /*Patient Portal*/
-@media screen and (min-width: 992px) {
-    .section-title h2 {
-      font-size: 36px;
-    }
+  /*Appointment*/
+  @media (width: 382px) and (height:592px){
     
-    .section-title p {
-      font-size: 18px;
-    }
-    
-    .login-box {
-      max-width: 450px;
+    #appointment {
+        width: 500px;
     }
   }
+  /*Patient Portal*/
   
   @media screen and (min-width: 768px) and (max-width: 991px) {
     .section-title h2 {
