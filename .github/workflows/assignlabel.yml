@@ -27,7 +27,6 @@ jobs:
             const allowedPermissions = ['admin', 'maintain', 'write'];
             const hasPermission = allowedPermissions.includes(repoPermission.permission);
             
-            console.log(`Commenter ${commenter} has permission: ${hasPermission}`);
             return hasPermission;
       - name: Assign issue to creator
         if: steps.check-permissions.outputs.result == 'true'
