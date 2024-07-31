@@ -60,6 +60,9 @@
         <button type="submit">Register</button>
         <span id="registerMessage" style="display: none;">Account created successfully</span>
         <div class="social-container">
+          <div onClick="handleGitHubSignIn()" class="social-icon">
+            <i class="lni lni-github-original" style="color: #333;"></i>
+          </div>
           <div onClick="handleMicrosoftSignIn()" class="social-icon">
             <i class="lni lni-microsoft" style="color: #00a2ed;"></i>
           </div>
@@ -103,6 +106,9 @@
         <button type="submit">Login</button>
         <span id="loginMessage" style="display: none;">Login successful</span>
         <div class="social-container">
+          <div onClick="handleGitHubSignIn()" class="social-icon">
+            <i class="lni lni-github-original" style="color: #333;"></i>
+          </div>
           <div onClick="handleMicrosoftSignIn()" class="social-icon">
             <i class="lni lni-microsoft" style="color: #00a2ed;"></i>
           </div>
@@ -227,6 +233,18 @@ function handleMicrosoftSignIn() {
     console.error(error);
   });
 }
+
+function handleGitHubSignIn() {
+  const provider = new firebase.auth.GithubAuthProvider();
+  auth.signInWithPopup(provider)
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
+
 
 
     document.querySelectorAll('.toggle-password').forEach(item => {
