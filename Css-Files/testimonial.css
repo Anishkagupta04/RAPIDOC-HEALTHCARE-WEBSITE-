@@ -145,11 +145,11 @@
 
 @media screen and (max-width: 768px) {
   .testimonals {
-    width: 90%;
+    width: 100%;
   }
 
   .testimonals-content {
-    width: 100%;
+    width: 90%;
     font-size: 10px;
   }
 
