@@ -42,7 +42,7 @@
 @media screen and (min-width: 968px) {
   :root {
     --biggest-font-size: 3rem;
-    --h2-font-size: 1.75rem;
+    --h2-font-size: 3.75rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
@@ -86,7 +86,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+width: 40%;
   height: auto;
   padding: 0px;
   padding-top: 100px;
@@ -146,8 +146,8 @@ body.dark-theme {
 }
 
 /*=============== LAYOUT ===============*/
-.container {
-  max-width: 968px;
+/* .container {
+  max-width: 1000px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -155,7 +155,7 @@ body.dark-theme {
 .grid {
   display: grid;
   gap: 1.5rem;
-}
+} */
 
 /*=============== HEADER ===============*/
 .header {
@@ -243,32 +243,8 @@ body.dark-theme {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-/*=============== HOME ===============*/
-.home__container {
-  row-gap: 3rem;
-}
 
-.home__title {
-  font-size: var(--biggest-font-size);
-  font-weight: var(--font-bold);
-  margin-bottom: var(--mb-0-75);
-  padding-left: 100px;
-}
 
-.home__description {
-  margin-bottom: var(--mb-2);
-  padding-left: 100px;
-  
-}
-.home img {
-  max-width: 100%;
-  height: auto;
-  margin-left: 500px; 
-  margin-top: -350px;
-  padding-top: 100px;
-  display: flex;
-  padding-left: 250px;
-}
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
@@ -278,8 +254,8 @@ body.dark-theme {
   border-radius: 3rem;
   font-weight: var(--font-semi-bold);
   transition: .3s;
-  margin-top: 50px;
-  margin-left: 300px;
+  margin-top: 30px;
+  margin-left: 6px
   
 }
 
@@ -313,22 +289,7 @@ body.dark-theme {
   font-size: 1.5rem;
 }
 
-/*=============== ABOUT ===============*/
-.about__container {
-  gap: 2.5rem;
-}
 
-.about__data {
-  text-align: justify;
-  padding-left: 100px;
-}
-.about img {
-  max-width: 100%;
-  height: auto;
-  margin-left: 0px; 
-  margin-top: 100px;
-  padding-left: 0px;
-}
 
 /*=============== SECURITY ===============*/
 .security__container {
@@ -391,30 +352,7 @@ body.dark-theme {
 
 
 
-/*=============== APP ===============*/
-.app__container {
-  gap: 2.5rem;
-}
 
-.app__data {
-  text-align: center;
-}
-
-.app__description {
-  margin-bottom: var(--mb-1-5);
-  padding-left: 100px;
-}
-
-.app__buttons {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  justify-content: center;
-  gap: .5rem;
-  padding-left: 100px;
-}
-.section__title-center{
-  padding-left: 100px;
-}
 
 /*=============== CONTACT ===============*/
 .contact__container {
@@ -579,7 +517,7 @@ body.dark-theme {
     order: 1;
   }
   .home__container,
-  .about__container,
+  /* .about__container, */
   .security__container,
   .app__container,
   .contact__container {
