@@ -114,6 +114,7 @@ body {
 #services {
     text-align: center;
     display: flex;
+    max-width: 100%;
     justify-content: center;
     
 }
