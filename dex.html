@@ -51,6 +51,218 @@
         background-color: #3fbcc0;
         z-index: 9999;
       }
+
+      .custom-button {
+        position: relative;
+        background-color: #3fbcc0a6;
+        color: white;
+        border: 2px solid #000;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: color 0.3s ease;
+        z-index: 1;
+        padding: 10px 15px; /* Adjust padding to make the button bigger */
+        font-size: 14px; 
+        margin-top: -10px;
+      }
+      
+      .custom-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #55a5ea;
+        transition: width 0.3s ease;
+        z-index: -1;
+      }
+      
+      .custom-button:hover {
+        color: #fff;
+      }
+      
+      .custom-button:hover::before {
+        width: 100%;
+      }
+
+      .home__container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      
+      .home__image {
+        width: 50%;
+      }
+      
+      .home__data {
+        text-align: left;
+        flex: 1;
+      }
+      
+
+      .about__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .imt {
+        width: 40%;
+      }
+
+      .about__data {
+        text-align: left;
+        flex: 1; /* Allow text content to expand */
+        color: #fff; /* Set a default text color */
+        font-size: 16px; /* Set a default font size */
+        z-index: 1;
+        margin-left: 20px;
+      }
+      
+      .security__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .security__image {
+        width: 40%; /* Adjust image width as needed */
+      }
+      
+      .security__data {
+        text-align: left;
+        flex: 1;
+      }
+      
+
+
+      .services__data {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content horizontally */
+        text-align: center; /* Center text */
+      }
+
+      .services__data .button-link {
+        margin: 20px auto 0; /* Center button and add spacing */
+      }
+
+      .app__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+      }
+      
+      .app__data {
+        text-align: left;
+        flex-grow: 1; /* Allow the content to expand to fill available space */
+      }
+
+      .section__title-center {
+        text-align: center;
+        margin-right: 10px; /* Adjust the margin value as needed */
+      }
+      
+      .imt {
+        width: 30%;
+        padding-right: 60px; /* Add padding to the right */
+        margin-top: 20px; /* Move the image down */
+      }
+      
+
+      .contact__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding-top: 50px;
+        text-align: left;
+      }
+  
+      .contact__content {
+        flex: 1;
+      max-width: 45%;
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+      gap: 1rem;
+      padding-left: 100px;
+      color: white;
+      }
+
+      .contact__heading {
+        text-align: left;
+        margin-bottom: 0.5rem; /* Reduce space below heading */
+      }
+
+      .section__title-center {
+        position: relative;
+  right: 20px;
+      }
+  
+      .contact__description {
+        text-align: left;
+        margin-bottom: 1rem; /* Space below description */
+      }
+  
+      .contact__map {
+        flex: 1;
+        max-width: 70%;
+        margin-left: 10px;
+        margin-top: 20px;
+      }
+
+      .contact__map iframe {
+        width: 85%; /* Ensure iframe takes full width of its container */
+      }
+  
+      .contact__address {
+        display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+      color: white;
+      }
+  
+      .contact__information {
+        font-weight: bold;
+        color: white;
+      }
+  
+      .button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+      }
+  
+      .button:hover {
+        background-color: #0056b3;
+      }
+  
+      @media (max-width: 768px) {
+        .contact__container {
+          flex-direction: column;
+          align-items: center;
+        }
+  
+        .contact__content,
+        .contact__map {
+          max-width: 100%;
+        }
+  
+        .contact__map {
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      }
     </style>
   <script type="text/javascript">
     (function () {
@@ -128,7 +340,7 @@
         <li><a href="index.html#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
         <li><a href="index.html#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
 
-        <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+        <a href="./Html-Files/Doctor Experience.html"><button class="custom-button">Find a Doctor</button></a>
       </ul>
       <div class="hamburger">
         <div class="line"></div>
@@ -164,8 +376,8 @@
               right to where you are.
             </p>
 
-            <a href="med.html" class="button">Get Started</a>
-            <img src="assets/img/rd.png" alt="home" class="imt"/>
+            <a href="medicine.html" class="button">Get Started</a>
+            <img src="assets/img/rd.png" alt="home" class="home__image" style="display: block;" />
           </div>
         </div>
       </section>
@@ -175,8 +387,7 @@
         <div class="about__container grid">
           <div class="about__data">
             <h2 class="section__title-center">
-              Find Out A Little More <br />
-              About Us
+              Find Out A Little More About Us
             </h2>
             <p class="about__description">
               We are a company dedicated to the distribution of products by
@@ -193,8 +404,7 @@
         <div class="security__container grid">
           <div class="security__data">
             <h2 class="section__title-center">
-              Your Safety Is <br />
-              Important
+              Your Safety Is Important
             </h2>
             <p class="security__description">
               When your order reaches you, we have the health safety protocols,
@@ -219,7 +429,7 @@
             <p class="services__description">
               Pay with a Visa or PayPal card and without much ado.
             </p>
-            <div>
+            <div class="button-container">
               <a href="#" class="button button-link">Learn More</a>
             </div>
           </div>
@@ -230,7 +440,7 @@
             <p class="services__description">
               We offer sale of products through the Internet.
             </p>
-            <div>
+            <div class="button-container">
               <a href="#" class="button button-link">Learn More</a>
             </div>
           </div>
@@ -241,7 +451,7 @@
             <p class="services__description">
               In our app you can see the delay time of your order.
             </p>
-            <div>
+            <div class="button-container">
               <a href="#" class="button button-link">Learn More</a>
             </div>
           </div>
@@ -253,8 +463,7 @@
         <div class="app__container grid">
           <div class="app__data">
             <h2 class="section__title-center">
-              Watch Your Delivery <br />
-              At Any Time
+              Watch Your Delivery At Any Time
             </h2>
             <p class="app__description">
               With our app you can view the route of your order, from our local
@@ -275,30 +484,29 @@
 
       <!--=============== CONTACT US ===============-->
       <section class="contact section container" id="contact">
-        <div class="contact__container grid">
+        <div class="contact__container">
           <div class="contact__content">
             <h2 class="section__title-center">
-              Contact Us From <br />
-              Here
+              Contact Us From Here
             </h2>
             <p class="contact__description">
               You can contact us from here, you can write to us, call us or
               visit our service center, we will gladly assist you.
             </p>
+            <div class="contact__address">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Email: <span class="contact__information">delivery@email.com</span></p>
+            </div>
+            <div class="contact__address">
+              <i class="fa-solid fa-map"></i>
+              <p>Location: <span class="contact__information">New Delhi</span></p>
+            </div>
+            <div class="container">
+              <a href="index.html#contact" class="button">Contact Us</a>
+            </div>
           </div>
-
-          <ul class="contact__content grid">
-            <li class="contact__address">
-              Email:
-              <span class="contact__information">delivery@email.com</span>
-            </li>
-            <li class="contact__address">
-              Location: <span class="contact__information">New Delhi</span>
-            </li>
-          </ul>
-
-          <div class="contact__content">
-            <a href="index.html#contact" class="button">Contact Us</a>
+          <div class="contact__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8343092661703!2d77.22972667550205!3d28.66467942564711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1720370841354!5m2!1sen!2sin" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>
@@ -352,7 +560,7 @@
     </div>
       <form action="#" class="subscribe-form">
         <input type="email" placeholder="Your email" required>
-        <button type="submit">SUBSCRIBE</button>
+        <button type="submit" style="color: #005253;">SUBSCRIBE</button>
       </form>
       <p class="confirmation-message">Thank you for subscribing!</p>
        </section>

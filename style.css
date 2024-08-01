@@ -3,7 +3,9 @@ body {
   color: #fff;
   background-color: #000;
 }
-
+.btn1{
+  padding:10px;
+}
 a {
   color: #ffffff;
   text-decoration: none;
@@ -728,7 +730,6 @@ section {
   margin: 0px 20px 0px 20px;
   align-items: center;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
 }
 
 .counts .count-box i {
@@ -766,7 +767,6 @@ section {
 .counts .count-box p {
   z-index: -1;
   padding: 30px 0 0 0;
-  /* margin: 0; */
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #fffcfc;
@@ -776,7 +776,6 @@ section {
   z-index: -1;
   font-weight: 600;
   display: block;
-  /* margin-top: 10px; */
   color: #faf8f8;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
@@ -1184,22 +1183,6 @@ section {
   background: #cecccc;
 }
 
-/*
- .icons {
-  display: flex;
-  margin-top: 30px;
-  gap: 30px;
-  cursor: pointer;
-}
-
- .icons i {
-  color: #afb6c7;
-}
-
- .icons i:hover {
-  color: #fff;
-}
-*/
 @media (max-width: 768px) {
   .footer {
     position: relative;
@@ -1268,10 +1251,8 @@ footer {
 /* Style for pateint portal  */
 /* -----***************************************-----  */
 .patient-portal {
-  width: 100%;  
-  /* Maximum width of the container */
+  width: 60%;  
   margin: 0 auto;
-  /* Centers the container */
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #3fbcc051;
@@ -1280,17 +1261,16 @@ footer {
   border-radius: 20px;
 }
 .patient-portal input{
-  padding: 10px; /* add some padding to make it look nicer */
-  font-size: 16px; /* set the font size */
-  border: 1px solid #ccc; /* add a border */
-  border-radius: 5px; /* add a rounded corner effect */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow effect */
+  padding: 10px; 
+  font-size: 16px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 
 }
 /* Section title styling */
 .section-title h1 {
   color: #29888a;
-  /* Sets a blue color for the heading */
   text-align: center;
 }
 
@@ -1304,7 +1284,6 @@ footer {
 .form-group {
   margin-top: 15px;
   margin-bottom: 15px;
-  /* Adds bottom margin for form-group */
 }
 
 .forgot-password {
@@ -1313,18 +1292,13 @@ footer {
 
 .form-control {
   width: 100%;
-  /* Full width */
   padding: 10px;
   border: 1px solid #ccc;
-  /* Light gray border */
   border-radius: 4px;
-  /* Rounded corners */
-  /* text-align: center; */
 }
 
 .btn {
   background-color: hwb(181 16% 46%);
-  /* Blue background for the button */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -1521,7 +1495,6 @@ footer {
 .footer-bottom small {
   font-size: 1rem;
   display: inline;
-  white-space: nowrap;
 }
 
 .footer-bottom-links {
@@ -1690,19 +1663,11 @@ background-clip: text;
   #ss {
     font-size: 12px;
   }
-   .patient-portal {
-   
-  }
 }
 
 @media screen and (max-width: 480px) {
   #ss {
     font-size: 10px;
-  }
-    .patient-portal {
-     padding: 15px;
-    margin: 1.5%;
-    border-radius: 10px;
   }
 }
 

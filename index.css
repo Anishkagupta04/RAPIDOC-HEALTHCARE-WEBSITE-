@@ -121,7 +121,9 @@ option {
     margin: 4px 4px;
     background-color: white;
 }
-
+.img p{
+    display: none;
+}
 @media only screen and (max-width: 820px) {
     .hamburger {
         display: block;
@@ -152,11 +154,14 @@ option {
     .vis-h {
         opacity: 0;
     }
-
-    .img {
+    .img img{
+        display: none;
+    }
+    .img p{
+        display: block;
         position: relative;
         left: 300px;
-        bottom: 12px;
+        bottom: 0;
     }
 }
 
@@ -899,4 +904,155 @@ body {
   
   .b:hover::before {
     width: 100%;
+  }
+  
+  .btn1{
+    padding:10px;
+  }
+.about-card {
+  perspective: 1000px;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.about-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.card-back {
+    transform: rotateY(180deg);
+    background-color: black;
+    backface-visibility: hidden !important;
+} 
+.card-front {
+    backface-visibility: hidden !important;
+}  
+.card-back img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .feedback-form button[type="submit"] {
+      margin-left: 190px;
+      margin-right: auto;
+    }
+  }
+  
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    .feedback-form button[type="submit"] {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media screen and (max-width: 479px) {
+    .feedback-form button[type="submit"] {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      max-width: 10rem;
+    }
+  }
+  @media screen and (min-width: 592px) and (max-width:933px) {
+    .feedback-form button[type="submit"] {
+      margin-left: 100px;
+    }
+  }
+  @media screen and (min-width: 592px) and (max-width:941px) {
+    .feedback-form button[type="submit"] {
+      margin-left: 50px;
+      width: 5rem;
+    }
+  }
+  /*Appointment*/
+  @media (width: 382px) and (height:592px){
+    
+    #appointment {
+        width: 500px;
+    }
+  }
+  /*Patient Portal*/
+  
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .section-title h2 {
+      font-size: 30px;
+    }
+    
+    .section-title p {
+      font-size: 16px;
+    }
+    
+    .login-box {
+      max-width: 400px;
+    }
+    
+    .avatar img {
+      max-width: 80%;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .section-title h2 {
+      font-size: 24px;
+    }
+    
+    .section-title p {
+      font-size: 14px;
+    }
+    
+    .login-box {
+      max-width: 100%;
+      padding: 15px;
+    }
+    
+    .avatar img {
+      max-width: 60%;
+    }
+    
+    .textbox input {
+      padding: 8px 8px 8px 25px;
+    }
+    
+    .btn {
+      padding: 8px;
+    }
+    
+    .register-link p, .forgot-password a {
+      font-size: 12px;
+    }
+  }
+  @media screen and (width: 463px) and (height: 592px) {
+    .section-title h2 {
+      font-size: 30px;
+    }
+    
+    .section-title p {
+      font-size: 16px;
+    }
+    
+    .login-box {
+      max-width: 400px;
+    }
+    
+    .avatar img {
+      max-width: 30%;
+    }
+  }
+  .doc-app:hover{
+    background-color: teal !important;
+    font-size: 15px;
   }
