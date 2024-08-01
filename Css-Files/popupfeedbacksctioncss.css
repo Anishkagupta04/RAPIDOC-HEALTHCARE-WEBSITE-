@@ -14,7 +14,7 @@
     display: none;
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
     background-color: transparent;
     padding: 100px;
@@ -28,7 +28,7 @@
   
   .close-btn {
     position: absolute;
-    top: 10px;
+    top: 37px;
     right: 10px;
     font-size: 24px;
     cursor: pointer;
