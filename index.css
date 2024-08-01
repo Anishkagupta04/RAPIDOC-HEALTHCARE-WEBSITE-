@@ -1066,6 +1066,7 @@ body {
     .avatar img {
       max-width: 30%;
     }
+
     .avatar {
         margin: 46px 15px;
     }
@@ -1073,4 +1074,10 @@ body {
         bottom: 1%;
         left: 4%;
     }
+
+  }
+  .doc-app:hover{
+    background-color: teal !important;
+    font-size: 15px;
+
   }
