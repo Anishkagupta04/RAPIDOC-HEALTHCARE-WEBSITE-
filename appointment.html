@@ -3,6 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <!-- Bootstrap Icons CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+      />
+      <link rel="icon" type="image/x-icon" href="./favicon.png" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css" />
+      <style>
+          button {
+    position: relative;
+    background-color: #3fbcc0a6;
+    color: white;
+    border: 2px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    z-index: 1;
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #55a5ea;
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
+  
+  button:hover {
+    color: #fff;
+  }
+  
+  button:hover::before {
+    width: 100%;
+  }
+      </style>
+      <style>
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+  
+        ::-webkit-scrollbar-thumb {
+          background-color: #3fbcc0;
+          border-radius: 10px;
+        }
+  
+        ::-webkit-scrollbar-thumb:hover {
+          background-color: #005253;
+          border-radius: 10px;
+        }
+  
+        ::-webkit-scrollbar-track {
+          background-color: #011212;
+        }
+  
+        #progressBar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 0%;
+          height: 6px;
+          background-color: #3fbcc0;
+          z-index: 9999;
+        }
+      </style>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "o6kveYmOSDrs0l1Mg",
+        });
+      })();
+    </script>
+  
+    <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>RapiDoc</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet">
+  
+    <!-- transalator -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+  
+    <!-- CSS Files -->
+     <link rel="stylesheet" href="index.css">
+    <link href="Css-Files/animate.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="remixicon/remixicon.css" rel="stylesheet">
+    <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="patient-portal.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="chatbox.css">
+    <!-- Google Fonts Link For Icons chatboxx -->
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="./Css-Files/aboutus.css" />
+    <link rel="stylesheet" href="./Css-Files/testimonial.css" />
+    <script src="chatboxx.js" defer></script>
     <title>RapiDoc</title>
     <style>
         body {
@@ -15,6 +137,7 @@
             margin: 0;
             padding: 10px;
             box-sizing: border-box;
+            flex-direction: column;
         }
 
         .appointment-form {
@@ -89,102 +212,92 @@
 
         button:hover {
             background-color: #2b908b; /* Darker green on hover */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        button:active {
-            background-color: #267a75;
+        .error {
+            color: #dc3545;
+            font-size: 0.9em;
+            margin-top: 5px;
         }
 
-        @media (max-width: 600px) {
-            .appointment-form {
-                padding: 15px;
-                margin: 10px;
-            }
+        /* Styling for the navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: #005253; /* Teal background */
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
 
-            button {
-                padding: 12px;
-            }
+        .navbar a {
+            color: #ffffff; 
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: medium;
+        }
 
-            input[type="text"],
-            input[type="email"],
-            input[type="date"],
-            input[type="time"],
-            textarea,
-            select {
-                padding: 8px;
-            }
+        .navbar a:hover {
+            color: #007bff; /* Blue on hover */
+        }
+        .doc-btn{
+            background-color: #34a0a4; /* Green button */
+            color: #ffffff; /* White text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
-
-<form id="appointmentForm" class="appointment-form">
-    <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <div class="navbar">
+        <nav class="nav_menu">
+            <ul class="nav_link vis-h">
+                <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+                <li><a href="index.html#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+                <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
+                <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
+                <li><a href="index.html#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+                <li><a href="index.html#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+                <li><a href="index.html#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
+                <li><a href="./Html-Files/Doctor Experience.html"><button class="doc-btn">Find a Doctor</button></a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
     </div>
-
-    <div class="form-group">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-    </div>
-
-    <div class="form-group">
-        <label for="phone">Your Phone</label>
-        <input type="text" id="phone" name="phone" placeholder="Your Phone" required>
-    </div>
-
-    <div class="form-group">
-        <label for="date">Appointment Date</label>
-        <input type="date" id="date" name="date" placeholder="Appointment Date" required>
-    </div>
-
-    <div class="form-group">
-        <label for="age">Select Age</label>
-        <select id="age" name="age" required>
-            <option value="" disabled selected>Select Age</option>
-            <option value="Under 18">Under 18</option>
-            <option value="18-30">18-30</option>
-            <option value="31-50">31-50</option>
-            <option value="51-70">51-70</option>
-            <option value="71 and above">71 and above</option>
-        </select>
-    </div>
-
-    <div class="form-group">
-        <label for="location">Your Location</label>
-        <select id="location" name="location" required>
-            <option value="" disabled selected>Your Location</option>
-            <option value="Location 1">Hyderabad</option>
-            <option value="Location 2">Chennai</option>
-            <option value="Location 3">Delhi</option>
-            <option value="Location 4">Ahmedabad</option>
-            <option value="Location 5">Kolkata</option>
-            <option value="Location 6">Banglore</option>
-        </select>
-    </div>
-
-    <div class="form-group">
-        <label for="message">Message (Optional)</label>
-        <textarea id="message" name="message" placeholder="Message (Optional)"></textarea>
-    </div>
-
-    <button type="submit">Make an Appointment</button>
-</form>
-
-<script>
-    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        // Simulate form submission
-        setTimeout(function() {
-            alert('Appointment successful');
-            // Optionally, clear the form fields after submission
-            document.getElementById('appointmentForm').reset();
-        }, 500); // Simulate a delay for form submission
-    });
-</script>
-
+    <form class="appointment-form" id="appointmentForm">
+        <h2 style="color: #fff; text-align: center;">Set Appointment Reminder</h2>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Enter your message" rows="4"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+        <div class="error" id="error"></div>
+    </form>
 </body>
 </html>
