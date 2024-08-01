@@ -10,46 +10,47 @@
 }
 
 .testimonals-item {
-  background: linear-gradient(145deg, #223b26, #1c413b); /* Gradient background */
+  background: linear-gradient(145deg, #223b26, #1c413b);
   padding: 30px;
   border-radius: 20px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 350px; /* Set a fixed height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  height: 350px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Align content to top and bottom */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .testimonals-item:hover {
-  transform: translateZ(10px); /* Move the card towards the user */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateZ(10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(145deg, #2a5a3f, #1e6b4b);
 }
 
 .rating {
   display: flex;
-  justify-content: center; /* Center the rating stars */
-  margin-top: auto; /* Push rating to the bottom of the card */
+  justify-content: center;
+  margin-top: auto;
 }
 
 .rating i {
-  color: #ffcc00; /* Yellow color for the stars */
-  font-size: 20px; /* Adjust size as needed */
+  color: #ffcc00;
+  font-size: 20px;
 }
 
 .section-title {
-  color: #e0f7fa; /* Light cyan for the title */
+  color: #e0f7fa;
   font-size: 48px;
   margin-bottom: 2rem;
   margin-top: 40px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for better readability */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .rating__star {
   font-size: 20px;
   cursor: pointer;
-  color: #dabd18b2;
+  color: #ffcc00;
 }
 
 .testimonals-item img {
@@ -70,7 +71,7 @@
   font-size: 24px;
   text-transform: capitalize;
   font-weight: 800;
-  color: #e0f7fa; /* Light cyan for the name */
+  color: #e0f7fa;
   line-height: 1.2;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -78,9 +79,9 @@
 
 .testimonals-item p {
   margin-top: 20px;
-  color: #f1f8e9; /* Very light green for text */
+  color: #f1f8e9;
   text-align: left;
-  flex: 1; /* Allow the paragraph to grow and fill available space */
+  flex: 1;
 }
 
 .testimonals .swiper-pagination {
@@ -92,19 +93,18 @@
 .testimonals .swiper-pagination-bullet {
   height: 12px;
   width: 12px;
-  background-color: #e0f7fa !important; /* Light cyan bullets */
+  background-color: #e0f7fa !important;
 }
 
 .testimonals-item .job {
   text-transform: capitalize;
-  color: #e0f7fa; /* Light cyan for job titles */
+  color: #e0f7fa;
   text-align: center;
 }
 
-/* Added styles for navigation arrows */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #e0f7fa !important; /* Light cyan arrows */
+  color: #e0f7fa !important;
   transition: color 0.3s ease;
   position: absolute;
   top: 40%;
@@ -112,23 +112,22 @@
   margin-top: -22px;
   padding: 16px;
   cursor: pointer;
-  z-index: 10; /* Ensure the buttons are above other elements */
+  z-index: 10;
 }
 
 .swiper-button-next {
-  right: -60px; /* Adjust to move the button outside the container */
+  right: -60px;
 }
 
 .swiper-button-prev {
-  left: -60px; /* Adjust to move the button outside the container */
+  left: -60px;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  color: #198754 !important; /* Dark green on hover */
+  color: #198754 !important;
 }
 
-/* Animation for testimonial items */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -144,7 +143,6 @@
   animation: fadeInUp 0.5s ease-out;
 }
 
-/* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .testimonals {
     width: 90%;
