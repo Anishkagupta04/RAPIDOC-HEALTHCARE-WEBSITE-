@@ -1,26 +1,47 @@
-name: Auto Label PRs
+name: Auto Label
 
 on:
   pull_request:
-    types: [opened, edited]
+    types: [opened, edited,reopened]
 
 jobs:
-  label_pr:
+  auto-label:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v4
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: .github/labeler.yml
 
-      - name: Add GSSOC label
+  check-title:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Label PRs based on title
         uses: actions/github-script@v6
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.rest.issues.addLabels({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              labels: ['gssoc']
-            })
+            const title = context.payload.pull_request.title.toLowerCase();
+            const labelsToAdd = [];
+            
+            if (title.includes('gssoc')) {
+              labelsToAdd.push('gssoc');
+            }
+            
+            if (title.includes('bug')) {
+              labelsToAdd.push('bug');
+            } else if (title.includes('enhancement')) {
+              labelsToAdd.push('enhancement');
+            } else if (title.includes('documentation')) {
+              labelsToAdd.push('documentation');
+            }
+            
+            if (labelsToAdd.length > 0) {
+              await github.rest.issues.addLabels({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.name,
+                labels: labelsToAdd
+              });
+            }
