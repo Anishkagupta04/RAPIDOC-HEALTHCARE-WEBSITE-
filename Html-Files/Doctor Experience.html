@@ -516,19 +516,32 @@
       const doctorListElement = document.getElementById("doctor-list");
       doctorListElement.innerHTML = "";
 
-      doctors.forEach(doctor => {
-        const doctorItem = document.createElement("li");
-        doctorItem.innerHTML = `
-          <div class="content">
-            <h4>${doctor.name}</h4>
-            <p>Specialization: ${doctor.specialization}</p>
-            <p>Experience: ${doctor.experience} years</p>
-            <p>Fee: $${doctor.fee}</p>
-          </div>
-          ${doctor.image ? `<img src="${doctor.image}" alt="${doctor.name}" style="width: 80px; height: auto; border-radius: 50%;">` : ""}
-        `;
-        doctorListElement.appendChild(doctorItem);
-      });
+     // Assuming 'doctors' is an array of doctor objects and 'doctorListElement' is the parent UL element
+
+doctors.forEach(doctor => {
+  // Create a new li element
+  const doctorItem = document.createElement("li");
+
+  // Set the inner HTML of the li element
+  doctorItem.innerHTML = `
+    <div class="content">
+      <h4>${doctor.name}</h4>
+      <p>Specialization: ${doctor.specialization}</p>
+      <p>Experience: ${doctor.experience} years</p>
+      <p>Fee: $${doctor.fee}</p>
+    </div>
+    ${doctor.image ? `<img src="${doctor.image}" alt="${doctor.name}" style="width: 80px; height: auto; border-radius: 50%;">` : ""}
+  `;
+
+  // Added a click event listener to the li element to redirect to appointment page
+  doctorItem.addEventListener('click', () => {
+    window.location.href = 'appointment.html';
+  });
+
+  // Append the li element to the parent UL element
+  doctorListElement.appendChild(doctorItem);
+});
+
     }
 
     function filterDoctors() {
