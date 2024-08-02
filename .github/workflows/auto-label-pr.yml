@@ -1,14 +1,14 @@
-name: Auto Label
+name: Auto Label and Issue Check
 
 on:
   pull_request:
     types: [opened, edited, synchronize]
 
 jobs:
-  auto-label:
+  auto-label-and-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Label PRs
+      - name: Add GSSoC Label and Check Issue
         uses: actions/github-script@v6
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
@@ -16,32 +16,16 @@ jobs:
             const { owner, repo } = context.repo;
             const pr = context.payload.pull_request;
             
-            async function addLabels(labels) {
+            try {
               await github.rest.issues.addLabels({
                 issue_number: pr.number,
                 owner: owner,
                 repo: repo,
-                labels: labels
+                labels: ['gssoc']
               });
-            }
-
-            await addLabels(['gssoc']);
-            
-            const title = pr.title.toLowerCase();
-            const labelsToAdd = [];
-            
-            if (title.includes('bug')) {
-              labelsToAdd.push('bug');
-            }
-            if (title.includes('enhancement')) {
-              labelsToAdd.push('enhancement');
-            }
-            if (title.includes('documentation')) {
-              labelsToAdd.push('documentation');
-            }
-            
-            if (labelsToAdd.length > 0) {
-              await addLabels(labelsToAdd);
+              console.log('Added gssoc label');
+            } catch (error) {
+              console.error('Error adding gssoc label:', error);
             }
             
             const body = pr.body || '';
@@ -51,33 +35,4 @@ jobs:
               core.setFailed('No related issue mentioned in the PR description. Please use the PR template and mention the related issue.');
             } else {
               console.log('Related issue found:', issueMatch[1]);
-            }
-
-  check-issue-assignment:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check Issue Assignment
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            const pr = context.payload.pull_request;
-            const body = pr.body || '';
-            const issueMatch = body.match(/(?:close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved)\s*:?\s*#(\d+)/i);
-            
-            if (issueMatch) {
-              const issueNumber = parseInt(issueMatch[1]);
-              const issue = await github.rest.issues.get({
-                owner: context.repo.owner,
-                repo: context.repo.name,
-                issue_number: issueNumber
-              });
-              
-              if (!issue.data.assignee) {
-                core.setFailed('The related issue is not assigned. Please assign the issue before submitting a PR.');
-              } else {
-                console.log('Issue is properly assigned.');
-              }
-            } else {
-              core.setFailed('No related issue mentioned in the PR description. Please use the PR template and mention the related issue.');
             }
