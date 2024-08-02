@@ -2,46 +2,53 @@ name: Auto Label
 
 on:
   pull_request:
-    types: [opened, edited,reopened]
+    types: [opened, edited, synchronize,reopened]
 
 jobs:
   auto-label:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/labeler@v4
-        with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          configuration-path: .github/labeler.yml
-
-  check-title:
-    runs-on: ubuntu-latest
-    steps:
       - uses: actions/checkout@v3
-      - name: Label PRs based on title
+      - name: Label PRs
         uses: actions/github-script@v6
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const title = context.payload.pull_request.title.toLowerCase();
-            const labelsToAdd = [];
+            const { owner, repo } = context.repo;
+            const pr = context.payload.pull_request;
             
-            if (title.includes('gssoc')) {
-              labelsToAdd.push('gssoc');
+            async function addLabels(labels) {
+              await github.rest.issues.addLabels({
+                issue_number: pr.number,
+                owner: owner,
+                repo: repo,
+                labels: labels
+              });
             }
+            
+            await addLabels(['gssoc']);
+            
+            // Check PR title for other labels
+            const title = pr.title.toLowerCase();
+            const labelsToAdd = [];
             
             if (title.includes('bug')) {
               labelsToAdd.push('bug');
-            } else if (title.includes('enhancement')) {
+            }
+            if (title.includes('enhancement')) {
               labelsToAdd.push('enhancement');
-            } else if (title.includes('documentation')) {
+            }
+            if (title.includes('documentation')) {
               labelsToAdd.push('documentation');
             }
             
             if (labelsToAdd.length > 0) {
-              await github.rest.issues.addLabels({
-                issue_number: context.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.name,
-                labels: labelsToAdd
-              });
+              await addLabels(labelsToAdd);
+            }
+            
+            const body = pr.body;
+            const issueMatch = body.match(/(?:close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved)\s*:?\s*#(\d+)/i);
+            
+            if (!issueMatch) {
+              core.setFailed('No related issue mentioned in the PR description. Please use the PR template and mention the related issue.');
             }
