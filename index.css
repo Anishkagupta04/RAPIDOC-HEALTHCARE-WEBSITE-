@@ -1003,6 +1003,14 @@ body {
     .avatar img {
       max-width: 80%;
     }
+
+    .avatar {
+        margin: 30px -62px;
+    }
+    .visitor-counter{
+        bottom: 1%;
+        left: 4%;
+    }
   }
   
   @media screen and (max-width: 767px) {
@@ -1034,6 +1042,13 @@ body {
     .register-link p, .forgot-password a {
       font-size: 12px;
     }
+    .avatar {
+        margin: 30px -62px;
+    }
+    .visitor-counter{
+        bottom: 1%;
+        left: 4%;
+    }
   }
   @media screen and (width: 463px) and (height: 592px) {
     .section-title h2 {
@@ -1051,8 +1066,18 @@ body {
     .avatar img {
       max-width: 30%;
     }
+
+    .avatar {
+        margin: 46px 15px;
+    }
+    .visitor-counter{
+        bottom: 1%;
+        left: 4%;
+    }
+
   }
   .doc-app:hover{
     background-color: teal !important;
     font-size: 15px;
+
   }

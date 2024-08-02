@@ -344,16 +344,16 @@
           <p>Access your medical records, lab results, and prescription history securely.</p>
         </div>
         <div class="container">
-
+    
           <!-- Add Login Form for Patient Portal -->
           <div class="login-box">
             <div class="avatar">
-              <img src="img/avatar.png" height="280px" width="263px" alt="Avatar">
+              <img src="img/avatar.png" height="220px" width="263px" alt="Avatar">
             </div>
-            <form>
+            <form id="loginForm">
               <div class="textbox">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Username" name="username" required class="t1">
+                <input type="text" placeholder="Username" name="username" required>
               </div>
               <br>
               <div class="textbox">
@@ -363,13 +363,17 @@
               <br>
               <input type="submit" class="btn" value="SUBMIT">
               <div class="register-link">
+                <a href="#">Not registered yet? Register Here</a>
                 <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px;">Not registered yet?<a href="./log/login.html" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> Register Here</a></p>
+
               </div>
               <div class="forgot-password" id="forgot-password-patient-portal">
-                <a style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px;" href="forgot-password.php">Forgot Your Password?</a>
+                <a href="forgot-password.php">Forgot Your Password?</a>
               </div>
             </form>
+            <div id="loginMessage" class="popup-message"></div>
           </div>
+    
         </div>
       </div>
     </section>
