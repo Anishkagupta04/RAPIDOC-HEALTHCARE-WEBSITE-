@@ -150,10 +150,6 @@ option {
         height: 5.5rem;
         width: 100vw;
     }
-
-    .vis-h {
-        opacity: 0;
-    }
     .img img{
         display: none;
     }
@@ -186,20 +182,50 @@ option {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .content {
-        text-align: center;
-        padding: 10px;
+@media (max-width: 768px) {
+    .nav_menu {
+      flex-direction: column;
     }
-
-    .sec-img {
-        max-width: 100%;
-        margin: 20px 0;
-        position: relative;
-        top: 0;
-        right: 0;
+  
+    .hamburger {
+      display: flex;
     }
-}
+  
+    .mobile-logo-text {
+      display: block;
+    }
+  
+    .nav_link {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 60px;
+      left: 20px;
+      background-color: #022a2d;
+      width: 30%;
+      margin-top: 30px;
+      padding: 20px;
+      z-index: 10;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav_link.active {
+      display: flex;
+    }
+  
+    .nav_link li {
+      margin: 10px 0;
+    }
+  
+    .nav_link a {
+      font-size: 1.2em;
+    }
+  
+    .nav_link .btn1 {
+      width: 100%;
+      text-align: center;
+    }
+  }
 
 /*Preloader CSS*/
 .pre {
