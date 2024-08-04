@@ -65,7 +65,7 @@ body {
   
   @media (max-width: 768px) {
     .header_container{
-        height: 50px;
+        height: 60px;
       }
     .nav_link {
       display: none;
