@@ -144,7 +144,7 @@ option {
       top: 60px;
       right: 0;
       background-color: #022a2d;
-      width: 100%;
+      width: 40% !important;
       padding: 20px;
       z-index: 10;
       box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
@@ -182,7 +182,7 @@ option {
         color: white;
         font-weight: bold;
         margin-left: 50px;
-        margin-right: 16rem;
+        margin-right: 23rem;
         font-size: 40px;
     }
     #rd-logo {
@@ -196,9 +196,9 @@ option {
         position: fixed;
         top: 60px;
         left: 20px;
-        margin-top: 25px;
+        margin-top: 37px !important;
         background-color: #022a2d;
-        width: 30%;
+        width: 40% !important;
         padding: 20px;
         z-index: 10;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
@@ -528,22 +528,18 @@ select {
     .header_container {
         width: 163vw;
         height: 6rem !important;
-        
-    }
-
-    .nav_menu {
-        padding: 10px;
-        height: auto;
-    }
-
-    .nav-h {
-        height: 5.5rem;
         width: -webkit-fill-available !important;
         justify-content: center;
         flex-direction: row;
         align-items: center;
     }
-    
+    .nav-h .nav_link{
+      display:none !important;
+    }
+
+    .nav_menu {
+        height: auto;
+    }
   
   #rd-logo {
     display: table-row;
