@@ -8,7 +8,7 @@
         }, 3000);
       }
 
-/* Rating */
+// /* Rating */
 let rating = null;
 
 function handleRatingChange(value) {
@@ -28,16 +28,30 @@ function handleRatingChange(value) {
           });
       }
 
-      function getEmoji(rating) {
-          switch(rating) {
-              case 1: return '😡';
-              case 2: return '☹️';
-              case 3: return '😐';
-              case 4: return '🙂';
-              case 5: return '😄';
-              default: return '😐';
-          }
-      }
+// script.js
+const emojiGifs = document.querySelectorAll('.emoji-gif');
+const selectedEmojiElement = document.getElementById('selected-emoji');
+const selectedGifElement = document.getElementById('selected-gif');
+
+emojiGifs.forEach(gif => {
+    gif.addEventListener('click', () => {
+        const emoji = gif.getAttribute('data-emoji');
+        const gifSrc = gif.getAttribute('data-gif-src');
+        selectedEmojiElement.textContent = emoji;
+        selectedGifElement.src = gifSrc;
+    });
+});
+
+//       function getEmoji(rating) {
+//           switch(rating) {
+//               case 1: return '😡';
+//               case 2: return '☹️';
+//               case 3: return '😐';
+//               case 4: return '🙂';
+//               case 5: return '😄';
+//               default: return '😐';
+//           }
+//       }
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -84,3 +98,5 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll);
 
 updateStars();
+
+
