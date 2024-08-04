@@ -802,6 +802,20 @@
         z-index: 9999;
       }
     </style>
+    <style> 
+
+      .Lastupdate {
+                margin-bottom: 14px;
+                font-size: 10px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, serif;
+                font-weight: 500;
+                margin-top: 0px;
+              }
+              #last-updated-date {
+                font-size: 10px;
+              }
+      
+      </style>
   </head>
 
   <body>
@@ -881,6 +895,7 @@
       <header class="header" id="privacy-policy-header">
         <h1 class="title" id="privacy-policy-title" id="downloadSection">Privacy Policy</h1>
       </header>
+      <div class="Lastupdate">Last updated: <span id="last-updated-date"></span></div>
       <main class="main-content">
         <section class="section">
           <h2 class="section-title">Introduction</h2>
@@ -1125,5 +1140,35 @@ document.getElementById('downloadPDF').addEventListener('click', () => {
  
 
     </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      function updateLastUpdatedDate() {
+          const dateElement = document.getElementById("last-updated-date");
+          if (dateElement) {
+              const now = new Date();
+              const day = now.getDate();
+              const monthNames = [
+                  "January", "February", "March", "April", "May", "June",
+                  "July", "August", "September", "October", "November", "December"
+              ];
+              const month = monthNames[now.getMonth()];
+              const year = now.getFullYear();
+              // Use backticks for template literals
+              dateElement.textContent = `${month} ${day}, ${year}`;
+          }
+      }
+
+      // Initialize the date update
+      updateLastUpdatedDate();
+  });
+
+  window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+  };
+</script>
   </body>
 </html>
