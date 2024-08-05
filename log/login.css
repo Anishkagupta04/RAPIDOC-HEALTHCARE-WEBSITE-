@@ -6,13 +6,47 @@
 
 body {
   display: flex;
-  background-color: #f6f5f7;
+  background: black;  
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
   height: 100vh;
+}
+.top-left-corner {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+}
+.eye.active {
+  color: #007bff; /* Change this to whatever color you prefer */
+}
+
+
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.home-button:hover {
+  background-color: #6be1f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.home-button svg {
+  fill: #4bb6b7;
+  width: 30px;
+  height: 30px;
 }
 
 h1 {
@@ -84,8 +118,8 @@ a:hover {
 button {
   position: relative;
   border-radius: 20px;
-  border: 1px solid #4bb6b7;
-  background-color: #4bb6b7;
+  border: 1px solid #022a2d;
+  background-color: #022a2d;
   color: #fff;
   font-size: 15px;
   font-weight: 700;
@@ -98,6 +132,7 @@ button {
 
 button:hover {
   letter-spacing: 3px;
+  background-color: #28cacd;
 }
 
 button:active {
@@ -309,6 +344,193 @@ input {
   transition: 0.3s ease-in-out;
 }
 
-.social-container a:hover {
-  border: 1px solid #4bb6b7;
+.social-container #fb:hover {
+  color: white;
+  background-color: #1877F2;
+}
+.social-container #lin:hover {
+  color: white;
+  background-color: #0A66C2;
+}
+.social-container #goog:hover {
+  color: white;
+  background-color: #34A853;
+}
+
+
+
+/* Adjustments for screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+
+  .overlay-panel {
+    padding: 0 30px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+}
+
+/* Adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    min-height: 450px;
+    padding: 20px;
+  }
+
+  form {
+    padding: 0 20px;
+  }
+
+  input {
+    padding: 10px;
+    margin: 6px 0;
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 10px 30px;
+    margin: 8px;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .overlay {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+  .overlay-panel {
+    width: 100%;
+    position: relative;
+    transform: none;
+    padding: 20px;
+  }
+
+  .overlay-left{
+    display: none;
+  }
+
+}
+
+/* Further adjustments for screens smaller than 480px */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    min-height: 400px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  input {
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 0.8rem;
+  }
+
+  button {
+    padding: 8px 20px;
+    margin: 6px;
+    font-size: 0.8rem;
+  }
+
+  .overlay {
+    height: 100%;
+  }
+
+  .overlay-panel {
+    padding: 10px;
+  }
+}
+/* Banner styling */
+#successBanner {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: green;
+  color: white;
+  text-align: center;
+  z-index: 1000;
+  font-size: 1.2rem;
+}
+.toggle-password {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-password svg {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 15px;
+}
+
+/* Additional styles for password container */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  padding-right: 30px; /* Adjust based on your eye icon size */
+}
+
+.container{
+  background-color: #143C3D;
+}
+form{
+  background-color: #143C3D;
+}
+.pass-link a{
+  color: cadetblue;
+}
+.pass-link a:hover{
+  color:aqua;
+}
+
+input[type="checkbox"] {
+  accent-color: aqua;
+}
+.checkbox label{
+  color:whitesmoke;
+}
+span{
+  color:whitesmoke;
+}
+.social-container a{
+  color: whitesmoke;
+}
+.social-container a:hover{
+  color: #4BB6B7;
+}
+.home-button{
+  background-color: #022A2D;
+  border:none;
 }

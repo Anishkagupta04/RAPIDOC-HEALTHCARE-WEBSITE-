@@ -1,0 +1,286 @@
+/* @import url('http://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap'); */
+
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    background-color: rgb(0, 0, 0);
+    /* min-height: 10vh; */
+}
+
+
+
+
+.nav_link {
+    list-style: none;
+  }
+
+  .nav_link li {
+    padding: 5px 20px;
+    display: inline-block;
+    color: white;
+  }
+
+  .nav_link li a {
+    transition: all 0.3s ease 0s;
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav_link li a:hover {
+    color: #55a5ea;
+    text-decoration: underline 2.5px rgb(3, 3, 94);
+  }
+
+  .header_container {
+   
+    background-color: #59bcbf51;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin: auto;
+  }
+.header_container{
+    padding: 10px;
+}
+
+main {
+    padding: 1rem;
+}
+
+
+form {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 70%;
+    max-width: 60px;
+    box-sizing: border-box;
+    margin-left: 500px;
+} 
+
+.button {
+    background-color: #3fbcc0a6;
+    color: white;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 50%;
+    max-width: 60px;
+    box-sizing: border-box;
+    border-radius: 1rem;
+}
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #55a5ea;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #55a5ea;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+
+.button:hover {
+  color: #fff;
+}
+
+.button:hover::before {
+  width: 100%;
+}
+
+#medicine-info {
+    background-color: #4bb6b7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#medicine-info:hover{
+
+    background-color: #55a5ea;
+}
+.footer-wrapper{
+    background-color: #59bcbf51;
+    padding: 10px 0;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-decoration: none;
+    
+    
+}
+.other-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    text-decoration: none;
+    
+}
+.links{
+  text-decoration: none;
+  color: #55a5ea;
+}
+.other-columns ul a {
+  color: rgb(116, 119, 116);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.other-columns ul a:hover {
+  text-decoration: none;
+  color: #080d3f;
+}
+
+.other-columns h3 {
+  color: var(--link-color);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: ui-monospace, monospace;
+}
+
+
+
+.news-letter form {
+  color: transparent; 
+  background-color: transparent; 
+  border: none;
+  display: flex;
+  
+
+}
+
+.news-letter input[type="text"] {
+  color: transparent; 
+  background-color: transparent;
+  border: 1px solid #7489c6;; 
+  outline: none; 
+  margin-left:800px;
+  height: 40px;
+  width: 150px;
+}
+.subscribe-button {
+  background-color: #ffffff;
+  color: rgb(103, 102, 102);
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 110px;
+  box-sizing: border-box;
+  margin-left:10px;
+}
+
+
+.subscribe-button:hover {
+    background-color: #3fbcc051;
+}
+.footer-bottom {
+    background-color: #080d3f;
+    padding: 20px 0;
+}
+
+.footer-bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-bottom small {
+    color: #afb6c7;
+}
+.social-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 100px;
+    
+  }
+  
+  .social-links {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: left;
+  }
+  
+  .social-links img {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .social-links img:hover {
+    transform: scale(1.1);
+  }
+  
+  .social-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style-type: none;
+  }
+  
+  .footer-bottom-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+}
+
+.img img {
+  width: 90px;
+  height: auto;
+
+}
+
+
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  padding-top:0px ;
+}
+

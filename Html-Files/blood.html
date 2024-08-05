@@ -16,9 +16,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-<title>
-Blood Bank
-</title>
+<title>RapiDoc</title>
 </head>
 
 <body>
@@ -38,6 +36,7 @@ Blood Bank
       <li><a href="./news.html"><i class="bi bi-newspaper"></i> News</a></li>
       <li><a href="../dex.html"><i class="bi bi-gear"></i> Service</a></li>
       <li><a href="../index.html#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+      <li><a href="Html-Files/appointment.html"><i class="bi bi-person"></i> Appointment</a></li>
       <li><a href="../index.html#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
       <li><a href="./contact.html"><i class="bi bi-telephone"></i>Contact us</a></li>
       <li><a href="../rateus.html"><i class="bi bi-star"></i>Rate Us</a></li>
@@ -53,7 +52,7 @@ Blood Bank
         <h2>A+</h2>
         <span data-purecounter-start="0" data-purecounter-end="125" data-purecounter-duration="1"
                 class="purecounter"></span><p class="ltr">liters</p>
-        <a href="">Get List</a>
+        <a id="getListBtn-A+" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#be01fe;">
@@ -62,7 +61,7 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="">Get List</a>
+        <a id="getListBtn-O+" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#01b4ff;">
@@ -71,7 +70,7 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="78" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="">Get List</a>
+        <a id="getListBtn-B+" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#fc7200;">
@@ -80,7 +79,7 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="">Get List</a>
+        <a id="getListBtn-AB+" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#010efe;">
@@ -89,7 +88,7 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="72" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="">Get List</a>
+        <a id="getListBtn-A" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#01d0ff;">
@@ -98,7 +97,7 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="">Get List</a>
+        <a id="getListBtn-O" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#00fe11;">
@@ -107,7 +106,7 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="62" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="">Get List</a>
+        <a id="getListBtn-B" class="get-list-btn">Get List</a>
     </div>
     </div>
     <div class="drop" style="--clr:#fe0101;">
@@ -116,69 +115,10 @@ Blood Bank
         <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1"
                 class="purecounter"></span>
                 <p class="ltr">liters</p>
-        <a href="">Get List</a>
+        <a  id="getListBtn-AB" class="get-list-btn">Get List</a>
     </div>
     </div>
 </div>
-
-<!-- <footer id="footer">
-    <div class="footer-top">
-      <div class="containerf">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>RapiDoc</h3>
-              <p>
-                Address<br>
-                Delhi, India<br><br>
-                <strong>Phone:</strong> +91 1234567890<br>
-                <strong>Email:</strong> rapidoc@mail.com<br>
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#doctor">Doctors</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Location Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Online OPDs</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Availability Status</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Pharmacy Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">User Benefits</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Daily Newsletter</h4>
-            <p>Get your medical insights! Subscribe to our newsletters&nbsp;now!</p>
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="Email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="containerf">
-      <div class="copyright">
-        © Copyright <strong> RapiDoc </strong> . All Rights Reserved
-      </div>
-    </div>
-  </footer> -->
 
   <footer>
     <div class="footer-wrapper">
@@ -224,7 +164,7 @@ Blood Bank
                   </p>
                   <form action="#" class="subscribe-form">
                     <input type="text" placeholder="Your email" required>
-                    <button type="submit">SUBSCRIBE</button>
+                    <button type="submit" style="color: black;">SUBSCRIBE</button>
                   </form>
                 </section>
             </div>
@@ -256,7 +196,6 @@ Blood Bank
       </div>
     </div>
 </footer>
-
   <div id="back-to-top-container">
     <div class="circle">
       <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -266,35 +205,14 @@ Blood Bank
       </svg>
     </div>
   </div>
-
-
-
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const backToTopButton = document.getElementById('back-to-top-container');
-    
-          function checkButtonVisibility() {
-            if (window.innerWidth > 100 && window.scrollY > 100) {
-              backToTopButton.style.display = 'block';
-            } else {
-              backToTopButton.style.display = 'none';
-            }
-          }
-    
-          window.addEventListener('scroll', checkButtonVisibility);
-          window.addEventListener('resize', checkButtonVisibility);
-    
-          backToTopButton.addEventListener('click', function () {
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
-          });
-          checkButtonVisibility();
-        });
-    
-      </script>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <div id="popupContent"></div>
+    </div>
+    </div>
+      <script src="../js/backtotopjs.js"></script>
+      <script src="../js/popupbloodlist.js"></script>
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="glightbox/js/glightbox.min.js"></script>
 <script src="php-email-form/validate.js"></script>
@@ -305,7 +223,6 @@ Blood Bank
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="patient-portal.js"></script>
 <script src="swiper-bundle.min.js"></script>
- 
-  <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
+<script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
 </body>
 </html>
