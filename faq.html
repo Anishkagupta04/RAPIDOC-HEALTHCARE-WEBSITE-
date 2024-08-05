@@ -134,31 +134,27 @@ footer {
     }
 
     /* Base Styles for Hamburger Menu */
-.hamburger-menu {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 10px;
+    .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
 }
 
-.hamburger-menu .bar {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 3px 0;
-  transition: 0.3s;
+
+#site-name {
+    font-size: 32px; /* Adjust size as needed */
+    color: #00FF00; /* Light green color */
+    margin-left: 10px; /* Space between the text and hamburger menu */
+    display: none; /* Hidden by default */
 }
 
-/* Responsive Styles for Navbar */
-/* Base Styles for Hamburger Menu */
+/* Styles for the Hamburger Menu */
 .hamburger-menu {
     display: none;
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
-    position: absolute;
-    top: 15px; /* Adjust if necessary */
-    left: 15px; /* Move to the left side */
 }
 
 .hamburger-menu .bar {
@@ -169,11 +165,31 @@ footer {
     transition: 0.3s;
 }
 
+
 /* Responsive Styles for Navbar */
 @media screen and (max-width: 768px) {
-  img{
-    display: none;
-  }
+    .img #rd-logo {
+        display: none; /* Hide image */
+    }
+
+    #site-name {
+        display: block; /* Show text */
+    }
+
+    .logo-text{
+      color: #3fbcc0;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .header-content {
+        justify-content: flex-start; /* Align items to the start (left) */
+    }
+
     .nav_menu {
         display: none;
         position: absolute;
@@ -182,13 +198,13 @@ footer {
         width: 100%;
         background-color: #022a2d;
         flex-direction: column;
-        align-items: flex-start; /* Align items to the left */
-        padding: 10px; /* Optional: Adjust padding as needed */
+        align-items: flex-start;
+        padding: 10px;
         z-index: 1000;
     }
 
     .nav_menu.show {
-        display: flex;
+        display: flex !important;
     }
 
     .nav_link {
@@ -198,16 +214,12 @@ footer {
         margin: 0;
     }
 
-    .nav_link.active 
     .nav_link li {
         margin: 10px 0;
     }
-
-    .hamburger-menu {
-        display: flex;
-    }
-
 }
+
+
 
 /* Styles for the Hamburger Menu when Opened */
 .hamburger-menu.active .bar:nth-child(1) {
@@ -452,19 +464,6 @@ img, video {
     }
 }
 
-/* Base Styles for Header */
-.header_container {
-    background-color: #022a2d;
-    display: flex;
-    justify-content: center; /* Center the content */
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 85px;
-    padding: 15px;
-    z-index: 555;
-}
-
     /* Base Styles for Hamburger Menu */
     .hamburger-menu {
   display: none;
@@ -498,52 +497,47 @@ img, video {
     height: 3px;
     background-color: white;
     margin: 3px 0;
+    margin-left: -220px !important;
     transition: 0.3s;
 }
 
-
-
-/* Header Content Wrapper */
-.header-content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px; /* Adjust as needed */
-    margin: auto;
-}
-
-/* Styles for the Logo and Text */
-.img {
-    display: flex;
-    align-items: center;
-    margin-left: 10px; /* Space from the left edge */
-}
-
-#rd-logo {
-    width: 90px;
-    height: auto;
-}
-
-#site-name {
-    font-size: 32px; /* Adjust size as needed */
-    color: #00FF00; /* Light green color */
-    margin-left: 10px; /* Space between the text and hamburger menu */
-    display: none; /* Hidden by default */
-}
-
-/* Styles for the Hamburger Menu */
-.hamburger-menu {
+/* Responsive Styles for Navbar */
+@media screen and (max-width: 768px) {
+  img{
     display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
+  }
+    .nav_menu {
+        display: none;
+        position: absolute;
+        top: 85px; /* Adjust according to your header height */
+        left: 0;
+        width: 100%;
+        background-color: #022a2d;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px; /* Optional: Adjust padding as needed */
+        z-index: 1000;
+    }
 
-.hamburger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 0px -355px;
-    transition: 0.3s
+    .nav_menu.show {
+        display: flex;
+    }
+
+    .nav_link {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav_link li {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
 }
 
 /* Responsive Styles for Navbar */
@@ -587,12 +581,6 @@ img, video {
         display: flex;
     }
 
-    .nav_link.active {
-        display: flex;
-        margin-top: -46px !important;
-        gap: 19px;
-    }
-
     .nav_link {
         display: flex;
         flex-direction: column;
@@ -604,6 +592,8 @@ img, video {
         margin: 10px 0;
     }
 }
+
+
 .hamburger .line {
     margin-left: -100px;
 }
@@ -615,7 +605,7 @@ img, video {
 
         .header_container {
             display: flex;
-            justify-content: space-between;
+            justify-content:space-around !important;
             align-items: center;
             padding: 10px 20px;
             background-color: #022a2d;
@@ -627,48 +617,27 @@ img, video {
             width: 90px;
             height: auto;
             margin-top: 20px !important;
+            margin-right: 160px !important;
+            position: relative;
+            right: 30px;
         }
 
-        
-/* Responsive Styles for Navbar */
-/* Base Styles for Hamburger Menu */
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    top: 0px; /* Adjust if necessary */
-    left: 0px; /* Move to the left side */
-}
-
-.hamburger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-@media screen and (max-width: 768px) {
-  img{
-    display: none;
-  }
+        @media screen and (max-width: 768px) {
     .nav_menu {
-        display: none;
+        display: none; /* Hide original nav menu */
         position: absolute;
         top: 85px; /* Adjust according to your header height */
         left: 0;
         width: 100%;
         background-color: #022a2d;
         flex-direction: column;
-        align-items: flex-start; /* Align items to the left */
-        padding: 10px; /* Optional: Adjust padding as needed */
+        align-items: flex-start;
+        padding: 10px;
         z-index: 1000;
     }
 
     .nav_menu.show {
-        display: flex;
+        display: flex; /* Show when active */
     }
 
     .nav_link {
@@ -678,14 +647,22 @@ img, video {
         margin: 0;
     }
 
+    .nav_link.active {
+        display: flex; /* Show links when active */
+    }
+
     .nav_link li {
         margin: 10px 0;
     }
 
     .hamburger-menu {
-        display: flex;
+        display: flex; /* Show hamburger on mobile */
     }
-
+    .nav_link.active {
+        display: flex;
+        margin-top: -73px !important;
+        gap: 31px;
+    }
 }
 
 /* Styles for the Hamburger Menu when Opened */
@@ -802,7 +779,7 @@ img, video {
         margin: 0;
     }
 
-    .nav_link li {
+    .nav_link.active  {
         margin: 10px 0;
     }
 }
@@ -857,7 +834,7 @@ img, video {
             .nav_link {
                 display: none;
         position: absolute;
-        top: 85px; /* Adjust according to your header height */
+        top: 85px; 
         left: 0;
         width: 100%;
         background-color: #022a2d;
@@ -899,7 +876,7 @@ img, video {
 
             .hamburger {
                 display: flex;
-                margin-left: -211px;
+                margin-left: -711px !important;
             }
 
             .social-links i {
@@ -918,10 +895,7 @@ img, video {
                 will-change: transform;
                 margin-left: -52px !important;
             }
-            h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", sans-serif;
-    margin-top: 31px;
-}
+       
 
 .mb-5{
     width: 213px;
@@ -1017,57 +991,41 @@ img, video {
     };
   </script>
 
-    <!-- Header -->
  <!-- ############# Header ############# -->
  <header class="header_container nav-h">
     <div class="img">
-       <a href="./index.html"> <img id="rd-logo" style="width: 81px;
-        height: auto;
-        margin: 13px;
-        margin-bottom: 13px;
-        margin-top: -17px;" 
-        src="/assets/img/rd1.png" />
-    </a>
+        <a href="./index.html">
+            <img id="rd-logo" style="width: 81px; height: auto; margin: 13px; margin-bottom: 13px; margin-top: -17px;" src="/assets/img/rd1.png" />
+        </a>
     </div>
+
+    <!-- <div class="hamburger-menu" id="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div> -->
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
     <nav class="nav_menu">
         <ul class="nav_link vis-h">
-            <li>
-                <a href="/"><i class="bi bi-house-door-fill"></i> Home</a>
-            </li>
-            <li>
-                <a href="#about"><i class="bi bi-info-circle-fill"></i> About</a>
-            </li>
-            <li>
-                <a href="news.html"><i class="bi bi-newspaper"></i> News</a>
-            </li>
-            <li>
-                <a href="dex.html"><i class="bi bi-gear"></i> Service</a>
-            </li>
-            <li>
-                <a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a>
-            </li>
+            <li><a href="/"><i class="bi bi-house-door-fill"></i> Home</a></li>
+            <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+            <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
+            <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
+            <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
             <li><a href="appointment.html"><i class="bi bi-person"></i> Appointment</a></li>
-            <li>
-                <a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a>
-            </li>
-            <li>
-                <a href="Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a>
-            </li>
-            <li>
-                <a href="rateus.html"><i class="bi bi-star"></i>Rate Us</a>
-            </li>
-
-            <li>
-                <a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a>
-            </li>
+            <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+            <li><a href="Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a></li>
+            <li><a href="rateus.html"><i class="bi bi-star"></i>Rate Us</a></li>
+            <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
             <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
         </ul>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
     </nav>
+    
 </header>
   <!-- header -->
 
@@ -1505,7 +1463,7 @@ document.getElementById('hamburger-menu').addEventListener('click', function() {
 
 </script>
 <script>
-     const hamburger = document.querySelector('.hamburger');
+    const hamburger = document.querySelector('.hamburger');
       const nav = document.querySelector('.nav_link');
       hamburger.addEventListener('click', () => {
           nav.classList.toggle('active');
