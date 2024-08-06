@@ -119,17 +119,22 @@ option{
     .header_container {
         flex-direction: column;
         align-items: start;
-        height: 24.8rem;
-        transition: 0.55s all ease-out;
+        /* background-color: transparent !important; */
         /* padding-top: 5px; */
     }
 
     .nav_link {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        bottom: 40px;
-        left: 10px;
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 64px;
+      left: 20px;
+      background-color: #022a2d;
+      width: 45% !important;
+      margin-top: 30px;
+      padding: 20px;
+      z-index: 10;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     }
     /* .nav-link li{
     margin-bottom: 5px;
