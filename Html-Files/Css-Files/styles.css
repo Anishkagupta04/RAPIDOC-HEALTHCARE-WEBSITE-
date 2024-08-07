@@ -56,7 +56,7 @@ section::before {
     align-items: center;
     height: 60px;
     width: 100%;
-    padding: 0 20px;
+    padding-top: 0px;
 }
 
 .container {
