@@ -533,9 +533,14 @@ select {
 
     .nav_menu {
         height: auto;
-        top:0;
-        left:0;
-       
+  }
+
+    .nav-h {
+        height: 5.5rem;
+        width: -webkit-fill-available !important;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
     }
 
    
