@@ -1060,6 +1060,21 @@ flex-direction: row;
 
 
     </style>
+
+<style> 
+
+  .Lastupdate {
+            margin-bottom: 14px;
+            font-size: 10px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, serif;
+            font-weight: 500;
+            margin-top: 0px;
+          }
+          #last-updated-date {
+            font-size: 10px;
+          }
+  
+  </style>
   </head>
 
   <body>
@@ -1104,6 +1119,7 @@ flex-direction: row;
               <li>
                   <a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a>
               </li>
+              <li><a href="appointment.html"><i class="bi bi-person"></i> Appointment</a></li>
               <li>
                   <a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a>
               </li>
@@ -1146,6 +1162,7 @@ flex-direction: row;
       <header class="header" id="terms-conditions-header">
         <h1 class="title" id="terms-conditions-title">Terms and Conditions</h1>
       </header>
+      <div class="Lastupdate">Last updated: <span id="last-updated-date"></span></div>
       <main class="main-content" id="terms-conditions-main">
         <section class="section">
           <h2 class="section-title">Introduction</h2>
@@ -1318,6 +1335,35 @@ flex-direction: row;
            </div>
        </div>
    </footer>
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        function updateLastUpdatedDate() {
+            const dateElement = document.getElementById("last-updated-date");
+            if (dateElement) {
+                const now = new Date();
+                const day = now.getDate();
+                const monthNames = [
+                    "January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"
+                ];
+                const month = monthNames[now.getMonth()];
+                const year = now.getFullYear();
+                // Use backticks for template literals
+                dateElement.textContent = `${month} ${day}, ${year}`;
+            }
+        }
+
+        // Initialize the date update
+        updateLastUpdatedDate();
+    });
+
+    window.onscroll = function () {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+</script>
 
   </body>
 </html>
