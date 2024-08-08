@@ -1066,8 +1066,8 @@ section {
 /*################----Services----################*/
 .services .icon-box {
   text-align: center;
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 2rem;
+  margin-right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1158,6 +1158,7 @@ section {
 /* Styles for medium screens */
 @media (max-width: 991px) {
   .services .container {
+    padding: 1rem;
     grid-template-columns: repeat(2, 1fr);
   }
 }
