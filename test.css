@@ -78,7 +78,7 @@ h1 {
     transition: all linear .8s;
     border: 1px solid rgba(255, 255, 255, 0.125);
     box-shadow: 2px 2px 2px rgb(5, 5, 5);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     margin-top: 0px;
@@ -109,7 +109,7 @@ button {
     padding: 15px 20px;
     border-radius: 2rem;
     cursor: pointer;
-    margin-left: 300px; 
+    margin-left: -26px;
 
 }
 
@@ -401,4 +401,15 @@ h2{
 
 .service-item:hover .icon-box-primary i {
   color: var(--bs-white) !important;
+}
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
 }

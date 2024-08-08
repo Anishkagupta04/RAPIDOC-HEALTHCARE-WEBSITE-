@@ -66,14 +66,14 @@ label {
 input {
     padding: 0.5rem;
     margin-bottom: 1rem;
-    width: 100%;
-    max-width: 300px;
+    width: 70%;
+    max-width: 60px;
     box-sizing: border-box;
     margin-left: 500px;
 } 
 
-button {
-    background-color: #55a5ea;
+.button {
+    background-color: #3fbcc0a6;
     color: white;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -82,9 +82,38 @@ button {
     box-sizing: border-box;
     border-radius: 1rem;
 }
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #55a5ea;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
 
-button:hover {
-    background-color: #3fbcc051;
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #55a5ea;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+
+.button:hover {
+  color: #fff;
+}
+
+.button:hover::before {
+  width: 100%;
 }
 
 #medicine-info {
@@ -229,12 +258,29 @@ button:hover {
   }
   
 
-  
-  
+@media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
 
- 
-  
- 
-  
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+}
 
-  
+.img img {
+  width: 90px;
+  height: auto;
+
+}
+
+
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  padding-top:0px ;
+}
+

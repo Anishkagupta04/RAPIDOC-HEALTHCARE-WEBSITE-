@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find a Doctor</title>
+  <title>RapiDoc</title>
   <link rel="icon" type="image/x-icon" href="../favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./Css-Files/Experiencestyle.css">
+  <link rel="stylesheet" href="../index.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -47,11 +52,11 @@
     }
 
     #doctor-list li {
-      border: 2px solid #4bb6b7;
+      /* border: 2px solid #4bb6b7; */
       border-radius: 20px;
       padding: 30px;
       margin: 20px 0;
-      background-color: #2c3e50;
+      background-color: #1c413b;
       font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
       font-size: 25px;
       color: #ecf0f1;
@@ -59,13 +64,13 @@
       align-items: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       margin:30px;
-      
+      width: 44.5%;   
     }
 
     #doctor-list li .content {
       flex-grow: 1;
       padding-right: 20px; 
-     margin-left: 50px;
+      margin-left: 10px;
     }
 
     #doctor-list li .content h4 {
@@ -97,28 +102,43 @@
       color: aliceblue;
       font-size: 30px;
     }
-
+    #progressBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 6px;
+        background-color: #3fbcc0;
+        z-index: 9999;
+      }
   </style>
 </head>
 <body>
   <div class="pre">
     <div class="loader"></div>
   </div>
-  <header class="header_container">
+  <header class="header_container nav-h">
     <div class="img">
-      <img id="rd-logo" style="width: 90px; height: auto;" src="../assets/img/rd1.png">
+      <img id="rd-logo" style="width: 90px; height: auto;" src="../images/rd.png">
+      <p style="border-radius: 2px;background-color: hwb(181 16% 46%); font-size: 1.5rem;margin-top: 5px;color: white;">Rapidoc</p>
     </div>
     <nav class="nav_menu">
-      <ul class="nav_link">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../news.html">News</a></li>
-        <a href="../dex.html"><button>Service</button></a>
-        <li><a href="../index.html#patient-portal">Patient Portal</a></li>
-        <li><a href="../index.html#doctors">Doctor</a></li>
-        <li><a href="../index.html#contact">Contact us</a></li>
-        <a href="../login.html"><button>Sign in/Sign up</button></a>
+      <ul class="nav_link vis-h">
+        <li><a href="../index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+        <li><a href="../index.html#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+        <li><a href="../news.html"><i class="bi bi-newspaper"></i> News</a></li>
+        <li><a href="../dex.html"><i class="bi bi-gear"></i> Service</a></li>
+        <li><a href="../index.html#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+        <li><a href="Html-Files/appointment.html"><i class="bi bi-person"></i> Appointment</a></li>
+        <li><a href="../index.html#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+        <li><a href="../index.html#contact"><i class="bi bi-telephone"></i> Contact us</a></li>
+        <li style="margin-right: 20px;"><a href="../login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
       </ul>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
     </nav>
   </header>
 
@@ -126,18 +146,18 @@
     <h1>Find a Doctor</h1>
     <div class="filter-sort">
       <label for="experience-filter" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">Experience:</label>
-      <select id="experience-filter" style="height: 35px; background-color: #ecf0f1;">
+      <select id="experience-filter" class="btn2" style="height: 35px; width: 130px; border: none; border-radius: 5px; padding: 5px;">
         <option value="" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">All</option>
         <option value="5">5+ years</option>
         <option value="10">10+ years</option>
         <option value="15">15+ years</option>
       </select>
       
-      <label for="fee-filter" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">Minimum Fee:</label>
-      <input type="range" id="fee-filter" min="0" max="1000" step="50" value="500" style="height: 35px; background-color: #ecf0f1;">
-      <span id="fee-value" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">1000</span>
+      <label for="fee-filter" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;" class="min">Minimum Fee:</label>
+      <input type="range" id="fee-filter" min="0" max="1000" step="50" value="500" style="height: 35px; margin-top: 8px;">
+      <span id="fee-value" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px; margin-right: 20px;">1000</span>
       
-      <button id="sort-btn" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Sort by Fee</button>
+      <button id="sort-btn" class="sort-btn" style="font-family: Arial, Helvetica, sans-serif; width: 130px; height: 35px; margin-left: 10px; margin-right: 10px; border: none;">Sort by Fee</button>
     </div>
   </header>
 
@@ -180,8 +200,9 @@
               <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
-          <section class="footer-col" >
+          <section class="footer-col">
             <div>
+
             <h4>RAPIDOC Newsletter</h4><br>
             <p>
               Subscribe to our newsletter for a weekly dose
@@ -189,16 +210,20 @@
               exclusive offers.
             </p>
           </div>
-            <form action="#" class="subscribe-form">
-              <input type="email" placeholder="Your email" required>
-              <button type="submit">SUBSCRIBE</button>
+            <form action="#" class="subscribe-form" id="subscribeForm">
+              <input type="email"  id="emailInput" placeholder="Your email" required>
+              <button type="submit"  id="subscribeButton" style="color: black;">SUBSCRIBE</button>
             </form>
-            <p class="confirmation-message">Thank you for subscribing!</p>
-             </section>
+          </section>
+          
+          <div id="subscribeBanner">
+            <p>Thanks for subscribing!</p>
+          </div>
+        
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
+      <div class="footer-bottom">
       <div class="footer-bottom-wrapper">
         <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
           Reserved Made with ❤️ by RapiDoc</small>
@@ -243,8 +268,37 @@
       </svg>
     </div>
   </div>
+  <div id="progressBar"></div>
+  <script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Get the email input value
+      var email = document.getElementById('emailInput').value;
+      
+      // You can add further validation of the email input here if needed
+      
+      // Show the subscribe banner
+      document.getElementById('subscribeBanner').style.display = 'block';
+      
+      // Optionally, you can reset the form
+      document.getElementById('subscribeForm').reset();
+      
+      // Simulate a delay and hide the banner after 5 seconds
+      setTimeout(function() {
+        document.getElementById('subscribeBanner').style.display = 'none';
+      }, 5000);
+    });
+  </script>
+
 
   <script>
+    window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
     const doctorList = [
       {
         name: "Dr. Ram",
@@ -462,19 +516,32 @@
       const doctorListElement = document.getElementById("doctor-list");
       doctorListElement.innerHTML = "";
 
-      doctors.forEach(doctor => {
-        const doctorItem = document.createElement("li");
-        doctorItem.innerHTML = `
-          <div class="content">
-            <h4>${doctor.name}</h4>
-            <p>Specialization: ${doctor.specialization}</p>
-            <p>Experience: ${doctor.experience} years</p>
-            <p>Fee: $${doctor.fee}</p>
-          </div>
-          ${doctor.image ? `<img src="${doctor.image}" alt="${doctor.name}" style="width: 80px; height: auto; border-radius: 50%;">` : ""}
-        `;
-        doctorListElement.appendChild(doctorItem);
-      });
+     // Assuming 'doctors' is an array of doctor objects and 'doctorListElement' is the parent UL element
+
+doctors.forEach(doctor => {
+  // Create a new li element
+  const doctorItem = document.createElement("li");
+
+  // Set the inner HTML of the li element
+  doctorItem.innerHTML = `
+    <div class="content">
+      <h4>${doctor.name}</h4>
+      <p>Specialization: ${doctor.specialization}</p>
+      <p>Experience: ${doctor.experience} years</p>
+      <p>Fee: $${doctor.fee}</p>
+    </div>
+    ${doctor.image ? `<img src="${doctor.image}" alt="${doctor.name}" style="width: 80px; height: auto; border-radius: 50%;">` : ""}
+  `;
+
+  // Added a click event listener to the li element to redirect to appointment page
+  doctorItem.addEventListener('click', () => {
+    window.location.href = 'appointment.html';
+  });
+
+  // Append the li element to the parent UL element
+  doctorListElement.appendChild(doctorItem);
+});
+
     }
 
     function filterDoctors() {
@@ -524,7 +591,7 @@
     var currentYear = new Date().getFullYear();
     document.getElementById('year').textContent = currentYear;
   </script>
-    <script>
+  <script>
       document.addEventListener("DOMContentLoaded", function () {
         const backToTopButton = document.getElementById('back-to-top-container');
   
@@ -547,9 +614,14 @@
         });
         checkButtonVisibility();
       });
-  
-    </script>
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+      const hamburger = document.querySelector('.hamburger');
+      const navbar = document.querySelector('.header_container');
+      const nav = document.querySelector('.nav_link');
+      hamburger.addEventListener('click', () => {
+        navbar.classList.toggle('nav-h');
+        nav.classList.toggle('vis-h');
+      })
+  </script>
+  <script src="./experience.js"></script>
 </body>
 </html>
