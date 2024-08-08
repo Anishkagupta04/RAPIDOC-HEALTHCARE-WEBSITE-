@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAPIDOC</title>
+  <link rel="icon" type="image/x-icon" href="log/favicon.ico">
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="log/login.css">
+  <script src="scriptsignup.js" defer type="module"></script>
+  <script src="signupjs.js" defer type="module"></script>
+  <script src="signupjs1.js" defer type="module"></script>
+  <meta name="google-signin-client_id" content="646664380070-n07i34glgcc6sanb59p3m1k5k0cgn1v1.apps.googleusercontent.com">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+        <img src="rd1.png" >
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+      <li><a href="index.html#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+      <li><a href="Html-Files/news.html"><i class="bi bi-newspaper"></i> News</a></li>
+      <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
+      <li><a href="index.html#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+      <li><a href="index.html#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+      <li><a href="Html-Files/contact.html"><i class="bi bi-telephone"></i> Contact us</a></li>
+      <li><a href="rateus.html"><i class="bi bi-star"></i> Rate Us</a></li>
+      <li><a href=""><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+    </ul>
+    <button class="find-doctor"><a href="Html-Files/Doctor%20Experience.html">Find a Doctor</a></button>
+  </nav>
+
+  <!-- Forms Container -->
+  <div class="container" id="container">
+    <div class="form-container register-container">
+      <form action="#" id="registerForm">
+        <h1 style="color: black;">RAPIDOC</h1>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button type="submit">Register</button>
+        <span id="registerMessage" style="display: none;">Account created successfully</span>
+        <div class="social-container">
+          <a href="https://www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
+          <a id="google1" class="social"><i class="lni lni-google"></i></a>
+          <a href="https://www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-container login-container">
+      <form action="#" id="loginForm">
+        <h1>RAPIDOC</h1>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <div class="content">
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label>Remember me</label>
+          </div>
+          <div class="pass-link">
+            <a href="#">Forgot password?</a>
+          </div>
+        </div>
+        <button type="submit">Login</button>
+        <span>or use your account</span>
+        <div class="social-container">
+          <a href="https://www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
+          <a class="social" id="google"><i class="lni lni-google"></i></a>
+          <a href="https://www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
+        </div>
+      </form>
+    </div>
+
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1 class="title">Hello <br> friends</h1>
+          <p>if you have an account, login here and have fun</p>
+          <button class="ghost" id="login">Login
+            <i class="lni lni-arrow-left login"></i>
+          </button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1 class="title">Start your <br> journey now</h1>
+          <p>if you don't have an account yet, join us and start your journey.</p>
+          <button class="ghost" id="register">Register
+            <i class="lni lni-arrow-right register"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-wrapper">
+        <div class="footer-columns">
+            <div class="other-columns">
+                <section>
+                    <h4>Quick Links</h4><br>
+                      <ul class="links">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="./Html-Files/contact.html">Contact Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                    </ul>
+                </section>
+                <section>
+                  <h4>Explore</h4><br>
+                  <ul class="links">
+                    <li><a href="#">Appointment</a></li>
+                    <li><a href="#">Patient Portal</a></li>
+                    <li><a href="#">Login account</a></li>
+                    <li><a href="#">Helplines</a></li>
+                    <li><a href="#">Location</a></li>
+                  </ul>
+                </section>
+                <section>
+                  <h4>Legal</h4><br>
+                  <ul class="links">
+                    <li><a href="#">Customer Agreement</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">GDPR</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                  </ul>
+                </section>
+                <section class="footer-col">
+                  <h4>RAPIDOC Newsletter</h4><br>
+                  <p>
+                    Subscribe to our newsletter for a weekly dose
+                    of news, updates, helpful tips, and
+                    exclusive offers.
+                  </p>
+                  <!-- <form action="#" class="subscribe-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">SUBSCRIBE</button>
+                  </form> -->
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-wrapper">
+            <small>© <span id="year"></span> RapiDoc&nbsp;| All Rights
+              Reserved  Made with ❤️ by RapiDoc</small>
+              <style>
+                .social-wrapper a div i {
+                  color: #afb6c7;
+                }
+               .social-wrapper a div i:hover {
+                 color: #fff;
+                }
+              </style>
+   
+      </div>
+    </div>
+</footer>
+  
+  <script src="log/script.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const registerButton = document.getElementById("register");
+      const container = document.getElementById("container");
+
+      registerButton.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent the default behavior of the anchor tag
+
+        container.classList.add("right-panel-active");
+
+        // Scroll to the top of the form for better visibility
+        document.getElementById("registerForm").scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+</body>
+</html>
