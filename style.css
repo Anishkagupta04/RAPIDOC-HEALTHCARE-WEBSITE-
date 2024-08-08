@@ -1613,8 +1613,11 @@ footer {
   transition: all 0.2s ease-in-out;
 }
 
-.subscribe-btn:hover {
-  border: 3px solid var(--white);
+#subscribeButton:hover {
+  background-color: #55a5ea;
+  color: white;
+  transform: scale(1.05);
+  border-color: #3fbbc0;
 }
 
 /*? footer containers */
@@ -1712,34 +1715,35 @@ footer {
 }
 
 /*? Footer bottom */
-
-/* Remove underline from all links in the footer sections */
 .links a {
   position: relative;
   text-decoration: none;
-  color: inherit;
-  /* Optional: Use this if you want the link to inherit the color from its parent element */
+  color: #333; /* Initial link color */
   transition: color 0.3s ease;
-  /* Smooth transition effect */
 }
 
-/* Add the underline effect */
-.links a::after {
+.links a::before {
   content: '';
   position: absolute;
-  width: 0;
+  width: 100%;
   height: 2px;
-  bottom: -2px;
+  bottom: -4px; /* Adjusts the position of the underline */
   left: 0;
   background-color: #55a5ea;
-  transition: width 0.3s ease;
-  transition-delay: 0.1s;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
 }
 
 .links a:hover {
-  color: #55a5ea;
-  /* Change text color to black */
+  color: #55a5ea; /* Text color on hover */
 }
+
+.links a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left; /* Makes the underline appear to slide from left to right */
+}
+
 
 /* Hover effect */
 .links a:hover::after {
@@ -1754,19 +1758,18 @@ footer {
   width: 100%;
   color: var(--text-color);
   background-color: var(--footer-bottom-bg);
+  margin: 0 auto;
 }
 
 .footer-bottom-wrapper {
-  display: flex;
-  max-width: 80rem;
+  max-width: 80%;
   margin: 0 auto;
   gap: 1rem;
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
+  text-align: center;
   padding: 1rem;
+  margin-right: 150px;
+  margin-top: 3rem;
 }
 
 .footer-bottom small {
@@ -1798,6 +1801,22 @@ footer {
   font-size: 1rem;
   margin: 0 auto;
   width: 100%
+}
+.copyright{
+  height: 5rem;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 2rem;
+  color: #888;
+}
+#ss{
+  text-decoration: underline;
+}
+#ss2{
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 /*? socials */
@@ -1837,6 +1856,7 @@ footer {
   flex-direction: column;
   justify-content: center;
 }
+
 
 
 
@@ -1935,6 +1955,7 @@ background-clip: text;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+
 
 @media screen and (max-width: 768px) {
   #ss {
