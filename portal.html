@@ -24,6 +24,21 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
 
     <style>
+
+header.header_container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.header_container.scrolled {
+    background-color: #005253; /* Adjust the background color as needed */
+    box-shadow: 0 4px 2px -2px gray; /* Adds a shadow effect */
+}
+
+
       ::-webkit-scrollbar {
         width: 10px;
       }
@@ -351,167 +366,47 @@
     </nav>
   </header>
 
-  <!-- ############# Header ############# -->
+<section style="color: #000;">Patient portal<section>
 
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
+  <!-- Patient Portal Section -->
+  <section id="patient-portal" class="patient-portal">
+    <div class="container-patientportal">
+      <div class="section-title section-black-text" id="section-patientportal">
+        <h2>Patient Portal</h2>
+        <p>Access your medical records, lab results, and prescription history securely.</p>
+      </div>
+      <div class="container">
 
-
-      <a href="#appointment" class="appointment-btn scrollto">
-        <span class="d-md-inline">EMERGENCY</span></a>
+        <!-- Add Login Form for Patient Portal -->
+        <div class="login-box">
+          <div class="avatar">
+            <img src="img/avatar.png" height="280px" width="263px" alt="Avatar">
+          </div>
+          <form>
+            <div class="textbox">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" name="username" required class="t1">
+            </div>
+            <br>
+            <div class="textbox">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" name="password" required>
+            </div>
+            <br>
+            <input type="submit" class="btn" value="SUBMIT">
+            <div class="register-link">
+              <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px;">Not registered yet?<a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> Register Here</a></p>
+            </div>
+            <div class="forgot-password" id="forgot-password-patient-portal">
+              <a style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px;" href="forgot-password.php">Forgot Your Password?</a>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-  </header>
-  <style>
-    .content{
-      padding: 100px;
-    }
-  </style>
-    <main class="main">
-      <!--=============== HOME ===============-->
-      <section class="home section" id="home">
-        <div class="home__container container grid">
-          <div class="home__data">
-            <h1 class="home__title">RAPIDOC|Delivery <br />Order Medicines</h1>
-            <p class="home__description">
-              Order your <b>Medicine</b> at any time and we will deliver them
-              right to where you are.
-            </p>
+  </section>
 
-            <a href="medicine.html" class="button">Get Started</a>
-            <img src="assets/img/rd.png" alt="home" class="home__image" style="display: block;" />
-          </div>
-        </div>
-      </section>
-
-      <!--=============== ABOUT ===============-->
-      <section class="about section container" id="about">
-        <div class="about__container grid">
-          <div class="about__data">
-            <h2 class="section__title-center">
-              Find Out A Little More About Us
-            </h2>
-            <p class="about__description">
-              We are a company dedicated to the distribution of products by
-              delivery to your home or to the place where you are, with the best
-              quality of delivery.
-            </p>
-            <img src="assets/img/about.png" alt="about" class="imt"/>
-          </div>
-        </div>
-      </section>
-
-      <!--=============== SECURITY ===============-->
-      <section class="security section container">
-        <div class="security__container grid">
-          <div class="security__data">
-            <h2 class="section__title-center">
-              Your Safety Is Important
-            </h2>
-            <p class="security__description">
-              When your order reaches you, we have the health safety protocols,
-              so that you are protected from any disease. Watch the video of how
-              the delivery is made.
-            </p>
-          </div>
-          <img src="assets/img/sec.png" alt="about" class="imt"/>
-        </div>
-      </section>
-
-      <!--=============== SERVICES ===============-->
-      <section class="services section container" id="services">
-        <h2 class="section__title">
-          Some Services We <br />
-          Offer
-        </h2>
-        <div class="services__container grid">
-          <div class="services__data">
-            <h3 class="services__subtitle">Payment Done</h3>
-            <img src="assets/img/s1.jpg" alt="imog" />
-            <p class="services__description">
-              Pay with a Visa or PayPal card and without much ado.
-            </p>
-            <div class="button-container">
-              <a href="#" class="button button-link">Learn More</a>
-            </div>
-          </div>
-
-          <div class="services__data">
-            <h3 class="services__subtitle">Find Your Product</h3>
-            <img src="assets/img/s2.jpg" alt="imog" />
-            <p class="services__description">
-              We offer sale of products through the Internet.
-            </p>
-            <div class="button-container">
-              <a href="#" class="button button-link">Learn More</a>
-            </div>
-          </div>
-
-          <div class="services__data">
-            <h3 class="services__subtitle">Product Received</h3>
-            <img src="assets/img/s3.jpg" alt="imog" />
-            <p class="services__description">
-              In our app you can see the delay time of your order.
-            </p>
-            <div class="button-container">
-              <a href="#" class="button button-link">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--=============== APP ===============-->
-      <section class="app section container">
-        <div class="app__container grid">
-          <div class="app__data">
-            <h2 class="section__title-center">
-              Watch Your Delivery At Any Time
-            </h2>
-            <p class="app__description">
-              With our app you can view the route of your order, from our local
-              headquarters to the place where you are. Look for the app now!
-            </p>
-            <div class="app__buttons">
-              <a href="#" class="button button-flex">
-                <i class="bx bxl-apple button__icon"></i> App Store
-              </a>
-              <a href="#" class="button button-flex">
-                <i class="bx bxl-play-store button__icon"></i> Google Play
-              </a>
-            </div>
-          </div>
-          <img src="assets\img\delivery.jpg" alt="home1" class="imt"/>
-        </div>
-      </section>
-
-      <!--=============== CONTACT US ===============-->
-      <section class="contact section container" id="contact">
-        <div class="contact__container">
-          <div class="contact__content">
-            <h2 class="section__title-center">
-              Contact Us From Here
-            </h2>
-            <p class="contact__description">
-              You can contact us from here, you can write to us, call us or
-              visit our service center, we will gladly assist you.
-            </p>
-            <div class="contact__address">
-              <i class="fa-solid fa-envelope"></i>
-              <p>Email: <span class="contact__information">delivery@email.com</span></p>
-            </div>
-            <div class="contact__address">
-              <i class="fa-solid fa-map"></i>
-              <p>Location: <span class="contact__information">New Delhi</span></p>
-            </div>
-            <div class="container">
-              <a href="index.html#contact" class="button">Contact Us</a>
-            </div>
-          </div>
-          <div class="contact__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8343092661703!2d77.22972667550205!3d28.66467942564711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1720370841354!5m2!1sen!2sin" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-      </section>
-    </main>
+  
 
   <footer>
     <div class="footer-wrapper">
@@ -532,7 +427,7 @@
             <h4>Explore</h4><br>
             <ul class="links">
               <li><a href="Html-Files/appointment.html">Appointment</a></li>
-              <li><a href="portal.html">Patient Portal</a></li>
+              <li><a href="index.html#patient-portal">Patient Portal</a></li>
               <li><a href="login.html">Login account</a></li>
               <li><a href="#">Helplines</a></li>
               <li><a href="index.html#contact">Location</a></li>
