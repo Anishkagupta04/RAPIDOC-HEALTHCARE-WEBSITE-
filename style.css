@@ -5,6 +5,9 @@ body {
 }
 .btn1{
   padding:10px;
+  border: none;
+  color: white;
+  border-radius: 10px;
 }
 a {
   color: #ffffff;
