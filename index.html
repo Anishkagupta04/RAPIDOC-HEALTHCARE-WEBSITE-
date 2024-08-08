@@ -87,6 +87,7 @@
         <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
         <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
         <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+        <li><a href="Html-Files/appointment.html"><i class="bi bi-person"></i> Appointment</a></li>
         <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
         <li><a href="#contact"><i class="bi bi-telephone"></i> Contact us</a></li>
         <li><a href="#feedback"><i class="bi bi-star"></i> Rate Us</a></li>
@@ -96,6 +97,13 @@
       </ul>
     </nav>
   </header>
+  <script>
+    function toggleMenu() {
+  const navLinks = document.querySelector('.nav_link');
+  navLinks.classList.toggle('active');
+}
+
+  </script>
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
       <a href="#appointment" class="appointment-btn scrollto">
@@ -105,14 +113,12 @@
   </header>
   <div class="container" style="display:flex ;">
     <div class="content">
-      <h1 style="font-size: 65px;">
-        Welcome to <span style="color: #55a5ea;">RapiDoc!</span> <br /> Your one-stop digital <br> healthcare
-        destination
-      </h1>
-      <h4>
-        <a href="#about" class="btn-get-started scrollto" id="btn">Download Now</a>
-      </h4>
-    </div>
+  
+    <h1 style="font-size: 65px; margin-top: 10px;">
+        Welcome to <span style="color: #55a5ea;">RapiDoc!</span> <br /> Your one-stop digital <br> healthcare destination
+    </h1>
+</div>
+
     <img class="sec-img" src="images/rd.png" alt="" id="sec-img" style="padding: 0 0 0 0;"/>
   </div>
   <!-- End Home -->
@@ -363,9 +369,10 @@
               <br>
               <input type="submit" class="btn" value="SUBMIT">
               <div class="register-link">
-                <a href="#">Not registered yet? Register Here</a>
-                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px;">Not registered yet?<a href="./log/login.html" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> Register Here</a></p>
-
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 16px;">
+                  Not registered yet? 
+                  <a href="./log/login.html" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Register Here</a>
+                </p>
               </div>
               <div class="forgot-password" id="forgot-password-patient-portal">
                 <a href="forgot-password.php">Forgot Your Password?</a>
@@ -616,15 +623,24 @@
       <p>Let us know how we're doing and how we can improve. <br /> <span style="color: hwb(181 21% 19%);"><strong>RapiDoc</strong> Healthcare</p>
       <p>This is a confused face emoji: &#x1f615;</p>
       <div>
-        <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
-        <div class="rating-container">
-          <button type="button" onclick="handleRatingChange(1)">😡</button>
-          <button type="button" onclick="handleRatingChange(2)">☹️</button>
-          <button type="button" onclick="handleRatingChange(3)">😐</button>
-          <button type="button" onclick="handleRatingChange(4)">🙂</button>
-          <button type="button" onclick="handleRatingChange(5)">😄</button>
+
+
+                           <label for="rating" class="rate-us"> <strong>Please Rate us below</strong></label>
+
+      <div class="container" style="text-align: center;" >
+        <div class="emoji-gifs">
+          <img src="emoji1.gif" alt="Emoji 1" class="emoji-gif" data-emoji="😡" data-gif-src="emoji1.gif" width="50px" height="50px" >
+          <img src="emoji2.gif" alt="Emoji 2" class="emoji-gif" data-emoji="☹️" data-gif-src="emoji2.gif" width="50px" height="50px" >
+          <img src="emoji3.gif" alt="Emoji 3" class="emoji-gif" data-emoji="😐" data-gif-src="emoji3.gif" width="50px" height="50px" >
+          <img src="emoji5.gif" alt="Emoji 4" class="emoji-gif" data-emoji="😊" data-gif-src="emoji5.gif" width="50px" height="50px" >
+          <img src="emoji4.gif" alt="Emoji 5" class="emoji-gif" data-emoji="😍" data-gif-src="emoji4.gif" width="50px" height="50px" >
+     </div>
+        <div class="selected-emoji" style="text-align: center;" >
+            <p>You selected: <span id="selected-emoji"></span></p>
+            <img  id="selected-gif" src="" alt="Selected GIF" width="50px" height="50px"  >
+
         </div>
-      </div>
+    </div>
       <form id="feedback-form" onsubmit="handleSubmit(event)">
         <label for="name">Your Name</label>
         <input type="text" id="name" placeholder="Enter your name" required>
@@ -648,6 +664,7 @@
   </div>
 </div>
 <br>
+
   <link rel="stylesheet" href="./assets/css/visitors.css">
   <div class="visitor-counter">
     <div>Visitor</div>
@@ -676,7 +693,7 @@
             <h4>Explore</h4><br>
             <ul class="links">
               <li><a href="Html-Files/appointment.html">Appointment</a></li>
-              <li><a href="index.html#patient-portal">Patient Portal</a></li>
+              <li><a href="portal.html">Patient Portal</a></li>
               <li><a href="log/login.html">Login account</a></li>
               <li><a href="#">Helplines</a></li>
               <li><a href="index.html#contact">Location</a></li>
