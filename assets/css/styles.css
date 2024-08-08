@@ -883,3 +883,34 @@ footer {
 #back-to-top:hover {
   transform: scale(1.1);
 }
+
+
+@media (max-width: 768px) {
+  #back-to-top-container {
+    right: 15px;
+  }
+  .app__container{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+  }
+  .app__buttons{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    
+    
+  }
+
+  .app__buttons button{
+    margin: 10px 0 !important;
+  }
+  .app__buttons button:hover{
+    background-color: #55a5ea !important;
+    color: black !important;
+  }
+ 
+  
+}

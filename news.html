@@ -110,7 +110,9 @@ option{
     margin: 4px 4px;
     background-color: white;
 }
-
+.img p{
+  display: none;
+}
 @media only screen and (max-width: 820px) {
     .hamburger {
         display: block;
@@ -145,8 +147,11 @@ option{
     .vis-h {
         opacity: 0;
     }
-
+    .img img{
+      display: none;
+    }
     .img p {
+        display: block;
         position: relative;
         left: 300px;
         bottom: 0px;
@@ -528,6 +533,7 @@ form.php-email-form{
       <!-- ############# Header ############# -->
       <header class="header_container nav-h">
       <div class="img">
+        <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png">
         <p style="color: hwb(181 16% 46%); font-size: 1.5rem;margin-top: 5px;">Rapidoc</p>
       </div>
         <nav class="nav_menu">
