@@ -792,7 +792,6 @@
   border: 1px solid #5a7f5a;
   border-radius: 5px;
   font-size: 14px;
-  width: 100%;
   box-sizing: border-box;
   background-color: #005253;
   color: #e0f7e4;
@@ -897,6 +896,19 @@
     font-size: 14px;
   }
 }
+@media screen and (max-width: 767px) {
+  small {
+    font-size: 12px; 
+    padding: 8px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  small {
+    font-size: 10px; 
+    padding: 6px 0;
+  }
+}
     </style>
     <link rel="stylesheet" href="chatbox.css" />
     <!-- Google Fonts Link For Icons chatboxx -->
@@ -938,7 +950,7 @@
       };
     </script>
     <!-- ############# Header ############# -->
-    <header class="header_container nav-h">
+    <header class="header_container nav-h" style="padding-right: 160px;">
       <div class="img">
         <img
           id="rd-logo"
@@ -977,15 +989,6 @@
           <li>
             <a href="rateus.html"><i class="bi bi-star"></i>Rate Us</a>
           </li>
-
-          <li>
-            <a href="login.html"
-              ><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a
-            >
-          </li>
-          <a href="./Html-Files/Doctor Experience.html"
-            ><button>Find a Doctor</button></a
-          >
         </ul>
         <div class="hamburger">
           <div class="line"></div>
@@ -1162,13 +1165,9 @@
               <a href="https://www.facebook.com/" target="_blank"
                 ><div><i class="fa-brands fa-facebook-f"></i></div
               ></a>
-              <!-- <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a> -->
               <a href="https://www.twitter.com"
-                ><div>
-                  <img
-                    src="twitter.png"
-                    style="width: 16px; height: 15px"
-                  /></div
+                ><div><i class="fa-brands fa-twitter"></i>
+                  </div
               ></a>
               <a href="https://www.linkedin.com" target="_blank"
                 ><div><i class="fa-brands fa-linkedin"></i></div
