@@ -30,6 +30,25 @@
       margin-left: 40px;
     }
 
+    .custom-button1 {
+      position: relative;
+      background-color: #3fbcc0a6;
+      color: white;
+      border: 2px solid #000;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: color 0.3s ease;
+      z-index: 1;
+      padding: 8px 12px; /* Adjust padding to make the button bigger */
+      font-size: 14px; 
+      margin-top: -10px;
+  }
+
+  #sort-btn {
+    margin-left: 10px; /* Adjust the value to increase or decrease the space */
+    margin-right: 10px;
+  }
+
     .filters {
       display: flex;
       justify-content: center;
@@ -152,7 +171,7 @@
       <input type="range" id="fee-filter" min="0" max="1000" step="50" value="500" style="height: 35px; background-color: #ecf0f1;">
       <span id="fee-value" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">1000</span>
       
-      <button id="sort-btn" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Sort by Fee</button>
+      <button id="sort-btn" class="custom-button1" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Sort by Fee</button>
     </div>
   </header>
 

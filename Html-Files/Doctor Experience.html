@@ -52,11 +52,11 @@
     }
 
     #doctor-list li {
-      border: 2px solid #4bb6b7;
+      /* border: 2px solid #4bb6b7; */
       border-radius: 20px;
       padding: 30px;
       margin: 20px 0;
-      background-color: #2c3e50;
+      background-color: #1c413b;
       font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
       font-size: 25px;
       color: #ecf0f1;
@@ -64,13 +64,13 @@
       align-items: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       margin:30px;
-      width: 96%;
+      width: 44.5%;   
     }
 
     #doctor-list li .content {
       flex-grow: 1;
       padding-right: 20px; 
-     margin-left: 50px;
+      margin-left: 10px;
     }
 
     #doctor-list li .content h4 {
@@ -124,16 +124,15 @@
     </div>
     <nav class="nav_menu">
       <ul class="nav_link vis-h">
-        <li><a href="../index.html"><i class="bi bi-house-door-fill"></i>Home</a></li>
-        <li><a href="../index.html#about"><i class="bi bi-info-circle-fill"></i>About</a></li>
-        <li><a href="../news.html"><i class="bi bi-newspaper"></i>News</a></li>
-        
-        <li><a href="../dex.html"><i class="bi bi-gear"></i>Service</a></li>
-        <li><a href="../index.html#patient-portal"><i class="bi bi-person"></i>Patient Portal</a></li>
+        <li><a href="../index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+        <li><a href="../index.html#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+        <li><a href="../news.html"><i class="bi bi-newspaper"></i> News</a></li>
+        <li><a href="../dex.html"><i class="bi bi-gear"></i> Service</a></li>
+        <li><a href="../index.html#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
         <li><a href="Html-Files/appointment.html"><i class="bi bi-person"></i> Appointment</a></li>
-        <li><a href="../index.html#doctors"><i class="bi bi-person-circle"></i>Doctor</a></li>
-        <li><a href="../index.html#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
-        <li><a href="../login.html"><i class="bi bi-box-arrow-right"></i>Sign in/Sign up</a></li>
+        <li><a href="../index.html#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+        <li><a href="../index.html#contact"><i class="bi bi-telephone"></i> Contact us</a></li>
+        <li style="margin-right: 20px;"><a href="../login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
       </ul>
       <div class="hamburger">
         <div class="line"></div>
@@ -147,7 +146,7 @@
     <h1>Find a Doctor</h1>
     <div class="filter-sort">
       <label for="experience-filter" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">Experience:</label>
-      <select id="experience-filter" style="height: 35px; background-color: #ecf0f1;">
+      <select id="experience-filter" class="btn2" style="height: 35px; width: 130px; border: none; border-radius: 5px; padding: 5px;">
         <option value="" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">All</option>
         <option value="5">5+ years</option>
         <option value="10">10+ years</option>
@@ -155,10 +154,10 @@
       </select>
       
       <label for="fee-filter" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;" class="min">Minimum Fee:</label>
-      <input type="range" id="fee-filter" min="0" max="1000" step="50" value="500" style="height: 35px; background-color: #ecf0f1;">
-      <span id="fee-value" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px;">1000</span>
+      <input type="range" id="fee-filter" min="0" max="1000" step="50" value="500" style="height: 35px; margin-top: 8px;">
+      <span id="fee-value" style="color: #4bb6b7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 25px; margin-right: 20px;">1000</span>
       
-      <button id="sort-btn" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Sort by Fee</button>
+      <button id="sort-btn" class="sort-btn" style="font-family: Arial, Helvetica, sans-serif; width: 130px; height: 35px; margin-left: 10px; margin-right: 10px; border: none;">Sort by Fee</button>
     </div>
   </header>
 
