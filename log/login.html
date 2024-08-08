@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="../favicon.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAPIDOC</title>
+  <link rel="stylesheet" href="./forgetpass.css">
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="login.css">
+  <!-- Removed duplicate font-awesome import -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+  <script src="https://cdn.rawgit.com/oauth-io/oauth-js/c5af4519/dist/oauth.js"></script>
+  <meta name="google-signin-client_id" content="646664380070-n07i34glgcc6sanb59p3m1k5k0cgn1v1.apps.googleusercontent.com">
+  <style>
+    .social-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px; /* Adjust the gap as needed */
+      margin-top: 10px;
+    }
+
+    .social-icon {
+      cursor: pointer;
+    }
+
+    .social-icon i {
+      font-size: 24px;
+    }
+    </style>
+</head>
+<body>
+  <div class="top-left-corner">
+    <a href="../index.html" class="home-button">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 64 64">
+        <path d="M 32 8 C 31.08875 8 30.178047 8.3091875 29.435547 8.9296875 L 8.8007812 26.171875 C 8.0357812 26.810875 7.7634844 27.925203 8.2714844 28.783203 C 8.9184844 29.875203 10.35025 30.088547 11.28125 29.310547 L 12 28.710938 L 12 47 C 12 49.761 14.239 52 17 52 L 47 52 C 49.761 52 52 49.761 52 47 L 52 28.712891 L 52.71875 29.3125 C 53.09275 29.6255 53.546047 29.777344 53.998047 29.777344 C 54.693047 29.777344 55.382672 29.416656 55.763672 28.722656 C 56.228672 27.874656 55.954891 26.803594 55.212891 26.183594 L 52 23.498047 L 52 15 C 52 13.895 51.105 13 50 13 L 48 13 C 46.895 13 46 13.895 46 15 L 46 18.484375 L 34.564453 8.9296875 C 33.821953 8.3091875 32.91125 8 32 8 z M 32 12.152344 C 32.11475 12.152344 32.228766 12.191531 32.322266 12.269531 L 48 25.369141 L 48 46 C 48 47.105 47.105 48 46 48 L 38 48 L 38 34 C 38 32.895 37.105 32 36 32 L 28 32 C 26.895 32 26 32.895 26 34 L 26 48 L 18 48 C 16.895 48 16 47.105 16 46 L 16 25.367188 L 31.677734 12.269531 C 31.771234 12.191531 31.88525 12.152344 32 12.152344 z"></path>
+      </svg>
+    </a>
+  </div>
+  <div class="container" id="container">
+    <div class="form-container register-container">
+      <form action="#" id="registerForm">
+        <h1>RAPIDOC</h1>
+        <input type="text" id="registerName" placeholder="Name" required>
+        <input type="email" id="registerEmail" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <div class="password-container">
+          <input type="password" id="registerPassword" placeholder="Password" required minlength="6">
+          <span class="eye toggle-password" toggle="#registerPassword">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24px" height="24px">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M17.5 12c-1.297 0-2.5-.768-3.5-1.854C12.5 9.768 11.297 9 10 9s-2.5.768-4 1.146c-1 1.086-2.203 1.854-3.5 1.854" />
+              <path d="M1 12s4-8 11-8s11 8 11 8s-4 8-11 8s-11-8-11-8z" />
+            </svg>
+          </span>
+        </div>
+        <button type="submit">Register</button>
+        <span id="registerMessage" style="display: none;">Account created successfully</span>
+        <div class="social-container">
+          <div onClick="handleGitHubSignIn()" class="social-icon">
+            <i class="lni lni-github-original" style="color: #333;"></i>
+          </div>
+          <div onClick="handleMicrosoftSignIn()" class="social-icon">
+            <i class="lni lni-microsoft" style="color: #00a2ed;"></i>
+          </div>
+          <div onClick="handleFbSignIn()" class="social-icon">
+            <i class="lni lni-facebook-fill" style="color: #3b5998;"></i>
+          </div>
+          <div onClick="handleGoogleSignIn()" class="social-icon">
+            <i class="lni lni-google" style="color: darkturquoise;"></i>
+          </div>
+          <div onClick="handleLinkedInSignIn()" class="social-icon">
+            <i class="lni lni-linkedin-original" style="color: #0077B5;"></i>
+            
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-container login-container">
+      <form action="#" id="loginForm">
+        <h1>RAPIDOC</h1>
+        <input type="email" id="loginEmail" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <div class="password-container">
+          <input type="password" id="loginPassword" placeholder="Password" required minlength="6">
+          <span toggle="#loginPassword" class="eye toggle-password">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24px" height="24px">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M17.5 12c-1.297 0-2.5-.768-3.5-1.854C12.5 9.768 11.297 9 10 9s-2.5.768-4 1.146c-1 1.086-2.203 1.854-3.5 1.854" />
+              <path d="M1 12s4-8 11-8s11 8 11 8s-4 8-11 8s-11-8-11-8z" />
+            </svg>
+          </span>
+        </div>
+        <div class="content">
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label>Remember me</label>
+          </div>
+          <div class="pass-link">
+            <a href="forgetpass.html">Forgot password?</a>
+          </div>
+        </div>
+        <button type="submit">Login</button>
+        <span id="loginMessage" style="display: none;">Login successful</span>
+        <div class="social-container">
+          <div onClick="handleGitHubSignIn()" class="social-icon">
+            <i class="lni lni-github-original" style="color: #333;"></i>
+          </div>
+          <div onClick="handleMicrosoftSignIn()" class="social-icon">
+            <i class="lni lni-microsoft" style="color: #00a2ed;"></i>
+          </div>
+          <div onClick="handleFbSignIn()" class="social-icon">
+            <i class="lni lni-facebook-fill" style="color: #3b5998;"></i>
+          </div>
+          <div onClick="handleGoogleSignIn()" class="social-icon">
+            <i class="lni lni-google" style="color: darkturquoise;"></i>
+          </div>
+          <div onClick="handleLinkedInSignIn()" class="social-icon">
+            <i class="lni lni-linkedin-original" style="color: #0077B5;"></i>
+            
+            
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button class="ghost" id="login">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button class="ghost" id="register">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_AUTH_DOMAIN",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_STORAGE_BUCKET",
+      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+      appId: "YOUR_APP_ID",
+      measurementId: "YOUR_MEASUREMENT_ID"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    document.getElementById('registerForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('registerEmail').value;
+      const password = document.getElementById('registerPassword').value;
+      auth.createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          document.getElementById('registerMessage').style.display = 'block';
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+      auth.signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          document.getElementById('loginMessage').style.display = 'block';
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    });
+
+    function handleFbSignIn() {
+      const provider = new firebase.auth.FacebookAuthProvider();
+      auth.signInWithPopup(provider)
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
+
+    function handleGoogleSignIn() {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider)
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
+
+   // Initialize OAuth.io
+OAuth.initialize('your_oauth_io_public_key'); // Replace with your OAuth.io public key
+
+// Handle LinkedIn Sign In
+function handleLinkedInSignIn() {
+  OAuth.popup('linkedin').then(linkedin => {
+    console.log('LinkedIn token:', linkedin.access_token);
+    linkedin.me().then(data => {
+      console.log('LinkedIn user data:', data);
+    });
+  }).catch(error => {
+    console.error(error);
+  });
+}
+// Initialize OAuth.io
+OAuth.initialize('your_oauth_io_public_key'); // Replace with your OAuth.io public key
+
+// Handle Microsoft Sign In
+function handleMicrosoftSignIn() {
+  OAuth.popup('microsoft').then(microsoft => {
+    console.log('Microsoft token:', microsoft.access_token);
+    microsoft.me().then(data => {
+      console.log('Microsoft user data:', data);
+    });
+  }).catch(error => {
+    console.error(error);
+  });
+}
+
+function handleGitHubSignIn() {
+  const provider = new firebase.auth.GithubAuthProvider();
+  auth.signInWithPopup(provider)
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
+
+
+
+    document.querySelectorAll('.toggle-password').forEach(item => {
+      item.addEventListener('click', function() {
+        const input = document.querySelector(this.getAttribute('toggle'));
+        const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+        input.setAttribute('type', type);
+        this.classList.toggle('fa-eye');
+        this.classList.toggle('fa-eye-slash');
+      });
+    });
+
+    document.getElementById('register').addEventListener('click', () => {
+      document.getElementById('container').classList.add("right-panel-active");
+    });
+
+    document.getElementById('login').addEventListener('click', () => {
+      document.getElementById('container').classList.remove("right-panel-active");
+    });
+  </script>
+</body>
+</html>
+
+<style>
+  body{
+    background-color: #1e1e1e;
+  }
+  .container{
+    background-color: #143C3D;
+  }
+</style>

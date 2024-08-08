@@ -1,0 +1,38 @@
+name: Auto Label and Issue Check
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  auto-label-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add GSSoC Label and Check Issue
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const { owner, repo } = context.repo;
+            const pr = context.payload.pull_request;
+            
+            try {
+              await github.rest.issues.addLabels({
+                issue_number: pr.number,
+                owner: owner,
+                repo: repo,
+                labels: ['gssoc']
+              });
+              console.log('Added gssoc label');
+            } catch (error) {
+              console.error('Error adding gssoc label:', error);
+            }
+            
+            const body = pr.body || '';
+            const issueMatch = body.match(/(?:close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved)\s*:?\s*#(\d+)/i);
+            
+            if (!issueMatch) {
+              core.setFailed('No related issue mentioned in the PR description. Please use the PR template and mention the related issue.');
+            } else {
+              console.log('Related issue found:', issueMatch[1]);
+            }

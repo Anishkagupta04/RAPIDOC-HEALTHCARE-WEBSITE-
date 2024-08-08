@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ - RapiDoc</title>
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPrMehb4W75QWkrse942W07zwilMzgLZ-nPA&s">
+
+
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>RapiDoc</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link href="Css-Files/animate.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="remixicon/remixicon.css" rel="stylesheet">
+  <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link
+  rel="icon"
+  href="https://cdn-icons-png.flaticon.com/512/1458/1458279.png"
+/>
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+                         
+  <link href="patient-portal.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+</head>
+<style>
+    @media screen and (max-width: 768px) {
+  #ss {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ss {
+    font-size: 10px;
+  }
+}
+    #faq-container {
+        width: 75%;
+        display: block;
+        margin: auto;
+        margin-bottom: 12rem;
+    }
+    html, body {
+    overflow-x: hidden;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+}
+
+@media screen and (max-width: 760px) {
+    .page-content {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .page-content {
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .page-content {
+        padding: 0;
+    }
+}
+
+
+
+    @media screen and (max-width: 760px) {
+    #faq-container {
+        width: 90%;
+    }
+
+    .footer {
+        top: 130% !important;
+    }
+
+    
+}
+
+@media screen and (max-width: 760px) {
+    #faq-container {
+        margin-bottom: 0rem;
+    }
+}
+
+  body.dark .answers {
+    color: rgb(40, 37, 53);
+  }
+
+  .lead, .pt-5 {
+    text-align: center;
+    font-size: xx-large;
+  }
+  #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 6px;
+      background-color: #3fbcc0;
+      z-index: 9999;
+    }
+
+    /* Base Styles for Hamburger Menu */
+    .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+#site-name {
+    font-size: 32px; /* Adjust size as needed */
+    color: #00FF00; /* Light green color */
+    margin-left: 10px; /* Space between the text and hamburger menu */
+    display: none; /* Hidden by default */
+}
+
+/* Styles for the Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+
+/* Responsive Styles for Navbar */
+@media screen and (max-width: 768px) {
+    .img #rd-logo {
+        display: none; /* Hide image */
+    }
+
+    #site-name {
+        display: block; /* Show text */
+    }
+
+    .logo-text{
+      color: #3fbcc0;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .header-content {
+        justify-content: flex-start; /* Align items to the start (left) */
+    }
+
+    .nav_menu {
+        display: none;
+        position: absolute;
+        top: 85px; /* Adjust according to your header height */
+        left: 0;
+        width: 100%;
+        background-color: #022a2d;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .nav_menu.show {
+        display: flex !important;
+    }
+
+    .nav_link {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav_link li {
+        margin: 10px 0;
+    }
+}
+
+
+
+/* Styles for the Hamburger Menu when Opened */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.header-content{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Media Queries */
+
+/* Small Devices (600px and below) */
+@media screen and (max-width: 600px) {
+    #faq-container {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .main-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .main-heading h3 {
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .main-heading p {
+        margin-top: 10px;
+    }
+
+    .answers {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+
+    .lead, .pt-5 {
+        font-size: large;
+    }
+
+    .footer {
+        padding: 1em;
+        text-align: center;
+    }
+
+    .footer-wrapper {
+        display: block;
+        margin: auto;
+    }
+
+    .footer-columns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-columns section {
+        margin-bottom: 1rem;
+    }
+
+    .social-wrapper {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .social-wrapper a div i {
+        font-size: 20px;
+    }
+
+    .follow-us{
+        font-size: 2px;
+    }
+}
+
+/* Extra Small Devices (400px and below) */
+@media screen and (max-width: 400px) {
+    #faq-container {
+        width: 95%;
+        margin-bottom: 0rem;
+    }
+
+    .main-heading {
+        padding: 10px;
+    }
+
+    .main-heading h3 {
+        font-size: 14px;
+    }
+
+    .answers {
+        padding: 15px 10px;
+        font-size: 12px;
+    }
+
+    .lead, .pt-5 {
+        font-size: medium;
+    }
+
+    .footer {
+        padding: 0.5rem;
+    }
+
+    .footer-wrapper {
+        display: block;
+        margin: auto;
+    }
+
+    .footer-columns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-columns section {
+        margin-bottom: 0.5rem;
+    }
+
+    .social-wrapper {
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+
+    .social-wrapper a div i {
+        font-size: 15px;
+    }
+
+
+}
+/* Footer Styles for Mobile Devices */
+@media screen and (max-width: 760px) {
+    .footer-columns {
+        flex-direction: column;
+    }
+
+    .footer-columns section {
+        margin-bottom: 1rem;
+    }
+
+    .footer-wrapper {
+        padding: 1rem;
+    }
+    
+    .footer{
+height: 10px;
+    }
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-bottom {
+    margin-top: 1rem;
+    padding: 1rem;
+    color: white;
+    overflow: hidden; /* Prevents overflow */
+}
+
+/* Ensure Copyright Text Wrapping */
+.footer-bottom-wrapper small {
+    display: block;
+    margin: 0 auto;
+    font-size: 14px; 
+    max-width: 100%; /* Prevents overflowing beyond viewport */
+    box-sizing: border-box; /* Includes padding in the width */
+    word-wrap: break-word; /* Ensures long words break */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .footer-bottom-wrapper small {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer-bottom-wrapper small {
+        font-size: 10px; /* Further adjust for smaller screens */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer-bottom-wrapper small {
+        font-size: 8px; /* Adjust for very small screens */
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 760px) {
+    body {
+        font-size: 14px;
+    }
+
+    .page-content {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+
+    .page-content {
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+    /* Base Styles for Hamburger Menu */
+    .hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Responsive Styles for Navbar */
+/* Base Styles for Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 15px; /* Adjust if necessary */
+    left: 15px; /* Move to the left side */
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    margin-left: -220px !important;
+    transition: 0.3s;
+}
+
+/* Responsive Styles for Navbar */
+@media screen and (max-width: 768px) {
+  img{
+    display: none;
+  }
+    .nav_menu {
+        display: none;
+        position: absolute;
+        top: 85px; /* Adjust according to your header height */
+        left: 0;
+        width: 100%;
+        background-color: #022a2d;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px; /* Optional: Adjust padding as needed */
+        z-index: 1000;
+    }
+
+    .nav_menu.show {
+        display: flex;
+    }
+
+    .nav_link {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav_link li {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+}
+
+/* Responsive Styles for Navbar */
+@media screen and (max-width: 768px) {
+    .img #rd-logo {
+        display: none; /* Hide image */
+    }
+
+    #site-name {
+        display: block; /* Show text */
+    }
+
+    .logo-text{
+      color: #3fbcc0;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .header-content {
+        justify-content: flex-start; /* Align items to the start (left) */
+    }
+
+    .nav_menu {
+        display: none;
+        position: absolute;
+        top: 85px; /* Adjust according to your header height */
+        left: 0;
+        width: 100%;
+        background-color: #022a2d;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .nav_menu.show {
+        display: flex;
+    }
+
+    .nav_link {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav_link li {
+        margin: 10px 0;
+    }
+}
+
+
+.hamburger .line {
+    margin-left: -100px;
+}
+
+.nav_link {
+            list-style: none;
+            margin-top: 365px;
+        }
+
+        .header_container {
+            display: flex;
+            justify-content:space-around !important;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #022a2d;
+            color: #fff;
+            position: relative;
+        }
+
+        .header_container .img img {
+            width: 90px;
+            height: auto;
+            margin-top: 20px !important;
+            margin-right: 160px !important;
+            position: relative;
+            right: 30px;
+        }
+
+        @media screen and (max-width: 768px) {
+    .nav_menu {
+        display: none; /* Hide original nav menu */
+        position: absolute;
+        top: 85px; /* Adjust according to your header height */
+        left: 0;
+        width: 100%;
+        background-color: #022a2d;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .nav_menu.show {
+        display: flex; /* Show when active */
+    }
+
+    .nav_link {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav_link.active {
+        display: flex; /* Show links when active */
+    }
+
+    .nav_link li {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger on mobile */
+    }
+    .nav_link.active {
+        display: flex;
+        margin-top: -73px !important;
+        gap: 31px;
+    }
+}
+
+/* Styles for the Hamburger Menu when Opened */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.header-content{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Base Styles for Header */
+.header_container {
+    background-color: #022a2d;
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 85px;
+    padding: 15px;
+    z-index: 555;
+}
+.hamburger {
+                display: flex;
+                margin-left: -211px;
+            }
+/* Header Content Wrapper */
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: auto;
+}
+
+/* Styles for the Logo and Text */
+.img {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Space from the left edge */
+}
+
+#rd-logo {
+    width: 90px;
+    height: auto;
+}
+
+#site-name {
+    font-size: 32px; /* Adjust size as needed */
+    color: #00FF00; /* Light green color */
+    margin-left: 10px; /* Space between the text and hamburger menu */
+    display: none; /* Hidden by default */
+}
+
+
+/* Responsive Styles for Navbar */
+@media screen and (max-width: 768px) {
+    .img #rd-logo {
+        display: none; /* Hide image */
+    }
+
+    #site-name {
+        display: block; /* Show text */
+    }
+
+    .logo-text{
+      color: #3fbcc0;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .header-content {
+        justify-content: flex-start; /* Align items to the start (left) */
+    }
+
+    .nav_menu {
+        display: none;
+        position: absolute;
+        top: 85px; /* Adjust according to your header height */
+        left: 0;
+        width: 100%;
+        background-color: #022a2d;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .nav_menu.show {
+        display: flex;
+    }
+
+    .nav_link {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav_link.active  {
+        margin: 10px 0;
+    }
+}
+
+
+        .header_container p {
+            /* margin-left: 10px; */
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+
+        .nav_menu {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav_link {
+            display: flex;
+            align-items: center;
+            /* gap: 15px; */
+            list-style: none;
+            margin: 0;
+        }
+
+        .nav_link li a {
+            color: #fff;
+            gap: 2.2px;
+            text-decoration: none;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        button {
+                background-color: #55a5ea;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 2rem;
+                cursor: pointer;
+                margin-left: 8px;
+            }
+
+        .nav_link li a:hover {
+            /* background-color: #555; */
+        }
+
+        
+        @media (max-width: 768px) {
+            .nav_link {
+                display: none;
+        position: absolute;
+        top: 85px; 
+        left: 0;
+        width: 100%;
+        background-color: #022a2d;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px; /* Optional: Adjust padding as needed */
+        z-index: 1000;
+    }
+    .header_container .img img{
+      display: none;
+    }
+
+    .nav_link.active {
+        display: flex; /* Show links when active */
+    }
+            .nav_link li {
+                font-size: 14px;
+                display: flex;
+                flex-direction: row;
+                padding: 0px;
+                height: 5px;
+                margin-left: -5px;
+            }
+
+            button {
+                background-color: #55a5ea;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 2rem;
+                cursor: pointer;
+                margin-left: 8px;
+            }
+
+            .nav_link.active {
+                display: flex;
+                margin-top: -6px;
+                gap: 31px;
+            }
+
+            .hamburger {
+                display: flex;
+                margin-left: -711px !important;
+            }
+
+            .social-links i {
+                font-size: 1rem !important;
+            }
+
+            .header_container p {
+                margin-left: 115px;
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-top: 11px;
+            }
+
+            .sec-img {
+                transform-style: preserve-3d;
+                will-change: transform;
+                margin-left: -52px !important;
+            }
+       
+
+.mb-5{
+    width: 213px;
+    margin-left: 58px;
+    margin-top: 30px;
+}
+        }
+
+        .social-links {
+            display: inline-flex;
+            gap: -2rem !important;
+            align-items: center;
+            margin-left: -100px;
+        }
+
+
+        
+        /* Ensure the hero heading is centered */
+.img-h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #022a2d00; /* Adjust based on your design */
+}
+
+.hero-heading {
+    font-size: 65px;
+    color: white;
+    margin: 0;
+}
+
+.highlight {
+    color: #55a5ea;
+    display: inline;
+}
+
+.sec-img {
+    display: block;
+    margin: 20px auto;
+    height: 402px;
+    margin-top: -65px;
+    margin-bottom: -79px;
+    width: auto;
+}
+
+/* Container styles */
+.container-service {
+    padding: 0; /* Remove default padding */
+}
+
+.container-service .container {
+    padding: 0 15px; /* Adjust padding for responsiveness */
+}
+
+.content-wrapper {
+    max-width: 600px;
+    margin: 0 auto; /* Center content */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-heading {
+        font-size: 50px; /* Reduce font size for smaller screens */
+    }
+    .sec-img {
+        height: 80px; /* Adjust image size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-heading {
+        font-size: 40px; /* Further reduce font size for very small screens */
+    }
+    .sec-img {
+        height: 426px;
+        margin-top: -56px;
+        margin-bottom: -111px;
+    }
+}
+
+
+
+
+</style>
+<body>
+
+  <div id="progressBar"></div>
+  <script>
+    window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+  </script>
+
+ <!-- ############# Header ############# -->
+ <header class="header_container nav-h">
+    <div class="img">
+        <a href="./index.html">
+            <img id="rd-logo" style="width: 81px; height: auto; margin: 13px; margin-bottom: 13px; margin-top: -17px;" src="/assets/img/rd1.png" />
+        </a>
+    </div>
+
+    <!-- <div class="hamburger-menu" id="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div> -->
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+    <nav class="nav_menu">
+        <ul class="nav_link vis-h">
+            <li><a href="/"><i class="bi bi-house-door-fill"></i> Home</a></li>
+            <li><a href="#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+            <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
+            <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
+            <li><a href="#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+            <li><a href="appointment.html"><i class="bi bi-person"></i> Appointment</a></li>
+            <li><a href="#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+            <li><a href="Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a></li>
+            <li><a href="rateus.html"><i class="bi bi-star"></i>Rate Us</a></li>
+            <li><a href="login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+            <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+        </ul>
+    </nav>
+    
+</header>
+  <!-- header -->
+
+  <!-- faq -->
+ 
+<div id="page-content" class="page-content">
+    <div class="banner">
+        <div class="text-center rounded-0" style="background-image: url('assets/img/logo/nn.png');">
+            <div class="banner-container">
+                <h1 class="pt-5">Frequently Asked Questions!</h1>
+                <p class="lead">Welcome to our FAQ page! Here, you'll find answers to the most commonly asked questions about our platform. <br> If you have any additional questions or need further assistance, please feel free to reach out to our support team. </p>
+            
+            </div>
+        </div>
+    </div>
+
+    <div id="faq-container" class="faq-container">
+        <input type="text" id="faq-search" placeholder="⌕ Search your questions here.." onkeyup="filterFAQs()">
+
+        <div class="faq-category">
+            <div class="faq-item" onclick="toggleAnswer('question1')">
+                <p id="icon1">➕</p>
+                <h3>What services does the platform offer?</h3>
+            </div>
+            <p id="question1" class="answers">Our platform provides a range of healthcare services, including real-time information on hospital bed availability, patient statistics, OPD appointment booking, blood group availability, and much more.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question2')">
+                <p id="icon2">➕</p>
+                <h3>How can I check the availability of hospital beds?</h3>
+            </div>
+            <p id="question2" class="answers">To check hospital bed availability, log in to your account, navigate to the "Hospital Services" section, and select "Bed Availability." You will be able to see real-time updates on the availability of beds in your preferred hospitals.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question3')">
+                <p id="icon3">➕</p>
+                <h3>Can I book an OPD appointment through the platform?</h3>
+            </div>
+            <p id="question3" class="answers">Yes, you can easily prebook OPD appointments. Visit the "Appointments" section, choose your preferred doctor and hospital, and select a convenient time slot to book your appointment.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question4')">
+                <p id="icon4">➕</p>
+                <h3>How do I find the availability of specific blood groups in hospitals?</h3>
+            </div>
+            <p id="question4" class="answers">Go to the "Blood Bank" section, select the required blood group, and the platform will display the current availability status in various hospitals and blood banks.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question5')">
+                <p id="icon5">➕</p>
+                <h3>Is there a mobile app for this platform?</h3>
+            </div>
+            <p id="question5" class="answers">Yes, our platform is accessible via a mobile app available for both Android and iOS devices. You can download it from the respective app stores.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question6')">
+                <p id="icon6">➕</p>
+                <h3>How do I register on the platform?</h3>
+            </div>
+            <p id="question6" class="answers">To register, click on the "Sign Up" button on the homepage, fill in the required details, and verify your email address. Once registered, you can log in to access all the services.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question7')">
+                <p id="icon7">➕</p>
+                <h3>Can I cancel or reschedule my OPD appointment?</h3>
+            </div>
+            <p id="question7" class="answers">Yes, you can cancel or reschedule your OPD appointment through the "Appointments" section. Please note that some hospitals may have specific policies regarding cancellations and rescheduling, so check the terms during the booking process.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question8')">
+                <p id="icon8">➕</p>
+                <h3>Can I access my medical records through the platform?</h3>
+            </div>
+            <p id="question8" class="answers">Yes, you can access your medical records under the "My Health Records" section. Ensure that your hospital is integrated with our platform to view your records.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question9')">
+                <p id="icon9">➕</p>
+                <h3>How can I contact customer support?</h3>
+            </div>
+            <p id="question9" class="answers">You can contact our customer support team by clicking on the "Contact Us" link at the bottom of the homepage. We offer support via email, phone, and live chat.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question10')">
+                <p id="icon10">➕</p>
+                <h3>Is my personal information secure on the platform?</h3>
+            </div>
+            <p id="question10" class="answers">Yes, we prioritize your privacy and security. Our platform uses advanced encryption technologies to ensure that your personal and medical information is securely stored and transmitted.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question11')">
+                <p id="icon11">➕</p>
+                <h3>Are there any fees for using the platform?</h3>
+            </div>
+            <p id="question11" class="answers">Basic services such as browsing hospital information and checking bed availability are free. However, there may be fees for certain premium services like detailed health analytics and advanced appointment features. These fees will be clearly indicated before any charges are applied.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question12')">
+                <p id="icon12">➕</p>
+                <h3>How do I find the nearest hospitals through the platform?/h3>
+            </div>
+            <p id="question12" class="answers">To find the nearest hospitals, simply enter your location in the search bar or use the location services feature. The platform will provide a list of hospitals in your vicinity along with essential information such as bed availability and emergency blood supply.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question13')">
+                <p id="icon13">➕</p>
+                <h3>Can I view the total number of patients currently in a hospital?</h3>
+            </div>
+            <p id="question13" class="answers">Yes, the platform provides real-time data on the total number of patients in various hospitals. You can access this information by selecting the "Hospital Statistics" section and choosing the desired hospital to view detailed patient statistics.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question14')">
+                <p id="icon14">➕</p>
+                <h3>Is there a feature to track the status of my OPD appointment?</h3>
+            </div>
+            <p id="question14" class="answers">Yes, you can track the status of your OPD appointment through the "Appointments" section of the platform. This feature allows you to view upcoming appointments, check their status, and receive notifications about any changes or updates.</p>
+
+            <div class="faq-item" onclick="toggleAnswer('question15')">
+                <p id="icon15">➕</p>
+                <h3>I have many more questions for you!</h3>
+            </div>
+            <p id="question15" class="answers">Contact us! We will be there for support at <a href="mailto:rapidoc@gmail.com">rapidoc@gmail.com</a>.</p>
+        </div>
+    </div>
+
+    <style>
+        .banner {
+            color: #fff;
+            text-align: center;
+        }
+        .banner-container {
+            margin-top: 130px;
+            margin-bottom: 40px;
+        }
+        .banner-container h1 {
+            font-size: 43px !important;
+            text-shadow: 1px 1px 1px rgb(0, 27, 50), 0 0 1em rgba(0, 255, 251, 0.84), 0 0 0.2em rgba(0, 234, 255, 0.582);
+        }
+        .banner-container h1:hover {
+            text-shadow: 1px 1px 1px rgb(0, 117, 123), 0 0 1em #00fbffc7, 0 0 0.2em #4a89e296;
+        }
+
+        .lead  {
+            font-size: 17px;
+            color: rgb(168, 168, 168);
+            margin-top: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .faq-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        
+        /* Base style for the search bar */
+#faq-search {
+    width: 60%;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    margin-left: auto; /* Centering the search bar horizontally */
+    margin-right: auto; /* Centering the search bar horizontally */
+    border: 1px solid #00403c;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #ffffff91;
+    background-color: #01545c7f;
+    box-shadow: 0 2px 5px rgba(11, 251, 255, 0.363);
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    display: block; /* Ensure it takes the block-level layout for margin auto to work */
+}
+
+/* Focus state */
+#faq-search:focus {
+    border-color: #029a92;
+    box-shadow: 0 0 10px rgba(2, 154, 146, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #34949d6f;
+}
+
+/* Placeholder style */
+#faq-search::placeholder {
+    color: #dcd7d7;
+    font-style: italic;
+}
+
+/* Hover effect */
+#faq-search:hover {
+    border-color: #029a92;
+    background-color: #01545cb3;
+    cursor: pointer;
+    transform: translate(0.8px, 2px);
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+    #faq-search {
+        width: 80%;
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Responsive styles for mobile phones */
+@media (max-width: 480px) {
+    #faq-search {
+        width: 90%;
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+        .faq-category {
+            margin-bottom: 25px;
+        }
+
+        .faq-item {
+            background-color: #022a2d;
+            /* border: 1px solid #ccc; */
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item h3 {
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .faq-item p {
+            margin: 0;
+            font-size: 23px;
+        }
+
+        .faq-container .answers {
+            display: none;
+            padding: 15px;
+            background-color: #03484ad2;
+            border-left: 5px solid #029a92;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+        .faq-container .answers:hover {
+            background-color: #002a32ed;
+            transform: translateY(-3px) scale(1.01);
+        }
+        .faq-item:hover {
+            transform: translateY(-3px) scale(1.01);
+            background-color: #03484ad2;
+            color: #fff;
+        }
+
+
+        
+        .faq-item:hover h3 {
+            text-shadow: 1px 1px 1px rgb(0, 59, 111), 0 0 1em rgba(0, 255, 251, 0.466), 0 0 0.2em rgba(0, 234, 255, 0.582);
+        }
+
+        @media (max-width: 768px) {
+            .faq-item h3 {
+                font-size: 16px;
+            }
+
+            .faq-item p {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+<script>
+    function toggleAnswer(id) {
+        const answer = document.getElementById(id);
+        const icon = document.querySelector(`#icon${id.slice(-1)}`);
+
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+            icon.textContent = "➕";
+        } else {
+            answer.style.display = "block";
+            icon.textContent = "➖";
+        }
+    }
+
+    function filterFAQs() {
+        const searchTerm = document.getElementById("faq-search").value.toLowerCase();
+        const faqItems = document.querySelectorAll(".faq-item");
+        const answers = document.querySelectorAll(".answers");
+
+        faqItems.forEach((item, index) => {
+            const question = item.querySelector("h3").textContent.toLowerCase();
+            const answer = answers[index];
+            
+            if (question.includes(searchTerm)) {
+                item.style.display = "flex";
+                // Check the current display state of the answer
+                if (answer.style.display === "" || answer.style.display === "block") {
+                    answer.style.display = "block";  // Ensure the answer remains visible
+                }
+            } else {
+                item.style.display = "none";
+                answer.style.display = "none";
+            }
+        });
+    }
+</script>
+
+</div>
+
+<!-- footer -->
+<footer>
+  <div class="footer-wrapper">
+      <div class="footer-columns">
+          <div class="other-columns">
+              <section>
+                  <h4>Quick Links</h4><br>
+                    <ul class="links">
+                      <li><a href="./index.html">Home</a></li>
+                      <li><a href="#about">About Us</a></li>
+                      <li><a href="./Html-Files/contact.html">Contact Us</a></li>
+                      <li><a href="dex.html">Services</a></li>
+                      <li><a href="Html-Files\doc.html">Doctors</a></li>
+                      <li><a href="./faq.html">FAQ</a></li>
+                  </ul>
+              </section>
+              <section>
+                <h4>Explore</h4><br>
+                <ul class="links">
+                  <li><a href="Html-Files\appointment.html">Appointment</a></li>
+                  <li><a href="#">Patient Portal</a></li>
+                  <li><a href="login.html">Login account</a></li>
+                  <li><a href="#">Helplines</a></li>
+                  <li><a href="#">Location</a></li>
+                </ul>
+              </section>
+              <section>
+                <h4>Legal</h4><br>
+                <ul class="links">
+                  <li><a href="#">Customer Agreement</a></li>
+                  <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+                  <li><a href="#">GDPR</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#test">Testimonials</a></li>
+                </ul>
+              </section>
+              <section class="footer-col">
+                <h4>RAPIDOC Newsletter</h4><br>
+                <p>
+                  Subscribe to our newsletter for a weekly dose
+                  of news, updates, helpful tips, and
+                  exclusive offers.
+                </p>
+                <form action="#" class="subscribe-form">
+                  <input type="email" placeholder="Your email" required>
+                  <button type="submit" style="color: black;">SUBSCRIBE</button>
+                </form>
+              </section>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <div class="footer-bottom-wrapper">
+          <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+            Reserved  Made with ❤️ by RapiDoc</small>
+            <style>
+              .social-wrapper a div i {
+                color: #afb6c7;
+              }
+             .social-wrapper a div i:hover {
+               color: #fff;
+              }
+            </style>
+          <div class="social-wrapper">
+            <div class="social-links">
+            <div style="margin-left: 100px;font-family: sans-serif;" class="follow-us"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
+            <!-- <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a> -->
+              <a href="https://www.twitter.com"><div><img src="twitter.png" style="width: 16px; height: 15px;"></div></a>
+            <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
+             <a href="#" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
+            <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
+            <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
+            <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
+            </div>
+          </div>
+    </div>
+  </div>
+</footer>
+
+    </section>
+
+<!--scroll button-->
+  <div id="back-to-top-container">
+    <div class="circle">
+      <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- footer -->
+
+<script>
+    function toggleAnswer(id) {
+var answer = document.getElementById(id);
+if (answer) {
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+        document.getElementById("icon" + id.charAt(id.length - 1)).innerText = "➕";
+    } else {
+        answer.style.display = "block";
+        document.getElementById("icon" + id.charAt(id.length - 1)).innerText = "➖";
+    }
+}
+}
+</script>
+<script>
+  //// JavaScript working of scroll button when scrolling down
+  var backToTopBtn = document.getElementById("back-to-top");
+
+if (backToTopBtn) {
+  backToTopBtn.addEventListener("click", function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, edge
+  });
+}
+
+// JavaScript to show scroll button when scrolling down
+window.addEventListener("scroll", function() {
+  var scrollBtn = document.getElementById("back-to-top");
+  if (scrollBtn) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  }
+});
+
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.getElementById('nav-menu').classList.toggle('show');
+});
+
+</script>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+      const nav = document.querySelector('.nav_link');
+      hamburger.addEventListener('click', () => {
+          nav.classList.toggle('active');
+      });
+</script>
+</body>
+</html>

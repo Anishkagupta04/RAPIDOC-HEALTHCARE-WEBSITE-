@@ -1,3 +1,26 @@
+/*Cardio , Derma , ent ,gynaco & doc HTML CSS*/
+.home-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: #007074d5;
+    cursor: pointer;
+}
+.home-button:hover {
+    background-color: #02969bd5;
+}
+#progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 8px;
+    background-color: #3fbcc0;
+    z-index: 9999;
+
+  }
+  /*End*/
 *{
     margin: 0;
     padding: 0;
@@ -11,6 +34,9 @@ body{
     justify-content: center;
     background-color: #000;
 }
+.logo {
+    cursor: pointer;
+}
 .slide-content{
     margin: 0 40px;
     overflow: hidden;
@@ -23,6 +49,108 @@ body{
     background-color: #001c1e;
     padding: 40px 0;
     border-radius: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.logo {
+    height: 40px;
+}
+
+.header-buttons button {
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+.calendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.month {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dates {
+    display: flex;
+    flex-wrap: wrap; /* allow wrapping to next line */
+    font-size: 0.8em; /* reduce font size */
+    gap: 10px;
+}
+@media (min-width: 700px) {
+    .dates {
+      flex-wrap: nowrap; /* don't wrap to next line */
+    }
+  }
+.date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10, .date11, .date12 {
+    background-color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.date:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.schedule {
+    padding: 20px;
+}
+
+.consultation {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.consultation h3 {
+    margin: 0;
+}
+
+.consultation p {
+    margin: 5px 0;
+}
+
+.consult-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.consult-button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #f8f8f8;
 }
 .card{
     border-radius: 25px;
@@ -101,6 +229,7 @@ transition: all 0.3s ease;
 .button:hover{
     background: #02969bd5;
 }
+
 .swiper-navBtn{
     color: white;
 }
@@ -109,4 +238,7 @@ transition: all 0.3s ease;
 }
 .swiper-pagination-bullet{
     opacity: 0;
+}
+.btns{
+    width: 200px;
 }

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RapiDoc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d3b4f; /* Dark teal background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .appointment-form {
+            background-color: #1b586f; /* Teal background */
+            max-width: 400px;
+            width: 100%;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ffffff; /* White text for labels */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="time"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #1b586f; /* Teal border */
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #a6c8db; /* Light blue background */
+            color: #2c3e50; /* Dark text color */
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="date"]:focus,
+        input[type="time"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        input[type="text"]:hover,
+        input[type="email"]:hover,
+        input[type="date"]:hover,
+        input[type="time"]:hover,
+        textarea:hover,
+        select:hover {
+            border-color: #007bff;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #34a0a4; /* Green button */
+            color: #ffffff; /* White text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            font-size: 30px;
+        }
+
+        button:hover {
+            background-color: #2b908b; /* Darker green on hover */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            background-color: #267a75;
+        }
+
+        @media (max-width: 600px) {
+            .appointment-form {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            button {
+                padding: 12px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="date"],
+            input[type="time"],
+            textarea,
+            select {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<form id="appointmentForm" class="appointment-form">
+    <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Your Phone</label>
+        <input type="text" id="phone" name="phone" placeholder="Your Phone" required>
+    </div>
+
+    <div class="form-group">
+        <label for="date">Appointment Date</label>
+        <input type="date" id="date" name="date" placeholder="Appointment Date" required>
+    </div>
+
+    <div class="form-group">
+        <label for="age">Select Age</label>
+        <select id="age" name="age" required>
+            <option value="" disabled selected>Select Age</option>
+            <option value="Under 18">Under 18</option>
+            <option value="18-30">18-30</option>
+            <option value="31-50">31-50</option>
+            <option value="51-70">51-70</option>
+            <option value="71 and above">71 and above</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="location">Your Location</label>
+        <select id="location" name="location" required>
+            <option value="" disabled selected>Your Location</option>
+            <option value="Location 1">Hyderabad</option>
+            <option value="Location 2">Chennai</option>
+            <option value="Location 3">Delhi</option>
+            <option value="Location 4">Ahmedabad</option>
+            <option value="Location 5">Kolkata</option>
+            <option value="Location 6">Banglore</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Message (Optional)</label>
+        <textarea id="message" name="message" placeholder="Message (Optional)"></textarea>
+    </div>
+
+    <button type="submit">Make an Appointment</button>
+</form>
+
+<script>
+    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Simulate form submission
+        setTimeout(function() {
+            alert('Appointment successful');
+            // Optionally, clear the form fields after submission
+            document.getElementById('appointmentForm').reset();
+        }, 500); // Simulate a delay for form submission
+    });
+</script>
+
+</body>
+</html>

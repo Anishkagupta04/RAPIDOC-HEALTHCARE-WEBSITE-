@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css-Files/input.css">
+    <title>RapiDoc</title>
+</head>
+<body>
+    <div class="container">
+        <div class="items">
+            <div class="item1">
+                <div class="text1">6+</div>
+                <div class="text2">Years of Experience</div>
+            </div>
+            <div class="item2">
+                <div class="text1">5K</div>
+                <div class="text2">Doctor Specialist</div>
+            </div>
+            <div class="item3">
+                <div class="text1">100%</div>
+                <div class="text2">Patient Satisfication</div>
+            </div>
+        </div>
+        <div class="doc">
+            <img src="../images/newdoc.png" alt="doc" class="docimg">
+        </div>
+        <div class="text">
+            <div class="head1">Find a doctor for you now!</div>
+            <div class="head2">We take the guesswork out of locating a doctor,hospital or other medical facility in your area for you and your family</div>
+            <div class="input">
+                <input id="location-input" type="text" placeholder="Enter your location">
+                <button onclick="getCoordinates()" >Explore</button>
+            </div>
+        </div>
+    </div>
+   
+</body>
+    <script>
+         async function getCoordinates() {
+            const locationInput = document.getElementById('location-input').value;
+            const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${locationInput}`);
+            const data = await response.json();
+
+            if (data.length > 0) {
+                const { lat, lon, display_name } = data[0];
+                window.location.href = `map.html?lat=${lat}&lon=${lon}&display_name=${encodeURIComponent(display_name)}`;
+            } else {
+                alert(`No input received. \nPlease enter your location`);
+            }
+        }
+    </script>
+</html>

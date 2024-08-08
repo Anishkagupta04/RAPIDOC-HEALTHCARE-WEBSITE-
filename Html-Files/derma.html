@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="remixicon/remixicon.css" rel="stylesheet">
+    <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="patient-portal.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../Css-Files/bloodstyle.css">
+    <link rel="stylesheet" href="../Css-Files/doctor.css">
+
+    <style>
+        .home-button {
+            position: fixed;
+            top: 80px;
+            right: 10px;
+            z-index: 1000;
+            background-color: #007074d5;
+            cursor: pointer;
+        }
+        .home-button:hover {
+            background-color: #02969bd5;
+        }
+        .slide-container{
+            margin-top: 120px;
+        }
+
+
+        .header_container {
+            background-color: #022a2d;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 85px;
+            padding: 15px;
+            margin: auto;
+            margin-top: 0px;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            position: absolute;
+            top: 15px; /* Adjust if necessary */
+            left: 15px; /* Move to the left side */
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+        .logo {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-menu{
+            display: flex;
+        }
+
+        .nav-link {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-link li {
+            margin-right: 1px;
+            padding: 5px 10px;
+            display: inline-block;
+            color: white;
+            margin-top: 15px;
+        }
+
+        .nav-link a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-link a:hover {
+            color: #55a5ea;
+        }
+
+        .nav-link a button {
+            background-color: #29888a;
+            color: white ;
+            border: none ;
+            padding: 10px 20px ;
+            border-radius: 4px ;
+            cursor: pointer ;
+            transition: background-color 0.3s;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .nav-link button:hover {
+            background-color: #3a9ea0;
+        }
+
+        .img {
+            display: flex;
+            align-items: center;
+            margin-left: 10px; /* Space from the left edge */
+        }
+
+        #rd-logo {
+            width: 90px;
+            height: auto;
+        }
+
+        .slide-container .social-links{
+            margin-top: 130px;
+        }
+
+        .footer-wrapper h4{
+            color: white;
+        }
+
+        @media screen and (max-width: 768px) {
+           .img #rd-logo {
+             display: none; /* Hide image */
+            }
+
+           .logo{
+             display: block;
+             color: #3fbcc0;
+             font-weight: bold;
+             margin-top: 20px;
+            } 
+
+            .nav_menu {
+             display: none;
+             position: absolute;
+             top: 60px; /* Adjust according to your header height */
+             left: 0;
+             width: 100%;
+             background-color: #022a2d;
+             flex-direction: column;
+             padding: 10px; /* Optional: Adjust padding as needed */
+             z-index: 1000;
+            }
+
+            .nav-link {
+             display: flex;
+             flex-direction: column;
+             padding: 0;
+             margin: 0;
+            }
+
+            .nav-link li {
+             margin: 0.5rem 0;
+            }
+
+            .nav_menu.active {
+             display: flex;
+            }
+
+            .hamburger {
+             display: flex;
+            }
+        }
+        /*Responsiveness for Tablet (768px)*/
+        @media screen and (max-width: 768px) {
+          .home-button{
+            right: 0;
+            top: 0;
+          }
+
+          .header_container{
+            justify-content: center;
+            height: 60px;
+          }
+
+          .slide-container {
+            padding: 20px 0;
+            margin-top: 100px;
+          }
+
+          .slide-content {
+            margin: 0 20px;
+          }
+
+          .card {
+            width: 90%;
+            margin: 0 auto;
+          }
+
+          .card-image {
+            height: 120px;
+            width: 120px;
+          }
+
+          .name {
+            font-size: 16px;
+          }
+
+          .description {
+            font-size: 12px;
+          }
+
+          .button {
+            font-size: 14px;
+            padding: 6px 12px;
+          }
+
+          .calendar {
+            flex-direction: column;
+            align-items: center;
+          }
+
+
+          .dates {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+          }
+
+          .date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10, .date11, .date12 
+          {
+            padding: 8px;
+            font-size: 14px;
+          }
+
+          .header-buttons {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .header-buttons button {
+            margin: 5px 0;
+          }
+
+          footer button{
+            width: 30%;
+            padding: 6px 12px;
+          }
+
+        }
+
+        /*Responsiveness for Mobile-L (425px)*/
+        @media screen and (max-width: 425px) {
+          .slide-container {
+            padding: 15px 0;
+          }
+
+          .slide-content {
+            margin: 0 10px;
+          }
+
+          .card {
+            width: 100%;
+          }
+
+          .card-image {
+            height: 100px;
+            width: 100px;
+          }
+
+          .name {
+            font-size: 14px;
+          }
+
+          .description {
+            font-size: 11px;
+          }
+
+          .button {
+            font-size: 12px;
+            padding: 5px 10px;
+          }
+
+          .date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10, .date11, .date12 {
+            padding: 6px;
+            font-size: 12px;
+          }
+          footer button{
+            width: 35%;
+            padding: 6px 12px;
+          }
+        }
+
+        /*Responsiveness for Mobile-M (375px)*/
+        @media screen and (max-width: 375px) {
+          .card-image {
+            height: 90px;
+            width: 90px;
+          }
+
+          .name {
+            font-size: 13px;
+          }
+
+          .description {
+            font-size: 10px;
+          }
+
+          .button {
+            font-size: 11px;
+            padding: 4px 8px;
+          }
+
+          .date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10, .date11, .date12 {
+            padding: 5px;
+            font-size: 11px;
+          }
+          footer button{
+            width: 40%;
+            padding: 6px 12px;
+            font-size: 11px;
+          }
+        }
+
+        /*Responsiveness for Mobile-S (320px)*/
+        @media screen and (max-width: 320px) {
+          .card-image {
+            height: 80px;
+            width: 80px;
+          }
+
+          .name {
+            font-size: 12px;
+          }
+
+          .description {
+            font-size: 9px;
+          }
+
+          .button {
+            font-size: 10px;
+            padding: 3px 6px;
+          }
+
+          .date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10, .date11, .date12 {
+            padding: 4px;
+            font-size: 10px;
+          }
+        }
+
+        /* Footer Styles for Mobile Devices */
+        @media screen and (max-width: 760px) {
+           .footer-columns {
+                flex-direction: column;
+           }
+
+           .footer-columns section {
+                margin-bottom: 1rem;
+           }
+
+           .footer-wrapper {
+                padding: 1rem;
+           }
+
+           .footer{
+                height: 10px;
+           }
+        }
+
+        body {
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .page-content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .footer-bottom {
+            margin-top: 1rem;
+            padding: 1rem;
+            color: white;
+            overflow: hidden; /* Prevents overflow */
+        }
+
+        /* Ensure Copyright Text Wrapping */
+        .footer-bottom-wrapper small {
+            display: block;
+            margin: 0 auto;
+            font-size: 14px; 
+            max-width: 100%; /* Prevents overflowing beyond viewport */
+            box-sizing: border-box; /* Includes padding in the width */
+            word-wrap: break-word; /* Ensures long words break */
+        }
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 768px) {
+           .footer-bottom-wrapper small {
+                font-size: 12px; /* Adjust font size for smaller screens */
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+           .footer-bottom-wrapper small {
+                font-size: 10px; /* Further adjust for smaller screens */
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+           .footer-bottom-wrapper small {
+                font-size: 8px; /* Adjust for very small screens */
+            }
+        }
+    </style>
+     <style>#progressBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 8px;
+        background-color: #3fbcc0;
+        z-index: 9999;
+    
+      }</style>
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+    <title>RapiDoc</title>
+</head>
+
+<body>
+    <div id="progressBar"></div>
+
+    <script>
+      window.onscroll = function () {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+      };
+    </script>
+  
+  <div class="header_container">
+    <div class="img">
+      <img id="rd-logo" style="width: 90px; height: auto;" src="../images/rd.png">
+      <div class="logo">Rapidoc</div>
+    </div>
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="nav_menu" id="nav-menu">
+      <ul class="nav-link">
+        <li><a href="../index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+        <li><a href="../index.html#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+        <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
+        <li><a href="../dex.html"><i class="bi bi-gear"></i> Service</a></li>
+        <li><a href="../index.html#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+        <li><a href="../index.html#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+        <li><a href="../index.html#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
+        <li><a href="../index.html#feedback"><i class="bi bi-star"></i>Rate Us</a></li>
+        <li><a href="../log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+        <a href="Doctor Experience.html"><button>Find a Doctor</button></a>
+      </ul>
+  </div>
+  </div>
+
+    <button class="button home-button" onclick="window.location.href='../index.html#patient-portal'">Rapidoc</button>
+  <div class="slide-container">
+        <div class="slide-content swiper">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <header>
+                        <div class="header-buttons">
+                            <button>SOS</button>
+                            <button>Call Us</button>
+                        </div>
+                    </header>
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="../images/6.png" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Dr. Soni Gupta</h2>
+                        <p class="discription">Dermatologist</p>
+                        <a href="appointment.html"><button class="button">Make an Appointment</button></a>
+                        <div id="topbar1" class="d-flex align-items-center fixed-top">
+                            <div class="container d-flex justify-content-between">   
+                                <div class="d-none d-lg-flex social-links align-items-center">
+                                    <a href="mailto:contact@example.com" class="email"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                                      </svg></a>
+                                    <a href="#" class="facebook"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                      </svg></a>
+                                    <a href="#" class="instagram"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                      </svg></a>
+                                    <a href="#" class="twitter"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                                      </svg></a>
+                                    <a href="#" class="linkedin"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                                      </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar">
+                        <div class="mov">
+                            <button class="nav-button" id="prevBtn">PREV</button
+                            <span class="month">MAY</span>
+                            <button class="nav-button" id="nextBtn">NEXT</button>
+                        </div>
+                        <div class="dates">
+                            <span class="date6" onclick="showSchedule6('21')">21</span>
+                            <span class="date6" onclick="showSchedule6('22')">22</span>
+                            <span class="date6" onclick="showSchedule6('23')">23</span>
+                            <span class="date6" onclick="showSchedule6('24')">24</span>
+                            <span class="date6" onclick="showSchedule6('25')">25</span>
+                            <span class="date6" onclick="showSchedule6('26')">26</span>
+                            <span class="date6" onclick="showSchedule6('27')">27</span>
+                        </div>
+                    </div>
+                    
+                    <div id="schedule6" class="schedule6">
+                        <!-- Consultation details will be displayed here -->
+                    </div>
+                    <footer>
+                        <button class="btns">Doctors</button>
+                        <button class="btns">Book Appt.</button>
+                        <button class="btns">Chat</button>
+                        <button class="btns">Reports</button>
+                        <button class="btns">Menu</button>
+                    </footer>
+                </div>
+
+                <div class="card swiper-slide">
+                    <header>
+                        <div class="header-buttons">
+                            <button>SOS</button>
+                            <button>Call Us</button>
+                        </div>
+                    </header>
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="../images/8.png" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Dr. Deepti Shrivastava</h2>
+                        <p class="discription">Dermatologist</p>
+                        <a href="appointment.html"><button class="button">Make an Appointment</button></a>
+                        <div id="topbar1" class="d-flex align-items-center fixed-top">
+                            <div class="container d-flex justify-content-between">   
+                                <div class="d-none d-lg-flex social-links align-items-center">
+                                    <a href="mailto:contact@example.com" class="email"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                                      </svg></a>
+                                    <a href="#" class="facebook"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                      </svg></a>
+                                    <a href="#" class="instagram"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                      </svg></a>
+                                    <a href="#" class="twitter"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                                      </svg></a>
+                                    <a href="#" class="linkedin"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                                      </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar">
+                        <div class="mov">
+                            <button class="nav-button" id="prevBtn">PREV</button
+                            <span class="month">MAY</span>
+                            <button class="nav-button" id="nextBtn">NEXT</button>
+                          </div>
+                        <div class="dates">
+                            <span class="date8" onclick="showSchedule8('8')">8</span>
+                            <span class="date8" onclick="showSchedule8('9')">9</span>
+                            <span class="date8" onclick="showSchedule8('10')">10</span>
+                            <span class="date8" onclick="showSchedule8('11')">11</span>
+                            <span class="date8" onclick="showSchedule8('12')">12</span>
+                            <span class="date8" onclick="showSchedule8('13')">13</span>
+                            <span class="date8" onclick="showSchedule8('14')">14</span>
+                        </div>
+                    </div>
+                    
+                    <div id="schedule8" class="schedule8">
+                          <!-- Consultation details will be displayed here -->
+                    </div>
+                    <footer>
+                        <button>Doctors</button>
+                        <button>Book Appt.</button>
+                        <button>Chat</button>
+                        <button>Reports</button>
+                        <button>Menu</button>
+                    </footer>
+                </div>
+                <div class="card swiper-slide">
+                    <header>
+                        <div class="header-buttons">
+                            <button>SOS</button>
+                            <button>Call Us</button>
+                        </div>
+                    </header>
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="../images/9.png" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Dr. Manisha Chopra</h2>
+                        <p class="discription">Dermatologist</p>
+                        <a href="appointment.html"><button class="button">Make an Appointment</button></a>
+                        <div id="topbar1" class="d-flex align-items-center fixed-top">
+                            <div class="container d-flex justify-content-between">   
+                                <div class="d-none d-lg-flex social-links align-items-center">
+                                    <a href="mailto:contact@example.com" class="email"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                                      </svg></a>
+                                    <a href="#" class="facebook"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                      </svg></a>
+                                    <a href="#" class="instagram"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                      </svg></a>
+                                    <a href="#" class="twitter"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                                      </svg></a>
+                                    <a href="#" class="linkedin"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                                      </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar">
+                        <button class="nav-button" id="prevBtn">PREV</button
+                        <span class="month">MAY</span>
+                        <button class="nav-button" id="nextBtn">NEXT</button>
+                        <div class="dates">
+                            <span class="date9" onclick="showSchedule9('10')">10</span>
+                            <span class="date9" onclick="showSchedule9('12')">12</span>
+                            <span class="date9" onclick="showSchedule9('23')">23</span>
+                            <span class="date9" onclick="showSchedule9('24')">24</span>
+                            <span class="date9" onclick="showSchedule9('25')">25</span>
+                            <span class="date9" onclick="showSchedule9('26')">26</span>
+                            <span class="date9" onclick="showSchedule9('27')">27</span>
+                        </div>
+                    </div>
+                    
+                    <div id="schedule9" class="schedule9">
+                        <!-- Consultation details will be displayed here -->
+                    </div>
+                    <footer>
+                        <button>Doctors</button>
+                        <button>Book Appt.</button>
+                        <button>Chat</button>
+                        <button>Reports</button>
+                        <button>Menu</button>
+                    </footer>
+                </div>
+                <div class="card swiper-slide">
+                    <header>
+                        <div class="header-buttons">
+                            <button>SOS</button>
+                            <button>Call Us</button>
+                        </div>
+                    </header>
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="../images/10.png" alt="" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Dr. Pradeep Bansal</h2>
+                        <p class="discription">Dermatologist</p>
+                        <a href="appointment.html"><button class="button">Make an Appointment</button></a>
+                        <div id="topbar1" class="d-flex align-items-center fixed-top">
+                            <div class="container d-flex justify-content-between">   
+                                <div class="d-none d-lg-flex social-links align-items-center">
+                                    <a href="mailto:contact@example.com" class="email"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                                      </svg></a>
+                                    <a href="#" class="facebook"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                      </svg></a>
+                                    <a href="#" class="instagram"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                      </svg></a>
+                                    <a href="#" class="twitter"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                                      </svg></a>
+                                    <a href="#" class="linkedin"><i></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                                      </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar">
+                        <button class="nav-button" id="prevBtn">PREV</button
+                        <span class="month">MAY</span>
+                        <button class="nav-button" id="nextBtn">NEXT</button>
+                        <div class="dates">
+                            <span class="date10" onclick="showSchedule10('13')">13</span>
+                            <span class="date10" onclick="showSchedule10('14')">14</span>
+                            <span class="date10" onclick="showSchedule10('15')">15</span>
+                            <span class="date10" onclick="showSchedule10('16')">16</span>
+                            <span class="date10" onclick="showSchedule10('17')">17</span>
+                            <span class="date10" onclick="showSchedule10('18')">18</span>
+                            <span class="date10" onclick="showSchedule2('19')">19</span>
+                        </div>
+                    </div>
+                    
+                    <div id="schedule10" class="schedule10">
+                        <!-- Consultation details will be displayed here -->
+                    </div>
+                    <footer>
+                        <button>Doctors</button>
+                        <button>Book Appt.</button>
+                        <button>Chat</button>
+                        <button>Reports</button>
+                        <button>Menu</button>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+    </div>
+
+    <foot>
+        <div class="footer-wrapper">
+            <div class="footer-columns">
+                <div class="other-columns">
+                    <section>
+                        <h4>Quick Links</h4><br>
+                          <ul class="links">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="./Html-Files/contact.html">Contact Us</a></li>
+                            <li><a href="dex.html">Services</a></li>
+                            <li><a href="Html-Files\doc.html">Doctors</a></li>
+                            <li><a href="./faq.html">FAQ</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                      <h4>Explore</h4><br>
+                      <ul class="links">
+                        <li><a href="Html-Files\appointment.html">Appointment</a></li>
+                        <li><a href="#">Patient Portal</a></li>
+                        <li><a href="login.html">Login account</a></li>
+                        <li><a href="#">Helplines</a></li>
+                        <li><a href="#">Location</a></li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h4>Legal</h4><br>
+                      <ul class="links">
+                        <li><a href="#">Customer Agreement</a></li>
+                        <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#test">Testimonials</a></li>
+                      </ul>
+                    </section>
+                    <section class="footer-col">
+                      <h4>RAPIDOC Newsletter</h4><br>
+                      <p>
+                        Subscribe to our newsletter for a weekly dose
+                        of news, updates, helpful tips, and
+                        exclusive offers.
+                      </p>
+                      <form action="#" class="subscribe-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">SUBSCRIBE</button>
+                      </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-wrapper">
+                <small>© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+                  Reserved  Made with ❤️ by RapiDoc</small>
+                  <style>
+                    .social-wrapper a div i {
+                      color: #afb6c7;
+                    }
+                   .social-wrapper a div i:hover {
+                     color: #fff;
+                    }
+                  </style>
+                <div class="social-wrapper">
+                  <div class="social-links">
+                  <div style="margin-left: 100px;font-family: sans-serif;" class="follow-us"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+                  <a href="https://www.facebook.com/" target="_blank"><div><i class="fa-brands fa-facebook-f"></i></div></a>
+                  <!-- <a href="https://www.twitter.com" target="_blank"><div><i class="fa-brands fa-twitter"></i></div></a> -->
+                    <a href="https://www.twitter.com"><div><img src="twitter.png" style="width: 16px; height: 15px;"></div></a>
+                  <a href="https://www.linkedin.com" target="_blank"><div><i class="fa-brands fa-linkedin"></i></div></a>
+                   <a href="#" target="_blank"><div><i class="fa-brands fa-instagram"></i></div></a>
+                  <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank"><div><i class="fa-brands fa-github"></i></div></a>
+                  <a href="+91 1234567890" title="+91 1234567890" target="_blank"><div><i class="fa-solid fa-phone"></i></div></a>
+                  <a href="info@rapidoc.com" target="_blank"><div><i class="fa-solid fa-envelope"></i></div></a>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </foot>
+
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="glightbox/js/glightbox.min.js"></script>
+    <script src="php-email-form/validate.js"></script>
+    <script src="purecounter/purecounter.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="cardio.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav_menu');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });        
+    });
+</script>
+</body>
+</html>

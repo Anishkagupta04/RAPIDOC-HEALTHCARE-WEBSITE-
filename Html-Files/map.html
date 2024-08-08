@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="/Css-Files/map.css">
+    <title>RapiDoc</title>
+</head>
+<body>
+    <div class="tag">Healthcares Nearby</div>
+    <div id="map"></div>
+</body>
+<script>
+    
+    document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lat = urlParams.get('lat');
+            console.log(lat);
+            const lon = urlParams.get('lon');
+            console.log(lon);
+            const displayName = urlParams.get('display_name');
+            console.log(displayName);
+
+            if (lat && lon && displayName) {
+                initMap(lat, lon);  
+            } else {
+                alert("No Location Data Found");
+            }
+    });
+    var greenIcon = L.icon({
+        iconUrl: '/images/hospital.png',
+        iconSize:[38, 38], // size of the icon
+    });
+    function initMap(lat, lon) {
+        var map = L.map('map').setView([lat, lon], 9);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        var marker = L.marker([lat,lon]).addTo(map).bindPopup("Your Location");
+        
+        for(let i=1;i<=5;i++){
+            let newLat;
+            let newLon;
+            if (i % 3 == 0){
+                newLat = Math.round(lat) + i*0.1;
+                newLon = Math.round(lon) + i*0.1;
+            }
+            else if (i %3 == 1){
+                newLat = Math.round(lat) - i*0.01;
+                newLon = Math.round(lon) - i*0.1;
+            }
+            else{
+                newLat = Math.round(lat) + i*0.2;
+                newLon = Math.round(lon) - i*0.1;
+            }
+
+            L.marker([newLat,newLon], {icon: greenIcon}).addTo(map).bindPopup("RapidDoc healthcare");
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,110 @@
+
+.container-patientportal {
+    width: 100% !important;
+    /* display: flex; */
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    background: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(to bottom right, black, black, black);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* position: relative; */
+}
+
+.login-box {
+    width: 40%;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.login-box h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.login-box h2 {
+    margin: 10px 0 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.avatar {
+    margin: 20px 0;
+}
+
+.avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.textbox {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.textbox i {
+    margin-right: 10px;
+    color: #888;
+}
+
+.textbox input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn {
+    width: 100%;
+    background: #1c413b;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #35aaae;
+    transform: none;
+}
+
+#forgot-password-patient-portal,
+.register-link {
+    margin-top: 20px;
+}
+#forgot-password-patient-portal a ,
+.register-link a {
+    color: #1c413b;
+    text-decoration: none;
+}
+#forgot-password-patient-portal a:hover,
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+#section-patientportal{
+    width: 40%;
+    padding: 0;
+    margin: auto;
+    padding: 10%;
+}
+#patient-portal{
+    padding: 0px;
+}
+
+/* Add media queries for responsiveness */

@@ -1,77 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>News RapiDoc</title>
-  <!-- favicon -->
-  <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32" />
-  <!-- Bootsratp CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="icon" type="image/x-icon" href="../favicon.png">
+  <link rel="stylesheet" type="text/css" href="../style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" type="text/css" href="../Css-Files/news.css" />
+  <title>RapiDoc</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+    <!-- transalator -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate" ></script>
+  <!-- CSS Files -->
+  <link href="Css-Files/animate.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="remixicon/remixicon.css" rel="stylesheet">
+  <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../Css-Files/news.css" rel="stylesheet">
+  <link href="../Css-Files/patient-portal.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <style>
 
-  <!-- Local CSS -->
-  <link rel="stylesheet" href="Css-Files/style.css" />
+    </style>
+    <link rel="stylesheet" href="chatbox.css">
+     <!-- Google Fonts Link For Icons chatboxx -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+     <link rel="stylesheet" href="./Css-Files/aboutus.css" />
+     <link rel="stylesheet" href="./Css-Files/testimonial.css" />
 </head>
 
 <body>
-  <!-- This is Bootsratp Nav bar -->
-  <nav id="navbar">
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-              <div class="form-check form-switch">
-                <input type="checkbox" id="darkModeToggle">
-                <label class="form-check-label" for="darkModeToggle">
-                  <svg class="moon"  xmlns="http://www.w3.org/2000/svg"
-                  width="16" height="16"
-                    viewBox="0 0 512 512">
-                    <path fill="#fff"
-                      d="M268.279,496c-67.574,0-130.978-26.191-178.534-73.745S16,311.293,16,243.718A252.252,252.252,0,0,1,154.183,18.676a24.44,24.44,0,0,1,34.46,28.958,220.12,220.12,0,0,0,54.8,220.923A218.746,218.746,0,0,0,399.085,333.2h0a220.2,220.2,0,0,0,65.277-9.846,24.439,24.439,0,0,1,28.959,34.461A252.256,252.256,0,0,1,268.279,496ZM153.31,55.781A219.3,219.3,0,0,0,48,243.718C48,365.181,146.816,464,268.279,464a219.3,219.3,0,0,0,187.938-105.31,252.912,252.912,0,0,1-57.13,6.513h0a250.539,250.539,0,0,1-178.268-74.016,252.147,252.147,0,0,1-67.509-235.4Z"
-                      class="ci-primary"></path>
-                  </svg>
-                  <svg class="sun"  xmlns="http://www.w3.org/2000/svg" width="16"
-                    height="16" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16">
-                    <path
-                      d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-                      fill="#fff9e5"></path>
-                  </svg>
-                </label>
+
+  <div id="progressBar"></div>
+  <script src="../js/progressbar_and_header.js"></script>
+  <div class="pre">
+    <div class="loader"></div>
+  </div>
+      <!-- ############# Header ############# -->
+      <header class="header_container">
+        <div class="img">
+        <img id="rd-logo"  style="width: 90px; height: auto;" src="../images/rd.png"> 
+      </div>
+
+      </div>
+      <nav class="nav_menu">
+
+        <ul class="nav_link">
+          <li><a href="/index.html"><i class="bi bi-house-door-fill"></i>Home</a></li>
+          <li><a href="/index.html/#about"><i class="bi bi-info-circle-fill"></i>About</a></li>
+          <li><a href="/Html-Files/news.html"><i class="bi bi-newspaper"></i>News</a></li>
+          <a href="/dex.html"><i class="bi bi-gear"></i>Service</a>
+          <li><a href="/index.html#patient-portal"><i class="bi bi-person"></i>Patient Portal</a></li>
+          <li><a href="Html-Files/appointment.html"><i class="bi bi-person"></i> Appointment</a></li>
+          <li><a href="/index.html#doctors"><i class="bi bi-person-circle"></i>Doctor</a></li>
+          <li><a href="/Html-Files/contact.html"><i class="bi bi-telephone"></i>Contact us</a></li>
+
+          <a href="/login.html"><i class="bi bi-box-arrow-right"></i>Sign in/Sign up</a>
+          <a href="./Html-Files/Doctor Experience.html"><button>Find a Doctor</button></a>
+        </ul>
+      </nav>
+      </div>
+    </header>
+
+  <!-- ############# Header ############# -->
+
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+    </div>
+  </header>
+
+  <div class="conta" style="display: flex; flex-wrap: wrap;">
+    <div class="container" style="display:flex ;">
+      <div class="news-section">
+        <h2 style="color: white;font-size: 35px"><strong>Latest News</strong></h2>
+        <div class="news-container">
+          <div class="news-item">
+            <h3>RapiDoc Launches Revolutionary Telemedicine</h3>
+            <p>RapiDoc introduces a cutting-edge telemedicine platform, connecting patients with top specialists nationwide. This user-friendly service aims to revolutionize healthcare accessibility, especially for those in remote areas.</p>
+
+            <div class="button-icon" style="padding-left: 90px;">
+              <div class="icon">
+                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+                </svg>
+                
+              </div>
+              <div class="cube">
+                <span class="side front">hover me</span>
+                <span class="side top">Read More</span>
+              </div>
+            </div>
+          </div>
+          <div class="news-item">
+            <h3>RapiDoc Expands Network: 500 New Doctors Join</h3>
+            <p>In a major expansion, RapiDoc welcomes 500 new doctors across various specialties to its network. This growth significantly enhances our ability to provide diverse, high-quality healthcare services to more patients.</p>
+            <div class="button-icon" style="padding-left: 90px;">
+              <div class="icon">
+                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+                </svg>
+                
+              </div>
+              <div class="cube">
+                <span class="side front">hover me</span>
+                <span class="side top">Read More</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="news-item">
+            <h3>RapiDoc's AI Diagnosis Tool Shows 95% Accuracy in Trials</h3>
+            <p>RapiDoc's innovative AI-powered diagnosis tool demonstrates an impressive 95% accuracy rate in recent clinical trials. This breakthrough technology promises faster, more accurate preliminary diagnoses for patients.</p>
+            <div class="button-icon" style="padding-left: 90px;">
+              <div class="icon">
+                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+                </svg>    
+              </div>
+              <div class="cube">
+                <span class="side front">hover me</span>
+                <span class="side top">Read More</span>
+              </div>
+            </div>
+          </div>
+          <div class="news-item">
+            <h3>RapiDoc Introduces 24/7 Emergency Consultation Service</h3>
+            <p>Responding to the need for round-the-clock medical support, RapiDoc launches a 24/7 emergency consultation service. This initiative ensures patients can access expert medical advice anytime, anywhere.</p>
+              <div class="button-icon" style="padding-left: 90px;">
+              <div class="icon">
+                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+                </svg>  
+              </div>
+              <div class="cube">
+                <span class="side front">hover me</span>
+                <span class="side top">Read More</span>
+              </div>
+            </div>
+          </div>
+          <div class="news-item">
+            <h3>RapiDoc Partners with Leading Hospitals for Seamless Referrals</h3>
+            <p>RapiDoc announces strategic partnerships with top hospitals nationwide, creating a seamless referral system. This collaboration aims to streamline the patient journey from online consultation to in-person specialized care.</p>
+                        <div class="button-icon" style="padding-left: 90px;">
+              <div class="icon">
+                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+                </svg>
+                
+              </div>
+              <div class="cube">
+                <span class="side front">hover me</span>
+                <span class="side top">Read More</span>
+              </div>
+            </div>
+          </div>
+          <div class="news-item">
+            <h3>RapiDoc's Mobile App Reaches 1 Million Downloads</h3>
+            <p>The RapiDoc mobile app hits a milestone with 1 million downloads. This achievement underscores the growing popularity of our digital healthcare solutions and the trust patients place in our services.</p>
+                        <div class="button-icon" style="padding-left: 90px;">
+              <div class="icon">
+                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+                </svg>
+                
+              </div>
+              <div class="cube">
+                <span class="side front">hover me</span>
+                <span class="side top">Read More</span>
+              </div>
+            </div>
+          </div>
+          <div class="news-item">
+            <h3>RapiDoc Introduces Personalized Health Monitoring Wearables</h3>
+            <p>RapiDoc unveils a line of state-of-the-art health monitoring wearables. These devices offer personalized health tracking, real-time data analysis, and seamless integration with our telemedicine platform, empowering patients to take control of their well-being.</p>
+                        <div class="button-icon" style="padding-left: 90px;">
+              <div class="icon">
+                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+                </svg>
+                
+              </div>
+              <div class="cube">
+                <span class="side front">hover me</span>
+                <span class="side top">Read More</span>
+              </div>
+            </div>
+          </div>
+          <div class="news-item">
+            <h3>RapiDoc Launches Innovative Mental Health Support Program</h3>
+            <p>In response to growing mental health concerns, RapiDoc introduces a comprehensive online mental health support program. This initiative combines AI-driven mood tracking, virtual therapy sessions, and community support groups to provide holistic care.</p>
+                        <div class="button-icon" style="padding-left: 90px;">
+              <div class="icon">
+                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+                </svg>
+                
+              </div>
+              <div class="cube">
+                <span class="side front">hover me</span>
+                <span class="side top">Read More</span>
+              </div>
+            </div>
+          </div>
+          <div class="news-item">
+            <h3>RapiDoc's Research Team Publishes Groundbreaking Study on Preventive Healthcare</h3>
+            <p>RapiDoc's research division publishes a landmark study on preventive healthcare in a leading medical journal. The findings highlight the potential of data-driven, personalized preventive strategies to significantly reduce the risk of chronic diseases.</p>
+                        <div class="button-icon" style="padding-left: 90px;">
+              <div class="icon">
+                <svg style="color: rgb(81, 107, 188);" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M7 2a2 2 0 0 0-2 2v1a1 1 0 0 0 0 2v1a1 1 0 0 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7Zm3 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm-1 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3 1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+                </svg>
+                
+              </div>
+              <div class="cube">
+                <span class="side front">hover me</span>
+                <span class="side top">Read More</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
-  </nav>
-  <!-- This is basic header of website -->
-  <div class="head container">
-    <h3>
-      Top News <span class="badge text-bg-secondary">by RapiDoc</span>
-    </h3>
-    <span class="line"></span>
-  </div>
-  <!-- This is div where all the News are Fetched from API -->
-  <div id="newsBox"></div>
-  <div id="spinner" class="mySpin spinner-border text-warning"></div>
-  <!-- This is Basic Dark Fotter -->
-  <footer id="sticky-footer" class="flex-shrink-0 py-2 bg-dark text-white-50">
-    <div class="container text-center">
-      <small>Copyright &copy;2024 &nbsp; RapiDoc</small>
     </div>
-  </footer>
+  </div>
+<br><br><br><br><br>
+<!-- End Home -->
 
-  <!-- Bootsratp js -->
-  <script src="app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-    crossorigin="anonymous"></script>
+
+  <footer>
+    <div class="footer-wrapper">
+        <div class="footer-columns">
+            <div class="other-columns">
+                <section>
+                    <h4>Quick Links</h4><br>
+                      <ul class="links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/index.html#about">About Us</a></li>
+                        <li><a href="/Html-Files/contact.html">Contact Us</a></li>
+                        <li><a href="/index.html#services">Services</a></li>
+                        <li><a href="/index.html#doctors">Doctors</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                    </ul>
+                </section>
+                <section>
+                  <h4>Explore</h4><br>
+                  <ul class="links">
+                    <li><a href="/index.html#appointment">Appointment</a></li>
+                    <li><a href="/index.html#patient-portal">Patient Portal</a></li>
+                    <li><a href="/login.html">Login account</a></li>
+                    <li><a href="#">Helplines</a></li>
+                    <li><a href="/index.html#contact">Location</a></li>
+                  </ul>
+                </section>
+                <section>
+                  <h4>Legal</h4><br>
+                  <ul class="links">
+                    <li><a href="#">Customer Agreement</a></li>
+                    <li><a href="/Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+                    <li><a href="/Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
+                    <li><a href="#">GDPR</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="/index.html#test">Testimonials</a></li>
+                  </ul>
+                </section>
+                <section class="footer-col">
+                  <h4>RAPIDOC Newsletter</h4><br>
+                  <p>
+                    Subscribe to our newsletter for a weekly dose
+                    of news, updates, helpful tips, and
+                    exclusive offers.
+                  </p>
+                  <form action="#" class="subscribe-form">
+                    <input type="text" placeholder="Your email" required>
+                    <button type="submit" style="color: black;" id="s">SUBSCRIBE</button>
+                  </form>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-wrapper">
+        <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+          Reserved Made with ❤️ by RapiDoc</small>
+        <div class="social-wrapper">
+          <div class="social-links">
+            <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <div  id="insta">
+            <a href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div id="twit">
+            <a  href="https://www.twitter.com" target="_blank">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </div>
+          <div id="git">
+            <a  href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div id="linkd">
+            <a  href="https://www.linkedin.com" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+            <div id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+           <div id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></div>
+            <div id="mail1" ><a  href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+  <div id="back-to-top-container">
+    <div class="circle">
+      <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+      </svg>
+    </div>
+  </div>
+
+
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- JS Files -->
+  <script src="../js/date.js"></script>
+  <script src="../js/backtotopjs.js"></script>
+  <script src="../js/phonejs.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="glightbox/js/glightbox.min.js"></script>
+  <script src="php-email-form/validate.js"></script>
+  <script src="purecounter/purecounter.js"></script>
+  <script src="swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+  <script src="js/main.js"></script>
+  <script src="patient-portal.js"></script>
+  <script src="swiper-bundle.min.js"></script>
+  <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
+  <script src="../js/chatbotjs.js"></script>
+  <script>
+    ScrollReveal({ 
+        //reset: true ,
+        distance : '60px' ,
+        duration:2500,
+        delay:400
+    });
+    ScrollReveal().reveal('.d-flex,#home', { delay: 500 , origin:'top' });
+    ScrollReveal().reveal('.logo , .navbar,.content', { delay: 500 , origin:'left' });
+    ScrollReveal().reveal('.sec-img', { delay: 500 , origin:'right' });
+    ScrollReveal().reveal('.col-md-6,.about', { delay: 600 , origin:'left' });
+    ScrollReveal().reveal('.col-lg-3', { delay: 500 , origin:'left' });
+    ScrollReveal().reveal('.feedback', { delay: 400 , origin:'left' });
+    ScrollReveal().reveal('.footer', { delay: 400 , origin:'bottom' });
+  </script>
+  <script src="../js/loaderjs.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const newsItems = document.querySelectorAll('.news-item');
+
+  newsItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const link = this.querySelector('.read-more').getAttribute('href');
+      window.location.href = link;
+    });
+  });
+});
+  </script>
 </body>
-
 </html>
