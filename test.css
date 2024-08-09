@@ -3,7 +3,7 @@
 body
 {
     margin: 0;
-    padding: 0;
+    padding: 0px;
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
     background-color: black;
@@ -14,13 +14,8 @@ body
 
 .nav_link {
     list-style: none;
-  }
+}
 
-  .nav_link li {
-    padding: 5px 20px;
-    display: inline-block;
-    color: white;
-  }
 
   .nav_link li a {
     transition: all 0.3s ease 0s;
@@ -121,11 +116,12 @@ button:hover {
     box-shadow: 5px 5px 5px rgba(243, 243, 243, 0.6);
 }
 
-i {
+.text-dark{
     font-size: 1.5rem;
     transition: all linear .5s;
     backdrop-filter: blur(5px) saturate(200%);
     -webkit-backdrop-filter: blur(5px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: .5rem;
     border-radius: 1.8rem;
 }
@@ -235,7 +231,6 @@ h2{
 .service-item:hover p {
     color: var(--bs-white);
 }
-
 .service-item:hover .icon-box-primary::before {
     background: var(--bs-dark);
 }
@@ -319,14 +314,12 @@ h2{
 .icon-box-primary::before,
 .icon-box-light::before {
   position: absolute;
-  content: "";
   width: 35px;
   height: 35px;
   left: 0;
   bottom: 0;
   border-radius: 35px;
   transition: .5s;
-  z-index: -1;
 }
 
 .icon-box-primary::before {
@@ -402,6 +395,221 @@ h2{
 .service-item:hover .icon-box-primary i {
   color: var(--bs-white) !important;
 }
+
+footer {
+  background-color:rgb(3, 56, 56);
+  width: 100%;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  margin: 10px 0;
+  color: #8e8e8e;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color:white;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #8e8e8e;
+  font-size: 15px;
+  transition: color 0.3s;
+  font-weight:300;
+}
+
+.footer-section ul li a:hover {
+  color: #007bff;
+}
+
+.footer-section form {
+  display: flex;
+  gap: 1rem;
+  
+}
+
+.footer-section input[type="email"] {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #55a5ea;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  
+}
+
+.footer-section button {
+  padding: 10px;
+  font-size: 14px;
+  color: #878484;
+  background-color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 40px;
+}
+
+.footer-section button:hover {
+  background-color: #d9dcde;
+}
+
+.bottom-footer {
+  background-color:rgb(3, 56, 56);
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #878484;
+}
+
+.bottom-footer .social-links {
+  margin-top: 10px;
+}
+
+.bottom-footer .social-links span {
+  margin-right: 10px;
+}
+
+.bottom-footer .social-links a {
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.copyright_text{
+  color: #878484;
+  font-size:18px;
+}
+.fa-brands, .fa-solid{
+  color:white;
+  font-size:19px;
+  background-color:rgb(3, 56, 56) ;
+}
+.fa-brands:hover, .fa-solid :hover{
+  color:rgb(62, 62, 226);
+}
+/* Remove underline from all links in the footer sections */
+.links a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  /* Optional: Use this if you want the link to inherit the color from its parent element */
+  transition: color 0.3s ease;
+  /* Smooth transition effect */
+}
+
+/* Add the underline effect */
+.links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #55a5ea;
+  transition: width 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.links a:hover {
+  color: #55a5ea;
+  /* Change text color to black */
+}
+
+/* Hover effect */
+.links a:hover::after {
+  width: 100%;
+  left: 0;
+  /* Reset to left 0 to create the effect from right to left */
+  right: auto;
+}
+.col-lg-3 :hover .btn-light{
+  background-color: rgb(10, 108, 108);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(3, 33, 33);
+  padding: 10px;
+}
+
+.nav_link {
+  display: flex;
+  flex-direction: row;
+  height:50px;
+}
+
+.nav_link li {
+  padding: 5px 20px;
+}
+.nav_link li a {
+  display: flex;
+  align-items: center;
+}
+.nav_link li a i {
+  margin-right: 8px;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+@media screen and (max-width: 900px) 
+{
+  .nav_menu {
+      display: none;
+      flex-direction: column;
+      width:100%;
+      background-color: rgb(3, 33, 33,1.0);
+      padding-top: 260px;
+      z-index:10000;
+      height:550px;
+  }
+
+  .nav_menu.active {
+      display: flex;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .nav_link {
+  flex-direction: column;
+  }
+  .nav_link li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #ss {
     font-size: 12px;
@@ -413,3 +621,4 @@ h2{
     font-size: 10px;
   }
 }
+
