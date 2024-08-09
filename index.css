@@ -69,8 +69,32 @@ html {
     max-width: 50%;
     width: 600px;
     height: 600px;
-    margin-left: auto;
 }
+.content1 {
+  font-size: 35px;
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.content2 {
+  grid-column: 1;
+}
+
+.image-row-container {
+  grid-column: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.image-row1, .image-row2, .image-row3 {
+  margin: 10px;
+}
+
 
 .btn-get-started {
     display: inline-block;
