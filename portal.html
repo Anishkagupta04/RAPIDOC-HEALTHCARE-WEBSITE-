@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <link rel="icon" type="image/x-icon" href="./favicon.png">
+  <!-- Bootstrap Icons CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="./favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <style>
+
+header.header_container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.header_container.scrolled {
+    background-color: #005253; /* Adjust the background color as needed */
+    box-shadow: 0 4px 2px -2px gray; /* Adds a shadow effect */
+}
+
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #3fbcc0;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #005253;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: #011212;
+      }
+
+      #progressBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 6px;
+        background-color: #3fbcc0;
+        z-index: 9999;
+      }
+
+      .custom-button {
+        position: relative;
+        background-color: #3fbcc0a6;
+        color: white;
+        border: 2px solid #000;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: color 0.3s ease;
+        z-index: 1;
+        padding: 10px 15px; /* Adjust padding to make the button bigger */
+        font-size: 14px; 
+        margin-top: -10px;
+      }
+      
+      .custom-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #55a5ea;
+        transition: width 0.3s ease;
+        z-index: -1;
+      }
+      
+      .custom-button:hover {
+        color: #fff;
+      }
+      
+      .custom-button:hover::before {
+        width: 100%;
+      }
+
+      .home__container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      
+      .home__image {
+        width: 50%;
+      }
+      
+      .home__data {
+        text-align: left;
+        flex: 1;
+      }
+      
+
+      .about__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .imt {
+        width: 40%;
+      }
+
+      .about__data {
+        text-align: left;
+        flex: 1; /* Allow text content to expand */
+        color: #fff; /* Set a default text color */
+        font-size: 16px; /* Set a default font size */
+        z-index: 1;
+        margin-left: 20px;
+      }
+      
+      .security__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .security__image {
+        width: 40%; /* Adjust image width as needed */
+      }
+      
+      .security__data {
+        text-align: left;
+        flex: 1;
+      }
+      
+
+
+      .services__data {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content horizontally */
+        text-align: center; /* Center text */
+      }
+
+      .services__data .button-link {
+        margin: 20px auto 0; /* Center button and add spacing */
+      }
+
+      .app__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+      }
+      
+      .app__data {
+        text-align: left;
+        flex-grow: 1; /* Allow the content to expand to fill available space */
+      }
+
+      .section__title-center {
+        text-align: center;
+        margin-right: 10px; /* Adjust the margin value as needed */
+      }
+      
+      .imt {
+        width: 30%;
+        padding-right: 60px; /* Add padding to the right */
+        margin-top: 20px; /* Move the image down */
+      }
+      
+
+      .contact__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding-top: 50px;
+        text-align: left;
+      }
+  
+      .contact__content {
+        flex: 1;
+      max-width: 45%;
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+      gap: 1rem;
+      padding-left: 100px;
+      color: white;
+      }
+
+      .contact__heading {
+        text-align: left;
+        margin-bottom: 0.5rem; /* Reduce space below heading */
+      }
+
+      .section__title-center {
+        position: relative;
+  right: 20px;
+      }
+  
+      .contact__description {
+        text-align: left;
+        margin-bottom: 1rem; /* Space below description */
+      }
+  
+      .contact__map {
+        flex: 1;
+        max-width: 70%;
+        margin-left: 10px;
+        margin-top: 20px;
+      }
+
+      .contact__map iframe {
+        width: 85%; /* Ensure iframe takes full width of its container */
+      }
+  
+      .contact__address {
+        display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+      color: white;
+      }
+  
+      .contact__information {
+        font-weight: bold;
+        color: white;
+      }
+  
+      .button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+      }
+  
+      .button:hover {
+        background-color: #0056b3;
+      }
+  
+      @media (max-width: 768px) {
+        .contact__container {
+          flex-direction: column;
+          align-items: center;
+        }
+  
+        .contact__content,
+        .contact__map {
+          max-width: 100%;
+        }
+  
+        .contact__map {
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      }
+    </style>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "o6kveYmOSDrs0l1Mg",
+      });
+    })();
+  </script>
+
+  <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>RapiDoc</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- transalator -->
+  <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+
+  <!-- CSS Files -->
+   <link rel="stylesheet" href="index.css">
+  <link href="Css-Files/animate.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="remixicon/remixicon.css" rel="stylesheet">
+  <link href="swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="patient-portal.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="chatbox.css">
+  <!-- Google Fonts Link For Icons chatboxx -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="stylesheet" href="./Css-Files/aboutus.css" />
+  <link rel="stylesheet" href="./Css-Files/testimonial.css" />
+  <script src="chatboxx.js" defer></script>
+  <style>
+    @media screen and (max-width: 1275px) {
+      #rd-logo{
+        visibility: hidden;
+      }
+    }
+    img{
+      border-radius: 10px;
+      padding: 0 0 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pre">
+    <div class="loader"></div>
+  </div>
+  <!-- ############# Header ############# -->
+  <header class="header_container nav-h">
+    <div class="img">
+      <img id="rd-logo" style="width: 90px; height: auto;" src="images/rd.png">
+    </div>
+    <nav class="nav_menu">
+      <ul class="nav_link vis-h">
+        <li><a href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+        <li><a href="index.html#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+        <li><a href="news.html"><i class="bi bi-newspaper"></i> News</a></li>
+        <li><a href="dex.html"><i class="bi bi-gear"></i> Service</a></li>
+        <li><a href="index.html#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+        <li><a href="Html-Files/appointment.html"><i class="bi bi-person"></i> Appointment</a></li>
+        <li><a href="index.html#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+        <li><a href="index.html#contact"><i class="bi bi-telephone"></i>Contact us</a></li>
+
+        <a href="./Html-Files/Doctor Experience.html"><button class="custom-button">Find a Doctor</button></a>
+      </ul>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </header>
+
+<section style="color: #000;">Patient portal<section>
+
+  <!-- Patient Portal Section -->
+  <section id="patient-portal" class="patient-portal">
+    <div class="container-patientportal">
+      <div class="section-title section-black-text" id="section-patientportal">
+        <h2>Patient Portal</h2>
+        <p>Access your medical records, lab results, and prescription history securely.</p>
+      </div>
+      <div class="container">
+
+        <!-- Add Login Form for Patient Portal -->
+        <div class="login-box">
+          <div class="avatar">
+            <img src="img/avatar.png" height="280px" width="263px" alt="Avatar">
+          </div>
+          <form>
+            <div class="textbox">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" name="username" required class="t1">
+            </div>
+            <br>
+            <div class="textbox">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" name="password" required>
+            </div>
+            <br>
+            <input type="submit" class="btn" value="SUBMIT">
+            <div class="register-link">
+              <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px;">Not registered yet?<a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> Register Here</a></p>
+            </div>
+            <div class="forgot-password" id="forgot-password-patient-portal">
+              <a style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px;" href="forgot-password.php">Forgot Your Password?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-columns">
+        <div class="other-columns">
+          <section>
+            <h4>Quick Links</h4><br>
+            <ul class="links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#about">About Us</a></li>
+              <li><a href="index.html#contact">Contact Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="index.html#doctors">Doctors</a></li>
+              <li><a href="./faq.html">FAQ</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4>Explore</h4><br>
+            <ul class="links">
+              <li><a href="Html-Files/appointment.html">Appointment</a></li>
+              <li><a href="index.html#patient-portal">Patient Portal</a></li>
+              <li><a href="login.html">Login account</a></li>
+              <li><a href="helpline.html">Helplines</a></li>
+              <li><a href="index.html#contact">Location</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4>Legal</h4><br>
+            <ul class="links">
+              <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
+              <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+              <li><a href="Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
+              <li><a href="#">GDPR</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Testimonials</a></li>
+            </ul>
+          </section>
+          
+       <section class="footer-col" >
+      <div>
+      <h4>RAPIDOC Newsletter</h4><br>
+      <p>
+        Subscribe to our newsletter for a weekly dose
+        of news, updates, helpful tips, and
+        exclusive offers.
+      </p>
+    </div>
+      <form action="#" class="subscribe-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit" style="color: #005253;">SUBSCRIBE</button>
+      </form>
+      <p class="confirmation-message">Thank you for subscribing!</p>
+       </section>
+      
+
+          <script>
+            document.querySelector('.subscribe-form').addEventListener('submit', function (event) {
+              event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+              // Here you would normally send the form data to the server using fetch or XMLHttpRequest
+              // For demonstration purposes, we'll just show the confirmation message
+
+              const confirmationMessage = document.querySelector('.confirmation-message');
+              confirmationMessage.style.display = 'block'; // Show the confirmation message
+
+              // Clear the input field
+              this.querySelector('input[type="email"]').value = '';
+
+              // Optionally, you can hide the confirmation message after a few seconds
+              setTimeout(() => {
+                confirmationMessage.style.display = 'none';
+              }, 5000); // Hide after 5 seconds
+            });
+          </script>
+            
+            <script>
+              document.querySelector('.subscribe-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting in the traditional way
+            
+                // Show the modal popup
+                const modal = document.getElementById('popupModal');
+                modal.style.display = 'block';
+            
+                // Clear the input field
+                this.querySelector('input[type="email"]').value = '';
+            
+                // Hide the modal when the close button is clicked
+                const closeModal = document.querySelector('.modal .close');
+                closeModal.onclick = function() {
+                  modal.style.display = 'none';
+                }
+              });
+            
+              // Hide the modal when clicking outside of it
+              window.onclick = function(event) {
+                const modal = document.getElementById('popupModal');
+                if (event.target == modal) {
+                  modal.style.display = 'none';
+                }
+              }
+            </script>
+
+        </div>
+      </div>
+    </div>
+   
+    <div class="footer-bottom">
+      <div class="footer-bottom-wrapper">
+        <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+          Reserved Made with ❤️ by RapiDoc</small>
+        <div class="social-wrapper">
+          <div class="social-links">
+            <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <div  id="insta">
+            <a href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div id="twit">
+            <a  href="https://www.twitter.com" target="_blank">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </div>
+          <div id="git">
+            <a  href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div id="linkd">
+            <a  href="https://www.linkedin.com" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+            <div id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+           <div id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></div>
+            <div id="mail1" ><a  href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="back-to-top-container">
+    <div class="circle">
+      <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+      </svg>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    // First, make sure to include the GSAP library in your HTML file:
+
+// Then add this JavaScript code:
+
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.getElementsByTagName('img');
+
+  Array.from(images).forEach(img => {
+    img.addEventListener("mousemove", function(event) {
+      const rect = img.getBoundingClientRect();
+      const imgX = rect.left + rect.width / 2;
+      const imgY = rect.top + rect.height / 2;
+      const mouseX = event.clientX - imgX;
+      const mouseY = event.clientY - imgY;
+      
+      const rotateX = mouseY * 0.05; // Adjust this value to control tilt sensitivity
+      const rotateY = mouseX * -0.05; // Adjust this value to control tilt sensitivity
+      
+      gsap.to(img, {
+        rotationX: rotateX,
+        rotationY: rotateY,
+        ease: "power2.out",
+        duration: 0.3
+      });
+    });
+
+    img.addEventListener("mouseleave", function() {
+      gsap.to(img, {
+        rotationX: 0,
+        rotationY: 0,
+        ease: "power2.out",
+        duration: 0.5
+      });
+    });
+  });
+});
+  </script>
+
+  <!-- JS Files -->
+  <script>
+
+    function loadGoogleTranslate() {
+      new google.translate.TranslateElement("google_element");
+    }
+
+    var currentYear = new Date().getFullYear();
+    document.getElementById('year').textContent = currentYear;
+  </script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const backToTopButton = document.getElementById('back-to-top-container');
+
+      function checkButtonVisibility() {
+        if (window.innerWidth > 100 && window.scrollY > 100) {
+          backToTopButton.style.display = 'block';
+        } else {
+          backToTopButton.style.display = 'none';
+        }
+      }
+
+      window.addEventListener('scroll', checkButtonVisibility);
+      window.addEventListener('resize', checkButtonVisibility);
+
+      backToTopButton.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      checkButtonVisibility();
+    });
+
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.js-testimonals-slider', {
+      grabCursor: true,
+      spaceBetween: 30,
+      pagination: {
+        el: '.js-testimonals-pagination',
+        clickable: true
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+        }
+      }
+    })
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const phoneInputField = document.getElementById('phone');
+      const iti = window.intlTelInput(phoneInputField, {
+        initialCountry: "auto",
+        geoIpLookup: function (callback) {
+          fetch('https://ipinfo.io/json?token=YOUR_TOKEN')
+            .then(response => response.json())
+            .then(data => callback(data.country))
+            .catch(() => callback('us'));
+        },
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+      });
+
+      document.getElementById('phone-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const phoneNumber = iti.getNumber();
+        console.log('Full Phone Number:', phoneNumber);
+
+        // You can now send this phone number to your server or process it as needed
+      });
+    });
+  </script>
+
+
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="glightbox/js/glightbox.min.js"></script>
+  <script src="php-email-form/validate.js"></script>
+  <script src="purecounter/purecounter.js"></script>
+  <script src="swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+  <script src="js/main.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="patient-portal.js"></script>
+  <script src="medicine.js"></script>
+  <script src="swiper-bundle.min.js"></script>
+
+  <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
+  <script>
+    window.embeddedChatbotConfig = {
+      chatbotId: "xjRGZgxJziSoHQ1T1twl6",
+      domain: "www.chatbase.co"
+    }
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js" chatbotId="xjRGZgxJziSoHQ1T1twl6" domain="www.chatbase.co" defer>
+  </script>
+  <script>
+    ScrollReveal({
+      //reset: true ,
+      distance: '60px',
+      duration: 2500,
+      delay: 400
+    });
+    ScrollReveal().reveal('.d-flex,#home', { delay: 500, origin: 'top' });
+    ScrollReveal().reveal('.logo , .navbar,.content', { delay: 500, origin: 'left' });
+    ScrollReveal().reveal('.sec-img', { delay: 500, origin: 'right' });
+    ScrollReveal().reveal('.col-md-6,.about', { delay: 600, origin: 'left' });
+    ScrollReveal().reveal('.col-lg-3', { delay: 500, origin: 'left' });
+    ScrollReveal().reveal('.feedback', { delay: 400, origin: 'left' });
+    ScrollReveal().reveal('.footer', { delay: 400, origin: 'bottom' });
+  </script>
+  <script>
+    function sendMail() {
+      let params = {
+        to_email: document.getElementById("subscribe-email").value,
+        message: `<h1>Thank you for subscribing to RapiDoc Newsletter</h1>
+      <p>Stay tuned for the latest news, updates, helpful tips, and exclusive offers.</p>`,
+      }
+      emailjs.send("service_lktb68z", "template_w79vd94", params).then(alert("Subscribed Successfully!"));
+    }
+
+
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".pre");
+
+      loader.classList.add("pre--hidden");
+
+      loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+      });
+    });
+
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+
+      loader.classList.add("loader--hidden");
+
+      loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+      });
+    });
+    const hamburger = document.querySelector('.hamburger');
+    const navbar = document.querySelector('.header_container');
+    const nav = document.querySelector('.nav_link');
+    hamburger.addEventListener('click', () => {
+      navbar.classList.toggle('nav-h');
+      nav.classList.toggle('vis-h');
+    })
+  </script>
+
+  <div id="progressBar"></div>
+  <script>
+    window.onscroll = function () {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+  </script>
+</body>

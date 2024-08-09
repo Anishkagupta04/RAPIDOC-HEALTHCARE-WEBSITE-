@@ -1,22 +1,46 @@
-name: Auto-label on Any Issue
+name: Auto Label Issue
 
 on:
   issues:
-    types: [opened]
+    types: [opened, reopened, edited]
 
 jobs:
-  auto-label:
+  label_issue:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
-      - name: Add labels to any new issue
-        uses: actions/github-script@v4
+      - name: Label Issue
+        uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const labelsToAdd = ["gssoc"];
-            await github.issues.addLabels({
+            const issue = context.payload.issue;
+            const issueTitle = issue.title.toLowerCase();
+            
+            // Add gssoc label to all issues
+            await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: context.issue.number,
-              labels: labelsToAdd
+              issue_number: issue.number,
+              labels: ['gssoc']
             });
+            const addLabel = async (label) => {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: [label]
+              });
+            };
+            if (issueTitle.includes('documentation')) {
+              await addLabel('documentation');
+            }
+            
+            if (issueTitle.includes('feature')) {
+              await addLabel('enhancement');
+
+            }
+            if (issueTitle.includes('bug')) {
+              await addLabel('bug');
+            }
