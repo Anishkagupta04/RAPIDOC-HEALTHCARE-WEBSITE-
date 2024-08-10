@@ -1154,3 +1154,8 @@ body {
     font-size: 15px;
 
   }
+
+  /*Effect to the image in aboutus section**/
+  .about-img {
+    filter: drop-shadow(30px 30px 30px rgba(17, 133, 137, 0.683));
+  }
