@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RAPIDOC</title>
-  <link rel="icon" type="image/x-icon" href="log/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/styles.css">
@@ -14,11 +14,13 @@
   <script src="signupjs.js" defer type="module"></script>
   <script src="signupjs1.js" defer type="module"></script>
   <meta name="google-signin-client_id" content="646664380070-n07i34glgcc6sanb59p3m1k5k0cgn1v1.apps.googleusercontent.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
 </head>
 <body>
     <div class="login-cont">
   <!-- Navbar -->
-  <nav class="navbar">
+  <!-- <nav class="navbar">
     <div class="logo">
         <img src="rd1.png" >
     </div>
@@ -34,23 +36,87 @@
       <li><a href=""><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
     </ul>
     <button class="find-doctor"><a href="../Html-Files/Doctor%20Experience.html">Find a Doctor</a></button>
-  </nav>
+  </nav> -->
+
+
+  <header class="header_container nav-h">
+    <div class="img">
+      <img id="rd-logo" style="width: 90px; height: auto;" src="rd1.png">
+    </div>
+    <nav class="nav_menu">
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="mobile-logo-text">RAPIDOC</div>
+      <ul class="nav_link vis-h">
+        <li><a href="../index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+        <li><a href="../#about"><i class="bi bi-info-circle-fill"></i> About</a></li>
+        <li><a href="../news.html"><i class="bi bi-newspaper"></i> News</a></li>
+        <li><a href="../dex.html"><i class="bi bi-gear"></i> Service</a></li>
+        <li><a href="../#patient-portal"><i class="bi bi-person"></i> Patient Portal</a></li>
+        <li><a href="../Html-Files/appointment.html"><i class="bi bi-person"></i> Appointment</a></li>
+        <li><a href="../#doctors"><i class="bi bi-person-circle"></i> Doctor</a></li>
+        <li><a href="../#contact"><i class="bi bi-telephone"></i> Contact us</a></li>
+        <li><a href="../#feedback"><i class="bi bi-star"></i> Rate Us</a></li>
+        <li><a href="../log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
+        <a href="../Html-Files/Doctor Experience.html"><button class="btn1">Find a Doctor</button></a>
+
+      </ul>
+    </nav>
+  </header> <script>
+    function toggleMenu() {
+  const navLinks = document.querySelector('.nav_link');
+  navLinks.classList.toggle('active');
+}
+
+  </script>
+  <!-- <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <a href="#appointment" class="appointment-btn scrollto">
+        <span class="d-md-inline">EMERGENCY</span>
+      </a>
+    </div>
+  </header> -->
 
   <!-- Forms Container -->
  
   <div class="container" id="container">
     <div class="form-container register-container">
       <form action="#" id="registerForm">
-        <h1 style="color: black;">RAPIDOC</h1>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
+        <h1>RAPIDOC</h1>
+        <input type="text" id="registerName" placeholder="Name" required>
+        <input type="email" id="registerEmail" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <div class="password-container">
+          <input type="password" id="registerPassword" placeholder="Password" required minlength="6">
+          <span class="eye toggle-password" toggle="#registerPassword">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24px" height="24px">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M17.5 12c-1.297 0-2.5-.768-3.5-1.854C12.5 9.768 11.297 9 10 9s-2.5.768-4 1.146c-1 1.086-2.203 1.854-3.5 1.854" />
+              <path d="M1 12s4-8 11-8s11 8 11 8s-4 8-11 8s-11-8-11-8z" />
+            </svg>
+          </span>
+        </div>
         <button type="submit">Register</button>
         <span id="registerMessage" style="display: none;">Account created successfully</span>
         <div class="social-container">
-          <a href="https://www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
-          <a id="google1" class="social"><i class="lni lni-google"></i></a>
-          <a href="https://www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
+          <div onClick="handleGitHubSignIn()" class="social-icon">
+            <i class="lni lni-github-original" style="color: #333;"></i>
+          </div>
+          <div onClick="handleMicrosoftSignIn()" class="social-icon">
+            <i class="lni lni-microsoft" style="color: #00a2ed;"></i>
+          </div>
+          <div onClick="handleFbSignIn()" class="social-icon">
+            <i class="lni lni-facebook-fill" style="color: #3b5998;"></i>
+          </div>
+          <div onClick="handleGoogleSignIn()" class="social-icon">
+            <i class="lni lni-google" style="color: darkturquoise;"></i>
+          </div>
+          <div onClick="handleLinkedInSignIn()" class="social-icon">
+            <i class="lni lni-linkedin-original" style="color: #0077B5;"></i>
+            
+          </div>
         </div>
       </form>
     </div>
@@ -58,23 +124,46 @@
     <div class="form-container login-container">
       <form action="#" id="loginForm">
         <h1>RAPIDOC</h1>
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
+        <input type="email" id="loginEmail" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <div class="password-container">
+          <input type="password" id="loginPassword" placeholder="Password" required minlength="6">
+          <span toggle="#loginPassword" class="eye toggle-password">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24px" height="24px">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M17.5 12c-1.297 0-2.5-.768-3.5-1.854C12.5 9.768 11.297 9 10 9s-2.5.768-4 1.146c-1 1.086-2.203 1.854-3.5 1.854" />
+              <path d="M1 12s4-8 11-8s11 8 11 8s-4 8-11 8s-11-8-11-8z" />
+            </svg>
+          </span>
+        </div>
         <div class="content">
           <div class="checkbox">
             <input type="checkbox" name="checkbox" id="checkbox">
             <label>Remember me</label>
           </div>
           <div class="pass-link">
-            <a href="#">Forgot password?</a>
+            <a href="forgetpass.html">Forgot password?</a>
           </div>
         </div>
         <button type="submit">Login</button>
-        <span>or use your account</span>
+        <span id="loginMessage" style="display: none;">Login successful</span>
         <div class="social-container">
-          <a href="https://www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
-          <a class="social" id="google"><i class="lni lni-google"></i></a>
-          <a href="https://www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
+          <div onClick="handleGitHubSignIn()" class="social-icon">
+            <i class="lni lni-github-original" style="color: #333;"></i>
+          </div>
+          <div onClick="handleMicrosoftSignIn()" class="social-icon">
+            <i class="lni lni-microsoft" style="color: #00a2ed;"></i>
+          </div>
+          <div onClick="handleFbSignIn()" class="social-icon">
+            <i class="lni lni-facebook-fill" style="color: #3b5998;"></i>
+          </div>
+          <div onClick="handleGoogleSignIn()" class="social-icon">
+            <i class="lni lni-google" style="color: darkturquoise;"></i>
+          </div>
+          <div onClick="handleLinkedInSignIn()" class="social-icon">
+            <i class="lni lni-linkedin-original" style="color: #0077B5;"></i>
+            
+            
+          </div>
         </div>
       </form>
     </div>
@@ -82,90 +171,236 @@
     <div class="overlay-container">
       <div class="overlay">
         <div class="overlay-panel overlay-left">
-          <h1 class="title">Hello <br> friends</h1>
-          <p>if you have an account, login here and have fun</p>
-          <button class="ghost" id="login">Login
-            <i class="lni lni-arrow-left login"></i>
-          </button>
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button class="ghost" id="login">Sign In</button>
         </div>
         <div class="overlay-panel overlay-right">
-          <h1 class="title">Start your <br> journey now</h1>
-          <p>if you don't have an account yet, join us and start your journey.</p>
-          <button class="ghost" id="register">Register
-            <i class="lni lni-arrow-right register"></i>
-          </button>
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button class="ghost" id="register">Register</button>
         </div>
       </div>
     </div>
   </div>
 
+  <script>
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_AUTH_DOMAIN",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_STORAGE_BUCKET",
+      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+      appId: "YOUR_APP_ID",
+      measurementId: "YOUR_MEASUREMENT_ID"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    document.getElementById('registerForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('registerEmail').value;
+      const password = document.getElementById('registerPassword').value;
+      auth.createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          document.getElementById('registerMessage').style.display = 'block';
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+      auth.signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          document.getElementById('loginMessage').style.display = 'block';
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    });
+
+    function handleFbSignIn() {
+      const provider = new firebase.auth.FacebookAuthProvider();
+      auth.signInWithPopup(provider)
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
+
+    function handleGoogleSignIn() {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider)
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
+
+   // Initialize OAuth.io
+OAuth.initialize('your_oauth_io_public_key'); // Replace with your OAuth.io public key
+
+// Handle LinkedIn Sign In
+function handleLinkedInSignIn() {
+  OAuth.popup('linkedin').then(linkedin => {
+    console.log('LinkedIn token:', linkedin.access_token);
+    linkedin.me().then(data => {
+      console.log('LinkedIn user data:', data);
+    });
+  }).catch(error => {
+    console.error(error);
+  });
+}
+// Initialize OAuth.io
+OAuth.initialize('your_oauth_io_public_key'); // Replace with your OAuth.io public key
+
+// Handle Microsoft Sign In
+function handleMicrosoftSignIn() {
+  OAuth.popup('microsoft').then(microsoft => {
+    console.log('Microsoft token:', microsoft.access_token);
+    microsoft.me().then(data => {
+      console.log('Microsoft user data:', data);
+    });
+  }).catch(error => {
+    console.error(error);
+  });
+}
+
+function handleGitHubSignIn() {
+  const provider = new firebase.auth.GithubAuthProvider();
+  auth.signInWithPopup(provider)
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
+
+
+
+    document.querySelectorAll('.toggle-password').forEach(item => {
+      item.addEventListener('click', function() {
+        const input = document.querySelector(this.getAttribute('toggle'));
+        const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+        input.setAttribute('type', type);
+        this.classList.toggle('fa-eye');
+        this.classList.toggle('fa-eye-slash');
+      });
+    });
+
+    document.getElementById('register').addEventListener('click', () => {
+      document.getElementById('container').classList.add("right-panel-active");
+    });
+
+    document.getElementById('login').addEventListener('click', () => {
+      document.getElementById('container').classList.remove("right-panel-active");
+    });
+  </script>
+
   <footer>
     <div class="footer-wrapper">
-        <div class="footer-columns">
-            <div class="other-columns">
-                <section>
-                    <h4>Quick Links</h4><br>
-                      <ul class="links">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="./Html-Files/contact.html">Contact Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#doctors">Doctors</a></li>
-                        <li><a href="./faq.html">FAQ</a></li>
-                    </ul>
-                </section>
-                <section>
-                  <h4>Explore</h4><br>
-                  <ul class="links">
-                    <li><a href="#">Appointment</a></li>
-                    <li><a href="#">Patient Portal</a></li>
-                    <li><a href="#">Login account</a></li>
-                    <li><a href="#">Helplines</a></li>
-                    <li><a href="#">Location</a></li>
-                  </ul>
-                </section>
-                <section>
-                  <h4>Legal</h4><br>
-                  <ul class="links">
-                    <li><a href="#">Customer Agreement</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">GDPR</a></li>
-                    <li><a href="#">Security</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                  </ul>
-                </section>
-                <section class="footer-col">
-                  <h4>RAPIDOC Newsletter</h4><br>
-                  <p>
-                    Subscribe to our newsletter for a weekly dose
-                    of news, updates, helpful tips, and
-                    exclusive offers.
-                  </p>
-                  <!-- <form action="#" class="subscribe-form">
-                    <input type="email" placeholder="Your email" required>
-                    <button type="submit">SUBSCRIBE</button>
-                  </form> -->
-                </section>
-            </div>
-        </div>
+      <div class="footer-columns">
+        <div class="other-columns">
+          <section>
+            <h4>Quick Links</h4><br>
+            <ul class="links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="index.html#contact">Contact Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#doctors">Doctors</a></li>
+              <li><a href="./faq.html">FAQ</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4>Explore</h4><br>
+            <ul class="links">
+              <li><a href="Html-Files/appointment.html">Appointment</a></li>
+              <li><a href="portal.html">Patient Portal</a></li>
+              <li><a href="log/login.html">Login account</a></li>
+              <li><a href="#">Helplines</a></li>
+              <li><a href="index.html#contact">Location</a></li>
+            </ul>
+          </section>
+          <section>
+            <h4>Legal</h4><br>
+            <ul class="links">
+              <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
+              <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+              <li><a href="Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
+              <li><a href="#">GDPR</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Testimonials</a></li>
+            </ul>
+          </section>
+       <section class="footer-col" >
+      <div>
+      <h4>RAPIDOC Newsletter</h4><br>
+      <p>
+        Subscribe to our newsletter for a weekly dose
+        of news, updates, helpful tips, and
+        exclusive offers.
+      </p>
     </div>
-    <div class="footer-bottom">
-        <div class="footer-bottom-wrapper">
-            <small>© <span id="year"></span> RapiDoc&nbsp;| All Rights
-              Reserved  Made with ❤️ by RapiDoc</small>
-              <style>
-                .social-wrapper a div i {
-                  color: #afb6c7;
-                }
-               .social-wrapper a div i:hover {
-                 color: #fff;
-                }
-              </style>
-   
+      <form action="#" class="subscribe-form" id="subscribeForm">
+        <input type="email" id="emailInput" placeholder="Your email" required>
+        <button type="submit" id="subscribeButton" class="b">SUBSCRIBE</button>
+      </form>
+         </section>
+          <!-- <div id="subscribeBanner">
+            <p>Thanks for subscribing!</p>
+          </div> -->
+          <script src="../js/footersubcribejs.js"></script>
+        </div>
       </div>
     </div>
-</div>
-</footer>
+    <div class="footer-bottom">
+      <div class="footer-bottom-wrapper">
+        <small id="ss">© <span id="year"></span><span> RapiDoc</span>&nbsp;| All Rights
+          Reserved Made with ❤️ by RapiDoc</small>
+        <div class="social-wrapper">
+          <div class="social-links">
+            <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
+            <div  id="insta">
+            <a href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div id="twit">
+            <a  href="https://www.twitter.com" target="_blank">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </div>
+          <div id="git">
+            <a  href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div id="linkd">
+            <a  href="https://www.linkedin.com" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+            <div id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+           <div id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></div>
+            <div id="mail1" ><a  href="info@rapidoc.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
   
   <script src="log/script.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
