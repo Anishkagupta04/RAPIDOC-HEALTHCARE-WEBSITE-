@@ -1,0 +1,170 @@
+/* Helpline Container Styles */
+.helpline-container {
+  background-color: #022a2d;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.helpline-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.helpline-text {
+  color: #3fbcc0;
+  font-size: 40px;
+  font-weight: bold;
+  animation: slideInLeft 0.5s ease-in-out;
+}
+
+.helpline-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(63, 188, 192, 0.3);
+  border-radius: 10px;
+}
+
+.emergency-form-container,
+.contact-details-container {
+  animation: fadeIn 0.5s ease-in-out;
+  padding: 20px;
+}
+
+.helpline-form {
+  display: flex;
+  align-items: center;
+}
+
+.helpline-form input {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3fbcc051;
+  color: #959DA5;
+}
+
+.helpline-form button {
+  background-color: #2F81CF;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.helpline-form button:hover {
+  background-color: #1e6bba;
+}
+
+.contact-details-container {
+  animation: fadeIn 0.5s ease-in-out 0.3s forwards;
+  opacity: 0;
+}
+
+.helpline-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.helpline-link {
+  color: #2F81CF;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.helpline-link:hover {
+  color: #3fbcc051;
+}
+
+.helpline-link i {
+  margin-right: 5px;
+}
+
+/* Popup Styles */
+.popup-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.popup h3 {
+  color: #3fbcc0;
+  margin-bottom: 20px;
+}
+
+.popup p {
+  font-size: 18px;
+  color: #022a2d;
+  margin-bottom: 20px;
+}
+
+.close-button {
+  background-color: #2F81CF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.close-button:hover {
+  background-color: #1e6bba;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
