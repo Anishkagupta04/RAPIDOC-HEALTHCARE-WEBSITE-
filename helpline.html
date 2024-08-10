@@ -48,6 +48,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="chatbox.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
   <!-- Google Fonts Link For Icons chatboxx -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -92,13 +93,12 @@
     
     
           <a href="#appointment" class="appointment-btn scrollto">
-            <span class="d-md-inline">EMERGENCY</span></a>
         </div>
       </header>
       <div class="container" style="display:flex ;">
         <div class="content">
     
-          <h1 >
+          <h1>
             <span style="color: #55a5ea;">Need help?</span> Contact our Helpline
           </h1>
           
@@ -114,8 +114,11 @@
               <h3 style="color: #3fbcc0; margin-bottom: 10px;">Emergency Form</h3>
               <form class="helpline-form" style="display: flex; align-items: center;">
                 <input type="text" id="nameInput" placeholder="Enter your name" style="margin-right: 10px; padding: 5px 10px; border: none; border-radius: 5px; background-color: #3fbcc051; color: #959DA5;" />
-                <button type="submit" class="emergency-button" style="background-color: #2F81CF; color: #fff; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out;">Request Emergency</button>
+                <button type="button" id="emergencyButton" class="emergency-button" style="background-color: #2F81CF; color: #fff; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out;">Request Emergency</button>
               </form>
+              <div id="popup" class="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #022a2d; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+                <p class="popupmessage" style="margin-top: 200px;color: #3fbcc0;">Your response is sent!</p>
+              </div>
             </div>
             <div class="contact-details-container" style="animation: fadeIn 0.5s ease-in-out 0.3s forwards; opacity: 0; padding: 20px;">
               <h3 style="color: #3fbcc0; margin-bottom: 10px;">Contact Details</h3>
@@ -135,13 +138,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="popup-container">
-        <div class="popup">
-          <h3>Emergency Notice</h3>
-          <p id="nameDisplay"></p>
-          <button class="close-button">Close</button>
         </div>
       </div>
       <footer>
