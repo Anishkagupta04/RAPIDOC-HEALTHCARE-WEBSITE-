@@ -384,6 +384,7 @@ h6 {
 .nav_link li a {
   transition: all 0.3s ease 0s;
   color: white;
+  font-size: 15px;
 }
 
 .nav_link li a:hover {
