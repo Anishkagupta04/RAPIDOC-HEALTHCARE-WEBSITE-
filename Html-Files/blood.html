@@ -17,6 +17,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
 <title>RapiDoc</title>
+<script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
@@ -211,8 +212,8 @@
         <div id="popupContent"></div>
     </div>
     </div>
-      <script src="../js/backtotopjs.js"></script>
-      <script src="../js/popupbloodlist.js"></script>
+<script src="../js/backtotopjs.js"></script>
+<script src="../js/popupbloodlist.js"></script>
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="glightbox/js/glightbox.min.js"></script>
 <script src="php-email-form/validate.js"></script>
@@ -224,5 +225,14 @@
 <script src="patient-portal.js"></script>
 <script src="swiper-bundle.min.js"></script>
 <script src="https://mediafiles.botpress.cloud/b1d766f9-2fd0-4a60-96bb-fc1f494d156c/webchat/config.js" defer></script>
+<script>
+  ScrollReveal({
+    //reset: true ,
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+  });
+  ScrollReveal().reveal('.container .drop ,.container .drop .content', { delay: 600, origin: 'bottom' ,interval:200});
+</script>
 </body>
 </html>
