@@ -10,29 +10,6 @@ window.addEventListener('DOMContentLoaded', function() {
   }, 300);
 });
 
-const emergencyButton = document.querySelector('.emergency-button');
-const popupContainer = document.querySelector('.popup-container');
-const closeButton = document.querySelector('.close-button');
-const nameInput = document.querySelector('#nameInput');
-const nameDisplay = document.querySelector('#nameDisplay');
-
-emergencyButton.addEventListener('click', (event) => {
-  event.preventDefault();
-  const name = nameInput.value.trim();
-
-  if (name) {
-    popupContainer.style.visibility = 'visible';
-
-    nameDisplay.textContent = `Emergency request from ${name}`;
-  } else {
-    alert('Please enter your name.');
-  }
-});
-
-closeButton.addEventListener('click', () => {
-  popupContainer.style.visibility = 'hidden';
-});
-
 ScrollReveal({
   //reset: true ,
   distance: '60px',
@@ -40,3 +17,11 @@ ScrollReveal({
   delay: 400
 });
 ScrollReveal().reveal('.content', { delay: 400, origin: 'left' ,interval:200});
+
+  document.getElementById('emergencyButton').addEventListener('click', function() {
+    var popup = document.getElementById('popup');
+    popup.style.display = 'block';
+    setTimeout(function() {
+      popup.style.display = 'none';
+    }, 3000); // Hide popup after 3 seconds
+  });
