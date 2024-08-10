@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RapiDoc</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link
       rel="icon"
       href="https://cdn-icons-png.flaticon.com/512/1458/1458279.png"
@@ -1242,6 +1243,15 @@
           }
         }
       });
+    </script>
+    <script>
+      ScrollReveal({
+    //reset: true ,
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+  });
+  ScrollReveal().reveal('.container', { delay: 600, origin: 'bottom' ,interval:200});
     </script>
   </body>
 </html>
