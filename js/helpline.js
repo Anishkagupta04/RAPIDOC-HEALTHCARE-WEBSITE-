@@ -32,3 +32,11 @@ emergencyButton.addEventListener('click', (event) => {
 closeButton.addEventListener('click', () => {
   popupContainer.style.visibility = 'hidden';
 });
+
+ScrollReveal({
+  //reset: true ,
+  distance: '60px',
+  duration: 2500,
+  delay: 400
+});
+ScrollReveal().reveal('.content', { delay: 400, origin: 'left' ,interval:200});
