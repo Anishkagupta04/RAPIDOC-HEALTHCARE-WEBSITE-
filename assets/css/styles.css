@@ -10,8 +10,8 @@
   --first-color-light: hsl(var(--hue), var(--sat), 85%);
   --first-color-lighten: #4bb6b7;
   --first-color-alt: hsl(var(--hue), var(--sat), 53%);
-  --title-color: hsl(var(--hue), 4%, 15%);
-  --text-color: hsl(var(--hue), 4%, 35%);
+  --title-color: hsl(var(--hue), 4%, 65%);
+  --text-color: hsl(var(--hue), 4%, 65%);
   --text-color-light: hsl(var(--hue), 4%, 65%);
   --body-color: hsl(var(--hue), 0%, 100%);
   --container-color: #FFF;
@@ -888,4 +888,35 @@ footer {
 
 #back-to-top:hover {
   transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+  #back-to-top-container {
+    right: 15px;
+  }
+  .app__container{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+  }
+  .app__buttons{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    
+    
+  }
+
+  .app__buttons button{
+    margin: 10px 0 !important;
+  }
+  .app__buttons button:hover{
+    background-color: #55a5ea !important;
+    color: black !important;
+  }
+ 
+  
 }

@@ -1028,7 +1028,6 @@ img, video {
     
 </header>
   <!-- header -->
-
   <!-- faq -->
  
 <div id="page-content" class="page-content">
@@ -1043,7 +1042,7 @@ img, video {
     </div>
 
     <div id="faq-container" class="faq-container">
-        <input type="text" id="faq-search" placeholder="⌕ Search your questions here.." onkeyup="filterFAQs()">
+        <input type="text" id="faq-search" class="faq-search" placeholder="⌕ Search your questions here.." onkeyup="filterFAQs()">
 
         <div class="faq-category">
             <div class="faq-item" onclick="toggleAnswer('question1')">
@@ -1346,7 +1345,7 @@ img, video {
                   <li><a href="Html-Files\appointment.html">Appointment</a></li>
                   <li><a href="#">Patient Portal</a></li>
                   <li><a href="login.html">Login account</a></li>
-                  <li><a href="#">Helplines</a></li>
+                  <li><a href="helpline.html">Helplines</a></li>
                   <li><a href="#">Location</a></li>
                 </ul>
               </section>
@@ -1418,7 +1417,7 @@ img, video {
   </div>
 
   <!-- footer -->
-
+  <script src="./js/faq.js"></script>
 <script>
     function toggleAnswer(id) {
 var answer = document.getElementById(id);

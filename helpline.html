@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Checkup</title>
+    <title>RapiDoc</title>
     <link rel="icon" type="image/x-icon" href="favicon.png">
   <!-- Bootstrap Icons CDN link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -48,6 +48,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="chatbox.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
   <!-- Google Fonts Link For Icons chatboxx -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -56,8 +57,8 @@
   <link rel="stylesheet" href="./Css-Files/aboutus.css" />
   <link rel="stylesheet" href="./Css-Files/testimonial.css" />
   <script src="chatboxx.js" defer></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-    <link rel="stylesheet" href="checkup.css">
+  <link rel="stylesheet" href="../Css-Files/helpline.css">
+  <link rel="stylesheet" href="checkup.css">
 </head>
 <body>
     
@@ -78,8 +79,7 @@
           <div class="con" style="display: flex; gap: 10px;"><li><a href="#contact"><i class="bi bi-telephone"></i>  Contact us</a></li></div>
           <li><a href="#feedback"><i class="bi bi-star"></i>  Rate Us</a></li>
           <li><a href="log/login.html"><i class="bi bi-box-arrow-right"></i> Sign in/Sign up</a></li>
-  
-          <a href="Html-Files/Doctor-Experience.html"><button class="btn1">Find a Doctor</button></a>
+          <a href="Html-Files/Doctor Experience.html"><button class="btn1">Find a Doctor</button></a>
         </ul>
         <div class="hamburger">
           <div class="line"></div>
@@ -93,176 +93,89 @@
     
     
           <a href="#appointment" class="appointment-btn scrollto">
-            <span class="d-md-inline">EMERGENCY</span></a>
         </div>
       </header>
-    
-    
       <div class="container" style="display:flex ;">
         <div class="content">
     
-          <h1 class="h1">
-            Welcome to <span style="color: #55a5ea;">RapiDoc!</span>  Your one-stop digital  healthcare
-            destination
+          <h1>
+            <span style="color: #55a5ea;">Need help?</span> Contact our Helpline
           </h1>
           
         </div>
         <img class="sec-img" src="images/rd.png" alt="" />
     
       </div>
-
-      <section id="services">
-        <div class="services-grid">
-            <div class="services-item">
-                <h2>General Health Checkup</h2>
-                <div class="content">
-                    <p>Our general health checkup provides a thorough evaluation of your overall health. It includes a physical examination, blood tests, cholesterol checks, and assessments for common conditions such as diabetes and hypertension.</p>
-                    <img src="assets\img\general.jpg" alt="General Health Checkup">
+      <div class="helpline-container" style="background-color: #022a2d; padding: 20px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); transition: all 0.3s ease-in-out;">
+        <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+          <div class="helpline-text" style="color: #3fbcc0; font-size: 40px; font-weight: bold; animation: slideInLeft 0.5s ease-in-out;">Need help? Contact our Helpline</div>
+          <div class="helpline-content-wrapper" style="display: flex; flex-direction: column; justify-content: space-between; width: 100%; margin-top: 20px; box-shadow: 0 0 20px rgba(63, 188, 192, 0.3); border-radius: 10px;">
+            <div class="emergency-form-container" style="animation: fadeIn 0.5s ease-in-out; padding: 20px;">
+              <h3 style="color: #3fbcc0; margin-bottom: 10px;">Emergency Form</h3>
+              <form class="helpline-form" style="display: flex; align-items: center;">
+                <input type="text" id="nameInput" placeholder="Enter your name" style="margin-right: 10px; padding: 5px 10px; border: none; border-radius: 5px; background-color: #3fbcc051; color: #959DA5;" />
+                <button type="button" id="emergencyButton" class="emergency-button" style="background-color: #2F81CF; color: #fff; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out;">Request Emergency</button>
+              </form>
+              <div id="popup" class="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #022a2d; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+                <p class="popupmessage" style="margin-top: 200px;color: #3fbcc0;">Your response is sent!</p>
+              </div>
+            </div>
+            <div class="contact-details-container" style="animation: fadeIn 0.5s ease-in-out 0.3s forwards; opacity: 0; padding: 20px;">
+              <h3 style="color: #3fbcc0; margin-bottom: 10px;">Contact Details</h3>
+              <div class="helpline-contacts" style="display: flex; flex-direction: column; align-items: flex-start; color: rgba(0, 0, 0, 0.3);">
+                <div class="contact-item" style="display: flex; align-items: center; margin-bottom: 10px;">
+                  <i class="fa-solid fa-phone" style="color: #2F81CF; margin-right: 5px;"></i>
+                  <a href="tel:+911234567890" class="helpline-link" style="color: #2F81CF; font-size: 18px; text-decoration: none; transition: color 0.3s ease-in-out;">+91 1234567890</a>
                 </div>
-                <button class="service-btn" onclick="redirectToBooking()">Book Now</button>
-
-            </div>
-            <div class="services-item">
-                <h2>Women's Health Checkup</h2>
-                <div class="content">
-                    <p>Our women's health checkup is designed to address the unique health needs of women at every stage of life. It includes breast exams, pelvic exams, Pap smears, and screenings for osteoporosis and heart health.</p>
-                    <img src="assets\img\women.jpg" alt="Women's Health Checkup">
+                <div class="contact-item" style="display: flex; align-items: center; margin-bottom: 10px;">
+                  <i class="fa-solid fa-ambulance" style="color: #2F81CF; margin-right: 5px;"></i>
+                  <a href="tel:+911234567890" class="helpline-link" style="color: #2F81CF; font-size: 18px; text-decoration: none; transition: color 0.3s ease-in-out;">Ambulance: +91 1234567890</a>
                 </div>
-                <button class="service-btn" onclick="redirectToBooking()">Book Now</button>
-
-            </div>
-            <div class="services-item">
-                <h2>Senior Citizen Health Checkup</h2>
-                <div class="content">
-                    <p>Our senior citizen's health checkup aims to maintain health and quality of life in older adults. It includes comprehensive physical exams, screenings for chronic conditions, medication reviews, and assessments for mobility and cognitive function.</p>
-                    <img src="assets\img\senior.jpg" alt="Senior Citizen Health Checkup">
+                <div class="contact-item" style="display: flex; align-items: center;">
+                  <i class="fa-solid fa-envelope" style="color: #2F81CF; margin-right: 5px;"></i>
+                  <a href="mailto:info@rapidoc.com" class="helpline-link" style="color: #2F81CF; font-size: 18px; text-decoration: none; transition: color 0.3s ease-in-out;">info@rapidoc.com</a>
                 </div>
-                <button class="service-btn" onclick="redirectToBooking()">Book Now</button>
-
+              </div>
             </div>
-            <div class="services-item">
-                <h2>Pediatric Health Checkup</h2>
-                <div class="content">
-                    <p>Our Pediatric Health Checkup focuses on monitoring your child's growth and development. It includes physical exams, vaccinations, and developmental screenings to ensure your baby is healthy and meeting milestones.</p>
-                    <img src="assets\img\pediatric.jpg" alt="Pediatric Health Checkup">
-                </div>
-                <button class="service-btn" onclick="redirectToBooking()">Book Now</button>
-
-            </div>
+          </div>
         </div>
-    </section>
-        
-
-    <section id="expect">
-        <h1 class="h1">What to <span style="color: #55a5ea;">Expect?</h1>
-        <div class="expect-grid">
-            <div class="expect-item">
-                <h2 >1</h2>
-                <p>Initial consultation with a healthcare provider.</p>
-            </div>
-        </div>
-        <div class="expect-grid">
-            <div class="expect-item">
-                <h2>2</h2>
-                <p>Personalized health advice and recommendations.</p>
-            </div>
-        </div>
-        <div class="expect-grid">
-            <div class="expect-item">
-                <h2>3</h2>
-                <p>Physical examination and vital signs measurement.</p>
-            </div>
-        </div>
-        <div class="expect-grid">
-            <div class="expect-item">
-                <h2>4</h2>
-                <p>Review of medical history and lifestyle factors.</p>
-            </div>
-        </div>
-        <div class="expect-grid">
-            <div class="expect-item">
-                <h2>5</h2>
-                <p>Laboratory tests and diagnostic screenings.</p>
-            </div>
-        </div>
-        
-    </section>
-    <script>
-      function redirectToBooking() {
-    window.location.href = 'index.html'; 
-  }
-    </script>
-
-    <section id="tips">
-      <h2 class="h1">
-        Health<span style="color: #55a5ea;"> Tips</span>
-        
-    </h2>
-    
-        <div class="tip-grid">
-            <div class="tip-item">
-                <p>Maintain a balanced diet rich in fruits, vegetables, and whole grains.</p>
-            </div>
-            <div class="tip-item">
-                <p>Stay physically active with regular exercise.</p>
-            </div>
-            <div class="tip-item">
-                <p>Get enough sleep and manage stress effectively.</p>
-            </div>
-            <div class="tip-item">
-                <p>Stay hydrated by drinking plenty of water.</p>
-            </div>
-            <div class="tip-item">
-                <p>Avoid smoking and limit alcohol consumption.</p>
-            </div>
-            <div class ="tip-item">
-              <p>Practice relaxation techniques such as deep breathing, meditation, or yoga.</p>
-            </div>
-        
-                    
-                    
-                
-            </div>
-        </div>
-        
-    </section>
-
-    <footer>
+      </div>
+      <footer>
         <div class="footer-wrapper">
           <div class="footer-columns">
             <div class="other-columns">
-            <section>
-            <h4>Quick Links</h4><br>
-            <ul class="links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="index.html#contact">Contact Us</a></li>
-              <li><a href="dex.html">Services</a></li>
-              <li><a href="#doctors">Doctors</a></li>
-              <li><a href="./faq.html">FAQ</a></li>
-            </ul>
-          </section>
-          <section>
-            <h4>Explore</h4><br>
-            <ul class="links">
-              <li><a href="Html-Files/appointment.html">Appointment</a></li>
-              <li><a href="portal.html">Patient Portal</a></li>
-              <li><a href="log/login.html">Login account</a></li>
-              <li><a href="helpline.html">Helplines</a></li>
-              <li><a href="index.html#contact">Location</a></li>
-            </ul>
-          </section>
-          <section>
-            <h4>Legal</h4><br>
-            <ul class="links">
-              <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
-              <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
-              <li><a href="Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
-              <li><a href="#">GDPR</a></li>
-              <li><a href="#">Security</a></li>
-              <li><a href="#">Testimonials</a></li>
-            </ul>
-          </section>
+              <section>
+                <h4>Quick Links</h4><br>
+                <ul class="links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="index.html#contact">Contact Us</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#doctors">Doctors</a></li>
+                  <li><a href="./faq.html">FAQ</a></li>
+                </ul>
+              </section>
+              <section>
+                <h4>Explore</h4><br>
+                <ul class="links">
+                  <li><a href="Html-Files/appointment.html">Appointment</a></li>
+                  <li><a href="index.html#patient-portal">Patient Portal</a></li>
+                  <li><a href="log/login.html">Login account</a></li>
+                  <li><a href="#">Helplines</a></li>
+                  <li><a href="index.html#contact">Location</a></li>
+                </ul>
+              </section>
+              <section>
+                <h4>Legal</h4><br>
+                <ul class="links">
+                  <li><a href="Html-Files/customer_agreement.html">Customer Agreement</a></li>
+                  <li><a href="Html-Files/privacy_policy_page.html">Privacy Policy</a></li>
+                  <li><a href="Html-Files/terms_and_conditions.html">Terms and Conditions</a></li>
+                  <li><a href="#">GDPR</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                </ul>
+              </section>
               
     
            <section class="footer-col" >
@@ -395,6 +308,7 @@
       
       </footer>
       <script src="checkup.js"></script>
+      <script src="../js/helpline.js"></script>
     
 </body>
 </html>

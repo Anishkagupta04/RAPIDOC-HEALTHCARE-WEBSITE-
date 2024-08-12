@@ -43,6 +43,12 @@
   justify-content: left; 
   background-color: #111111; 
   border-radius: 11px; margin-bottom: 10px; 
+  transition: transform 0.3s ease;
+}
+.a-1:hover,.a-2:hover,.a-3:hover {
+  box-shadow: 0 8px 16px rgba(47, 80, 247, 0.2);
+  cursor: pointer;
+  transform: scale(1.05);
 }
 .a-l, .b-l, .c-l { 
   height: 58px; 

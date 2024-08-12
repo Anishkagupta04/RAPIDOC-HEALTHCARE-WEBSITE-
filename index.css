@@ -249,6 +249,7 @@ option {
 @media (max-width: 768px) {
     .nav_menu {
       flex-direction: column;
+      margin-left: 0;
     }
   
     .hamburger {
@@ -264,7 +265,7 @@ option {
       flex-direction: column;
       position: fixed;
       top: 60px;
-      left: 20px;
+      left: 0px;
       background-color: #022a2d;
       width: 45% !important;
       margin-top: 30px;
@@ -280,6 +281,7 @@ option {
     .nav_link li {
       margin: 10px 0;
       font-size: 18px;
+
     }
   
     .nav_link a {
@@ -851,7 +853,7 @@ body {
     position: relative;
     background-color: #3fbcc0a6;
     color: white;
-    border: 2px solid #000;
+    /* border: 2px solid #000; */
     border-radius: 10px;
     overflow: hidden;
     transition: color 0.3s ease;
@@ -1175,4 +1177,9 @@ body {
     background-color: teal !important;
     font-size: 15px;
 
+  }
+
+  /*Effect to the image in aboutus section**/
+  .about-img {
+    filter: drop-shadow(30px 30px 30px rgba(17, 133, 137, 0.683));
   }
