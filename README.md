@@ -26,12 +26,6 @@
            <td><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&color=critical&logo=github"/></td>
         </tr>
     </tbody>
-</table>
-</div>
-<h2> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="40" height="40" />Featured In</h2>
- <div>
-    <h2><img src="https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/blob/master/Emojis/Hand%20gestures/Flexed%20Biceps.png?raw=true" width="35" height="35" > Open Source Programs</h2>
-  </div>
 
 <hr>
 <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Writing%20Hand%20Light%20Skin%20Tone.png" alt="Rocket" width="40" height="40" />Project Overview</h3>
@@ -125,73 +119,3 @@ It is an online platform which enables you to get information about your nearest
 
 </details>
 <hr>
- <!---------------------------------------------------------------CONTRIBUTION GUIDELINES--------------------------------------------------------------------------->
-
-<details>
- <summary><h2>:sparkles:Contribution Guidelines:</h2></summary>
- 
- 
- * **Checkout and make your changes for the develop branch only:** When working on your contributions, switch to the **develop** branch in your local repository. This ensures that you are working on the latest version of the codebase.
-
-* **Create pull requests only for the develop branch:** When you are ready to submit your changes, create a pull request (PR) targeting the **develop** branch. This allows the maintainers to review and merge your code into the main development branch.
-
-* **Maintain contribution guidelines:** Each project may have its specific contribution guidelines. It's important to familiarize yourself with these guidelines before submitting your contributions. Adhering to these guidelines ensures consistency and helps maintain the quality of the codebase.
-
-* **Format your commit message with the issue number:** When making commits related to an issue, follow the format **Fixes: #32 in your commit message. Replace 32 with the issue number you are addressing.** This helps track and manage issues more efficiently.
-
-* **Attach a Postman response screenshot for backend tasks:** For tasks related to the backend, it is recommended to include a screenshot of the Postman response along with your pull request. This provides additional context and helps reviewers understand the changes made and their impact on the backend functionality.
-
-* **Make your pull request descriptive and include examples:** When creating a pull request, provide a clear and descriptive explanation of the changes you made. This helps reviewers understand the purpose and significance of your contribution. Additionally, including at least one example that demonstrates the intended usage or effect of your changes can be beneficial.
-
-* **Rebase your commits and optimize file changes:** When submitting your pull request, consider rebasing your commits into one commit and optimizing your file changes. This helps keep the commit history clean and makes it easier for reviewers to understand your changes.
-
-Remember, following these guidelines will help ensure a smooth and efficient contribution process. Happy coding!
-
-</details>
-
-<hr>
-
-<!-- Code of conduct -->
-<div>
-<h2><img src = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="35" height="35"> Code of Conduct:</h2>
-</div>
-
-Please note that this project is released with a [Contributor Code of Conduct](./CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
-<hr>
-
-## ✍️ Feedback and Support:
-
-<p style="font-family:var(--ff-philosopher);font-size:2rem;">We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's.
-
-To contribute to the RAPIDOC-HEALTHCARE-WEBSITE repository using GitHub Desktop, follow these steps:
-
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Lady%20Beetle.png" width="20" height="20"> Reporting a bug<br>
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Man%20Technologist%20Light%20Skin%20Tone.png" width="20" height="20" >Discussing the current state of the code<br>
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Axe.png" width="20" height="20" >Submitting a fix<br>
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Rocket.png" width="20" height="20" >Proposing new features
-
-<hr>
-
-<div align="center">
-  <h2 style="font-size:3rem;">Our Contributors <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /></h2>
-  <h3>Thank you for contributing to our repository</h3>
-
-<a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-/graphs/contributors">
-<img src="https://contributors-img.web.app/image?repo=Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-"/>
-
-  </a>
-
-<p style="font-family:var(--ff-philosopher);font-size:3rem;"><b> Show some <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /> by starring this awesome repository!
-
-</div>
-
-<hr>
-<div>
-  <h2><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f64f_1f3fb/512.webp" width="35" height="35"> Support </h2>
-</div>
-
-<div>
-  Don't forget to leave a star<img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f31f/512.webp" width="35" height="30"> for this project!
-</div> <br>
-
-<a href="#top" style="position: fixed; bottom: 20px; right: 20px; background-color: black ; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; border-radius: 5px; font-family: Arial; font-size: 16px;">Go to Top</a>
