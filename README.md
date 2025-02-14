@@ -17,16 +17,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-    <tbody>
-         <tr>
-            <td><img alt="Stars" src="https://img.shields.io/github/stars/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&logo=github"/></td>
-             <td><img alt="Forks" src="https://img.shields.io/github/forks/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&logo=github"/></td>
-            <td><img alt="Issues" src="https://img.shields.io/github/issues/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&logo=github"/></td>
-            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&logo=github"/></td>
-           <td><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-?style=flat&color=critical&logo=github"/></td>
-        </tr>
-    </tbody>
-
 <hr>
 <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Writing%20Hand%20Light%20Skin%20Tone.png" alt="Rocket" width="40" height="40" />Project Overview</h3>
 <p style="font-family:var(--ff-philosopher);">
